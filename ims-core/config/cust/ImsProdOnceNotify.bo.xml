@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="ImsProdOnceNotify" remark="" schema="cd" table="IMS_PROD_ONCE_NOTIFY" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="NOTIFY_TYPE" columnDef="Int" name="notifyType" null-able="false" primitive="No" remark="อจึชภเะอฃฌรถพูผ๛pm_product_offer_notify.notify_type" type="Integer"/>
+        <field column="PRODUCT_ID" columnDef="BigInt" name="productId" null-able="false" primitive="No" remark="ฒ๚ฦทid" type="Long"/>
+        <field column="OFFER_ID" columnDef="Int" name="offerId" null-able="false" primitive="No" remark="ฯ๚สฦทid" type="Integer"/>
+        <field column="OBJECT_ID" columnDef="BigInt" name="objectId" null-able="false" primitive="No" remark="ฒ๚ฦทสนำรถิฯ๓id" type="Long"/>
+        <field column="OBJECT_TYPE" columnDef="Int" name="objectType" null-able="false" primitive="No" remark="ฒ๚ฦทสนำรถิฯ๓ภเะอ" type="Integer"/>
+        <field column="VALID_DATE" columnDef="TimeStamp" name="validDate" null-able="false" primitive="No" remark="ฒ๚ฦทษ๚ะงสฑผไ" type="Date"/>
+        <field column="EXPIRE_DATE" columnDef="TimeStamp" name="expireDate" null-able="false" primitive="No" remark="ฒ๚ฦทสงะงสฑผไ" type="Date"/>
+        <field column="CREATE_DATE" columnDef="TimeStamp" name="createDate" null-able="false" primitive="No" remark="ผวยผดดฝจสฑผไ" type="Date"/>
+        <field column="STS" columnDef="Int" name="sts" null-able="false" primitive="No" remark="ผวยผืดฬฌ 1ฃบณ๕สผปฏ 2ฃบิฺดฆภํ" type="Integer"/>
+        <field column="FREE_RES_FLAG" columnDef="Int" name="freeResFlag" null-able="false" primitive="No" remark="สวท๑อจึชรโทัืสิด 0-ฒปอจึช 1-อจึช" type="Integer"/>
+        <field column="NOTIFY_DATE" columnDef="TimeStamp" name="notifyDate" null-able="false" primitive="No" remark="อจึชสฑผไฃฌพซศทตฝฬ์" type="Date"/>
+        <field column="RETRY_TIMES" columnDef="Int" name="retryTimes" null-able="false" primitive="No" remark="อจึชสงฐึุสิดฮส" type="Integer"/>
+        <field column="FREE_USE_DAYS" columnDef="Int" name="freeUseDays" null-able="false" primitive="No" remark="ฒ๚ฦทรโทัสิำรฬ์ส" type="Integer"/>
+        <field column="FREE_REST_DAYS" columnDef="Int" name="freeRestDays" null-able="false" primitive="No" remark="ฒ๚ฦทรโทัสิำรสฃำเฬ์ส" type="Integer"/>
+        <field column="DEAL_DATE" columnDef="TimeStamp" name="dealDate" primitive="No" remark="" type="Date"/>
+        <field column="DEAL_COUNT" columnDef="Int" name="dealCount" primitive="No" remark="" type="Integer"/>
+        <field column="ERROR_CODE" columnDef="Int" name="errorCode" primitive="No" remark="" type="Integer"/>
+        <field column="ERROR_MSG" columnDef="Varchar" columnSize="256" name="errorMsg" primitive="No" remark="" type="String"/>
+        <field column="ID" columnDef="AutoIncrement" isPk="true" name="id" primitive="No" remark="" type="Long"/>
+    </fields>
+</entity>

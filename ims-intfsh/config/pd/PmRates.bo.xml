@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="PmRates" remark="" schema="PD" table="PM_RATES" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="RATE_ID" columnDef="AutoIncrement" isPk="true" name="rateId" primitive="No" remark="Recurring charge rate ID" type="Integer"/>
+        <field column="RATE_NAME" columnDef="Varchar" columnSize="256" name="rateName" null-able="false" primitive="No" remark="Tariff name" type="String"/>
+        <field column="SERVICE_ID" columnDef="Int" name="serviceId" null-able="false" primitive="No" remark="Service ID: first two digit is service classification, next two digit is two subservice classification, last three digit is sequence number.&#10;As the system basic data, service ID is commonly defined at system initialization." type="Integer"/>
+        <field column="MINIMUM" columnDef="BigInt" name="minimum" null-able="false" primitive="No" remark="When calculation result is lower than the floor value, the floor value shall be returned as result.&#10;&quot;-1&quot; indicates no floor." type="Long"/>
+        <field column="MAXIMUM" columnDef="BigInt" name="maximum" null-able="false" primitive="No" remark="When calculation result is greater than the cap value(Not &quot;-1&quot;), the cap value is returned as result.&#10;&quot;-1&quot; indicates no ceiling." type="Long"/>
+        <field column="RATE_PRECISION" columnDef="Int" name="ratePrecision" primitive="No" remark="Accuracy for rating&#10;1ฃญminimun unit for ratingฃจRMB Liฃฉ&#10;10ฃญRMB Fen&#10;100ฃญRMB Jiao&#10;1000ฃญRMB Yuan&#10;...&#10;The accuracy is applied for rating not billing.&#10;This field is invalid currently." type="Integer"/>
+        <field column="PRECISION_ROUND" columnDef="Float" name="precisionRound" primitive="No" remark="0ฃญ1, threshold of odd amount in rating for rounding" type="Float"/>
+        <field column="CURVE_ID" columnDef="Int" name="curveId" null-able="false" primitive="No" remark="Tariff curve ID, associating to tariff details of recurring charge. " type="Integer"/>
+        <field column="MEASURE_ID" columnDef="Int" name="measureId" null-able="false" primitive="No" remark="Tariff measurement such as:&#10;Dollar --&gt;Cent&#10;RMB--&gt;Li&#10;" type="Integer"/>
+        <field column="DESCRIPTION" columnDef="Varchar" columnSize="1024" name="description" primitive="No" remark="Tariff description" type="String"/>
+    </fields>
+</entity>

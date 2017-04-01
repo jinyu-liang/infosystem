@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="RsSysSlaRuleDef" remark="" schema="bd" table="RS_SYS_SLA_RULE_DEF" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="SLA_RULE_ID" columnDef="AutoIncrement" isPk="true" name="slaRuleId" primitive="No" remark="" type="Integer"/>
+        <field column="RULE_TYPE" columnDef="Int" name="ruleType" null-able="false" primitive="No" remark="" type="Integer"/>
+        <field column="PRIORITY" columnDef="Int" name="priority" null-able="false" primitive="No" remark="" type="Integer"/>
+        <field column="SLA_REF_ID" columnDef="Int" name="slaRefId" null-able="false" primitive="No" remark="" type="Integer"/>
+        <field column="ALARM_ID" columnDef="Int" name="alarmId" primitive="No" remark="" type="Integer"/>
+        <field column="SLA_RULE_NAME" columnDef="Varchar" columnSize="256" name="slaRuleName" primitive="No" remark="" type="String"/>
+    </fields>
+</entity>

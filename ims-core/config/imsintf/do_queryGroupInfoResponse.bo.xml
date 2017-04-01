@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="do_queryGroupInfoResponse" transient="true">
+  <root ref="imsintf.BaseResponse"/>
+  <fields>
+    <field name="number_of_sub" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="number_of_cug" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <complex-field name="productOrderList" type="entity" ref="imsintf.SProductOrderList" collection="none" primitive="false"/>
+    <complex-field name="groupInfoList" type="entity" ref="imsintf.SGroupList" collection="none" primitive="false"/>
+    <complex-field name="subGroupList" type="entity" ref="imsintf.SubGroupList" collection="none" primitive="false"/>
+  </fields>
+</entity>

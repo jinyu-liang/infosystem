@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="BillOnPrtRecIn">
+  <fields>
+    <field name="acct_id" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="print_id" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="bill_month" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="begin_date" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="total_fee" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

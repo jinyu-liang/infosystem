@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="CmCustomer" schema="CD" table="CM_CUSTOMER">
+  <fields>
+    <field name="custId" type="Long" column="CUST_ID" isPk="true(not generated)" primitive="Auto" null-able="true" columnDef="Int"/>
+    <field name="customerName" type="String" column="CUSTOMER_NAME" isPk="false" primitive="Auto" null-able="true" columnDef="Varchar" columnSize="256"/>
+    <field name="customerClass" type="Integer" column="CUSTOMER_CLASS" isPk="false" primitive="Auto" null-able="true" columnDef="Int"/>
+    <field name="customerType" type="Integer" column="CUSTOMER_TYPE" isPk="false" primitive="Auto" null-able="true" columnDef="Int"/>
+    <field name="customerSegment" type="Integer" column="CUSTOMER_SEGMENT" isPk="false" primitive="Auto" null-able="true" columnDef="Int"/>
+    <field name="sts" type="Integer" column="STS" isPk="false" primitive="Auto" null-able="true" columnDef="Int"/>
+    <field name="createDate" type="Date" column="CREATE_DATE" isPk="false" primitive="Auto" null-able="true" columnDef="Date"/>
+    <field name="groupId" type="String" column="GROUP_ID" isPk="false" primitive="Auto" null-able="true" columnDef="Varchar" columnSize="40"/>
+    <field name="provCode" type="Integer" column="PROV_CODE" isPk="false" primitive="Auto" null-able="true" columnDef="Int"/>
+    <field name="regionCode" type="Integer" column="REGION_CODE" isPk="false" primitive="Auto" null-able="true" columnDef="Int"/>
+    <field name="countyCode" type="Integer" column="COUNTY_CODE" isPk="false" primitive="Auto" null-able="true" columnDef="Int"/>
+    <field name="custCreditProfileId" type="Long" column="CUST_CREDIT_PROFILE_ID" isPk="false" primitive="Auto" null-able="true" columnDef="Int"/>
+    <field name="cycleSpecId" type="Long" column="CYCLE_SPEC_ID" isPk="false" primitive="Auto" null-able="true" columnDef="Int"/>
+    <field name="partyRoleId" type="Long" column="PARTY_ROLE_ID" isPk="false" primitive="Auto" null-able="true" columnDef="Int"/>
+    <field name="performanceId" type="Integer" column="PERFORMANCE_ID" isPk="false" primitive="Auto" null-able="true" columnDef="Int"/>
+    <field name="taxExemptionNo" type="String" column="TAX_EXEMPTION_NO" isPk="false" primitive="Auto" null-able="true" columnDef="Varchar" columnSize="64"/>
+    <field name="customerQuoteid" type="Integer" column="CUSTOMER_QUOTEID" isPk="false" primitive="Auto" null-able="true" columnDef="Int"/>
+    <field name="readingLanguage" type="Integer" column="READING_LANGUAGE" isPk="false" primitive="Auto" null-able="true" columnDef="Int"/>
+    <field name="listeningLanguage" type="Integer" column="LISTENING_LANGUAGE" isPk="false" primitive="Auto" null-able="true" columnDef="Int"/>
+    <field name="writingLanguage" type="Integer" column="WRITING_LANGUAGE" isPk="false" primitive="Auto" null-able="true" columnDef="Int"/>
+    <field name="validDate" type="Date" column="VALID_DATE" isPk="true(not generated)" primitive="Auto" null-able="true" columnDef="Date"/>
+    <field name="expireDate" type="Date" column="EXPIRE_DATE" isPk="false" primitive="Auto" null-able="true" columnDef="Date"/>
+    <field name="remarks" type="String" column="REMARKS" isPk="false" primitive="Auto" null-able="true" columnDef="Varchar" columnSize="256"/>
+    <field name="soDate" type="Date" column="SO_DATE" isPk="false" primitive="Auto" null-able="true" columnDef="Date"/>
+    <field name="soNbr" type="Long" column="SO_NBR" isPk="true(not generated)" primitive="Auto" null-able="true" columnDef="Int"/>
+    <field name="countryId" type="Integer" column="COUNTRY_ID" isPk="false" primitive="Auto" null-able="true" columnDef="Int"/>
+    <field name="gender" type="Integer" column="GENDER" isPk="false" primitive="Auto" null-able="true" columnDef="Int"/>
+    <field name="birthDate" type="Date" column="BIRTH_DATE" isPk="false" primitive="Auto" null-able="true" columnDef="Date"/>
+    <field name="occupationId" type="Integer" column="OCCUPATION_ID" isPk="false" primitive="Auto" null-able="true" columnDef="Int"/>
+    <field name="taxNo" type="String" column="TAX_NO" isPk="false" primitive="Auto" null-able="true" columnDef="Varchar" columnSize="128"/>
+    <field name="regAddress" type="String" column="REG_ADDRESS" isPk="false" primitive="Auto" null-able="true" columnDef="Varchar" columnSize="512"/>
+    <field name="regType" type="Integer" column="REG_TYPE" isPk="false" primitive="Auto" null-able="true" columnDef="Int"/>
+    <field name="regNbr" type="String" column="REG_NBR" isPk="false" primitive="Auto" null-able="true" columnDef="Varchar" columnSize="255"/>
+    <field name="custManageIda" type="String" column="CUST_MANAGE_IDA" isPk="false" primitive="Auto" null-able="true" columnDef="Varchar" columnSize="8"/>
+    <field name="custManageId" type="String" column="CUST_MANAGE_ID" isPk="false" primitive="Auto" null-able="true" columnDef="Varchar" columnSize="8"/>
+    <field name="groupContactPhone" type="String" column="GROUP_CONTACT_PHONE" isPk="false" primitive="Auto" null-able="true" columnDef="Varchar" columnSize="64"/>
+    <field name="issueDate" type="Date" column="ISSUE_DATE" isPk="false" primitive="Auto" null-able="true" columnDef="Date"/>
+    <field name="realNameDate" type="Date" column="REAL_NAME_DATE" isPk="false" primitive="Auto" null-able="true" columnDef="Date"/>
+    <field name="realNameSts" type="Integer" column="REAL_NAME_STS" isPk="false" primitive="Auto" null-able="true" columnDef="Int"/>
+    <field name="partitionId" type="Integer" column="PARTITION_ID" isPk="false" primitive="Auto" null-able="false" columnDef="Int"/>
+  </fields>
+</entity>

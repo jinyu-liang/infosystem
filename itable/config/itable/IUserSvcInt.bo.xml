@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" columnNameMapToFieldName="false" dbType="oracle" name="IUserSvcInt" remark="" schema="jd" 
+	no-dao-class="true" table="I_USER_SVC_INT" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="USER_ID" columnDef="Int" isPk="false" name="userId" null-able="false" primitive="Auto" type="Long"/>
+        <field column="USER_ID_A" columnDef="Int" isPk="false" name="userIdA" null-able="false" primitive="Auto" type="Long"/>
+        <field column="PACKAGE_ID" columnDef="Int" isPk="false" name="packageId" null-able="false" primitive="Auto" type="Long"/>
+        <field column="SERVICE_ID" columnDef="Int" isPk="false" name="serviceId" null-able="false" primitive="Auto" type="Long"/>
+        <field column="MAIN_TAG" columnDef="Varchar" columnSize="1"  isPk="false" name="mainTag" null-able="true" primitive="Auto" type="String"/>
+        <field column="START_DATE" columnDef="Date" isPk="false" name="startDate" null-able="true" primitive="Auto" type="Date"/>
+        <field column="END_DATE" columnDef="Date" isPk="false" name="endDate" null-able="true" primitive="Auto" type="Date"/>
+        <field column="UPDATE_TIME" columnDef="Date" isPk="false" name="updateTime" null-able="true" primitive="Auto" type="Date"/>
+        <field column="VALID_DATE" columnDef="Date" isPk="false" name="validDate" null-able="true" primitive="Auto" type="Date"/>
+        <field column="EXPIRE_DATE" columnDef="Date" isPk="false" name="expireDate" null-able="true" primitive="Auto" type="Date"/>
+        <field column="OPER_TYPE" columnDef="Int" isPk="false" name="operType" null-able="true" primitive="Auto" type="Integer"/>
+        <field column="SO_NBR" columnDef="Int" isPk="false" name="soNbr" null-able="true" primitive="Auto" type="Long"/>
+        <field column="COMMIT_DATE" columnDef="Date" isPk="false" name="commitDate" null-able="true" primitive="Auto" type="Date"/>
+    </fields>
+</entity>

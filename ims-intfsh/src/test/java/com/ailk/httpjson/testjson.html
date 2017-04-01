@@ -1,0 +1,58 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+    <head>
+        <title>table</title>
+        <style>
+        .tab {
+            background-color: #99CCFF;
+            font-family: "Verdana";
+        }
+        .tab th {
+            background-color: #f1f1f1;
+        }
+        .tab td {
+            background-color: #fff;
+        }
+        input {width:100%;}
+        </style>
+        <script>
+        function $()
+        {
+            return document.getElementById(arguments[0]);
+        }
+        function click2()
+        {
+            $("form1").action = $("url").value;
+        }
+
+        </script>
+    </head>
+
+    <body >
+        <form method="post" name="form1" target="iframe">
+            <table cellspacing="1" width="100%" align="center" class="tab" id="table">
+             <tr>
+                 <th>URL</th>
+                 <td><input type="text" name="url" value="http://10.8.16.86/interface/imscnsh/CN_SHMgntAction/undo_promoAllot.go" /></td>
+             </tr>
+             <tr>
+                 <th>sOper</th>
+                 <td>
+                 <textarea name="sOper" style="width:100%;height:100px;">{"so_nbr":"123213213","busi_code":7005,"so_mode":99,"acct_id":132}</textarea>
+                  </td>
+             </tr>
+             <tr>
+                 <th>sPaUndoIn</th>
+                 <td>
+                 <textarea name="sPaUndoIn" style="width:100%;height:100px;">{"so_nbr":12345,"done_date":"20010101 12:12:12","op_id":2343,"remark":""}</textarea>
+                 </td>
+              </tr>
+             <tr>
+                 <td colspan=2><input type="submit" value="submit"  onclick="click2();"/></td>
+              </tr>
+            </table>
+        </form>
+        <iframe name="iframe" id="iframe" width="100%" style="border:2px solid #99CCFF" frameborder="0"></iframe>
+
+    </body>
+</html>

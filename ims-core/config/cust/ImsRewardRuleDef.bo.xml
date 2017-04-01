@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="ImsRewardRuleDef" remark="" schema="CD" table="IMS_REWARD_RULE_DEF" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="LIMIT_ID" columnDef="AutoIncrement" isPk="true" name="limitId" primitive="No" remark="" type="Long"/>
+        <field column="LIMIT_TYPE" columnDef="Int" name="limitType" null-able="false" primitive="No" remark="" type="Integer"/>
+        <field column="VALUE" columnDef="Int" name="value" null-able="false" primitive="No" remark="" type="Integer"/>
+        <field column="CREATE_DATE" columnDef="TimeStamp" name="createDate" null-able="false" primitive="No" remark="" type="Date"/>
+    </fields>
+</entity>

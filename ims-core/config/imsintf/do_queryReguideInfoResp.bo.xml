@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="do_queryReguideInfoResp">
+  <root ref="imsintf.BaseResponse"/>
+  <fields>
+    <complex-field name="reguideInfoList" type="entity" ref="imsintf.ReguideInfoList" collection="none" primitive="false"/>
+  </fields>
+</entity>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SNotifySendStandardIntf" remark="" sdl="true" sdl-module="MImsSyncDef" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+    <fields>
+        <complex-field collection="list" name="listsnotifysendintf" primitive="false" ref="imssdl.SNotifySendIntf" remark="" sdl="true" type="entity"/>
+        <field name="count" primitive="Yes" remark="" sdl="true" type="Integer"/>
+    </fields>
+</entity>

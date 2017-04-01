@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="SDoTransferAmount">
+  <fields>
+    <field name="org_acct_id" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="org_phone_id" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="target_acct_id" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="target_phone_id" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="amount" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="out_so_nbr" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="out_so_date" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="do_type" type="Short" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="agent_id" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="lanch_code" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="password" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="spec_id" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

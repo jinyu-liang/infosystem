@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="RenewRegistration" transient="true">
+  <fields>
+    <field name="user_id" type="Long" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="phone_id" type="String" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="change_account" type="Short" isPk="false" primitive="Auto" tree-foreign-key="false" null-able="true"/>
+    <field name="change_promotion_flag" type="Short" isPk="false" primitive="No" null-able="true"/>
+    <complex-field name="productList" type="entity" ref="imsintf.SProductOrderList" collection="none" primitive="false"/>
+    <complex-field name="account" type="entity" ref="imsintf.SAccount" collection="none" primitive="false"/>
+    <complex-field name="contactList" type="entity" ref="imsintf.SContactList" collection="none" primitive="false"/>
+    <complex-field name="balanceList" type="entity" ref="imsintf.SBalanceList" collection="none" primitive="false"/>
+  </fields>
+</entity>

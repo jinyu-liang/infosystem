@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SysModuleMeasureRule" remark="" schema="sd" table="SYS_MODULE_MEASURE_RULE" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="MODULE_ID" columnDef="Int" isPk="true(not generated)" name="moduleId" null-able="false" primitive="No" remark="??????&#10;1:????&#10;2:????" type="Integer"/>
+        <field column="MEASURE_TYPE_ID" columnDef="Int" isPk="true(not generated)" name="measureTypeId" null-able="false" primitive="No" remark="Measure type&#10;The following are recommended enumeration&#10;1:duration&#10;2:volume&#10;3:number of times&#10;4:piece&#10;5:count&#10;6:bonus&#10;101:SDR&#10;102:USD&#10;103:EURO&#10;104:CNY&#10;111:THB&#10;112:VND" type="Integer"/>
+        <field column="MEASURE_ID" columnDef="Int" name="measureId" null-able="false" primitive="No" remark="?????????????&#10;&#10;Measure ID: A unique identifier&#10;For example:&#10;&#10;101&#9;millisecond&#10;102&#9;Sec&#10;103&#9;byte&#10;104&#9;KB&#10;105&#9;MB&#10;109&#9;Piece&#10;202&#9;Sec&#10;301&#9;times&#10;501&#9;Point&#10;601&#9;Points&#10;701&#9;Days&#10;801&#9;MB/Sec&#10;1901&#9;times&#10;10101      SDR&#10;10201&#9;Cent&#10;10202&#9;Dollar&#10;10301&#9;Cent&#10;10302&#9;Euro&#10;10401&#9;Hao&#10;10402&#9;Li&#10;10403&#9;Fen&#10;10404&#9;Yuan&#10;11100&#9;Satang/10&#10;11101&#9;Satang&#10;11102&#9;Baht&#10;20101&#9;Kpbs&#10;20102&#9;Mpbs&#10;" type="Integer"/>
+        <field column="PRECISION_ROUND" columnDef="Int" name="precisionRound" null-able="false" primitive="No" remark="?????????????,?????????????,????????&#10;1:rounding up&#10;2:rounding down&#10;3:rounding to nearest" type="Integer"/>
+        <field column="DESCRIPTION" columnDef="Varchar" columnSize="1024" name="description" primitive="No" remark="description" type="String"/>
+    </fields>
+</entity>

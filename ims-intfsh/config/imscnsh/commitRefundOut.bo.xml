@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="commitRefundOut">
+  <fields>
+    <field name="respn_code" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="respn_desc" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="channel_priv" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="order_num" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="tran_date" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="settle_date" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="settle_amt" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="Settle_currency" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="conver_rate" type="String" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

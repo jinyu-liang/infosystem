@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="PmAccumulateAllowanceDtl" remark="" schema="pd" table="PM_ACCUMULATE_ALLOWANCE_DTL" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="PRICE_ID" columnDef="Int" isPk="true(not generated)" name="priceId" null-able="false" primitive="No" remark="ID of pricing which associate with PM_ACCUMULATE_ALLOWANCE_RULE.PRICE_ID&#10;" type="Integer"/>
+        <field column="ALLOWANCE_RULE_ID" columnDef="Int" isPk="true(not generated)" name="allowanceRuleId" null-able="false" primitive="No" remark="Rule for reward of  free resource&#10;" type="Integer"/>
+    </fields>
+</entity>

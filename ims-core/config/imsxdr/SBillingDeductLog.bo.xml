@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SBillingDeductLog" remark="" sdl="true" sdl-module="MXdr" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+<fields>
+<field name="acctId" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="servId" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="assetId" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="productId" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="woffFee" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="woffTaxFee" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="prodBeginDate" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="assetItemCode" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="measureId" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="billItemCode" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="billingType" primitive="Yes" remark="" sdl="true" type="Short"/>
+<field name="exchangeRate" primitive="Yes" remark="" sdl="true" type="Float"/>
+</fields>
+</entity>

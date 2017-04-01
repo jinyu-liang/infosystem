@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="CaAccountExt" remark="" schema="ad" table="CA_ACCOUNT_EXT" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+<fields>
+<field column="ACCT_ID" columnDef="Int" isPk="true(not generated)" name="acctId" null-able="false" primitive="No" remark="Account ID" type="Long"/>
+<field column="ITEM1" columnDef="Varchar" columnSize="64" name="item1" primitive="No" remark="Item 1(reserved for future use)" type="String"/>
+<field column="ITEM2" columnDef="Varchar" columnSize="255" name="item2" primitive="No" remark="Item 1(reserved for future use)" type="String"/>
+<field column="ITEM3" columnDef="Varchar" columnSize="255" name="item3" primitive="No" remark="" type="String"/>
+<field column="ITEM4" columnDef="Varchar" columnSize="32" name="item4" primitive="No" remark="" type="String"/>
+<field column="ITEM5" columnDef="Varchar" columnSize="64" name="item5" primitive="No" remark="" type="String"/>
+<field column="ITEM6" columnDef="Varchar" columnSize="32" name="item6" primitive="No" remark="" type="String"/>
+<field column="ITEM7" columnDef="Varchar" columnSize="32" name="item7" primitive="No" remark="" type="String"/>
+<field column="ITEM8" columnDef="Varchar" columnSize="32" name="item8" primitive="No" remark="" type="String"/>
+<field column="ITEM9" columnDef="Varchar" columnSize="32" name="item9" primitive="No" remark="" type="String"/>
+<field column="ITEM10" columnDef="Varchar" columnSize="255" name="item10" primitive="No" remark="" type="String"/>
+<field column="ITEM11" columnDef="Varchar" columnSize="256" name="item11" primitive="No" remark="" type="String"/>
+<field column="ITEM12" columnDef="Varchar" columnSize="256" name="item12" primitive="No" remark="" type="String"/>
+<field column="ITEM13" columnDef="Varchar" columnSize="32" name="item13" primitive="No" remark="" type="String"/>
+<field column="ITEM14" columnDef="Varchar" columnSize="32" name="item14" primitive="No" remark="" type="String"/>
+<field column="ITEM15" columnDef="Varchar" columnSize="32" name="item15" primitive="No" remark="" type="String"/>
+<field column="ITEM16" columnDef="Varchar" columnSize="32" name="item16" primitive="No" remark="" type="String"/>
+<field column="ITEM17" columnDef="Varchar" columnSize="32" name="item17" primitive="No" remark="" type="String"/>
+<field column="ITEM18" columnDef="Varchar" columnSize="32" name="item18" primitive="No" remark="" type="String"/>
+<field column="ITEM19" columnDef="Varchar" columnSize="32" name="item19" primitive="No" remark="" type="String"/>
+<field column="ITEM20" columnDef="Varchar" columnSize="32" name="item20" primitive="No" remark="" type="String"/>
+<field column="VALID_DATE" columnDef="Date" isPk="true(not generated)" name="validDate" null-able="false" primitive="No" remark="" type="Date"/>
+<field column="EXPIRE_DATE" columnDef="Date" name="expireDate" primitive="No" remark="" type="Date"/>
+<field column="CREATE_DATE" columnDef="Date" name="createDate" primitive="No" remark="" type="Date"/>
+<field column="SO_NBR" columnDef="Int" isPk="true(not generated)" name="soNbr" null-able="false" primitive="No" remark="" type="Long"/>
+<field column="SO_DATE" columnDef="Date" name="soDate" primitive="No" remark="" type="Date"/>
+</fields>
+</entity>

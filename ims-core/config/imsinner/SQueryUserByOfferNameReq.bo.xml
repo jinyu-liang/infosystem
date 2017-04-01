@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="SQueryUserByOfferNameReq">
+  <fields>
+    <field name="phone_id" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="offer_name" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <complex-field name="page" type="entity" ref="imsinner.SPage" collection="none" primitive="false"/>
+  </fields>
+</entity>

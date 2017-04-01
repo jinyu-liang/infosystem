@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SCaRewardInfo" remark="" sdl="true" sdl-module="MImsSyncDef" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+    <fields>
+        <field name="rewardId" primitive="Yes" remark="" sdl="true" type="Integer"/>
+        <field name="allotId" primitive="Yes" remark="" sdl="true" type="Integer"/>
+        <field name="acctId" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="resourceId" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="rewardAmount" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="billingType" primitive="Yes" remark="" sdl="true" type="Integer"/>
+        <field name="productOfferingId" primitive="Yes" remark="" sdl="true" type="Integer"/>
+        <field name="creditItemId" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="validDate" primitive="Yes" remark="" sdl="true" type="Date"/>
+        <field name="expireDate" primitive="Yes" remark="" sdl="true" type="Date"/>
+        <complex-field collection="list" name="assetInfoList" primitive="false" ref="imssdl.SAssetInfo" remark="" sdl="true" type="entity"/>
+    </fields>
+</entity>

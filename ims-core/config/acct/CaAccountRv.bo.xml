@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="CaAccountRv" remark="" schema="ad" table="CA_ACCOUNT_RV" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="ACCT_ID" columnDef="BigInt" isPk="true(not generated)" name="acctId" null-able="false" primitive="No" remark="" type="Long"/>
+        <field column="RESOURCE_ID" columnDef="BigInt" isPk="true(not generated)" name="resourceId" null-able="false" primitive="No" remark="" type="Long"/>
+        <field column="ISDN" columnDef="Varchar" columnSize="20" name="isdn" primitive="No" remark="" type="String"/>
+        <field column="TITLE_ROLE_ID" columnDef="Int" name="titleRoleId" primitive="No" remark="" type="Integer"/>
+        <field column="CALLOUTRIGHT" columnDef="Int" name="calloutright" primitive="No" remark="" type="Integer"/>
+        <field column="CALLINRIGHT" columnDef="Int" name="callinright" primitive="No" remark="" type="Integer"/>
+        <field column="CLIP_FLAG" columnDef="BigInt" name="clipFlag" primitive="No" remark="" type="Long"/>
+        <field column="ESPACE_FLAG" columnDef="BigInt" name="espaceFlag" primitive="No" remark="" type="Long"/>
+        <field column="NUMBER_TYPE" columnDef="BigInt" name="numberType" primitive="No" remark="" type="Long"/>
+        <field column="DISPLAY_NUMBER" columnDef="Varchar" columnSize="64" name="displayNumber" primitive="No" remark="" type="String"/>
+        <field column="REMARKS" columnDef="Varchar" columnSize="256" name="remarks" primitive="No" remark="" type="String"/>
+        <field column="SO_NBR" columnDef="BigInt" isPk="true(not generated)" name="soNbr" null-able="false" primitive="No" remark="" type="Long"/>
+        <field column="CREATE_DATE" columnDef="TimeStamp" name="createDate" null-able="false" primitive="No" remark="" type="Date"/>
+        <field column="SO_DATE" columnDef="TimeStamp" name="soDate" primitive="No" remark="" type="Date"/>
+        <field column="VALID_DATE" columnDef="TimeStamp" isPk="true(not generated)" name="validDate" null-able="false" primitive="No" remark="" type="Date"/>
+        <field column="EXPIRE_DATE" columnDef="TimeStamp" name="expireDate" primitive="No" remark="" type="Date"/>
+        <field column="STATUS" columnDef="Int" name="status" null-able="false" primitive="No" remark="" type="Integer"/>
+        <field column="PHONE_ID" columnDef="Varchar" columnSize="64" isPk="true(not generated)" name="phoneId" null-able="false" primitive="No" remark="" type="String"/>
+        <field column="INGROUP_OUTGOINGCALL" columnDef="Int" name="ingroupOutgoingcall" primitive="No" remark="" type="Integer"/>
+        <field column="INGROUP_INCOMINGCALL" columnDef="Int" name="ingroupIncomingcall" primitive="No" remark="" type="Integer"/>
+        <field column="CROSSGROUP_OUTGOINGCALL" columnDef="Int" name="crossgroupOutgoingcall" primitive="No" remark="" type="Integer"/>
+        <field column="CROSSGROUP_INCOMINGCALL" columnDef="Int" name="crossgroupIncomingcall" primitive="No" remark="" type="Integer"/>
+        <field column="SPEC_OUTGOINGCALL" columnDef="Int" name="specOutgoingcall" primitive="No" remark="" type="Integer"/>
+        <field column="SPEC_INCOMINGCALL" columnDef="Int" name="specIncomingcall" primitive="No" remark="" type="Integer"/>
+        <field column="OUTGROUP_OUTGOINGCALL" columnDef="Int" name="outgroupOutgoingcall" primitive="No" remark="" type="Integer"/>
+        <field column="OUTGROUP_INCOMINGCALL" columnDef="Int" name="outgroupIncomingcall" primitive="No" remark="" type="Integer"/>
+        <field column="RELATIONSHIP_TYPE" columnDef="Int" name="relationshipType" null-able="false" primitive="No" remark="" type="Integer"/>
+        <field column="TP_ID" columnDef="Int" name="tpId" primitive="No" remark="" type="Integer"/>
+    </fields>
+</entity>

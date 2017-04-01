@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="PmRentDeductFailure" remark="" schema="PD" table="PM_RENT_DEDUCT_FAILURE" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="FAILURE_RULE_ID" columnDef="Int" isPk="true(not generated)" name="failureRuleId" primitive="No" remark="Processing rules after recurring fee deduction failure" type="Integer"/>
+        <field column="DEDUCT_TIME" columnDef="Int" isPk="true(not generated)" name="deductTime" primitive="No" remark="retry_threshlod为触发此动作的扣费次数&#10;比如首次扣减失败，on top promotion 挂起，这时，retry_threshlod填1，act_type为执行的动作，填1：普通销售品扣费失败挂起。&#10;支持配置多条，如果之后要求最大重试次数后，还失败，则terminate，需要再加一条记录，这时，retry_threshlod填-1，act_type为执行的动作，填4: 普通产品:terminate。&#10;" type="Integer"/>
+        <field column="FAILURE_ACTION_ID" columnDef="Int" name="failureActionId" null-able="false" primitive="No" remark="Action type after recurring fee deduction failure:&#10;0: No processing&#10;1: Deduction failure suspend for promotion product offering&#10;2: deduction failure of main promotion leads to special stauts&#10;3: Main product offering switch (Change main product offering N days later)" type="Integer"/>
+        <field column="HAVE_DELAY_ACTION" columnDef="Int" name="haveDelayAction" null-able="false" primitive="No" remark="是否有延迟触发的动作&#10;0：No（没有）&#10;1：Yes（有）" type="Integer"/>
+        <field column="DELAY_CYCLE_UNIT" columnDef="Int" name="delayCycleUnit" null-able="false" primitive="No" remark="" type="Integer"/>
+        <field column="DELAY_CYCLE_TYPE" columnDef="Int" name="delayCycleType" null-able="false" primitive="No" remark="1&#9;by the Day&#10;2&#9;by the Month&#10;3&#9;by the Bill&#10;4&#9;by the Hour" type="Integer"/>
+        <field column="DELAY_ACTION_ID" columnDef="Int" name="delayActionId" null-able="false" primitive="No" remark="延迟触发的动作" type="Integer"/>
+    </fields>
+</entity>

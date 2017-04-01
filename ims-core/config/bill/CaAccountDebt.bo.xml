@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="CaAccountDebt" schema="ad" table="CA_ACCOUNT_DEBT" transient="false">
+  <fields>
+    <field name="acctId" type="Long" column="ACCT_ID" isPk="true(not generated)" primitive="Auto" remark="ีสปงฑเบล" null-able="false" columnDef="NUMBER" columnSize="15"/>
+    <field name="lastUnpayMonth" type="String" column="LAST_UNPAY_MONTH" isPk="false" primitive="Auto" remark="ื๎ิ็วททัิยท" null-able="true" columnDef="VARCHAR2" columnSize="6"/>
+    <field name="billCycleStart" type="String" column="BILL_CYCLE_START" isPk="false" primitive="Auto" remark="ตฑวฐีสฦฺ" null-able="true" columnDef="VARCHAR2" columnSize="8"/>
+    <field name="modDate" type="Date" column="MOD_DATE" isPk="false" primitive="Auto" remark="ะธฤศีฦฺ" null-able="true" columnDef="DATE" columnSize="7"/>
+    <complex-field name="billing_acct_id" type="String" collection="none" primitive="false" custAnnot="@Column(name=&quot;BILLING_ACCT_ID&quot;)"/>
+    <complex-field name="billing_suffix" type="String" collection="none" primitive="false" custAnnot="@Column(name=&quot;BILLING_SUFFIX&quot;)"/>
+    <complex-field name="billing_module" type="String" collection="none" primitive="false" custAnnot="@Column(name=&quot;BILLING_MODULE&quot;)"/>
+    <complex-field name="billing_condition" type="String" collection="none" primitive="false" custAnnot="@Column(name=&quot;BILLING_CONDITION&quot;)"/>
+  </fields>
+</entity>

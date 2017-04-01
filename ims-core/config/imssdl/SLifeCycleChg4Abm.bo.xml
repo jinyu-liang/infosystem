@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SLifeCycleChg4Abm" remark="" sdl="true" sdl-module="MImsSyncDef" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+    <fields>
+        <field name="acctId" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="triggerEventType" primitive="Yes" remark="" sdl="true" type="Integer"/>
+        <field name="oldAmount" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="newAmount" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="billType" primitive="Yes" remark="" sdl="true" type="Integer"/>
+        <field name="capMaxFlag" primitive="Yes" remark="" sdl="true" type="Integer"/>
+        <field name="unbillingFlag" primitive="Yes" remark="" sdl="true" type="Integer"/>
+        <field name="suspendReqFlag" primitive="Yes" remark="" sdl="true" type="Integer"/>
+        <field name="fraudFlag" primitive="Yes" remark="" sdl="true" type="Integer"/>
+        <field name="notifyFlag" primitive="Yes" remark="" sdl="true" type="Short"/>
+        <field name="opId" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="orgId" primitive="Yes" remark="" sdl="true" type="Integer"/>
+        <complex-field collection="list" name="userInfoList" primitive="false" ref="imssdl.SUserInfo" remark="" sdl="true" type="entity"/>
+    </fields>
+</entity>

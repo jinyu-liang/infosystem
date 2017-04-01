@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="do_queryInvoiceBillInfoResponse">
+  <root ref="imsintf.BaseResponse"/>
+  <fields>
+    <field name="acct_id" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="bill_month" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="bill_fee" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="remarkI" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="remarkII" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="remarkIII" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <complex-field name="InvoiceItemInfoList" type="entity" ref="imscnsh.InvoiceItemInfo" collection="list" primitive="false"/>
+    <field name="ext" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="acct_type" type="String" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

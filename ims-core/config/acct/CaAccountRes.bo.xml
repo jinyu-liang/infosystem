@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="CaAccountRes" remark="" schema="AD" table="CA_ACCOUNT_RES" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="ACCT_ID" columnDef="BigInt" isPk="true(not generated)" name="acctId" null-able="false" primitive="No" remark="Account must be a virtual account when relationship is virtual group.&#10;" type="Long"/>
+        <field column="RES_ACCT_ID" columnDef="BigInt" name="resAcctId" primitive="No" remark="account of resource" type="Long"/>
+        <field column="RESOURCE_ID" columnDef="BigInt" isPk="true(not generated)" name="resourceId" null-able="false" primitive="No" remark="Resource ID" type="Long"/>
+        <field column="RELATIONSHIP_TYPE" columnDef="Int" isPk="true(not generated)" name="relationshipType" null-able="false" primitive="No" remark="The relationship type can not be changed after confirmation&#10;0-Belonging relationship : brief description of belonging relationship between account entity CA and resource R, which means R belongs to CA&#10;1-Virtual group relationship: description of relationship between group and group member, Group CA- Member CA-Resource R&#10;2-billable account&#10;3-main resource" type="Integer"/>
+        <field column="TITLE_ROLE_ID" columnDef="Int" name="titleRoleId" primitive="No" remark="Organization or Post Role Numbering&#10;&#10;Define the roles&#10;Group Customer Role：&#10;1000:Ordinarily group&#10;1001:Head office&#10;1002:Branch Company&#10;1003:Department&#10;Individual Customer Role：&#10;3000:Ordinarily individual&#10;3001:General manager&#10;3002: Supervisor&#10;3003: Father&#10;3004: Mother&#10;3005: Child&#10;&#10;Define the dummy roles&#10;8001: Roles of parents (include: Father, mother)&#10;" type="Integer"/>
+        <field column="CREATE_DATE" columnDef="TimeStamp" name="createDate" null-able="false" primitive="No" remark="当前记录的产生时间" type="Date"/>
+        <field column="SO_DATE" columnDef="TimeStamp" name="soDate" primitive="No" remark="当前记录修改时间" type="Date"/>
+        <field column="SO_NBR" columnDef="BigInt" isPk="true(not generated)" name="soNbr" null-able="false" primitive="No" remark="" type="Long"/>
+        <field column="VALID_DATE" columnDef="TimeStamp" isPk="true(not generated)" name="validDate" null-able="false" primitive="No" remark="" type="Date"/>
+        <field column="EXPIRE_DATE" columnDef="TimeStamp" name="expireDate" primitive="No" remark="" type="Date"/>
+        <field column="CHG_FLAG" columnDef="Int" name="chgFlag" primitive="No" remark="bit1表示从哪个动作修改来的数据，bit2表示该数据被哪个动作修改&#10;两个bit的枚举值相同:&#10;0:normal&#10;1:changeAccount&#10;2:changeOwner&#10;" type="Integer"/>
+    </fields>
+</entity>

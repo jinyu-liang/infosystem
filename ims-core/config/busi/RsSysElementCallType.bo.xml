@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="RsSysElementCallType" remark="" schema="bd" table="RS_SYS_ELEMENT_CALL_TYPE" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="CALL_TYPE_ID" columnDef="AutoIncrement" isPk="true" name="callTypeId" primitive="No" remark="Call type identification, for identifying different call types&#10;Such as caller, called&#10;" type="Integer"/>
+        <field column="CALL_TYPE_NAME" columnDef="Varchar" columnSize="256" name="callTypeName" primitive="No" remark="Call type name " type="String"/>
+        <field column="DESCRIPTION" columnDef="Varchar" columnSize="1024" name="description" primitive="No" remark="description " type="String"/>
+    </fields>
+</entity>

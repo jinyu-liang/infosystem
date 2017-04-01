@@ -1,0 +1,10 @@
+#include "xdr_def.sdl"
+module MImsXdr
+{
+	interface IImsXdr
+	{
+	    //XDR首次激活接口
+	    int32 do_xdrFirstAct(inout MXdr::SXdr sXdr);
+	}
+}
+

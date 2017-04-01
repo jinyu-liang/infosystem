@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="Do_queryShareAllocReq">
+  <fields>
+    <field name="acctId" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="groupId" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="productId" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <complex-field name="freeItemList" type="entity" ref="imsinner.FreeItem4GUI" collection="array" primitive="false"/>
+  </fields>
+</entity>

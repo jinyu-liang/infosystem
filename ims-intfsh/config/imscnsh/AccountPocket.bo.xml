@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="AccountPocket" transient="true">
+  <fields>
+    <field name="total_fee" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="common_pocket" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="specail_pocket" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="pay_fee" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="pay_date" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="print_id" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="acct_addr" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="file_type" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="plan_type" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="print_type" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="source_type" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="post_code" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="bar_code" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="print_date" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="curren_pay_fee" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

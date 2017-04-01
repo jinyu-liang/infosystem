@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="PmPriceEvent" remark="" schema="pd" table="PM_PRICE_EVENT" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="ITEM_ID" columnDef="AutoIncrement" isPk="true" name="itemId" primitive="No" remark="&#10;Billing scenario identifier, item number&#10;&#10;Refer to RS_SYS_EVENT_ELEMENT_GEN when it is billing scenario.&#10;&#10;" type="Integer"/>
+        <field column="NAME" columnDef="Varchar" columnSize="256" name="name" null-able="false" primitive="No" remark="&#10;&#10;Item names" type="String"/>
+        <field column="SERVICE_SPEC_ID" columnDef="Int" name="serviceSpecId" primitive="No" remark="&#10;&#10;Billing virtual items,  filling in specification ID of the service, others can defaulted as 0&#10;" type="Integer"/>
+        <field column="ITEM_TYPE" columnDef="Int" name="itemType" null-able="false" primitive="No" remark="0ฃญฑฃม๔&#10;1ฃญทฮ๑สนำรสยผฟฦฤฟฃฌถิำฆผฦทัอ๘ิชฒ๚ษ๚ตฤสยผ;(Service Usage)&#10;2ฃญึฦฺทัสยผฟฦฤฟ;(Recurring Usage)&#10;3ฃญาปดฮะิทัำรสยผฟฦฤฟฃฌถิำฆาตฮ๑ทัฃฌศ็ฟจทักขณ๕ืฐทัตศ;(One Time Charge)&#10;4ฃญผฦหฐฟฦฤฟ&#10;5ฃญำลปฟฦฤฟ&#10;6ฃญด๚สีฟฦฤฟ" type="Integer"/>
+        <field column="SUB_TYPE" columnDef="Int" name="subType" null-able="false" primitive="No" remark="ถิำฺอ๘ิชผฦทัสยผฟฦฤฟฃบ&#10;   0ฃญป๙ฑพฟฦฤฟ&#10;   1ฃญณคอพฟฦฤฟ&#10;   2ฃญะลฯขฟฦฤฟ&#10;   3ฃญิ๖ึตฟฦฤฟ" type="Integer"/>
+        <field column="DESCRIPTION" columnDef="Varchar" columnSize="1024" name="description" primitive="No" remark="&#10;description about item&#10;" type="String"/>
+    </fields>
+</entity>

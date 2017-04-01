@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="do_changePaymentModeResponse" transient="true">
+  <root ref="imsintf.BaseResponse"/>
+  <fields>
+    <complex-field name="balance" type="entity" ref="imsintf.SBalance" collection="none" primitive="false"/>
+    <complex-field name="prod_result_list" type="entity" ref="imsintf.SProductOrderResultList" collection="none" primitive="false"/>
+  </fields>
+</entity>

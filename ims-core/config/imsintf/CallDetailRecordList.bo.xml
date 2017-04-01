@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="CallDetailRecordList" transient="false">
+  <fields>
+    <complex-field name="CallDetailRecord" type="entity" ref="imsintf.CallDetailRecord" collection="array" primitive="false"/>
+    <complex-field name="SContact" type="entity" ref="imsintf.SContact" collection="none" primitive="false"/>
+  </fields>
+</entity>

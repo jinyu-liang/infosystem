@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="SChangeGroupInfoReq" transient="true">
+  <fields>
+    <field name="outer_group_id" type="String" isPk="false" primitive="Auto" tree-foreign-key="false" null-able="true"/>
+    <field name="group_id" type="Long" isPk="false" primitive="No" null-able="true"/>
+    <field name="max_group_number" type="Integer" isPk="false" primitive="No" null-able="true"/>
+    <field name="main_phone_id" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="valid_date" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="expire_date" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="outer_billable_acct_id" type="String" isPk="false" primitive="Auto" tree-foreign-key="false" null-able="true"/>
+    <field name="billable_acct_id" type="Long" isPk="false" primitive="No" null-able="true"/>
+    <field name="contact_phone" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="clip_flag" type="Integer" isPk="false" primitive="No" null-able="true"/>
+    <field name="outgoing_cs_flag" type="Integer" isPk="false" primitive="No" null-able="true"/>
+    <field name="ocs_routing_flag" type="Integer" isPk="false" primitive="No" null-able="true"/>
+    <field name="espace_flag" type="Integer" isPk="false" primitive="No" null-able="true"/>
+    <field name="inGroupOutgoingCall" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="inGroupIncomingCall" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="crossGroupOutgoingCall" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="crossGroupIncomingCall" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="specOutgoingCall" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="specIncomingCall" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="outGroupOutgingCall" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="outGroupIncomingCall" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="group_type" type="Short" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

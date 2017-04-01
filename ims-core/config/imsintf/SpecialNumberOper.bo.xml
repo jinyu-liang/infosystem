@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="SpecialNumberOper" transient="true">
+  <fields>
+    <field name="phone_id" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="oper_type" type="Short" isPk="false" primitive="No" null-able="true"/>
+  </fields>
+</entity>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="do_changeGroupResponse" transient="true">
+  <root ref="imsintf.BaseResponse"/>
+  <fields>
+  	<field name="outer_group_id" type="String" isPk="false" primitive="Auto" tree-foreign-key="false" null-able="true"/>
+    <field name="group_id" type="Long" isPk="false" primitive="No" null-able="false"/>
+    <complex-field name="prod_result_list" type="entity" ref="imsintf.SProductOrderResultList" collection="none" primitive="false"/>
+  </fields>
+</entity>

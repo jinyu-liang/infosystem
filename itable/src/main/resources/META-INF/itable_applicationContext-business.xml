@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:aop="http://www.springframework.org/schema/aop" xmlns:context="http://www.springframework.org/schema/context" xmlns:dwr="http://www.directwebremoting.org/schema/spring-dwr" xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:tx="http://www.springframework.org/schema/tx" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd    http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd  http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd    http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd  http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd  http://www.directwebremoting.org/schema/spring-dwr http://www.directwebremoting.org/schema/spring-dwr-3.0.xsd">
+
+	<bean id="dispatchService" class="com.ailk.imssh.common.flow.dispatch.service.DispatchService" />
+	<!--20130604 liming15 群组成员提醒-->
+	<bean id="sendSmsToMemberService" class="com.ailk.imssh.common.flow.dispatch.service.SendSmsToMemberService" />
+	
+	<bean id="baseDeal" class="com.ailk.imssh.common.flow.scandeal.deal.BaseDeal" >
+		<aop:scoped-proxy proxy-target-class="true"/>
+	</bean>
+	<!--20151016 liucc 错误工单处理 -->
+	<bean id="errDealService" class="com.ailk.imssh.common.flow.dispatch.service.ErrDealService" >
+		<aop:scoped-proxy proxy-target-class="true"/>
+	</bean>
+	
+
+	<bean id="manualHandler" class="com.ailk.imssh.common.manual.handler.ManualHandler" /> 
+	<!-- 携号跨区的处理bean -->
+	<bean id="transferHandler" class="com.ailk.imssh.common.manual.handler.CustTransferHandler" /> 
+	<bean id="transferCountyHandler" class="com.ailk.imssh.common.manual.handler.CustTransferCountyHandler" /> 
+
+	<bean id="userDepositHandler" class="com.ailk.imssh.common.manual.handler.UserDepositHandler"></bean>
+	<bean id="itable_cache_bean" class="com.ailk.imssh.common.cache.ItableCacheBean" />
+	<!-- <bean id="itable_springContext" class="com.ailk.imssh.common.util.SpringExUtil" />-->
+	
+	<bean id="itable_init_bean" class="com.ailk.imssh.common.init.InitBean" />
+	<!-- db提交监听器 -->
+	<bean id="itable_db_listener"  class="com.ailk.imssh.common.commit.ItableTransListener"/>
+	
+	<!--错误码模板载入器-->
+	<bean id="itableErrorCodeLoader" class="com.ailk.easyframe.web.common.exception.ErrorCodeLoader" init-method="load">
+		<constructor-arg index="0">
+			<null/>
+		</constructor-arg>
+		<constructor-arg index="1">
+			<list>
+				<value>itable-conf/message/error</value>
+			</list>
+		</constructor-arg>
+	</bean>
+	
+	<!--dbm启动拦截器 -->
+	<bean id="dbmts_interceptor" class="com.ailk.imssh.common.interceptor.ItableInterceptor" />
+		<bean class="org.springframework.aop.framework.autoproxy.BeanNameAutoProxyCreator" id="dbmts_ServiceAutoProxy">
+		<property name="beanNames">
+			<list> 
+				<value>imssdl_iImsItableSyncAppService</value>
+			</list>
+		</property>
+		<property name="interceptorNames">
+			<list>
+				<value>dbmts_interceptor</value>
+			</list>
+		</property>
+		<property name="proxyTargetClass" value="false" />
+	</bean>
+	
+
+</beans>

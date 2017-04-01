@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SecOrganize" remark="" schema="JD" table="SEC_ORGANIZE" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="ORGANIZE_ID" columnDef="AutoIncrement" isPk="true(not generated)" name="organizeId" primitive="No" remark="" type="Long"/>
+        <field column="ORGANIZE_NAME" columnDef="Varchar" columnSize="200" name="organizeName" primitive="No" remark="即集团单位名称，由销售经理输和修改，集团单位名称应与该集团客户工商管理部门登记注册的名称一致，集团名称须进行唯一性判别。" type="String"/>
+        <field column="CODE" columnDef="Varchar" columnSize="100" name="code" null-able="false" primitive="No" remark="" type="String"/>
+        <field column="DISTRICT_ID" columnDef="Varchar" columnSize="40" name="districtId" primitive="No" remark="所属地区" type="String"/>
+        <field column="SHORT_NAME" columnDef="Varchar" columnSize="200" name="shortName" null-able="false" primitive="No" remark="" type="String"/>
+        <field column="ENGLISH_NAME" columnDef="Varchar" columnSize="200" name="englishName" null-able="false" primitive="No" remark="" type="String"/>
+        <field column="MEMBER_NUM" columnDef="Int" name="memberNum" null-able="false" primitive="No" remark="" type="Integer"/>
+        <field column="MANAGER_NAME" columnDef="Varchar" columnSize="40" name="managerName" null-able="false" primitive="No" remark="" type="String"/>
+        <field column="EMAIL" columnDef="Varchar" columnSize="50" name="email" null-able="false" primitive="No" remark="" type="String"/>
+        <field column="PHONE_ID" columnDef="Varchar" columnSize="50" name="phoneId" null-able="false" primitive="No" remark="" type="String"/>
+        <field column="FAX_ID" columnDef="Varchar" columnSize="50" name="faxId" null-able="false" primitive="No" remark="" type="String"/>
+        <field column="ORG_ADDRESS" columnDef="Varchar" columnSize="255" name="orgAddress" null-able="false" primitive="No" remark="" type="String"/>
+        <field column="CONTACT_NAME" columnDef="Varchar" columnSize="100" name="contactName" null-able="false" primitive="No" remark="" type="String"/>
+        <field column="CONTACT_CARD_TYPE" columnDef="Int" name="contactCardType" null-able="false" primitive="No" remark="" type="Integer"/>
+        <field column="CONTACT_CARD_ID" columnDef="Varchar" columnSize="40" name="contactCardId" null-able="false" primitive="No" remark="" type="String"/>
+        <field column="CONTACT_BILL_ID" columnDef="Varchar" columnSize="50" name="contactBillId" null-able="false" primitive="No" remark="" type="String"/>
+        <field column="POSTCODE" columnDef="Int" name="postcode" null-able="false" primitive="No" remark="" type="Integer"/>
+        <field column="POST_PROVINCE" columnDef="Int" name="postProvince" null-able="false" primitive="No" remark="" type="Long"/>
+        <field column="POST_CITY" columnDef="Int" name="postCity" null-able="false" primitive="No" remark="" type="Long"/>
+        <field column="POST_ADDRESS" columnDef="Varchar" columnSize="255" name="postAddress" null-able="false" primitive="No" remark="" type="String"/>
+        <field column="POST_POSTCOD" columnDef="Int" name="postPostcod" null-able="false" primitive="No" remark="" type="Integer"/>
+        <field column="COUNTY_ID" columnDef="Int" name="countyId" primitive="No" remark="区县编号" type="Long"/>
+        <field column="IS_LEAF" columnDef="Varchar" columnSize="1" name="isLeaf" null-able="false" primitive="No" remark="" type="String"/>
+        <field column="ORG_LEVEL" columnDef="Int" name="orgLevel" null-able="false" primitive="No" remark="" type="Integer"/>
+        <field column="ORG_AREA_TYPE" columnDef="Int" name="orgAreaType" null-able="false" primitive="No" remark="" type="Long"/>
+        <field column="ORG_COOP_TYPE" columnDef="Int" name="orgCoopType" null-able="false" primitive="No" remark="" type="Integer"/>
+        <field column="IS_CHANNEL" columnDef="Int" name="isChannel" null-able="false" primitive="No" remark="" type="Integer"/>
+        <field column="NOTES" columnDef="Varchar" columnSize="255" name="notes" null-able="false" primitive="No" remark="" type="String"/>
+        <field column="STATE" columnDef="Int" name="state" null-able="false" primitive="No" remark="1-正常&#10;0-注销" type="Integer"/>
+        <field column="DONE_CODE" columnDef="Int" name="doneCode" null-able="false" primitive="No" remark="当前业务受理编号" type="Long"/>
+        <field column="CREATE_DATE" columnDef="Date" name="createDate" primitive="No" remark="" type="Date"/>
+        <field column="DONE_DATE" columnDef="Date" name="doneDate" primitive="No" remark="当前业务受理日期" type="Date"/>
+        <field column="VALID_DATE" columnDef="Date" name="validDate" null-able="false" primitive="No" remark="客户生日期" type="Date"/>
+        <field column="EXPIRE_DATE" columnDef="Date" name="expireDate" null-able="false" primitive="No" remark="客户失效日期" type="Date"/>
+        <field column="OP_ID" columnDef="Int" name="opId" null-able="false" primitive="No" remark="" type="Long"/>
+        <field column="ORG_ID" columnDef="Int" name="orgId" null-able="false" primitive="No" remark="" type="Long"/>
+        <field column="ORG_ROLE_TYPE_ID" columnDef="Int" name="orgRoleTypeId" null-able="false" primitive="No" remark="" type="Long"/>
+        <field column="EXT1" columnDef="Varchar" columnSize="200" name="ext1" null-able="false" primitive="No" remark="" type="String"/>
+        <field column="EXT2" columnDef="Varchar" columnSize="200" name="ext2" null-able="false" primitive="No" remark="" type="String"/>
+        <field column="EXT3" columnDef="Varchar" columnSize="200" name="ext3" null-able="false" primitive="No" remark="" type="String"/>
+        <field column="EXT4" columnDef="Varchar" columnSize="200" name="ext4" null-able="false" primitive="No" remark="" type="String"/>
+        <field column="EXT5" columnDef="Varchar" columnSize="200" name="ext5" null-able="false" primitive="No" remark="" type="String"/>
+        <field column="EXT6" columnDef="Varchar" columnSize="200" name="ext6" null-able="false" primitive="No" remark="" type="String"/>
+    </fields>
+</entity>

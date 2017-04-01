@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="PmCompositeDeductRule" schema="pd" table="PM_COMPOSITE_DEDUCT_RULE">
+  <fields>
+    <field name="productOfferingId" type="Integer" column="PRODUCT_OFFERING_ID" isPk="true(not generated)" primitive="No" remark="A unique identifier for the product offering.
+
+" null-able="false" columnDef="Int"/>
+    <field name="deductFlag" type="Integer" column="DEDUCT_FLAG" primitive="No" remark="ีหฮ๑ทัำรฟทัทฝสฝ
+0--ิคฟ
+1--บ๓ฟ" null-able="false" columnDef="Int"/>
+    <field name="rentDeductRuleId" type="Integer" column="RENT_DEDUCT_RULE_ID" primitive="No" remark="นฬทัฟผ๕สงฐนๆิ๒" null-able="false" columnDef="Int"/>
+    <field name="prorateDeductRuleId" type="Integer" column="PRORATE_DEDUCT_RULE_ID" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="redoAfTopup" type="Integer" column="REDO_AF_TOPUP" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="negativeFlag" type="Integer" column="NEGATIVE_FLAG" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="isChangeBillCycle" type="Integer" column="IS_CHANGE_BILL_CYCLE" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="failureRuleId" type="Integer" column="FAILURE_RULE_ID" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="retryTime" type="Integer" column="RETRY_TIME" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="cycleType" type="Integer" column="CYCLE_TYPE" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="cycleUnit" type="Integer" column="CYCLE_UNIT" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="billingType" type="Integer" column="BILLING_TYPE" isPk="true(not generated)" primitive="No" null-able="false" columnDef="Int"/>
+    <field name="needAuth" type="Integer" column="NEED_AUTH" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="isPerBill" type="Integer" column="IS_PER_BILL" primitive="No" null-able="false" columnDef="Int"/>
+    <field name="intervalCycleType" type="Integer" column="INTERVAL_CYCLE_TYPE" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="intervalCycleUnit" type="Integer" column="INTERVAL_CYCLE_UNIT" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="retryMode" type="Integer" column="RETRY_MODE" primitive="No" null-able="false" columnDef="Int"/>
+    <field name="retryCycles" type="Integer" column="RETRY_CYCLES" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="mainPromotion" type="Integer" column="MAIN_PROMOTION" isPk="true(not generated)" primitive="No" null-able="false" columnDef="Int"/>
+  </fields>
+</entity>

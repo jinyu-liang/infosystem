@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="RealTimeCallCharge" transient="false">
+  <fields>
+    <field name="main_promotion" type="Integer" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="start_date_time" type="String" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="end_date_time" type="String" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="total_charge" type="Long" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="duration" type="Integer" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <complex-field name="CallDetailList" type="entity" ref="imsintf.CallDetailList" collection="none" primitive="false"/>
+  </fields>
+</entity>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="DepositeInvoOut">
+  <fields>
+    <field name="invo_acct_id" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="invo_phone_id" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="invo_acct_name" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="op_id" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="invo_num" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="invo_item_name" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="invo_price_amt" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="invo_amt" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

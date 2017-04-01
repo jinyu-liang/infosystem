@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SSplitInfo" remark="" sdl="true" sdl-module="MIntfshSyncDef" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd">
+    <fields>
+        <field name="productId" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="payAcctId" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="priority" primitive="Yes" remark="" sdl="true" type="Short"/>
+        <field name="validDate" primitive="Yes" remark="" sdl="true" type="String"/>
+        <field name="expireDate" primitive="Yes" remark="" sdl="true" type="String"/>
+        <field name="partType" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="partValue" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="splitNumerator" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="splitDenominator" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="acctId" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="userId" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="splitType" primitive="Yes" remark="" sdl="true" type="Short"/>
+        <field name="priceRuleId" primitive="Yes" remark="" sdl="true" type="Long"/>
+    </fields>
+</entity>

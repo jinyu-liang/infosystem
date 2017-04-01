@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="SysTimeSegDef" schema="SD" table="SYS_TIME_SEG_DEF">
+  <fields>
+    <field name="segId" type="Integer" column="SEG_ID" isPk="true" primitive="No" remark="time segment definition ID" null-able="true" columnDef="AutoIncrement"/>
+    <field name="timeMode" type="Integer" column="TIME_MODE" primitive="No" remark="time segment time mode
+0-Not time mode
+if the referential subject is time amount, then the premium tier should stand for YYYYddmmHHMMSS, which is designated by the use of time_mode:
+
+1-week-type day time segment, date should be 1-7；E.g. Mon-Fri 8.00-20.00 means being effective between 8:00 and 20:00 from Monday to Friday, and is configured as 1080000 and 5200000.
+2-YYYYMMDD-type appoints date and day time segment；E.g. 20100102-20101114 8.00-20.00, to show being effective between 8:00 and 20:00 from 2010/1/2 to 2010/11/14, configure is as 20100102080000 and 20101114200000.
+3-MMDD-type means day time segment；E.g. 8:00-20:00 from 1/2 to 11/14 of every year is effective; configure it as 0102080000 and 1114200000.
+4-DD-type refers to day time segment;E.g. to show that time between 8:00 and 20:00 from 2sec to 14th of every month is effective, then configure it as 02080000 and 14200000.
+5-week-type time which is from start date to ending date, e.g. Mon 8.00 - Fri 20.00 means it is effective from 8:00 Monday to 20:00 Friday, then configure it as 1080000 and 5200000.
+6-YYYYMMDD-type time which is from start date to ending date, e.g. 2010/1/2 8:00 – 2010/11/14 20:00 means it is effective within this time area, then configure it as 20100102080000 and 20101114200000.
+7-MMDD-type time which is from start date to ending date, e.g. 1/2 8:00 – 11/14 20:00 of every year means it is effective within this period, then configure it as 0102080000 and 1114200000
+8-DD-type time which is from start date to ending date, e.g. 2ed 8:00 – 14th 20:00 of every month is effective, then configure it as 02080000 and 14200000." null-able="true" columnDef="Int"/>
+    <field name="segName" type="String" column="SEG_NAME" primitive="No" remark="time segment definition name
+" null-able="true" columnDef="Varchar" columnSize="256"/>
+    <field name="description" type="String" column="DESCRIPTION" primitive="No" remark="description" null-able="false" columnDef="Varchar" columnSize="1024"/>
+  </fields>
+</entity>

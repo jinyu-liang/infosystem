@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="reguideInfo">
+  <fields>
+    <field name="acct_id" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="user_id" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="busi_service_id" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="time_segment" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="reguide_type" type="Short" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="pay_flag" type="Short" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="pay_acct_id" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="pay_user_id" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="pay_phone_id" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="priority" type="Short" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="part_type" type="Short" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="part_value" type="Double" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="max_value" type="Double" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="measure_id" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="b_number" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="create_date" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="valid_date" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="expire_date" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="threshold" type="Double" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="notify_type" type="Short" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="notify_phone_id" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="notify_addr" type="String" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="ImsExpireProdNotify" schema="cd" table="IMS_EXPIRE_PROD_NOTIFY">
+  <fields>
+    <field name="id" type="Long" column="ID" primitive="No" null-able="true" columnDef="BigInt"/>
+    <field name="prodId" type="Long" column="PROD_ID" primitive="No" null-able="true" columnDef="BigInt"/>
+    <field name="receivePhone" type="String" column="RECEIVE_PHONE" primitive="No" null-able="true" columnDef="Varchar" columnSize="64"/>
+    <field name="expireDate" type="Date" column="EXPIRE_DATE" primitive="No" null-able="true" columnDef="TimeStamp"/>
+    <field name="createDate" type="Date" column="CREATE_DATE" primitive="No" null-able="true" columnDef="TimeStamp"/>
+    <field name="sts" type="Integer" column="STS" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="custId" type="Long" column="CUST_ID" primitive="No" null-able="true" columnDef="BigInt"/>
+    <field name="acctId" type="Long" column="ACCT_ID" primitive="No" null-able="true" columnDef="BigInt"/>
+    <field name="userId" type="Long" column="USER_ID" primitive="No" null-able="true" columnDef="BigInt"/>
+    <field name="offerId" type="Long" column="OFFER_ID" primitive="No" null-able="true" columnDef="BigInt"/>
+    <field name="validDate" type="Date" column="VALID_DATE" primitive="No" null-able="false" columnDef="TimeStamp"/>
+    <field name="notificationId" type="Integer" column="NOTIFICATION_ID" primitive="No" null-able="false" columnDef="Int"/>
+    <field name="freeResFlag" type="Integer" column="FREE_RES_FLAG" primitive="No" null-able="false" columnDef="Int"/>
+    <field name="dealDate" type="Date" column="DEAL_DATE" primitive="No" null-able="true" columnDef="TimeStamp"/>
+    <field name="dealCount" type="Integer" column="DEAL_COUNT" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="errorCode" type="Integer" column="ERROR_CODE" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="errorMsg" type="String" column="ERROR_MSG" primitive="No" null-able="true" columnDef="Varchar" columnSize="256"/>
+  </fields>
+</entity>

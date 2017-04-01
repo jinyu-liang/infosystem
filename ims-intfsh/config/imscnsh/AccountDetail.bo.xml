@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="AccountDetail" transient="true">
+  <fields>
+    <field name="book_id" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="book_name" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="book_type" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="busi_date" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="spec_name" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="category_name" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="fee" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="remark" type="String" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

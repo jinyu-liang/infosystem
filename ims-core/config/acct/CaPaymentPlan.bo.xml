@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="CaPaymentPlan" remark="" schema="AD" table="CA_PAYMENT_PLAN" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="PAYMENT_PLAN_ID" columnDef="BigInt" isPk="true(not generated)" name="paymentPlanId" null-able="false" primitive="No" remark="payment plan code which is the instantiated code in relation with account.&#10;" type="Long"/>
+        <field column="ACCT_ID" columnDef="BigInt" name="acctId" primitive="No" remark="A unique identifier.&#10;" type="Long"/>
+        <field column="EXPIRE_DATE" columnDef="TimeStamp" name="expireDate" primitive="No" remark="account book's specific invalid date.&#10;&#10;" type="Date"/>
+        <field column="VALID_DATE" columnDef="TimeStamp" isPk="true(not generated)" name="validDate" null-able="false" primitive="No" remark="account book's specific valid date, format:YYYY-MM-DD HH:MM:SS&#10;" type="Date"/>
+        <field column="SO_NBR" columnDef="BigInt" isPk="true(not generated)" name="soNbr" null-able="false" primitive="No" remark="a certain payment might be in correspondence with specific work order code.&#10;" type="Long"/>
+        <field column="SO_DATE" columnDef="TimeStamp" name="soDate" primitive="No" remark="" type="Date"/>
+        <field column="CREATE_DATE" columnDef="TimeStamp" name="createDate" primitive="No" remark="" type="Date"/>
+    </fields>
+</entity>

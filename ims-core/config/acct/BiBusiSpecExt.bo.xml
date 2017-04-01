@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="BiBusiSpecExt" schema="AD" table="BI_BUSI_SPEC_EXT">
+  <fields>
+    <field name="busiSpecId" type="Integer" column="BUSI_SPEC_ID" isPk="true(not generated)" primitive="No" remark="Business interaction specification identifier" null-able="false" columnDef="Int"/>
+    <field name="rechargeMethod" type="Integer" column="RECHARGE_METHOD" isPk="true(not generated)" primitive="No" remark="Business origin:
+-1:ALL
+1: VC recharge
+3: manual recharge
+4: ATM recharge
+5: STK recharge
+6: Tele-banking recharge
+7: Spare
+8:cash
+9: check" null-able="false" columnDef="Int"/>
+    <field name="channelId" type="Integer" column="CHANNEL_ID" isPk="true(not generated)" primitive="No" remark="????:
+1-CRM
+2-??
+3-??
+4-IVR" null-able="false" columnDef="Int"/>
+    <field name="busiResult" type="Integer" column="BUSI_RESULT" isPk="true(not generated)" primitive="No" remark="Business result
+1: Successful
+2: Failed
+3: ?????
+4: ?????????" null-able="false" columnDef="Int"/>
+    <field name="notificationId" type="Integer" column="NOTIFICATION_ID" primitive="No" remark="Business notification" null-able="false" columnDef="Int"/>
+    <field name="busiPlanId" type="Integer" column="BUSI_PLAN_ID" isPk="true(not generated)" primitive="No" null-able="false" columnDef="Int"/>
+  </fields>
+</entity>

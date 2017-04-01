@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="do_mgnSingleBalanceMbrResponse" transient="true">
+  <root ref="imsintf.BaseResponse"/>
+  <fields>
+    <complex-field name="sMemberBalanceResponse" type="entity" ref="imsintf.SBalanceAdjustResponse" collection="none" primitive="false"/>
+    <complex-field name="sMasterBalanceResponse" type="entity" ref="imsintf.SBalanceAdjustResponse" collection="none" primitive="false"/>
+    <field name="onetimefee_amount" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

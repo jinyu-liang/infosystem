@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="PsMail" remark="" schema="cd" table="PS_MAIL" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="ID" columnDef="AutoIncrement" isPk="true" name="id" primitive="No" remark="?????" type="Integer"/>
+        <field column="SOURCE" columnDef="Int" name="source" primitive="No" remark="????" type="Integer"/>
+        <field column="TYPE" columnDef="Varchar" columnSize="64" name="type" primitive="No" remark="????" type="String"/>
+        <field column="PRIO_LEVEL" columnDef="Int" name="prioLevel" primitive="No" remark="???" type="Integer"/>
+        <field column="CREATE_DATE" columnDef="Date" name="createDate" primitive="No" remark="" type="Date"/>
+        <field column="START_DATE" columnDef="Date" name="startDate" primitive="No" remark="??????" type="Date"/>
+        <field column="END_DATE" columnDef="Date" name="endDate" primitive="No" remark="??????" type="Date"/>
+        <field column="HIS_CREATE_DATE" columnDef="Date" name="hisCreateDate" primitive="No" remark="??????" type="Date"/>
+        <field column="STATUS" columnDef="Int" name="status" primitive="No" remark="????:&#10;      0 ??&#10;      1 ???&#10;      9 ????&#10;      -1????" type="Integer"/>
+        <field column="FAIL_REASON" columnDef="Varchar" columnSize="1024" name="failReason" primitive="No" remark="????" type="String"/>
+        <field column="RETRY_TIME" columnDef="Int" name="retryTime" primitive="No" remark="????" type="Integer"/>
+        <field column="SEND_ACCOUNT" columnDef="Varchar" columnSize="64" name="sendAccount" primitive="No" remark="????" type="String"/>
+        <field column="SEND_PWD" columnDef="Varchar" columnSize="32" name="sendPwd" primitive="No" remark="????" type="String"/>
+        <field column="SEND_SERVER" columnDef="Varchar" columnSize="64" name="sendServer" primitive="No" remark="?????" type="String"/>
+        <field column="BAK_SEND_SERVER" columnDef="Varchar" columnSize="64" name="bakSendServer" primitive="No" remark="???????" type="String"/>
+        <field column="RECEIVE_ACCOUNTS" columnDef="Varchar" columnSize="1024" name="receiveAccounts" null-able="false" primitive="No" remark="????(????? ?? &quot;,&quot; ??)" type="String"/>
+        <field column="CC_ACCOUNT" columnDef="Varchar" columnSize="1024" name="ccAccount" primitive="No" remark="????(????? ?? &quot;,&quot; ??)" type="String"/>
+        <field column="SUBJECT" columnDef="Varchar" columnSize="256" name="subject" null-able="false" primitive="No" remark="????" type="String"/>
+        <field column="CONTENT" columnDef="Varchar" columnSize="4000" name="content" primitive="No" remark="????" type="String"/>
+        <field column="WISH_DATE" columnDef="Date" name="wishDate" primitive="No" remark="??????" type="Date"/>
+        <field column="PARAM1" columnDef="Varchar" columnSize="1024" name="param1" primitive="No" remark="????1" type="String"/>
+        <field column="PARAM2" columnDef="Varchar" columnSize="1024" name="param2" primitive="No" remark="????2" type="String"/>
+        <field column="PARAM3" columnDef="Varchar" columnSize="1024" name="param3" primitive="No" remark="????3" type="String"/>
+        <field column="ATTACH" columnDef="Varchar" columnSize="512" name="attach" primitive="No" remark="????" type="String"/>
+        <field column="NOTIFY_LANG" columnDef="Int" name="notifyLang" null-able="false" primitive="No" remark="" type="Integer"/>
+        <field column="SEQUENCE_ID" columnDef="Int" name="sequenceId" null-able="false" primitive="No" remark="" type="Long"/>
+    </fields>
+</entity>

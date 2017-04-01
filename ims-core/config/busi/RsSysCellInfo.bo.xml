@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="RsSysCellInfo" schema="BD" table="RS_SYS_CELL_INFO">
+  <fields>
+    <field name="id" type="Integer" column="ID" isPk="true" primitive="No" remark="Record serial number" null-able="true" columnDef="AutoIncrement"/>
+    <field name="cellCode" type="Integer" column="CELL_CODE" primitive="No" remark="Identification of cell for differentiating different cell in-table-relation" null-able="true" columnDef="Int"/>
+    <field name="mscId" type="Integer" column="MSC_ID" primitive="No" remark="Switch code 
+When it is not related to switch, fill in fixed value 0;
+When it needs to judge the switch, fill in actual value of switch;" null-able="true" columnDef="Int"/>
+    <field name="lacId" type="String" column="LAC_ID" primitive="No" remark="Location area code, delivered from net element side, location area identification 
+Hexadecimal number" null-able="true" columnDef="Varchar" columnSize="8"/>
+    <field name="cellId" type="String" column="CELL_ID" primitive="No" remark="Base station code, delivered from net element side, location area identification
+Hexadecimal number" null-able="true" columnDef="Varchar" columnSize="8"/>
+    <field name="areaCode" type="String" column="AREA_CODE" primitive="No" remark="Long distance area code,  for analyzing long distance type 
+Refer to table SYS_REGION_INFO" null-able="true" columnDef="Varchar" columnSize="4"/>
+    <field name="regionCode" type="Integer" column="REGION_CODE" primitive="No" remark="Business area  code 
+Correlation table SYS_REGION_INFO" null-able="false" columnDef="Int"/>
+    <field name="validDate" type="Date" column="VALID_DATE" primitive="No" remark="It refers to the date for the record taking effect" null-able="true" columnDef="TimeStamp"/>
+    <field name="expireDate" type="Date" column="EXPIRE_DATE" primitive="No" remark="It refers to the date for the record losing effectiveness" null-able="true" columnDef="TimeStamp"/>
+    <field name="modifyDate" type="Date" column="MODIFY_DATE" primitive="No" remark="It refers to the date for modification of record" null-able="false" columnDef="TimeStamp"/>
+    <field name="description" type="String" column="DESCRIPTION" primitive="No" remark="Remarks in-table-relation" null-able="true" columnDef="Varchar" columnSize="1024"/>
+  </fields>
+</entity>

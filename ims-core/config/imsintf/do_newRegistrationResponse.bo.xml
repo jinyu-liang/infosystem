@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="do_newRegistrationResponse" transient="true">
+  <root ref="imsintf.BaseResponse"/>
+  <fields>
+    <field name="outer_cust_id" type="String" isPk="false" primitive="Auto" tree-foreign-key="false" null-able="true"/>
+    <field name="cust_id" type="Long" isPk="false" enumAsAliasField="false" tree-foreign-key="false" null-able="false"/>
+    <complex-field name="acct_ids" type="entity" ref="imsintf.LongList" collection="none" primitive="false"/>
+    <complex-field name="user_result_list" type="entity" ref="imsintf.SUserResultList" collection="none" primitive="false"/>
+    <complex-field name="prod_result_list" type="entity" ref="imsintf.SProductOrderResultList" collection="none" primitive="false"/>
+  </fields>
+</entity>

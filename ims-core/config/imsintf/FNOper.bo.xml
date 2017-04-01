@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="FNOper" transient="true">
+<fields>
+<field name="oper_type" type="Short" isPk="false" enumAsAliasField="false" tree-foreign-key="false" null-able="true"/>
+<field name="product_id" type="Long" isPk="false" enumAsAliasField="false" tree-foreign-key="false" null-able="true"/>
+<complex-field name="FN_list" type="entity" ref="imsintf.FNList" collection="none" primitive="false"/>
+</fields>
+</entity>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="SUser" transient="true">
+  <fields>
+    <field name="user_id" type="Long" isPk="false" primitive="Auto" tree-foreign-key="false" null-able="true"/>
+    <field name="county_code" type="Short" isPk="false" primitive="No" tree-foreign-key="false" null-able="true"/>
+    <field name="region_code" type="Short" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="phone_id" type="String" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="company" type="String" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="password" type="String" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="imsi" type="String" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="outer_acct_id" type="String" isPk="false" primitive="Auto" tree-foreign-key="false" null-able="true"/>
+    <field name="acct_id" type="Long" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="outer_billable_acct_id" type="String" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="billable_acct_id" type="Long" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="outer_cust_id" type="String" isPk="false" primitive="Auto" tree-foreign-key="false" null-able="true"/>
+    <field name="cust_id" type="Long" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="user_type" type="Short" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="user_segment" type="Short" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="payment_mode" type="Short" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="brand" type="Short" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="main_promotion" type="Integer" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="credit" type="Double" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="measure_id" type="Integer" isPk="false" primitive="Auto" tree-foreign-key="false" null-able="true"/>
+    <field name="budget" type="Double" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="status" type="Short" isPk="false" primitive="Auto" tree-foreign-key="false" null-able="true"/>
+    <field name="os_status" type="String" isPk="false" primitive="Auto" tree-foreign-key="false" null-able="true"/>
+    <field name="create_date" type="String" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="valid_date" type="String" isPk="false" primitive="Auto" tree-foreign-key="false" null-able="true"/>
+    <field name="expire_date" type="String" isPk="false" primitive="Auto" tree-foreign-key="false" null-able="true"/>
+    <field name="device_type" type="String" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="IMEI" type="String" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="MNP_home_area" type="String" isPk="false" primitive="Auto" tree-foreign-key="false" null-able="true"/>
+    <field name="sms_language" type="Short" isPk="false" primitive="No" null-able="true"/>
+    <field name="ivr_language" type="Short" isPk="false" primitive="No" null-able="true"/>
+    <field name="ussd_language" type="Short" isPk="false" primitive="No" null-able="true"/>
+    <field name="active_date" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="title_role_id" type="Short" isPk="false" primitive="No" null-able="true"/>
+    <field name="is_test_number" type="Short" isPk="false" primitive="No" null-able="true"/>
+    <field name="attrUserEmail" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <complex-field name="list_ext_param" type="entity" ref="imsintf.ExtendParamList" collection="none" primitive="false"/>
+    <complex-field name="sUserLifeCycle" type="entity" ref="imsintf.SUserLifecycle" collection="none" primitive="false"/>
+    <field name="serial_no" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="flh_flag" type="Short" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="continue_flag" type="Short" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="suspend_stop_date" type="Date" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="disable_stop_date" type="Date" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="active_stop_date" type="Date" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

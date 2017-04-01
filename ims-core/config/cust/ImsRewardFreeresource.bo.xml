@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="ImsRewardFreeresource" schema="CD" table="IMS_REWARD_FREERESOURCE">
+  <fields>
+    <field name="productId" type="Long" column="PRODUCT_ID" isPk="true(not generated)" primitive="No" null-able="false" columnDef="BigInt"/>
+    <field name="productOfferingId" type="Integer" column="PRODUCT_OFFERING_ID" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="objectId" type="Long" column="OBJECT_ID" isPk="true(not generated)" primitive="No" null-able="false" columnDef="BigInt"/>
+    <field name="objectType" type="Integer" column="OBJECT_TYPE" isPk="true(not generated)" primitive="No" null-able="false" columnDef="Int"/>
+    <field name="itmeId" type="Integer" column="ITME_ID" isPk="true(not generated)" primitive="No" null-able="false" columnDef="Int"/>
+    <field name="measureId" type="Integer" column="MEASURE_ID" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="amount" type="Long" column="AMOUNT" primitive="No" null-able="true" columnDef="BigInt"/>
+    <field name="validDate" type="Date" column="VALID_DATE" primitive="No" null-able="true" columnDef="Date"/>
+    <field name="expireDate" type="Date" column="EXPIRE_DATE" primitive="No" null-able="true" columnDef="Date"/>
+    <field name="soNbr" type="Long" column="SO_NBR" primitive="No" null-able="false" columnDef="BigInt"/>
+  </fields>
+</entity>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SysMeasureType" remark="" schema="sd" table="SYS_MEASURE_TYPE" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="MEASURE_TYPE_ID" columnDef="AutoIncrement" isPk="true" name="measureTypeId" primitive="No" remark="Measurement types, enum values:&#10;1 time-based&#10;2 volume-based&#10;3 transaction&#10;4 piece&#10;5 point&#10;6 bonus&#10;101 SDR&#10;102 USD&#10;103 EURO&#10;104 CNY&#10;111  THB&#10;112 VND" type="Integer"/>
+        <field column="MEASURE_EXCHANGE_ID" columnDef="Int" name="measureExchangeId" primitive="No" remark="Exchange rules among measurements of the same type" type="Integer"/>
+        <field column="MEASURE_CLASS" columnDef="Int" name="measureClass" null-able="false" primitive="No" remark="Measurement classification:&#10;0: Charge measurement&#10;1: Resurce measurement&#10;2: Rate measurement " type="Integer"/>
+        <field column="NAME" columnDef="Varchar" columnSize="256" name="name" null-able="false" primitive="No" remark="Measurement name, mapping with measurement identifier:&#10;1  Duration&#10;2  Data volume&#10;3  Transaction&#10;4  Piece&#10;5  Point&#10;6  Bonus&#10;101  SDR&#10;102  USD&#10;103  EURO&#10;104  CNY&#10;111  THB&#10;112  VND" type="String"/>
+        <field column="DESCRIPTION" columnDef="Varchar" columnSize="1024" name="description" primitive="No" remark="Measurement description" type="String"/>
+        <field column="LOCAL_CURRENCY" columnDef="Int" name="localCurrency" null-able="false" primitive="No" remark="0：表示不是本国货币&#10;1：表示本国货币&#10;-999：表示不用该字段" type="Integer"/>
+    </fields>
+</entity>

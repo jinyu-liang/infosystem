@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SVcInfo" remark="" sdl="true" sdl-module="MXdr" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+<fields>
+<field name="vcNumber" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="tradeType" primitive="Yes" remark="" sdl="true" type="Short"/>
+<field name="tradeState" primitive="Yes" remark="" sdl="true" type="Short"/>
+<field name="cardId" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="vcType" primitive="Yes" remark="" sdl="true" type="Short"/>
+<field name="cardCharge" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="vcLocation" primitive="Yes" remark="" sdl="true" type="Short"/>
+<field name="cardHplmn1" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="cardHplmn2" primitive="Yes" remark="" sdl="true" type="String"/>
+</fields>
+</entity>

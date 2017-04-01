@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="do_queryOfferingInfoResponse" transient="true">
+  <root ref="imsintf.BaseResponse"/>
+  <fields>
+    <complex-field name="offering" type="entity" ref="pm.PmProductOffering" collection="none" primitive="false"/>
+    <complex-field name="pricePlan" type="entity" ref="pm.PmProductPricingPlan" collection="none" primitive="false"/>
+    <complex-field name="productSpec" type="entity" ref="pm.PmProductSpec" collection="none" primitive="false"/>
+    <complex-field name="prodSpecCharList" type="entity" ref="imsinner.SProdSpecChar" collection="list" primitive="false"/>
+    <complex-field name="prodLifecycle" type="entity" ref="pm.PmProductOfferLifecycle" collection="none" primitive="false"/>
+  </fields>
+</entity>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="PmAccumulateItemDef" remark="" schema="PD" table="PM_ACCUMULATE_ITEM_DEF" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="ACCUMULATE_ITEM" columnDef="AutoIncrement" isPk="true" name="accumulateItem" primitive="No" remark="accumulated charging item&#10;" type="Integer"/>
+        <field column="NAME" columnDef="Varchar" columnSize="256" name="name" primitive="No" remark="name of accumulate item" type="String"/>
+        <field column="MEASURE_ID" columnDef="Int" name="measureId" null-able="false" primitive="No" remark="unit of accumulation" type="Integer"/>
+        <field column="DESCRIPTION" columnDef="Varchar" columnSize="1024" name="description" primitive="No" remark="description" type="String"/>
+        <field column="ACCUMULATE_TYPE" columnDef="Int" name="accumulateType" null-able="false" primitive="No" remark="" type="Integer"/>
+        <field column="SEG_ID" columnDef="Int" name="segId" primitive="No" remark="" type="Integer"/>
+        <field column="ACCUMULATE_CLASS" columnDef="Int" name="accumulateClass" null-able="false" primitive="No" remark="" type="Integer"/>
+        <field column="ACCUMULATE_USE" columnDef="Int" name="accumulateUse" null-able="false" primitive="No" remark="" type="Integer"/>
+        <field column="DEPEND_PROD_FLAG" columnDef="Int" name="dependProdFlag" primitive="No" remark="" type="Integer"/>
+    </fields>
+</entity>

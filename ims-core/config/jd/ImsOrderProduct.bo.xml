@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="ImsOrderProduct" remark="" schema="JD" table="IMS_ORDER_PRODUCT" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="ID" columnDef="AutoIncrement" isPk="true" name="id" primitive="No" remark="主键" type="Long"/>
+        <field column="OBJECT_ID" columnDef="BigInt" name="objectId" null-able="false" primitive="No" remark="用户、账户、群ID" type="Long"/>
+        <field column="OBJECT_TYPE" columnDef="Int" name="objectType" null-able="false" primitive="No" remark="0--用户&#10;1--账户&#10;2--群账户" type="Integer"/>
+        <field column="OFFERING_ID" columnDef="Int" name="offeringId" null-able="false" primitive="No" remark="销售品ID" type="Integer"/>
+        <field column="VALID_DATE" columnDef="TimeStamp" name="validDate" primitive="No" remark="生效时间" type="Date"/>
+        <field column="EXPIRE_DATE" columnDef="TimeStamp" name="expireDate" primitive="No" remark="失效时间" type="Date"/>
+        <field column="SO_NBR" columnDef="BigInt" name="soNbr" null-able="false" primitive="No" remark="" type="Long"/>
+        <field column="CREATE_DATE" columnDef="TimeStamp" name="createDate" null-able="false" primitive="No" remark="create date" type="Date"/>
+        <field column="STS" columnDef="Int" name="sts" null-able="false" primitive="No" remark="1:初始状态 2: 处理中" type="Integer"/>
+    </fields>
+</entity>

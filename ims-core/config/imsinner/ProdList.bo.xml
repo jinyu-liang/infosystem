@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="ProdList">
+  <fields>
+    <complex-field name="CoProd" type="entity" ref="cust.CoProd" collection="none" primitive="false"/>
+    <complex-field name="CoProdCharValueList" type="entity" ref="cust.CoProdCharValue" collection="list" primitive="false"/>
+    <complex-field name="CoProdBillCycleList" type="entity" ref="cust.CoProdBillingCycle" collection="list" primitive="false"/>
+    <complex-field name="CoProdPriceParamList" type="entity" ref="cust.CoProdPriceParam" collection="list" primitive="false"/>
+    <complex-field name="PmProductOffering" type="entity" ref="pm.PmProductOffering" collection="none" primitive="false"/>
+  </fields>
+</entity>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SGroupBudget" remark="" sdl="true" sdl-module="MXdr" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+<fields>
+<field name="productId" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="budgetId" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="billType" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="effectObjectType" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="policyId" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="measureId" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="priority" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<complex-field collection="list" name="budgetInfoDtl" primitive="false" ref="imsxdr.SBudgetInfoDtl" remark="" sdl="true" type="entity"/>
+</fields>
+</entity>

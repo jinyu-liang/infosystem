@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="EtopupReq">
+  <fields>
+    <field name="phone_id" type="String" isPk="false" primitive="No" null-able="true"/>
+    <field name="batchno" type="String" isPk="false" primitive="No" null-able="true"/>
+    <field name="serialno" type="String" isPk="false" primitive="No" null-able="true"/>
+    <field name="cardpin" type="String" isPk="false" primitive="No" null-able="true"/>
+    <field name="charge_type" type="Short" isPk="false" primitive="No" null-able="true"/>
+  </fields>
+</entity>

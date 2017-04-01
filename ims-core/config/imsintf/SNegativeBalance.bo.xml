@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="SNegativeBalance">
+  <fields>
+    <field name="book_item" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="acct_id" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="user_id" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="phone_id" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="negative_balance" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="remain_negative_balance" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="negative_valid_date" type="Date" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="negative_expire_date" type="Date" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="book_item_type" type="String" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

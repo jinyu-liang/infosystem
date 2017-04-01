@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SUserValidityChg" remark="" sdl="true" sdl-module="MImsSyncDef" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+    <fields>
+        <field name="resourceId" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="acctId" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="extendDays" primitive="Yes" remark="" sdl="true" type="Integer"/>
+        <field name="reduceDays" primitive="Yes" remark="" sdl="true" type="Integer"/>
+        <field name="triggerEventType" primitive="Yes" remark="" sdl="true" type="Integer"/>
+        <field name="capMaxFlag" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="nbalance" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="pbalance" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <complex-field collection="list" name="listbalance" primitive="false" ref="imssdl.SBalance" remark="" sdl="true" type="entity"/>
+    </fields>
+</entity>

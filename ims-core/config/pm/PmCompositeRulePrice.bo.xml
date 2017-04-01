@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="PmCompositeRulePrice" schema="PD" table="PM_COMPOSITE_RULE_PRICE">
+  <fields>
+    <field name="pricingPlanId" type="Integer" column="PRICING_PLAN_ID" isPk="true(not generated)" primitive="No" remark="Pricing Planing Identifier" null-able="false" columnDef="Int"/>
+    <field name="priceRuleId" type="Integer" column="PRICE_RULE_ID" isPk="true(not generated)" primitive="No" remark="Tariff package code, code rule is:
+$(pkg_type)+ unmeaning
+" null-able="false" columnDef="Int"/>
+    <field name="validDate" type="Date" column="VALID_DATE" primitive="No" null-able="false" columnDef="TimeStamp"/>
+    <field name="expireDate" type="Date" column="EXPIRE_DATE" primitive="No" null-able="false" columnDef="TimeStamp"/>
+  </fields>
+</entity>

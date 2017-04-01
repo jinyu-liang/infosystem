@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="CaCycleSpecOut">
+  <fields>
+    <field name="cycleSpecId" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <complex-field name="caCycleSpecList" type="entity" ref="bill.CaCycleSpec" collection="list" primitive="false"/>
+  </fields>
+</entity>

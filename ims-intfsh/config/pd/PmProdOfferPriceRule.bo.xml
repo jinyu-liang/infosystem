@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="PmProdOfferPriceRule" remark="" table="PM_PROD_OFFER_PRICE_RULE" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="PRICE_RULE_ID" columnDef="AutoIncrement" isPk="true(not generated)" name="priceRuleId" null-able="false" primitive="Auto" type="Integer"/>
+        <field column="NAME" columnDef="Varchar" columnSize="256" isPk="false" name="name" null-able="true" primitive="Auto" type="String"/>
+        <field column="PRICE_RULE_TYPE" columnDef="Int" isPk="false" name="priceRuleType" null-able="true" primitive="Auto" type="Integer"/>
+        <field column="DESCRIPTION" columnDef="Varchar" columnSize="1024" isPk="false" name="description" null-able="true" primitive="Auto" type="String"/>
+    </fields>
+</entity>

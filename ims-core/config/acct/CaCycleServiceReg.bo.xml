@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="CaCycleServiceReg" remark="" schema="AD" table="CA_CYCLE_SERVICE_REG" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="SO_NBR" columnDef="AutoIncrement" isPk="true" name="soNbr" primitive="No" remark="handle the number of work order" type="Long"/>
+        <field column="PVALID_DATE" columnDef="TimeStamp" name="pvalidDate" null-able="false" primitive="No" remark="Previous validation date " type="Date"/>
+        <field column="PEXPIRE_DATE" columnDef="TimeStamp" name="pexpireDate" null-able="false" primitive="No" remark="Previous invalidation date " type="Date"/>
+        <field column="NVALID_DATE" columnDef="TimeStamp" name="nvalidDate" null-able="false" primitive="No" remark="New validation date" type="Date"/>
+        <field column="NEXPIRE_DATE" columnDef="TimeStamp" name="nexpireDate" null-able="false" primitive="No" remark="just impact on month" type="Date"/>
+        <field column="RESOURCE_ID" columnDef="BigInt" name="resourceId" null-able="false" primitive="No" remark="Equipment ID" type="Long"/>
+        <field column="SERVICE_SPEC_ID" columnDef="Int" name="serviceSpecId" null-able="false" primitive="No" remark="Service ID" type="Integer"/>
+        <field column="PSTS" columnDef="Int" name="psts" primitive="No" remark="Previous status&#10;&#10;0 --- Activation Period&#10;1 --- Promotional Period&#10;2 --- Validity Period&#10;3 --- Grace Period&#10;4 --- Recharge Period&#10;5 --- Grace before Recycle" type="Integer"/>
+        <field column="NSTS" columnDef="Int" name="nsts" primitive="No" remark="New status&#10;&#10;0 --- Activation Period&#10;1 --- Promotional Period&#10;2 --- Validity Period&#10;3 --- Grace Period&#10;4 --- Recharge Period&#10;5 --- Grace before Recycle" type="Integer"/>
+        <field column="DEAL_DATE" columnDef="TimeStamp" name="dealDate" primitive="No" remark="time of handling" type="Date"/>
+        <field column="UN_SO_OP_ID" columnDef="BigInt" name="unSoOpId" primitive="No" remark="cancel the transact work order " type="Long"/>
+        <field column="UN_SO_NBR" columnDef="BigInt" name="unSoNbr" primitive="No" remark="cancel the number of transacting work order" type="Long"/>
+        <field column="UN_DEAL_DATE" columnDef="TimeStamp" name="unDealDate" primitive="No" remark="transaction date and time of order cancelling&#10;" type="Date"/>
+        <field column="SO_DATE" columnDef="TimeStamp" name="soDate" primitive="No" remark="" type="Date"/>
+        <field column="CREATA_DATE" columnDef="TimeStamp" name="creataDate" primitive="No" remark="" type="Date"/>
+    </fields>
+</entity>

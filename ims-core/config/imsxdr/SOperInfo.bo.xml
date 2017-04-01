@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SOperInfo" remark="" sdl="true" sdl-module="MXdr" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+<fields>
+<field name="soNbr" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="busiCode" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="soMode" primitive="Yes" remark="" sdl="true" type="Short"/>
+<field name="soDate" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="chargeFlag" primitive="Yes" remark="" sdl="true" type="Short"/>
+<field name="isnormal" primitive="Yes" remark="" sdl="true" type="Short"/>
+<field name="custId" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="acctId" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="userId" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="phoneId" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="opId" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="provCode" primitive="Yes" remark="" sdl="true" type="Short"/>
+<field name="regionCode" primitive="Yes" remark="" sdl="true" type="Short"/>
+<field name="countyCode" primitive="Yes" remark="" sdl="true" type="Short"/>
+<field name="orgId" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="rsoNbr" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="isMonitor" primitive="Yes" remark="" sdl="true" type="Short"/>
+<field name="remark" primitive="Yes" remark="" sdl="true" type="String"/>
+</fields>
+</entity>

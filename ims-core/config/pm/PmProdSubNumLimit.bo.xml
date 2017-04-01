@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="PmProdSubNumLimit" remark="" schema="pd" table="PM_PROD_SUB_NUM_LIMIT" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="PRODUCT_OFFERING_ID" columnDef="Int" isPk="true(not generated)" name="productOfferingId" null-able="false" primitive="No" remark="A unique identifier for the product offering.&#10;&#10;" type="Integer"/>
+        <field column="BILLING_TYPE" columnDef="Int" isPk="true(not generated)" name="billingType" null-able="false" primitive="No" remark="" type="Integer"/>
+        <field column="MAX_SUB_LIMIT" columnDef="Int" name="maxSubLimit" null-able="false" primitive="No" remark="Max subscriber limit under the account, only for account-level products, default value 0 means no limit, limit conditions are as follows:&#10;&#10;1. When it is account-level subscription, check whether the subscribers who use the account as payment account exceed 3, if they exceed 3, the unlimited product cannot be subscribed by the account.&#10;&#10;2. When add new subscribers, if the account has subscribed the unlimited product, check whether the subscribers who use the account as payment account exceed 3, if they exceed 3, it cannot create new subscribers.&#10;&#10;&#10;" type="Integer"/>
+        <field column="MIN_SUB_LIMIT" columnDef="Int" name="minSubLimit" null-able="false" primitive="No" remark="" type="Integer"/>
+    </fields>
+</entity>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SmsSendConfig" remark="" schema="JD" table="SMS_SEND_CONFIG" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="BUSI_NUM" columnDef="AutoIncrement" isPk="true" name="busiNum" primitive="No" remark="需要提醒的业务编号，如：定期发送wlan流量提醒定为1" type="Integer"/>
+        <field column="RUN_DAY" columnDef="Varchar" columnSize="50" name="runDay" primitive="No" remark="每月需要执行的日期，用逗号分开，如 11,21表示11和21号执行" type="String"/>
+        <field column="RUN_HOUR" columnDef="Int" name="runHour" primitive="No" remark="如21表示21点执行，范围[0,23]" type="Integer"/>
+        <field column="TASK_DESC" columnDef="Varchar" columnSize="256" name="taskDesc" primitive="No" remark="对该提醒业务简单的说明" type="String"/>
+    </fields>
+</entity>

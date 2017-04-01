@@ -1,0 +1,186 @@
+module MIntfshSyncDef
+{
+
+
+    struct SImsServiceNotify
+    {
+      int64    user_id;
+      int16    action_type;
+      date     commit_date; 
+    
+    }
+	struct SCheckSms 
+	{
+		int64	block_id;			//批次号
+		int64	mod_code;       	//短信模板编码
+		date	send_date;			//预计发送时间
+		date	done_date;			//插入时间
+		int16	send_mod;			//发送方式,1:表,2:文件
+		string	data_source;			//数据来源（发送方式是文件时，填写文件的全路径）
+		int64	send_num;			//发送号码数量
+	}
+	
+	struct SCheckSmsDetail 
+	{
+		int64	block_id;			//批次号
+		int64	sms_code;			//短信模板编码
+		string	bill_id;				//手机号
+		string	message;				//短信内容
+		int32	priority_level;		//优先级
+		date	send_date;			//发送时间
+		string	src_addr;			//服务号码
+		int16	request_report;		//是否需要回执,0:不需要,1:需要
+		int64   done_code;			//营帐流水号
+	}
+	list vector<SCheckSmsDetail> SCheckSmsDetailList;
+		
+	struct SBatchSmsInfo
+	{
+		SCheckSms checksms;
+		SCheckSmsDetailList listchecksmsdetail;
+	}
+	
+	struct SImmeSms
+	{
+		int64	block_id;			//批次号
+		int64   sms_notice_id;      //短信通知流水号, 值YYMMDD+10位sequence
+		int64	done_code;			//营账流水号
+		int64	sms_code;			//模板编码
+		string	in_mode_code;		//接入方式编码,0:其他接入,1:人工接入,2:自助接入
+		string	sms_net_tag;			//短信回执标记,1:需要回执,0:不需要回执
+		string	chan_id;				//渠道编码,A001:营业,B001:账管,C001:小I,C002:鸿冠,C003:4A,C004:网管
+		string	recv_object_type;	//接收号码类型,00:手机号码,01:组ID,02:集团ID
+		string	recv_object;			//接收号码
+		int64	recv_id;				//用户编号
+		string	notice_content;		//短信内容
+		string	sms_type_code;		//短信类型编码,20:文本短信,10:PUSH短信,00:二进制短信
+		string	sms_kind_code;		//短信通道编码，不同通道的短信相互不影响，避免对下发资源的争抢,01:保留,02:保留,03-07:分给营业管理自己定义,08:一级BOSS,09-10:帐务管理
+		string	force_object;		//发送号码：10086或者10086+扩展码
+		date	force_start_time;	//指定起始时间
+		date	force_end_time;		//指定终止时间
+		int32	sms_priority;		//短信优先级，取值越大优先级越低：默认1000
+		date	refer_time;			//提交时间
+		string	remark;				//备注
+		int16	month;				//月份
+		int16	day;				//日期
+	}
+	list vector<SImmeSms> SImmeSmsList;
+	
+	struct SQueryInfo
+	{
+		int64 user_id;			//用户编号
+	}
+	
+	struct SCoProd
+	{
+		int64 product_id;			//产品实例编号
+		int32 prod_type_id;			//产品类型id：0：原子产品；1：打包产品
+		int32 product_offering_id;	//销售品编号
+		int32 price_plan_id;		//定价计划
+		int32 billing_type;			//预后付标识；0：预付；1：后付
+		int16 lifecycle_status_id;	//产品状态；1：激活
+		int32 busi_flag;			//销售品业务标识
+		int16 is_main;				//是否主产品
+		int64 object_id;			//产品订购对象（user_id、acct_id）
+		int16 object_type;			//产品订购对象类型；0：用户；1：账户；2：GCA
+		date expire_date;			//失效时间
+		date valid_date;			//生效时间
+		date prod_valid_date;		//产品的生效时间
+		date prod_expire_date;		//产品的失效时间
+	}
+	list vector<SCoProd> SCoProdList;
+	
+	struct SCoProdCharValue
+	{
+		int64 product_id;			//产品实例编号
+		int64 group_id;				//特征值分组编号
+		int32 spec_char_id;			//特征值编号key
+		string value;				//特征值内容value
+		date valid_date;			//生效时间
+		date expire_date;			//生效时间
+		int64 object_id;			//产品订购对象（user_id、acct_id）
+		int16 object_type;			//产品订购对象类型；0：用户；1：账户；2：GCA
+	}
+	list vector<SCoProdCharValue> SCoProdCharValueList;
+	
+	struct SProductInfo
+	{
+		int64 product_id;					//产品实例编号
+		int32 busi_flag;					//销售品业务标识
+		SCoProd co_prod;						//CoProd表的信息
+		SCoProdCharValueList co_prod_char_value_list;	//CoProdCharValue特征值表的信息
+	}
+	list vector<SProductInfo> SProductInfoList;
+	
+	struct SQuerySplitRel
+	{
+		int64 object_id;		//被代付的用户或账户Id
+		int64 object_type;		//0：用户；1：账户
+		string valid_date;		//生效时间点
+	}
+	
+	struct SSplitInfo
+	{
+		int64 product_id;		
+		int64 pay_acct_id;		//支付账户
+		int16 priority;			//优先级
+		string valid_date;
+		string expire_date;
+		int64 part_type;		//0：按比例分账 1：按数量分账(该字段上海不再用)
+		int64 part_value;		//按数量分账的分账值
+		int64 split_numerator;	//按比例分账的分子
+		int64 split_denominator;//按比例分账的分母
+		int64 acct_id;			//被分账账户
+		int64 user_id;			//被分账用户
+		int16 split_type;		//分账类型	0：按科目分账	1：按产品分账
+		int64 price_rule_id;	//代付科目规则id
+	}
+	list vector<SSplitInfo> SSplitInfoList;
+	
+	struct SImsIrGprsAlarm
+	{
+		int64 user_id;			//用户编号
+		string phone_id;		//手机号码
+		int32 bill_cycle_begin;	//账期开始时间：YYYYMMDD
+		int32 bill_cycle_end;	//账期结束时间：YYYYMMDD
+		int64 gprs_fee;			//费用，单位为：厘
+		int64 gprs_traffic;		//流量，单位为：KB
+		int64 create_date;		//插入时间
+	}
+	
+	struct SPriceParam
+	{
+		int32 key;
+		int64 value;
+	}
+	list vector< SPriceParam > SPriceParamList;
+	
+	struct SUpSellingPriceParam
+	{
+		int64 object_id;        //对象编号
+		int32 object_type;      //对象类型 0-用户 1-账户 2-群组
+		int64 prod_id;          //产品实例编号
+		int64 valid_date;        //生效时间
+		int64 expire_date;       //失效时间
+		SPriceParamList price_param;     //定价参数
+	}
+	
+	struct SLocalHighChargeInfoReq
+	{
+		string dr_type ;
+		string high_date ;
+		string imsi_min ;
+		string user_number ;
+		int16 high_type ;
+		string user_type ;
+		int64 total_fee ;
+		int64 total_num ;
+		int64 total_time ;
+		string prov_code ;
+		string home_area_code ;
+		string visit_area_code ;
+		int64 start_time ;
+		int64 end_time ;
+	}
+	list vector<SLocalHighChargeInfoReq> SLocalHighChargeInfoReqList;
+}

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="SQueryCustomerHistoryReq">
+  <fields>
+    <field name="gui_cust_id" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="gui_acct_id" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="gui_user_id" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="gui_phone_id" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="gui_his_date" type="Date" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

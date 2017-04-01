@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?><entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SGprsSpecInfo" remark="" sdl="true" sdl-module="MXdr" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+<fields>
+<field name="cgAddr" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="url" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="callerIndicate" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="sgsnAddress" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="triggerType" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="msnc" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="rac" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="chargingId" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="ggsnAddress" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="apnNi" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="apnOi" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="pdpType" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="pdpAddress" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="causeClose" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="combineResult" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="chargingCharacteristics" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="ccSelectionMode" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="sgsnPlmn" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="partialTypeIndicator" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="recSeqNo" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="localRecSeqNo" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="systemType" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="ggsnId" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="sgsnId" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="serviceUsage" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="partialNum" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<complex-field collection="map&lt;Integer,?&gt;" name="rggInfoMap" primitive="false" ref="imsxdr.SRggInfo" remark="" sdl="true" type="entity"/>
+<field name="multiSimSeq" primitive="Yes" remark="" sdl="true" type="String"/>
+<complex-field collection="map&lt;Integer,?&gt;" name="currentRgMap" primitive="false" remark="" sdl="true" type="Integer"/>
+<complex-field collection="list" name="tariffQcsList" primitive="false" ref="imsxdr.STarffQcs" remark="" sdl="true" type="entity"/>
+<complex-field collection="none" name="gprsWlanInfo" primitive="false" ref="imsxdr.SWlanInfo" remark="" sdl="true" type="entity"/>
+</fields>
+</entity>

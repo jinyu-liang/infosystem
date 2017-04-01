@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="PmPriceEvent" schema="PD" table="PM_PRICE_EVENT">
+  <fields>
+    <field name="itemId" type="Integer" column="ITEM_ID" isPk="true(not generated)" primitive="No" null-able="false" columnDef="AutoIncrement"/>
+    <field name="name" type="String" column="NAME" isPk="false" primitive="Auto" null-able="true" columnDef="Varchar" columnSize="256"/>
+    <field name="serviceSpecId" type="Integer" column="SERVICE_SPEC_ID" isPk="false" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="itemType" type="Integer" column="ITEM_TYPE" isPk="false" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="subType" type="Integer" column="SUB_TYPE" isPk="false" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="priority" type="Integer" column="PRIORITY" isPk="false" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="description" type="String" column="DESCRIPTION" isPk="false" primitive="Auto" null-able="true" columnDef="Varchar" columnSize="1024"/>
+  </fields>
+</entity>

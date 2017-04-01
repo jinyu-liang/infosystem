@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="CaAssetSyn" schema="AD" table="CA_ASSET_SYN">
+  <fields>
+    <field name="synId" type="Long" column="SYN_ID" isPk="false" null-able="false" columnDef="NUMBER" columnSize="15"/>
+    <field name="assetId" type="Long" column="ASSET_ID" isPk="false" null-able="true" columnDef="NUMBER" columnSize="15"/>
+    <field name="synType" type="Integer" column="SYN_TYPE" isPk="false" null-able="false" columnDef="NUMBER" columnSize="4"/>
+    <field name="acctId" type="Long" column="ACCT_ID" isPk="false" null-able="false" columnDef="NUMBER" columnSize="15"/>
+    <field name="assetType" type="Integer" column="ASSET_TYPE" isPk="false" null-able="false" columnDef="NUMBER" columnSize="4"/>
+    <field name="assetItem" type="Integer" column="ASSET_ITEM" isPk="false" null-able="false" columnDef="NUMBER" columnSize="9"/>
+    <field name="assetAmount" type="Long" column="ASSET_AMOUNT" isPk="false" null-able="false" columnDef="NUMBER" columnSize="12"/>
+    <field name="validDate" type="Date" column="VALID_DATE" isPk="false" null-able="true" columnDef="DATE" columnSize="7"/>
+    <field name="expireDate" type="Date" column="EXPIRE_DATE" isPk="false" null-able="true" columnDef="DATE" columnSize="7"/>
+    <field name="createDate" type="Date" column="CREATE_DATE" isPk="false" null-able="false" columnDef="DATE" columnSize="7"/>
+    <field name="sts" type="Integer" column="STS" isPk="false" null-able="false" columnDef="NUMBER" columnSize="2"/>
+    <field name="stsDate" type="Date" column="STS_DATE" isPk="false" null-able="false" columnDef="DATE" columnSize="7"/>
+    <field name="soNbr" type="Long" column="SO_NBR" isPk="false" null-able="false" columnDef="NUMBER" columnSize="15"/>
+    <field name="syncFlag" type="Integer" column="SYNC_FLAG" isPk="false" null-able="false" columnDef="NUMBER" columnSize="4"/>
+    <field name="notifyFlag" type="Integer" column="NOTIFY_FLAG" isPk="false" null-able="true" columnDef="NUMBER" columnSize="2"/>
+    <field name="syncType" type="Integer" column="SYNC_TYPE" isPk="false" null-able="false" columnDef="NUMBER" columnSize="4"/>
+    <field name="soDate" type="Date" column="SO_DATE" isPk="false" null-able="true" columnDef="DATE" columnSize="7"/>
+    <field name="remark" type="String" column="REMARK" isPk="false" null-able="true" columnDef="VARCHAR2" columnSize="2048"/>
+    <field name="regionCode" type="Integer" column="REGION_CODE" isPk="false" null-able="false" columnDef="NUMBER" columnSize="4"/>
+  </fields>
+</entity>

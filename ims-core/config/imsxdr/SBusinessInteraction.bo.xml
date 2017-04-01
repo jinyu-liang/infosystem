@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SBusinessInteraction" remark="" sdl="true" sdl-module="MXdr" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+<fields>
+<field name="soBbr" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="soDate" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="errorCode" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="errorDesc" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="redirectUrl" primitive="Yes" remark="" sdl="true" type="String"/>
+<complex-field collection="map&lt;String,?&gt;" name="extraMap" primitive="false" remark="" sdl="true" type="String"/>
+</fields>
+</entity>

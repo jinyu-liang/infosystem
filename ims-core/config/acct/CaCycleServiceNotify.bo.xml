@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="CaCycleServiceNotify" remark="" schema="AD" table="CA_CYCLE_SERVICE_NOTIFY" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="SO_NBR" columnDef="AutoIncrement" isPk="true" name="soNbr" primitive="No" remark="handle the number of work order" type="Long"/>
+        <field column="RESOURCE_ID" columnDef="BigInt" name="resourceId" null-able="false" primitive="No" remark="Resource ID" type="Long"/>
+        <field column="SERVICE_SPEC_ID" columnDef="Int" name="serviceSpecId" null-able="false" primitive="No" remark="Service ID" type="Integer"/>
+        <field column="STS" columnDef="Int" name="sts" null-able="false" primitive="No" remark="Status&#10;0 --- Activation Period&#10;1 --- Promotional Period&#10;2 --- Validity Period&#10;3 --- Grace Period&#10;4 --- Recharge Period&#10;5 --- Grace before Recycle" type="Integer"/>
+        <field column="VALID_DATE" columnDef="TimeStamp" name="validDate" null-able="false" primitive="No" remark="validation date " type="Date"/>
+        <field column="EXPIRE_DATE" columnDef="TimeStamp" name="expireDate" null-able="false" primitive="No" remark="invalidation date " type="Date"/>
+        <field column="SO_DATE" columnDef="TimeStamp" name="soDate" primitive="No" remark="" type="Date"/>
+        <field column="CREATE_DATE" columnDef="TimeStamp" name="createDate" primitive="No" remark="" type="Date"/>
+    </fields>
+</entity>

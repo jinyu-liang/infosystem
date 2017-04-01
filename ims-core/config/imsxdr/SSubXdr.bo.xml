@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SSubXdr" remark="" sdl="true" sdl-module="MXdr" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+<fields>
+<complex-field collection="none" name="subCommon" primitive="false" ref="imsxdr.SSubCommon" remark="" sdl="true" type="entity"/>
+<complex-field collection="none" name="gsmInfo" primitive="false" ref="imsxdr.SGsmInfo" remark="" sdl="true" type="entity"/>
+<complex-field collection="none" name="gprsInfo" primitive="false" ref="imsxdr.SGprsInfo" remark="" sdl="true" type="entity"/>
+<complex-field collection="none" name="mmsInfo" primitive="false" ref="imsxdr.SMmsInfo" remark="" sdl="true" type="entity"/>
+<complex-field collection="none" name="smsInfo" primitive="false" ref="imsxdr.SSmsInfo" remark="" sdl="true" type="entity"/>
+<complex-field collection="none" name="ismpInfo" primitive="false" ref="imsxdr.SIsmpInfo" remark="" sdl="true" type="entity"/>
+<complex-field collection="none" name="gsInfo" primitive="false" ref="imsxdr.SGsInfo" remark="" sdl="true" type="entity"/>
+<complex-field collection="map&lt;String,?&gt;" name="extension" primitive="false" remark="" sdl="true" type="String"/>
+<field name="subXdrType" primitive="Yes" remark="" sdl="true" type="Short"/>
+</fields>
+</entity>

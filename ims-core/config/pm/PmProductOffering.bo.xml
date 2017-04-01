@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="PmProductOffering" schema="PD" table="PM_PRODUCT_OFFERING">
+  <fields>
+    <field name="productOfferingId" type="Integer" column="PRODUCT_OFFERING_ID" isPk="true" primitive="No" remark="A unique identifier for the product offering.  " null-able="false" columnDef="NUMBER" columnSize="9"/>
+    <field name="offerTypeId" type="Integer" column="OFFER_TYPE_ID" isPk="false" primitive="No" remark="offer type ID  valueฃบ 0ฃบsimple product offering 1ฃบpackage product offering " null-able="true" columnDef="NUMBER" columnSize="4"/>
+    <field name="name" type="String" column="NAME" isPk="false" primitive="Auto" remark="product offering name " null-able="true" columnDef="VARCHAR2" columnSize="256"/>
+    <field name="isMain" type="Integer" column="IS_MAIN" isPk="false" primitive="No" remark="main product specification or not 0:common product 1:main product  Device must have a main product when device is buit. A device only has a main product." null-able="true" columnDef="NUMBER" columnSize="1"/>
+    <field name="lifecycleStatusId" type="Integer" column="LIFECYCLE_STATUS_ID" isPk="false" primitive="No" remark="state of life cycle ID  The condition in which the offering exists, such as planned, obsolete, active   from PM_ENUM_LIFECYCLE_STATUS, aplly_at in (0,2)" null-able="true" columnDef="NUMBER" columnSize="4"/>
+    <field name="prodSpecId" type="Integer" column="PROD_SPEC_ID" isPk="false" primitive="No" remark="An identification number assigned to uniquely identify the specification.  " null-able="true" columnDef="NUMBER" columnSize="9"/>
+    <field name="priority" type="Integer" column="PRIORITY" isPk="false" primitive="No" remark="product offering priority" null-able="true" columnDef="NUMBER" columnSize="4"/>
+    <field name="isGlobal" type="Integer" column="IS_GLOBAL" isPk="false" primitive="No" remark="global product or not 0ฃบdefault, non-global 1ฃบglobal product" null-able="true" columnDef="NUMBER" columnSize="1"/>
+    <field name="validDate" type="Date" column="VALID_DATE" isPk="false" primitive="Auto" remark="effective date" null-able="true" columnDef="DATE" columnSize="7"/>
+    <field name="expireDate" type="Date" column="EXPIRE_DATE" isPk="false" primitive="Auto" remark="expiring date " null-able="true" columnDef="DATE" columnSize="7"/>
+    <field name="description" type="String" column="DESCRIPTION" isPk="false" primitive="Auto" remark="A narrative that explains what the offering is.  " null-able="true" columnDef="VARCHAR2" columnSize="1024"/>
+    <field name="operatorId" type="Integer" column="OPERATOR_ID" isPk="false" primitive="No" null-able="true" columnDef="NUMBER" columnSize="4"/>
+    <field name="billingPriority" type="Integer" column="BILLING_PRIORITY" isPk="false" primitive="No" null-able="false" columnDef="NUMBER" columnSize="4"/>
+    <field name="offerClass" type="String" column="OFFER_CLASS" isPk="false" primitive="Auto" null-able="false" columnDef="VARCHAR2" columnSize="3"/>
+    <field name="specTypeFlag" type="Integer" column="SPEC_TYPE_FLAG" isPk="false" primitive="Auto" null-able="true" columnDef="NUMBER" columnSize="1"/>
+  </fields>
+</entity>

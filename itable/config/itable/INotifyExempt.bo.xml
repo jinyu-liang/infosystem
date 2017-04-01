@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="INotifyExempt" remark="" schema="JD" table="I_NOTIFY_EXEMPT" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="USER_ID" columnDef="Int" isPk="false" name="userId" null-able="true" primitive="No" type="Long"/>
+        <field column="ACCT_ID" columnDef="Int" isPk="false" name="acctId" null-able="true" primitive="No" type="Long"/>
+        <field column="URGE_STOP_FLAG" columnDef="Varchar" columnSize="32" isPk="false" name="urgeStopFlag" null-able="true" primitive="No" type="String"/>
+        <field column="VALID_DATE" columnDef="Date" isPk="false" name="validDate" null-able="true" primitive="No" type="Date"/>
+        <field column="EXPIRE_DATE" columnDef="Date" isPk="false" name="expireDate" null-able="true" primitive="No" type="Date"/>
+        <field column="OPER_TYPE" columnDef="Int" isPk="false" name="operType" null-able="true" primitive="No" type="Integer"/>
+        <field column="SO_NBR" columnDef="Int" isPk="false" name="soNbr" null-able="true" primitive="No" type="Long"/>
+        <field column="COMMIT_DATE" columnDef="Date" isPk="false" name="commitDate" null-able="true" primitive="No" type="Date"/>
+        <field column="OFFICE_PHONE" columnDef="Varchar" columnSize="28" isPk="false" name="officePhone" null-able="true" primitive="No" type="String"/>
+        <field column="REC_TYPE" columnDef="Int" isPk="false" name="recType" null-able="true" primitive="No" type="Integer"/>
+    </fields>
+</entity>

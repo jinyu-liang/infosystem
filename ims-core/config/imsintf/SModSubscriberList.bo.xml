@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="SModSubscriberList">
+  <fields>
+    <complex-field name="SModSubscriber" type="entity" ref="imsintf.SModSubscriber" collection="array" primitive="false"/>
+  </fields>
+</entity>

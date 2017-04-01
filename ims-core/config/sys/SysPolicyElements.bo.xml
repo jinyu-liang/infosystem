@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SysPolicyElements" remark="" schema="sd" table="SYS_POLICY_ELEMENTS" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="ELEMENT_ID" columnDef="AutoIncrement" isPk="true" name="elementId" primitive="No" remark="Policy element identifier, a unique identifier&#10;" type="Integer"/>
+        <field column="ELEMENT_NAME" columnDef="Varchar" columnSize="64" name="elementName" null-able="false" primitive="No" remark="Policy element name, a short description of the element&#10;" type="String"/>
+        <field column="ELEMENT_TYPE" columnDef="Int" name="elementType" null-able="false" primitive="No" remark="Element types: available elements at present such as XDR,MDB,DB&#10;0:XDR&#10;1:MDB&#10;2:DB&#10;3:PARAM" type="Integer"/>
+        <field column="ELEMENT_KEY" columnDef="Varchar" columnSize="1024" name="elementKey" null-able="false" primitive="No" remark="Real content of policy element, for instance, if ELEMENT_TYPE is configured XDR, then the field content is the value of an XDR element; If it's configured MDB or DB, then the field content is generally like table name or field name mapping to some certain field in MDB or DB.&#10;" type="String"/>
+        <field column="SRC_ID" columnDef="Int" name="srcId" primitive="No" remark="Policy element source definition, reserved&#10;0 means no special source" type="Integer"/>
+    </fields>
+</entity>

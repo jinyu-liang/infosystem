@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="SubGroupList" transient="true">
+  <fields>
+    <complex-field name="subGroup_Item" type="entity" ref="imsintf.SubGroup" collection="array" primitive="false"/>
+  </fields>
+</entity>

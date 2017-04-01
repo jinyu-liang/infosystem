@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="OneTimeFee" transient="true">
+  <fields>
+    <field name="outer_cust_id" type="String" isPk="false" primitive="Auto" tree-foreign-key="false" null-able="true"/>
+    <field name="cust_id" type="Long" isPk="false" enumAsAliasField="false" tree-foreign-key="false" null-able="true"/>
+    <field name="outer_acct_id" type="String" isPk="false" primitive="Auto" tree-foreign-key="false" null-able="true"/>
+    <field name="acct_id" type="Long" isPk="false" enumAsAliasField="false" tree-foreign-key="false" null-able="true"/>
+    <field name="user_id" type="Long" isPk="false" enumAsAliasField="false" tree-foreign-key="false" null-able="true"/>
+    <field name="phone_id" type="String" isPk="false" enumAsAliasField="false" tree-foreign-key="false" null-able="true"/>
+    <field name="outer_pay_acct_id" type="String" isPk="false" primitive="Auto" tree-foreign-key="false" null-able="true"/>
+    <field name="pay_acct_id" type="Long" isPk="false" enumAsAliasField="false" tree-foreign-key="false" null-able="true"/>
+    <field name="origin_so_nbr" type="String" isPk="false" enumAsAliasField="false" tree-foreign-key="false" null-able="true"/>
+    <complex-field name="fee_list" type="entity" ref="imsintf.FeeItemList" collection="none" primitive="false"/>
+  </fields>
+</entity>

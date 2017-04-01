@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="SServiceReturnList" transient="true">
+	<fields>
+		<complex-field name="serviceReturnList" type="entity" ref="imsinner.SServicesReturn" collection="array" primitive="false"/>
+	</fields>
+</entity>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="ImsProdOrderSyncRst" remark="" schema="cd" table="IMS_PROD_ORDER_SYNC_RST" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="ID" columnDef="Int" name="id" null-able="false" primitive="No" remark="าตฮ๑สพฑํตฤid" type="Long"/>
+        <field column="CUST_ID" columnDef="Int" name="custId" primitive="No" remark="" type="Long"/>
+        <field column="ACCT_ID" columnDef="Int" name="acctId" primitive="No" remark="" type="Long"/>
+        <field column="USER_ID" columnDef="Int" name="userId" primitive="No" remark="" type="Long"/>
+        <field column="PHONE_ID" columnDef="Varchar" columnSize="64" name="phoneId" primitive="No" remark="" type="String"/>
+        <field column="REASON_CODE" columnDef="Int" name="reasonCode" primitive="No" remark="" type="Integer"/>
+        <field column="SO_NBR" columnDef="Int" name="soNbr" null-able="false" primitive="No" remark="" type="Long"/>
+        <field column="CREATE_DATE" columnDef="Date" name="createDate" null-able="false" primitive="No" remark="าตฮ๑สพฑํตฤcreate_date" type="Date"/>
+        <field column="DEAL_DATE" columnDef="Date" name="dealDate" null-able="false" primitive="No" remark="ดฆภํสฑผไ" type="Date"/>
+        <field column="STS" columnDef="Int" name="sts" null-able="false" primitive="No" remark="1ฃบณษนฆ 2ฃบสงฐ 3ฃบาัิูดฆภํ" type="Integer"/>
+        <field column="DEAL_DESC" columnDef="Varchar" columnSize="255" name="dealDesc" primitive="No" remark="สงฐสฑฃฌดๆดขสงฐะลฯข" type="String"/>
+        <field column="DEAL_AGAIN_DATE" columnDef="Date" name="dealAgainDate" primitive="No" remark="ถิำฺสงฐผวยผตฤิูดฆภํสฑผไ" type="Date"/>
+        <field column="ASSOCIATE_ID" columnDef="Int" name="associateId" primitive="No" remark="" type="Long"/>
+        <field column="ERROR_MSG" columnDef="Varchar" columnSize="256" name="errorMsg" primitive="No" remark="" type="String"/>
+        <field column="ERROR_CODE" columnDef="Int" name="errorCode" primitive="No" remark="" type="Integer"/>
+        <field column="DEAL_COUNT" columnDef="Int" name="dealCount" primitive="No" remark="" type="Integer"/>
+        <field column="SRC_ACTION" columnDef="Int" name="srcAction" null-able="false" primitive="No" remark="" type="Integer"/>
+    </fields>
+</entity>

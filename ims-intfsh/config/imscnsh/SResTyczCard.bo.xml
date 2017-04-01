@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="SResTyczCard">
+  <fields>
+    <field name="m_strCardId" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="m_strCardType" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="m_llCardFee" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="m_nStatus" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="m_llOrgId" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="m_llDoneCode" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="m_strCreateDate" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="m_strExpireDate" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="m_strDoneDate" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="m_strExt1" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="m_strExt2" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="m_strExt3" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="m_strExt4" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="m_strExt5" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="m_strExt6" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="m_strExt7" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="m_strExt8" type="String" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

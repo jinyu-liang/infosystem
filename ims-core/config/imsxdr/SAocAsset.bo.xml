@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SAocAsset" remark="" sdl="true" sdl-module="MXdr" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+<fields>
+<complex-field collection="none" name="aoc" primitive="false" ref="imsxdr.SAocCode" remark="" sdl="true" type="entity"/>
+<field name="alarmType" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<complex-field collection="none" name="assetDtl" primitive="false" ref="imsxdr.SAocAssetDtl" remark="" sdl="true" type="entity"/>
+</fields>
+</entity>

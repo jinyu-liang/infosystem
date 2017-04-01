@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="IDataIndexSubModify" remark="" schema="JD" table="I_DATA_INDEX_SUB_MODIFY" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="SO_NBR" columnDef="AutoIncrement" isPk="true(not generated)" name="soNbr" null-able="false" primitive="Auto" type="Long"/>
+        <field column="DEAL_DATE" columnDef="Date" isPk="false" name="dealDate" null-able="true" primitive="Auto" type="Date"/>
+        <field column="CUST_ID" columnDef="Int" isPk="false" name="custId" null-able="true" primitive="Auto" type="Long"/>
+        <field column="EXT1" columnDef="Varchar" columnSize="2048" isPk="false" name="ext1" null-able="true" primitive="Auto" type="String"/>
+        <field column="EXT2" columnDef="Varchar" columnSize="2048" isPk="false" name="ext2" null-able="true" primitive="Auto" type="String"/>
+        <field column="EXT3" columnDef="Varchar" columnSize="2048" isPk="false" name="ext3" null-able="true" primitive="Auto" type="String"/>
+    </fields>
+</entity>

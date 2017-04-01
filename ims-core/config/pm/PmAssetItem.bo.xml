@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="PmAssetItem" remark="" schema="PD" table="PM_ASSET_ITEM" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="ASSET_ITEM_ID" columnDef="AutoIncrement" isPk="true" name="assetItemId" primitive="No" remark="Asset item ID" type="Integer"/>
+        <field column="NAME" columnDef="Varchar" columnSize="256" name="name" null-able="false" primitive="No" remark="Asset item name" type="String"/>
+        <field column="ASSET_TYPE" columnDef="Int" name="assetType" primitive="No" remark="Asset type: &#10;0- fund(account book)&#10;1- credit limit&#10;2- bonus&#10;##3- bank capital&#10;4- free resource&#10;" type="Integer"/>
+        <field column="ITEM_TYPE" columnDef="Int" name="itemType" primitive="No" remark="Asset item types:&#10;0-Free resource  &#10;#1- Undefined&#10;2- Cash &#10;3- Exclusive account book balance  &#10;4-Credit limit   &#10;5-Bonus&#10;6-Exclusive credit limit&#10;7-Common negative-balance account book&#10;8-Exclusive negative-balance account book&#10;9-Guarantee deposit item&#10;10：debt bill item(for shanghai credit control )&#10;11:prepayment item(activity prepayment), only support allot from this item to normal item, cannot write-off&#10;" type="Integer"/>
+        <field column="ITEM_CLASS" columnDef="Int" name="itemClass" primitive="No" remark="0: atomic asset items&#10;1: aggregate asset items (aims at free resource, balance, credit limit items)" type="Integer"/>
+        <field column="PRIORITY" columnDef="Int" name="priority" primitive="No" remark="Asset item priority" type="Integer"/>
+        <field column="IS_REWARD" columnDef="Int" name="isReward" primitive="No" remark="Whether the asset is reward&#10;0: false&#10;1: true" type="Integer"/>
+        <field column="ALLOW_ADJUST" columnDef="Int" name="allowAdjust" primitive="No" remark="Whether allows to adjust&#10;0: false&#10;1: true" type="Integer"/>
+        <field column="ALLOW_REFUND" columnDef="Int" name="allowRefund" primitive="No" remark="Whether allows to refund&#10;0: false&#10;1: true" type="Integer"/>
+    </fields>
+</entity>

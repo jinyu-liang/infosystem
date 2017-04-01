@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" columnNameMapToFieldName="false" dbType="oracle" name="PmBillingParamRela" remark="" schema="PD" table="PM_BILLING_PARAM_RELA" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="PARAM_CLASS" columnDef="Int" isPk="true(not generated)" name="paramClass" null-able="true" primitive="Auto" type="Integer"/>
+        <field column="PARAM_TYPE" columnDef="Int" isPk="true(not generated)" name="paramType" null-able="true" primitive="Auto" type="Integer"/>
+        <field column="PARAM_CODE" columnDef="Varchar" columnSize="32" isPk="true(not generated)" name="paramCode" null-able="true" primitive="Auto" type="String"/>
+        <field column="PARAM_CODE_EXT" columnDef="Varchar" columnSize="32" isPk="false" name="paramCodeExt" null-able="true" primitive="Auto" type="String"/>
+        <field column="BILLING_PARAM_TYPE" columnDef="Int" isPk="true(not generated)" name="billingParamType" null-able="true" primitive="Auto" type="Integer"/>
+        <field column="BILLING_PARAM" columnDef="Varchar" columnSize="32" isPk="true(not generated)" name="billingParam" null-able="true" primitive="Auto" type="String"/>
+        <field column="BILLING_PARAM_EXT" columnDef="Varchar" columnSize="32" isPk="false" name="billingParamExt" null-able="true" primitive="Auto" type="String"/>
+        <field column="PARAM_DESC" columnDef="Varchar" columnSize="1024" isPk="false" name="paramDesc" null-able="true" primitive="Auto" type="String"/>
+        <field column="BUSI_FLAG" columnDef="Int" isPk="false" name="busiFlag" null-able="true" primitive="Auto" type="Integer"/>
+    </fields>
+</entity>

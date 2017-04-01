@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?><entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="IUser" remark="" schema="JD" table="I_USER" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="USER_ID" columnDef="Int" isPk="false" name="userId" null-able="true" primitive="No" type="Long"/>
+        <field column="USER_TYPE" columnDef="Int" isPk="false" name="userType" null-able="true" primitive="No" type="Integer"/>
+        <field column="PAYMENT_MODE" columnDef="Int" isPk="false" name="paymentMode" null-able="true" primitive="No" type="Integer"/>
+        <field column="PHONE_ID" columnDef="Varchar" columnSize="64" isPk="false" name="phoneId" null-able="true" primitive="No" type="String"/>
+        <field column="USER_CODE" columnDef="Int" isPk="false" name="userCode" null-able="true" primitive="No" type="Integer"/>
+        <field column="BRAND" columnDef="Int" isPk="false" name="brand" null-able="true" primitive="No" type="Integer"/>
+        <field column="USER_SEGMENT" columnDef="Int" isPk="false" name="userSegment" null-able="true" primitive="No" type="Integer"/>
+      
+        <field column="REGION_CODE" columnDef="Int" isPk="false" name="regionCode" null-able="true" primitive="No" type="Integer"/>
+        <field column="COUNTY_CODE" columnDef="Int" isPk="false" name="countyCode" null-able="true" primitive="No" type="Integer"/>
+        <field column="SMS_LANGUAGE" columnDef="Int" isPk="false" name="smsLanguage" null-able="true" primitive="No" type="Integer"/>
+        <field column="IVR_LANGUAGE" columnDef="Int" isPk="false" name="ivrLanguage" null-able="true" primitive="No" type="Integer"/>
+        <field column="USSD_LANGUAGE" columnDef="Int" isPk="false" name="ussdLanguage" null-able="true" primitive="No" type="Integer"/>
+        <field column="ACTIVE_DATE" columnDef="Date" isPk="false" name="activeDate" null-able="true" primitive="No" type="Date"/>
+        <field column="ACCESS_WAY" columnDef="Int" isPk="false" name="accessWay" null-able="true" primitive="No" type="Integer"/>
+        <field column="VALID_DATE" columnDef="Date" isPk="false" name="validDate" null-able="true" primitive="No" type="Date"/>
+        <field column="EXPIRE_DATE" columnDef="Date" isPk="false" name="expireDate" null-able="true" primitive="No" type="Date"/>
+        <field column="OPER_TYPE" columnDef="Int" isPk="false" name="operType" null-able="true" primitive="No" type="Integer"/>
+        <field column="SO_NBR" columnDef="Int" isPk="false" name="soNbr" null-able="true" primitive="No" type="Long"/>
+        <field column="COMMIT_DATE" columnDef="Date" isPk="false" name="commitDate" null-able="true" primitive="No" type="Date"/>
+        <field column="LONG_TERM_LIST" columnDef="Int" isPk="false" name="longTermList" null-able="true" primitive="No" type="Integer"/>
+        <field column="IS_ECARD" columnDef="Int" isPk="false" name="isEcard" null-able="true" primitive="No" type="Integer"/>
+        <field column="GROUP_MEM_LEVEL" columnDef="Varchar" columnSize="6" isPk="false" name="groupMemLevel" null-able="true" primitive="No" type="String"/>
+        <field column="IS_SEND_CARD" columnDef="Int" isPk="false" name="isSendCard" null-able="true" primitive="No" type="Integer"/>
+        <field column="RES_CLASS" columnDef="Int" isPk="false" name="resClass" null-able="true" primitive="No" type="Integer"/>
+        <field column="CUST_ID" columnDef="Int" isPk="false" name="custId" null-able="true" primitive="Auto" type="Long"/>
+        <field column="DUMMY_TAG" columnDef="Varchar" columnSize="1" isPk="false" name="dummyTag" null-able="true" primitive="No" type="String"/>
+        <field column="SERIAL_NUMBER" columnDef="Varchar" columnSize="40" isPk="false" name="serialNumber" null-able="true" primitive="No" type="String"/>
+        <field column="CHANGEUSER_DATE" columnDef="Date" isPk="false" name="changeuserDate" null-able="true" primitive="No" type="Date"/>
+    </fields>
+</entity>

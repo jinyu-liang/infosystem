@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="CtcEmaSmsReq">
+  <fields>
+    <field name="order_code" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="done_date" type="Date" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="port" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="password" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="msg_info" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="bill_id" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="op_type" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

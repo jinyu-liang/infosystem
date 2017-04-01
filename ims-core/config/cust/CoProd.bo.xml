@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="CoProd" schema="cd" table="CO_PROD">
+  <fields>
+    <field name="productId" type="Long" column="PRODUCT_ID" isPk="true(not generated)" primitive="No" remark="Product instance serial number " null-able="false" columnDef="BigInt"/>
+    <field name="prodTypeId" type="Integer" column="PROD_TYPE_ID" primitive="No" remark="Id of product type  value: 0:ProductComponent 1:ProductBundle " null-able="true" columnDef="Int"/>
+    <field name="lifecycleStatusId" type="Integer" column="LIFECYCLE_STATUS_ID" primitive="No" remark="Id of life cycle status  value: 1-Active; 2-Suspend;" null-able="false" columnDef="Int"/>
+    <field name="productOfferingId" type="Integer" column="PRODUCT_OFFERING_ID" primitive="No" remark="A unique identifier for the ProductOffering." null-able="true" columnDef="Int"/>
+    <field name="pricingPlanId" type="Integer" column="PRICING_PLAN_ID" primitive="No" remark="Pricing plan" null-able="false" columnDef="Int"/>
+    <field name="busiFlag" type="Integer" column="BUSI_FLAG" primitive="No" remark="Business identifier of product offering to identify business type of the product offering eg:  101   Promotion with regular rate  102   Promotion of family VNP  103   Off-net number group  104   Promotion across multiple groups  105   GPRS for SLA  For details ,please refer to the document named Statement_of_Product_Specification_for_Specified_Business_Type" null-able="true" columnDef="Int"/>
+    <field name="billingType" type="Integer" column="BILLING_TYPE" primitive="No" remark="This table aim at using prepaid/postpaid identifier when coducting billing, use for pricing managerment of  billing side , from the instance of PM_PRODUCT_OFFERING_ATTRIBUTE.billing_type 0-prepaid 1-postpaid" null-able="true" columnDef="Int"/>
+    <field name="createDate" type="Date" column="CREATE_DATE" primitive="No" remark="create date" null-able="true" columnDef="TimeStamp"/>
+    <field name="validDate" type="Date" column="VALID_DATE" isPk="true(not generated)" primitive="No" remark="Valid date" null-able="false" columnDef="TimeStamp"/>
+    <field name="expireDate" type="Date" column="EXPIRE_DATE" isPk="false" primitive="No" remark="Expire date" null-able="false" columnDef="TimeStamp"/>
+    <field name="soNbr" type="Long" column="SO_NBR" isPk="true(not generated)" primitive="No" remark="The serial number" null-able="false" columnDef="BigInt"/>
+    <field name="soDate" type="Date" column="SO_DATE" primitive="No" null-able="true" columnDef="TimeStamp"/>
+    <field name="isMain" type="Integer" column="IS_MAIN" primitive="No" null-able="false" columnDef="Int"/>
+    <field name="objectId" type="Long" column="OBJECT_ID" isPk="false" primitive="No" null-able="false" columnDef="BigInt"/>
+    <field name="objectType" type="Integer" column="OBJECT_TYPE" primitive="No" null-able="false" columnDef="Int"/>
+    <field name="prodValidDate" type="Date" column="PROD_VALID_DATE" primitive="No" null-able="false" columnDef="TimeStamp"/>
+    <field name="prodExpireDate" type="Date" column="PROD_EXPIRE_DATE" isPk="false" primitive="No" null-able="false" columnDef="TimeStamp"/>
+    <complex-field name="acctId" type="Long" collection="none" primitive="false" custAnnot="@Column(name=&quot;ACCT_ID&quot;)" remark="分表字段"/>
+  </fields>
+</entity>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="PmProdFreeresBusiLimit" schema="PD" table="PM_PROD_FREERES_BUSI_LIMIT">
+  <fields>
+    <field name="productOfferingId" type="Integer" column="PRODUCT_OFFERING_ID" isPk="true(not generated)" primitive="No" remark="A unique identifier for the product offering.
+
+" null-able="false" columnDef="Int"/>
+    <field name="billingType" type="Integer" column="BILLING_TYPE" isPk="true(not generated)" primitive="No" remark="0: prepaid
+1: postpaid
+" null-able="false" columnDef="Int"/>
+    <field name="triggerEvent" type="Integer" column="TRIGGER_EVENT" isPk="true(not generated)" primitive="No" remark="-1:all event
+0:Users active request Terminate products
+1:Change BA
+2:Change Owner" null-able="false" columnDef="Int"/>
+    <field name="persistFlag" type="Integer" column="PERSIST_FLAG" isPk="true(not generated)" primitive="No" remark="-1:No reference
+0:Dont keep products
+1:keep products
+
+" null-able="false" columnDef="Int"/>
+    <field name="freeresFlag" type="Integer" column="FREERES_FLAG" primitive="No" remark="0:???????????(??????????????,????????)
+1:???????????(???????????????????)" null-able="true" columnDef="Int"/>
+  </fields>
+</entity>

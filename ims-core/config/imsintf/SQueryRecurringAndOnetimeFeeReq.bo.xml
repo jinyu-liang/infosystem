@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="SQueryRecurringAndOnetimeFeeReq">
+  <fields>
+    <field name="phone_id" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="product_sequence_id" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="start_date" type="Date" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="end_date" type="Date" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="fee_item" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

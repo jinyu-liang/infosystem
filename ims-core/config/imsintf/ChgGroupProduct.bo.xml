@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="ChgGroupProduct" transient="true">
+  <fields>
+    <field name="outer_group_id" type="String" isPk="false" primitive="Auto" tree-foreign-key="false" null-able="true"/>
+    <field name="group_id" type="Long" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <complex-field name="prod_order_list" type="entity" ref="imsintf.SProductOrderOperList" collection="none" primitive="false"/>
+    <complex-field name="specialNumberOperList" type="entity" ref="imsintf.SpecialNumberOperList" collection="none" primitive="false"/>
+  </fields>
+</entity>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SCoProdCharValue" remark="" sdl="true" sdl-module="MIntfshSyncDef" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd">
+    <fields>
+        <field name="productId" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="groupId" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="specCharId" primitive="Yes" remark="" sdl="true" type="Integer"/>
+        <field name="value" primitive="Yes" remark="" sdl="true" type="String"/>
+        <field name="validDate" primitive="Yes" remark="" sdl="true" type="Date"/>
+        <field name="expireDate" primitive="Yes" remark="" sdl="true" type="Date"/>
+        <field name="objectId" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="objectType" primitive="Yes" remark="" sdl="true" type="Short"/>
+    </fields>
+</entity>

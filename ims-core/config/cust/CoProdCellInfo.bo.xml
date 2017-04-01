@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="CoProdCellInfo" schema="CD" table="CO_PROD_CELL_INFO">
+  <fields>
+    <field name="productId" type="Long" column="PRODUCT_ID" isPk="true" primitive="No" null-able="false" columnDef="NUMBER" columnSize="15"/>
+    <field name="lacId" type="Integer" column="LAC_ID" isPk="true" primitive="No" null-able="false" columnDef="NUMBER" columnSize="9"/>
+    <field name="sacId" type="Integer" column="SAC_ID" isPk="true" primitive="No" null-able="false" columnDef="NUMBER" columnSize="9"/>
+    <field name="validDate" type="Date" column="VALID_DATE" isPk="true" primitive="No" null-able="false" columnDef="DATE" columnSize="7"/>
+    <field name="expireDate" type="Date" column="EXPIRE_DATE" isPk="false" primitive="No" null-able="false" columnDef="DATE" columnSize="7"/>
+    <field name="modifyDate" type="Date" column="MODIFY_DATE" isPk="false" primitive="No" null-able="true" columnDef="DATE" columnSize="7"/>
+    <field name="remarks" type="String" column="REMARKS" isPk="false" primitive="No" null-able="true" columnDef="VARCHAR2" columnSize="256"/>
+    <field name="soNbr" type="Long" column="SO_NBR" isPk="true" primitive="No" null-able="false" columnDef="NUMBER" columnSize="15"/>
+    <field name="soDate" type="Date" column="SO_DATE" isPk="false" primitive="No" null-able="false" columnDef="DATE" columnSize="7"/>
+    <field name="objectId" type="Long" column="OBJECT_ID" isPk="false" primitive="No" null-able="false" columnDef="NUMBER" columnSize="15"/>
+    <field name="objectType" type="Integer" column="OBJECT_TYPE" isPk="false" primitive="No" null-able="false" columnDef="NUMBER" columnSize="4"/>
+  </fields>
+</entity>

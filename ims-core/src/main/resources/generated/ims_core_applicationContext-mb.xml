@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans  
+	xmlns="http://www.springframework.org/schema/beans"  
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+	
+	<bean id="mbeanExporter" class="org.springframework.jmx.export.MBeanExporter">
+		<property name="beans">
+			<map>
+				<entry key="com.ailk.easyframe.cache:name=ehCacheManagerMBean" value-ref="ehCacheManagerMBean" />
+				<entry key="com.ailk.easyframe.sal.client:name=salStatistics" value-ref="salStatisticsMBean" />
+				<entry key="jef.jre5support:name=JvmStatistics" value-ref="jvmStatisticsMBean" />
+			</map>
+		</property>
+	</bean>
+
+	<bean name="salStatisticsMBean" class="com.ailk.easyframe.sal.jmx.SalStatistics"></bean>
+	<bean name="jvmStatisticsMBean" class="jef.jre5support.JvmStatistics"></bean>
+	
+	<bean name="ehCacheManagerMBean"
+		class="org.springframework.cache.ehcache.EhCacheManagerFactoryBean" />
+		
+	<bean id="performancelogger" class="com.ailk.easyframe.web.common.performanceLog.PerformanceLogger">
+		<property name="mbNameList">
+			<list>
+				<value>JefDbClient:key=Db*,objectname=ConnectionPoolStatistics</value>
+				<value>com.ailk.easyframe.sal.client:name=salStatistics</value>
+				<value>jef.jre5support:name=JvmStatistics</value>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="performanceLogTask" class="com.ailk.easyframe.web.common.performanceLog.PerformanceLogTask">
+		<constructor-arg index="0">
+			<ref bean="performancelogger"/>
+		</constructor-arg>
+	</bean>
+</beans>

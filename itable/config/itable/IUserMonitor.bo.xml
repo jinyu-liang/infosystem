@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="IUserMonitor" remark="" schema="JD" table="I_USER_MONITOR" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="USER_ID" columnDef="BigInt" name="userId" primitive="No" remark="" type="Long"/>
+        <field column="SERVICE_ID" columnDef="Int" name="serviceId" primitive="No" remark="" type="Integer"/>
+        <field column="POLICY_ID" columnDef="Int" name="policyId" primitive="No" remark="" type="Integer"/>
+        <field column="MONITOR_TYPE" columnDef="Int" name="monitorType" primitive="No" remark="" type="Integer"/>
+        <field column="VALID_DATE" columnDef="TimeStamp" name="validDate" primitive="No" remark="" type="Date"/>
+        <field column="EXPIRE_DATE" columnDef="TimeStamp" name="expireDate" primitive="No" remark="" type="Date"/>
+        <field column="OPER_TYPE" columnDef="Int" name="operType" primitive="No" remark="" type="Integer"/>
+        <field column="SO_NBR" columnDef="BigInt" name="soNbr" primitive="No" remark="" type="Long"/>
+        <field column="COMMIT_DATE" columnDef="TimeStamp" name="commitDate" primitive="No" remark="" type="Date"/>
+    </fields>
+</entity>

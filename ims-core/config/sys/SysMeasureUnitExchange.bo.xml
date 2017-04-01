@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SysMeasureUnitExchange" remark="" schema="sd" table="SYS_MEASURE_UNIT_EXCHANGE" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="MEASURE_ID" columnDef="Int" isPk="true(not generated)" name="measureId" null-able="false" primitive="No" remark="Measurement ID, a unique identifier: RMB Hao--10401  RMB Li--10402 RMB Fen--10403  RMB Yuan--10404&#10;USD Cent--10201   USD Dollar--10202" type="Integer"/>
+        <field column="DEST_MEASURE_ID" columnDef="Int" isPk="true(not generated)" name="destMeasureId" null-able="false" primitive="No" remark="Target measurement ID" type="Integer"/>
+        <field column="MEASURE_EXCHANGE_ID" columnDef="Int" name="measureExchangeId" null-able="false" primitive="No" remark="Measurement exchange rule ID.  Fill in 0 for different measurements exchange" type="Integer"/>
+        <field column="EXCHANGE_NUMERATOR" columnDef="Int" name="exchangeNumerator" null-able="false" primitive="No" remark="Exchange numerator, for instance, RMB Fen : RMB Li =10:1, RMB Yuan: RMB Li = 100:1" type="Integer"/>
+        <field column="EXCHANGE_DENOMINATOR" columnDef="Int" name="exchangeDenominator" null-able="false" primitive="No" remark="Exchange denominator" type="Integer"/>
+    </fields>
+</entity>

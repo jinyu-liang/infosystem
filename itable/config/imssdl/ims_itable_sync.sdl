@@ -1,0 +1,13 @@
+module MImsItableSyncApp
+{
+	interface IImsItableSyncApp
+	{
+		int32  do_dbmDispatchStart();
+		int32  do_dbmScanStart();
+		int32  db_dbmCustTransfer();
+		int32  do_dbmAcctDeposit();
+		int32  do_dbmUserDepositDispatch();
+		int32  do_dbmManualModify();
+		int32  do_dbmUserAcctHandler();
+	}
+}

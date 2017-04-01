@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="PmEnumProdOfferTypeDef" remark="" schema="PD" table="PM_ENUM_PROD_OFFER_TYPE_DEF" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="OFFER_TYPE_ID" columnDef="AutoIncrement" isPk="true" name="offerTypeId" primitive="No" remark="Offering Types id&#10;&#10;Value:&#10;0: Simple Product Offering&#10;1: Package Product Offering&#10;" type="Integer"/>
+        <field column="NAME" columnDef="Varchar" columnSize="256" name="name" null-able="false" primitive="No" remark="Types of Product Offering " type="String"/>
+        <field column="DESCRIPTION" columnDef="Varchar" columnSize="1024" name="description" primitive="No" remark="Types Description" type="String"/>
+    </fields>
+</entity>

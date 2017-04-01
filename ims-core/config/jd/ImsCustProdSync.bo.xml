@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="ImsCustProdSync" remark="" schema="JD" table="IMS_CUST_PROD_SYNC" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="ID" columnDef="AutoIncrement" isPk="true" name="id" primitive="No" remark="?bos??sequence?????" type="Long"/>
+        <field column="CUST_ID" columnDef="Int" name="custId" primitive="No" remark="" type="Long"/>
+        <field column="ACCT_ID" columnDef="Int" name="acctId" null-able="false" primitive="No" remark="" type="Long"/>
+        <field column="USER_ID" columnDef="Int" name="userId" primitive="No" remark="" type="Long"/>
+        <field column="PHONE_ID" columnDef="Varchar" columnSize="30" name="phoneId" primitive="No" remark="" type="String"/>
+        <field column="ACTIVATION_TIME" columnDef="Date" name="activationTime" primitive="No" remark="" type="Date"/>
+        <field column="SMS_LANGUAGE" columnDef="Int" name="smsLanguage" primitive="No" remark="" type="Integer"/>
+        <field column="USSD_LANGUAGE" columnDef="Int" name="ussdLanguage" primitive="No" remark="" type="Integer"/>
+        <field column="IVR_LANGUAGE" columnDef="Int" name="ivrLanguage" primitive="No" remark="" type="Integer"/>
+        <field column="ACT_CHANNEL" columnDef="Int" name="actChannel" primitive="No" remark="" type="Integer"/>
+        <field column="ACTIVE_CAC" columnDef="Varchar" columnSize="255" name="activeCac" primitive="No" remark="" type="String"/>
+        <field column="EXPIRE_DATE" columnDef="Date" name="expireDate" primitive="No" remark="" type="Date"/>
+        <field column="BALANCE_BOOK_ITEM" columnDef="Int" name="balanceBookItem" primitive="No" remark="" type="Integer"/>
+        <field column="BALANCE_AMOUNT" columnDef="Int" name="balanceAmount" primitive="No" remark="" type="Long"/>
+        <field column="BALANCE_DAYS" columnDef="Int" name="balanceDays" primitive="No" remark="" type="Integer"/>
+        <field column="BALANCE_ACCT_ID" columnDef="Int" name="balanceAcctId" primitive="No" remark="" type="Long"/>
+        <field column="BALANCE_USER_ID" columnDef="Int" name="balanceUserId" primitive="No" remark="" type="Long"/>
+        <field column="BALANCE_PHONE_ID" columnDef="Varchar" columnSize="30" name="balancePhoneId" primitive="No" remark="" type="String"/>
+        <field column="BALANCE_VALID_DATE" columnDef="Date" name="balanceValidDate" primitive="No" remark="" type="Date"/>
+        <field column="BALANCE_EXPIRE_DATE" columnDef="Date" name="balanceExpireDate" primitive="No" remark="" type="Date"/>
+        <field column="BALANCE_NEGATIVE" columnDef="Int" name="balanceNegative" primitive="No" remark="" type="Long"/>
+        <field column="SO_NBR" columnDef="Int" name="soNbr" primitive="No" remark="" type="Long"/>
+        <field column="CREATE_DATE" columnDef="Date" name="createDate" null-able="false" primitive="No" remark="create date" type="Date"/>
+        <field column="STS" columnDef="Int" name="sts" null-able="false" primitive="No" remark="1:???? 2: ???" type="Integer"/>
+        <field column="BOS_SO_DATE" columnDef="Date" name="bosSoDate" primitive="No" remark="??reward??????" type="Date"/>
+        <field column="BOS_SO_NBR" columnDef="Int" name="bosSoNbr" primitive="No" remark="??reward?????" type="Long"/>
+        <field column="ERROR_MSG" columnDef="Varchar" columnSize="256" name="errorMsg" primitive="No" remark="" type="String"/>
+        <field column="ERROR_CODE" columnDef="Int" name="errorCode" primitive="No" remark="" type="Integer"/>
+        <field column="DEAL_COUNT" columnDef="Int" name="dealCount" primitive="No" remark="" type="Integer"/>
+        <field column="DEAL_DATE" columnDef="Date" name="dealDate" primitive="No" remark="" type="Date"/>
+    </fields>
+</entity>

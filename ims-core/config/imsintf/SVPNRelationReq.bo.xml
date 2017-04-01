@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="SVPNRelationReq" transient="true">
+  <fields>
+    <field name="outer_orgin_group_id" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="orgin_group_id" type="Long" isPk="false" primitive="No" null-able="true"/>
+    <complex-field name="subGroupList" type="entity" ref="imsintf.SubGroupList" collection="none" primitive="false"/>
+  </fields>
+</entity>

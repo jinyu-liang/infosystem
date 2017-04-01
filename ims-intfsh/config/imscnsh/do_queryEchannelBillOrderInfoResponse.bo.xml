@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="do_queryEchannelBillOrderInfoResponse">
+  <root ref="imsintf.BaseResponse"/>
+  <fields>
+    <field name="flag" type="Boolean" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="email" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="bill_type" type="String" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

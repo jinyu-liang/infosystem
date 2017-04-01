@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="CmBusiKey" remark="" schema="cd" table="CM_BUSI_KEY" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="SO_NBR" columnDef="Varchar" columnSize="128" isPk="true(not generated)" name="soNbr" primitive="No" remark="" type="String"/>
+        <field column="STEP_ID" columnDef="Int" isPk="true(not generated)" name="stepId" primitive="No" remark="" type="Integer"/>
+        <field column="SO_MODE" columnDef="Int" isPk="true(not generated)" name="soMode" primitive="No" remark="" type="Integer"/>
+        <field column="SO_DATE" columnDef="TimeStamp" name="soDate" null-able="false" primitive="No" remark="" type="Date"/>
+        <field column="DONE_CODE" columnDef="BigInt" name="doneCode" null-able="false" primitive="No" remark="" type="Long"/>
+    </fields>
+</entity>

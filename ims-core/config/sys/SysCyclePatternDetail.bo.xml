@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="SysCyclePatternDetail" schema="SD" table="SYS_CYCLE_PATTERN_DETAIL">
+  <fields>
+    <field name="patternId" type="Integer" column="PATTERN_ID" isPk="true(not generated)" primitive="No" remark="Pattern ID" null-able="true" columnDef="Int"/>
+    <field name="sts" type="Integer" column="STS" isPk="true(not generated)" primitive="No" remark="State numbering" null-able="true" columnDef="Int"/>
+    <field name="validDays" type="Integer" column="VALID_DAYS" primitive="No" remark="When value=0, it is not necessary to modify previous date.
+For example,If one customer gets a disount on his/her birthday which will not invlove in recurring table&apos;s date. " null-able="true" columnDef="Int"/>
+    <field name="creditValue" type="Long" column="CREDIT_VALUE" primitive="No" remark="Credit limit" null-able="true" columnDef="BigInt"/>
+  </fields>
+</entity>

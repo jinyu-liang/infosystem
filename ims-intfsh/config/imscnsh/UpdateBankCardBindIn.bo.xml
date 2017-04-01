@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="UpdateBankCardBindIn">
+  <fields>
+    <field name="phone_id" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="new_time_fix_money" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="out_so_nbr" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="out_so_date" type="String" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

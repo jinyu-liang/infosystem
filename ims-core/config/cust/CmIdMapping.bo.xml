@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="CmIdMapping" remark="" schema="CD" table="CM_ID_MAPPING" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd">
+	<fields>
+		<field column="MAP_TYPE" columnDef="Int" name="mapType" null-able="false" primitive="No" remark="1:CUST_ID;2:ACCT_ID;3:GROUP_ID" type="Integer"/>
+		<field column="OUTER_ID" columnDef="Varchar" columnSize="64" name="outerId" null-able="false" primitive="No" remark="外部ID" type="String"/>
+		<field column="INNER_ID" columnDef="BigInt" name="innerId" null-able="false" primitive="No" remark="内部ID" type="Long"/>
+	</fields>
+</entity>

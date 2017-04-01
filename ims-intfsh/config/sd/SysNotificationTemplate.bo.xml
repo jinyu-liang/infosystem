@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="SysNotificationTemplate" schema="SD" table="SYS_NOTIFICATION_TEMPLATE">
+  <fields>
+    <field name="templateId" type="Integer" column="TEMPLATE_ID" isPk="true(not generated)" remark="template no." null-able="false" columnDef="NUMBER" columnSize="9"/>
+    <field name="templateName" type="String" column="TEMPLATE_NAME" isPk="false" remark="template name" null-able="true" columnDef="VARCHAR2" columnSize="256"/>
+    <field name="templateSubject" type="String" column="TEMPLATE_SUBJECT" isPk="false" remark="提醒标题，E-MAIL\SMS等业务中需要使用" null-able="true" columnDef="VARCHAR2" columnSize="512"/>
+    <field name="templateContent" type="String" column="TEMPLATE_CONTENT" isPk="false" remark="Template Contents" null-able="true" columnDef="VARCHAR2" columnSize="2046"/>
+    <field name="templateFlag" type="String" column="TEMPLATE_FLAG" isPk="false" remark="different prefixes can be configured with different SMS sending time points. Mainly for the current NG version, and can be used as external code" null-able="true" columnDef="VARCHAR2" columnSize="10"/>
+  </fields>
+</entity>

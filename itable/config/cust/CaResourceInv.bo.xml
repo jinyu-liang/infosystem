@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="CaResourceInv" schema="AD" table="CA_RESOURCE_INV">
+  <fields>
+    <field name="resourceId" type="Long" column="RESOURCE_ID" isPk="true(not generated)" primitive="Auto" remark="用户编号" null-able="false" columnDef="NUMBER" columnSize="15"/>
+    <field name="summaryDeliver" type="String" column="SUMMARY_DELIVER" isPk="false" primitive="Auto" remark="邮寄方式SUMMARY_DELIVER，默认是32位全部为0的字符串，排列顺序从左到右，枚举值如下 位数 说明 1 电子邮件 2 彩信 3 短信 （剩余的留着做扩展）" null-able="false" columnDef="NUMBER" columnSize="32"/>
+    <field name="deliverAddr" type="String" column="DELIVER_ADDR" isPk="false" remark="寄送地址" null-able="false" columnDef="VARCHAR2" columnSize="512"/>
+    <field name="validDate" type="Date" column="VALID_DATE" isPk="false" remark="生效时间" null-able="false" columnDef="DATE" columnSize="7"/>
+    <field name="expireDate" type="Date" column="EXPIRE_DATE" isPk="false" remark="失效时间" null-able="false" columnDef="DATE" columnSize="7"/>
+    <field name="soNbr" type="Long" column="SO_NBR" primitive="No" null-able="true" columnDef="Int"/>
+  </fields>
+</entity>

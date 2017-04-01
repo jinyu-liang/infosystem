@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SGsmInfo" remark="" sdl="true" sdl-module="MXdr" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+<fields>
+<field name="callType" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="tollType" primitive="Yes" remark="" sdl="true" type="Short"/>
+<field name="tollRate" primitive="Yes" remark="" sdl="true" type="Short"/>
+<field name="transferCapability" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="layerProtocol" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="callingPartysCategory" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="ucbFlag" primitive="Yes" remark="" sdl="true" type="Short"/>
+</fields>
+</entity>

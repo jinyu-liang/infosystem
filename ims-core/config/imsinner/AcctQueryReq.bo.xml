@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="AcctQueryReq">
+  <root ref="imsinner.BaseQueryReq"/>
+  <fields>
+    <complex-field name="acctIds" type="Long" collection="list" primitive="false"/>
+    <field name="isCaCustInvoice" type="Boolean" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="isCaAcctAttribute" type="Boolean" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="isCaBuget" type="Boolean" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="isCaAccount" type="Boolean" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="isCaParentAcctId" type="Boolean" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="isCmContactMedium" type="Boolean" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="isQueryUsers" type="Boolean" isPk="false" primitive="Auto" null-able="true"/>
+    <complex-field name="userReq" type="entity" ref="imsinner.UserQueryReq" collection="none" primitive="false"/>
+    <field name="isCaPaymentChannel" type="Boolean" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

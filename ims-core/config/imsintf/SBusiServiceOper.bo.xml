@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="SBusiServiceOper" transient="true">
+	<fields>
+		<field name="oper_type" type="Short" isPk="false" enumAsAliasField="false" tree-foreign-key="false" null-able="true"/>
+		<complex-field name="busiService" type="entity" ref="imsintf.SBusiService" collection="none" primitive="false"/>
+	</fields>
+</entity>

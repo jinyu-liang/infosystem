@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="AccountBillOut" transient="true">
+  <fields>
+    <complex-field name="accountPocket" type="entity" ref="imscnsh.AccountPocket" collection="none" primitive="false"/>
+    <field name="active_message" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <complex-field name="messageList" type="String" collection="list" primitive="false"/>
+    <complex-field name="comMsgList" type="String" collection="list" primitive="false"/>
+    <complex-field name="accountMessList" type="entity" ref="imscnsh.AccountMessage" collection="list" primitive="false"/>
+    <complex-field name="coinDtl" type="entity" ref="imscnsh.CoinDtl" collection="none" primitive="false"/>
+    <complex-field name="spBillDtlList" type="entity" ref="imscnsh.SpBusiBillDtl" collection="list" primitive="false"/>
+    <complex-field name="accountDtlList" type="entity" ref="imscnsh.AccountDetail" collection="list" primitive="false"/>
+    <complex-field name="communicationList" type="entity" ref="imscnsh.CommunicationDtl" collection="list" primitive="false"/>
+    <complex-field name="billItemList" type="entity" ref="imscnsh.BillItem" collection="list" primitive="false"/>
+    <complex-field name="billSimpleList" type="entity" ref="imscnsh.BillSimple" collection="list" primitive="false"/>
+    <complex-field name="freeResourceList" type="entity" ref="imscnsh.FreeResource" collection="list" primitive="false"/>
+    <field name="acct_id" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="acct_name" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="phone_id" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="beign_date" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="end_date" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="bill_month" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="late_fee" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

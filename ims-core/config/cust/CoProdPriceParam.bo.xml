@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="CoProdPriceParam" schema="CD" table="CO_PROD_PRICE_PARAM">
+  <fields>
+    <field name="priceParamId" type="Long" column="PRICE_PARAM_ID" isPk="false" remark="Product parameters intance serial number" null-able="false" columnDef="NUMBER" columnSize="15"/>
+    <field name="productId" type="Long" column="PRODUCT_ID" isPk="false" remark="Product instance serial number" null-able="true" columnDef="NUMBER" columnSize="15"/>
+    <field name="paramId" type="Integer" column="PARAM_ID" isPk="false" remark="Parameters ID" null-able="true" columnDef="NUMBER" columnSize="9"/>
+    <field name="paramValue" type="String" column="PARAM_VALUE" isPk="false" remark="The value of parameter" null-able="true" columnDef="VARCHAR2" columnSize="256"/>
+    <field name="validDate" type="Date" column="VALID_DATE" isPk="false" remark="valid date /effective date" null-able="true" columnDef="DATE" columnSize="7"/>
+    <field name="expireDate" type="Date" column="EXPIRE_DATE" isPk="false" remark="expire date" null-able="true" columnDef="DATE" columnSize="7"/>
+    <field name="soNbr" type="Long" column="SO_NBR" isPk="false" remark="The serial number" null-able="true" columnDef="NUMBER" columnSize="15"/>
+    <field name="createDate" type="Date" column="CREATE_DATE" isPk="false" null-able="true" columnDef="DATE" columnSize="7"/>
+    <field name="soDate" type="Date" column="SO_DATE" isPk="false" null-able="true" columnDef="DATE" columnSize="7"/>
+    <field name="objectId" type="Long" column="OBJECT_ID" isPk="false" null-able="false" columnDef="NUMBER" columnSize="15"/>
+    <field name="objectType" type="Integer" column="OBJECT_TYPE" isPk="false" null-able="false" columnDef="NUMBER" columnSize="4"/>
+  </fields>
+</entity>

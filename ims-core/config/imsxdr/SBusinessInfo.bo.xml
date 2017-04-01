@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SBusinessInfo" remark="" sdl="true" sdl-module="MXdr" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+<fields>
+<complex-field collection="none" name="sbusinessinteraction" primitive="false" ref="imsxdr.SBusinessInteraction" remark="" sdl="true" type="entity"/>
+<complex-field collection="list" name="listRewardInfo" primitive="false" ref="imsxdr.SRewardInfo" remark="" sdl="true" type="entity"/>
+<complex-field collection="none" name="adjustFreeResresult" primitive="false" ref="imsxdr.SAdjustFreeResResult" remark="" sdl="true" type="entity"/>
+<complex-field collection="list" name="listRechargeLog" primitive="false" ref="imsxdr.SRechargeLog" remark="" sdl="true" type="entity"/>
+<complex-field collection="none" name="assetBalance" primitive="false" ref="imsxdr.SAssetBalance" remark="" sdl="true" type="entity"/>
+<complex-field collection="none" name="calFeeConfirm" primitive="false" ref="imsxdr.SCalFeeConfirm" remark="" sdl="true" type="entity"/>
+</fields>
+</entity>

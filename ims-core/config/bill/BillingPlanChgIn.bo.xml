@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="BillingPlanChgIn" transient="true">
+  <fields>
+    <field name="billingPlanId" type="Long" isPk="false" tree-foreign-key="false" enumAsAliasField="false" null-able="true"/>
+    <field name="acctId" type="Long" isPk="false" tree-foreign-key="false" enumAsAliasField="false" null-able="true"/>
+    <field name="cycleSpecId" type="Long" isPk="false" tree-foreign-key="false" enumAsAliasField="false" null-able="true"/>
+    <field name="validDate" type="Date" isPk="false" tree-foreign-key="false" enumAsAliasField="false" null-able="true"/>
+    <field name="expireDate" type="Date" isPk="false" tree-foreign-key="false" enumAsAliasField="false" null-able="true"/>
+    <field name="opId" type="Integer" isPk="false" tree-foreign-key="false" enumAsAliasField="false" null-able="true"/>
+    <field name="soDate" type="Date" isPk="false" tree-foreign-key="false" enumAsAliasField="false" null-able="true"/>
+    <field name="soNbr" type="Long" isPk="false" tree-foreign-key="false" enumAsAliasField="false" null-able="true"/>
+    <complex-field name="paymentChannelInList" type="entity" ref="bill.PaymentChannelIn" collection="list" primitive="false"/>
+  </fields>
+</entity>

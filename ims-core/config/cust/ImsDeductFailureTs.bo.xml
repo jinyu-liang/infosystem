@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="ImsDeductFailureTs" schema="cd" table="IMS_DEDUCT_FAILURE_TS">
+  <fields>
+    <field name="productId" type="Long" column="PRODUCT_ID" isPk="true(not generated)" primitive="No" remark="?????????" null-able="false" columnDef="BigInt"/>
+    <field name="failureRuleId" type="Integer" column="FAILURE_RULE_ID" isPk="true(not generated)" primitive="No" remark="????ID,??PM_RENT_DEDUCT_ACTION" null-able="false" columnDef="Int"/>
+    <field name="resourceId" type="Long" column="RESOURCE_ID" isPk="true(not generated)" primitive="No" remark="??ID" null-able="false" columnDef="BigInt"/>
+    <field name="validDate" type="Date" column="VALID_DATE" primitive="No" remark="????" null-able="false" columnDef="TimeStamp"/>
+    <field name="sts" type="Integer" column="STS" primitive="No" null-able="false" columnDef="Int"/>
+    <field name="createDate" type="Date" column="CREATE_DATE" primitive="No" null-able="true" columnDef="TimeStamp"/>
+    <field name="dealDate" type="Date" column="DEAL_DATE" primitive="No" null-able="true" columnDef="TimeStamp"/>
+    <field name="dealCount" type="Integer" column="DEAL_COUNT" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="errorMsg" type="String" column="ERROR_MSG" primitive="No" null-able="true" columnDef="Varchar" columnSize="256"/>
+    <field name="errorCode" type="Integer" column="ERROR_CODE" primitive="No" null-able="true" columnDef="Int"/>
+  </fields>
+</entity>

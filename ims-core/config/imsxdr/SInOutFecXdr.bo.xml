@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SInOutFecXdr" remark="" sdl="true" sdl-module="MXdr" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+<fields>
+<complex-field collection="list" name="freeresMiddleInfo" primitive="false" ref="imsxdr.SFreeresMiddleInfo" remark="" sdl="true" type="entity"/>
+<complex-field collection="list" name="freeresLimitMiddleInfo" primitive="false" ref="imsxdr.SFreeresLimitMiddleInfo" remark="" sdl="true" type="entity"/>
+<complex-field collection="map&lt;Long,?&gt;" name="creditMiddleInfo" primitive="false" ref="imsxdr.SCreditMiddleInfo" remark="" sdl="true" type="entity"/>
+<complex-field collection="map&lt;Long,?&gt;" name="bookMiddleInfo" primitive="false" ref="imsxdr.SCreditMiddleInfo" remark="" sdl="true" type="entity"/>
+<complex-field collection="list" name="capMaxMiddleInfo" primitive="false" ref="imsxdr.SBudgetMiddleInfo" remark="" sdl="true" type="entity"/>
+<complex-field collection="list" name="budgetMiddleInfo" primitive="false" ref="imsxdr.SBudgetMiddleInfo" remark="" sdl="true" type="entity"/>
+<complex-field collection="list" name="paymentMiddleInfo" primitive="false" ref="imsxdr.SPaymentMiddleInfo" remark="" sdl="true" type="entity"/>
+<field name="abmSessionId" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="slaAlert" primitive="Yes" remark="" sdl="true" type="Integer"/>
+</fields>
+</entity>

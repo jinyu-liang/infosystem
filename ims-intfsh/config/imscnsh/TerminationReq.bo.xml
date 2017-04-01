@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="TerminationReq">
+  <fields>
+    <field name="TranCode" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="MerchantID" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="MerchantTranDate" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="MerchantTranTime" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="MerchantTranLogNo" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="ContractNo" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="MobileNo" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="Remark" type="String" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

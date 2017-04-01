@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="ImsEventRecord" schema="cd" table="IMS_EVENT_RECORD">
+  <fields>
+    <field name="eventId" type="Long" column="EVENT_ID" isPk="true" primitive="No" null-able="true" columnDef="AutoIncrement"/>
+    <field name="triggerDate" type="Date" column="TRIGGER_DATE" primitive="No" null-able="true" columnDef="TimeStamp"/>
+    <field name="eventClass" type="Integer" column="EVENT_CLASS" primitive="No" null-able="false" columnDef="Int"/>
+    <field name="createDate" type="Date" column="CREATE_DATE" primitive="No" null-able="false" columnDef="TimeStamp"/>
+    <field name="id" type="Long" column="ID" primitive="No" remark="???" null-able="false" columnDef="BigInt"/>
+    <field name="dealCount" type="Integer" column="DEAL_COUNT" primitive="No" remark="????" null-able="true" columnDef="Int"/>
+    <field name="dealDate" type="Date" column="DEAL_DATE" primitive="No" remark="????" null-able="true" columnDef="TimeStamp"/>
+    <field name="errorMsg" type="String" column="ERROR_MSG" primitive="No" remark="????" null-able="true" columnDef="Varchar" columnSize="256"/>
+    <field name="errorCode" type="Integer" column="ERROR_CODE" primitive="No" remark="????" null-able="true" columnDef="Int"/>
+    <field name="sts" type="Integer" column="STS" primitive="No" remark="??1:??2:????3:??" null-able="true" columnDef="Int"/>
+  </fields>
+</entity>

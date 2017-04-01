@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="BatchUserInfo">
+  <fields>
+    <field name="old_ussd_language" type="Short" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="old_irv_language" type="Short" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="old_sms_language" type="Short" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="old_user_segment" type="Short" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="old_user_role" type="Short" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="old_valid_date" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="brand" type="Short" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="promotion_id" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="new_ussd_language" type="Short" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="new_irv_language" type="Short" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="new_sms_language" type="Short" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="new_user_segment" type="Short" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="new_user_role" type="Short" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="new_valid_date" type="String" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

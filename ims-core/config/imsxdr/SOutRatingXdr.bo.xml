@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SOutRatingXdr" remark="" sdl="true" sdl-module="MXdr" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+<fields>
+<field name="appType" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="appQuotaId" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="processTime" primitive="Yes" remark="" sdl="true" type="Long"/>
+<complex-field collection="list" name="charge" primitive="false" ref="imsxdr.SCharge" remark="" sdl="true" type="entity"/>
+<complex-field collection="list" name="discountFee" primitive="false" ref="imsxdr.SDiscountFee" remark="" sdl="true" type="entity"/>
+<complex-field collection="list" name="taxCharge" primitive="false" ref="imsxdr.STaxCharge" remark="" sdl="true" type="entity"/>
+<complex-field collection="list" name="freeResDiscountFee" primitive="false" ref="imsxdr.SFreeResDiscountFee" remark="" sdl="true" type="entity"/>
+<complex-field collection="list" name="freeResChargeVal" primitive="false" ref="imsxdr.SFreeResChargeVal" remark="" sdl="true" type="entity"/>
+<complex-field collection="list" name="freeResCreator" primitive="false" ref="imsxdr.SFreeResCreator" remark="" sdl="true" type="entity"/>
+<complex-field collection="list" name="addupResQueryVal" primitive="false" ref="imsxdr.SAddupResQueryVal" remark="" sdl="true" type="entity"/>
+<complex-field collection="list" name="addupResUsingVal" primitive="false" ref="imsxdr.SAddupResUsingVal" remark="" sdl="true" type="entity"/>
+<complex-field collection="list" name="addupResQueryValPricerule" primitive="false" ref="imsxdr.SAddupResQueryVal" remark="" sdl="true" type="entity"/>
+<complex-field collection="list" name="addupResUsingValPricerule" primitive="false" ref="imsxdr.SAddupResUsingVal" remark="" sdl="true" type="entity"/>
+<complex-field collection="list" name="freeresQueryVal" primitive="false" ref="imsxdr.SFreeResQueryVal" remark="" sdl="true" type="entity"/>
+<complex-field collection="list" name="creditQueryVal" primitive="false" ref="imsxdr.SAssetQueryVal" remark="" sdl="true" type="entity"/>
+<complex-field collection="list" name="bookQueryVal" primitive="false" ref="imsxdr.SAssetQueryVal" remark="" sdl="true" type="entity"/>
+<complex-field collection="list" name="bookChargeVal" primitive="false" ref="imsxdr.SAssetChargeVal" remark="" sdl="true" type="entity"/>
+<complex-field collection="list" name="creditChargeVal" primitive="false" ref="imsxdr.SAssetChargeVal" remark="" sdl="true" type="entity"/>
+<complex-field collection="list" name="freeresLimitQueryVal" primitive="false" ref="imsxdr.SFreeResLimitQueryVal" remark="" sdl="true" type="entity"/>
+<complex-field collection="list" name="capMaxVal" primitive="false" ref="imsxdr.SCapMaxVal" remark="" sdl="true" type="entity"/>
+<complex-field collection="list" name="budgetVal" primitive="false" ref="imsxdr.SCapMaxVal" remark="" sdl="true" type="entity"/>
+<complex-field collection="list" name="payforVal" primitive="false" ref="imsxdr.SPayforVal" remark="" sdl="true" type="entity"/>
+<complex-field collection="list" name="validRateProdId" primitive="false" ref="imsxdr.SValidRateProdId" remark="" sdl="true" type="entity"/>
+<complex-field collection="list" name="priceTrace" primitive="false" ref="imsxdr.SPriceTrace" remark="" sdl="true" type="entity"/>
+<complex-field collection="list" name="prePayBillDtl" primitive="false" ref="imsxdr.SPrePayBillDtl" remark="" sdl="true" type="entity"/>
+<complex-field collection="list" name="stdUnit" primitive="false" ref="imsxdr.SStdRatingUnit" remark="" sdl="true" type="entity"/>
+<field name="tsFlag" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<complex-field collection="list" name="irIddCharge" primitive="false" ref="imsxdr.SCharge" remark="" sdl="true" type="entity"/>
+<field name="iddOperatorId" primitive="Yes" remark="" sdl="true" type="Short"/>
+<complex-field collection="list" name="markupCharge" primitive="false" ref="imsxdr.SMarkupCharge" remark="" sdl="true" type="entity"/>
+<complex-field collection="list" name="rateProdPrice" primitive="false" ref="imsxdr.SRateProdPrice" remark="" sdl="true" type="entity"/>
+<complex-field collection="none" name="hybridRn" primitive="false" ref="imsxdr.SPayOffMode" remark="" sdl="true" type="entity"/>
+<field name="isBarservice" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<complex-field collection="list" name="settleCharge" primitive="false" ref="imsxdr.SSettleCharge" remark="" sdl="true" type="entity"/>
+<complex-field collection="list" name="undeductFee" primitive="false" ref="imsxdr.SUndeductFee" remark="" sdl="true" type="entity"/>
+<field name="undeductFlag" primitive="Yes" remark="" sdl="true" type="Short"/>
+<complex-field collection="map&lt;Integer,?&gt;" name="rating2billitemmap" primitive="false" ref="imsxdr.SRating2BillItem" remark="" sdl="true" type="entity"/>
+<complex-field collection="list" name="chargeConverted" primitive="false" ref="imsxdr.SChargeConverted" remark="" sdl="true" type="entity"/>
+</fields>
+</entity>

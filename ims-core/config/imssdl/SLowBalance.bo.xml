@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SLowBalance" remark="" sdl="true" sdl-module="MImsSyncDef" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+    <fields>
+        <field name="custId" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="acctId" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="phoneId" primitive="Yes" remark="" sdl="true" type="String"/>
+        <field name="autoType" primitive="Yes" remark="" sdl="true" type="Integer"/>
+        <field name="payChannel" primitive="Yes" remark="" sdl="true" type="Integer"/>
+        <field name="lowBalanceAmount" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="currentBalanceAmount" primitive="Yes" remark="" sdl="true" type="Long"/>
+    </fields>
+</entity>

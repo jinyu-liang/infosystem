@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="IIsmpOper" remark="" schema="cd" table="I_ISMP_OPER" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="OWNER_ID" columnDef="BigInt" name="ownerId" primitive="No" remark="用户编号" type="Long"/>
+        <field column="REGION_CODE" columnDef="Int" name="regionCode" primitive="No" remark="用户归属地区" type="Integer"/>
+        <field column="COMMIT_DATE" columnDef="Date" name="commitDate" primitive="No" remark="提交时间" type="Date"/>
+        <field column="DONE_CODE" columnDef="BigInt" name="doneCode" primitive="No" remark="流水编号" type="Long"/>
+        <field column="PROC_STS" columnDef="Int"  name="procSts" primitive="No" remark="" type="Integer"/>
+        <field column="DELAY_DATE" columnDef="Date" name="delayDate" primitive="No" remark="" type="Date"/>
+    </fields>
+</entity>

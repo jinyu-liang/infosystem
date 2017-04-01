@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="RechargeLog" transient="false">
+  <fields>
+    <field name="phone_id" type="String" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="outer_acct_id" type="String" isPk="false" primitive="Auto" tree-foreign-key="false" null-able="true"/>
+    <field name="acct_id" type="Long" isPk="false" tree-foreign-key="false" null-able="false"/>
+    <field name="flag" type="Short" isPk="false" tree-foreign-key="false" null-able="false"/>
+    <field name="op_id" type="Long" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="recharge_time" type="String" isPk="false" tree-foreign-key="false" null-able="false"/>
+    <field name="amount" type="Long" isPk="false" tree-foreign-key="false" null-able="false"/>
+    <field name="remark" type="String" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="card_serial_no" type="String" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="recharge_method" type="Short" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="recharge_partner_id" type="String" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="recharge_service_id" type="Integer" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="payment_mode" type="String" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="card_batch_no" type="String" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <complex-field name="OldBalance" type="entity" ref="imsintf.SBalance" collection="none" primitive="false"/>
+    <complex-field name="NewBalanceList" type="entity" ref="imsintf.SBalanceList" collection="none" primitive="false"/>
+    <field name="so_mode" type="Short" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="source_system" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="transaction_id" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="validity_period" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="extra_validity" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <complex-field name="FreeResrouceGroupList" type="entity" ref="imsintf.FreeResourceGroupList" collection="none" primitive="false"/>
+    <complex-field name="ProductOrdResultList" type="entity" ref="imsintf.SProductOrderList" collection="none" primitive="false"/>
+    <field name="_etopup_session_id" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="_operation_date" type="Date" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

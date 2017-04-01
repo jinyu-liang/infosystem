@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="CmBusiOrder" remark="" schema="CD" table="CM_BUSI_ORDER" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="SO_NBR" columnDef="BigInt" name="soNbr" primitive="No" remark="" type="Long"/>
+        <field column="ORIG_SO_NBR" columnDef="BigInt" name="origSoNbr" primitive="No" remark="原始变更前的流水号，如果是新增的这个和so_nbr一样" type="Long"/>
+        <field column="SPEC_ID" columnDef="BigInt" name="specId" primitive="No" remark="业务规格" type="Long"/>
+        <field column="PRODUCT_ID" columnDef="BigInt" name="productId" primitive="No" remark="产品实例编号" type="Long"/>
+        <field column="OPER_TYPE" columnDef="Int" name="operType" primitive="No" remark="操作，表示0-新增、1-删除, 2修改 3-延期" type="Integer"/>
+        <field column="OBJECT_TYPE" columnDef="Int" name="objectType" primitive="No" remark="对象类型，0-dev；1-acct;2-gca" type="Integer"/>
+        <field column="BUSI_FLAG" columnDef="Int" name="busiFlag" primitive="No" remark="产品的业务标识" type="Integer"/>
+        <field column="OBJECT_ID" columnDef="BigInt" name="objectId" primitive="No" remark="对象编号" type="Long"/>
+        <field column="ORIGIN_TYPE" columnDef="Int" name="originType" primitive="No" remark="来源，0-普通的产品订购,1-奖励" type="Integer"/>
+        <field column="ORIGIN_ID" columnDef="BigInt" name="originId" primitive="No" remark="如果是因为订购了某个产品送的奖励，记录对应的产品编号,&#10;如果是某种操作，比如首次激活赠送的，可以填0&#10;" type="Long"/>
+        <field column="STS" columnDef="Int" name="sts" primitive="No" remark="0-正常工单，1-已撤单工单" type="Integer"/>
+        <field column="CANCEL_DATE" columnDef="TimeStamp" name="cancelDate" primitive="No" remark="撤单时间" type="Date"/>
+        <field column="DONE_DATE" columnDef="TimeStamp" name="doneDate" primitive="No" remark="操作时间" type="Date"/>
+        <field column="REMARK" columnDef="Varchar" columnSize="255" name="remark" primitive="No" remark="" type="String"/>
+    </fields>
+</entity>

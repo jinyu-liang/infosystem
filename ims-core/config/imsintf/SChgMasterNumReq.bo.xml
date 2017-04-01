@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="SChgMasterNumReq" transient="true">
+  <fields>
+    <field name="old_master_number" type="String" isPk="false" primitive="Auto" tree-foreign-key="false" null-able="true"/>
+    <field name="new_master_number" type="String" isPk="false" primitive="Auto" tree-foreign-key="false" null-able="true"/>
+  </fields>
+</entity>

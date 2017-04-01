@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="SAcctFundTransDtl">
+  <fields>
+    <field name="acct_id" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="item_code" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="item_name" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="total_fee" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="transfer_fee" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="valid_date" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="expire_date" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="asset_id" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="ext1" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="ext2" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="ext3" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="ext4" type="String" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

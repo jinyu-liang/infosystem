@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="CoFnCharValue" schema="CD" table="CO_FN_CHAR_VALUE" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd">
+  	<fields>
+        <field column="PRODUCT_ID" columnDef="BigInt" name="productId" null-able="false" primitive="No" remark="Product instance serial number" type="Long"/>
+        <field column="GROUP_ID" columnDef="BigInt" name="groupId" null-able="false" primitive="No" remark="The  id of CHAR_GROUP_ID  instance&#10;&#10;If SPEC_CHAR_ID id from characteristic grouping, so grouping identifier instance need to be recorded,&#10;if not ,filled with 0" type="Long"/>
+        <field column="SPEC_CHAR_ID" columnDef="Int" name="specCharId" null-able="false" primitive="No" remark="A unique identifier for the ProductSpecCharacteristic." type="Integer"/>
+        <field column="VALUE" columnDef="Varchar" columnSize="256" name="value" null-able="false" primitive="No" remark="A fact that describes a Product.&#10;During generating the instance of product ,the specific value of specification characteristic&#10;" type="String"/>
+        <field column="VALID_DATE" columnDef="TimeStamp" name="validDate" primitive="No" remark="valid date" type="Date"/>
+        <field column="EXPIRE_DATE" columnDef="TimeStamp" name="expireDate" primitive="No" remark="expire date" type="Date"/>
+        <field column="SO_NBR" columnDef="BigInt" name="soNbr" primitive="No" remark="The serial number" type="Long"/>
+        <field column="CREATE_DATE" columnDef="TimeStamp" name="createDate" primitive="No" remark="" type="Date"/>
+        <field column="SO_DATE" columnDef="TimeStamp" name="soDate" primitive="No" remark="" type="Date"/>
+        <field column="OBJECT_ID" columnDef="BigInt" name="objectId" null-able="false" primitive="No" remark="" type="Long"/>
+        <field column="OBJECT_TYPE" columnDef="Int" name="objectType" null-able="false" primitive="No" remark="" type="Integer"/>
+  	</fields>
+</entity>

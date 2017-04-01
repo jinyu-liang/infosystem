@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SNotifySendIntf" remark="" sdl="true" sdl-module="MImsSyncDef" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+    <fields>
+        <field name="custId" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="acctId" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="resourceId" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="queueId" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="notificationId" primitive="Yes" remark="" sdl="true" type="Integer"/>
+        <field name="actionId" primitive="Yes" remark="" sdl="true" type="Integer"/>
+        <field name="notifyLang" primitive="Yes" remark="" sdl="true" type="Integer"/>
+        <field name="notifyContent" primitive="Yes" remark="" sdl="true" type="String"/>
+        <field name="channelId" primitive="Yes" remark="" sdl="true" type="String"/>
+        <field name="channelType" primitive="Yes" remark="" sdl="true" type="Short"/>
+        <field name="sendTime" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="sender" primitive="Yes" remark="" sdl="true" type="String"/>
+        <field name="emailSubject" primitive="Yes" remark="" sdl="true" type="String"/>
+        <field name="sequenceId" primitive="Yes" remark="" sdl="true" type="Long"/>
+    </fields>
+</entity>

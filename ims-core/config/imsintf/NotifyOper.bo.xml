@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="NotifyOper">
+  <fields>
+    <field name="oper_type" type="Short" isPk="false" primitive="Auto" null-able="true"/>
+    <complex-field name="notifyList" type="entity" ref="imsintf.NotifyList" collection="array" primitive="false"/>
+  </fields>
+</entity>

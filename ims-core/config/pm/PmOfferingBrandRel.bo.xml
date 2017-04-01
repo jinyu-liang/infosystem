@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="PmOfferingBrandRel" remark="" schema="pd" table="PM_OFFERING_BRAND_REL" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="PRODUCT_OFFERING_ID" columnDef="NUMBER" isPk="true(not generated)" name="productOfferingId" null-able="false" primitive="No" remark="A unique identifier for the product offering.&#10;&#10;" type="Integer" columnSize="9"/>
+        <field column="BRAND_ID" columnDef="Int" isPk="true(not generated)" name="brandId" null-able="false" primitive="No" remark="Brand ID&#10;1  gsm&#10;2  gsm1800&#10;3  one2call&#10;4  2g-prepaid1800&#10;5  3g-postpaid&#10;6  3g-prepaid&#10;7  3g-postpaid1800&#10;8  3g-prepaid1800&#10;" type="Integer"/>
+        <field column="VALID_DATE" columnDef="TimeStamp" name="validDate" null-able="false" primitive="No" remark="effective date" type="Date"/>
+        <field column="EXPIRE_DATE" columnDef="TimeStamp" name="expireDate" null-able="false" primitive="No" remark="expiring date " type="Date"/>
+    </fields>
+</entity>

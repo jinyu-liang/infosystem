@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="IAcctchgTrade" schema="JD" table="I_ACCTCHG_TRADE">
+  <fields>
+  	<field name="soNbr" type="Long" isPk="true(not generated)" column="SO_NBR" primitive="No" remark="接口流水号" null-able="false" columnDef="Int"/>
+  	<field name="tradeId" type="Long" column="TRADE_ID" primitive="No" remark="" null-able="false" columnDef="Int"/>
+    <field name="sts" type="Integer" column="STS" primitive="No" null-able="false" columnDef="Int"/>
+    <field name="inDate" type="Date" column="IN_DATE" primitive="No" null-able="false" columnDef="Date"/>
+   	<field name="updateDate" type="Date" column="UPDATE_DATE" primitive="No" null-able="false" columnDef="Date"/>
+  </fields>
+</entity>

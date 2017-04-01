@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="ImsRewardObjRule" remark="" schema="CD" table="IMS_REWARD_OBJ_RULE" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="RULE_ID" columnDef="AutoIncrement" isPk="true" name="ruleId" primitive="No" remark="" type="Long"/>
+        <field column="LIMIT_ID" columnDef="BigInt" name="limitId" null-able="false" primitive="No" remark="" type="Long"/>
+    </fields>
+</entity>

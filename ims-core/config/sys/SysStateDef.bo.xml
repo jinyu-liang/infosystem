@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SysStateDef" remark="" schema="sd" table="SYS_STATE_DEF" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="STS" columnDef="AutoIncrement" isPk="true" name="sts" primitive="No" remark="Exclusive identification of status, for identifying different status in-table-relation&#10;&#10;service status:&#10;0-Close;&#10;1-Active;&#10;2-Suspend&#10;&#10;resource status:&#10;" type="Integer"/>
+        <field column="STS_TYPE" columnDef="Int" name="stsType" primitive="No" remark="status types&#10;1.  user life cycle status&#10;2.  business service status&#10;" type="Integer"/>
+        <field column="NAME" columnDef="Varchar" columnSize="256" name="name" null-able="false" primitive="No" remark="name" type="String"/>
+        <field column="DESCRIPTION" columnDef="Varchar" columnSize="1024" name="description" primitive="No" remark="Description in-table-relation " type="String"/>
+    </fields>
+</entity>

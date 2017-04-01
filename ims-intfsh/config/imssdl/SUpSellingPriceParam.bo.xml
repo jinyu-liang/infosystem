@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SUpSellingPriceParam" remark="" sdl="true" sdl-module="MIntfshSyncDef" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+    <fields>
+        <field name="objectId" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="objectType" primitive="Yes" remark="" sdl="true" type="Integer"/>
+        <field name="prodId" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="validDate" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="expireDate" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <complex-field collection="list" name="priceParam" primitive="false" ref="imssdl.SPriceParam" remark="" sdl="true" type="entity"/>
+    </fields>
+</entity>

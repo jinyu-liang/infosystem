@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="IAcctPayRelation" remark="" schema="JD" table="I_ACCT_PAY_RELATION" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="PAY_ACCT_ID" columnDef="Int" isPk="false" name="payAcctId" null-able="true" primitive="No" type="Long"/>
+        <field column="USER_ID" columnDef="Int" isPk="false" name="userId" null-able="true" primitive="No" type="Long"/>
+        <field column="ACCT_ID" columnDef="Int" isPk="false" name="acctId" null-able="true" primitive="No" type="Long"/>
+        <field column="REGION_CODE" columnDef="Int" isPk="false" name="regionCode" null-able="true" primitive="No" type="Integer"/>
+        <field column="PAY_RULE_ID" columnDef="Int" isPk="false" name="payRuleId" null-able="true" primitive="No" type="Integer"/>
+        <field column="PRODUCT_ID" columnDef="Int" isPk="false" name="productId" null-able="true" primitive="No" type="Long"/>
+        <field column="PAY_TYPE" columnDef="Int" isPk="false" name="payType" null-able="true" primitive="No" type="Integer"/>
+        <field column="PAY_NUMERATOR" columnDef="Int" isPk="false" name="payNumerator" null-able="true" primitive="No" type="Integer"/>
+        <field column="PAY_DENOMINATOR" columnDef="Int" isPk="false" name="payDenominator" null-able="true" primitive="No" type="Integer"/>
+        <field column="PAY_THRESHOLD" columnDef="Int" isPk="false" name="payThreshold" null-able="true" primitive="No" type="Integer"/>
+        <field column="PAY_METHOD" columnDef="Int" isPk="false" name="payMethod" null-able="true" primitive="No" type="Integer"/>
+        <field column="PRIORITY" columnDef="Int" isPk="false" name="priority" null-able="true" primitive="No" type="Integer"/>
+        <field column="VALID_DATE" columnDef="Date" isPk="false" name="validDate" null-able="true" primitive="No" type="Date"/>
+        <field column="EXPIRE_DATE" columnDef="Date" isPk="false" name="expireDate" null-able="true" primitive="No" type="Date"/>
+        <field column="OPER_TYPE" columnDef="Int" isPk="false" name="operType" null-able="true" primitive="No" type="Integer"/>
+        <field column="SO_NBR" columnDef="Int" isPk="false" name="soNbr" null-able="true" primitive="No" type="Long"/>
+        <field column="COMMIT_DATE" columnDef="Date" isPk="false" name="commitDate" null-able="true" primitive="No" type="Date"/>
+        <field column="main_user_id" columnDef="Int" isPk="false" name="mainUserId" null-able="true" primitive="No" type="Long"/>
+        <field column="FILL_TYPE" columnDef="Int" isPk="false" name="fillType" null-able="true" primitive="No" type="Integer"/>
+        <field column="BIND_TYPE" columnDef="Int" isPk="false" name="bindType" null-able="true" primitive="No" type="Integer"/>
+        <field column="INST_ID" columnDef="Int" isPk="false" name="instId" null-able="true" primitive="No" type="Long"/>
+        
+    </fields>
+</entity>

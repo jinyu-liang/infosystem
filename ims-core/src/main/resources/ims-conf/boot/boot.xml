@@ -1,0 +1,690 @@
+<!--数据缓存配置项里table上的cacheLevel属性表示该表数据的缓存加载方式，值如下：
+1：启动时全部加载；读取不到时，不再查表（默认值）
+2：启动时全部加载；读取不到时，查表
+3：启动时不加载；读取过的数据缓存
+-->
+<boot>
+	<config name="cache" bean="com.ailk.ims.init.DBConfigInitBean" remark="初始化基础数据缓存">
+		<table bean="com.ailk.openbilling.persistence.sys.entity.SysParameter" cacheLevel="1" parser="com.ailk.ims.cache.SysParameterCacheParser">
+			<condition>
+				param_class = 6
+			</condition>
+			<order>
+				param_name desc,param_code asc
+			</order>
+			<check bean="com.ailk.ims.init.check.SysParameterCheckBean">
+				
+				<item code="default_expire_date" nullable="false" value_pattern="\d{4}-[01]\d-[0123]\d\s[012]\d:[0-5]\d:[0-5]\d" error_hint="need a standard time.please config as : yyyy-MM-dd hh:mm:ss" remark="默认失效时间" />
+				
+				<item code="default_customer_class" nullable="false" value_pattern="[0-5]{1}" error_hint="need legal customer type" remark="默认客户类型" />
+				<item code="default_customer_type" nullable="false" value_pattern="\d+" error_hint="only number allowed" remark="默认客户子类型" />
+				<item code="default_customer_segment" nullable="false" value_pattern="\d+" error_hint="only number allowed" remark="默认客户等级" />
+				<item code="default_account_company_id" nullable="false" value_pattern="[1-4]{1}+" error_hint="only number allowed" remark="默认帐户表中的公司编号" />
+				<item code="default_account_type" nullable="false" value_pattern="\d+" error_hint="only number allowed" remark="默认帐户类型" />
+				<item code="default_account_class" nullable="false" value_pattern="[1,2]" error_hint="only number allowed" remark="默认帐户大类" />
+				<item code="default_account_payment_currency" nullable="false" value_pattern="\d+" error_hint="only number allowed" remark="默认帐户度量ID" />
+				<item code="default_user_spec_id" nullable="false" value_pattern="\d+" error_hint="only number allowed" remark="默认资源对应的规格编号" />
+				<item code="default_user_segment" nullable="false" value_pattern="[1-7]{1}" error_hint="only number allowed" remark="默认资源用户等级" />
+				<item code="default_language" nullable="false" value_pattern="\d+" error_hint="only number allowed" remark="默认语言" />
+				<item code="default_exempt_type" nullable="false" value_pattern="\d+" error_hint="only number allowed" remark="默认免催免停标志类型" />
+				<item code="sync_changecustomerstatus_service_url" nullable="true" remark="上发bssbroker的webservice服务地址" />
+				<item code="sync_info2csr_service_url" nullable="true" remark="上发bssbroker的webservice服务地址" />
+				<item code="sync_lowbalance2etopup_service_url" nullable="true" remark="上发bssbroker的webservice服务地址" />
+				<item code="sync_onetimepromotion_service_url" nullable="true" remark="上发bssbroker的webservice服务地址" />
+				<item code="sync_productorder_service_url" nullable="true" remark="上发bssbroker的webservice服务地址" />
+				<item code="sync_productstatus2crm_service_url" nullable="true" remark="上发bssbroker的webservice服务地址" />
+				<item code="sync_customerinfo2crm_service_url" nullable="true" remark="上发bssbroker的webservice服务地址" />
+				<item code="sync_systembarservice_service_url" nullable="true" remark="上发bssbroker的webservice服务地址" />
+				<item code="infosystem_opid" nullable="false" value_pattern="\d+" error_hint="only number allowed" remark="默认操作员编号（opId）" />
+				<item code="default_country_id" nullable="false" value_pattern="\d+" error_hint="only number allowed" remark="默认国家编号（country_id）" />
+				<item code="default_region_code" nullable="false" value_pattern="\d+" error_hint="only number allowed" remark="默认地市编号（region_code）" />
+				<item code="exempt_type_101" nullable="true" remark="个性化免催类型" />
+				<item code="exempt_type_102" nullable="true" remark="个性化免停类型" />
+				<item code="exempt_type_103" nullable="true" remark="个性化免催免停类型" />
+				<item code="project" nullable="false" />
+				<item code="local_sdl_control" nullable="false" remark="是否本地测试,不上发数据到云平台" />
+				<item code="country" nullable="false" remark="系统使用国家" />
+				<item code="cust_contact" nullable="false" remark="客户联系信息类型" />
+				<item code="acct_contact" nullable="false"  remark="帐户联系信息类型" />
+				<item code="cust_contact_type" nullable="false" remark="表明客户地址记录不能重复的类型" />
+				<item code="acct_contact_type" nullable="false" remark="表明帐户地址记录不能重复的类型" />
+				<item code="component_trace" nullable="false" remark="是否启用组件方法追踪" />
+				<item code="balance_type" nullable="false" value_pattern="\d+" error_hint="only number allowed"  remark="账本类型" />
+				<item code="brand_id" nullable="false" remark="品牌id" />
+				<item code="group_member_default_max_number" nullable="false" value_pattern="\d+" error_hint="only number allowed" remark="默认最大群成员数" />
+				<item code="cug_default_max_number" nullable="false"  value_pattern="\d+" error_hint="only number allowed" remark="默认最大内部群数" />
+				<item code="group_manager_short_phone" nullable="false" remark="默认群主短号" />
+				<item code="inner_outer_id_equal" nullable="false"  remark="ims内部id是否和外部id保持一致" />
+				<item code="inner_so_mode_str" nullable="false" remark="内部系统so_mode" />
+				<!--
+				<item code="balance_expired_left_days" nullable="false" value_pattern="\d+" error_hint="only number allowed" remark="余额到期剩余天数" />
+				<item code="timeout_hour_value" nullable="true" value_pattern="\d+" error_hint="only number allowed" remark="上发CRM接口表中，记录超时时间" />
+				<item code="prod_expire_notify_max_day" nullable="false" remark="产品失效通知最大提前、延迟天数" />
+				<item code="balance_expired_left_days" nullable="false" value_pattern="\d+" error_hint="only number allowed" remark="余额到期剩余天数" />
+				<item code="do_reward" nullable="false" remark="是否需要回馈" />
+				<item code="get_lifecycle_data_num" nullable="false" value_pattern="\d+" error_hint="only number allowed"  remark="生命周期一次获取数据条数" />
+				<item code="join_group_amount_community" nullable="true" value_pattern="\d+" remark="允许加入的Community个数" />
+				<item code="join_group_amount_vpn" nullable="true" value_pattern="\d+" remark="允许加入的vpn个数"/>
+				<item code="lifecycle_expire_after_days" nullable="false" value_pattern="\d+" error_hint="only number allowed" remark="生命周期状态x days之后有效期到期" />
+				<item code="lifecycle_notify_sts_list" nullable="false" value_pattern="\d{4}(,\d{4})*" error_hint="only String allowed" remark="需要发送告警的用户生命周期状态" />
+				<item code="measure_id" nullable="false" value_pattern="\d+" remark="货币类型" />
+				<item code="message_filepath_pattern" nullable="false" remark="请求报文存放路径" />
+				<item code="one_time_deal_record_count" nullable="false" value_pattern="\d+" error_hint="only number allowed" remark="上发CRM接口表中，同时处理的最大记录条数" />
+				<item code="onetimefee_account_control" nullable="false" value_pattern="\d+" error_hint="only number allowed" remark="业务绑定的一次性费用时收取变更前还是变更后账号的控制" />
+				<item code="prod_notify_max_retry_times" nullable="false" remark="告警发送失败之后的最大重发次数" />
+				<item code="prod_valid_notify_max_day" nullable="false" remark="产品生效通知最大提前、延迟天数" />
+				<item code="single_balance_max_validity" nullable="false" value_pattern="\d+" error_hint="only number allowed" remark="single balance下可以有的最大有效期天数"  />
+				<item code="orderprod_reward_spec_id" nullable="false" remark="订购产品触发reward的spec_id" />
+				<item code="orderprod_cancel_reward_spec_id" nullable="false" remark="退订产品触发reward的spec_id" />
+				<item code="first_active_preorder_prod" nullable="false" remark="首次激活产品是否通知扣费开关" />
+				<item code="first_active_failure_url" nullable="false" remark="数据激活时，未获取到用户信息后的，失败统一跳转的URL" />
+				<item code="clean_balance_freeres_config" nullable="false" remark="是否清理balance，reward balance，free resource 的默认配置" />
+				<item code="newreg_mainprodid_pririoty" nullable="false" remark="Pririoty of MainPromotion in New Registration for Subscriber" />
+				<item code="sh_crm_http_json_server_addr" nullable="true" remark="上海CRM http+json 服务器地址" />
+				<item code="IM_ADD_ABM_BUDGET_WAY_FLAG" nullable="false" remark="固费扣费标识，同步调用 or 异步调用" />
+				<item code="IM_MAX_FREERESOURCE_AMOUNT" nullable="false" remark="免費資源金額最大值" />
+				
+				<item code="IM_SH_2010_IN_NET_PRE_PAY" nullable="true" remark="2010新入网营销活动赠送预存" />
+				<item code="IM_SH_2010_IN_NET_VOICE_FEE" nullable="true" remark="2010新入网营销活动语音费专款" />
+				<item code="IM_SH_3G_SURF_FUND" nullable="true" remark="剩余3G上网本上网费专用资金" />
+				<item code="IM_SH_09_SPRING_LEAVE_FUND" nullable="true" remark="09春季入网送话费活动赠送资金的剩余金额" />
+				<item code="IM_SH_09_SPRING_CURR_USED_FUND" nullable="true" remark="09春季入网送话费活动本月可使用额度的赠送资金" />
+				<item code="IM_SH_WSYYT_ACCT_FUND" nullable="true" remark="帐户资金费用查询(网上营业厅)" />
+				<item code="IM_SH_WEB_GPRS_AMT" nullable="true" remark="WAP_GPRS流量查询" />
+				<item code="IM_SH_DOMESTIC_GPRS_AMT" nullable="true" remark="根据手机号码查询国内GPRS流量数据汇总" />
+				<item code="IM_SH_INTERNATIONAL_GPRS_AMT" nullable="true" remark="根据手机号码查询国际GPRS流量数据汇总" />
+				<item code="IM_SH_WLAN_LOCAL" nullable="true" remark="用户有本地wlan" />
+				<item code="IM_SH_WLAN_SCHOOL" nullable="true" remark="用户有上海校园WLAN" />
+				<item code="IM_SH_WLAN_FIMALY" nullable="true" remark="用户有上海家庭WLAN" />
+				<item code="IM_SH_WLAN_PHONE" nullable="true" remark="用户有上海手机WLAN" />
+				<item code="IM_SH_WLAN_AUTO_CERTIFY" nullable="true" remark="用户有WLAN自动认证专属资费" />
+				
+				<item code="IM_SH_MOBILE_DOMESTIC_AMOUNT" nullable="true" remark="移动数据国内流量" />
+				<item code="IM_SH_MOBILE_INTER_AMOUNT" nullable="true" remark="国际及台港澳漫游流量" />
+				<item code="IM_SH_3G_NOTE_BOOK_AMOUNT_AMOUNT" nullable="true" remark="随e行3G上网本业务流量" />
+				<item code="IM_SH_P_MAIL_DOMESTIC_AMOUNT" nullable="true" remark="手机邮箱国内流量" />
+				<item code="IM_SH_P_MAIL_INTER_AMOUNT" nullable="true" remark="手机邮箱国际流量" />
+				<item code="IM_SH_BLOC_APN_AMOUNT" nullable="true" remark="集团APN流量" />
+				<item code="IM_SH_BLB_DOMESTIC_AMOUNT" nullable="true" remark="BlackBerry国内流量" />
+				<item code="IM_SH_BLB_INTER_AMOUNT" nullable="true" remark="BlackBerry国际及台港澳漫游流量" />
+				<item code="IM_SH_FETION_FREE_AMOUNT" nullable="true" remark="飞信会员专属免费流量" />
+				<item code="IM_SH_DATA_AUTO_ADD_AMOUNT" nullable="true" remark="移动数据自动叠加包流量" />
+				
+				
+				
+				<item code="IM_SH_VOICE_CALL_ITEM" nullable="true" remark="语音话费科目" />
+				
+				<item code="IM_SH_GPRS_TYPE_FLOW_UNIT" nullable="true" remark="GPRS流量单位" />
+				<item code="IM_SH_GPRS_TYPE_LENGTH_UNIT" nullable="true" remark="GPRS使用时长单位" />
+				<item code="IM_SH_BOSS_HTTP_JSON_SERVER_ADDR" nullable="true" remark="CBOSS接口服务地址" />
+				<item code="IM_SH_ABATE_BILL_ITEM_ID" nullable="true" remark="优惠科目编号" />
+				<item code="IM_SH_E_CARD_VALID_DAYS" nullable="true" remark="上海e_card用户有效期天数"/>
+				-->
+			</check>
+
+			
+		</table>
+		<!--销售品通知配置-->
+		<table bean="com.ailk.openbilling.persistence.pm.entity.PmProductOfferNotify" cacheLevel="3" />
+
+		<!--销售品属性配置-->
+		<table bean="com.ailk.openbilling.persistence.pm.entity.PmProductOfferAttribute" cacheLevel="3" />
+
+		
+	
+		
+	
+		<!-- 首次激活相关信息 -->
+		<table bean="com.ailk.openbilling.persistence.sys.entity.SysGroupCyclePattern">
+			<condition>
+				expire_date >= sysdate
+			</condition>
+		</table>
+		<table bean="com.ailk.openbilling.persistence.sys.entity.SysCyclePatternTransfer"/>
+		<table bean="com.ailk.openbilling.persistence.sys.entity.SysCyclePatternDetail"/>
+	<!--	<table bean="com.ailk.openbilling.persistence.acct.entity.BiBusiHybridRule"/> 
+		<table bean="com.ailk.openbilling.persistence.pm.entity.PmFirstActiveGprsUrl"/>
+		<table bean="com.ailk.openbilling.persistence.sys.entity.SysNotificationRule"/>
+		<table bean="com.ailk.openbilling.persistence.sys.entity.SysPolicyElements"/>
+		<table bean="com.ailk.openbilling.persistence.sys.entity.SysElementsVsPolicy"/>
+		<table bean="com.ailk.openbilling.persistence.pm.entity.PmFirstActiveRule"/>
+			
+		<table bean="com.ailk.openbilling.persistence.acct.entity.BiBusiAvaible"/>-->
+		<table bean="com.ailk.openbilling.persistence.pm.entity.PmProdBusiLimit" cacheLevel="3" />
+		<table bean="com.ailk.openbilling.persistence.pm.entity.PmCompositeRulePrice" cacheLevel="3"/>
+		<table bean="com.ailk.openbilling.persistence.pm.entity.PmProductSpecTypeGroups" cacheLevel="3" />
+		<!--
+		<table bean="com.ailk.openbilling.persistence.acct.entity.BiBusiPlan">
+			<condition>
+				expire_date >= sysdate
+			</condition>
+			<order>
+				priority desc
+			</order>
+		</table>
+		<table bean="com.ailk.openbilling.persistence.sys.entity.SysTimeSegDtl"/>
+		<table bean="com.ailk.openbilling.persistence.sys.entity.SysTimeSegDef"/>
+		-->
+		
+		
+		<!-- 多货币转换规则表 -->
+		<table bean="com.ailk.openbilling.persistence.sys.entity.SysMeasure"/>
+		<table bean="com.ailk.openbilling.persistence.sys.entity.SysMeasureType"/>
+		<table bean="com.ailk.openbilling.persistence.sys.entity.SysMeasureUnitExchange"/>
+		<!--中心订购业务BUSI_TYPE预销户规则 -->
+		<table bean="com.ailk.openbilling.persistence.pm.entity.PmBusiTypeRule" cacheLevel="2"/>
+		<!-- 携号转网前缀定义 -->
+		<!--
+		<table bean="com.ailk.openbilling.persistence.busi.entity.RsSysMnpDef"/>
+		-->
+	</config>
+	
+	<config name="dbrel" bean="com.ailk.ims.init.DBRelInitBean" remark="初始化关联刷新表关系">
+		<table root="com.ailk.openbilling.persistence.cust.entity.CmCustomer" rel="com.ailk.openbilling.persistence.cust.entity.CmIndividual" type="one-2-one">
+			<field root="custId" rel="partyId"/>
+		</table>
+		<table root="com.ailk.openbilling.persistence.cust.entity.CmCustomer" rel="com.ailk.openbilling.persistence.cust.entity.CmContactMedium" type="one-2-one">
+			<field root="custId" rel="objectId"/>
+			<field rel="objectType" relValue="3"/>
+		</table>
+		<table root="com.ailk.openbilling.persistence.cust.entity.CmIndividual" rel="com.ailk.openbilling.persistence.cust.entity.CmContactMedium" type="one-2-one">
+			<field root="partyId" rel="objectId"/>
+			<field rel="objectType" relValue="3"/>
+		</table>
+		<table root="com.ailk.openbilling.persistence.acct.entity.CaAccountRes" rel="com.ailk.openbilling.persistence.acct.entity.CaAccountRel" type="one-2-one">
+			<field root="acctId" rel="relAcctId"/>
+		</table>
+		<table root="com.ailk.openbilling.persistence.cust.entity.CoProd" rel="com.ailk.openbilling.persistence.cust.entity.CoProdCharValue" type="one-2-many">
+			<field root="productId" rel="productId"/>
+		</table>
+		<table root="com.ailk.openbilling.persistence.cust.entity.CoProd" rel="com.ailk.openbilling.persistence.cust.entity.CoFnCharValue" type="one-2-many">
+			<field root="productId" rel="productId"/>
+		</table>
+		<table root="com.ailk.openbilling.persistence.cust.entity.CoProd" rel="com.ailk.openbilling.persistence.cust.entity.CoBudgetCharValue" type="one-2-many">
+			<field root="productId" rel="productId"/>
+		</table>
+		<table root="com.ailk.openbilling.persistence.cust.entity.CoProd" rel="com.ailk.openbilling.persistence.cust.entity.CoBudgetCharValue" type="one-2-many">
+			<field root="productId" rel="productId"/>
+		</table>
+		<table root="com.ailk.openbilling.persistence.acct.entity.CaAccount" rel="com.ailk.openbilling.persistence.acct.entity.CaAccountExt" type="one-2-many">
+			<field root="acctId" rel="acctId"/>
+		</table>
+	</config>
+	<config name="idmap" bean="com.ailk.ims.init.IdMapInitBean" remark="初始化内外id映射关系">
+		<module code="1001">
+			<struct className="com.ailk.openbilling.persistence.imsintf.entity.SCustomer">
+				<map outer="outer_cust_id" inner="cust_id" type="1" isPrimary="true"/>
+			</struct>
+			<struct className="com.ailk.openbilling.persistence.imsintf.entity.SAccount">
+				<map outer="outer_acct_id" inner="acct_id" type="2" isPrimary="true"/>
+				<map outer="outer_parent_acct_id" inner="parent_acct_id" type="2"/>
+				<map outer="outer_cust_id" inner="cust_id" type="1"/>
+			</struct>
+			<struct className="com.ailk.openbilling.persistence.imsintf.entity.SUser">
+				<map outer="outer_acct_id" inner="acct_id" type="2"/>
+				<map outer="outer_billable_acct_id" inner="billable_acct_id" type="2"/>
+				<map outer="outer_cust_id" inner="cust_id" type="1"/>
+			</struct>
+			<struct className="com.ailk.openbilling.persistence.imsintf.entity.SProductOrder">
+				<map outer="outer_acct_id" inner="acct_id" type="2"/>
+				<map outer="outer_billable_acct_id" inner="billable_acct_id" type="2"/>
+				<map outer="outer_cust_id" inner="cust_id" type="1"/>
+			</struct>
+			<struct className="com.ailk.openbilling.persistence.imsintf.entity.SContact">
+				<map outer="outer_acct_id" inner="acct_id" type="2"/>
+				<map outer="outer_cust_id" inner="cust_id" type="1"/>
+			</struct>
+			<struct className="com.ailk.openbilling.persistence.imsintf.entity.SPayChannel">
+				<map outer="outer_acct_id" inner="acct_id" type="2"/>
+				<map outer="outer_cust_id" inner="cust_id" type="1"/>
+			</struct>
+			<struct className="com.ailk.openbilling.persistence.imsintf.entity.SUserAuth">
+			</struct>
+			<struct className="com.ailk.openbilling.persistence.imsintf.entity.SBalance">
+				<map outer="outer_acct_id" inner="acct_id" type="2"/>
+			</struct>
+		</module>
+		<module code="1034">
+			<struct className="com.ailk.openbilling.persistence.imsintf.entity.SGroup">
+				<map outer="outer_group_id" inner="group_id" dbfield="acct_id" type="3" isPrimary="true"/>
+			</struct>
+		</module>
+		<module code="7005">
+			<struct className="com.ailk.openbilling.persistence.imsintf.entity.SAccount">
+				<map outer="outer_acct_id" inner="acct_id" type="2" isPrimary="true"/>
+				<map outer="outer_parent_acct_id" inner="parent_acct_id" type="2"/>
+				<map outer="outer_cust_id" inner="cust_id" type="1"/>
+			</struct>
+			<struct className="com.ailk.openbilling.persistence.imsintf.entity.SProductOrder">
+				<map outer="outer_acct_id" inner="acct_id" type="2"/>
+				<map outer="outer_billable_acct_id" inner="billable_acct_id" type="2"/>
+				<map outer="outer_cust_id" inner="cust_id" type="1"/>
+			</struct>
+			<struct className="com.ailk.openbilling.persistence.imsintf.entity.SContact">
+				<map outer="outer_acct_id" inner="acct_id" type="2"/>
+				<map outer="outer_cust_id" inner="cust_id" type="1"/>
+			</struct>
+			<struct className="com.ailk.openbilling.persistence.imsintf.entity.SPayChannel">
+				<map outer="outer_acct_id" inner="acct_id" type="2"/>
+				<map outer="outer_cust_id" inner="cust_id" type="1"/>
+			</struct>
+			<struct className="com.ailk.openbilling.persistence.imsintf.entity.SBalance">
+				<map outer="outer_acct_id" inner="acct_id" type="2"/>
+			</struct>
+		</module>
+	</config>
+	<config name="mdbgroup" bean="com.ailk.ims.init.MdbGroupInitBean" remark="初始化关联刷新组配置">
+		<group code="*">
+			<tables>
+				<table>com.ailk.openbilling.persistence.cust.entity.CmCustomer</table>
+				<table>com.ailk.openbilling.persistence.cust.entity.CmIndividual</table>
+				<table>com.ailk.openbilling.persistence.cust.entity.CmContactMedium</table>				
+			</tables>
+			<tables>
+				<table>com.ailk.openbilling.persistence.cust.entity.CoProd</table>
+				<table>com.ailk.openbilling.persistence.cust.entity.CoProdCharValue</table>
+			</tables>
+			<tables>
+				<table>com.ailk.openbilling.persistence.cust.entity.CoProd</table>
+				<table>com.ailk.openbilling.persistence.cust.entity.CoFnCharValue</table>
+			</tables>
+			<tables>
+				<table>com.ailk.openbilling.persistence.cust.entity.CoProd</table>
+				<table>com.ailk.openbilling.persistence.cust.entity.CoBudgetCharValue</table>
+			</tables>
+			<tables>
+				<table>com.ailk.openbilling.persistence.cust.entity.CoProd</table>
+				<table>com.ailk.openbilling.persistence.cust.entity.CoBudgetCharValue</table>
+			</tables>
+			<tables>
+				<table>com.ailk.openbilling.persistence.acct.entity.CaAccount</table>
+				<table>com.ailk.openbilling.persistence.acct.entity.CaAccountExt</table>		
+			</tables>
+		</group>
+		<group code="1001">
+		</group>
+		<group code="1034">
+			<tables>
+				<table>com.ailk.openbilling.persistence.cust.entity.CmCustomer</table>
+				<table>com.ailk.openbilling.persistence.cust.entity.CmIndividual</table>				
+			</tables>
+			<tables>
+				<table>com.ailk.openbilling.persistence.acct.entity.CaAccountRes</table>
+				<table>com.ailk.openbilling.persistence.acct.entity.CaAccountRel</table>
+			</tables>
+			<tables>
+				<table>com.ailk.openbilling.persistence.cust.entity.CoProd</table>
+				<table>com.ailk.openbilling.persistence.cust.entity.CoProdCharValue</table>
+			</tables>
+		</group>
+		<group code="1039">
+			<tables>
+				<table>com.ailk.openbilling.persistence.cust.entity.CmCustomer</table>
+				<table>com.ailk.openbilling.persistence.cust.entity.CmIndividual</table>				
+			</tables>
+			<tables>
+				<table>com.ailk.openbilling.persistence.acct.entity.CaAccountRes</table>
+				<table>com.ailk.openbilling.persistence.acct.entity.CaAccountRel</table>
+			</tables>
+			<tables>
+				<table>com.ailk.openbilling.persistence.cust.entity.CoProd</table>
+				<table>com.ailk.openbilling.persistence.cust.entity.CoProdCharValue</table>
+			</tables>
+		</group>
+	</config>
+	<!--
+		<config name="upfield" bean="com.ailk.ims.init.UpfieldInitBean" remark="初始化异步上发表主键字段配置">
+			<table bean="com.ailk.openbilling.persistence.cust.entity.CmParty">
+				<field>partyId</field>				
+			</table>
+			<table bean="com.ailk.openbilling.persistence.cust.entity.CmIndividual">
+				<field>partyId</field>				
+			</table>
+			<table bean="com.ailk.openbilling.persistence.cust.entity.CmIndividualName">
+				<field>partyId</field>				
+			</table>
+			<table bean="com.ailk.openbilling.persistence.cust.entity.CmOrganization">
+				<field>partyId</field>				
+			</table>
+			<table bean="com.ailk.openbilling.persistence.cust.entity.CmOrgName">
+				<field>partyId</field>				
+			</table>
+			<table bean="com.ailk.openbilling.persistence.cust.entity.CmPartyIdentity">
+				<field>partyId</field>				
+			</table>
+
+			<table bean="com.ailk.openbilling.persistence.cust.entity.CmContactMedium">
+				<field>contactMediumId</field>				
+			</table>
+
+			<table bean="com.ailk.openbilling.persistence.cust.entity.CmPartyRole">
+				<field>partyRoleId</field>				
+			</table>
+			<table bean="com.ailk.openbilling.persistence.cust.entity.CmCustExt">
+				<field>custId</field>				
+			</table>
+			<table bean="com.ailk.openbilling.persistence.cust.entity.CmCustomer">
+				<field>custId</field>				
+			</table>
+
+			<table bean="com.ailk.openbilling.persistence.cust.entity.CmIdentityVsImei">
+				<field>resourceId</field>				
+			</table>
+			<table bean="com.ailk.openbilling.persistence.cust.entity.CmResIdentity">
+				<field>resourceId</field>				
+			</table>
+			<table bean="com.ailk.openbilling.persistence.cust.entity.CmResLifecycle">
+				<field>resourceId</field>				
+			</table>
+			<table bean="com.ailk.openbilling.persistence.cust.entity.CmResource">
+				<field>resourceId</field>				
+			</table>
+			<table bean="com.ailk.openbilling.persistence.cust.entity.CmResServCycle">
+				<field>resourceId</field>	
+				<field>serviceSpecId</field>			
+			</table>
+
+			<table bean="com.ailk.openbilling.persistence.cust.entity.CoProd">
+				<field>productId</field>	
+			</table>
+			<table bean="com.ailk.openbilling.persistence.cust.entity.CoProdBillingCycle">
+				<field>productId</field>	
+			</table>
+			<table bean="com.ailk.openbilling.persistence.cust.entity.CoProdCharValue">
+				<field>productId</field>	
+			</table>
+			<table bean="com.ailk.openbilling.persistence.cust.entity.CoProdPriceParam">
+				<field>productId</field>	
+			</table>
+
+			<table bean="com.ailk.openbilling.persistence.acct.entity.CaAccount">
+				<field>acctId</field>	
+			</table>
+			<table bean="com.ailk.openbilling.persistence.acct.entity.CaAccountExt">
+				<field>acctId</field>	
+			</table>
+			<table bean="com.ailk.openbilling.persistence.acct.entity.CaAccountRel">
+				<field>acctId</field>	
+			</table>
+			<table bean="com.ailk.openbilling.persistence.acct.entity.CaAccountRes">
+				<field>resourceId</field>	
+			</table>
+			<table bean="com.ailk.openbilling.persistence.acct.entity.CaAccountRv">
+				<field>resourceId</field>	
+			</table>
+			<table bean="com.ailk.openbilling.persistence.acct.entity.CaAccountGroup">
+				<field>acctId</field>	
+			</table>
+			<table bean="com.ailk.openbilling.persistence.acct.entity.CaBankFund">
+				<field>assetId</field>	
+			</table>
+			<table bean="com.ailk.openbilling.persistence.acct.entity.CaCredit">
+				<field>acctId</field>	
+				<field>assetId</field>	
+			</table>
+			<table bean="com.ailk.openbilling.persistence.acct.entity.CaCustomInv">
+				<field>acctId</field>	
+			</table>
+			<table bean="com.ailk.openbilling.persistence.acct.entity.CaCycleResourceNotify">
+				<field>resourceId</field>	
+			</table>
+
+			<table bean="com.ailk.openbilling.persistence.acct.entity.CaPayChannel">
+				<field>paymentPlanId</field>	
+			</table>
+			<table bean="com.ailk.openbilling.persistence.acct.entity.CaPaymentPlan">
+				<field>acctId</field>	
+			</table>
+			<table bean="com.ailk.openbilling.persistence.acct.entity.CaCustomerRel">
+				<field>acctId</field>	
+			</table>
+			<table bean="com.ailk.openbilling.persistence.cust.entity.CoProdCellInfo">
+				<field>productId</field>
+			</table>
+			<table bean="com.ailk.openbilling.persistence.acct.entity.CaNotifyExempt">
+				<field>objectId</field>
+			</table>
+		</config>
+		-->
+	
+	<config name="upfield" bean="com.ailk.ims.init.UpfieldInitBean" remark="初始化异步上发表主键字段配置">
+			
+		<table bean="com.ailk.openbilling.persistence.cust.entity.CmCustomer">
+			<fields>
+				<obj_id field="custId" />
+				<obj_type value="cust" />
+			</fields>
+			<mdb>CCustomer</mdb>
+		</table>
+		<table bean="com.ailk.openbilling.persistence.cust.entity.CmContactMedium">
+			<fields>
+				<obj_id field="objectId" />
+				<obj_type field="objectType">
+					<cust>3,9</cust>
+					<acct>1,2</acct>
+					<user>0</user>
+				</obj_type>
+			</fields>		
+			<mdb>CAcctContact</mdb>
+			<mdb>CEmailInfo</mdb>	
+		</table>
+
+		<table bean="com.ailk.openbilling.persistence.acct.entity.CaAccount">
+			<fields>
+				<acct>acctId</acct>
+			</fields>	
+			<mdb>CAccount</mdb>
+		</table>
+		<table bean="com.ailk.openbilling.persistence.acct.entity.CaAccountRel">
+			<fields>
+				<acct>acctId</acct>
+			</fields>		
+			<mdb>CUserGroupTier</mdb>
+		</table>
+		<table bean="com.ailk.openbilling.persistence.acct.entity.CaAccountRes">
+			<fields>
+				<user>resourceId</user>
+			</fields>	
+			<mdb>CUserAcctRel</mdb>
+		</table>
+		<table bean="com.ailk.openbilling.persistence.acct.entity.CaAccountRv">
+			<fields>
+				<acct>acctId</acct>
+			</fields>	
+			<mdb>CUserGroup</mdb>
+			<mdb>CGroupExterior</mdb>
+		</table>
+		<table bean="com.ailk.openbilling.persistence.acct.entity.CaAccountGroup">
+			<fields>
+				<acct>acctId</acct>
+			</fields>	
+			<mdb>CGroup</mdb>
+		</table>
+		<table bean="com.ailk.openbilling.persistence.acct.entity.CaNotifyExempt">
+			<fields>
+				<obj_id field="objectId" />
+				<obj_type field="objectType">
+					<acct>1,2</acct>
+					<user>0</user>
+				</obj_type>
+			</fields>	
+			<mdb>CExemption</mdb>
+		</table>
+		<table bean="com.ailk.openbilling.persistence.acct.entity.CaBillingPlan">
+			<fields>
+				<acct>acctId</acct>
+			</fields>	
+			<mdb>CAcctBillCycle</mdb>
+		</table>
+			
+		<table bean="com.ailk.openbilling.persistence.cust.entity.CmIdentityVsImei">
+			<fields>
+				<obj_id field="resourceId" />
+				<obj_type value="user" />
+			</fields>
+			<mdb>CIdentityBound</mdb>
+		</table>
+		<table bean="com.ailk.openbilling.persistence.cust.entity.CmResIdentity">
+			<fields>
+				<obj_id field="resourceId" />
+				<obj_type value="user" />
+			</fields>			
+			<mdb>CIdentity</mdb>
+		</table>
+		<table bean="com.ailk.openbilling.persistence.cust.entity.CmResLifecycle">
+			<fields>
+				<obj_id field="resourceId" />
+				<obj_type value="user" />
+			</fields>	
+			<mdb>CUserCycle</mdb>			
+		</table>
+		<table bean="com.ailk.openbilling.persistence.cust.entity.CmResource">
+			<fields>
+				<obj_id field="resourceId" />
+				<obj_type value="user" />
+			</fields>	
+			<mdb>CUser</mdb>		
+		</table>
+		<table bean="com.ailk.openbilling.persistence.cust.entity.CmResServCycle">
+			<fields>
+				<obj_id field="resourceId" />
+				<obj_type value="user" />
+			</fields>
+			<mdb>CUserServiceStatus</mdb>
+		</table>
+			
+		<table bean="com.ailk.openbilling.persistence.cust.entity.CoProd">
+			<fields>
+				<obj_id field="objectId" />
+				<obj_type field="objectType">
+					<acct>1,2</acct>
+					<user>0</user>
+				</obj_type>
+				<prod_id field="productId"/>
+			</fields>	
+			<mdb>CUserProm</mdb>
+			<mdb>CAcctProm</mdb>
+			<mdb>CGroupProm</mdb>
+		</table>
+		<table bean="com.ailk.openbilling.persistence.cust.entity.CoProdBillingCycle">
+			<fields>
+				<obj_id field="objectId" />
+				<obj_type field="objectType">
+					<acct>1,2</acct>
+					<user>0</user>
+				</obj_type>
+				<prod_id field="productId"/>
+			</fields>
+			<mdb>CPromBillCycle</mdb>
+		</table>
+		<table bean="com.ailk.openbilling.persistence.cust.entity.CoProdCharValue">
+			<fields>
+				<obj_id field="objectId" />
+				<obj_type field="objectType">
+					<acct>1,2</acct>
+					<user>0</user>
+				</obj_type>
+				<prod_id field="productId"/>
+			</fields>	
+			<mdb>CPromCharValue</mdb>	
+			<mdb>CUsagePay</mdb>
+			<mdb>CRejectList</mdb>
+			<mdb>CUserAcctPay</mdb>
+			<mdb>CUserAcctPayDtl</mdb>
+			<mdb>CUserResPay</mdb>
+			<mdb>CCustomizedList</mdb>
+			<mdb>CGroupRela</mdb>
+		</table>
+		<table bean="com.ailk.openbilling.persistence.cust.entity.CoFnCharValue">
+			<fields>
+				<obj_id field="objectId" />
+				<obj_type field="objectType">
+					<acct>1,2</acct>
+					<user>0</user>
+				</obj_type>
+				<prod_id field="productId"/>
+			</fields>		
+			<mdb>CUserRela</mdb>
+		</table>
+		<table bean="com.ailk.openbilling.persistence.cust.entity.CoBudgetCharValue">
+			<fields>
+				<obj_id field="objectId" />
+				<obj_type field="objectType">
+					<acct>1,2</acct>
+					<user>0</user>
+				</obj_type>
+				<prod_id field="productId"/>
+			</fields>		
+			<mdb>CBudgetInfo</mdb>
+			<mdb>CBudgetInfoDtl</mdb>
+		</table>
+		<table bean="com.ailk.openbilling.persistence.cust.entity.CoSplitCharValue">
+			<fields>
+				<obj_id field="objectId" />
+				<obj_type field="objectType">
+					<acct>1,2</acct>
+					<user>0</user>
+				</obj_type>
+				<prod_id field="productId"/>
+			</fields>		
+			<mdb>CAcctSplitPay</mdb>
+		</table>
+		<table bean="com.ailk.openbilling.persistence.cust.entity.CoProdPriceParam">
+			<fields>
+				<obj_id field="objectId" />
+				<obj_type field="objectType">
+					<acct>1,2</acct>
+					<user>0</user>
+				</obj_type>
+				<prod_id field="productId"/>
+			</fields>		
+			<mdb>CPromPriceParam</mdb>
+		</table>
+		<table bean="com.ailk.openbilling.persistence.cust.entity.CoProdCellInfo">
+			<fields>
+				<obj_id field="objectId" />
+				<obj_type field="objectType">
+					<acct>1,2</acct>
+					<user>0</user>
+				</obj_type>
+				<prod_id field="productId"/>
+			</fields>	
+			<mdb>CUserHome</mdb>
+		</table>
+		<table bean="com.ailk.openbilling.persistence.cust.entity.CmUserEnterprise">
+			<fields>
+				<obj_id field="resourceId" />
+				<obj_type value="user" />
+			</fields>	
+			<mdb>CUserEnterprise</mdb>	
+		</table>
+		<table bean="com.ailk.openbilling.persistence.cust.entity.CmUserMarket">
+			<fields>
+				<obj_id field="resourceId" />
+				<obj_type value="user" />
+			</fields>	
+			<mdb>CUserMarket</mdb>	
+		</table>
+		<table bean="com.ailk.openbilling.persistence.cust.entity.CmUserPbx">
+			<fields>
+				<obj_id field="resourceId" />
+				<obj_type value="user" />
+			</fields>	
+			<mdb>CUserPbx</mdb>	
+		</table>
+		<table bean="com.ailk.openbilling.persistence.cust.entity.CmUserMap">
+			<fields>
+				<obj_id field="resourceId" />
+				<obj_type value="user" />
+			</fields>	
+			<mdb>CUserMap</mdb>	
+		</table>
+		<table bean="com.ailk.openbilling.persistence.cust.entity.CmUserPortability">
+			<fields>
+				<obj_id field="resourceId" />
+				<obj_type value="user" />
+			</fields>	
+			<mdb>CUserPort</mdb>	
+		</table>
+	</config>
+</boot>

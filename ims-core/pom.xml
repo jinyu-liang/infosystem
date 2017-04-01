@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<parent>
+		<artifactId>infosystem</artifactId>
+		<groupId>com.ailk.openbilling.ims.cmcc</groupId>
+		<version>0.0.4-SNAPSHOT</version>
+	</parent>
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>ims-core</artifactId>
+	<packaging>jar</packaging>
+	<name>ims-core</name>
+	<version>${ims_version}</version>
+	<url>http://maven.apache.org</url>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.mortbay.jetty</groupId>
+				<artifactId>maven-jetty-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>2.1</version>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+						<configuration>
+							<classifier xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">all</classifier>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>build-helper-maven-plugin</artifactId>
+				<version>1.5</version>
+				<executions>
+					<execution>
+						<id>add-source</id>
+						<phase>generate-sources</phase>
+						<goals>
+							<goal>add-source</goal>
+						</goals>
+						<configuration>
+							<sources xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+								<source>framework</source>
+							</sources>
+						</configuration>
+					</execution>
+					<execution>
+						<id>add-jar</id>
+						<phase>package</phase>
+						<goals>
+							<goal>attach-artifact</goal>
+						</goals>
+						<configuration>
+							<artifacts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+								<artifact>
+									<file>target/${project.name}-${project.version}-impl.jar</file>
+									<type>jar</type>
+									<classifier>impl</classifier>
+								</artifact>
+								<artifact>
+									<file>target/${project.name}-${project.version}-api.jar</file>
+									<type>jar</type>
+									<classifier>api</classifier>
+								</artifact>
+							</artifacts>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<artifactId>maven-antrun-plugin</artifactId>
+				<version>1.5</version>
+				<executions>
+					<execution>
+						<id>compile_class</id>
+						<phase>compile</phase>
+						<goals>
+							<goal>run</goal>
+						</goals>
+						<configuration>
+							<tasks xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+								<property name="compile_classpath" refid="maven.compile.classpath" />
+								<mkdir dir="target/api/classes" />
+								<javac debug="true" destdir="target/api/classes" source="1.5"
+									target="1.5">
+									<compilerarg line="-encoding UTF-8" />
+									<src path="framework" />
+									<classpath>
+										<pathelement location="target/classes" />
+										<pathelement path="${compile_classpath}" />
+									</classpath>
+								</javac>
+								<copy failonerror="false" includeEmptyDirs="false"
+									todir="target/api/classes">
+									<fileset dir="framework">
+										<exclude name="**/*.java" />
+									</fileset>
+								</copy>
+								<mkdir dir="target/impl/classes" />
+								<javac debug="true" destdir="target/impl/classes" source="1.5"
+									target="1.5">
+									<compilerarg line="-encoding UTF-8" />
+									<src path="src/main/java" />
+									<classpath>
+										<pathelement location="target/classes" />
+										<pathelement path="${compile_classpath}" />
+									</classpath>
+								</javac>
+								<copy failonerror="false" includeEmptyDirs="false"
+									todir="target/impl/classes">
+									<fileset dir="src/main/resources">
+										<include name="**/*.*" />
+										<exclude name="**/ts.xml" />
+										<exclude name="**/jef.properties" />
+										<exclude name="**/log4j.properties" />
+										<exclude name="**/common-sdl.properties" />
+										<exclude name="**/interface_to_domain.properties" />
+										<exclude name="**/sdltester_svr.properties" />
+										<exclude name="**/oracle-*.properties" />
+									</fileset>
+								</copy>
+								<mkdir dir="target/api/classes/META-INF/config" />
+								<copy failonerror="false" includeEmptyDirs="false"
+									todir="target/api/classes/META-INF/config">
+									<fileset dir="config">
+										<include name="**/*.*" />
+										<exclude name="**/.svn" />
+									</fileset>
+								</copy>
+							</tasks>
+						</configuration>
+					</execution>
+					<execution>
+						<id>package_class</id>
+						<phase>package</phase>
+						<goals>
+							<goal>run</goal>
+						</goals>
+						<configuration>
+							<tasks xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+								<jar destfile="target/${project.name}-${project.version}-api.jar">
+									<fileset dir="target/api/classes">
+										<include name="**/*.*" />
+									</fileset>
+								</jar>
+								<jar destfile="target/${project.name}-${project.version}-impl.jar">
+									<fileset dir="target/impl/classes">
+										<include name="**/*.*" />
+									</fileset>
+								</jar>
+							</tasks>
+						</configuration>
+					</execution>
+				</executions>
+				<dependencies>
+					<dependency>
+						<groupId>com.sun</groupId>
+						<artifactId>tools</artifactId>
+						<version>1.5.0</version>
+						<scope>system</scope>
+						<systemPath>${java.home}/../lib/tools.jar</systemPath>
+					</dependency>
+				</dependencies>
+			</plugin>
+		</plugins>
+	</build>
+	<profiles>
+		<profile>
+			<id>devel</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<properties>
+				<package.environment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">devel
+				</package.environment>
+			</properties>
+		</profile>
+		<profile>
+			<id>notest</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>ailk.easyframe</groupId>
+						<artifactId>easybuilder_maven_plugin</artifactId>
+						<version>${easyframe_version}</version>
+						<executions>
+							<execution>
+								<id>all_generate</id>
+								<phase>generate-sources</phase>
+								<goals>
+									<goal>generate</goal>
+								</goals>
+							</execution>
+							<execution>
+								<id>all_enhance</id>
+								<phase>process-classes</phase>
+								<goals>
+									<goal>enhance</goal>
+								</goals>
+							</execution>
+							<execution>
+								<id>api</id>
+								<phase>process-classes</phase>
+								<goals>
+									<goal>enhance</goal>
+								</goals>
+								<configuration>
+									<path xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">${basedir}/target/api/classes</path>
+								</configuration>
+							</execution>
+							<execution>
+								<id>impl</id>
+								<phase>process-classes</phase>
+								<goals>
+									<goal>enhance</goal>
+								</goals>
+								<configuration>
+									<path xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">${basedir}/target/impl/classes</path>
+								</configuration>
+							</execution>
+						</executions>
+					</plugin>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-surefire-plugin</artifactId>
+						<configuration>
+							<forkMode xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">pertest</forkMode>
+							<argLine xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">-Xms512m -Xmx512m -XX:PermSize=64M
+								-XX:MaxPermSize=128M</argLine>
+							<skip xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">true</skip>
+							<testFailureIgnore xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">true
+							</testFailureIgnore>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+			<properties>
+				<package.environment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">hudson
+				</package.environment>
+			</properties>
+		</profile>
+		<profile>
+			<id>hudson</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>ailk.easyframe</groupId>
+						<artifactId>easybuilder_maven_plugin</artifactId>
+						<version>${easyframe_version}</version>
+						<executions>
+							<execution>
+								<id>all_generate</id>
+								<phase>generate-sources</phase>
+								<goals>
+									<goal>generate</goal>
+								</goals>
+							</execution>
+							<execution>
+								<id>all_enhance</id>
+								<phase>process-classes</phase>
+								<goals>
+									<goal>enhance</goal>
+								</goals>
+							</execution>
+							<execution>
+								<id>api</id>
+								<phase>process-classes</phase>
+								<goals>
+									<goal>enhance</goal>
+								</goals>
+								<configuration>
+									<path xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">${basedir}/target/api/classes</path>
+								</configuration>
+							</execution>
+							<execution>
+								<id>impl</id>
+								<phase>process-classes</phase>
+								<goals>
+									<goal>enhance</goal>
+								</goals>
+								<configuration>
+									<path xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">${basedir}/target/impl/classes</path>
+								</configuration>
+							</execution>
+						</executions>
+					</plugin>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-surefire-plugin</artifactId>
+						<configuration>
+							<forkMode xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">pertest</forkMode>
+							<argLine xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">-Xms512m -Xmx512m -XX:PermSize=64M
+								-XX:MaxPermSize=128M</argLine>
+							<skip xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">true</skip>
+							<testFailureIgnore xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">true
+							</testFailureIgnore>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+			<properties>
+				<package.environment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">hudson
+				</package.environment>
+			</properties>
+		</profile>
+	</profiles>
+	<dependencies>
+		<dependency>
+			<groupId>org.jef</groupId>
+			<artifactId>jef-jetty</artifactId>
+			<version>7.31</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.jef</groupId>
+			<artifactId>jef-jasper</artifactId>
+			<version>1.0.0</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.jef</groupId>
+			<artifactId>xml-apis</artifactId>
+			<version>2.0.2</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>xerces</groupId>
+			<artifactId>xerces</artifactId>
+			<version>3.0.0</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<version>2.5</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet.jsp</groupId>
+			<artifactId>jsp-api</artifactId>
+			<version>2.1</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.geronimo.specs</groupId>
+			<artifactId>geronimo-stax-api_1.0_spec</artifactId>
+			<version>1.0.1</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.ailk.openbilling.ims.cmcc</groupId>
+			<artifactId>ims-sdl</artifactId>
+			<version>${ims_version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.thoughtworks.xstream</groupId>
+			<artifactId>xstream</artifactId>
+			<version>1.3</version>
+		</dependency>
+		<!--  
+		<dependency>
+			<groupId>com.ailk.openbilling.ams</groupId>
+			<artifactId>account-core-business</artifactId>
+			<version>${ams_version}</version>
+			<classifier>api</classifier>
+			<exclusions>
+				<exclusion>
+					<artifactId>ims-core</artifactId>
+					<groupId>com.ailk.openbilling.ims.cmcc</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>jaxb-impl</artifactId>
+					<groupId>com.sun.xml.bind</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>common-web</artifactId>
+					<groupId>ailk.easyframe</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>cpf-ts-interface</artifactId>
+					<groupId>ailk.easyframe</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>common-sdl</artifactId>
+					<groupId>ailk.easyframe</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>com.ailk.openbilling.ams</groupId>
+			<artifactId>account-core-business</artifactId>
+			<version>${ams_version}</version>
+			<classifier>impl</classifier>
+			<exclusions>
+				<exclusion>
+					<artifactId>ims-core</artifactId>
+					<groupId>com.ailk.openbilling.ims.cmcc</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>jaxb-impl</artifactId>
+					<groupId>com.sun.xml.bind</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>common-web</artifactId>
+					<groupId>ailk.easyframe</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>common-sdl</artifactId>
+					<groupId>ailk.easyframe</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>cpf-ts-interface</artifactId>
+					<groupId>ailk.easyframe</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		-->
+		<dependency>
+			<groupId>com.oracle</groupId>
+			<artifactId>ojdbc5</artifactId>
+			<version>1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient</artifactId>
+			<version>4.1.3</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpcore</artifactId>
+			<version>4.1.4</version>
+		</dependency>
+		<dependency>
+			<groupId>javax</groupId>
+			<artifactId>ejb-api</artifactId>
+			<version>3.0.1</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>javax</groupId>
+			<artifactId>ejb-interceptor</artifactId>
+			<version>1.0</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>ailk.easyframe</groupId>
+			<artifactId>common-web</artifactId>
+			<version>${easyframe_version}</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>cxf-rt-databinding-jaxb</artifactId>
+					<groupId>org.apache.cxf</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>cxf-rt-frontend-simple</artifactId>
+					<groupId>org.apache.cxf</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>ailk.easyframe</groupId>
+			<artifactId>cpf-ts-interface</artifactId>
+			<version>${easyframe_version}</version>
+		</dependency>
+	</dependencies>
+	<properties>
+		<project.build.sourceEncoding
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">UTF-8</project.build.sourceEncoding>
+	</properties>
+	 <repositories>
+		<repository>
+			<id>ailk-snapshots</id>
+			<url>http://10.10.10.149:8081/nexus/content/repositories/snapshots</url>
+			<snapshots>
+				<enabled>true</enabled> <!-- 支持快照版jar包 -->
+				<updatePolicy>never</updatePolicy> <!-- 设置为永不更新-->
+			</snapshots>
+		</repository>
+	</repositories> 
+</project>

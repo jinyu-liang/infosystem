@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="CancelPaymentInfo" transient="true">
+  <fields>
+    <field name="orign_so_nbr" type="String" isPk="false" primitive="No" null-able="true"/>
+    <field name="cancel_date" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="remark" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="notification" type="Short" isPk="false" primitive="No" null-able="true"/>
+  </fields>
+</entity>

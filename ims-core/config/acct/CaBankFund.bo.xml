@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="CaBankFund" remark="" schema="AD" table="CA_BANK_FUND" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="ASSET_ID" columnDef="BigInt" isPk="true(not generated)" name="assetId" null-able="false" primitive="No" remark="Asset ID" type="Long"/>
+        <field column="FUND_TYPE" columnDef="Int" name="fundType" primitive="No" remark="Bank fund type:&#10;&#10;0- Common account&#10;1- Debit card&#10;" type="Integer"/>
+        <field column="FUND_ITEM" columnDef="Int" name="fundItem" null-able="false" primitive="No" remark="Bank fund item" type="Integer"/>
+        <field column="VALID_DATE" columnDef="TimeStamp" isPk="true(not generated)" name="validDate" null-able="false" primitive="No" remark="The format of valid date for account book is as follows:&#10;YYYY-MM-DD HH:MM:SS" type="Date"/>
+        <field column="EXPIRE_DATE" columnDef="TimeStamp" name="expireDate" primitive="No" remark="Specific expired date of account book" type="Date"/>
+        <field column="STS" columnDef="Int" name="sts" null-able="false" primitive="No" remark="State&#10;0- Inactive&#10;1- Active" type="Integer"/>
+        <field column="ACCT_ID" columnDef="BigInt" name="acctId" primitive="No" remark="Account ID&#10;" type="Long"/>
+        <field column="CREATE_DATE" columnDef="TimeStamp" name="createDate" primitive="No" remark="Created date" type="Date"/>
+        <field column="BANK_ID" columnDef="Int" name="bankId" primitive="No" remark="This field indicates specific bank on bank payment mode.&#10;Each bank only has a unique identifier for bank ID in bank information table.&#10;Carrier bank account will be saved into bank information table on collection mode.&#10;" type="Integer"/>
+        <field column="BANK_ACCT_NO" columnDef="Varchar" columnSize="64" name="bankAcctNo" primitive="No" remark="Bank accounr or credit card, etc, supported by digit and letter combination&#10;" type="String"/>
+        <field column="BANK_ACCT_NAME" columnDef="Varchar" columnSize="256" name="bankAcctName" primitive="No" remark="Specific account name corresponding with bank account&#10;" type="String"/>
+        <field column="BANK_ACCT_LIMIT" columnDef="BigInt" name="bankAcctLimit" null-able="false" primitive="No" remark="Bank account limit&#10;" type="Long"/>
+        <field column="MEASURE_ID" columnDef="Int" name="measureId" primitive="No" remark="Measure ID: a unique identifier&#10;For example:&#10;RMB unit hao--10401&#10;RMB unit li--10402&#10;RMB unit fen--10403&#10;RMB unit yuan--10404&#10;&#10;Cent--10201&#10;Dollar--10202" type="Integer"/>
+        <field column="SO_NBR" columnDef="BigInt" isPk="true(not generated)" name="soNbr" null-able="false" primitive="No" remark="Associated work order when account book is created.&#10;" type="Long"/>
+        <field column="SO_DATE" columnDef="TimeStamp" name="soDate" primitive="No" remark="" type="Date"/>
+    </fields>
+</entity>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="do_queryProdOfferingInfoResponse">
+  <root ref="imsintf.BaseResponse"/>
+  <fields>
+    <field name="totalCount" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <complex-field name="prodOfferInfoList" type="entity" ref="imsinner.ProdOfferInfo" collection="list" primitive="false"/>
+  </fields>
+</entity>

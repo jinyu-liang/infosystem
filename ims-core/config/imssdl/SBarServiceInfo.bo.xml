@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SBarServiceInfo" remark="" sdl="true" sdl-module="MImsSyncDef" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+    <fields>
+        <field name="userId" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="phoneId" primitive="Yes" remark="" sdl="true" type="String"/>
+        <complex-field collection="list" name="budgetcontrolItem" primitive="false" ref="imssdl.SBudgetControl" remark="" sdl="true" type="entity"/>
+    </fields>
+</entity>

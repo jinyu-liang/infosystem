@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="IIsmpAlarm" remark="" schema="ZK" table="I_ISMP_ALARM" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="ACCT_ID" columnDef="Int" isPk="false" name="acctId" null-able="true" primitive="Auto" type="Long"/>
+        <field column="SERV_ID" columnDef="Int" isPk="false" name="servId" null-able="true" primitive="Auto" type="Long"/>
+        <field column="USER_NUMBER" columnDef="Varchar" columnSize="15" isPk="false" name="userNumber" null-able="true" primitive="Auto" type="String"/>
+        <field column="SP_CODE" columnDef="Varchar" columnSize="32" isPk="false" name="spCode" null-able="true" primitive="Auto" type="String"/>
+        <field column="OPERATOR_CODE" columnDef="Varchar" columnSize="32" isPk="false" name="operatorCode" null-able="true" primitive="Auto" type="String"/>
+        <field column="BILL_FLAG" columnDef="Int" isPk="false" name="billFlag" null-able="true" primitive="Auto" type="Integer"/>
+        <field column="THIRD_MSISDN" columnDef="Varchar" columnSize="15" isPk="false" name="thirdMsisdn" null-able="true" primitive="Auto" type="String"/>
+        <field column="BILL_PROP" columnDef="Int" isPk="false" name="billProp" null-able="true" primitive="Auto" type="Integer"/>
+        <field column="START_TIME" columnDef="Date" isPk="false" name="startTime" null-able="true" primitive="Auto" type="Date"/>
+        <field column="SEQUENCE_NO" columnDef="Varchar" columnSize="32" isPk="false" name="sequenceNo" null-able="true" primitive="Auto" type="String"/>
+        <field column="ALARM_TYPE" columnDef="Int" isPk="false" name="alarmType" null-able="true" primitive="Auto" type="Integer"/>
+        <field column="ALARM_PARA" columnDef="Varchar" columnSize="64" isPk="false" name="alarmPara" null-able="true" primitive="Auto" type="String"/>
+        <field column="ALARM_SOURCE" columnDef="Int" isPk="false" name="alarmSource" null-able="true" primitive="Auto" type="Integer"/>
+        <field column="REGION_CODE" columnDef="Int" isPk="false" name="regionCode" null-able="true" primitive="Auto" type="Integer"/>
+        <field column="STATE" columnDef="Int" isPk="false" name="state" null-able="true" primitive="Auto" type="Integer"/>
+        <field column="TOTAL_FEE" columnDef="Int" isPk="false" name="totalFee" null-able="true" primitive="Auto" type="Long"/>
+        <field column="PRIORITY" columnDef="Int" isPk="false" name="priority" null-able="true" primitive="Auto" type="Integer"/>
+        <field column="CREATE_TIME" columnDef="Date" isPk="false" name="createTime" null-able="true" primitive="Auto" type="Date"/>
+        <field column="UPDATE_DATE" columnDef="Date" isPk="false" name="updateDate" null-able="true" primitive="Auto" type="Date"/>
+        <field column="NOTES" columnDef="Varchar" columnSize="256" isPk="false" name="notes" null-able="true" primitive="Auto" type="String"/>
+        <field column="DONE_CODE" columnDef="Int" isPk="false" name="doneCode" null-able="true" primitive="Auto" type="Long"/>
+    </fields>
+</entity>

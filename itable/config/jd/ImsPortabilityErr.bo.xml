@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="ImsPortabilityErr" remark="" schema="JD" table="IMS_PORTABILITY_ERR" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+	<fields>
+		<field column="USER_ID" columnDef="Int" name="userId" null-able="false" primitive="No" remark="" type="Long"/>
+		<field column="IN_REGION" columnDef="Int" name="inRegion" null-able="false" primitive="No" remark="" type="Integer"/>
+		<field column="OUT_REGION" columnDef="Int" name="outRegion" null-able="false" primitive="No" remark="" type="Integer"/>
+		<field column="VALID_DATE" columnDef="Date" name="validDate" null-able="false" primitive="No" remark="" type="Date"/>
+		<field column="REGION_CODE" columnDef="Int" name="regionCode" null-able="false" primitive="No" remark="" type="Integer"/>
+		<field column="ERROR_MSG" columnDef="Varchar" columnSize="256" name="errorMsg" null-able="false" primitive="No" remark="" type="String"/>
+		<field column="DEAL_DATE" columnDef="Date" name="dealDate" null-able="false" primitive="No" remark="" type="Date"/>
+	</fields>
+</entity>

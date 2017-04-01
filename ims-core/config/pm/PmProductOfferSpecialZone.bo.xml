@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="PmProductOfferSpecialZone" schema="PD" table="PM_PRODUCT_OFFER_SPECIAL_ZONE">
+  <fields>
+    <field name="productOfferingId" type="Integer" column="PRODUCT_OFFERING_ID" isPk="true" primitive="Auto" remark="Product offering Corresponding global promotion in special rate zone" null-able="false" columnDef="NUMBER" columnSize="9"/>
+    <field name="cellCode" type="Integer" column="CELL_CODE" isPk="true" primitive="Auto" remark="Zone code Define special rate zone in system level by visited location in table RS_SYS_CELL_INFO" null-able="false" columnDef="NUMBER" columnSize="9"/>
+    <field name="validDate" type="Date" column="VALID_DATE" isPk="false" remark="Effective date" null-able="false" columnDef="DATE" columnSize="7"/>
+    <field name="expireDate" type="Date" column="EXPIRE_DATE" isPk="false" remark="Expired date" null-able="true" columnDef="DATE" columnSize="7"/>
+    <field name="description" type="String" column="DESCRIPTION" isPk="false" remark="Description" null-able="true" columnDef="VARCHAR2" columnSize="1024"/>
+    <field name="oppCellCode" type="Integer" column="OPP_CELL_CODE" isPk="true" null-able="false" columnDef="NUMBER" columnSize="9"/>
+  </fields>
+</entity>

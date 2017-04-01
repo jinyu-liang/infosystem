@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="PmAccumulateCondDtl" schema="PD" table="PM_ACCUMULATE_COND_DTL">
+  <fields>
+    <field name="accumulateCondId" type="Integer" column="ACCUMULATE_COND_ID" isPk="true(not generated)" primitive="No" remark="Identifier of the rule  ,that the rules was referenced by  accumulating." null-able="false" columnDef="Int"/>
+    <field name="accumulateItem" type="Integer" column="ACCUMULATE_ITEM" isPk="true(not generated)" primitive="No" remark="Accumulating references charge item ,it can reference many items.
+" null-able="false" columnDef="Int"/>
+    <field name="threshold" type="Long" column="THRESHOLD" primitive="No" remark="Threshold of accumulating references charge-item" null-able="false" columnDef="BigInt"/>
+    <field name="alarmThreshold" type="Long" column="ALARM_THRESHOLD" primitive="No" remark="Alarm threshold of accumulating references,
+when the accumulated referenced item has arrive at threshold, it will trigger PM_ACCUMULATE_PRICE.alarm
+" null-able="false" columnDef="BigInt"/>
+  </fields>
+</entity>

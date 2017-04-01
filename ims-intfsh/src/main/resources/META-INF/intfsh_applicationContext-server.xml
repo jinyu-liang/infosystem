@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:aop="http://www.springframework.org/schema/aop" xmlns:context="http://www.springframework.org/schema/context" xmlns:ehcache="http://ehcache-spring-annotations.googlecode.com/svn/schema/ehcache-spring" xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:tx="http://www.springframework.org/schema/tx" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans  http://www.springframework.org/schema/beans/spring-beans-3.0.xsd  http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd  http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd  http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd  http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd  http://ehcache-spring-annotations.googlecode.com/svn/schema/ehcache-spring     http://ehcache-spring-annotations.googlecode.com/svn/schema/ehcache-spring/ehcache-spring-1.1.xsd">
+
+	<!-- 框架的服务层定义 -->
+	<import resource="classpath:generated/intfsh_applicationContext-frame-server.xml"/>
+	
+	<!-- 数据源配置 -->
+	<import resource="classpath:intfsh_datasource.xml"/>
+
+	<!-- 引入EasyFrame Service/Dao(框架维护) -->
+	<import resource="classpath:generated/intfsh_applicationContext-bean.xml"/>
+
+	<!-- 引入EasyFrame JMX监控配置（可选） -->
+	<!-- <import resource="classpath:generated/applicationContext-mb.xml"/>-->
+	
+	<import resource="classpath:META-INF/intfsh_applicationContext-core.xml"/>
+	
+	
+	<!-- 外系统的导入都放在这个文件中-->
+	<import resource="classpath:META-INF/intfsh_applicationContext-import.xml"/>
+	
+
+	<!--  ========================== 管控日志配置 =========================== -->
+	<!-- 说明：管控日志拦截的配置包括两个切面，即此处的配置，此外还包括在web.xml中的Servlet和Filter等配置。
+	管控日志对于各种应用来说，不是必须的功能，如果你需要此功能，可以去除下面的三个bean和web.xml中的相关信息。
+	管控日志配置的帮助说明位于：http://10.10.10.158:8088/aiwiki/Wiki.jsp?page=EF_CTRL_LOG_CONFIG
+	 -->	
+	<bean class="com.ailk.easyframe.web.common.ailog.AiLogMaster"/>
+	<bean class="com.ailk.easyframe.web.common.ailog.AiLogServerAspectj" id="aiLogAspectj">
+		<property name="aiLogSupport" ref="aiLogSupport"/>
+	</bean>
+	<bean class="com.ailk.easyframe.web.common.ailog.AiLogDefaultSupportImpl" id="aiLogSupport"/>
+	<bean class="com.ailk.easyframe.web.common.ailog.AiDumpAspectj" id="aiDumpAspectj"/>
+</beans>

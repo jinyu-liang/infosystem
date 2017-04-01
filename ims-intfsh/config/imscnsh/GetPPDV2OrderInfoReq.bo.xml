@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="GetPPDV2OrderInfoReq">
+  <fields>
+    <field name="order_id" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="order_date" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="pay_plat_id" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="busi_code" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <complex-field name="eCPayChannelInfo" type="entity" ref="imscnsh.ECPayChannelInfo" collection="none" primitive="false"/>
+  </fields>
+</entity>

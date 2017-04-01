@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="ImsJsonSoap" remark="" schema="jd" table="IMS_JSON_SOAP" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+<fields>
+<field column="JSON_ID" columnDef="GUID" isPk="true(not generated)" name="jsonId" primitive="No" remark="uuid序列值" type="String"/>
+<field column="BUSI_CODE" columnDef="Int" name="busiCode" primitive="No" remark="业务busi_code" type="Integer"/>
+<field column="INTERFACE_NAME" columnDef="Varchar" columnSize="32" name="interfaceName" primitive="No" remark="接口名称" type="String"/>
+<field column="SO_MONTH" columnDef="Int" name="soMonth" primitive="No" remark="报文年月" type="Integer"/>
+<field column="CLIENT_ID" columnDef="Varchar" columnSize="32" name="clientId" primitive="No" remark="clientId" type="String"/>
+<field column="TIME_COST" columnDef="Int" name="timeCost" primitive="No" remark="耗时毫秒" type="Long"/>
+<field column="SERVER_NAME" columnDef="Varchar" columnSize="16" name="serverName" primitive="No" remark="服务器主机IP" type="String"/>
+<field column="SERVER_PORT" columnDef="Int" name="serverPort" primitive="No" remark="服务器主机端口" type="Integer"/>
+<field column="SO_DATE" columnDef="Date" name="soDate" primitive="No" remark="处理时间" type="Date"/>
+<field column="INPUT_SOAP" columnDef="Varchar" columnSize="2048" name="inputSoap" primitive="No" remark="入参报文" type="String"/>
+<field column="EXT1" columnDef="Varchar" columnSize="64" name="ext1" primitive="No" remark="扩展1" type="String"/>
+<field column="EXT2" columnDef="Varchar" columnSize="1024" name="ext2" primitive="No" remark="扩展2" type="String"/>
+<field column="FLAG" columnDef="Int" name="flag" primitive="No" remark="记录成功与失败标志" type="Integer"/>
+<field column="EXT3" columnDef="Varchar" columnSize="64" name="ext3" primitive="No" remark="扩展参数3" type="String"/>
+<field column="EXT4" columnDef="Varchar" columnSize="64" name="ext4" primitive="No" remark="扩展参数4" type="String"/>
+</fields>
+</entity>

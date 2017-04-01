@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:ehcache="http://ehcache-spring-annotations.googlecode.com/svn/schema/ehcache-spring"
+	xmlns:cache="http://www.springframework.org/schema/cache"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
+	http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+	http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd
+	http://ehcache-spring-annotations.googlecode.com/svn/schema/ehcache-spring   
+	http://ehcache-spring-annotations.googlecode.com/svn/schema/ehcache-spring/ehcache-spring-1.1.xsd
+	http://www.springframework.org/schema/cache 
+	http://www.springframework.org/schema/cache/spring-cache.xsd">
+	
+<!--  ========================== 缓存配置 =========================== -->
+<cache:advice id="ims_CacheAdvice" cache-manager="springCacheManagerAdapter" >
+     <!--添加缓存拦截设置，可添加多个，每个里面可添加多个要缓存的方法或者多个触发清除缓存的方法（但不能把<cache:cacheable >和<cache:cache-evict >同时放在里面） -->
+    <cache:definitions cache="sysGroupCache">
+        <!-- 添加要缓存的方法，可添加多个。 key="#p0" 表示使用方法的第一个入参作为缓存key，key值同样可以使用SpEL。key不定义则表示所有入参做为cachekey计算-->
+       <cache:cacheable method="load"/> <!-- 获取数据中的需要缓存的基础数据 -->
+       <cache:cacheable method="queryOffer*"/>
+       <cache:cacheable method="queryAcct*"/>
+    </cache:definitions>
+ </cache:advice>
+ 
+ <!--缓存切面配置-->
+ <aop:config>
+    <!--切入点配置，使用Aspectj切入点语法，定义要使用缓存拦截的bean，下面定义是对所有bean名称以ExampleDao结尾并且以exampleCache名开始的带有一个string参数的方法都应用缓存拦截（注意实际是否对bean中的方法执行进行缓存还取决于能否匹配上面advice中method属性定义的名称） -->
+    <aop:pointcut id="ims_CachePointcut" expression="bean(*ims_db_cache_bean)"/>    
+    <aop:advisor advice-ref="ims_CacheAdvice" pointcut-ref="ims_CachePointcut"/>
+ </aop:config>
+
+</beans>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="do_queryUserValidityHisInfoResponse">
+  <root ref="imsintf.BaseResponse"/>
+  <fields>
+    <field name="failure_time" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="freeze_time" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="ret_code" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <complex-field name="res_validity_info" type="List&lt;entity&gt;" ref="imscnsh.ResValidityInfo" collection="none" primitive="false"/>
+  </fields>
+</entity>

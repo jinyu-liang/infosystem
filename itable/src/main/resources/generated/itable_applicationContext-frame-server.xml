@@ -1,0 +1,401 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:context="http://www.springframework.org/schema/context"	
+	xmlns:cache="http://www.springframework.org/schema/cache"
+	xmlns:jee="http://www.springframework.org/schema/jee"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
+	http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+	http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd	
+	http://www.springframework.org/schema/cache 
+	http://www.springframework.org/schema/cache/spring-cache.xsd
+	http://www.springframework.org/schema/jee
+	http://www.springframework.org/schema/jee/spring-jee-3.0.xsd
+	http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd">
+
+	<!-- ========================== 切面配置 (事务+综合)========================-->
+	<!-- 这里虽然proxy-target-class缺省是设为false，但实际上如果下面配置aop:aspectj-autoproxy采用了CGLIB生成代理
+	导致对事务的advisor只是被加入该CGLIB生成advisor里面 
+			此外如果同时启用了BeanNameAutoProxyCreator并且加了事务代理拦截器，则对符合BeanNameAutoProxyCreator定义的bean其target为CGLIB生成的代理
+			事务会被拦截两次，BeanNameAutoProxyCreator创建的jdk动态代理里拦截一次，其target里的CGLIB代理也会拦截事务一次。因此严格禁止采用旧的Spring事务拦截器的方式来配置代理
+		-->
+	<tx:annotation-driven/>
+	<!-- @Aspectj方式，类代理模式使用jdk动态代理，原先的配置使用‘proxy-target-class="true"’参数，目的为为了保证action类的代理必须使用CGLIB，
+	现在采用annotation的方式直接加到actionImpl类上，因此这里就不再需要指定了。
+	 -->
+	<aop:aspectj-autoproxy/>
+	<!--  ========================== 缓存配置 =========================== -->	
+	<bean id="ehCacheManager" class="org.springframework.cache.ehcache.EhCacheManagerFactoryBean" destroy-method="destroy">  
+		<property name="configLocation" value="classpath:ehcache-module.xml" />  
+	</bean>		
+	<!-- 框架提供的默认cachemanager 使用ehcache-->
+	<bean id="cacheManager" class="com.ailk.easyframe.cache.ehcache.EhCacheCacheManager"> 		
+		<property name="cacheManager" ref="ehCacheManager" />
+		<!--
+		<property name="registerMCacheManager" value="false"/>
+		<property name="registerMCaches" value="true"/>
+		<property name="registerMCacheConfigurations" value="false"/>
+		<property name="registerMCacheStatistics" value="true"/>
+		-->
+		<!-- 关闭所有缓存功能包括调用api实现的缓存
+		<property name="cacheOff" value="true"/>
+		 -->
+	</bean>
+	
+	<bean id="springCacheManagerAdapter" class="com.ailk.easyframe.cache.adapter.SpringCacheManagerAdapter">  
+		<property name="cacheManager" ref="cacheManager" />  
+	</bean>	
+	
+	<bean id="defaultHashCodeCacheKeyGenerator" class="com.ailk.easyframe.cache.key.HashCodeCacheKeyGenerator"/>  
+	
+	<cache:annotation-driven cache-manager="springCacheManagerAdapter" key-generator="defaultHashCodeCacheKeyGenerator"/>
+	
+	<!-- 自行实现的方法缓存配置,框架默认提供三种常见的缓存策略 -->
+	<!-- A. 线程级，1分钟 -->
+	<bean id="thread_60s" class="com.ailk.easyframe.web.common.cache.method.CacheProlicy">
+		<property name="level" value="THREAD"></property>
+		<property name="liveTime" value="60000"></property>
+	</bean>
+	<!-- B. 线程级，10秒 -->
+	<bean id="thread_10000ms" class="com.ailk.easyframe.web.common.cache.method.CacheProlicy">
+		<property name="level" value="THREAD"></property>
+		<property name="liveTime" value="10000"></property>
+	</bean>
+	<!-- B. 线程级，5秒 -->
+	<bean id="thread_5000ms" class="com.ailk.easyframe.web.common.cache.method.CacheProlicy">
+		<property name="level" value="THREAD"></property>
+		<property name="liveTime" value="5000"></property>
+	</bean>
+	<!-- 配置框架的缓存策略 -->
+	<bean id="frame_methodCacheConfig" class="com.ailk.easyframe.web.common.cache.method.MethodCacheConfig">
+		<property name="prolicys">
+			<map>
+				<!-- 这里简单配置  key是函数名字,值是缓存级别 : 生存时间 -->
+				<entry key="*CrudSupport.find(*" value-ref="thread_10000ms"/>
+				<entry key="*Support.findAndPage(*" value-ref="thread_10000ms"/>
+			</map>
+		</property>
+	</bean>
+	<!-- 缓存切面，注意config配置可以是由业务用户的配置提供的 --> 
+	<bean id="methodCacheAspectj" class="com.ailk.easyframe.web.common.cache.method.MethodCacheAspectj" />
+	
+	<!-- 枚举数据ResourceService的修饰器 -->
+	<bean id="resourceService" class="com.ailk.easyframe.web.service.resource.ResourceServiceImpl" autowire="byName">
+		<property name="intercepors">
+			<map>
+				<entry key="CodeNumSortDesc">
+					<bean class="com.ailk.easyframe.web.action.resource.NameCodeSort">
+						<constructor-arg index="0" value="value"/>
+						<constructor-arg index="1" value="DESC"/>
+						<constructor-arg index="2" value="true"/>
+						<constructor-arg index="3" value=""/>
+					</bean>
+				</entry>
+				<entry key="CodeNumSortAsc">
+					<bean class="com.ailk.easyframe.web.action.resource.NameCodeSort">
+						<constructor-arg index="0" value="value"/>
+						<constructor-arg index="1" value="ASC"/>
+						<constructor-arg index="2" value="true"/>
+						<constructor-arg index="3" value=""/>
+					</bean>
+				</entry>
+				<entry key="NameSortAsc">
+					<bean class="com.ailk.easyframe.web.action.resource.NameCodeSort">
+						<constructor-arg index="0" value="text"/>
+						<constructor-arg index="1" value="ASC"/>
+						<constructor-arg index="2" value="false"/>
+						<constructor-arg index="3" value=""/>
+					</bean>
+				</entry>
+				<entry key="NameSortDesc">
+					<bean class="com.ailk.easyframe.web.action.resource.NameCodeSort">
+						<constructor-arg index="0" value="text"/>
+						<constructor-arg index="1" value="DESC"/>
+						<constructor-arg index="2" value="false"/>
+						<constructor-arg index="3" value=""/>
+					</bean>
+				</entry>
+				<entry key="AddAll">
+					<bean class="com.ailk.easyframe.web.action.resource.AddBeforeAll">
+						<constructor-arg index="0" value="easyframe.enum.all" />
+						<constructor-arg index="1" value="-1" />
+					</bean>
+				</entry>
+				<entry key="NameWithCode">
+					<bean class="com.ailk.easyframe.web.action.resource.NameWidthCode" />
+				</entry>
+				<entry key="NameWithCodeNoSort">
+					<bean class="com.ailk.easyframe.web.action.resource.NameWidthCode">
+						<property name="sort" value="false"/>
+					</bean>
+				</entry>
+				<entry key="Group">
+					<bean class="com.ailk.easyframe.web.action.resource.GroupDataSourceInterceptor">
+						<property name="groupDataSource" ref="groupDataSource"></property>
+					</bean>
+				</entry>
+			</map>
+		</property>
+	</bean>
+	<bean id="groupDataSource" class="com.ailk.easyframe.web.action.resource.group.DefaultGroupDataSource">
+		<property name="groupIntervalSeparator" value="-"></property>
+		<property name="groupIntervalMap">
+			<map>  
+				<entry key="a-f" value="a-f"/>  
+				<entry key="g-j" value="g-j"/>  
+				<entry key="k-n" value="k-n"/>  
+				<entry key="m-w" value="m-w"/>  
+				<entry key="x-z" value="x-z"/>  
+			</map>  
+		</property>
+		<property name="othersMap">
+			<map>  
+				<entry key="others" value="others"/>  
+			</map>  
+		</property>
+	</bean>
+	
+	<!--  ========================== 数据访问层配置 =========================== -->	
+	<!--多数据源路由配置，要求在业务的datasource.xml文件中配置backupDataSources和extDataSources，
+	程序加载的所有数据源等于云平台数据源或者backupDataSources加上extDataSources
+	举例配置如下：	
+	<bean id="dataSource1" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="org.apache.derby.jdbc.EmbeddedDriver" />
+		<property name="url" value="jdbc:derby:@db1-1;create=true" /> 
+		<property name="username" value="ailk" />
+		<property name="password" value="ailk" />
+	</bean>
+	<bean id="dataSource2" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="org.apache.derby.jdbc.EmbeddedDriver" />
+		<property name="url" value="jdbc:derby:@db1-2;create=true" /> 
+		<property name="username" value="ailk2" />
+		<property name="password" value="ailk2" />
+	</bean>
+	<util:map id="backupDataSources">		
+		<entry key="dbkey1" value-ref="dataSource1" />
+		<entry key="dbkey2" value-ref="dataSource2" />
+	</util:map>	
+	<util:map id="extDataSources">		
+	</util:map>	
+	-->
+	<util:map id="backupDataSources">
+	</util:map>	
+	<!--优先从云平台获取数据源，获取不到时使用backupDataSources，backupDataSources由业务定义，适用于本地开发配置-->
+	<bean id="cpfDataSourceLookup" class="com.ailk.easyframe.support.CpfDataSourceLookup">
+		<constructor-arg>
+			<ref bean="backupDataSources" />
+		</constructor-arg>
+	</bean>
+	<!--extDataSources由业务定义除了云平台的数据源外还需要额外增加的数据源，若不需要额外数据源也得定义一个空的id为extDataSources的bean-->
+	<bean id="routingDataSource" class="com.ailk.easyframe.db.support.RoutingDataSource"  destroy-method="shutdown">		
+		<property name="dataSourceLookup" ref="cpfDataSourceLookup" />
+		<property name="extDataSources" ref="extDataSources" />
+	</bean>
+	<!-- DAL配置,使用routingDataSource以便支持多个数据源的配置 -->
+	<bean id="entityManagerFactory" class="jef.database.DbClientFactory" destroy-method="close">
+		<constructor-arg index="0">
+			<ref bean="routingDataSource" />
+		</constructor-arg>
+	</bean>
+	<!--默认一个空的扩展datasources，业务需要可以覆盖该bean的定义来扩展数据源，覆盖方式需要保证的是业务定义的bean在这个默认的bean之后被定义-->
+	<util:map id="extDataSources">
+	</util:map>	
+	
+	<!-- 默认的baseDao已经不能起到任何作用了 -->
+	<bean id="baseDAO" abstract="true" />
+	<bean id="resourceDao" class="com.ailk.easyframe.web.service.resource.ResourceDao" parent="baseDAO">
+		<aop:scoped-proxy proxy-target-class="true" /> 
+	</bean>
+	<bean id="commonDao" class="com.ailk.easyframe.web.common.dal.CommonDaoImpl" parent="baseDAO"/>
+	<bean id="racDbKeyMap" class="com.ailk.easyframe.db.RacDbKeyMap"/>
+	
+	<!-- 事务管理配置，目前只支持单个数据源的配置-->
+	<bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager" lazy-init="true">
+		<property name="entityManagerFactory" ref="entityManagerFactory" />
+	</bean>
+	<!-- 唯一标志（序列号）管理器:提供序列号 -->
+	<bean id="uniqueIdManager" class="com.ailk.easyframe.web.common.dal.DefaultUniqueIdManager">
+		<property name="dbClientFactory" ref="entityManagerFactory" />
+	</bean>
+	<!-- JDBC模板:提供开发者有特殊需要的数据库操作 
+	<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource" ref="routingDataSource" />
+	</bean>
+	-->
+	<!-- 编程式事务模板:用于开发者在程序中控制事务(拟采用Annotation来控制事务，将废弃) -->
+	<bean id="txTemplate" class="org.springframework.transaction.support.TransactionTemplate" lazy-init="default">
+		<property name="propagationBehavior">
+			<bean id="org.springframework.transaction.TransactionDefinition.PROPAGATION_REQUIRES_NEW" class="org.springframework.beans.factory.config.FieldRetrievingFactoryBean" lazy-init="default"/> 
+		</property>
+		<property name="transactionManager" ref="transactionManager" /> 
+	</bean>
+	
+	<!--  ========================== 其他配置 =========================== -->
+	<!-- SAL 配置 -->
+	<bean id="salDriverRegister" class="com.ailk.easyframe.sal.driver.SalDriverRegister">
+		<constructor-arg>
+			<list>
+				<value>com.ailk.easyframe.sal.modules.aimdb.driver.Driver</value>
+				<value>com.ailk.easyframe.sal.modules.boostdb.driver.DriverJava</value>
+			</list>
+		</constructor-arg>
+	</bean>
+
+	<bean id="salClientFactory" class="com.ailk.easyframe.sal.client.SalClientFactoryImpl">
+		<property name="mdbRouteSalService" ref="mdbRouteService" />
+	</bean>
+	<!-- SAL 配置 End -->
+	
+	<!--  CPF 事务一致性-->
+	<bean class="com.ailk.easyframe.transaction.support.SpringTransactionInterceptorAdjust">
+		<property name="transactionInterceptorBeanName" value="cpfTransactionInterceptor"/>
+	</bean>
+	<bean id="cpfTransactionInterceptor" class="com.ailk.easyframe.transaction.support.CpfTransactionInterceptor">  
+		<property name="transactionManager" ref="transactionManager" />
+		<property name="cpfTransManagerHelper" ref="cpfTransManagerHelper" /> 		
+	</bean>
+	
+	<bean id="cpfTransManagerHelper" class="com.ailk.easyframe.transaction.support.CpfTransactionManagerHelper">
+		<property name="transactionRecordDao">
+			<bean class="com.ailk.easyframe.transaction.support.TransactionRecordUtil">
+				<property name="dbKeyMapping" ref="racDbKeyMap"/>
+			</bean>
+		</property>
+		<property name="salClientFactory" ref="salClientFactory"/>
+	</bean>
+	
+	<!-- 路由&分表设置 -->
+	<bean id="mdbDaoSupport" abstract="true">
+		<property name="salClientFactory" ref="salClientFactory"/>
+	</bean>
+	
+	<bean id="routeDbDao" class="com.ailk.easyframe.route.dao.RouteDbDaoImpl" parent="baseDAO"/>
+	<bean id="extraRelationDbDao" class="com.ailk.easyframe.route.dao.ExtraRelationDbDaoImpl" parent="baseDAO"/>
+	
+	<bean id="routeMdbDao" class="com.ailk.easyframe.route.dao.RouteMdbDaoImpl" parent="mdbDaoSupport"/>
+	<bean id="extraRelationMdbDao" class="com.ailk.easyframe.route.dao.ExtraRelationMdbDaoImpl" parent="mdbDaoSupport"/>
+	
+<!-- 	<bean id="routeDao" class="com.ailk.easyframe.route.dao.RouteDaoImpl"> -->
+<!-- 		<property name="routeDbDao" ref="routeDbDao" /> -->
+<!-- 		<property name="routeMdbDao" ref="routeMdbDao" /> -->
+<!-- 	</bean> -->
+	
+	<bean id="extraRelationDao" class="com.ailk.easyframe.route.dao.ExtraRelationDaoImpl">
+		<property name="extraRelationDbDao" ref="extraRelationDbDao" />
+		<property name="extraRelationMdbDao" ref="extraRelationMdbDao" />		
+	</bean>
+	
+	<bean id="routeContextDao" class="com.ailk.easyframe.route.dao.RouteContextDaoImpl" parent="baseDAO"/>
+	
+	<!-- 路由设置 -->
+	<bean id="routeMapStrategyFactory" class="com.ailk.easyframe.route.map.MapStrategyFactory">
+		<property name="routeMapStrategies">
+			<map>
+				<entry>
+					<key>
+						<value>DIRECT_ASSIGN</value>
+					</key>
+					<bean class="com.ailk.easyframe.route.map.DirectAssignMapStrategy" />					
+				</entry>
+				<entry>
+					<key>
+						<value>CRC32_HASH_MOD</value>
+					</key>
+					<bean class="com.ailk.easyframe.route.map.CRC32ModMapStrategy" />
+				</entry>
+				<entry>
+					<key>
+						<value>MOD</value>
+					</key>
+					<bean class="com.ailk.easyframe.route.map.DirectModMapStrategy" />
+				</entry>
+				<entry>
+					<key>
+						<value>DIV</value>
+					</key>
+					<bean class="com.ailk.easyframe.route.map.DivMapStrategy" />
+				</entry>
+			</map>
+		</property>
+	</bean>		
+	
+	<bean id="routeContextService" class="com.ailk.easyframe.route.service.RouteContextServiceImpl" init-method="loadRouteContext">
+		<property name="routeContextDao" ref="routeContextDao" />
+	</bean>
+	
+	<bean id="extraRelationService" class="com.ailk.easyframe.route.service.ExtraRelationServiceImpl" >
+		<property name="extraRelationDao" ref="extraRelationDao" />
+	</bean>
+	
+	<!-- init-method="loadRouteContext"测试时还未建表和对实体进行增强因此不能使用 -->
+	<bean id="routeService" abstract="true"	>
+<!-- 		<property name="routeDao" ref="routeDao" /> -->
+		<property name="routeMdbDao" ref="routeMdbDao" />
+		<property name="routeDbDao" ref="routeDbDao" />		
+		<property name="routeMapStrategyFactory" ref="routeMapStrategyFactory" />
+		<property name="routeContextService" ref="routeContextService" /> 
+		<!-- 
+		<property name="replenishDim" value="true" />
+		-->
+		<property name="txTemplate" ref="txTemplate" />
+	</bean>
+	
+	<bean id="dbRouteService" class="com.ailk.easyframe.route.service.DbRouteServiceImpl" parent="routeService" />
+	<bean id="mdbRouteService" class="com.ailk.easyframe.route.service.MdbRouteServiceImpl" parent="routeService" />
+
+	<bean id="routerClient" class="com.ailk.easyframe.route.client.RouterClientImpl2">
+		<property name="dbRouteService" ref="dbRouteService" />
+		<property name="mdbRouteService" ref="mdbRouteService" />
+		<property name="extraRelationService" ref="extraRelationService" />
+		<property name="routeContextService" ref="routeContextService" />
+		<property name="racDbKeyMap" ref="racDbKeyMap"/>
+	</bean>		
+	
+	<bean class="com.ailk.easyframe.db.support.AilkPartitionUtil">
+		<property name="routerClient" ref="routerClient" />
+		<property name="entityManagerFactory" ref="entityManagerFactory" />
+	</bean>
+	<!--路由&分表配置结束-->	
+
+	<!--
+	  SYSTEM_PROPERTIES_MODE_OVERRIDE:虚拟机参数优先
+	  searchSystemEnvironment:true时表示若未设置虚拟机参数则搜索环境变量，匹配到则优先
+	  ignoreUnresolvablePlaceholders:true时表示在使用多个PropertyPlaceholderConfigurer加载不同的配置文件时，若当前PropertyPlaceholderConfigurer不能匹配到占位属性时不报错（因为有可能在后面的PropertyPlaceholderConfigurer中匹配到）
+	  使用location属性定义单个配置文件
+	  <property name="location">
+	      <value>classpath:jdbc.properties</value>
+	  </property>	  
+	  ${app.name}考虑代码生成时加入或者虚拟机参数传入？	
+	<bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="systemPropertiesModeName" value="SYSTEM_PROPERTIES_MODE_OVERRIDE"/>
+		<property name="searchSystemEnvironment" value="true"/>
+		<property name="ignoreUnresolvablePlaceholders" value="true"/>
+		<property name="locations">
+	     <list>
+	        <value>classpath:${app.name}_jdbc.properties</value>
+	        <value>classpath:${app.name}_app.properties</value>
+	     </list>
+	  </property> 
+	</bean>
+	-->	
+	<!-- 支持spring配置通过虚拟机参数和环境变量来配置 -->
+	<bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="systemPropertiesModeName" value="SYSTEM_PROPERTIES_MODE_OVERRIDE"/>
+		<property name="searchSystemEnvironment" value="true"/>
+		<property name="ignoreUnresolvablePlaceholders" value="true"/>
+		<!--找不到资源文件不报错
+		<property name="ignoreResourceNotFound" value="true"/>
+		-->
+	</bean>
+
+	<bean id="clearCacheService" class="com.ailk.easyframe.web.common.ejb.clearCacheService.ClearCacheServiceImpl">
+		<property name="clearableCacheManager" ref="cacheManager"></property>
+	</bean>
+	<!--系统监控-->
+	<bean id="systemMonitorService" class="com.ailk.easyframe.web.action.framemonitor.SystemMonitorServiceImpl" />
+</beans>

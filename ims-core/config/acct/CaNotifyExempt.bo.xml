@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="CaNotifyExempt" remark="" schema="AD" table="CA_NOTIFY_EXEMPT" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="OBJECT_TYPE" columnDef="Int" isPk="false" name="objectType" null-able="true" primitive="No" type="Integer"/>
+        <field column="OBJECT_ID" columnDef="Int" isPk="true(not generated)" name="objectId" null-able="true" primitive="No" type="Long"/>
+        <field column="EXEMPTION_TYPE" columnDef="Int" isPk="true(not generated)" name="exemptionType" null-able="true" primitive="No" type="Integer"/>
+        <field column="REC_TYPE" columnDef="Int" isPk="false" name="recType" null-able="true" primitive="No" type="Integer"/>
+        <field column="EXEMP_CHANNEL_ID" columnDef="Int" isPk="false" name="exempChannelId" null-able="true" primitive="No" type="Integer"/>
+        <field column="VALID_DATE" columnDef="Date" isPk="true(not generated)" name="validDate" null-able="true" primitive="No" type="Date"/>
+        <field column="EXPIRE_DATE" columnDef="Date" isPk="false" name="expireDate" null-able="true" primitive="No" type="Date"/>
+        <field column="STAFF_ID" columnDef="Int" isPk="false" name="staffId" null-able="true" primitive="No" type="Long"/>
+        <field column="CREATE_DATE" columnDef="Date" isPk="false" name="createDate" null-able="true" primitive="No" type="Date"/>
+        <field column="SO_DATE" columnDef="Date" isPk="false" name="soDate" null-able="true" primitive="No" type="Date"/>
+        <field column="BILLING_TYPE" columnDef="Int" isPk="false" name="billingType" null-able="true" primitive="No" type="Integer"/>
+        <field column="SO_NBR" columnDef="Int" isPk="true(not generated)" name="soNbr" null-able="true" primitive="No" type="Long"/>
+        <field column="OFFICE_PHONE" columnDef="Varchar" columnSize="28" isPk="false" name="officePhone" null-able="true" primitive="No" type="String"/>
+    </fields>
+</entity>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="CaCustomInv" remark="" schema="ad" table="CA_CUSTOM_INV" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+<fields>
+<field column="ACCT_ID" columnDef="Int" isPk="true(not generated)" name="acctId" null-able="false" primitive="No" remark="A unique identifier of account.&#10;" type="Long"/>
+<field column="INVOICE_TYPE" columnDef="Int" name="invoiceType" primitive="No" remark="0-IN : Normal Bill ,&#10;1-CC : Central Card ,&#10;2-AM : Amex&#10;" type="Integer"/>
+<field column="BILL_FORMAT_ID" columnDef="Int" name="billFormatId" primitive="No" remark="Bill format ID&#10;1-residential&#10;2-corporate FULL&#10;3-corporate CCC (eg. not use the logo of AIS, use logo of Central Card)" type="Integer"/>
+<field column="MAIL_CODE" columnDef="Int" name="mailCode" primitive="No" remark="Digits from 1 through 10, each digit presents one mailing method:&#10;Mailing method code:&#10;1-Hard copy&#10;2-Email&#10;3-SMS&#10;4-Fax&#10;5-Hand&#10;6-Mail&#10;For example:&#10;12  Hard Copy and Email&#10;13  Hard Copy and SMS&#10;132  Hard Copy and SMS and Email&#10;32  SMS and Email&#10;" type="Long"/>
+<field column="PRINT_BILL" columnDef="Int" name="printBill" primitive="No" remark="Bill printing&#10;0: No&#10;1: Yes" type="Integer"/>
+<field column="LANGUAGE_ID" columnDef="Int" name="languageId" primitive="No" remark="Bill language" type="Integer"/>
+<field column="INVOICE_CDR_CODE" columnDef="Varchar" columnSize="200" name="invoiceCdrCode" primitive="No" remark="Code segment of customized bill. Each digit represents an item for customization, with 0/1 as its value&#10;Digits 1-6 represent whether or not to display bill data type&#10;1-FlagGPRS&#10;2-FlagLocal&#10;3-FlagNR&#10;4-FlagSMS&#10;5-FlagTransactions&#10;6-FlagVAS&#10;" type="String"/>
+<field column="DUE_DAY" columnDef="Int" name="dueDay" primitive="No" remark="Payment due date" type="Integer"/>
+<field column="SO_NBR" columnDef="Int" isPk="true(not generated)" name="soNbr" null-able="false" primitive="No" remark="Transaction order" type="Long"/>
+<field column="CREATE_DATE" columnDef="Date" name="createDate" primitive="No" remark="" type="Date"/>
+<field column="SO_DATE" columnDef="Date" name="soDate" primitive="No" remark="" type="Date"/>
+<field column="VALID_DATE" columnDef="Date" isPk="true(not generated)" name="validDate" null-able="false" primitive="No" remark="" type="Date"/>
+<field column="EXPIRE_DATE" columnDef="Date" name="expireDate" primitive="No" remark="" type="Date"/>
+<field column="SUMMARY_DELIVER" columnDef="Char" columnSize="32" name="summaryDeliver" primitive="No" remark="" type="String"/>
+</fields>
+</entity>

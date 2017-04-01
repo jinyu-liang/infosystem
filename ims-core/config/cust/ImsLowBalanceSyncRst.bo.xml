@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="ImsLowBalanceSyncRst" schema="CD" table="IMS_LOW_BALANCE_SYNC_RST">
+  <fields>
+    <field name="id" type="Long" column="ID" isPk="true" primitive="No" null-able="false" columnDef="NUMBER" columnSize="15"/>
+    <field name="custId" type="Long" column="CUST_ID" isPk="false" primitive="No" remark="????id" null-able="true" columnDef="NUMBER" columnSize="15"/>
+    <field name="acctId" type="Long" column="ACCT_ID" isPk="false" primitive="No" remark="????id" null-able="true" columnDef="NUMBER" columnSize="15"/>
+    <field name="phoneId" type="String" column="PHONE_ID" isPk="false" primitive="No" remark="????
+" null-able="false" columnDef="VARCHAR2" columnSize="64"/>
+    <field name="autoType" type="Integer" column="AUTO_TYPE" isPk="false" primitive="No" remark="??????:
+1:Low balance auto topup" null-able="true" columnDef="NUMBER" columnSize="2"/>
+    <field name="payChannel" type="Integer" column="PAY_CHANNEL" isPk="false" primitive="No" remark="????:
+1:From credit
+2:From bank account
+" null-able="true" columnDef="NUMBER" columnSize="2"/>
+    <field name="lowBalanceAmount" type="Long" column="LOW_BALANCE_AMOUNT" isPk="false" primitive="No" remark="???" null-able="false" columnDef="NUMBER" columnSize="15"/>
+    <field name="currentBalanceAmount" type="Long" column="CURRENT_BALANCE_AMOUNT" isPk="false" primitive="No" remark="????" null-able="false" columnDef="NUMBER" columnSize="15"/>
+    <field name="sts" type="Integer" column="STS" isPk="false" primitive="No" null-able="false" columnDef="NUMBER" columnSize="2"/>
+    <field name="dealDate" type="Date" column="DEAL_DATE" isPk="false" primitive="No" null-able="false" columnDef="DATE" columnSize="7"/>
+    <field name="soNbr" type="Long" column="SO_NBR" isPk="false" primitive="No" null-able="false" columnDef="NUMBER" columnSize="15"/>
+    <field name="createDate" type="Date" column="CREATE_DATE" isPk="false" primitive="No" null-able="false" columnDef="DATE" columnSize="7"/>
+    <field name="dealDesc" type="String" column="DEAL_DESC" isPk="false" primitive="No" null-able="true" columnDef="VARCHAR2" columnSize="255"/>
+    <field name="dealAgainDate" type="Date" column="DEAL_AGAIN_DATE" isPk="false" primitive="No" null-able="true" columnDef="DATE" columnSize="7"/>
+    <field name="errorMsg" type="String" column="ERROR_MSG" isPk="false" primitive="No" null-able="true" columnDef="VARCHAR2" columnSize="256"/>
+    <field name="errorCode" type="Integer" column="ERROR_CODE" isPk="false" primitive="No" null-able="true" columnDef="NUMBER" columnSize="8"/>
+    <field name="dealCount" type="Integer" column="DEAL_COUNT" isPk="false" primitive="No" null-able="true" columnDef="NUMBER" columnSize="8"/>
+  </fields>
+</entity>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="PocketExtOut" transient="true">
+  <fields>
+    <field name="acct_id" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="amount" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="expire_amout" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="unvalid_amount" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="unpay_fee" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="real_fee" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="usable_balance" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="deposit_balance" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <complex-field name="listPocketExtDetail" type="entity" ref="imscnsh.PocketExtDetail" collection="list" primitive="false"/>
+    <complex-field name="listDepositDetail" type="entity" ref="imscnsh.PocketExtDetail" collection="list" primitive="false"/>
+    <field name="pay_type" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="cust_name" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="oper_time" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="user_sts" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="acct_name" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="pay_fee" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="balance" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="real_pro_fee" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="cust_id" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="user_id" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="total_late_fee" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="total_usable_balance" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

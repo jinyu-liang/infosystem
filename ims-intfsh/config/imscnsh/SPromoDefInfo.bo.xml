@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="SPromoDefInfo">
+  <fields>
+    <field name="promo_id" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="promo_name" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="prestore_fee" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="present_fee" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="outer_promo_id" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="allot_rule_id" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="book_item_id_in" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="book_item_id_out" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="fund_type" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="allot_amount" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="allot_amount_type" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="item_type" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="allot_type" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="allot_scale" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="allot_bcycle_count" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

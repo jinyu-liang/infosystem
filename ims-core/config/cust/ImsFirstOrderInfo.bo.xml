@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="ImsFirstOrderInfo" schema="CD" table="IMS_FIRST_ORDER_INFO">
+  <fields>
+    <field name="id" type="Long" column="ID" isPk="true(not generated)" primitive="No" remark="主键" null-able="false" columnDef="BigInt"/>
+    <field name="objectId" type="Long" column="OBJECT_ID" primitive="No" remark="使用编号 对应账户id或者用户id" null-able="false" columnDef="BigInt"/>
+    <field name="objectType" type="Integer" column="OBJECT_TYPE" primitive="No" remark="使用类型
+ 0---dev
+ 1---account" null-able="false" columnDef="Int"/>
+    <field name="offerId" type="Integer" column="OFFER_ID" primitive="No" remark="销售品id
+ " null-able="true" columnDef="Int"/>
+    <field name="busiFlag" type="Integer" column="BUSI_FLAG" primitive="No" remark="销售品对应的busi_flag" null-able="true" columnDef="Int"/>
+    <field name="serviceId" type="Integer" column="SERVICE_ID" primitive="No" remark="服务id" null-able="true" columnDef="Int"/>
+    <field name="soNbr" type="Long" column="SO_NBR" isPk="true(not generated)" primitive="No" remark="流水号" null-able="false" columnDef="BigInt"/>
+    <field name="firstOrderTime" type="Date" column="FIRST_ORDER_TIME" primitive="No" remark="首次订购时间" null-able="false" columnDef="TimeStamp"/>
+  </fields>
+</entity>

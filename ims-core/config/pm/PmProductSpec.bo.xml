@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="PmProductSpec" remark="" schema="PD" table="PM_PRODUCT_SPEC" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="PROD_SPEC_ID" columnDef="AutoIncrement" isPk="true" name="prodSpecId" primitive="No" remark="An identification number assigned to uniquely identify the specification.&#10;" type="Integer"/>
+        <field column="TYPE_ID" columnDef="Int" name="typeId" primitive="No" remark="product specification type ID&#10;value：&#10;0：(Atomic Product Specification)&#10;1：(Composite Product Specification)&#10;" type="Integer"/>
+        <field column="NAME" columnDef="Varchar" columnSize="256" name="name" primitive="No" remark="The name of the product specification.&#10;&#10;" type="String"/>
+        <field column="DESCRIPTION" columnDef="Varchar" columnSize="1024" name="description" primitive="No" remark="Description information to explain what is product specification." type="String"/>
+        <field column="LIFECYCLE_STATUS" columnDef="Int" name="lifecycleStatus" primitive="No" remark="status of life cycle ID&#10;The condition of the product specification, such as active, inactive, planned.&#10;from PM_ENUM_LIFECYCLE_STATUS, apply_at in (0,1)&#10;" type="Integer"/>
+        <field column="VALID_DATE" columnDef="TimeStamp" name="validDate" primitive="No" remark="effective date " type="Date"/>
+        <field column="EXPIRE_DATE" columnDef="TimeStamp" name="expireDate" primitive="No" remark="expiring date " type="Date"/>
+    </fields>
+</entity>

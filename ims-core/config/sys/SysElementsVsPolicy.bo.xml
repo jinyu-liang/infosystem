@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SysElementsVsPolicy" remark="" schema="sd" table="SYS_ELEMENTS_VS_POLICY" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="POLICY_ID" columnDef="Int" isPk="true(not generated)" name="policyId" null-able="false" primitive="No" remark="" type="Integer"/>
+        <field column="ELEMENT_ID" columnDef="Int" isPk="true(not generated)" name="elementId" null-able="false" primitive="No" remark="" type="Integer"/>
+    </fields>
+</entity>

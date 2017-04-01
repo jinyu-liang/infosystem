@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="CmResIdentityHis" remark="" schema="CD" table="CM_RES_IDENTITY" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+<fields>
+<field column="RESOURCE_ID" columnDef="Int" isPk="true(not generated)" name="resourceId" null-able="false" primitive="No" remark="Resource Numbering" type="Long"/>
+<field column="IDENTITY" columnDef="Varchar" columnSize="64" isPk="true(not generated)" name="identity" null-able="false" primitive="No" remark="Resource Identifier String&#10;e.g :&#10;The number string of phone number&#10;IMSI number string&#10;Broadband network account string,etc&#10;" type="String"/>
+<field column="IDENTITY_TYPE" columnDef="Int" isPk="true(not generated)" name="identityType" null-able="false" primitive="No" remark="Number Identifier Type&#10;0: Phone number&#10;1:IMSI&#10;2: Fixed number&#10;3: Broadband account ID&#10;4: WLAN account ID&#10;" type="Integer"/>
+<field column="IDENTITY_ATTR" columnDef="Int" name="identityAttr" primitive="No" remark="The Related Properties of Identifier Number&#10;Identify by digit&#10;The first digit is 0: the main numberฃจattr &amp; 0x01 == 0ฃฉ&#10;The first digit is 1: the sub-numberฃจattr &amp; 0x01 == 1ฃฉฃจthe secondกขthe thirdกฃกฃกฃกฃฃฉ&#10;The second digit is 1: MNP port inฃจattr &amp; 0x02 == 1ฃฉ&#10;The third digit is 1: MNP port out ฃจattr &amp; 0x04 == 1ฃฉ&#10;&#10;&#10;&#10;" type="Integer"/>
+<field column="RESOURCE_PASSWD" columnDef="Varchar" columnSize="32" name="resourcePasswd" primitive="No" remark="The password of resource identifier string" type="String"/>
+<field column="VALID_DATE" columnDef="Date" isPk="true(not generated)" name="validDate" null-able="false" primitive="No" remark="Effective Date" type="Date"/>
+<field column="EXPIRE_DATE" columnDef="Date" name="expireDate" null-able="false" primitive="No" remark="Expired Date" type="Date"/>
+<field column="SO_NBR" columnDef="Int" name="soNbr" null-able="false" primitive="No" remark="The serial number" type="Long"/>
+<field column="CREATE_DATE" columnDef="Date" name="createDate" primitive="No" remark="" type="Date"/>
+<field column="SO_DATE" columnDef="Date" name="soDate" primitive="No" remark="" type="Date"/>
+<field column="SERIAL_NO" columnDef="Varchar" columnSize="64" name="serialNo" primitive="No" remark="" type="String"/>
+<field column="REL_IDENTITY" columnDef="Varchar" columnSize="64" name="relIdentity" null-able="false" primitive="No" remark="" type="String"/>
+</fields>
+</entity>

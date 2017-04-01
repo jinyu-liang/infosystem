@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="PmPricingPlan" schema="PD" table="PM_PRICING_PLAN">
+  <fields>
+    <field name="pricingPlanId" type="Integer" column="PRICING_PLAN_ID" isPk="true" primitive="No" remark="
+
+identifier of pricing plan" null-able="true" columnDef="AutoIncrement"/>
+    <field name="pricingPlanName" type="String" column="PRICING_PLAN_NAME" primitive="No" remark="
+
+names of pricing plan for your choice" null-able="true" columnDef="Varchar" columnSize="256"/>
+    <field name="pricingPlanDesc" type="String" column="PRICING_PLAN_DESC" primitive="No" remark="
+
+description about pricing tariff" null-able="false" columnDef="Varchar" columnSize="1024"/>
+    <field name="remarks" type="String" column="REMARKS" primitive="No" remark="
+
+details" null-able="false" columnDef="Varchar" columnSize="1024"/>
+  </fields>
+</entity>

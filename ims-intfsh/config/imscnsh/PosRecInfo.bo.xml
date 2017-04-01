@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="PosRecInfo" transient="true">
+  <fields>
+    <field name="so_nbr" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="acct_id" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="so_region_code" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="tra_type" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="pin" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="rsp_code" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="trk2_len" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="trk3_len" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="trk2" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="trk3" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="amount" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="casher" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="counter" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="org_no" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="balance" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="card_no" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="stans" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="old_reference" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="old_date" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="old_batch" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="old_trace" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="is_bank" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="res_f042" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="res_f041" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="res_f060" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="res_f011" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="res_f037" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="res_f013" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="res_f012" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="trade_time" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="rec_sts" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="rec_date" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="bank_name" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="check_flag" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="check_file_id" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="busi_spec_id" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="so_county_code" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="so_org_id" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="repet_count" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="authorright" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="remark" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="auth_no" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="settel_date" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="rol_date" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="rej_code" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="expire_date" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="card_flag" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="host_trace_id" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="is_cancel_led" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="ext1" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="ext2" type="String" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

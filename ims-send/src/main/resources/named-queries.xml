@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<queries>
+	<query name = "getUserByName" type="jpql" tag="dataSource">
+       <![CDATA[
+       		select * from Person where name=:name
+       ]]>
+	</query>
+	<query name = "getUserById" type="sql">
+       <![CDATA[
+       		select * from Person_table where name=:name
+       ]]>
+	</query>
+	<query name = "testIn" type="sql">
+       <![CDATA[
+       		select id, count(*) c from Person_table where id in (:names) group by id;
+       ]]>
+	</query>
+	<query name = "sysRegion" type="sql">
+       <![CDATA[
+       		select region_code value, region_name text from xg.sys_region
+       ]]>
+	</query>
+</queries>

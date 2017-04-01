@@ -1,0 +1,118 @@
+<?xml version="1.0"?>
+<!--这个ant脚本专用于对war包的文件做额外处理之用，比如新增一些文件，删除替换一些文件等-->
+<!--
+需要传入的参数：
+dealFile：需要处理的文件，里面配置了需要做哪些额外的操作
+artifactName：传入最终生成的包的名称，包括版本号
+package:jar或者war，不同的类型处理方式不一样
+-->
+<project default="deal_resources" basedir=".">
+	<taskdef resource="net/sf/antcontrib/antcontrib.properties" 
+		classpath="${user.home}/.m2/repository/ant-contrib/ant-contrib/1.0b2/ant-contrib-1.0b2.jar" />
+	
+	<property name="result_msg" value=""/>
+	
+	<target name="deal_resources">
+		<property name="packageFile" value="${basedir}/target/${artifactName}.${package}"/>
+		<if>
+			<equals arg1="${package}" arg2="jar" />
+			<then>
+				<property name="resourceDir" value="${basedir}/target/classes"/>
+			</then>
+			<else>
+				<property name="resourceDir" value="${basedir}/target/${artifactName}"/>
+			</else>
+		</if>
+		
+		<echo>####### dealFile:${dealFile}</echo>
+		<available file="${dealFile}" property="needDeal"/>
+		<if>
+			<equals arg1="${needDeal}" arg2="true" />
+			<then>
+				<loadfile property="resources" srcFile="${dealFile}"  encoding="UTF-8"/>
+				<echo>####### dealFile_context:${resources}</echo>
+				<echo>####### resourceDir:${resourceDir}</echo>
+				<echo>####### packageFile:${packageFile}</echo>
+				
+				<foreach target="deal_resource" list="${resources}" delimiter="&#10;" param="resourceName">
+					<param name="resourceDir" value="${resourceDir}"/>
+				</foreach>
+				
+				<copy toDir="${resourceDir}">
+					<zipfileset src="${packageFile}" includes="META-INF/**/*">
+					</zipfileset>
+			  	</copy>
+				
+				<delete verbose="true" file="${packageFile}" failonerror="false"/>
+				<zip destfile="${packageFile}" update="true">
+					<fileset dir="${resourceDir}">
+					</fileset>
+				</zip> 
+				
+				<echo>####### result_msg ,${result_msg}</echo>
+			</then>
+			<else>
+				<echo>####### skip dealing file ,because ${dealFile} does no exist</echo>
+			</else>
+		</if>
+
+	</target>
+	
+	
+	<target name="deal_resource">
+		<echo>###### deal_resource : ${resourceName} ######</echo>
+		<propertyregex property="temp1"
+		          input="${resourceName}"
+		          regexp="[\r\n]*"
+				  replace=""/>
+		<propertyregex property="temp2"
+		          input="${temp1}"
+		          regexp="(\w*)\s*$"
+				  replace="\1"/>
+		<propertyregex property="cmd"
+		          input="${temp2}"
+		          regexp="^\s*(\w*)"
+				  replace="\1"/>
+				  
+		
+		<length property="len" string="${cmd}"/>
+		
+		<if>
+			<equals arg1="${len}" arg2="0" />
+			<then>
+			</then>
+			<else>
+				<propertyregex property="char"
+		          input="${cmd}"
+		          regexp="(&gt;)"
+				  select="\1"/>
+				<if>
+					<equals arg1="${char}" arg2="&gt;" />
+					<then>
+						<!--有>符号说明是拷贝-->
+						<propertyregex property="sourceFile"
+				          input="${cmd}"
+				          regexp="(.*)\s+&gt;"
+						  select="\1"/>
+						<propertyregex property="targetDir"
+				          input="${cmd}"
+				          regexp="&gt;\s*(.*)"
+						  select="\1"/>
+						
+						<echo>###### copy resource : ${user.home}/ims_dealfile/${sourceFile} to ${targetDir} ######</echo>
+						
+						<copy file="${user.home}/ims_dealfile/${sourceFile}" toDir="${resourceDir}/${targetDir}" overwrite="true"/>
+						
+					</then>
+					<else>
+						<!--没有>符号说明是删除-->
+						<echo>###### delete resource : ${cmd} ####</echo>
+						<delete verbose="true" file="${resourceDir}/${cmd}" failonerror="false"/>
+					</else>
+				</if>
+			</else>
+		</if>
+	</target>
+
+</project>
+

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="PmRatingRate" schema="PD" table="PM_RATING_RATE">
+  <fields>
+    <field name="rateId" type="Integer" column="RATE_ID" isPk="true(not generated)" null-able="false" columnDef="NUMBER" columnSize="9"/>
+    <field name="name" type="String" column="NAME" isPk="false" null-able="false" columnDef="VARCHAR2" columnSize="1024"/>
+    <field name="curveId" type="Integer" column="CURVE_ID" isPk="false" null-able="false" columnDef="NUMBER" columnSize="9"/>
+    <field name="measureId" type="Integer" column="MEASURE_ID" isPk="false" null-able="false" columnDef="NUMBER" columnSize="9"/>
+    <field name="negativeFlag" type="Integer" column="NEGATIVE_FLAG" isPk="false" null-able="false" columnDef="NUMBER" columnSize="1"/>
+    <field name="description" type="String" column="DESCRIPTION" isPk="false" null-able="true" columnDef="VARCHAR2" columnSize="1024"/>
+  </fields>
+</entity>

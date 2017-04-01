@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="PmAllowanceFreeUsage" remark="" schema="pd" table="PM_ALLOWANCE_FREE_USAGE" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="ALLOWANCE_RULE_ID" columnDef="Int" isPk="true(not generated)" name="allowanceRuleId" null-able="false" primitive="No" remark="reward identifier,corresponding to PM_ALLOWANCE_REGULATION.ALLOWANCE_RULE_ID" type="Integer"/>
+        <field column="FREERES_ITEM" columnDef="Int" isPk="true(not generated)" name="freeresItem" null-able="false" primitive="No" remark="subject of reward free resource. reward several subjects in one time." type="Integer"/>
+        <field column="AMOUNT" columnDef="Int" name="amount" null-able="false" primitive="No" remark="Amount of reward free resource. unit is determined by attribute of free resource" type="Long"/>
+        <field column="IMMEDIATE_EFFECT" columnDef="Int" name="immediateEffect" null-able="false" primitive="No" remark="" type="Integer"/>
+        <field column="CYCLE_UNIT_NOIM" columnDef="Int" name="cycleUnitNoim" primitive="No" remark="" type="Integer"/>
+        <field column="CYCLE_TYPE_NOIM" columnDef="Int" name="cycleTypeNoim" primitive="No" remark="" type="Integer"/>
+        <field column="FORWARD_CYCLE" columnDef="Int" name="forwardCycle" null-able="false" primitive="No" remark="" type="Integer"/>
+        <field column="CYCLE_REF_MODE" columnDef="Int" name="cycleRefMode" primitive="No" remark="" type="Integer"/>
+    </fields>
+</entity>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="BatchSmsInfo">
+  <fields>
+    <complex-field name="checkSms" type="entity" ref="shinner.CheckSms" collection="none" primitive="false"/>
+    <complex-field name="listCheckSmsDetail" type="entity" ref="shinner.CheckSmsDetail" collection="list" primitive="false"/>
+  </fields>
+</entity>

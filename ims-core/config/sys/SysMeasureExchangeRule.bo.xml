@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SysMeasureExchangeRule" remark="" schema="sd" table="SYS_MEASURE_EXCHANGE_RULE" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="MEASURE_EXCHANGE_ID" columnDef="AutoIncrement" isPk="true" name="measureExchangeId" primitive="No" remark="Mersurement exchange identifier" type="Integer"/>
+        <field column="NAME" columnDef="Varchar" columnSize="256" name="name" primitive="No" remark="Name of measurement exchange" type="String"/>
+        <field column="DESCRIPTION" columnDef="Varchar" columnSize="1024" name="description" primitive="No" remark="Measurement exchange rules specification" type="String"/>
+    </fields>
+</entity>

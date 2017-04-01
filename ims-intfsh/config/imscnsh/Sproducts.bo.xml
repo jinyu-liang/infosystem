@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="Sproducts">
+  <fields>
+    <field name="prodId" type="Integer" column="PROD_ID" isPk="true(not generated)" primitive="Auto" null-able="false" columnDef="AutoIncrement"/>
+    <field name="isProm" type="Integer" column="IS_PROM" isPk="false" primitive="Auto" null-able="false" columnDef="Int"/>
+    <field name="prodName" type="String" column="PROD_NAME" isPk="false" primitive="Auto" null-able="false" columnDef="Varchar" columnSize="64"/>
+    <field name="serviceId" type="Integer" column="SERVICE_ID" isPk="false" primitive="Auto" null-able="true" columnDef="Int"/>
+    <field name="exprId" type="Integer" column="EXPR_ID" isPk="false" primitive="Auto" null-able="false" columnDef="Int"/>
+    <field name="subscrParam" type="String" column="SUBSCR_PARAM" isPk="false" primitive="Auto" null-able="true" columnDef="Varchar" columnSize="128"/>
+    <field name="validDate" type="Date" column="VALID_DATE" isPk="false" primitive="Auto" null-able="false" columnDef="Date"/>
+    <field name="expireDate" type="Date" column="EXPIRE_DATE" isPk="false" primitive="Auto" null-able="false" columnDef="Date"/>
+    <field name="description" type="String" column="DESCRIPTION" isPk="false" primitive="Auto" null-able="true" columnDef="Varchar" columnSize="128"/>
+    <field name="privEntity" type="Integer" column="PRIV_ENTITY" isPk="false" primitive="Auto" null-able="true" columnDef="Int"/>
+    <field name="sumType" type="Integer" column="SUM_TYPE" isPk="false" primitive="Auto" null-able="true" columnDef="Int"/>
+    <field name="prodClass" type="Integer" column="PROD_CLASS" isPk="false" primitive="Auto" null-able="true" columnDef="Int"/>
+    <field name="spCode" type="Long" column="SP_CODE" isPk="false" primitive="Auto" null-able="true" columnDef="Int"/>
+    <field name="stdProdId" type="String" column="STD_PROD_ID" isPk="false" primitive="Auto" null-able="false" columnDef="Varchar" columnSize="24"/>
+    <field name="prodType" type="Integer" column="PROD_TYPE" isPk="false" primitive="Auto" null-able="false" columnDef="Int"/>
+    <field name="prodTempId" type="Integer" column="PROD_TEMP_ID" isPk="false" primitive="Auto" null-able="true" columnDef="Int"/>
+    <field name="orderTempId" type="Integer" column="ORDER_TEMP_ID" isPk="false" primitive="Auto" null-able="true" columnDef="Int"/>
+    <field name="subscrMode" type="Long" column="SUBSCR_MODE" isPk="false" primitive="Auto" null-able="true" columnDef="Int"/>
+    <field name="expireMode" type="Long" column="EXPIRE_MODE" isPk="false" primitive="Auto" null-able="true" columnDef="Int"/>
+    <field name="validCycle" type="Integer" column="VALID_CYCLE" isPk="false" primitive="Auto" null-able="true" columnDef="Int"/>
+  </fields>
+</entity>

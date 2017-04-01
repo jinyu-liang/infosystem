@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="PmPriceParamDef" schema="pd" table="PM_PRICE_PARAM_DEF">
+  <fields>
+    <field name="paramId" type="Integer" column="PARAM_ID" isPk="true" primitive="No" remark="identifier of pricing parameter
+
+810301 reward amount of free resource（long integer）
+
+810321 multiplication factor of free resource reward（integer）
+
+810001 discount value of basic tariff（double type）
+
+810332 member amount of group discount ( integer )
+
+820001 RC_BASE_FEE--basic fixed charge, replace configuration data of pricing according to inputted parameter ( integer )
+
+820101 history charge of cross-year discount ( integer )
+" null-able="true" columnDef="AutoIncrement"/>
+    <field name="paramName" type="String" column="PARAM_NAME" primitive="No" remark="name of pricing parameter" null-able="false" columnDef="Varchar" columnSize="256"/>
+    <field name="paramClass" type="Integer" column="PARAM_CLASS" primitive="No" remark="calssification of pricing parameter
+details are reserved and default 0" null-able="false" columnDef="Int"/>
+    <field name="description" type="String" column="DESCRIPTION" primitive="No" remark="description about pricing parameter" null-able="false" columnDef="Varchar" columnSize="1024"/>
+  </fields>
+</entity>

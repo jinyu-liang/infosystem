@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="SUserStatus" transient="true">
+  <fields>
+    <field name="user_id" type="Long" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="phone_id" type="String" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="region_code" type="Integer" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="new_state" type="Short" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="sub_type" type="Short" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="reason_days" type="Short" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="action_date" type="String" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="valid_date" type="String" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="expire_date" type="String" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="suspend_request_flag" type="Short" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="fraud_flag" type="Short" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="unbilling_flag" type="Short" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

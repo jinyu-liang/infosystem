@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SysCountry" remark="" schema="sd" table="SYS_COUNTRY" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="COUNTRY_ID" columnDef="AutoIncrement" isPk="true" name="countryId" primitive="No" remark="Country ID" type="Integer"/>
+        <field column="NAME" columnDef="Varchar" columnSize="256" name="name" null-able="false" primitive="No" remark="Country name" type="String"/>
+        <field column="NAME_ABBREVIATION" columnDef="Varchar" columnSize="256" name="nameAbbreviation" primitive="No" remark="Abbreviation of country name" type="String"/>
+        <field column="COUNTRY_CODE" columnDef="Varchar" columnSize="9" name="countryCode" null-able="false" primitive="No" remark="ISO2 country code" type="String"/>
+        <field column="GEOGRAPHIC_AREA_ID" columnDef="Int" name="geographicAreaId" primitive="No" remark=" Geographic Location ( standby)" type="Integer"/>
+        <field column="TYPE" columnDef="Int" name="type" primitive="No" remark="Country type:&#10;1:developed country&#10;2:developing country&#10;" type="Integer"/>
+        <field column="LANGUAGE_ID" columnDef="Int" name="languageId" primitive="No" remark="Language ID" type="Integer"/>
+        <field column="TIME_ZONE_ID" columnDef="Int" name="timeZoneId" primitive="No" remark="????????" type="Integer"/>
+        <field column="TIME_ZONE" columnDef="Varchar" columnSize="5" name="timeZone" primitive="No" remark="" type="String"/>
+    </fields>
+</entity>

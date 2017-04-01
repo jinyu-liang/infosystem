@@ -1,0 +1,1160 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/biz.xsd">
+  <service name="CN_SHMgnt" bind-entity="false" scope="both" session-bean-type="stateless">
+    <method name="do_rewardFreeRes" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imsintf.RewardFreeResource" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_rewardFreeResResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryPocketExt" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="pocketExtIn" type="entity" ref="imscnsh.PocketExtIn" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_queryPocketExtResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryBillExt" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="billExtIn" type="entity" ref="imscnsh.BillExtIn" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_queryBillExtResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryPaymentHis" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="qryPaymentHisIn" type="entity" ref="imscnsh.QryPaymentHisIn" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_queryPaymentHisResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryFreeResource" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="qryBalance" type="entity" ref="imscnsh.QryBalance" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_queryFreeResourceResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryEcardInfo" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.QueryEcardReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_queryEcardInfoResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryOweBill" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="qweFeeBillIn" type="entity" ref="imscnsh.OweFeeBillIn" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_queryOweBillResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryUserHasBadDebt" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="customerReq" type="entity" ref="imscnsh.SQueryUserHasBadDebtReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_queryUserHasBadDebtResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryPromoAllotInfo" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="sQueryIn" type="entity" ref="imscnsh.SQueryPromoAllotInfoReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_queryPromoAllotInfoResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryMainProdFreeRes" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.SQueryMainProdFreeResReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_queryFreeResourceResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryBillItemDef" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="queryBillItemReq" type="entity" ref="imscnsh.QueryBillItemReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_queryBillItemDefResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_deposit" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.SDoDepositReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_depositResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_commitAddChannelAccFund" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.SDoDepositByCashReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_depositResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_unDeposit" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.SDoUnDepositReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_unDepositResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_transferAmount" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.SDoTransferAmount" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_transferAmountResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_checkDepositResult" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.ScheckDepositResultReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_checkDepositResultResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_payFee" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.SdoPayFee" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_payFeeResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_insertOneTimeFee" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="extDataDef" type="entity" ref="imscnsh.ExtDataDef" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_insertOneTimeFeeResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryDerateRecord" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="derateRecordIn" type="entity" ref="imscnsh.DerateRecordIn" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_queryDerateRecordResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryOweBillSum" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="qweFeeBillIn" type="entity" ref="imscnsh.OweFeeBillIn" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_queryOweBillSumResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryReturnRecord" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="sQryReturnRecordSeq" type="entity" ref="imscnsh.SQryReturnRecordSeq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_queryReturnRecordResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_oneTimeFeeReverse" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="sOneTimeFeeReverseReq" type="entity" ref="imscnsh.SOneTimeFeeReverseReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_oneTimeFeeReverseResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_consumeDeal" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="consumeReq" type="entity" ref="imscnsh.ConsumeDealReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_consumeDealResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_consumeCancle" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="consumeCancleReq" type="entity" ref="imscnsh.ConsumeCancleReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_consumeCancleResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryBigCustomer" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="phone_id" type="String" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_queryBigCustomerResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryDeposit" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="queryDepositReq" type="entity" ref="imscnsh.QueryDepositReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_queryDepositResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryGprsAmount" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="phone_id" type="String" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_queryGprsAmountResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryBill2Ext" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="billExt2In" type="entity" ref="imscnsh.BillExt2In" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_queryBillExt2Response" collection="none" primitive="false"/>
+    </method>
+    <method name="do_depositByCash" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.SDoDepositByCashReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_depositByCashResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_depositByBankCard" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.SDoDepositByBankCardReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_depositByBankCardResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryUnpayFee" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.QueryUnpayFeeReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_queryUnpayFeeResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryUsableBalance" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.QueryUsableBalanceReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_queryUsableBalanceResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryUserAccountOwe" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.QueryUserAccountOweReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_queryUserAccountOweResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_query2010NewNetBalanceFee" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="phone_id" type="String" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_query2010newNetBalanceFeeResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_check3gBookNote" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="phone_id" type="String" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_check3gBookNoteResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryInNetUsage" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="phone_id" type="String" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_queryInNetUsageResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryPaymentHisByMonth" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="qryPaymentHisByMonthIn" type="entity" ref="imscnsh.QryPaymentHisByMonthIn" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_queryPaymentHisResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryAcctAvgConsume" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="sQryArgConsumeReq" type="entity" ref="imscnsh.SQryArgConsumeReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_qryArgConsumeResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryDomesticGprs" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="sQryGprsAmt4wsyytReq" type="entity" ref="imscnsh.SQryGprsAmt4wsyytReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_qryGprsAmt4wsyytResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryCurAccFundFee4wsyyt" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="acct_id" type="Long" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_queryCurAccFundFeeResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryPasswdCheck" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="bank_id" type="Integer" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_queryPasswdCheckResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_query3MonthReturnRecord" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="phone_id" type="String" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_queryReturnRecordResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryCurrMonthReturnRecord" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="acct_id" type="Long" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_queryReturnRecordResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_payFeeByBankCardBill" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="doPayFeeInBill" type="entity" ref="imscnsh.BillDoPayFeeIn" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_payFeeByBankCardResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_payFeeByBankCardNoBill" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="doPayFeeInNobill" type="entity" ref="imscnsh.NoBillDoPayFeeIn" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_payFeeByBankCardResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryAccountBill" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="accountBillIn" type="entity" ref="imscnsh.AccountBillIn" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_queryAccountBillResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryEntitysByOpId" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="opId" type="String" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_queryEntitysByOpIdResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_checkEntityPermission" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="opId" type="String" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="entId" type="String" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="privId" type="String" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_checkEntityPermissionResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryMenusByOpId" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="opId" type="String" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_queryMenusByOpIdResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryGuarantInfo" scope="service-only">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="resource_id" type="Long" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_queryGuarantInfoResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryBindActiveInfo" scope="service-only">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="sQryBindActiveReq" type="entity" ref="imscnsh.SQryBindActiveReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_queryBindActiveInfoResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_bankPayTrans" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.BankPayTransIn" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_bankPayTransResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_checkUserSignInOut" scope="service-only">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="sCheckUserSignInOutReq" type="entity" ref="imscnsh.SCheckUserSignInOutReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_checkUserSignInOutResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryProductMonthlyFee" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.QueryMonthlyFeeReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_queryProductMonthlyFeeResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryUnOrderFee" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.QueryUnOrderFeeReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_queryUnOrderFeeResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryBillPaymentRec" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="sQryBillPaymentRecReq" type="entity" ref="imscnsh.SQryBillPaymentRecReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_queryBillPaymentRecResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryCycleRunHis" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="phoneId" type="String" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_queryCycleRunHisResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryBillPrtRec" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="billOnPrtRecIn" type="entity" ref="imscnsh.BillOnPrtRecIn" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_queryBillPrtRecResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_mngtDepositAgent" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.ImsFundDepositAgentReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_mngtAgentResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_bindBankCard" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.BindBankCardIn" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_bindBankCardResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryBankCardBind" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.QryBindReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_queryBankCardBindResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_cancleBindBankCard" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.CancleBindBankCardReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_cancleBindBankCardResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_updateBankCardBind" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.UpdateBankCardBindIn" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_updateBankCardBindResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_depositByBankCardBind" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.DepositBindIn" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_depositByBankCardBindResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_updateBankBindPwd" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.UpdateBankBindPwdIn" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_updateBankBindPwdResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_upPostsect" scope="service-only">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="postsectReqList" type="entity" ref="imscnsh.UpPostsectReqList" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_upPostsectResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryOpInfoByPermissions" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.PermissionsReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_queryOpInfoByPermissionsResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_qeuryWlan" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="queryWlanIn" type="entity" ref="imscnsh.QueryWlanIn" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_queryWlanResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryPromoDefInfo" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="sQueryPromoDefIn" type="entity" ref="imscnsh.SQueryPromoDefIn" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_queryPromoDefInResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryFreeResByMonth" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.QueryFreeResByMonthReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_queryFreeResByMonthResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryCXLLAmount" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.QueryCXLLAmountIn" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_queryCXLLAmountResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryAllFamliyNumbers" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="acct_id" type="Long" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_queryAllFamliyMemberResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryInvoiceInfo" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="invoiceInfoReq" type="entity" ref="imscnsh.InvoiceInfoReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_queryInvoiceInfoResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_printInvoice" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="printInvoiceInfoReq" type="entity" ref="imscnsh.PrintInvoiceInfoReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_printInvoiceResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_insertServiceRecord" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="serviceRecord" type="entity" ref="imscnsh.ServiceRecord" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_insertServiceRecordResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryVoiceCalls3Month" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="phone_id" type="String" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_queryVoiceCalls3MonthResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_transferAmount4CRM" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.TransferAmount4CRMIn" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_transferAmount4CRMResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_bankPay" scope="service-only">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.BankPayReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_bankPayResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_qryAbcSignInfo" scope="service-only">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.SignInfoReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_qryAbcSignInfoResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_abcUnBind" scope="service-only">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.TerminationReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_abcUnBindResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_abcQryTtradeDetail" scope="service-only">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.TtradeDetailReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_qryAbcTtradeDetailResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_abcChgTranAmt" scope="service-only">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.ChgTranAmtReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_abcChgTranAmtResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_qryCcbBind" scope="service-only">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.CcbQryBindReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_qryCcbBindResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_ccbUnBind" scope="service-only">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.CcbUnBindReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_ccbUnBindResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_qryUmpayBind" scope="service-only">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.UmpayQryBindReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_qryUmpayBindResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_unDepositSucc" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="sDoUnDepositSuccReq" type="entity" ref="imscnsh.SDoUnDepositSuccReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_unDepositSuccResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryCbossBillExt" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="billExtIn" type="entity" ref="imscnsh.CbossBillExtIn" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_queryCbossBillExtResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_checkReturnMail" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.ReturnMailCheckIn" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_checkReturnMailResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_activityRefund" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.ActivityRefundIn" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_activityRefundResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_operValuedCardStatus" scope="service-only">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.SOperValuedCardStatusReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_operValuedCardStatusResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryCurDailyBill" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.QryCurDayBillIn" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_queryCurDailyBillResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_preTransferRec" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.PreTransferIn" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_preTransferRecResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_insertSensitiveRecord" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="sensitiveRecordIn" type="entity" ref="imscnsh.SensitiveRecordIn" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_insertSensitiveRecordResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_checkPrepaidUserValidity" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.CanclePrePaidUserValidityIn" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_checkPrepaidUserValidityResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_canclePrePaidUserValidity" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.CanclePrePaidUserValidityIn" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_canclePrePaidUserValidityResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_depositByFufeiPlatform" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.SDoDepositByFufeiReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_depositByFufeiResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryUserVNetMonthFee" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.QueryUserVNetMonthFeeReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_queryUserVNetMonthFeeResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_qryPreWoffBillInfo" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.PreWoffBillIn" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_qryPreWoffBillInfoResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_qryExemption" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.QryExemptionReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_qryExemptionResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_insertRemindTask" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.InsertRemindTaskIn" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_insertRemindTaskResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryBankPrint" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.PfPayPrintQueryIn" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_queryBankPrintResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_insertPfBillPrinted" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.PfBillPrintConfIn" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_insertPfBillPrintedResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryAcctChargeDtl" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.AcctChargeDtlIn" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_queryAcctChargeDtlResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_qryPriceRule" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.QryPriceRule" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_qryPriceRuleResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryDepositRecord" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.BankCardRepositQryIn" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_queryDepositRecordResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_insertImsBillStepInfo" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="billStepInfoReq" type="entity" ref="imscnsh.ImsBillStepInfoReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_insertImsBillStepInfoResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_checkIsHaveBnkDeduct" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.CheckIsHaveBnkDeductIn" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_checkIsHaveBnkDeductResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryInstance" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.QueryInstanceReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_queryInstanceResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_instanceOper" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.InstanceOperReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_instanceOperResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryDayStopFlag" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="qryDayStopReq" type="entity" ref="imscnsh.QryDayStopReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_qryDayStopFlagResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_preTransfeRecByNow" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.PreTransferByNowIn" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_preTransfeRecByNowResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_checkUserHaveModifyPassword" scope="service-only">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="phone_id" type="String" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_checkUserHaveModifyPasswordResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryCaSpInfo" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="sp_code" type="Long" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_queryCaSpInfoResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_mngtCaSpInfo" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.CaSpInfoMngt" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_caSpInfoMngtResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryPayBillFee" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.PayBillFeeIn" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_queryPayBillFeeResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryPayFormatBill" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.PayFormatBillFeeIn" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_queryPayFormatBillResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryFamilyFundTransfer" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="sub_phone_id" type="String" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_queryFamilyFundTransferResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_commitFamilyFundTransfer" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.commitFamilyFundTransferReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_commitFamilyFundTransferResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_commitFamilyFundAutoTransfer" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.commitFamilyFundAutoTransferReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_commitFamilyFundAutoTransferResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_operUnionBankPayBind" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.BankBindInfo" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_operUnionBankPayBindResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_insertReturnFund" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.ReturnFundIn" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_insertReturnFundResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_getAuthId" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.AuthInfoIn" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_getAuthIdResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_operABCBind" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.ABCBindParamIn" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_operABCBindResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_reSendBill" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.ReSendBillReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_reSendBillResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryBillForFamily" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.QueryBillForFamilyReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_queryBillForFamilyResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryNumBySession" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="session" type="entity" ref="imscnsh.Session" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_queryNumBySessionResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryRefund" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.QueryRefundReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_queryRefundResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryCumulant" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.QueryCumulantIn" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_queryCumulantResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_refundOneTimeAmount" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="oneTimeRefundIn" type="entity" ref="imscnsh.OneTimeRefundIn" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_refundOneTimeAmountResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryOneTimeRefund" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="queryOneTimeRefundReq" type="entity" ref="imscnsh.QueryOneTimeRefundReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_queryOneTimeRefundResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_refundAmount" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="refundAmountReq" type="entity" ref="imscnsh.RefundAmountReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_refundAmountResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_checkIsBind" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="phone_id" type="String" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_checkIsBindResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_checkIsFundTransfer" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="phone_id" type="String" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_checkIsFundTransferResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_paymentByPhoneId" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.PaymentReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_paymentByPhoneIdResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_payFeeForManyMonth" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.DoPayFeeForManyMonthIn" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_payFeeForManyMonthResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_buildGreenChannel" scope="service-only">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.GreenChannelReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_buildGreenChannelResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_cancelReFund" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.DoCancleReFundReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_cancleRefundResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_saveOneTimeFee" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.SaveOneTimeFeeReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_saveOneTimeFeeResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_wlanPayRecord" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.WlanPayParam" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_wlanPayRecordResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryOpInfoByPermissionsExt" scope="service-only">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.PermissionReqExt" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_queryOpInfoByPermisssionsExtResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryPaidBillByGroup" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="acct_id" type="Long" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_queryPaidBillByGroupResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_depositByBankCardBindForSMS" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.DepositByBankCardBindForSMSReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_depositByBankCardBindForSMSResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_transferInfo" scope="service-only">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.Transfer" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_transerInfoResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_getAuthIdByCrm" scope="service-only">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.GetAuthIdReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_getAuthIdByCrmResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryDepositAndPaymentHisInfo" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.QueryInfo" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_queryDepositAndPaymentHisResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_getOpSpecRole" scope="service-only">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="op_id" type="String" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_getOpSpecRoleResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_getUpOrgInfo" scope="service-only">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.UpOrgReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_getUpOrgInfoResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryRetrunFee" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.QueryReturnFeeReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_queryReturnFeeResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_accountBillAdjust" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.AccountBillAdjustReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_accountBillAdjustResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_getClassLogicInfoByCrm" scope="service-only">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_getClassLogicInfoByCrmResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryPreferentials" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="phone_id" type="String" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_queryPreferentialsResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_deletePocket" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.Pocket" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_deletePocketResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryTransRec" scope="service-only">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.QueryTransRecReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_queryTransRecResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_getPPDV2OrderInfo" scope="service-only">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.GetPPDV2OrderInfoReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_getPPDV2OrderInfoResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_commitRefund" scope="service-only">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.CommitRefundReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_commitRefundResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_changePayChannelByCrm" scope="service-only">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.ChangePayChReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_changePayChannelByCrmResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryBankCardBindLimit" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.QueryBankCardBindLimitReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_queryBankCardBindLimitResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_qryChannelByOpId" scope="service-only">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.SQryChannelByOpIdReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_qryChannelByOpIdResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_qrySoNbrExist" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.QrySoNbrExistReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_qrySoNbrExistResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryPosRec" scope="service-only">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="op_id" type="String" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_queryPosRecResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_checkShortInterRoaming" scope="service-only">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="phone_id" type="String" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_checkShortInterRoamingResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_depositBankBindByCut" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.DepositBnakBindByCutIn" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_depositBankBindByCutResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_getDepositeInvo" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.DepositeInvoIn" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_getDepositeInvoResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_terminalBindNewGrade" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.TerminalBindNewGradeReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_terminalBindNewGradeResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_getAcctInfoFromCrm" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.GetAcctInfoFromCRMReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_getAcctInfoFromCRMResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_postPaidPay" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.PostPaidPayReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_postPaidPayResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_adjustBillToCancleGroup" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.AdjustBillToCancleGroupReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_adjustBillToCancleGroupResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryLateFeeCalculator" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.QueryLateFeeCalculatorReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_queryLateFeeCalculatorResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryConsumeSum3MonthAgo" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.QueryConsumeSum3MonthAgoReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_queryConsumeSum3MonthAgoResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_addGroupPrefer" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.AddGroupPreferReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_addGroupPreferResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryPreferItem" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.QueryPreferItemReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_queryPerferItemResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_intSync" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="syncDate" type="Integer" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_intSyncResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryBillInfoForCrm" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.QueryBillInfoForCrmReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_queryBillInfoResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryFreeResAndGprsWlan" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.QueryFreeResAndGprsWlanReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_queryFreeResAndGprsWlanResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryEchannelBillOrderInfo" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="phone_id" type="String" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_queryEchannelBillOrderInfoResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryEchannelBillSendInfo" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.QueryEchannelBillSendInfoReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_queryEchannelBillSendInfoResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryInvoiceBillInfo" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.QueryInvoiceBillInfoReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_queryInvoiceBillInfoResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryAllPhoneDetailBillInfo" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.QueryAllPhoneDetailBillInfoReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_queryAllPhoneDetailBillInfoResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryZDZDepositResult" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.QueryZDZDepositResultReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_queryZDZDepositResultResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_unDepositZDZ" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.DoUnDepositZDZReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_unDepositZDZResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryTieTongInfo" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="phone_id" type="String" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_queryTieTongInfoResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_updateDepositeInvoice" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.UpdateDepositeInvoReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_updateDepositeInvoResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_payFeeForBankBind" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.DoPayFeeForBankBindReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_payFeeForBankBindResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_refundByNTN" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.RefundByNTNReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_refundByNTNResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_insertNotify" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="phone_id" type="String" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_insertNotifyResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_payFeeBankBindDirect" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.PayFeeBankBindDirectReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_payFeeBankBindDirectResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_depositBankBindDirect" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.DepositBankBindDirectReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_depositBankBindDirectResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryServiceHistory" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.QueryServiceHistoryReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_queryServiceHistoryResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_insertUserReopenNotify" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.InsertUserReopenNotifyReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_insertUserReopenNotifyResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryDepositBusi" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.QueryDepositBusiReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_queryDepositBusiResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryAccountPocketDetail" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.QueryAccountPocketDetailReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_queryAccountPocketDetailResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_fetionCoinDeposit" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.FetionCoinDepositReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_fetionCoinDepositResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_fetionCoinDepositCancle" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.FetionCoinDepositCancleReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_fetionCoinDepositCancleResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryGroupInfo" scope="both" not-ws-method="false">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.QueryGroupInfoReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_queryGroupInfoResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryGroupBalance" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.QueryGroupBalanceReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_queryGroupBalanceResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryGroupFundAndBatchDeposit" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.QueryGroupFundAndBatchDepositReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_queryGroupFundAndBatchDepositResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_depositForSvrlPersons" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.DepositForSvrlPersonsReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_depositForSvrlPersonsResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryGroupContactByGroupId" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.QueryGroupContactByGroupIdReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_queryGroupContactByGroupIdResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryUserValidityHisInfo" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="phone_id" type="String" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_queryUserValidityHisInfoResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryGroupAccountInfo" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.QueryGroupAccountInfoReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_queryGroupAccountInfoResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryCalcFeeGPRSResource" scope="both" doc="查询套餐外GPRS流量">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.QryBalance" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_queryCalcFeeResourceResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryMaxDeposit" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.QueryMaxDepositReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_queryDepositBusiResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryDepositByWap" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.QueryDepositWithTypeSeq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_queryDepositBusiResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryPhoneIdByImsi" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="seq" type="entity" ref="imscnsh.QueryPhoneIdByImsiReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_queryPhoneIdByImsiResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_checkConsumeReq" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.ConsumeDealReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_consumeDealResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryPromoAllotInfoForRefund" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="sQueryIn" type="entity" ref="imscnsh.SQueryPromoAllotInfoReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_queryPromoAllotInfoResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryBossItemInfo" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="extend_id" type="Long" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_queryItemInfoResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryBossProductInfo" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="item_name" type="String" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_queryProductInfoResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_getDepositeInvoAndUpdateInvoPocket" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.DepositeInvoIn" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_getDepositeInvoResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_emppSendSms" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.CtcEmaSmsReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_ctcEmaSmsResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryBalanceDtl" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="acct_id" type="Long" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_queryBalanceDtlResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_qryOfferingPriceById" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="offeringId" type="Integer" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_qryOfferingResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryUserStopInfo" scope="both" doc="查询用户停机原因、激活状态等">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imscnsh.QueryUserStopInfoReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_queryUserStopInfoResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryAccountTaxBill" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="accountBillIn" type="entity" ref="imscnsh.AccountBillIn" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_queryAccountBillResponse" collection="none" primitive="false"/>
+    </method>
+    
+     <method name="do_insertSproductOffer" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="sproductOffer" type="entity" ref="imscnsh.SproductOffer" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_insertSproductOfferResponse" collection="none" primitive="false"/>
+    </method>
+    
+     <method name="do_insertSproducts" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="sproducts" type="entity" ref="imscnsh.Sproducts" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_insertSproductsResponse" collection="none" primitive="false"/>
+     </method>
+      <method name="do_deleteSproducts" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="prodId" type="Integer" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_deleteSproductsResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_updateSproducts" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="upSproducts" type="entity" ref="imscnsh.UpdateSproducts" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_updateSproductsResponse" collection="none" primitive="false"/>
+    </method>
+    
+     <method name="do_insertSprodFreers" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="sprodFreers" type="entity" ref="imscnsh.SprodFreers" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_insertSprodFreersResponse" collection="none" primitive="false"/>
+     </method>
+      <method name="do_DeleteSprodFreers" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="delSprodFreers" type="entity" ref="imscnsh.DeleteSprodFreers" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_DeleteSprodFreersResponse" collection="none" primitive="false"/>
+     </method>
+      <method name="do_updateSprodFreers" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="upSprodFreers" type="entity" ref="imscnsh.UpdateSprodFreers" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_UpdateSprodFreersResponse" collection="none" primitive="false"/>
+     </method>
+       <method name="do_insertSplanFreers" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="splanFreers" type="entity" ref="imscnsh.SplanFreers" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_insertSplanFreersResponse" collection="none" primitive="false"/>
+     </method>
+      <method name="do_deleteSplanFreers" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="delSplanFreers" type="entity" ref="imscnsh.DeleteSplanFreers" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_deleteSplanFreersResponse" collection="none" primitive="false"/>
+     </method>
+     <method name="do_updateSplanFreers" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="upSplanFreers" type="entity" ref="imscnsh.UpdateSplanFreers" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_updateSplanFreersResponse" collection="none" primitive="false"/>
+     </method>
+      <method name="do_insertSFreebieUsage" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="sFreebieUsage" type="entity" ref="imscnsh.SFreebieUsage" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_insertSFreebieUsageResponse" collection="none" primitive="false"/>
+     </method>
+     
+     <method name="do_deleteSFreebieUsage" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="delSFreebieUsage" type="entity" ref="imscnsh.DeleteSFreebieUsage" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_DeleteSFreebieUsageResponse" collection="none" primitive="false"/>
+     </method>
+     <method name="do_updateSFreebieUsage" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="upSFreebieUsage" type="entity" ref="imscnsh.UpdateSFreebieUsage" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_updateSFreebieUsageResponse" collection="none" primitive="false"/>
+     </method>
+       <method name="do_insertSfreebieProp" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="sfreebieProp" type="entity" ref="imscnsh.SfreebieProp" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_insertSfreebiePropResponse" collection="none" primitive="false"/>
+     </method>
+     <method name="do_deleteSfreebieProp" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="delSfreebieProp" type="entity" ref="imscnsh.DeleteSfreebieProp" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_deleteSfreebiePropResponse" collection="none" primitive="false"/>
+     </method>
+     <method name="do_updateSfreebieProp" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="upSfreebieProp" type="entity" ref="imscnsh.UpdateSfreebieProp" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_updateSfreebiePropResponse" collection="none" primitive="false"/>
+     </method>
+  </service>
+</module>

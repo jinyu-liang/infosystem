@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="ModifyAcctReq" transient="true">
+  <fields>
+    <field name="outer_acct_id" type="String" isPk="false" primitive="Auto" tree-foreign-key="false" null-able="true"/>
+    <field name="acct_id" type="Long" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="outer_cust_id" type="String" isPk="false" primitive="Auto" tree-foreign-key="false" null-able="true"/>
+    <field name="cust_id" type="Long" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="new_state" type="Short" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="action_date" type="String" isPk="false" tree-foreign-key="false" null-able="true"/>
+  </fields>
+</entity>

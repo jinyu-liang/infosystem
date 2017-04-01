@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="BillDetail" transient="false">
+  <fields>
+    <field name="fee_item" type="Integer" isPk="false" primitive="No" tree-foreign-key="false" null-able="false"/>
+    <field name="unpay_fee" type="Double" isPk="false" tree-foreign-key="false" null-able="false"/>
+    <field name="discount_fee" type="Double" isPk="false" primitive="No" tree-foreign-key="false" null-able="false"/>
+    <field name="adjust_fee" type="Double" isPk="false" primitive="No" tree-foreign-key="false" null-able="false"/>
+    <field name="prim_fee" type="Double" isPk="false" primitive="No" tree-foreign-key="false" null-able="false"/>
+    <field name="phone_id" type="String" isPk="false" primitive="Auto" tree-foreign-key="false" null-able="false"/>
+    <field name="measure_id" type="Integer" isPk="false" tree-foreign-key="false" null-able="true"/>
+  </fields>
+</entity>

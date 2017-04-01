@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/biz.xsd">
+	<service bind-entity="false" name="IIntfshSyncApp" sdl="true" sdl-module="MIntfshSyncApp">
+		<method name="do_insertImmeSmsBySdl" scope="service-only">
+            <return-type type="Integer"/>
+            <parameter collection="none" input="true" name="sOperInfo" output="false" primitive="false" ref="imssdl.SOperInfo" type="entity"/>
+            <parameter collection="list" input="true" name="listImmeSms" output="false" primitive="false" ref="imssdl.SImmeSms" type="entity"/>
+        </method>
+		<method name="do_insertBatchSmsBySdl" scope="service-only">
+            <return-type type="Integer"/>
+            <parameter collection="none" input="true" name="sOperInfo" output="false" primitive="false" ref="imssdl.SOperInfo" type="entity"/>
+            <parameter collection="none" input="true" name="sBatchSmsInfo" output="false" primitive="false" ref="imssdl.SBatchSmsInfo" type="entity"/>
+        </method>
+		<method name="do_queryUserProdList" scope="service-only">
+            <return-type type="Integer"/>
+            <parameter collection="none" input="true" name="sOperInfo" output="false" primitive="false" ref="imssdl.SOperInfo" type="entity"/>
+            <parameter collection="none" input="true" name="sQueryInfo" output="false" primitive="false" ref="imssdl.SQueryInfo" type="entity"/>
+            <parameter collection="list" input="false" name="listProductInfo" output="true" primitive="false" ref="imssdl.SProductInfo" type="entity"/>
+        </method>
+		<method name="do_querySplitByObjectIdBySdl" scope="service-only">
+            <return-type type="Integer"/>
+            <parameter collection="none" input="true" name="sOperInfo" output="false" primitive="false" ref="imssdl.SOperInfo" type="entity"/>
+            <parameter collection="none" input="true" name="sQueryInfo" output="false" primitive="false" ref="imssdl.SQuerySplitRel" type="entity"/>
+            <parameter collection="list" input="false" name="listSplitInfo" output="true" primitive="false" ref="imssdl.SSplitInfo" type="entity"/>
+        </method>
+		<method name="read_userValidity" scope="service-only">
+            <return-type type="Integer"/>
+        </method>
+ 
+		<method name="do_chgGprsService" scope="service-only">
+            <return-type type="Integer"/>
+            <parameter collection="none" input="true" name="sOperInfo" output="false" primitive="false" ref="imssdl.SOperInfo" type="entity"/>
+            <parameter collection="none" input="true" name="sImsServiceNotify" output="false" primitive="false" ref="imssdl.SImsServiceNotify" type="entity"/>
+        </method>
+		<method name="do_irGprsAlarm" scope="service-only">
+            <return-type type="Integer"/>
+            <parameter collection="none" input="true" name="sOperInfo" output="false" primitive="false" ref="imssdl.SOperInfo" type="entity"/>
+            <parameter collection="none" input="true" name="sImsIrGprsAlarm" output="false" primitive="false" ref="imssdl.SImsIrGprsAlarm" type="entity"/>
+        </method>
+		<method name="do_updatePriceParam" scope="service-only">
+            <return-type type="Integer"/>
+            <parameter collection="none" input="true" name="sOperInfo" output="false" primitive="false" ref="imssdl.SOperInfo" type="entity"/>
+            <parameter collection="none" input="true" name="sUpSellingPriceParam" output="false" primitive="false" ref="imssdl.SUpSellingPriceParam" type="entity"/>
+        </method>
+    	<method name="do_localHighChargeInfo" scope="service-only">
+            <return-type type="Integer"/>
+            <parameter collection="none" input="true" name="sOperInfo" output="false" primitive="false" ref="imssdl.SOperInfo" type="entity"/>
+            <parameter collection="list" input="true" name="listChargeInfoList" output="false" primitive="false" ref="imssdl.SLocalHighChargeInfoReq" type="entity"/>
+        </method>
+    	<method name="do_updateProdAndPriceParam" scope="service-only">
+            <return-type type="Integer"/>
+            <parameter collection="none" input="true" name="sOperInfo" output="false" primitive="false" ref="imssdl.SOperInfo" type="entity"/>
+            <parameter collection="none" input="true" name="sUpSellingPriceParam" output="false" primitive="false" ref="imssdl.SUpSellingPriceParam" type="entity"/>
+        </method>
+        <method name="do_updateDiscountPriceParam" scope="service-only">
+            <return-type type="Integer"/>
+            <parameter collection="none" input="true" name="sOperInfo" output="false" primitive="false" ref="imssdl.SOperInfo" type="entity"/>
+            <parameter collection="none" input="true" name="sUpSellingPriceParam" output="false" primitive="false" ref="imssdl.SUpSellingPriceParam" type="entity"/>
+        </method>
+    </service>
+</module>

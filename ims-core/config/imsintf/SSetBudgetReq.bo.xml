@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="SSetBudgetReq" transient="true">
+  <fields>
+    <field name="outer_cust_id" type="String" isPk="false" primitive="Auto" tree-foreign-key="false" null-able="true"/>
+    <field name="cust_id" type="Long" isPk="false" primitive="No" tree-foreign-key="false" null-able="true"/>
+    <field name="outer_acct_id" type="String" isPk="false" primitive="Auto" tree-foreign-key="false" null-able="true"/>
+    <field name="acct_id" type="Long" isPk="false" primitive="No" tree-foreign-key="false" null-able="true"/>
+    <field name="user_id" type="Long" isPk="false" primitive="No" tree-foreign-key="false" null-able="true"/>
+    <field name="phone_id" type="String" isPk="false" primitive="Auto" tree-foreign-key="false" null-able="true"/>
+    <field name="temp_flag" type="Short" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <complex-field name="budget_control_list" type="entity" ref="imsintf.BudgetList" collection="none" primitive="false"/>
+  </fields>
+</entity>

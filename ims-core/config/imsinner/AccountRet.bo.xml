@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="AccountRet">
+  <root ref="imsinner.CustomerRet"/>
+  <fields>
+    <field name="acct_id" type="Long" isPk="false" primitive="Auto" tree-foreign-key="false" null-able="true"/>
+    <field name="prov_code" type="Short" isPk="false" primitive="Auto" tree-foreign-key="false" null-able="true"/>
+    <field name="region_code" type="Short" isPk="false" primitive="Auto" tree-foreign-key="false" null-able="true"/>
+    <field name="parent_acct_id" type="Long" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="acct_name" type="String" isPk="false" primitive="Auto" tree-foreign-key="false" null-able="true"/>
+    <field name="company" type="Short" isPk="false" primitive="Auto" tree-foreign-key="false" null-able="true"/>
+    <field name="acct_type" type="Short" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="acct_class" type="Short" isPk="false" primitive="Auto" tree-foreign-key="false" null-able="true"/>
+    <field name="acct_segment" type="Short" isPk="false" primitive="Auto" tree-foreign-key="false" null-able="true"/>
+    <field name="status" type="Short" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="create_date" type="String" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="valid_date" type="String" isPk="false" primitive="Auto" tree-foreign-key="false" null-able="true"/>
+    <field name="expire_date" type="String" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="credit" type="Double" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="budget" type="Double" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="measure_id" type="Integer" isPk="false" primitive="Auto" tree-foreign-key="false" null-able="true"/>
+    <field name="due_day" type="Short" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="bill_dispatching" type="Short" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="bill_language_id" type="Short" isPk="false" primitive="Auto" tree-foreign-key="false" null-able="true"/>
+    <field name="force_cycle" type="Short" isPk="false" primitive="No" tree-foreign-key="false" null-able="true"/>
+    <field name="balance_type" type="Integer" isPk="false" primitive="No" null-able="true"/>
+    <complex-field name="bill_cycle" type="entity" ref="imsintf.SBillCycle" collection="none" primitive="false"/>
+    <field name="summary_deliver" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="cust_id" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <complex-field name="list_ext_param" type="entity" ref="imsintf.ExtendParamList" collection="none" primitive="false"/>
+    <complex-field name="sAccountContact" type="entity" ref="imsintf.SContact" collection="list" primitive="false"/>
+    <complex-field name="sPayChannelList" type="entity" ref="imsintf.SPayChannelList" collection="none" primitive="false"/>
+    <field name="credit_sign_control" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

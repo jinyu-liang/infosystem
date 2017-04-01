@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="ICreditServ" remark="" schema="JD" table="I_CREDIT_SERV" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="USER_ID" columnDef="Int" isPk="false" name="userId" null-able="true" primitive="No" type="Long"/>
+        <field column="CREDIT_SERV_ID" columnDef="Int" isPk="false" name="creditServId" null-able="true" primitive="No" type="Integer"/>
+        <field column="CREDIT_VALUE" columnDef="Int" isPk="false" name="creditValue" null-able="true" primitive="No" type="Long"/>
+        <field column="LIMIT_TIME" columnDef="Int" isPk="false" name="limitTime" null-able="true" primitive="No" type="Integer"/>
+        <field column="VALID_DATE" columnDef="Date" isPk="false" name="validDate" null-able="true" primitive="No" type="Date"/>
+        <field column="EXPIRE_DATE" columnDef="Date" isPk="false" name="expireDate" null-able="true" primitive="No" type="Date"/>
+        <field column="OPER_TYPE" columnDef="Int" isPk="false" name="operType" null-able="true" primitive="No" type="Integer"/>
+        <field column="SO_NBR" columnDef="Int" isPk="false" name="soNbr" null-able="true" primitive="No" type="Long"/>
+        <field column="COMMIT_DATE" columnDef="Date" isPk="false" name="commitDate" null-able="true" primitive="No" type="Date"/>
+        <field column="REMARK" columnDef="Varchar" columnSize="256" isPk="false" name="remark" null-able="true" primitive="No" type="String"/>
+    </fields>
+</entity>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="RsSlaRef" schema="bd" table="RS_SLA_REF">
+  <fields>
+    <field name="slaRefId" type="Integer" column="SLA_REF_ID" isPk="true(not generated)" primitive="No" null-able="true" columnDef="AutoIncrement"/>
+    <field name="slaType" type="Integer" column="SLA_TYPE" primitive="No" remark="รถพูึตฃบ
+ 1.ฦีอจSLA
+ 2.รโทัืสิดSLA
+ 3.ภผฦมฟSLA" null-able="false" columnDef="Int"/>
+  </fields>
+</entity>

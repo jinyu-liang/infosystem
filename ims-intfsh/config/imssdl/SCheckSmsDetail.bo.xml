@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SCheckSmsDetail" remark="" sdl="true" sdl-module="MIntfshSyncDef" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd">
+    <fields>
+        <field name="blockId" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="smsCode" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="billId" primitive="Yes" remark="" sdl="true" type="String"/>
+        <field name="message" primitive="Yes" remark="" sdl="true" type="String"/>
+        <field name="priorityLevel" primitive="Yes" remark="" sdl="true" type="Integer"/>
+        <field name="sendDate" primitive="Yes" remark="" sdl="true" type="Date"/>
+        <field name="srcAddr" primitive="Yes" remark="" sdl="true" type="String"/>
+        <field name="requestReport" primitive="Yes" remark="" sdl="true" type="Short"/>
+        <field name="doneCode" primitive="Yes" remark="" sdl="true" type="Long"/>
+    </fields>
+</entity>

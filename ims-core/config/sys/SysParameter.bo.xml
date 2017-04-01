@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SysParameter" remark="" schema="sd" table="SYS_PARAMETER" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="PARAM_CODE" columnDef="Varchar" columnSize="32" isPk="true(not generated)" name="paramCode" null-able="false" primitive="No" remark="Parameter code, configured with characters and by users for certain meaning. Some universal parameters are configured by unified configuration." type="String"/>
+        <field column="PARAM_NAME" columnDef="Varchar" columnSize="256" name="paramName" null-able="false" primitive="No" remark="Parameter name" type="String"/>
+        <field column="PARAM_CLASS" columnDef="Int" isPk="true(not generated)" name="paramClass" null-able="false" primitive="No" remark="Parameter class&#10;&#10;Sub systems to which basic system parameters belong:1 －－ Universal system parameter  2 －－ Rating  3 －－ Product Management  4 －－Accounting  5 －－ Accounting Management   6 －－Information Management" type="Integer"/>
+        <field column="SUB_CLASS" columnDef="Int" isPk="true(not generated)" name="subClass" null-able="false" primitive="No" remark="Sub modules defined in each sub system, configured by each module.&#10;" type="Integer"/>
+        <field column="PARAM_DATA_TYPE" columnDef="Int" name="paramDataType" null-able="false" primitive="No" remark="Parameter data types:&#10;0--Default&#10;1--Char&#10;2--Number&#10;3--Boolean&#10;4--Date&#10;5--Long&#10;6--String&#10;7--Double&#10;&#10;Remark: Default 0, analysed and configured by each module." type="Integer"/>
+        <field column="PARAM_VALUE" columnDef="Varchar" columnSize="1024" name="paramValue" null-able="false" primitive="No" remark="Parameter value" type="String"/>
+        <field column="PARAM_DESC" columnDef="Varchar" columnSize="1024" name="paramDesc" primitive="No" remark="Parameter descriptive information, parameter value range or parameter configuration reason is mainly filled in the field" type="String"/>
+        <field column="EXT_CLASS" columnDef="Varchar" columnSize="256" isPk="true(not generated)" name="extClass" null-able="false" primitive="No" remark="" type="String"/>
+    </fields>
+</entity>

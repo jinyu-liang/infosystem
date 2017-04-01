@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="QryPaymentHisIn" transient="true">
+  <fields>
+    <field name="acct_id" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="channel_id" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="phone_id" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="payment_method" type="Short" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="start_date" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="end_date" type="String" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

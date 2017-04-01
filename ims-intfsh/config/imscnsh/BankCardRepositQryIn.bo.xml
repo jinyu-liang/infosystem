@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="BankCardRepositQryIn">
+  <fields>
+    <field name="phone_id" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="card_no" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="begin_date" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="end_date" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="acct_id" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

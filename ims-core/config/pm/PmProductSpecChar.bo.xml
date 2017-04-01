@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="PmProductSpecChar" remark="" schema="pd" table="PM_PRODUCT_SPEC_CHAR" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="SPEC_CHAR_ID" columnDef="AutoIncrement" isPk="true" name="specCharId" primitive="No" remark="A unique identifier for the product specification characteristic.&#10;" type="Integer"/>
+        <field column="NAME" columnDef="Varchar" columnSize="256" name="name" primitive="No" remark="A word, term, or phrase by which the characteristic is known and distinguished from characteristics.&#10;specification character name " type="String"/>
+        <field column="DESCRIPTION" columnDef="Varchar" columnSize="1024" name="description" primitive="No" remark="A narrative that explains the characteristic.&#10;&#10;" type="String"/>
+        <field column="IS_UNIQUE" columnDef="Int" name="isUnique" null-able="false" primitive="No" remark="An indicator that specifies if a value is unique for the specification.&#10;&#10;Possible values are; &quot;unique while value is in effect&quot; and &quot;unique whether value is in effect or not&quot;&#10;enum value：&#10;0：no&#10;1：yes" type="Integer"/>
+        <field column="VALUE_TYPE_ID" columnDef="Int" name="valueTypeId" primitive="No" remark="A kind of value that the characteristic can take on, such as numeric, text, and so forth.&#10;enum：&#10;0：number&#10;1：field&#10;&#10;from PM_ENUM_VALUE_TYPE_DEF&#10;&#10;" type="Integer"/>
+        <field column="MIN_CARDINALITY" columnDef="BigInt" name="minCardinality" primitive="No" remark="The minimum number of instances a CharacteristicValue can take on. For example, zero to five phone numbers in a group calling plan, where zero is the value for the minCardinality.&#10;&#10;&#10;" type="Long"/>
+        <field column="MAX_CARDINALITY" columnDef="BigInt" name="maxCardinality" primitive="No" remark="The maximum number of instances a CharacteristicValue can take on. For example, zero to five phone numbers in a group calling plan, where five is the value for the maxCardinality.&#10;&#10;&#10;" type="Long"/>
+        <field column="IS_EXTENSIBLE" columnDef="Int" name="isExtensible" primitive="No" remark="An indicator that specifies that the values for the characteristic can be extended by adding new values when instantiating a characteristic for an Entity.&#10;&#10;0：can not be extended&#10;1：can be extended&#10;" type="Integer"/>
+        <field column="DERIVATION_FORMULA" columnDef="Varchar" columnSize="1024" name="derivationFormula" primitive="No" remark="A rule or principle represented in symbols, numbers, or letters, often in the form of an equation used to derive the value of a characteristic value.&#10;&#10;&#10;" type="String"/>
+        <field column="IS_CONFIGURABLE" columnDef="Int" name="isConfigurable" primitive="No" remark="Product specification characteristic, such as color, whose may be assigned during the ordering or some other process.&#10;An indicator that specifies that the ProductSpecCharacteristic is configurable or not.&#10;enum：&#10;0：can not configure dynamically&#10;1：configure dynamically&#10;" type="Integer"/>
+        <field column="VALID_DATE" columnDef="TimeStamp" name="validDate" primitive="No" remark="effective date " type="Date"/>
+        <field column="EXPIRE_DATE" columnDef="TimeStamp" name="expireDate" primitive="No" remark="expiring date " type="Date"/>
+    </fields>
+</entity>

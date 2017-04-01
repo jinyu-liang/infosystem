@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="BiBusiAvaible" remark="" schema="ad" table="BI_BUSI_AVAIBLE" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="ID" columnDef="AutoIncrement" isPk="true(not generated)" name="id" primitive="No" remark="" type="Integer"/>
+        <field column="BUSI_PLAN_ID" columnDef="Int" name="busiPlanId" null-able="false" primitive="No" remark="" type="Integer"/>
+        <field column="BRAND_ID" columnDef="Int" name="brandId" null-able="false" primitive="No" remark="" type="Integer"/>
+        <field column="MAIN_PROMOTION" columnDef="Int" name="mainPromotion" null-able="false" primitive="No" remark="" type="Integer"/>
+        <field column="POLICY_ID" columnDef="Int" name="policyId" null-able="false" primitive="No" remark="" type="Integer"/>
+        <field column="REGION_CODE" columnDef="Int" name="regionCode" null-able="false" primitive="No" remark="" type="Integer"/>
+        <field column="CUSTOMER_CLASS" columnDef="Int" name="customerClass" null-able="false" primitive="No" remark="" type="Integer"/>
+        <field column="CUSTOMER_TYPE" columnDef="Int" name="customerType" null-able="false" primitive="No" remark="" type="Integer"/>
+        <field column="CUSTOMER_SEGMENT" columnDef="Int" name="customerSegment" null-able="false" primitive="No" remark="" type="Integer"/>
+        <field column="ACCOUNT_TYPE" columnDef="Int" name="accountType" null-able="false" primitive="No" remark="" type="Integer"/>
+        <field column="BILLING_TYPE" columnDef="Int" name="billingType" null-able="false" primitive="No" remark="" type="Integer"/>
+        <field column="RES_TYPE" columnDef="Int" name="resType" null-able="false" primitive="No" remark="" type="Integer"/>
+        <field column="RES_SEGMENT" columnDef="Int" name="resSegment" null-able="false" primitive="No" remark="" type="Integer"/>
+        <field column="TRIGGER_SERVICE_ID" columnDef="Int" name="triggerServiceId" primitive="No" remark="" type="Integer"/>
+        <field column="OPERATOR_ID" columnDef="Int" name="operatorId" null-able="false" primitive="No" remark="" type="Integer"/>
+        <field column="BALANCE_TYPE" columnDef="Int" name="balanceType" null-able="false" primitive="No" remark="" type="Integer"/>
+    </fields>
+</entity>

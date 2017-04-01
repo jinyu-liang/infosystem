@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SRateValue" remark="" sdl="true" sdl-module="MXdr" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+<fields>
+<field name="chargeItemId" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="chargeUnit" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="resMeasureId" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="rateValue" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="currencyMeasureId" primitive="Yes" remark="" sdl="true" type="Integer"/>
+</fields>
+</entity>

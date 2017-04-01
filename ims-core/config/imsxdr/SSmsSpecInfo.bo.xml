@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SSmsSpecInfo" remark="" sdl="true" sdl-module="MXdr" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+<fields>
+<field name="smsId" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="sccpAddress" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="gateway" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="cfwGateway" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="oppGateway" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="ssr" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="pid" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="dcs" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="retryTimes" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="priorLevel" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="ismgId" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="mocBillType" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="mtcBillType" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="udHi" primitive="Yes" remark="" sdl="true" type="Short"/>
+<field name="udHid" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="udPnum" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="udCurPno" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="smsType" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="oppUserType" primitive="Yes" remark="" sdl="true" type="Integer"/>
+</fields>
+</entity>

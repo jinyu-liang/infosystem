@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="IUserEnterprise" remark="" schema="JD" table="I_USER_ENTERPRISE" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="USER_ID" columnDef="BigInt" name="userId" null-able="false" primitive="No" remark="" type="Long"/>
+        <field column="REGION_CODE" columnDef="Int" name="regionCode" primitive="No" remark="" type="Integer"/>
+        <field column="SP_CODE" columnDef="BigInt" name="spCode" primitive="No" remark="" type="Long"/>
+        <field column="SERVICE_CODE" columnDef="Varchar" columnSize="32" name="serviceCode" primitive="No" remark="" type="String"/>
+        <field column="OPERATOR_CODE" columnDef="Varchar" columnSize="32" name="operatorCode" primitive="No" remark="" type="String"/>
+        <field column="BUSI_TYPE" columnDef="Int" name="busiType" primitive="No" remark="" type="Integer"/>
+        <field column="PROPERTY" columnDef="Varchar" columnSize="20" name="property" primitive="No" remark="" type="String"/>
+        <field column="UNBALANCED_FLAG" columnDef="Int" name="unbalancedFlag" primitive="No" remark="" type="Integer"/>
+        <field column="REPLACE_FLAG" columnDef="Int" name="replaceFlag" primitive="No" remark="" type="Integer"/>
+        <field column="VALID_DATE" columnDef="TimeStamp" name="validDate" null-able="false" primitive="No" remark="" type="Date"/>
+        <field column="EXPIRE_DATE" columnDef="TimeStamp" name="expireDate" null-able="false" primitive="No" remark="" type="Date"/>
+        <field column="OPER_TYPE" columnDef="Int" name="operType" null-able="false" primitive="No" remark="" type="Integer"/>
+        <field column="SO_NBR" columnDef="BigInt" name="soNbr" null-able="false" primitive="No" remark="" type="Long"/>
+        <field column="COMMIT_DATE" columnDef="TimeStamp" name="commitDate" null-able="false" primitive="No" remark="" type="Date"/>
+    </fields>
+</entity>

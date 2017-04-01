@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SImmeSms" remark="" sdl="true" sdl-module="MIntfshSyncDef" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd">
+    <fields>
+        <field name="blockId" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="smsNoticeId" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="doneCode" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="smsCode" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="inModeCode" primitive="Yes" remark="" sdl="true" type="String"/>
+        <field name="smsNetTag" primitive="Yes" remark="" sdl="true" type="String"/>
+        <field name="chanId" primitive="Yes" remark="" sdl="true" type="String"/>
+        <field name="recvObjectType" primitive="Yes" remark="" sdl="true" type="String"/>
+        <field name="recvObject" primitive="Yes" remark="" sdl="true" type="String"/>
+        <field name="recvId" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="noticeContent" primitive="Yes" remark="" sdl="true" type="String"/>
+        <field name="smsTypeCode" primitive="Yes" remark="" sdl="true" type="String"/>
+        <field name="smsKindCode" primitive="Yes" remark="" sdl="true" type="String"/>
+        <field name="forceObject" primitive="Yes" remark="" sdl="true" type="String"/>
+        <field name="forceStartTime" primitive="Yes" remark="" sdl="true" type="Date"/>
+        <field name="forceEndTime" primitive="Yes" remark="" sdl="true" type="Date"/>
+        <field name="smsPriority" primitive="Yes" remark="" sdl="true" type="Integer"/>
+        <field name="referTime" primitive="Yes" remark="" sdl="true" type="Date"/>
+        <field name="remark" primitive="Yes" remark="" sdl="true" type="String"/>
+        <field name="month" primitive="Yes" remark="" sdl="true" type="Short"/>
+        <field name="day" primitive="Yes" remark="" sdl="true" type="Short"/>
+    </fields>
+</entity>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="CaCycleSpecIn">
+  <fields>
+    <field name="cycleType" type="Short" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="cycleUnit" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="startBillDay" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="acctId" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

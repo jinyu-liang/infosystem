@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="PmPayforRegulation" remark="" table="PM_PAYFOR_REGULATION" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="PRICE_RULE_ID" columnDef="AutoIncrement" isPk="true(not generated)" name="priceRuleId" null-able="false" primitive="Auto" type="Integer"/>
+        <field column="REGULATION_SPEC_ID" columnDef="Int" isPk="false" name="regulationSpecId" null-able="true" primitive="Auto" type="Integer"/>
+        <field column="PAYFOR_TYPE" columnDef="Int" isPk="false" name="payforType" null-able="true" primitive="Auto" type="Integer"/>
+        <field column="USE_MODE" columnDef="Int" isPk="false" name="useMode" null-able="true" primitive="Auto" type="Integer"/>
+        <field column="STATE" columnDef="Int" isPk="false" name="state" null-able="true" primitive="Auto" type="Integer"/>
+        <field column="VALID_MODE" columnDef="Int" isPk="false" name="validMode" null-able="true" primitive="Auto" type="Integer"/>
+        <field column="EXPIRE_MODE" columnDef="Int" isPk="false" name="expireMode" null-able="true" primitive="Auto" type="Integer"/>
+        <field column="PAYMENT_TYPE" columnDef="Int" isPk="false" name="paymentType" null-able="true" primitive="Auto" type="Integer"/>
+        <field column="VALID_DATE" columnDef="Date" isPk="false" name="validDate" null-able="true" primitive="Auto" type="Date"/>
+        <field column="EXPIRE_DATE" columnDef="Date" isPk="false" name="expireDate" null-able="true" primitive="Auto" type="Date"/>
+    </fields>
+</entity>

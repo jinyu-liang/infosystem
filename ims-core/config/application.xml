@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  context-prefix="ims_core_"
+	xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/application.xsd">
+	
+	<!-- 配置所有Java类的基础包名，所有实体、Action、Service、DAO都在这个基础上生成 -->
+	<java base-package="com.ailk.openbilling" generate-param-annotation-for-all="true"/>
+
+	<sdlFtp host="10.10.12.162" user="wengjian" pass="123qwe" path="/data02/OBGRP/ob60/ob_rel/idl/rating_billing/rating" />
+</application>

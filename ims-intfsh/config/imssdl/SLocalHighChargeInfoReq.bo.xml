@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SLocalHighChargeInfoReq" remark="" sdl="true" sdl-module="MIntfshSyncDef" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+    <fields>
+        <field name="drType" primitive="Yes" remark="" sdl="true" type="String"/>
+        <field name="highDate" primitive="Yes" remark="" sdl="true" type="String"/>
+        <field name="imsiMin" primitive="Yes" remark="" sdl="true" type="String"/>
+        <field name="userNumber" primitive="Yes" remark="" sdl="true" type="String"/>
+        <field name="highType" primitive="Yes" remark="" sdl="true" type="Short"/>
+        <field name="userType" primitive="Yes" remark="" sdl="true" type="String"/>
+        <field name="totalFee" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="totalNum" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="totalTime" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="provCode" primitive="Yes" remark="" sdl="true" type="String"/>
+        <field name="homeAreaCode" primitive="Yes" remark="" sdl="true" type="String"/>
+        <field name="visitAreaCode" primitive="Yes" remark="" sdl="true" type="String"/>
+        <field name="startTime" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="endTime" primitive="Yes" remark="" sdl="true" type="Long"/>
+    </fields>
+</entity>

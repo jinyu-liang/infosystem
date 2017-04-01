@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="BillCycleOut">
+  <fields>
+    <field name="endate" type="Date" isPk="false" primitive="Auto" null-able="true" enumAsAliasField="false"/>
+    <field name="billday" type="Integer" isPk="false" primitive="Auto" null-able="true" enumAsAliasField="false"/>
+    <field name="accountsts" type="Short" isPk="false" primitive="Auto" null-able="true" enumAsAliasField="false"/>
+    <field name="expiredate" type="Date" isPk="false" primitive="Auto" null-able="true" enumAsAliasField="false"/>
+    <field name="billPlanId" type="Long" isPk="false" primitive="Auto" null-able="true" enumAsAliasField="false"/>
+    <field name="name" type="String" isPk="false" primitive="Auto" null-able="true" enumAsAliasField="false"/>
+    <field name="createDate" type="Date" isPk="false" primitive="Auto" null-able="true" enumAsAliasField="false"/>
+    <field name="paymentPlanId" type="Long" isPk="false" primitive="Auto" null-able="true" enumAsAliasField="false"/>
+    <field name="startdate" type="Date" isPk="false" primitive="Auto" null-able="true" enumAsAliasField="false"/>
+    <field name="acctId" type="Long" isPk="false" primitive="Auto" null-able="true" enumAsAliasField="false"/>
+    <field name="validate" type="Date" isPk="false" primitive="Auto" null-able="true" enumAsAliasField="false"/>
+    <field name="cycleSpecId" type="Long" isPk="false" primitive="Auto" null-able="true" enumAsAliasField="false"/>
+    <field name="accountClass" type="Integer" isPk="false" primitive="Auto" null-able="true" enumAsAliasField="false"/>
+    <field name="so_date" type="Date" isPk="false" primitive="Auto" null-able="true" enumAsAliasField="false"/>
+    <field name="billFormatId" type="Integer" isPk="false" primitive="Auto" null-able="true" enumAsAliasField="false"/>
+    <field name="rangSpecId" type="Integer" isPk="false" primitive="Auto" null-able="true" enumAsAliasField="false"/>
+  </fields>
+</entity>

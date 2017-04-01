@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="ImsManualModify" schema="JD" table="IMS_MANUAL_MODIFY">
+  <fields>
+    <field name="seqId" type="Long" column="SEQ_ID" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="custId" type="Long" column="CUST_ID" primitive="No" null-able="false" columnDef="Int"/>
+    <field name="acctId" type="Long" column="ACCT_ID" primitive="No" null-able="false" columnDef="Int"/>
+    <field name="userId" type="Long" column="USER_ID" primitive="No" null-able="false" columnDef="Int"/>
+    <field name="prodId" type="Long" column="PROD_ID" primitive="No" null-able="false" columnDef="Int"/>
+    <field name="upField" type="String" column="UP_FIELD" primitive="No" remark="64位串，每一位代表对应的接口表（注：次序从左到右，如abcd，a表示第一位，b表示第二位，以此类推。如果a=0，表示a对应的表没有记录发生修改，如果a=1，表示表记录变更） " null-able="true" columnDef="Varchar" columnSize="64"/>
+    <field name="soDate" type="Date" column="SO_DATE" primitive="No" remark="记录生成时间" null-able="true" columnDef="Date"/>
+  </fields>
+</entity>

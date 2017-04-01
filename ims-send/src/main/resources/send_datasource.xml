@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:context="http://www.springframework.org/schema/context"	
+	xmlns:cache="http://www.springframework.org/schema/cache"
+	xmlns:jee="http://www.springframework.org/schema/jee"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
+	http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+	http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd	
+	http://www.springframework.org/schema/cache 
+	http://www.springframework.org/schema/cache/spring-cache.xsd
+	http://www.springframework.org/schema/jee
+	http://www.springframework.org/schema/jee/spring-jee-3.0.xsd
+	http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd">
+
+	<bean id="dataSource" class="org.enhydra.jdbc.standard.StandardXADataSource">
+		<property name="transactionManager" ref="jotm" />
+		<property name="driverName" value="oracle.jdbc.driver.OracleDriver" />
+		<property name="url" value="jdbc:oracle:thin:@10.10.142.243:1521:shzw1" />
+		<property name="user" value="ob60" />
+		<property name="password" value="234d266de7107407" />
+	</bean>
+	<bean id="dataSource2" class="org.enhydra.jdbc.standard.StandardXADataSource">
+		<property name="transactionManager" ref="jotm" />
+		<property name="driverName" value="oracle.jdbc.driver.OracleDriver" />
+		<property name="url" value="jdbc:oracle:thin:@10.10.142.224:1521:cswwjk" />
+		<property name="user" value="uop_uec" />
+		<property name="password" value="7fdc9a1947d75d7a" />
+	</bean>
+	<util:map id="backupDataSources">		
+		<entry key="billing_db" value-ref="dataSource" />
+		<entry key="entityManagerFactory4Crm" value-ref="dataSource2" />
+	</util:map>	
+	<util:map id="extDataSources">		
+	</util:map>	
+	<!--
+	<bean id="dataSource" class="org.enhydra.jdbc.pool.StandardXAPoolDataSource" destroy-method="shutdown">
+		<property name="dataSource">
+			<bean class="org.enhydra.jdbc.standard.StandardXADataSource">
+				<property name="transactionManager" ref="jotm" />
+				<property name="driverName" value="oracle.jdbc.driver.OracleDriver" />
+				<property name="url" value="jdbc:oracle:thin:@10.10.142.243:1521:shzw1" />
+				<property name="user" value="ob60" />
+				<property name="password" value="234d266de7107407" />
+			</bean>
+		</property>	
+		<property name="user" value="ob60" />
+		<property name="password" value="234d266de7107407" />	
+	</bean>
+
+	<bean id="dataSource2" class="org.enhydra.jdbc.pool.StandardXAPoolDataSource" destroy-method="shutdown">
+		<property name="dataSource">
+			<bean class="org.enhydra.jdbc.standard.StandardXADataSource">
+				<property name="transactionManager" ref="jotm" />
+				<property name="driverName" value="oracle.jdbc.driver.OracleDriver" />
+				<property name="url" value="jdbc:oracle:thin:@10.10.142.224:1521:cswwjk" />
+				<property name="user" value="uop_uec" />
+				<property name="password" value="7fdc9a1947d75d7a" />
+			</bean>
+		</property>	
+		<property name="user" value="uop_uec" />
+		<property name="password" value="7fdc9a1947d75d7a" />	
+	</bean>
+	<util:map id="backupDataSources">		
+		<entry key="billing_db" value-ref="dataSource" />
+		<entry key="entityManagerFactory4Crm" value-ref="dataSource2" />
+	</util:map>	
+	<util:map id="extDataSources">		
+	</util:map>	
+	<bean id="entityManagerFactory" class="jef.database.DbClientFactory">
+		<constructor-arg index="0">
+			<ref bean="dataSource" />
+		</constructor-arg>
+		<constructor-arg type="boolean" index="1">
+			<value>true</value>
+		</constructor-arg>
+		<property name="name" value="billing_db"/>
+	</bean>
+	<bean id="entityManagerFactory4Crm" class="jef.database.DbClientFactory">
+		<constructor-arg index="0">
+			<ref bean="dataSource2" />
+		</constructor-arg>
+		<constructor-arg type="boolean" index="1">
+			<value>true</value>
+		</constructor-arg>
+		<property name="name" value="entityManagerFactory4Crm"/>
+	</bean>
+	-->
+	<!--
+	<bean id="dataSource_route" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"/>
+		<property name="url" value="jdbc:oracle:thin:@10.10.142.243:1521:shzw1"/>
+		<property name="username" value="ob60"/>
+		<property name="password" value="234d266de7107407"/>
+	</bean>
+	<bean id="entityManagerFactory" class="jef.database.DbClientFactory">
+		<constructor-arg index="0">
+			<ref bean="dataSource" />
+		</constructor-arg>
+		<constructor-arg type="boolean" index="1">
+			<value>true</value>
+		</constructor-arg>
+		<property name="name" value="billing_db"/>
+	</bean>
+	<bean id="entityManagerFactory2" class="jef.database.DbClientFactory">
+		<constructor-arg index="0">
+			<ref bean="dataSource2" />
+		</constructor-arg>
+		<constructor-arg type="boolean" index="1">
+			<value>true</value>
+		</constructor-arg>
+		<property name="name" value="crmDataSource"/>
+	</bean>
+
+	<bean id="ORACLE_PUBLIC_DBM" class="jef.database.DbClientFactory">
+		<constructor-arg>
+			<ref bean="dataSource_route"/>
+		</constructor-arg>
+		<property name="name" value="ORACLE_PUBLIC_DBM"/>
+	</bean>
+	-->
+</beans>

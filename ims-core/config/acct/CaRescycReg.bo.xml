@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="CaRescycReg" remark="" schema="AD" table="CA_RESCYC_REG" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="SO_NBR" columnDef="Int" isPk="true(not generated)" name="soNbr" null-able="false" primitive="No" remark="" type="Long"/>
+        <field column="PVALID_DATE" columnDef="Date" name="pvalidDate" null-able="false" primitive="No" remark="" type="Date"/>
+        <field column="PEXPIRE_DATE" columnDef="Date" name="pexpireDate" null-able="false" primitive="No" remark="" type="Date"/>
+        <field column="NVALID_DATE" columnDef="Date" name="nvalidDate" null-able="false" primitive="No" remark="" type="Date"/>
+        <field column="NEXPIRE_DATE" columnDef="Date" name="nexpireDate" null-able="false" primitive="No" remark="" type="Date"/>
+        <field column="RESOURCE_ID" columnDef="Int" isPk="true(not generated)" name="resourceId" null-able="false" primitive="No" remark="" type="Long"/>
+        <field column="PSTS" columnDef="Int" name="psts" primitive="No" remark="" type="Integer"/>
+        <field column="NSTS" columnDef="Int" name="nsts" primitive="No" remark="" type="Integer"/>
+        <field column="UN_SO_NBR" columnDef="Int" name="unSoNbr" primitive="No" remark="" type="Long"/>
+        <field column="DEAL_DATE" columnDef="Date" name="dealDate" primitive="No" remark="" type="Date"/>
+        <field column="UN_DEAL_DATE" columnDef="Date" name="unDealDate" primitive="No" remark="" type="Date"/>
+        <field column="VALID_DATE" columnDef="Date" isPk="true(not generated)" name="validDate" null-able="false" primitive="No" remark="" type="Date"/>
+        <field column="EXPIRE_DATE" columnDef="Date" name="expireDate" primitive="No" remark="" type="Date"/>
+        <field column="CREATE_DATE" columnDef="Date" name="createDate" null-able="false" primitive="No" remark="" type="Date"/>
+        <field column="SO_DATE" columnDef="Date" name="soDate" primitive="No" remark="" type="Date"/>
+        <field column="OLD_SUSPEND_STOP_DATE" columnDef="Date" name="oldSuspendStopDate" primitive="No" remark="" type="Date"/>
+        <field column="OLD_DISABLE_STOP_DATE" columnDef="Date" name="oldDisableStopDate" primitive="No" remark="" type="Date"/>
+        <field column="NEW_SUSPEND_STOP_DATE" columnDef="Date" name="newSuspendStopDate" primitive="No" remark="" type="Date"/>
+        <field column="NEW_DISABLE_STOP_DATE" columnDef="Date" name="newDisableStopDate" primitive="No" remark="" type="Date"/>
+    </fields>
+</entity>

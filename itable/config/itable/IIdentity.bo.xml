@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" columnNameMapToFieldName="false" dbType="oracle" name="IIdentity" remark="" schema="jd" 
+	no-dao-class="true" table="I_IDENTITY" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="USER_ID" columnDef="Int" isPk="false" name="userId" null-able="true" primitive="Auto" type="Long"/>
+        <field column="PHONE_ID" columnDef="Varchar"  columnSize="28" isPk="false" name="phoneId" null-able="true" primitive="Auto" type="String"/>
+        <field column="IMSI" columnDef="Varchar"  columnSize="64" isPk="false" name="imsi" null-able="true" primitive="Auto" type="String"/>
+        <field column="VALID_DATE" columnDef="Date" isPk="false" name="validDate" null-able="true" primitive="Auto" type="Date"/>
+        <field column="EXPIRE_DATE" columnDef="Date" isPk="false" name="expireDate" null-able="true" primitive="Auto" type="Date"/>
+        <field column="OPER_TYPE" columnDef="Int" isPk="false" name="operType" null-able="true" primitive="Auto" type="Integer"/>
+        <field column="SO_NBR" columnDef="Int" isPk="false" name="soNbr" null-able="true" primitive="Auto" type="Long"/>
+        <field column="COMMIT_DATE" columnDef="Date" isPk="false" name="commitDate" null-able="true" primitive="Auto" type="Date"/>
+    </fields>
+</entity>

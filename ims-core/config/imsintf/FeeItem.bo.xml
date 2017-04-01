@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="FeeItem" transient="true">
+  <fields>
+    <field name="order_type" type="Short" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="item_code" type="Long" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="cost_code" type="Integer" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="charge_type" type="Short" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="amount" type="Double" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="bill_type" type="Integer" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="so_onetime_id" type="Long" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="onetime_seq" type="Long" isPk="false" primitive="Auto" tree-foreign-key="false" null-able="true"/>
+    <field name="remark" type="String" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="measure_id" type="Integer" isPk="false" tree-foreign-key="false" null-able="true"/>
+  </fields>
+</entity>

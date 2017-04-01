@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="IDataIndexCreditErr" schema="JD" table="I_DATA_INDEX_CREDIT_ERR">
+  <fields>
+    <field name="custId" type="Long" column="CUST_ID" primitive="No" null-able="true" columnDef="BigInt"/>
+    <field name="acctId" type="Long" column="ACCT_ID" primitive="No" null-able="true" columnDef="BigInt"/>
+    <field name="userId" type="Long" column="USER_ID" primitive="No" null-able="true" columnDef="BigInt"/>
+    <field name="upField" type="String" column="UP_FIELD" primitive="No" null-able="true" columnDef="Varchar" columnSize="64"/>
+    <field name="regionCode" type="Integer" column="REGION_CODE" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="countyCode" type="Integer" column="COUNTY_CODE" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="commitDate" type="Date" column="COMMIT_DATE" primitive="No" null-able="true" columnDef="Date"/>
+    <field name="soNbr" type="Long" column="SO_NBR" primitive="No" null-able="true" columnDef="BigInt"/>
+    <field name="doneCode" type="Long" column="DONE_CODE" primitive="No" null-able="true" columnDef="BigInt"/>
+    <field name="dealDate" type="Date" column="DEAL_DATE" primitive="No" null-able="true" columnDef="Date"/>
+    <field name="errorCode" type="Long" column="ERROR_CODE" primitive="No" null-able="true" columnDef="BigInt"/>
+    <field name="errorMsg" type="String" column="ERROR_MSG" primitive="No" null-able="true" columnDef="Varchar" columnSize="255"/>
+    <field name="remark" type="String" column="REMARK" primitive="No" null-able="true" columnDef="Varchar" columnSize="255"/>
+    <field name="busiCode" type="Long" column="BUSI_CODE" primitive="No" null-able="false" columnDef="BigInt"/>
+  </fields>
+</entity>

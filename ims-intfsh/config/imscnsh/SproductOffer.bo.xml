@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="SproductOffer">
+  <fields>
+    <field name="id" type="Integer" column="ID" isPk="true(not generated)" primitive="Auto" null-able="false" columnDef="AutoIncrement"/>
+    <field name="operatorCode" type="String" column="OPERATOR_CODE" isPk="false" primitive="Auto" null-able="true" columnDef="Varchar" columnSize="32"/>
+    <field name="imsiHead" type="String" column="IMSI_HEAD" isPk="false" primitive="Auto" null-able="true" columnDef="Varchar" columnSize="15"/>
+    <field name="englishName" type="String" column="ENGLISH_NAME" isPk="false" primitive="Auto" null-able="true" columnDef="Varchar" columnSize="256"/>
+    <field name="countryId" type="Integer" column="COUNTRY_ID" isPk="false" primitive="Auto" null-able="true" columnDef="Int"/>
+    <field name="provCode" type="Integer" column="PROV_CODE" isPk="false" primitive="Auto" null-able="true" columnDef="Int"/>
+    <field name="tapVersion" type="Integer" column="TAP_VERSION" isPk="false" primitive="Auto" null-able="true" columnDef="Int"/>
+    <field name="tapRelease" type="Integer" column="TAP_RELEASE" isPk="false" primitive="Auto" null-able="true" columnDef="Int"/>
+    <field name="tapDecimalPlaces" type="Integer" column="TAP_DECIMAL_PLACES" isPk="false" primitive="Auto" null-able="true" columnDef="Int"/>
+    <field name="taxTreatment" type="Integer" column="TAX_TREATMENT" isPk="false" primitive="Auto" null-able="true" columnDef="Int"/>
+    <field name="taxRate" type="Long" column="TAX_RATE" isPk="false" primitive="Auto" null-able="true" columnDef="Int"/>
+    <field name="measureTypeId" type="Integer" column="MEASURE_TYPE_ID" isPk="false" primitive="Auto" null-able="true" columnDef="Int"/>
+    <field name="reportErrorType" type="Integer" column="REPORT_ERROR_TYPE" isPk="false" primitive="Auto" null-able="true" columnDef="Int"/>
+    <field name="timeZoneId" type="Integer" column="TIME_ZONE_ID" isPk="false" primitive="Auto" null-able="true" columnDef="Int"/>
+    <field name="networkStatement" type="String" column="NETWORK_STATEMENT" isPk="false" primitive="Auto" null-able="true" columnDef="Varchar" columnSize="512"/>
+    <field name="validDate" type="Date" column="VALID_DATE" isPk="false" primitive="Auto" null-able="true" columnDef="Date"/>
+    <field name="expireDate" type="Date" column="EXPIRE_DATE" isPk="false" primitive="Auto" null-able="true" columnDef="Date"/>
+    <field name="modifyDate" type="Date" column="MODIFY_DATE" isPk="false" primitive="Auto" null-able="true" columnDef="Date"/>
+    <field name="description" type="String" column="DESCRIPTION" isPk="false" primitive="Auto" null-able="true" columnDef="Varchar" columnSize="1024"/>
+  </fields>
+</entity>

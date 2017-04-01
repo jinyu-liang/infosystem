@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="UpPostsectReqList">
+  <fields>
+    <complex-field name="upPostsectReqList_item" type="entity" ref="imscnsh.UpPostsectReq" collection="array" primitive="false"/>
+  </fields>
+</entity>

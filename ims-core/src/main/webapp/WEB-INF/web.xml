@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.4" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee  http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+
+	
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>classpath:META-INF/ims_core_applicationContext.xml</param-value>
+	</context-param>
+	<context-param>
+		<param-name>anonymousAccessModule</param-name>
+		<param-value>login,anonymous</param-value>
+	</context-param>
+
+	
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+	<listener>
+		<listener-class>org.springframework.web.util.IntrospectorCleanupListener</listener-class>
+	</listener>
+
+
+	<servlet>
+		<servlet-name>log4jLoader</servlet-name>
+		<servlet-class>com.ailk.easyframe.web.servlet.Log4jInit</servlet-class>
+		<init-param>
+			<param-name>log4j</param-name>
+			<param-value>classpath:log4j.properties</param-value>
+		</init-param>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	
+	
+	<servlet>
+		<servlet-name>Dispatcher</servlet-name>
+		<servlet-class>com.ailk.easyframe.web.action.ActionDispatcher</servlet-class>
+		<load-on-startup>2</load-on-startup>
+	</servlet>
+
+
+	
+	<servlet>  
+		<servlet-name>WebServiceServlet</servlet-name>  
+		<servlet-class>com.ailk.easyframe.ws.WSServlet</servlet-class>
+		<init-param>
+			<param-name>trace</param-name>
+			<param-value>true</param-value>
+			
+		</init-param>
+		<init-param>
+			<param-name>handlerClass</param-name>
+			<param-value/>
+			
+		</init-param>
+	</servlet>  
+	<servlet-mapping>  
+		<servlet-name>WebServiceServlet</servlet-name>  
+		<url-pattern>/ws/*</url-pattern>  
+	</servlet-mapping>  
+
+	<servlet-mapping>
+		<servlet-name>Dispatcher</servlet-name>
+		<url-pattern>*.go</url-pattern>
+	</servlet-mapping>
+
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+	<filter>
+		<filter-name>AilkSessionFilter</filter-name>
+		<filter-class>com.ailk.easyframe.web.common.session.AilkSessionFilter</filter-class>
+		<init-param>
+			<param-name>enableMonitorLog</param-name>
+			<param-value>true</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>AilkSessionFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+		<dispatcher>FORWARD</dispatcher>
+		<dispatcher>INCLUDE</dispatcher>
+		<dispatcher>REQUEST</dispatcher>
+		<dispatcher>ERROR</dispatcher>
+	</filter-mapping>
+	
+	<filter>
+		<filter-name>CompressedResourceFilter</filter-name>
+		<filter-class>com.ailk.easyframe.web.common.session.CompressedResourceFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>CompressedResourceFilter</filter-name>
+		<url-pattern>*.gzjs</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>CompressedResourceFilter</filter-name>
+		<url-pattern>*.gzcss</url-pattern>
+	</filter-mapping>
+	
+</web-app>

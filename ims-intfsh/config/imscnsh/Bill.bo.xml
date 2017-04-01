@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="Bill" transient="true">
+  <fields>
+    <field name="bill_no" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="resource_id" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="acct_id" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="default_acct_id" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="bill_fee" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="unpay_fee" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="ppy_fee" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="bill_month" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="create_date" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="begin_date" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="end_date" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="sts" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="sts_date" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="due_date" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="billing_type" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="measure_id" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="is_real" type="Short" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="region_code" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <complex-field name="listBillItems" type="entity" ref="imscnsh.CaBillItem" collection="list" primitive="false"/>
+  </fields>
+</entity>

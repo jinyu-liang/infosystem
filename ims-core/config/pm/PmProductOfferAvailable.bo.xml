@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="PmProductOfferAvailable" remark="" schema="PD" table="PM_PRODUCT_OFFER_AVAILABLE" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="PRODUCT_OFFERING_ID" columnDef="Int" isPk="true(not generated)" name="productOfferingId" null-able="false" primitive="No" remark="A unique identifier for the product offering.&#10;&#10;" type="Integer"/>
+        <field column="REGION_CODE" columnDef="Int" isPk="true(not generated)" name="regionCode" null-able="false" primitive="No" remark="region code（2-level region code）" type="Integer"/>
+        <field column="CUSTOMER_SEGMENT" columnDef="Int" isPk="true(not generated)" name="customerSegment" null-able="false" primitive="No" remark="&quot;Compare to other customers's rank&#10;（similar to Telecom's VipFlag）&#10;such as: gold card user, sliver card user.etc&#10;&#10;0：common user&#10;1：diamond user&#10;2： gold card user&#10;3：sliver card user.&#10;4：VIP card user&#10;5：common card user" type="Integer"/>
+        <field column="ORDER_CHANNEL" columnDef="Int" isPk="true(not generated)" name="orderChannel" null-able="false" primitive="No" remark="transact channel" type="Integer"/>
+        <field column="VALID_DATE" columnDef="TimeStamp" name="validDate" primitive="No" remark="effective date " type="Date"/>
+        <field column="EXPIRE_DATE" columnDef="TimeStamp" name="expireDate" primitive="No" remark="expiring date " type="Date"/>
+    </fields>
+</entity>

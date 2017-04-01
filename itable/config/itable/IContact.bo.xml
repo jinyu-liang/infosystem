@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="IContact" remark="" schema="JD" table="I_CONTACT" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="CUST_ID" columnDef="Int" isPk="false" name="custId" null-able="true" primitive="No" type="Long"/>
+        <field column="ACCT_ID" columnDef="Int" isPk="false" name="acctId" null-able="true" primitive="No" type="Long"/>
+        <field column="USER_ID" columnDef="Int" isPk="false" name="userId" null-able="true" primitive="No" type="Long"/>
+        <field column="CONTACT_TYPE" columnDef="Int" isPk="false" name="contactType" null-able="true" primitive="No" type="Integer"/>
+        <field column="CONTACT_NAME" columnDef="Varchar" columnSize="255" isPk="false" name="contactName" null-able="true" primitive="No" type="String"/>
+        <field column="MOBILE_PHONE" columnDef="Varchar" columnSize="32" isPk="false" name="mobilePhone" null-able="true" primitive="No" type="String"/>
+        <field column="HOME_PHONE" columnDef="Varchar" columnSize="20" isPk="false" name="homePhone" null-able="true" primitive="No" type="String"/>
+        <field column="COUNTRY_ID" columnDef="Int" isPk="false" name="countryId" null-able="true" primitive="No" type="Integer"/>
+        <field column="PROV_CODE" columnDef="Int" isPk="false" name="provCode" null-able="true" primitive="No" type="Integer"/>
+        <field column="REGION_CODE" columnDef="Int" isPk="false" name="regionCode" null-able="true" primitive="No" type="Integer"/>
+        <field column="OFFICE_PHONE" columnDef="Varchar" columnSize="20" isPk="false" name="officePhone" null-able="true" primitive="No" type="String"/>
+        <field column="FAX" columnDef="Varchar" columnSize="64" isPk="false" name="fax" null-able="true" primitive="No" type="String"/>
+        <field column="EMAIL" columnDef="Varchar" columnSize="255" isPk="false" name="email" null-able="true" primitive="No" type="String"/>
+        <field column="POST_CODE" columnDef="Varchar" columnSize="512" isPk="false" name="postCode" null-able="true" primitive="No" type="String"/>
+        <field column="ADDRESS" columnDef="Varchar" columnSize="512" isPk="false" name="address" null-able="true" primitive="No" type="String"/>
+        <field column="OPER_TYPE" columnDef="Int" isPk="false" name="operType" null-able="true" primitive="No" type="Integer"/>
+        <field column="SO_NBR" columnDef="Int" isPk="false" name="soNbr" null-able="true" primitive="No" type="Long"/>
+        <field column="COMMIT_DATE" columnDef="Date" isPk="false" name="commitDate" null-able="true" primitive="No" type="Date"/>
+        <field column="VALID_DATE" columnDef="Date" isPk="false" name="validDate" null-able="true" primitive="No" type="Date"/>
+        <field column="EXPIRE_DATE" columnDef="Date" isPk="false" name="expireDate" null-able="true" primitive="No" type="Date"/>
+    </fields>
+</entity>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="SQueryParam">
+  <fields>
+    <field name="outer_acct_id" type="String" isPk="false" primitive="Auto" tree-foreign-key="false" null-able="true"/>
+    <field name="acct_id" type="Long" isPk="false" primitive="No" null-able="true"/>
+    <field name="user_id" type="Long" isPk="false" primitive="No" null-able="true"/>
+    <field name="phone_id" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="product_id" type="Long" isPk="false" primitive="No" null-able="true"/>
+    <field name="invoice_no" type="String" isPk="false" primitive="No" null-able="true"/>
+    <field name="start_date" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="end_date" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="owner_type" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="query_level" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="new_main_promotion" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="busi_spec_id" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="channel" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="cycle_flag" type="Integer" isPk="false" primitive="No" null-able="true"/>
+  </fields>
+</entity>

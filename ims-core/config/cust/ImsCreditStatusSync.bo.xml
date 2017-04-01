@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="ImsCreditStatusSync" remark="" schema="cd" table="IMS_CREDIT_STATUS_SYNC" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="ID" columnDef="AutoIncrement" isPk="true" name="id" primitive="No" remark="??" type="Long"/>
+        <field column="PHONE_ID" columnDef="Varchar" columnSize="64" name="phoneId" null-able="false" primitive="No" remark="PHONE_ID" type="String"/>
+        <field column="FLAG" columnDef="Int" name="flag" null-able="false" primitive="No" remark="FLAG" type="Integer"/>
+        <field column="OLD_STATUS" columnDef="Int" name="oldStatus" primitive="No" remark="OLD_STATUS" type="Integer"/>
+        <field column="OLD_SUB_TYPE" columnDef="Int" name="oldSubType" primitive="No" remark="OLD_SUB_TYPE" type="Integer"/>
+        <field column="NEW_STATUS" columnDef="Int" name="newStatus" primitive="No" remark="NEW_STATUS" type="Integer"/>
+        <field column="NEW_SUB_TYPE" columnDef="Int" name="newSubType" primitive="No" remark="NEW_SUB_TYPE" type="Integer"/>
+        <field column="CREDIT_LIMIT" columnDef="Int" name="creditLimit" primitive="No" remark="CREDIT_LIMIT" type="Long"/>
+        <field column="TEMP_CREDIT_LIMIT" columnDef="Int" name="tempCreditLimit" primitive="No" remark="TEMP_CREDIT_LIMIT" type="Long"/>
+        <field column="OVER_USAGE" columnDef="Int" name="overUsage" primitive="No" remark="OVER_USAGE" type="Long"/>
+        <field column="TRIGGER_DATE" columnDef="Date" name="triggerDate" primitive="No" remark="TRIGGER_DATE" type="Date"/>
+        <field column="SO_NBR" columnDef="Int" name="soNbr" null-able="false" primitive="No" remark="SO_NBR" type="Long"/>
+        <field column="CREATE_DATE" columnDef="Date" name="createDate" null-able="false" primitive="No" remark="????" type="Date"/>
+        <field column="STS" columnDef="Int" name="sts" null-able="false" primitive="No" remark="????" type="Integer"/>
+        <field column="ERROR_MSG" columnDef="Varchar" columnSize="256" name="errorMsg" primitive="No" remark="" type="String"/>
+        <field column="ERROR_CODE" columnDef="Int" name="errorCode" primitive="No" remark="" type="Integer"/>
+        <field column="DEAL_COUNT" columnDef="Int" name="dealCount" primitive="No" remark="" type="Integer"/>
+        <field column="DEAL_DATE" columnDef="Date" name="dealDate" primitive="No" remark="" type="Date"/>
+    </fields>
+</entity>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SBatchSmsInfo" remark="" sdl="true" sdl-module="MImsSyncDef" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+    <fields>
+        <complex-field collection="none" name="checksms" primitive="false" ref="imssdl.SCheckSms" remark="" sdl="true" type="entity"/>
+        <complex-field collection="list" name="listchecksmsdetail" primitive="false" ref="imssdl.SCheckSmsDetail" remark="" sdl="true" type="entity"/>
+    </fields>
+</entity>

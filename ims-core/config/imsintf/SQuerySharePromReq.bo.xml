@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="SQuerySharePromReq">
+  <fields>
+    <field name="outer_cust_id" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="cust_id" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="outer_acct_id" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="acct_id" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="offer_id" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="product_id" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="phone_id" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="user_id" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="startDate" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="endDate" type="String" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

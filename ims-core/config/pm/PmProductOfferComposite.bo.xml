@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="PmProductOfferComposite" remark="" schema="PD" table="PM_PRODUCT_OFFER_COMPOSITE" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="PARENT_PRODUCT_OFFERING_ID" columnDef="Int" isPk="true(not generated)" name="parentProductOfferingId" null-able="false" primitive="No" remark="product offering composite" type="Integer"/>
+        <field column="PRODUCT_OFFERING_ID" columnDef="Int" isPk="true(not generated)" name="productOfferingId" null-able="false" primitive="No" remark="A unique identifier for the product offering.&#10;&#10;" type="Integer"/>
+        <field column="LOWER_LIMIT" columnDef="BigInt" name="lowerLimit" primitive="No" remark="subsidiary product offering's lower limit in product offering composite" type="Long"/>
+        <field column="UPPER_LIMIT" columnDef="BigInt" name="upperLimit" primitive="No" remark="subsidiary product offering's lower limit in product offering composite" type="Long"/>
+    </fields>
+</entity>

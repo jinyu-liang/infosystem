@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="CmResourceMonitor" schema="cd" table="CM_RESOURCE_MONITOR">
+  <fields>
+    <field name="resourceId" type="Long" column="RESOURCE_ID" isPk="true(not generated)" primitive="No" remark="资源标识" null-able="false" columnDef="BigInt"/>
+    <field name="regionCode" type="Integer" column="REGION_CODE" primitive="No" remark="资源归属地市代码" null-able="false" columnDef="Int"/>
+    <field name="serviceId" type="Integer" column="SERVICE_ID" primitive="No" remark="服务ID， 当不区分服务时，service_id =0" null-able="false" columnDef="Int"/>
+    <field name="policyId" type="Integer" column="POLICY_ID" primitive="No" remark="策略ID" null-able="false" columnDef="Int"/>
+    <field name="monitorType" type="Integer" column="MONITOR_TYPE" primitive="No" remark="0:离线 1：欠控 2：在线" null-able="false" columnDef="Int"/>
+    <field name="validDate" type="Date" column="VALID_DATE" isPk="true(not generated)" primitive="No" remark="生效日期" null-able="false" columnDef="TimeStamp"/>
+    <field name="expireDate" type="Date" column="EXPIRE_DATE" primitive="No" remark="失效日期" null-able="false" columnDef="TimeStamp"/>
+    <field name="remarks" type="String" column="REMARKS" primitive="No" remark="注释" null-able="true" columnDef="Varchar" columnSize="256"/>
+    <field name="soNbr" type="Long" column="SO_NBR" isPk="true(not generated)" primitive="No" remark="受理流水" null-able="false" columnDef="BigInt"/>
+    <field name="soDate" type="Date" column="SO_DATE" primitive="No" remark="受理日期" null-able="false" columnDef="TimeStamp"/>
+  </fields>
+</entity>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="ScheckDepositResultReq">
+  <fields>
+    <field name="so_nbr" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="so_date" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="org_acct_id" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="org_phone_id" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="in_out_flag" type="Short" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

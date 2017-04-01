@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="CmUserOrderConfirm" schema="CD" table="CM_USER_ORDER_CONFIRM">
+  <fields>
+    <field name="resourceId" type="Long" column="RESOURCE_ID" isPk="true" primitive="No" null-able="false" columnDef="NUMBER" columnSize="15"/>
+    <field name="busiType" type="Integer" column="BUSI_TYPE" isPk="false" primitive="No" null-able="false" columnDef="NUMBER" columnSize="6"/>
+    <field name="identity" type="String" column="IDENTITY" isPk="true" primitive="Auto" null-able="false" columnDef="VARCHAR2" columnSize="64"/>
+    <field name="servType" type="Integer" column="SERV_TYPE" isPk="true" primitive="No" remark="??????,0???sp_code??pm_sp_info?serv_type??,????sp??
+wangzhuan 20080616 ????????????" null-able="false" columnDef="NUMBER" columnSize="8"/>
+    <field name="billFlag" type="Integer" column="BILL_FLAG" isPk="true" primitive="No" null-able="false" columnDef="NUMBER" columnSize="4"/>
+    <field name="billProp" type="Integer" column="BILL_PROP" isPk="true" primitive="No" null-able="false" columnDef="NUMBER" columnSize="3"/>
+    <field name="confirmResult" type="Integer" column="CONFIRM_RESULT" isPk="false" primitive="No" null-able="true" columnDef="NUMBER" columnSize="2"/>
+    <field name="confirmTime" type="Date" column="CONFIRM_TIME" isPk="false" null-able="true" columnDef="DATE" columnSize="7"/>
+    <field name="alarmTime" type="Date" column="ALARM_TIME" isPk="false" null-able="true" columnDef="DATE" columnSize="7"/>
+    <field name="sequenceNo" type="String" column="SEQUENCE_NO" isPk="false" null-able="true" columnDef="VARCHAR2" columnSize="32"/>
+    <field name="srcType" type="String" column="SRC_TYPE" isPk="false" null-able="true" columnDef="VARCHAR2" columnSize="64"/>
+    <field name="alarmDoneCode" type="Long" column="ALARM_DONE_CODE" isPk="false" null-able="true" columnDef="NUMBER" columnSize="12"/>
+    <field name="extendFlag" type="Integer" column="EXTEND_FLAG" isPk="false" null-able="true" columnDef="NUMBER" columnSize="8"/>
+    <field name="spCode" type="String" column="SP_CODE" isPk="true" primitive="Auto" remark="????????????????" null-able="false" columnDef="VARCHAR2" columnSize="32"/>
+    <field name="operatorCode" type="String" column="OPERATOR_CODE" isPk="true" remark="???????????????????" null-able="false" columnDef="VARCHAR2" columnSize="32"/>
+    <field name="thirdMsisdn" type="String" column="THIRD_MSISDN" isPk="true" remark="????mms???????
+?????,?????????" null-able="false" columnDef="VARCHAR2" columnSize="15"/>
+    <field name="regionCode" type="Integer" column="REGION_CODE" isPk="false" primitive="No" null-able="false" columnDef="NUMBER" columnSize="4"/>
+    <field name="validDate" type="Date" column="VALID_DATE" isPk="true" remark="??????????
+?????????????????" null-able="false" columnDef="DATE" columnSize="7"/>
+    <field name="expireDate" type="Date" column="EXPIRE_DATE" isPk="false" remark="????????
+????????,?????????????,update" null-able="false" columnDef="DATE" columnSize="7"/>
+    <field name="soNbr" type="Long" column="SO_NBR" isPk="true" primitive="No" null-able="false" columnDef="NUMBER" columnSize="15"/>
+    <field name="soDate" type="Date" column="SO_DATE" isPk="false" null-able="false" columnDef="DATE" columnSize="7"/>
+    <field name="remark" type="String" column="REMARK" isPk="false" null-able="true" columnDef="VARCHAR2" columnSize="255"/>
+    <field name="serviceCode" type="String" column="SERVICE_CODE" isPk="false" primitive="No" null-able="true" columnDef="VARCHAR2" columnSize="32"/>
+  </fields>
+</entity>

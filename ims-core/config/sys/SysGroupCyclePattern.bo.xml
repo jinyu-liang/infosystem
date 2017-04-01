@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SysGroupCyclePattern" remark="" schema="SD" table="SYS_GROUP_CYCLE_PATTERN" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="ID" columnDef="Int" name="id" primitive="No" remark="SEQ流水" type="Integer"/>
+        <field column="PATTERN_ID" columnDef="Int" isPk="true(not generated)" name="patternId" primitive="No" remark="Pattern ID" type="Integer"/>
+        <field column="BRAND_ID" columnDef="Int" isPk="true(not generated)" name="brandId" primitive="No" remark="Brand ID" type="Integer"/>
+        <field column="MAIN_PROMOTION" columnDef="Int" isPk="true(not generated)" name="mainPromotion" primitive="No" remark="Main product for reference, default value -1" type="Integer"/>
+        <field column="REGION_CODE" columnDef="Int" name="regionCode" primitive="No" remark="" type="Integer"/>
+        <field column="CUSTOMER_CLASS" columnDef="Int" name="customerClass" primitive="No" remark="Customer Class&#10;0:Person&#10;1:Family&#10;2:Group&#10;-1: ignore" type="Integer"/>
+        <field column="CUSTOMER_TYPE" columnDef="Int" name="customerType" primitive="No" remark="customer type&#10;-1---ignore" type="Integer"/>
+        <field column="CUSTOMER_SEGMENT" columnDef="Int" name="customerSegment" primitive="No" remark="customer level&#10;-1---ignore" type="Integer"/>
+        <field column="ACCOUNT_TYPE" columnDef="Int" name="accountType" primitive="No" remark="account type&#10;-1---ignore" type="Integer"/>
+        <field column="BILLING_TYPE" columnDef="Int" name="billingType" primitive="No" remark="billing type &#10;-1-ignore" type="Integer"/>
+        <field column="RES_TYPE" columnDef="Int" name="resType" primitive="No" remark="Resource type&#10;-1-ignore" type="Integer"/>
+        <field column="RES_SEGMENT" columnDef="Int" name="resSegment" primitive="No" remark="Resource segment&#10;1.Classic&#10;2.Gold&#10;3.Platinum&#10;4.Platinum Plus&#10;5.Serenade CEO&#10;6.Serenade Prestige&#10;7.Standard" type="Integer"/>
+        <field column="POLICY_ID" columnDef="Int" isPk="true(not generated)" name="policyId" primitive="No" remark="Policy ID, 0 for always true.&#10;" type="Integer"/>
+        <field column="VALID_DATE" columnDef="TimeStamp" name="validDate" primitive="No" remark="YYYY-MM-DD HH:MM:SS" type="Date"/>
+        <field column="EXPIRE_DATE" columnDef="TimeStamp" name="expireDate" primitive="No" remark="YYYY-MM-DD HH:MM:SS" type="Date"/>
+    </fields>
+</entity>

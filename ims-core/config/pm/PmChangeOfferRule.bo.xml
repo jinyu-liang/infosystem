@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="PmChangeOfferRule" schema="PD" table="PM_CHANGE_OFFER_RULE">
+  <fields>
+    <field name="id" type="Integer" column="ID" isPk="true" primitive="No" null-able="true" columnDef="AutoIncrement"/>
+    <field name="priceRuleId" type="Integer" column="PRICE_RULE_ID" primitive="No" remark="rating rule ID" null-able="false" columnDef="Int"/>
+    <field name="changeFlag" type="Integer" column="CHANGE_FLAG" isPk="false" primitive="No" remark="0:Change Promotion IN
+1:Change Promotion OUT" null-able="false" columnDef="Int"/>
+    <field name="chargeValidity" type="Integer" column="CHARGE_VALIDITY" primitive="No" remark="有效期天数减少到X天" null-able="false" columnDef="Int"/>
+  </fields>
+</entity>

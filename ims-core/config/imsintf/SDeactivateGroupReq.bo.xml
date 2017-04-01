@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="SDeactivateGroupReq" transient="true">
+  <fields>
+    <field name="outer_group_id" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="group_id" type="Long" isPk="false" primitive="No" null-able="true"/>
+    <field name="change_sts" type="Short" isPk="false" primitive="No" null-able="true"/>
+  </fields>
+</entity>

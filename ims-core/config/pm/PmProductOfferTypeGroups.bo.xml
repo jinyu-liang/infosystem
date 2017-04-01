@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="PmProductOfferTypeGroups" remark="" schema="PD" table="PM_PRODUCT_OFFER_TYPE_GROUPS" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="PRODUCT_OFFERING_ID" columnDef="Int" isPk="true(not generated)" name="productOfferingId" null-able="false" primitive="No" remark="A unique identifier for the product offering.&#10;&#10;" type="Integer"/>
+        <field column="OFFER_TYPE" columnDef="Int" isPk="true(not generated)" name="offerType" null-able="false" primitive="No" remark="销售品类型标识" type="Integer"/>
+    </fields>
+</entity>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="SQueryCustBaseInfoReq">
+  <fields>
+    <field name="cust_id" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="acct_id" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="first_name" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="customer_name" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="family_name" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="identity_type" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="identity" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="phone_id" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="user_id" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="address" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="main_offering_id" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="account_name" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="customer_type" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="start" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="limit" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="offer_name" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="object_type" type="String" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

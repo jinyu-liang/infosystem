@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SmsSendLog" remark="" schema="JD" table="SMS_SEND_LOG" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="TABLE_NAME" columnDef="Varchar" columnSize="50" name="tableName" primitive="No" remark="如cm_resource_01" type="String"/>
+        <field column="BUSI_NUM" columnDef="Int" name="busiNum" primitive="No" remark="需要提醒的业务编号，如：定期发送wlan流量提醒定为1" type="Integer"/>
+        <field column="TASK_DATE" columnDef="Varchar" columnSize="8" name="taskDate" primitive="No" remark="yyyymmdd,任务需要被执行的日期" type="String"/>
+        <field column="SO_DATE" columnDef="Date" name="soDate" primitive="No" remark="任务实际完成时间" type="Date"/>
+    </fields>
+</entity>

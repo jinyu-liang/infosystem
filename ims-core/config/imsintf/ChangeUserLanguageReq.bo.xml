@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="ChangeUserLanguageReq">
+  <fields>
+    <field name="phone_id" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="user_id" type="Long" isPk="false" primitive="No" null-able="true"/>
+    <field name="ussd_language" type="Short" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="ivr_language" type="Short" isPk="false" primitive="No" null-able="true"/>
+    <field name="sms_language" type="Short" isPk="false" primitive="No" null-able="true"/>
+  </fields>
+</entity>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="ImsMdbErrorRst" remark="" schema="CD" table="IMS_MDB_ERROR_RST" xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="ID" columnDef="BigInt" name="id" null-able="false" primitive="No" remark="bosฤฺฒฟผวยผม๗หฎบล" type="Long"/>
+        <field column="BUSI_CODE" columnDef="Int" name="busiCode" null-able="false" primitive="No" remark="าตฮ๑ด๚ย๋" type="Integer"/>
+        <field column="CREATE_DATE" columnDef="Date" name="createDate" primitive="No" remark="ผวยผดดฝจสฑผไ" type="Date"/>
+        <field column="CUST_ID" columnDef="BigInt" name="custId" primitive="No" remark="" type="Long"/>
+        <field column="ACCT_ID" columnDef="BigInt" name="acctId" primitive="No" remark="" type="Long"/>
+        <field column="RESOURCE_ID" columnDef="BigInt" name="resourceId" primitive="No" remark="" type="Long"/>
+        <field column="PRODUCT_ID" columnDef="BigInt" name="productId" primitive="No" remark="" type="Long"/>
+        <field column="UP_FIELD" columnDef="Varchar" columnSize="64" name="upField" primitive="No" remark="ษฯทขฑ๊ึพฮปฃฌรฟาปฮปด๚ฑําปีลฑํฃฌสึตฮช1ฑํสพถิำฆตฤฑํะ่าชษฯทข" type="String"/>
+        <field column="DEAL_DATE" columnDef="Date" name="dealDate" primitive="No" remark="ษฯทขสฑผไ" type="Date"/>
+        <field column="STS" columnDef="Int" name="sts" primitive="No" remark="ษฯทขืดฬฌกฃ&#10;0 - ฮดษฯทขณษนฆ&#10;1 - ษฯทขณษนฆ" type="Integer"/>
+        <field column="DEAL_COUNT" columnDef="Int" name="dealCount" primitive="No" remark="ษฯทขดฮส" type="Integer"/>
+        <field column="REGION_CODE" columnDef="Int" name="regionCode" primitive="No" remark="" type="Integer"/>
+        <field column="COUNTY_CODE" columnDef="Int" name="countyCode" primitive="No" remark="" type="Integer"/>
+        <field column="ERROR_CODE" columnDef="Int" name="errorCode" primitive="No" remark="" type="Integer"/>
+        <field column="ERROR_MSG" columnDef="Varchar" columnSize="256" name="errorMsg" primitive="No" remark="" type="String"/>
+    </fields>
+</entity>

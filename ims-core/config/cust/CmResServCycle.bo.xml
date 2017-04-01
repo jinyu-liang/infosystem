@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="CmResServCycle" remark="" schema="CD" table="CM_RES_SERV_CYCLE" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="RESOURCE_ID" columnDef="BigInt" isPk="true(not generated)" name="resourceId" null-able="false" primitive="No" remark="Resource Numbering" type="Long"/>
+        <field column="SERVICE_SPEC_ID" columnDef="Int" isPk="true(not generated)" name="serviceSpecId" null-able="false" primitive="No" remark="Service Numbering&#10;&#10;e.g : voice、GPRS、SMS,etc" type="Integer"/>
+        <field column="STS" columnDef="Int" name="sts" primitive="No" remark="The service state of equitment&#10;&#10;find it in the  SYS_STATE_DEF table&#10;0-Close;&#10;1-Active;&#10;2-Suspend" type="Integer"/>
+        <field column="VALID_DATE" columnDef="TimeStamp" isPk="true(not generated)" name="validDate" null-able="false" primitive="No" remark="Effective Date" type="Date"/>
+        <field column="EXPIRE_DATE" columnDef="TimeStamp" name="expireDate" primitive="No" remark="Expired Date" type="Date"/>
+        <field column="SO_NBR" columnDef="BigInt" isPk="true(not generated)" name="soNbr" null-able="false" primitive="No" remark="The serial order which cause the state changing" type="Long"/>
+        <field column="CREATE_DATE" columnDef="TimeStamp" name="createDate" primitive="No" remark="" type="Date"/>
+        <field column="SO_DATE" columnDef="TimeStamp" name="soDate" primitive="No" remark="" type="Date"/>
+        <field column="USED_FLAG" columnDef="Int" name="usedFlag" null-able="false" primitive="No" remark="" type="Integer"/>
+        <field column="FIRST_USED_DATE" columnDef="TimeStamp" name="firstUsedDate" primitive="No" remark="" type="Date"/>
+    </fields>
+</entity>

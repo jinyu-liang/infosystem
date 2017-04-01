@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ehcache>
+	<!-- the chinese char will lead to a exception by test cases under maven env , I don't know why.-->
+	<!-- 指定缓存对象存放到磁盘的位置 -->
+	<diskStore path="user.home/java/tmp"/>
+	<defaultCache 
+		memoryStoreEvictionPolicy="LFU" 
+		overflowToDisk="false" 
+		eternal="true" 
+		maxElementsOnDisk="1000" 
+		maxElementsInMemory="20000" />  
+
+      <Cache name="enumSourceCache" 
+		memoryStoreEvictionPolicy="LFU" 
+		overflowToDisk="false" 
+		eternal="true" 
+		maxElementsOnDisk="1000" 
+		maxElementsInMemory="20000" />
+		
+	<Cache name="testCache" 
+		memoryStoreEvictionPolicy="LFU" 
+		overflowToDisk="false" 
+		eternal="true" 
+		maxElementsOnDisk="1000" 
+		maxElementsInMemory="20000" />  
+		
+	<Cache name="otherCache" 
+		memoryStoreEvictionPolicy="LFU" 
+		overflowToDisk="false" 
+		eternal="true" 
+		maxElementsOnDisk="1000" 
+		maxElementsInMemory="20000" />  
+
+	<Cache name="lifeCycleParttenTransfeCache" 
+		memoryStoreEvictionPolicy="LFU" 
+		overflowToDisk="false" 
+		eternal="true" 
+		maxElementsOnDisk="1000" 
+		maxElementsInMemory="20000" />  
+			
+</ehcache>

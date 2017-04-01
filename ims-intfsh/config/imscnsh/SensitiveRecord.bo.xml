@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="SensitiveRecord">
+  <fields>
+    <field name="reason" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="state" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="func_name" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="org_id" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="login_time" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="ext1" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="ext2" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="ext3" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="ext4" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="func_id" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="query_type" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="notes" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="bill_id" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="oper_id" type="String" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

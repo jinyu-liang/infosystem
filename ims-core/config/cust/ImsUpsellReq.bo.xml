@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="ImsUpsellReq" schema="CD" table="IMS_UPSELL_REQ">
+  <fields>
+    <field name="id" type="Long" column="ID" isPk="false" primitive="No" null-able="false" columnDef="NUMBER" columnSize="15"/>
+    <field name="upFlag" type="Integer" column="UP_FLAG" isPk="false" primitive="No" null-able="false" columnDef="NUMBER" columnSize="4"/>
+    <field name="upTime" type="Date" column="UP_TIME" isPk="false" primitive="Auto" null-able="true" columnDef="DATE" columnSize="7"/>
+    <field name="prodId" type="Long" column="PROD_ID" isPk="false" primitive="No" null-able="false" columnDef="NUMBER" columnSize="15"/>
+    <field name="orgOfferId" type="Integer" column="ORG_OFFER_ID" isPk="false" primitive="No" null-able="true" columnDef="NUMBER" columnSize="9"/>
+    <field name="tarOfferId" type="Integer" column="TAR_OFFER_ID" isPk="false" primitive="No" null-able="false" columnDef="NUMBER" columnSize="9"/>
+    <field name="objType" type="Integer" column="OBJ_TYPE" isPk="false" primitive="No" null-able="false" columnDef="NUMBER" columnSize="9"/>
+    <field name="objId" type="Long" column="OBJ_ID" isPk="false" primitive="No" null-able="false" columnDef="NUMBER" columnSize="15"/>
+  </fields>
+</entity>

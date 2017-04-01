@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="CaBillingPeriod" remark="" schema="AD" table="CA_BILLING_PERIOD" xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="PERIOD_ID" columnDef="AutoIncrement" isPk="true" name="periodId" primitive="No" remark="Billing cycle list identifier" type="Integer"/>
+        <field column="NAME" columnDef="Varchar" columnSize="256" name="name" primitive="No" remark="A short descriptive name of a billing cycle such as 'week', 'month' and 'quarter of a year'.&#10;&#10;" type="String"/>
+        <field column="DESCRIPTION" columnDef="Varchar" columnSize="512" name="description" primitive="No" remark="Billing cycle type description" type="String"/>
+        <field column="PERIOD_TYPE" columnDef="Int" name="periodType" primitive="No" remark="Billing cycle types:&#10;0-Specified&#10;1-Year&#10;2-Month&#10;3-Week&#10;4-Day" type="Integer"/>
+        <field column="PERIOD_UNIT" columnDef="Int" name="periodUnit" primitive="No" remark="Billing cycle unit" type="Integer"/>
+    </fields>
+</entity>

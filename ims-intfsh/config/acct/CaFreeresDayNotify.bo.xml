@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="CaFreeresDayNotify" schema="AD" table="CA_FREERES_DAY_NOTIFY">
+  <fields>
+    <field name="subTableIndex" type="Long" column="SUB_TABLE_INDEX" isPk="true" primitive="No" remark="分表号" null-able="false" columnDef="NUMBER" columnSize="22"/>
+    <field name="exportDate" type="Long" column="EXPORT_DATE" isPk="false" primitive="No" null-able="false" columnDef="NUMBER" columnSize="22"/>
+    <field name="updateTime" type="Date" column="UPDATE_TIME" isPk="false" null-able="false" columnDef="DATE" columnSize="7"/>
+  </fields>
+</entity>

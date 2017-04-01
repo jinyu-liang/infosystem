@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="CoProdBundleComposite" remark="" schema="CD" table="CO_PROD_BUNDLE_COMPOSITE" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="PARENT_PRODUCT_NO" columnDef="BigInt" isPk="true(not generated)" name="parentProductNo" null-able="false" primitive="No" remark="Bundled Product id&#10;The id of the instance of Bundled Product " type="Long"/>
+        <field column="PRODUCT_ID" columnDef="BigInt" isPk="true(not generated)" name="productId" null-able="false" primitive="No" remark="Component Product Id&#10;The id of the instance of Component Product&#10;" type="Long"/>
+        <field column="OBJECT_ID" columnDef="BigInt" name="objectId" null-able="false" primitive="No" remark="" type="Long"/>
+        <field column="OBJECT_TYPE" columnDef="Int" name="objectType" null-able="false" primitive="No" remark="" type="Integer"/>
+    </fields>
+</entity>

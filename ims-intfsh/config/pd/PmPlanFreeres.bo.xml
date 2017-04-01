@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="PmPlanFreeres" remark="" schema="pd" table="PM_PLAN_FREERES" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="PLAN_ID" columnDef="Int" isPk="true(not generated)" name="planId" null-able="false" primitive="Auto" type="Integer"/>
+        <field column="FREEBIE_ID" columnDef="Int" isPk="true(not generated)" name="freebieId" null-able="false" primitive="Auto" type="Integer"/>
+        <field column="PRIORITY" columnDef="Int" isPk="false" name="priority" null-able="false" primitive="Auto" type="Integer"/>
+    </fields>
+</entity>

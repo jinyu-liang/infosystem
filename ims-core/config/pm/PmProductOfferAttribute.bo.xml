@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="PmProductOfferAttribute" schema="pd" table="PM_PRODUCT_OFFER_ATTRIBUTE">
+  <fields>
+    <field name="productOfferingId" type="Integer" column="PRODUCT_OFFERING_ID" isPk="true" primitive="No" remark="A unique identifier for the product offering.
+
+" null-able="false" columnDef="NUMBER" columnSize="9"/>
+    <field name="policyId" type="Integer" column="POLICY_ID" isPk="false" primitive="No" remark="product offering effective condition, default 0" null-able="false" columnDef="NUMBER" columnSize="9"/>
+    <field name="billingType" type="Integer" column="BILLING_TYPE" isPk="false" primitive="No" remark="postpaid identifier for billing. for handling tariff in bills. According to the design of bill, example CO_PROD_BILLING_CYCLE is needed.
+0-prepay
+1-postpay
+" null-able="true" columnDef="NUMBER" columnSize="2"/>
+    <field name="suitableNet" type="Integer" column="SUITABLE_NET" isPk="false" null-able="false" columnDef="NUMBER" columnSize="4"/>
+    <field name="availableSegId" type="Integer" column="AVAILABLE_SEG_ID" isPk="false" primitive="Auto" null-able="false" columnDef="NUMBER" columnSize="4"/>
+    <field name="probationCycleUnit" type="Integer" column="PROBATION_CYCLE_UNIT" isPk="false" primitive="No" null-able="true" columnDef="NUMBER" columnSize="4"/>
+    <field name="probationCycleType" type="Integer" column="PROBATION_CYCLE_TYPE" isPk="false" primitive="No" null-able="true" columnDef="NUMBER" columnSize="4"/>
+    <field name="probationEffectMod" type="Integer" column="PROBATION_EFFECT_MOD" isPk="false" primitive="Auto" null-able="true" columnDef="NUMBER" columnSize="1"/>
+    <field name="offsetCycleType" type="Integer" column="OFFSET_CYCLE_TYPE" isPk="false" primitive="No" null-able="true" columnDef="NUMBER" columnSize="4"/>
+    <field name="offsetCycleUnit" type="Integer" column="OFFSET_CYCLE_UNIT" isPk="false" primitive="No" null-able="true" columnDef="NUMBER" columnSize="4"/>
+    <field name="isRefund" type="Integer" column="IS_REFUND" isPk="false" primitive="No" null-able="false" columnDef="NUMBER" columnSize="1"/>
+    <field name="discountExpireMode" type="Integer" column="DISCOUNT_EXPIRE_MODE" isPk="false" primitive="No" null-able="false" columnDef="NUMBER" columnSize="4"/>
+  </fields>
+</entity>

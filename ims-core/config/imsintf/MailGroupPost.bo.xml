@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="MailGroupPost">
+  <fields>
+    <field name="outer_mail_group_id" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="mail_group_id" type="Long" isPk="false" primitive="No" null-able="true"/>
+    <field name="post_code" type="Integer" isPk="false" primitive="No" null-able="true"/>
+    <field name="country_id" type="Integer" isPk="false" primitive="No" null-able="true"/>
+    <field name="receiver_name" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="address1" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="address2" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="address3" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="address4" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="address5" type="String" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

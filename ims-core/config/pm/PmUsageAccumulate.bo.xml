@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="PmUsageAccumulate" schema="PD" table="PM_USAGE_ACCUMULATE">
+  <fields>
+    <field name="priceRuleId" type="Integer" column="PRICE_RULE_ID" isPk="true(not generated)" primitive="No" remark="rating rule ID" null-able="true" columnDef="AutoIncrement"/>
+    <field name="accumulateCondId" type="Integer" column="ACCUMULATE_COND_ID" primitive="No" remark="Identifier of the rule  ,that the rules was referenced by  accumulating." null-able="false" columnDef="Int"/>
+  </fields>
+</entity>

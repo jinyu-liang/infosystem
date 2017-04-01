@@ -1,0 +1,36 @@
+#include "sms_ts_def.sdl"
+
+module MSmsTsApp
+{
+	interface ISmsTsApp
+	{
+		//WLAN免费资源提醒
+		int32 do_sendWlanCmccSms();
+		//WLAN流量提醒
+		int32 do_sendWlanFlowSms();
+		//GPRS流量提醒
+		int32 do_sendGprsFlowSms();
+		//移动数据流量提醒
+		int32 do_sendMobileDataFlowSms();
+		//用户套餐免费资源提醒
+		int32 do_sendUserPackageSms();
+		//随e行上网本免费流量提醒
+		int32 do_sendEwalkFlowSms();
+		//用户有效期3天检查
+		int32 do_sendResValidDateSms();
+		//移动数据流量周期提醒
+		int32 do_sendCycleMobileDateFlowSms();
+		//有效期停机 短信提醒
+		int32 do_sendValidBillCycStoPhoSms();
+		//把IMS_STS_SYNC_STORE 的数据定时挪到 IMS_RES_STS_SYNC表
+		int32 do_syncValidBillCycStoPho();
+		// 用户有效期到期的置保留期停、有效期停流程
+		int32 do_userValidity();
+		// GPRS低流量提醒
+		int32 do_sendGprsLowFlowSms();
+		//免费资源落后进度提醒
+		int32 do_sendFreeresHalfUseFlow();
+		//wlan 时长提醒
+		int32 do_sendWlanTimeFlow();
+	}
+}

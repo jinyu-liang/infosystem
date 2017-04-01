@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="CmNotificationFlag" schema="CD" table="CM_NOTIFICATION_FLAG">
+  <fields>
+    <field name="soNbr" type="Long" column="SO_NBR" isPk="true(not generated)" primitive="No" null-able="false" columnDef="BigInt"/>
+    <field name="objectType" type="Integer" column="OBJECT_TYPE" isPk="true(not generated)" primitive="No" remark="ฑ๊ึพภเะอ" null-able="false" columnDef="Int"/>
+    <field name="objectId" type="Long" column="OBJECT_ID" isPk="true(not generated)" primitive="No" remark="ำรปงฑเบล" null-able="false" columnDef="BigInt"/>
+    <field name="validDate" type="Date" column="VALID_DATE" isPk="true(not generated)" primitive="No" remark="ษ๚ะงสฑผไ" null-able="false" columnDef="TimeStamp"/>
+    <field name="expireDate" type="Date" column="EXPIRE_DATE" primitive="No" remark="สงะงสฑผไ" null-able="false" columnDef="TimeStamp"/>
+    <field name="staffId" type="Long" column="STAFF_ID" primitive="No" remark="ฒูื๗ิฑ" null-able="true" columnDef="BigInt"/>
+    <field name="createDate" type="Date" column="CREATE_DATE" primitive="No" remark="ดดฝจสฑผไ" null-able="false" columnDef="TimeStamp"/>
+    <field name="notifyType" type="Integer" column="NOTIFY_TYPE" isPk="true(not generated)" primitive="No" remark="รโด฿รโอฃภเะอ" null-able="false" columnDef="Int"/>
+    <field name="soDate" type="Date" column="SO_DATE" primitive="No" null-able="false" columnDef="TimeStamp"/>
+    <field name="notifyChannelId" type="Integer" column="NOTIFY_CHANNEL_ID" primitive="No" null-able="false" columnDef="Int"/>
+    <field name="notificationId" type="Integer" column="NOTIFICATION_ID" primitive="No" null-able="true" columnDef="Int"/>
+  </fields>
+</entity>

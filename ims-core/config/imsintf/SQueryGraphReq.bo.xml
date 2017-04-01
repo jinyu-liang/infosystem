@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="SQueryGraphReq">
+  <fields>
+    <field name="phoneId" type="String" isPk="false" primitive="Auto" null-able="false"/>
+    <field name="startDate" type="String" isPk="false" primitive="Auto" null-able="false"/>
+    <field name="endDate" type="String" isPk="false" primitive="Auto" null-able="false"/>
+    <field name="topX" type="Integer" isPk="false" primitive="Auto" initValue="1" null-able="true"/>
+    <complex-field name="QueryTypeList" type="entity" ref="imsintf.SQueryGraphQueryTypeList" collection="list" primitive="false"/>
+  </fields>
+</entity>

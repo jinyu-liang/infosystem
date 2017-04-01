@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="CmCustExt" remark="" schema="CD" table="CM_CUST_EXT" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="CUST_ID" columnDef="BigInt" isPk="true(not generated)" name="custId" null-able="false" primitive="No" remark="Customer Id&#10;&#10;define the unique number of customer&#10;&#10;it is the sequence numer ,in keeping with party_role_id&#10;&#10;one kind of party role&#10;&#10;&#10;" type="Long"/>
+        <field column="FORCE_CYCLE" columnDef="Int" name="forceCycle" null-able="false" primitive="No" remark="标识是否将客户上的账期(BILL_CYCLE_SPEC)传递到客户先所有账户上&#10;0： 否&#10;1： 是&#10;If this field is not null, cycle_spec should also not be null.&#10;if value is 1, all CA under this customer will share the same bill cycle&#10;when modifying to 1 after New Registration, override all the CA’s bill cycle under this customer&#10;" type="Integer"/>
+        <field column="BILL_FORMAT_ID" columnDef="Int" name="billFormatId" primitive="No" remark="Bill format ID" type="Integer"/>
+        <field column="CYCLE_SPEC_ID" columnDef="BigInt" name="cycleSpecId" primitive="No" remark="It is recommended to keep the field for there can be multiple customized specifications." type="Long"/>
+        <field column="SUMMARY_DELIVER" columnDef="Int" name="summaryDeliver" primitive="No" remark="账单汇总信息寄送方式&#10;&#10;1-Email&#10;2-SMS&#10;3-Fax&#10;4-CD&#10;5-Paper" type="Integer"/>
+        <field column="DETAIL_DELIVER" columnDef="Int" name="detailDeliver" primitive="No" remark="详单寄送方式&#10;&#10;1-Email&#10;2-SMS&#10;3-Fax&#10;4-CD&#10;5-Paper" type="Integer"/>
+        <field column="VAT_NAME" columnDef="Varchar" columnSize="256" name="vatName" primitive="No" remark="税单上的名称" type="String"/>
+        <field column="VALID_DATE" columnDef="TimeStamp" isPk="true(not generated)" name="validDate" null-able="false" primitive="No" remark="Effective Date" type="Date"/>
+        <field column="EXPIRE_DATE" columnDef="TimeStamp" name="expireDate" null-able="false" primitive="No" remark="Expired Date" type="Date"/>
+        <field column="SO_NBR" columnDef="BigInt" isPk="true(not generated)" name="soNbr" null-able="false" primitive="No" remark="The serial number" type="Long"/>
+        <field column="SO_DATE" columnDef="TimeStamp" name="soDate" primitive="No" remark="当前记录修改时间" type="Date"/>
+    </fields>
+</entity>

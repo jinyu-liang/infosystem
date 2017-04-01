@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ehcache>
+	<diskStore path="java.io.tmpdir"/>
+	<!--DO NOT remove default cache -->	      
+	<defaultCache 
+		memoryStoreEvictionPolicy="LFU" 
+		overflowToDisk="false" 
+		eternal="true" 
+		maxElementsOnDisk="20000" 
+		maxElementsInMemory="1000" />  
+
+    <!-- DO NOT remove default enumSourceCache -->
+      <Cache name="enumSourceCache" 
+		memoryStoreEvictionPolicy="LFU" 
+		overflowToDisk="false" 
+		eternal="true" 
+		maxElementsOnDisk="20000" 
+		maxElementsInMemory="1000" />
+		
+	<!--  please config your business cache here-->
+	
+	
+	
+	<!-- END -->  
+</ehcache>

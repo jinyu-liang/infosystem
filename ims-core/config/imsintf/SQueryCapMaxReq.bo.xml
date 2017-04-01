@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="SQueryCapMaxReq">
+  <fields>
+    <field name="out_acct_id" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="acctId" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="phoneId" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="beginDate" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="endDate" type="String" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

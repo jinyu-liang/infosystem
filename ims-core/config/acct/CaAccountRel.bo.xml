@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" columnNameMapToFieldName="false" dbType="oracle" name="CaAccountRel" remark="" schema="AD" table="CA_ACCOUNT_REL" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="GROUP_ID" columnDef="Int" isPk="true(not generated)" name="groupId" null-able="true" primitive="Auto" type="Long"/>
+        <field column="REL_GROUP_ID" columnDef="Int" isPk="true(not generated)" name="relGroupId" null-able="true" primitive="Auto" type="Long"/>
+        <field column="RELATIONSHIP_TYPE" columnDef="Int" isPk="true(not generated)" name="relationshipType" null-able="true" primitive="Auto" type="Integer"/>
+        <field column="TITLE_ROLE_ID" columnDef="Int" isPk="false" name="titleRoleId" null-able="true" primitive="Auto" type="Integer"/>
+        <field column="CREATE_DATE" columnDef="Date" isPk="false" name="createDate" null-able="true" primitive="Auto" type="Date"/>
+        <field column="SO_DATE" columnDef="Date" isPk="false" name="soDate" null-able="true" primitive="Auto" type="Date"/>
+        <field column="SO_NBR" columnDef="Int" isPk="true(not generated)" name="soNbr" null-able="true" primitive="Auto" type="Long"/>
+        <field column="VALID_DATE" columnDef="Date" isPk="true(not generated)" name="validDate" null-able="true" primitive="Auto" type="Date"/>
+        <field column="EXPIRE_DATE" columnDef="Date" isPk="false" name="expireDate" null-able="true" primitive="Auto" type="Date"/>
+    </fields>
+</entity>

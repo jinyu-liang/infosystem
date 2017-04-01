@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SXdr" remark="" sdl="true" sdl-module="MXdr" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+<fields>
+<field name="chargeMode" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<complex-field collection="none" name="dccHead" primitive="false" ref="imsxdr.SDccHead" remark="" sdl="true" type="entity"/>
+<field name="sockInfo" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="featureCode" primitive="Yes" remark="" sdl="true" type="String"/>
+<complex-field collection="none" name="splitInfo" primitive="false" ref="imsxdr.SSplitInfo" remark="" sdl="true" type="entity"/>
+<complex-field collection="none" name="common" primitive="false" ref="imsxdr.SCommon" remark="" sdl="true" type="entity"/>
+<complex-field collection="none" name="totalXdr" primitive="false" ref="imsxdr.SSubXdr" remark="" sdl="true" type="entity"/>
+<complex-field collection="map&lt;String,?&gt;" name="subXdrMap" primitive="false" ref="imsxdr.SSubXdr" remark="" sdl="true" type="entity"/>
+<complex-field collection="none" name="managerInfo" primitive="false" ref="imsxdr.SManagerInfo" remark="" sdl="true" type="entity"/>
+<complex-field collection="map&lt;String,?&gt;" name="rggXdrMap" primitive="false" ref="imsxdr.SSubXdr" remark="" sdl="true" type="entity"/>
+<field name="functionFlag" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="gxFlag" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<complex-field collection="map&lt;String,?&gt;" name="gxXdrMap" primitive="false" ref="imsxdr.SSubXdr" remark="" sdl="true" type="entity"/>
+<field name="inputFileName" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="tXdr" primitive="Yes" remark="" sdl="true" type="CsdlXdrObject"/>
+</fields>
+</entity>

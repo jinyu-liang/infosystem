@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="CaAsset" remark="" schema="AD" table="CA_ASSET" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="ASSET_ID" columnDef="BigInt" isPk="true(not generated)" name="assetId" null-able="false" primitive="No" remark="" type="Long"/>
+        <field column="ASSET_TYPE" columnDef="BigInt" name="assetType" primitive="No" remark="" type="Long"/>
+        <field column="ACCT_ID" columnDef="BigInt" name="acctId" primitive="No" remark="" type="Long"/>
+        <field column="VALID_DATE" columnDef="TimeStamp" isPk="true(not generated)" name="validDate" null-able="false" primitive="No" remark="" type="Date"/>
+        <field column="EXPIRE_DATE" columnDef="TimeStamp" name="expireDate" primitive="No" remark="" type="Date"/>
+        <field column="CREATE_DATE" columnDef="TimeStamp" name="createDate" primitive="No" remark="" type="Date"/>
+        <field column="SO_NBR" columnDef="BigInt" isPk="true(not generated)" name="soNbr" null-able="false" primitive="No" remark="" type="Long"/>
+        <field column="SO_DATE" columnDef="TimeStamp" name="soDate" primitive="No" remark="" type="Date"/>
+    </fields>
+</entity>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="SProductParamList" transient="true">
+<fields>
+<complex-field name="SProductParamList_Item" type="entity" ref="imsintf.SProductParam" collection="array" primitive="false"/>
+</fields>
+</entity>

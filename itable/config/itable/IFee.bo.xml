@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="IFee" remark="" schema="JD" table="I_FEE" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="USER_ID" columnDef="BigInt" name="userId" primitive="No" remark="" type="Long"/>
+        <field column="ACCT_ID" columnDef="BigInt" name="acctId" primitive="No" remark="" type="Long"/>
+        <field column="PRODUCT_ID" columnDef="BigInt" name="productId" primitive="No" remark="" type="Long"/>
+        <field column="FEE_TYPE" columnDef="Int" name="feeType" primitive="No" remark="" type="Integer"/>
+        <field column="FEE_ITEM_ID" columnDef="Int" name="feeItemId" primitive="No" remark="" type="Integer"/>
+        <field column="SRC_FEE_ITEM_ID" columnDef="Int" name="srcFeeItemId" primitive="No" remark="" type="Integer"/>
+        <field column="AMOUNT" columnDef="BigInt" name="amount" primitive="No" remark="" type="Long"/>
+        <field column="MEASURE_ID" columnDef="Int" name="measureId" primitive="No" remark="" type="Integer"/>
+        <field column="BUSI_SPEC_ID" columnDef="BigInt" name="busiSpecId" primitive="No" remark="" type="Long"/>
+        <field column="VALID_DATE" columnDef="TimeStamp" name="validDate" primitive="No" remark="" type="Date"/>
+        <field column="EXPIRE_DATE" columnDef="TimeStamp" name="expireDate" primitive="No" remark="" type="Date"/>
+        <field column="OPER_TYPE" columnDef="Int" name="operType" primitive="No" remark="" type="Integer"/>
+        <field column="SO_NBR" columnDef="BigInt" name="soNbr" primitive="No" remark="" type="Long"/>
+        <field column="COMMIT_DATE" columnDef="TimeStamp" name="commitDate" primitive="No" remark="" type="Date"/>
+    </fields>
+</entity>

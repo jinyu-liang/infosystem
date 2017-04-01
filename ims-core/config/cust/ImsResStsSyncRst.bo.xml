@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="ImsResStsSyncRst" remark="" schema="cd" table="IMS_RES_STS_SYNC_RST" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="ID" columnDef="Int" name="id" null-able="false" primitive="No" remark="Business data table ID" type="Long"/>
+        <field column="NBALANCE" columnDef="Int" name="nbalance" primitive="No" remark="The flag of last try, if not try, last_try_flag=1,otherwise flag=0 (default)" type="Long"/>
+        <field column="PBALANCE" columnDef="Int" name="pbalance" primitive="No" remark="" type="Long"/>
+        <field column="CAP_MAX_FLAG" columnDef="Int" name="capMaxFlag" primitive="No" remark="If the IR Data usage reach the CAP, Cap_max_flag=1,default 0" type="Long"/>
+        <field column="REASON_CODE" columnDef="Int" name="reasonCode" primitive="No" remark="Reason for status change&#10;0-  no balance&#10;1-  validity expired&#10;2-  hit credit limit&#10;3-  expired from suspend one way&#10;" type="Long"/>
+        <field column="NSTS" columnDef="Int" name="nsts" primitive="No" remark="" type="Integer"/>
+        <field column="PSTS" columnDef="Int" name="psts" primitive="No" remark="" type="Integer"/>
+        <field column="PSUB_TYPE" columnDef="Int" name="psubType" null-able="false" primitive="No" remark="" type="Integer"/>
+        <field column="NSUB_TYPE" columnDef="Int" name="nsubType" null-able="false" primitive="No" remark="" type="Integer"/>
+        <field column="PFRAULD_FLAG" columnDef="Int" name="pfrauldFlag" primitive="No" remark="" type="Integer"/>
+        <field column="NFRAULD_FLAG" columnDef="Int" name="nfrauldFlag" primitive="No" remark="" type="Integer"/>
+        <field column="PUSERREQUEST_FLAG" columnDef="Int" name="puserrequestFlag" primitive="No" remark="" type="Integer"/>
+        <field column="NUSERREQUEST_FLAG" columnDef="Int" name="nuserrequestFlag" primitive="No" remark="" type="Integer"/>
+        <field column="NEXPIRE_DATE" columnDef="Date" name="nexpireDate" primitive="No" remark="" type="Date"/>
+        <field column="PEXPIRE_DATE" columnDef="Date" name="pexpireDate" primitive="No" remark="" type="Date"/>
+        <field column="PHONE_ID" columnDef="Varchar" columnSize="30" name="phoneId" primitive="No" remark="" type="String"/>
+        <field column="ACCT_ID" columnDef="Int" name="acctId" null-able="false" primitive="No" remark="????" type="Long"/>
+        <field column="RESOURCE_ID" columnDef="Int" name="resourceId" null-able="false" primitive="No" remark="????" type="Long"/>
+        <field column="FAIL_REASON" columnDef="Varchar" columnSize="255" name="failReason" primitive="No" remark="" type="String"/>
+        <field column="SO_NBR" columnDef="Int" name="soNbr" null-able="false" primitive="No" remark="Serial number" type="Long"/>
+        <field column="DEAL_DATE" columnDef="Date" name="dealDate" null-able="false" primitive="No" remark="Deal date" type="Date"/>
+        <field column="STS" columnDef="Int" name="sts" null-able="false" primitive="No" remark="1:succeeded 2:failed 3:has been processed again" type="Integer"/>
+        <field column="DEAL_DESC" columnDef="Varchar" columnSize="255" name="dealDesc" primitive="No" remark="Save failure information when failed" type="String"/>
+        <field column="DEAL_AGAIN_DATE" columnDef="Date" name="dealAgainDate" primitive="No" remark="Re-processing date of failure record" type="Date"/>
+        <field column="CREATE_DATE" columnDef="Date" name="createDate" primitive="No" remark="" type="Date"/>
+        <field column="ERROR_MSG" columnDef="Varchar" columnSize="256" name="errorMsg" primitive="No" remark="" type="String"/>
+        <field column="ERROR_CODE" columnDef="Int" name="errorCode" primitive="No" remark="" type="Integer"/>
+        <field column="DEAL_COUNT" columnDef="Int" name="dealCount" primitive="No" remark="" type="Integer"/>
+        <field column="NOTIFY_FLAG" columnDef="Int" name="notifyFlag" primitive="No" remark="" type="Integer"/>
+        <field column="CHANGE_TIME" columnDef="Date" name="changeTime" primitive="No" remark="" type="Date"/>
+    </fields>
+</entity>

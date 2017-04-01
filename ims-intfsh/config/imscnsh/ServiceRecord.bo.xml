@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="ServiceRecord">
+  <fields>
+    <field name="query_type" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="query_num" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="doman_id" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="service_status" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="session_id" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="done_status" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="service_source" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="busi_id" type="String" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SApartOppNumber" remark="" sdl="true" sdl-module="MXdr" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+<fields>
+<field name="accessNumber" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="iddNumber" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="countryCode" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="mnpPrefix" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="fphCode" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="npCode" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="pCode" primitive="Yes" remark="" sdl="true" type="String"/>
+</fields>
+</entity>

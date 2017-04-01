@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="CapMaxControlList">
+  <fields>
+    <complex-field name="CapMaxControlList_Item" type="entity" ref="imsintf.CapMaxControl" collection="array" primitive="false"/>
+  </fields>
+</entity>

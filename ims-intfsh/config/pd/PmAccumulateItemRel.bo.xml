@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="PmAccumulateItemRel" remark="" table="PM_ACCUMULATE_ITEM_REL" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="ACCUMULATE_ITEM" columnDef="Int" isPk="true(not generated)" name="accumulateItem" null-able="true" primitive="Auto" type="Integer"/>
+        <field column="ITEM_ID" columnDef="Int" isPk="true(not generated)" name="itemId" null-able="true" primitive="Auto" type="Integer"/>
+        <field column="POLICY_ID" columnDef="Int" isPk="false" name="policyId" null-able="true" primitive="Auto" type="Integer"/>
+        <field column="CAL_TYPE" columnDef="Int" isPk="false" name="calType" null-able="true" primitive="Auto" type="Integer"/>
+        <field column="EXT_BILL_ITEM" columnDef="Int" isPk="false" name="extBillItem" null-able="true" primitive="Auto" type="Integer"/>
+        <field column="PRIORITY" columnDef="Int" isPk="false" name="priority" null-able="true" primitive="Auto" type="Integer"/>
+    </fields>
+</entity>

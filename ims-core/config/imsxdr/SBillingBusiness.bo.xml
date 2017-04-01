@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SBillingBusiness" remark="" sdl="true" sdl-module="MXdr" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+<fields>
+<field name="soNbr" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="outSoNbr" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="busiCode" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="serviceType" primitive="Yes" remark="" sdl="true" type="Short"/>
+<field name="operationTime" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="topupNumber" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="pricingPlanId" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="productOfferId" primitive="Yes" remark="" sdl="true" type="Integer"/>
+</fields>
+</entity>

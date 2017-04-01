@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="CmFirstActiveTaskHis" remark="" schema="CD" table="CM_FIRST_ACTIVE_TASK_HIS" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="USER_ID" columnDef="BigInt" name="userId" primitive="No" remark="用户编号" type="Long"/>
+        <field column="PHONE_ID" columnDef="Varchar" columnSize="64" name="phoneId" primitive="No" remark="手机号码" type="String"/>
+        <field column="ACTIVATION_TIME" columnDef="TimeStamp" name="activationTime" primitive="No" remark="首次激活时间" type="Date"/>
+        <field column="ACCT_ID" columnDef="BigInt" name="acctId" primitive="No" remark="账户编号" type="Long"/>
+        <field column="SMS_LANGUAGE" columnDef="Int" name="smsLanguage" primitive="No" remark="The language ID which will be used when read information alternately&#10;from sys_language&#10;---READING_LANGUAGE" type="Integer"/>
+        <field column="IVR_LANGUAGE" columnDef="Int" name="ivrLanguage" primitive="No" remark="The language ID which will be used when listen information alternately&#10;from sys_language&#10;---LISTENING_LANGUAGE" type="Integer"/>
+        <field column="USSD_LANGUAGE" columnDef="Int" name="ussdLanguage" primitive="No" remark="The language ID which will be used when write information alternately&#10;from sys_language&#10;--WRITING_LANGUAGE" type="Integer"/>
+        <field column="PRODUCT_ID" columnDef="BigInt" name="productId" primitive="No" remark="" type="Long"/>
+        <field column="DEST_OFFERING_ID" columnDef="Int" name="destOfferingId" primitive="No" remark="转换到的目标销售品标识" type="Integer"/>
+        <field column="REFER_OFFERING_ID" columnDef="Int" name="referOfferingId" primitive="No" remark="原销售品标识" type="Integer"/>
+        <field column="PRICING_PLAN_ID" columnDef="Int" name="pricingPlanId" primitive="No" remark="" type="Integer"/>
+        <field column="REWARD_ID" columnDef="Int" name="rewardId" primitive="No" remark="reward id" type="Integer"/>
+        <field column="DEAL_STS" columnDef="Int" name="dealSts" primitive="No" remark="1：成功 2：失败 3：处理中 4:待处理" type="Integer"/>
+        <field column="CREATE_DATE" columnDef="TimeStamp" name="createDate" primitive="No" remark="记录生成时间" type="Date"/>
+        <field column="DEAL_DATE" columnDef="TimeStamp" name="dealDate" primitive="No" remark="处理时间" type="Date"/>
+        <field column="DEAL_DESC" columnDef="Varchar" columnSize="255" name="dealDesc" primitive="No" remark="失败时，存储失败信息" type="String"/>
+        <field column="DEAL_AGAIN_DATE" columnDef="TimeStamp" name="dealAgainDate" primitive="No" remark="对于失败记录的再处理时间" type="Date"/>
+        <field column="SO_NBR" columnDef="BigInt" name="soNbr" primitive="No" remark="记录工单号" type="Long"/>
+    </fields>
+</entity>

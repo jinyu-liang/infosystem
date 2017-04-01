@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="ICancelDelayStop" remark="" schema="JD" table="I_CANCEL_DELAY_STOP" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="ACCT_ID" columnDef="Int" isPk="false" name="acctId" null-able="true" primitive="Auto" type="Long"/>
+        <field column="REGION_CODE" columnDef="Int" isPk="false" name="regionCode" null-able="true" primitive="Auto" type="Integer"/>
+        <field column="EXT1" columnDef="Varchar" columnSize="50" isPk="false" name="ext1" null-able="true" primitive="Auto" type="String"/>
+        <field column="EXT2" columnDef="Varchar" columnSize="50" isPk="false" name="ext2" null-able="true" primitive="Auto" type="String"/>
+        <field column="VALID_DATE" columnDef="Date" isPk="false" name="validDate" null-able="true" primitive="Auto" type="Date"/>
+        <field column="EXPIRE_DATE" columnDef="Date" isPk="false" name="expireDate" null-able="true" primitive="Auto" type="Date"/>
+        <field column="COMMIT_DATE" columnDef="Date" isPk="false" name="commitDate" null-able="true" primitive="Auto" type="Date"/>
+        <field column="OPER_TYPE" columnDef="Int" isPk="false" name="operType" null-able="true" primitive="Auto" type="Integer"/>
+        <field column="SO_NBR" columnDef="Int" isPk="false" name="soNbr" null-able="true" primitive="Auto" type="Long"/>
+    </fields>
+</entity>

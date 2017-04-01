@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="ImsUserCtt" remark="" schema="JD" table="IMS_USER_CTT" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="RESOURCE_ID" columnDef="Int" name="resourceId" primitive="No" remark="" type="Long"/>
+        <field column="IDENTITY_TYPE" columnDef="Int" name="identityType" primitive="No" remark="" type="Integer"/>
+        <field column="IDENTITY" columnDef="Varchar" columnSize="64" name="identity" primitive="No" remark="" type="String"/>
+        <field column="CREATE_DATE" columnDef="Date" name="createDate" primitive="No" remark="" type="Date"/>
+        <field column="VALID_DATE" columnDef="Date" name="validDate" primitive="No" remark="" type="Date"/>
+        <field column="EXPIRE_DATE" columnDef="Date" name="expireDate" primitive="No" remark="" type="Date"/>
+        <field column="SO_NBR" columnDef="Int" name="soNbr" primitive="No" remark="" type="Long"/>
+        <field column="SO_DATE" columnDef="Date" name="soDate" primitive="No" remark="" type="Date"/>
+    </fields>
+</entity>

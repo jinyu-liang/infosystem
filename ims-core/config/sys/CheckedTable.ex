@@ -1,0 +1,11 @@
+sys_parameter
+sys_cycle_patten_transfer
+sys_policy
+sys_state_def
+sys_cycle_patten_def
+sys_cycle_patten_detail
+sys_country
+SYS_POLICY_ELEMENTS
+SYS_ELEMENTS_VS_POLICY
+SYS_TIME_SEG_DEF
+SYS_TIME_SEG_DTL

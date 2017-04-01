@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="CmOnetimeFee" remark="" schema="CD" table="CM_ONETIME_FEE" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="CUST_ID" columnDef="BigInt" name="custId" primitive="No" remark="" type="Long"/>
+        <field column="ACCT_ID" columnDef="BigInt" name="acctId" primitive="No" remark="" type="Long"/>
+        <field column="USER_ID" columnDef="BigInt" name="userId" primitive="No" remark="" type="Long"/>
+        <field column="PHONE_ID" columnDef="Varchar" columnSize="64" name="phoneId" primitive="No" remark="" type="String"/>
+        <field column="PAY_ACCT_ID" columnDef="BigInt" name="payAcctId" primitive="No" remark="" type="Long"/>
+        <field column="ORIG_SO_NBR" columnDef="Varchar" columnSize="128" name="origSoNbr" primitive="No" remark="The order number of order for which the onetime fee is charged" type="String"/>
+        <field column="ORDER_TYPE" columnDef="Int" name="orderType" primitive="No" remark="" type="Integer"/>
+        <field column="FEE_ITEM_CODE" columnDef="Int" name="feeItemCode" primitive="No" remark="" type="Integer"/>
+        <field column="CHARGE_TYPE" columnDef="Int" name="chargeType" primitive="No" remark="" type="Integer"/>
+        <field column="AMOUNT" columnDef="BigInt" name="amount" primitive="No" remark="" type="Long"/>
+        <field column="BILL_TYPE" columnDef="Int" name="billType" primitive="No" remark="" type="Integer"/>
+        <field column="REMARK" columnDef="Varchar" columnSize="256" name="remark" primitive="No" remark="" type="String"/>
+        <field column="SO_ONETIME_ID" columnDef="BigInt" name="soOnetimeId" primitive="No" remark="" type="Long"/>
+        <field column="FEE_ITEM_SEQ" columnDef="BigInt" name="feeItemSeq" primitive="No" remark="sequence of feeitem ，which returned by account" type="Long"/>
+        <field column="SO_NBR" columnDef="BigInt" name="soNbr" null-able="false" primitive="No" remark="" type="Long"/>
+        <field column="FEE_ITEM_DATE" columnDef="TimeStamp" name="feeItemDate" primitive="No" remark="" type="Date"/>
+    </fields>
+</entity>

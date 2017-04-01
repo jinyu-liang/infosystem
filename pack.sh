@@ -1,0 +1,1 @@
+ant  -Dims-sdl_p=obrel -Dims-sync_p=hudson -Dims-core_p=hudson -Dinterface_p=notest -Dinfosystem-web_p=hudson -Dinfosystem_dealFile=hudson -Dinfosystem-web_dealFile=hudson -Dinfosystem_p=hudson -Dims-sdl_dealFile=$HOME/ims_dealfile/ims-sdl_dealFile -Dinterface_dealFile=$HOME/ims_dealfile/interface_dealFile -Dinfosystem-web_dealFile=$HOME/ims_dealfile/infosystem-web_dealFile $1

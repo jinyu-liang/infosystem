@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="CmBusi" remark="" schema="cd" table="CM_BUSI" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="SO_NBR" columnDef="BigInt" name="soNbr" null-able="false" primitive="No" remark="Serial number" type="Long"/>
+        <field column="OUTER_SO_NBR" columnDef="Varchar" columnSize="255" name="outerSoNbr" null-able="false" primitive="No" remark="Outer serial number" type="String"/>
+        <field column="BATCH_FLAG" columnDef="Int" name="batchFlag" null-able="false" primitive="No" remark="Batch flag, 0 - not batch, 1 - batch" type="Integer"/>
+        <field column="PARENT_SO_NBR" columnDef="BigInt" name="parentSoNbr" null-able="false" primitive="No" remark="Serial number of parent work order" type="Long"/>
+        <field column="REC_TYPE" columnDef="Int" name="recType" null-able="false" primitive="No" remark="Service record type, 0 - normal service, 1 - order cancelation service" type="Integer"/>
+        <field column="BUSI_SPEC_ID" columnDef="Int" name="busiSpecId" null-able="false" primitive="No" remark="Business ID" type="Integer"/>
+        <field column="BUSI_CODE" columnDef="Int" name="busiCode" null-able="false" primitive="No" remark="" type="Integer"/>
+        <field column="CHANNEL" columnDef="Int" name="channel" null-able="false" primitive="No" remark="Channel" type="Integer"/>
+        <field column="BUSI_DIRECT" columnDef="Int" name="busiDirect" null-able="false" primitive="No" remark="Business direction, 1 - Synchronize outer system to BOS; 2 - Synchronize BOS to outer system" type="Integer"/>
+        <field column="OP_ID" columnDef="BigInt" name="opId" null-able="false" primitive="No" remark="操作员编号" type="Long"/>
+        <field column="PHONE_ID" columnDef="Varchar" columnSize="255" name="phoneId" null-able="false" primitive="No" remark="" type="String"/>
+        <field column="RESOURCE_ID" columnDef="BigInt" name="resourceId" null-able="false" primitive="No" remark="" type="Long"/>
+        <field column="ACCT_ID" columnDef="BigInt" name="acctId" null-able="false" primitive="No" remark="帐户编号" type="Long"/>
+        <field column="CUST_ID" columnDef="BigInt" name="custId" null-able="false" primitive="No" remark="客户编码" type="Long"/>
+        <field column="STS" columnDef="Int" name="sts" null-able="false" primitive="No" remark="0 - normal work order, 1 - canceled work order" type="Integer"/>
+        <field column="CANCEL_DATE" columnDef="TimeStamp" name="cancelDate" null-able="false" primitive="No" remark="Cancelation date of work order" type="Date"/>
+        <field column="ORIG_SO_NBR" columnDef="BigInt" name="origSoNbr" null-able="false" primitive="No" remark="Serial number of original work order" type="Long"/>
+        <field column="DONE_DATE" columnDef="TimeStamp" name="doneDate" null-able="false" primitive="No" remark="Record done date" type="Date"/>
+        <field column="OTC_FLAG" columnDef="Int" name="otcFlag" null-able="false" primitive="No" remark="Acception flag of one time charge, 0 - not accepted, 1 - accepted" type="Integer"/>
+        <field column="OTC_SO_NBR" columnDef="BigInt" name="otcSoNbr" null-able="false" primitive="No" remark="Acception work order of one time charge" type="Long"/>
+        <field column="REWARD_FLAG" columnDef="Int" name="rewardFlag" null-able="false" primitive="No" remark="Reward acception flag, 0 - not accepted, 1 - accepted" type="Integer"/>
+        <field column="REWARD_SO_NBR" columnDef="BigInt" name="rewardSoNbr" null-able="false" primitive="No" remark="Serial number of reward acception" type="Long"/>
+        <field column="AUTH_FLAG" columnDef="Int" name="authFlag" null-able="false" primitive="No" remark="Authentication flag, 0 - not authenticated, 1 - authenticated" type="Integer"/>
+        <field column="AUTH_SO_NBR" columnDef="BigInt" name="authSoNbr" null-able="false" primitive="No" remark="Authentication serial number" type="Long"/>
+        <field column="SOURCE_SYSTEM" columnDef="Varchar" columnSize="30" name="sourceSystem" null-able="false" primitive="No" remark="" type="String"/>
+        <field column="STEP_ID" columnDef="Int" name="stepId" null-able="false" primitive="No" remark="" type="Integer"/>
+        <field column="SO_DATE" columnDef="TimeStamp" name="soDate" null-able="false" primitive="No" remark="" type="Date"/>
+        <field column="PROV_CODE" columnDef="Int" name="provCode" null-able="false" primitive="No" remark="" type="Integer"/>
+        <field column="REGION_CODE" columnDef="Int" name="regionCode" null-able="false" primitive="No" remark="" type="Integer"/>
+        <field column="COUNTY_CODE" columnDef="Int" name="countyCode" null-able="false" primitive="No" remark="" type="Integer"/>
+        <field column="ORG_ID" columnDef="Int" name="orgId" null-able="false" primitive="No" remark="" type="Integer"/>
+        <field column="IS_MONITOR" columnDef="Int" name="isMonitor" null-able="false" primitive="No" remark="" type="Integer"/>
+        <field column="ISNORMAL" columnDef="Int" name="isnormal" null-able="false" primitive="No" remark="" type="Integer"/>
+        <field column="NOTIFY_FLAG" columnDef="Int" name="notifyFlag" null-able="false" primitive="No" remark="" type="Integer"/>
+    </fields>
+</entity>

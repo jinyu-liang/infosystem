@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="STopUpResponse" transient="true">
+  <fields>
+    <field name="user_id" type="Long" isPk="false" primitive="No" null-able="true"/>
+    <field name="phone_id" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="account_balance" type="Long" isPk="false" primitive="No" null-able="true"/>
+    <field name="new_active_stop" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="validity_period" type="Integer" isPk="false" primitive="No" null-able="true"/>
+    <field name="extra_validity" type="Integer" isPk="false" primitive="No" null-able="true"/>
+    <complex-field name="prod_order_result_list" type="entity" ref="imsintf.SProductOrderResultList" collection="none" primitive="false"/>
+    <field name="recharge_time" type="Date" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="date_time" type="Date" isPk="false" primitive="Auto" null-able="true"/>
+    <complex-field name="FreeResourceGroupList" type="entity" ref="imsintf.FreeResourceGroupList" collection="none" primitive="false"/>
+    <field name="reward_balance" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="topup_amount" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

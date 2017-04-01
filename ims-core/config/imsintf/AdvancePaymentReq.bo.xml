@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="AdvancePaymentReq" transient="true">
+  <fields>
+    <field name="orgSoNbr" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="actionType" type="Short" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="paymentDate" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="createDate" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="paymentChannel" type="Short" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="paymentType" type="Short" isPk="false" primitive="Auto" null-able="true"/>
+    <complex-field name="paymentInfo" type="entity" ref="imsintf.PaymentInfo" collection="none" primitive="false"/>
+    <field name="bankCode" type="String" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

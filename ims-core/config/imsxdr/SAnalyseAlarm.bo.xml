@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SAnalyseAlarm" remark="" sdl="true" sdl-module="MXdr" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+<fields>
+<field name="alarmId" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="alarmCode" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="alarmInfo" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="urlAddress" primitive="Yes" remark="" sdl="true" type="String"/>
+</fields>
+</entity>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="PmFreebieProp" remark="" schema="pd" table="PM_FREEBIE_PROP" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="FREEBIE_ID" columnDef="AutoIncrement" isPk="true(not generated)" name="freebieId" null-able="false" primitive="Auto" type="Integer"/>
+        <field column="PRIORITY" columnDef="Int" isPk="false" name="priority" null-able="false" primitive="Auto" type="Integer"/>
+        <field column="UNIT_CYCLE" columnDef="Int" isPk="false" name="unitCycle" null-able="false" primitive="Auto" type="Integer"/>
+        <field column="UNIT_DES" columnDef="Varchar" columnSize="64" isPk="false" name="unitDes" null-able="false" primitive="Auto" type="String"/>
+    </fields>
+</entity>

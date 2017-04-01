@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="ImsDelayProdSync" remark="" schema="cd" table="IMS_DELAY_PROD_SYNC" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="ID" columnDef="AutoIncrement" isPk="true" name="id" primitive="No" remark="id" type="Long"/>
+        <field column="OFFER_ID" columnDef="BigInt" name="offerId" null-able="false" primitive="No" remark="ฯ๚สฦทid&#10;" type="Long"/>
+        <field column="PRODUCT_ID" columnDef="BigInt" name="productId" null-able="false" primitive="No" remark="สตภปฏฒ๚ฦทid" type="Long"/>
+        <field column="VALID_DATE" columnDef="TimeStamp" name="validDate" null-able="false" primitive="No" remark="ฒ๚ฦทษ๚ะงสฑผไ&#10;" type="Date"/>
+        <field column="CREATE_DATE" columnDef="TimeStamp" name="createDate" null-able="false" primitive="No" remark="ผวยผษ๚ณษสฑผไ" type="Date"/>
+        <field column="SO_NBR" columnDef="BigInt" name="soNbr" null-able="false" primitive="No" remark="ม๗หฎบล" type="Long"/>
+        <field column="STS" columnDef="Int" name="sts" null-able="false" primitive="No" remark="สพืดฬฌ&#10;&#10;1-ณ๕สผปฏ&#10;2-ีิฺดฆภํ" type="Integer"/>
+    </fields>
+</entity>

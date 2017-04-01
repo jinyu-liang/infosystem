@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="QueryUnOrderFeeReq">
+  <fields>
+    <field name="user_id" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="phone_id" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="order_date" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <complex-field name="bill_cycle" type="entity" ref="ref://com.ailk.openbilling.persistence.imsintf.entity.SBillCycle" collection="none" primitive="false"/>
+    <complex-field name="offerIdList" type="Long" collection="list" primitive="false"/>
+  </fields>
+</entity>

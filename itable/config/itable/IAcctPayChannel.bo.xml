@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="IAcctPayChannel" schema="JD" table="I_ACCT_PAY_CHANNEL">
+  <fields>
+    <field name="acctId" type="Long" column="ACCT_ID" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="paymentType" type="Integer" column="PAYMENT_TYPE" primitive="No" remark="1：现金 2：信用卡代扣 3：银行托收 5：银行卡绑定充值 6：手机支付自动交话费 7：代缴" null-able="true" columnDef="Int"/>
+    <field name="bankId" type="String" column="BANK_ID" primitive="No" null-able="false" columnDef="Varchar" columnSize="8"/>
+    <field name="bankAcctNbr" type="String" column="BANK_ACCT_NBR" primitive="No" null-able="false" columnDef="Varchar" columnSize="64"/>
+    <field name="phoneId" type="String" column="PHONE_ID" primitive="No" null-able="false" columnDef="Varchar" columnSize="28"/>
+    <field name="userId" type="Long" column="USER_ID" primitive="No" remark="手机号码对应的用户编号，可空" null-able="false" columnDef="Int"/>
+    <field name="dayFixMoney" type="Long" column="DAY_FIX_MONEY" primitive="No" null-able="false" columnDef="Int"/>
+    <field name="timeFixMoney" type="Long" column="TIME_FIX_MONEY" primitive="No" null-able="false" columnDef="Int"/>
+    <field name="bindType" type="Integer" column="BIND_TYPE" primitive="No" remark="1：预付费的充值绑定  2：后付费的付账单绑定" null-able="false" columnDef="Int"/>
+    <field name="platForm" type="Integer" column="PLAT_FORM" primitive="No" null-able="false" columnDef="Int"/>
+    <field name="validDate" type="Date" column="VALID_DATE" primitive="No" null-able="true" columnDef="Date"/>
+    <field name="expireDate" type="Date" column="EXPIRE_DATE" primitive="No" null-able="true" columnDef="Date"/>
+    <field name="operType" type="Integer" column="OPER_TYPE" primitive="No" remark="1：新增 2：修改 3：删除" null-able="true" columnDef="Int"/>
+    <field name="soNbr" type="Long" column="SO_NBR" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="commitDate" type="Date" column="COMMIT_DATE" primitive="No" null-able="true" columnDef="Date"/>
+  </fields>
+</entity>

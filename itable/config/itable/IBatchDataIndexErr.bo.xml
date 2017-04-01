@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="IBatchDataIndexErr" remark="" schema="JD" table="I_BATCH_DATA_INDEX_ERR" xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="CUST_ID" columnDef="BigInt" name="custId" null-able="false" primitive="No" remark="" type="Long"/>
+        <field column="ACCT_ID" columnDef="BigInt" name="acctId" null-able="false" primitive="No" remark="" type="Long"/>
+        <field column="USER_ID" columnDef="BigInt" name="userId" null-able="false" primitive="No" remark="" type="Long"/>
+        <field column="UP_FIELD" columnDef="Varchar" columnSize="64" name="upField" null-able="false" primitive="No" remark="" type="String"/>
+        <field column="REGION_CODE" columnDef="Int" name="regionCode" null-able="false" primitive="No" remark="" type="Integer"/>
+        <field column="COUNTY_CODE" columnDef="Int" name="countyCode" null-able="false" primitive="No" remark="" type="Integer"/>
+        <field column="COMMIT_DATE" columnDef="Date" name="commitDate" null-able="false" primitive="No" remark="" type="Date"/>
+        <field column="DONE_CODE" columnDef="BigInt" name="doneCode" null-able="false" primitive="No" remark="" type="Long"/>
+        <field column="SO_NBR" columnDef="BigInt" name="soNbr" null-able="false" primitive="No" remark="" type="Long"/>
+        <field column="DEAL_DATE" columnDef="Date" name="dealDate" null-able="false" primitive="No" remark="" type="Date"/>
+        <field column="ERROR_CODE" columnDef="BigInt" name="errorCode" null-able="false" primitive="No" remark="" type="Long"/>
+        <field column="ERROR_MSG" columnDef="Varchar" columnSize="255" name="errorMsg" null-able="false" primitive="No" remark="" type="String"/>
+        <field column="REMARK" columnDef="Varchar" columnSize="255" name="remark" null-able="false" primitive="No" remark="" type="String"/>
+        <field name="busiCode" type="Long" column="BUSI_CODE" primitive="No" null-able="false" columnDef="BigInt"/>
+    </fields>
+</entity>

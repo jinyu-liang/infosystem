@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="ImsExpireProdNotifyRst" remark="" schema="CD" table="IMS_EXPIRE_PROD_NOTIFY_RST" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="ID" columnDef="BigInt" name="id" primitive="No" remark="" type="Long"/>
+        <field column="PROD_ID" columnDef="BigInt" name="prodId" primitive="No" remark="" type="Long"/>
+        <field column="RECEIVE_PHONE" columnDef="Varchar" columnSize="64" name="receivePhone" primitive="No" remark="" type="String"/>
+        <field column="EXPIRE_DATE" columnDef="TimeStamp" name="expireDate" primitive="No" remark="" type="Date"/>
+        <field column="CREATE_DATE" columnDef="TimeStamp" name="createDate" primitive="No" remark="" type="Date"/>
+        <field column="DEAL_DATE" columnDef="TimeStamp" name="dealDate" primitive="No" remark="" type="Date"/>
+        <field column="DEAL_STS" columnDef="Int" name="dealSts" primitive="No" remark="" type="Integer"/>
+        <field column="DEAL_DESC" columnDef="Varchar" columnSize="255" name="dealDesc" primitive="No" remark="" type="String"/>
+        <field column="DEAL_AGAIN_DATE" columnDef="TimeStamp" name="dealAgainDate" primitive="No" remark="" type="Date"/>
+        <field column="CUST_ID" columnDef="BigInt" name="custId" primitive="No" remark="" type="Long"/>
+        <field column="ACCT_ID" columnDef="BigInt" name="acctId" primitive="No" remark="" type="Long"/>
+        <field column="USER_ID" columnDef="BigInt" name="userId" primitive="No" remark="" type="Long"/>
+        <field column="OFFER_ID" columnDef="BigInt" name="offerId" primitive="No" remark="" type="Long"/>
+        <field column="VALID_DATE" columnDef="TimeStamp" name="validDate" null-able="false" primitive="No" remark="" type="Date"/>
+        <field column="NOTIFICATION_ID" columnDef="Int" name="notificationId" null-able="false" primitive="No" remark="" type="Integer"/>
+        <field column="FREE_RES_FLAG" columnDef="Int" name="freeResFlag" null-able="false" primitive="No" remark="" type="Integer"/>
+    </fields>
+</entity>

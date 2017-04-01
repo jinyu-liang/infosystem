@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="MaxFreeResourceLog">
+  <fields>
+    <field name="phone_id" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="product_sequence_id" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="resource_id" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="resource_value" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="resource_name" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="effective_date" type="Date" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="acct_id" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="valid_date" type="Date" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="operation_date" type="Date" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="source_system" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="transaction_id" type="String" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

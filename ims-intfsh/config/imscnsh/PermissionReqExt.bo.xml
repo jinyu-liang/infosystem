@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="PermissionReqExt">
+  <fields>
+    <field name="org_id" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="domain_id" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="entity_id" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="priv_id" type="String" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

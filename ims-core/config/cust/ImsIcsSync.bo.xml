@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="ImsIcsSync" remark="" schema="cd" table="IMS_ICS_SYNC" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="ID" columnDef="AutoIncrement" isPk="true" name="id" primitive="No" remark="ID" type="Long"/>
+        <field column="USER_ID" columnDef="Int" name="userId" null-able="false" primitive="No" remark="RESOURCE_ID" type="Long"/>
+        <field column="BOS_PHONE_ID" columnDef="Varchar" columnSize="64" name="bosPhoneId" null-able="false" primitive="No" remark="BOS_PHONE_ID" type="String"/>
+        <field column="CREATE_DATE" columnDef="Date" name="createDate" primitive="No" remark="CREATE_DATE" type="Date"/>
+        <field column="SO_NBR" columnDef="Int" name="soNbr" null-able="false" primitive="No" remark="SO_NBR" type="Long"/>
+        <field column="STS" columnDef="Int" name="sts" primitive="No" remark="STS" type="Integer"/>
+        <field column="ERROR_CODE" columnDef="Int" name="errorCode" primitive="No" remark="???????" type="Integer"/>
+        <field column="ERROR_MSG" columnDef="Varchar" columnSize="512" name="errorMsg" primitive="No" remark="????" type="String"/>
+        <field column="DEAL_DATE" columnDef="Date" name="dealDate" primitive="No" remark="DEAL_DATE" type="Date"/>
+        <field column="DEAL_COUNT" columnDef="Int" name="dealCount" primitive="No" remark="DEAL_COUNT" type="Integer"/>
+        <field column="PHONE_ID" columnDef="Varchar" columnSize="64" name="phoneId" null-able="false" primitive="No" remark="" type="String"/>
+        <field column="LIST_TYPE" columnDef="Int" name="listType" null-able="false" primitive="No" remark="1: blacklist&#10;2: whitelist&#10;3:blacklist &amp; whitelist(default)&#10;" type="Integer"/>
+        <field column="EFFECT_TIME" columnDef="Varchar" columnSize="64" name="effectTime" primitive="No" remark="EFFECT_TIME" type="String"/>
+        <field column="EXPIRE_TIME" columnDef="Varchar" columnSize="64" name="expireTime" primitive="No" remark="EXPIRE_TIME" type="String"/>
+        <field column="WEEK_START" columnDef="Int" name="weekStart" primitive="No" remark="WEEK_START" type="Integer"/>
+        <field column="WEEK_STOP" columnDef="Int" name="weekStop" primitive="No" remark="WEEK_STOP" type="Integer"/>
+        <field column="ROUTE_NUMBER" columnDef="Varchar" columnSize="64" name="routeNumber" primitive="No" remark="ROUTE_NUMBER" type="String"/>
+        <field column="IR_ROUTE_FLAG" columnDef="Int" name="irRouteFlag" primitive="No" remark="IR_ROUTE_METHOD" type="Integer"/>
+        <field column="ROUTING_METHOD" columnDef="Int" name="routingMethod" primitive="No" remark="ROUTING_METHOD" type="Integer"/>
+        <field column="VALID_DATE" columnDef="Date" name="validDate" primitive="No" remark="VALID_DATE" type="Date"/>
+        <field column="EXPIRE_DATE" columnDef="Date" name="expireDate" primitive="No" remark="EXPIRE_DATE" type="Date"/>
+        <field column="SO_DATE" columnDef="Date" name="soDate" primitive="No" remark="SO_DATE" type="Date"/>
+    </fields>
+</entity>

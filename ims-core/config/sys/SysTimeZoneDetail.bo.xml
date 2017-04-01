@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SysTimeZoneDetail" remark="" schema="sd" table="SYS_TIME_ZONE_DETAIL" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="TIME_ZONE_ID" columnDef="Int" isPk="true(not generated)" name="timeZoneId" null-able="false" primitive="No" remark="time zone" type="Integer"/>
+        <field column="ZONE_TYPE" columnDef="Int" name="zoneType" null-able="false" primitive="No" remark="1:???&#10;2:???" type="Integer"/>
+        <field column="TIME_ZONE_OFFSET" columnDef="Varchar" columnSize="5" name="timeZoneOffset" primitive="No" remark="" type="String"/>
+        <field column="START_VAL" columnDef="Int" isPk="true(not generated)" name="startVal" null-able="false" primitive="No" remark="" type="Long"/>
+        <field column="END_VAL" columnDef="Int" name="endVal" primitive="No" remark="" type="Long"/>
+    </fields>
+</entity>

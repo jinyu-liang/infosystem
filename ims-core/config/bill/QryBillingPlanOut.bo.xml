@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="QryBillingPlanOut">
+  <fields>
+    <field name="endDate" type="Date" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="startDate" type="Date" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="cycleSpecId" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <complex-field name="billingPlanOut" type="entity" ref="bill.BillingPlanOut" collection="list" primitive="false"/>
+    <field name="lastEndDate" type="Date" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="lastStartDate" type="Date" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

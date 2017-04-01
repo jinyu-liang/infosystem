@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="SUserPaySplitRel" transient="true">
+  <fields>
+    <field name="user_id" type="Long" isPk="false" primitive="No" tree-foreign-key="false" null-able="true"/>
+    <field name="phone_id" type="String" isPk="false" primitive="Auto" tree-foreign-key="false" null-able="true"/>
+    <field name="outer_cust_id" type="String" isPk="false" primitive="Auto" tree-foreign-key="false" null-able="true"/>
+    <field name="cust_id" type="Long" isPk="false" primitive="No" tree-foreign-key="false" null-able="true"/>
+    <field name="outer_acct_id" type="String" isPk="false" primitive="Auto" tree-foreign-key="false" null-able="true"/>
+    <field name="acct_id" type="Long" isPk="false" primitive="No" tree-foreign-key="false" null-able="true"/>
+    <complex-field name="sPaySplitInfoList" type="entity" ref="imsintf.SPaySplitInfoList" collection="none" primitive="false"/>
+    <field name="product_sequence_id" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="oper_type" type="Short" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="split_type" type="Short" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="price_rule_id" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

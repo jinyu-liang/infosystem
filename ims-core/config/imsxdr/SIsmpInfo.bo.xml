@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SIsmpInfo" remark="" sdl="true" sdl-module="MXdr" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+<fields>
+<field name="attendedNumber" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="bookedNumber" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="scaling" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="contentType" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="eventType" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="dateStamp" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="channelType" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="sharingType" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="sharingName" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="oriDlNumber" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="sourceType" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="applicationType" primitive="Yes" remark="" sdl="true" type="Integer"/>
+</fields>
+</entity>

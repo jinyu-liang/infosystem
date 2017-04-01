@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="SBalance" transient="true">
+  <fields>
+    <field name="book_id" type="Long" isPk="false" primitive="Auto" tree-foreign-key="false" null-able="true"/>
+    <field name="book_item" type="Long" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="amount" type="Double" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="days" type="Integer" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="outer_acct_id" type="String" isPk="false" primitive="Auto" tree-foreign-key="false" null-able="true"/>
+    <field name="acct_id" type="Long" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="user_id" type="Long" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="phone_id" type="String" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="valid_date" type="String" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="expire_date" type="String" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="negative_valid_date" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="negative_expire_date" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="max_balance" type="Double" isPk="false" primitive="No" null-able="true"/>
+    <field name="max_validity" type="Long" isPk="false" primitive="No" null-able="true"/>
+    <field name="negative_balance" type="Double" isPk="false" primitive="No" null-able="true"/>
+    <field name="remain_negative_balance" type="Double" isPk="false" primitive="No" null-able="true"/>
+    <field name="book_item_type" type="Short" isPk="false" primitive="No" null-able="true"/>
+    <field name="measure_id" type="Integer" isPk="false" primitive="Auto" tree-foreign-key="false" null-able="true"/>
+    <field name="used_main_amount" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="used_negative_amount" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="total_negative_amount" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="total_negative_remaining" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="asset_id" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

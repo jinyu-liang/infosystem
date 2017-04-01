@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="SFuzzyCustsForGUIReq">
+  <fields>
+    <field name="common_key" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="gui_cust_id" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="gui_acct_id" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="first_name" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="middle_name" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="family_name" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="identity_type" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="identity" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="gui_phone_id" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="gui_user_id" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="address" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="offering_id" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="account_name" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="customer_type" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

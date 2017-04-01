@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SImsServiceNotify" remark="" sdl="true" sdl-module="MIntfshSyncDef" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+    <fields>
+        <field name="userId" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="actionType" primitive="Yes" remark="" sdl="true" type="Short"/>
+        <field name="commitDate" primitive="Yes" remark="" sdl="true" type="Date"/>
+    </fields>
+</entity>

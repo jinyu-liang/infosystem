@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="CaCycleRun" remark="" schema="ad" table="CA_CYCLE_RUN" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="ACCT_ID" columnDef="Int" isPk="true(not generated)" name="acctId" null-able="false" primitive="No" remark="A unique identifier of account.&#10;" type="Long"/>
+        <field column="CYCLE_SPEC_ID" columnDef="Int" name="cycleSpecId" null-able="false" primitive="No" remark="Bill cycle specification presented externally.&#10;If the current bill cycle type is special cycle such as 99, then the last normal bill cycle shall be recorded or it shall be modified the same as REAL_CYCLE_SPEC_ID" type="Integer"/>
+        <field column="REAL_CYCLE_SPEC_ID" columnDef="Int" name="realCycleSpecId" null-able="false" primitive="No" remark="Real bill cycle information" type="Integer"/>
+        <field column="LAST_CYCLE_BEGIN" columnDef="Int" name="lastCycleBegin" null-able="false" primitive="No" remark="Start date of last  bill cycle" type="Integer"/>
+        <field column="LAST_CYCLE_END" columnDef="Int" name="lastCycleEnd" null-able="false" primitive="No" remark="End date of last  bill cycle" type="Integer"/>
+        <field column="CURR_CYCLE_BEGIN" columnDef="Int" isPk="true(not generated)" name="currCycleBegin" null-able="false" primitive="No" remark="Start date of the current  bill cycle" type="Integer"/>
+        <field column="CURR_CYCLE_END" columnDef="Int" name="currCycleEnd" null-able="false" primitive="No" remark="End date of the current  bill cycle" type="Integer"/>
+        <field column="MOD_DATE" columnDef="Date" name="modDate" null-able="false" primitive="No" remark="modify date" type="Date"/>
+        <field column="CREATE_DATE" columnDef="Date" name="createDate" null-able="false" primitive="No" remark="Generating date of the current record" type="Date"/>
+        <field column="BILL_DATE" columnDef="Int" name="billDate" primitive="No" remark="" type="Integer"/>
+        <field column="CYCLE_STS" columnDef="Int" name="cycleSts" null-able="false" primitive="No" remark="0-Remain&#10;1-Normal, bill run in regular billing cycle&#10;2-Suppressฃจno bill runฃฉ&#10;3-Un-suppress&#10;4-Hot bill statusฃจno bill runฃฉฃจthe following is related to bill run processฃฉ&#10;11-Bill importing and exporting finished, bill has been loaded into database bill table&#10;12-Error occurs in bill run" type="Integer"/>
+        <field column="BILL_RUN_STS" columnDef="Int" name="billRunSts" primitive="No" remark="  0-init&#10;&#10;1- finished export_billฃจตผีสฝแส๘ฃฌี๛ธ๖bill runิหะะฝแส๘ฃฉ&#10;&#10;2- runningฃจฟชสผิหะะbill runฃฌฃจภีสละถฯัำณูปฐตฅฒปิสะํดฆภํฃฉ&#10;&#10;3- finished billrun(ำลปผฦหใอ๊ณษฃฌฟษาิตผีส)&#10;&#10;&#10;" type="Integer"/>
+        <field column="BILL_DATA_STS" columnDef="Int" name="billDataSts" primitive="No" remark="0-init&#10;1- finished&#10;2- running&#10;3- waiting for receipt&#10;&#10;&#10;" type="Integer"/>
+        <field column="CONFIRM_BILL_STS" columnDef="Int" name="confirmBillSts" primitive="No" remark="" type="Integer"/>
+    </fields>
+</entity>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="SUserLifecycle">
+  <fields>
+    <field name="user_id" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="sts" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="os_sts" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="fraud_flag" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="rerating_flag" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="unbilling_flag" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="user_request_flag" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="valid_date" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="expire_date" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="create_date" type="String" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

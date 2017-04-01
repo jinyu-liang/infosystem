@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="AccumulateList" transient="false">
+<fields>
+<complex-field name="AccumulateList_Item" type="entity" ref="imsintf.Accumulate" collection="array" primitive="false"/>
+</fields>
+</entity>

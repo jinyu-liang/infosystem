@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="QueryWorkLogReq">
+  <fields>
+    <field name="outer_acct_id" type="String" isPk="false" primitive="Auto" tree-foreign-key="false" null-able="true"/>
+    <field name="acct_id" type="Long" isPk="false" primitive="No" null-able="true"/>
+    <field name="user_id" type="Long" isPk="false" primitive="No" null-able="true"/>
+    <field name="phone_id" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="target_phone_id" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="query_type" type="Short" isPk="false" primitive="No" null-able="true"/>
+    <field name="recharge_channel" type="Short" isPk="false" primitive="No" null-able="true"/>
+    <field name="start_date" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="end_date" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="product_sequence_id" type="String" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

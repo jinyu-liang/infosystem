@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="AccountMessage" transient="true">
+  <fields>
+    <field name="book_id" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="book_name" type="String" isPk="false" primitive="Auto" null-able="true"/>
+	<field name="book_type" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+	<field name="last_fee" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+	<field name="store_fee" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+	<field name="activity_fee" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+	<field name="adjust_fee" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+	<field name="curren_pay" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+	<field name="his_pay" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+	<field name="curren_fee" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

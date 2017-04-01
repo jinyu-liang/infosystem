@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="CmOrgName" remark="" schema="CD" table="CM_ORG_NAME" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="PARTY_ID" columnDef="BigInt" isPk="true(not generated)" name="partyId" null-able="false" primitive="No" remark="Party Unique Identifier" type="Long"/>
+        <field column="LANGUAGE_ID" columnDef="Int" name="languageId" null-able="false" primitive="No" remark="Language code，this is the language type of the name" type="Integer"/>
+        <field column="TRADING_NAME" columnDef="Varchar" columnSize="64" name="tradingName" null-able="false" primitive="No" remark="Organization Name" type="String"/>
+        <field column="VALID_DATE" columnDef="TimeStamp" isPk="true(not generated)" name="validDate" null-able="false" primitive="No" remark="Valid Date" type="Date"/>
+        <field column="EXPIRE_DATE" columnDef="TimeStamp" name="expireDate" null-able="false" primitive="No" remark="Expired Date" type="Date"/>
+        <field column="SO_NBR" columnDef="BigInt" isPk="true(not generated)" name="soNbr" null-able="false" primitive="No" remark="The serial number" type="Long"/>
+        <field column="CREATE_DATE" columnDef="TimeStamp" name="createDate" primitive="No" remark="" type="Date"/>
+        <field column="SO_DATE" columnDef="TimeStamp" name="soDate" primitive="No" remark="" type="Date"/>
+    </fields>
+</entity>

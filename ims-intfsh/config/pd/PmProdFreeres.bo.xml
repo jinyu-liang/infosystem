@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="PmProdFreeres" remark="" schema="pd" table="PM_PROD_FREERES" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="PLAN_ID" columnDef="Int" isPk="true(not generated)" name="planId" null-able="false" primitive="Auto" type="Integer"/>
+        <field column="PROD_ID" columnDef="Int" isPk="true(not generated)" name="prodId" null-able="false" primitive="Auto" type="Integer"/>
+        <field column="FREEBIE_ID" columnDef="Int" isPk="true(not generated)" name="freebieId" null-able="false" primitive="Auto" type="Integer"/>
+        <field column="VALID_CYCLE" columnDef="Int" isPk="false" name="validCycle" null-able="false" primitive="Auto" type="Integer"/>
+        <field column="EXPIRE_CYCLE" columnDef="Int" isPk="false" name="expireCycle" null-able="false" primitive="Auto" type="Integer"/>
+        <field column="RES_COUNT" columnDef="Int" isPk="false" name="resCount" null-able="false" primitive="Auto" type="Long"/>
+        <field column="NUMERATOR" columnDef="Int" isPk="false" name="numerator" null-able="true" primitive="Auto" type="Integer"/>
+        <field column="DENOMINATOR" columnDef="Int" isPk="false" name="denominator" null-able="true" primitive="Auto" type="Integer"/>
+        <field column="EXPIRE_MODE" columnDef="Int" isPk="false" name="expireMode" null-able="true" primitive="Auto" type="Integer"/>
+        <field column="HALF_TYPE" columnDef="Int" isPk="false" name="halfType" null-able="true" primitive="Auto" type="Integer"/>
+        <field column="CYCLE_TYPE" columnDef="Int" isPk="false" name="cycleType" null-able="true" primitive="Auto" type="Integer"/>
+        <field column="USE_UNIT" columnDef="Int" isPk="false" name="useUnit" null-able="true" primitive="Auto" type="Integer"/>
+        <field column="RES_LIMIT" columnDef="Int" isPk="false" name="resLimit" null-able="true" primitive="Auto" type="Long"/>
+        <field column="ROLE_LIMIT" columnDef="Int" isPk="false" name="roleLimit" null-able="true" primitive="Auto" type="Integer"/>
+        <field column="AUTO_UPGRADE" columnDef="Int" isPk="false" name="autoUpgrade" null-able="true" primitive="Auto" type="Integer"/>
+    </fields>
+</entity>

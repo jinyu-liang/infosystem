@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="STransferReq" transient="true">
+  <fields>
+    <field name="outer_org_acct_id" type="String" isPk="false" primitive="Auto" tree-foreign-key="false" null-able="true"/>
+    <field name="org_acct_id" type="Long" isPk="false" primitive="No" null-able="true" enumAsAliasField="false"/>
+    <field name="org_phone_id" type="String" isPk="false" primitive="Auto" null-able="true" enumAsAliasField="false"/>
+    <field name="outer_target_acct_id" type="String" isPk="false" primitive="Auto" tree-foreign-key="false" null-able="true"/>
+    <field name="target_acct_id" type="Long" isPk="false" primitive="No" null-able="true"/>
+    <field name="target_phone_id" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="rule_id" type="Long" isPk="false" primitive="No" null-able="true"/>
+    <field name="times" type="Short" isPk="false" primitive="No" null-able="true"/>
+    <field name="org_owner_type" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="target_owner_type" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

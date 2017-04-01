@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" columnNameMapToFieldName="false" dbType="oracle" name="CmIdentityVsImei" remark="" schema="CD" table="CM_IDENTITY_VS_IMEI" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="RESOURCE_ID" columnDef="Int" isPk="true(not generated)" name="resourceId" null-able="true" primitive="No" type="Long"/>
+        <field column="IDENTITY_TYPE" columnDef="Int" isPk="false" name="identityType" null-able="true" primitive="No" type="Integer"/>
+        <field column="IDENTITY" columnDef="Varchar" columnSize="64" isPk="true(not generated)" name="identity" null-able="true" primitive="No" type="String"/>
+        <field column="IMEI" columnDef="Int" isPk="true(not generated)" name="imei" null-able="true" primitive="No" type="Long"/>
+        <field column="FORCE_BINDING" columnDef="Int" isPk="false" name="forceBinding" null-able="true" primitive="No" type="Integer"/>
+        <field column="CREATE_DATE" columnDef="Date" isPk="false" name="createDate" null-able="true" primitive="No" type="Date"/>
+        <field column="SO_DATE" columnDef="Date" isPk="false" name="soDate" null-able="true" primitive="No" type="Date"/>
+        <field column="VALID_DATE" columnDef="Date" isPk="true(not generated)" name="validDate" null-able="true" primitive="No" type="Date"/>
+        <field column="EXPIRE_DATE" columnDef="Date" isPk="false" name="expireDate" null-able="true" primitive="No" type="Date"/>
+        <field column="SO_NBR" columnDef="Int" isPk="true(not generated)" name="soNbr" null-able="true" primitive="No" type="Long"/>
+        <field column="REMARK" columnDef="Varchar" columnSize="255" isPk="false" name="remark" null-able="true" primitive="No" type="String"/>
+    </fields>
+</entity>

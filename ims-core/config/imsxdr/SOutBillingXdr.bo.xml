@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SOutBillingXdr" remark="" sdl="true" sdl-module="MXdr" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+<fields>
+<complex-field collection="none" name="billingCommon" primitive="false" ref="imsxdr.SBillingCommon" remark="" sdl="true" type="entity"/>
+<complex-field collection="list" name="billingChargeDtl" primitive="false" ref="imsxdr.SBillingCharge" remark="" sdl="true" type="entity"/>
+<complex-field collection="list" name="billingPromDtl" primitive="false" ref="imsxdr.SBillingProm" remark="" sdl="true" type="entity"/>
+<complex-field collection="list" name="pocketDeductVal" primitive="false" ref="imsxdr.SBillingDeductLog" remark="" sdl="true" type="entity"/>
+<complex-field collection="list" name="creditDeductVal" primitive="false" ref="imsxdr.SBillingDeductLog" remark="" sdl="true" type="entity"/>
+<complex-field collection="list" name="budgetVal" primitive="false" ref="imsxdr.SBillingBudgetLog" remark="" sdl="true" type="entity"/>
+<complex-field collection="list" name="accumulateVal" primitive="false" ref="imsxdr.SBillingAccumulate" remark="" sdl="true" type="entity"/>
+<complex-field collection="none" name="busiInfo" primitive="false" ref="imsxdr.SBillingBusiness" remark="" sdl="true" type="entity"/>
+<complex-field collection="list" name="billingProd" primitive="false" ref="imsxdr.SBillingProd" remark="" sdl="true" type="entity"/>
+<complex-field collection="list" name="freeResCreator" primitive="false" ref="imsxdr.SFreeResCreator" remark="" sdl="true" type="entity"/>
+<complex-field collection="list" name="billingDeductDtl" primitive="false" ref="imsxdr.SBillingDeductDtl" remark="" sdl="true" type="entity"/>
+</fields>
+</entity>

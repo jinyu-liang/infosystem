@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="CaBillingPlanHis" remark="" schema="AD" table="CA_BILLING_PLAN_HIS" xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="SO_NBR" columnDef="BigInt" isPk="true(not generated)" name="soNbr" null-able="false" primitive="No" remark="สภํนคตฅ" type="Long"/>
+        <field column="SO_DATE" columnDef="TimeStamp" name="soDate" primitive="No" remark="สภํสฑผไ" type="Date"/>
+        <field column="BILLING_PLAN_ID" columnDef="BigInt" isPk="true(not generated)" name="billingPlanId" null-able="false" primitive="No" remark="ณ๖ีสผฦปฎฑเบล" type="Long"/>
+        <field column="ACCT_ID" columnDef="BigInt" isPk="true(not generated)" name="acctId" null-able="false" primitive="No" remark="ีสปงฑเบล" type="Long"/>
+        <field column="CYCLE_SPEC_ID" columnDef="BigInt" name="cycleSpecId" null-able="false" primitive="No" remark="ีสฦฺนๆธ๑ฑเบล" type="Long"/>
+        <field column="BILL_FORMAT_ID" columnDef="Int" name="billFormatId" null-able="false" primitive="No" remark="ีสตฅธ๑สฝด๚ย๋" type="Integer"/>
+        <field column="RANGE_SPEC_ID" columnDef="Int" name="rangeSpecId" null-able="false" primitive="No" remark="ทถฮงนๆธ๑ฑเบล" type="Integer"/>
+        <field column="PAYMENT_PLAN_ID" columnDef="BigInt" name="paymentPlanId" primitive="No" remark="ึงธถผฦปฎฑเบล" type="Long"/>
+        <field column="VALID_DATE" columnDef="TimeStamp" name="validDate" null-able="false" primitive="No" remark="ษ๚ะงฦฺ" type="Date"/>
+        <field column="EXPIRE_DATE" columnDef="TimeStamp" name="expireDate" null-able="false" primitive="No" remark="สงะงฦฺ" type="Date"/>
+        <field column="CREATE_DATE" columnDef="TimeStamp" name="createDate" null-able="false" primitive="No" remark="ตฑวฐผวยผตฤฒ๚ษ๚สฑผไ" type="Date"/>
+    </fields>
+</entity>

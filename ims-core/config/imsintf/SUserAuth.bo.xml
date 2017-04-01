@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="SUserAuth" transient="false">
+<fields>
+<field name="user_id" type="Long" isPk="false" enumAsAliasField="false" tree-foreign-key="false" null-able="true"/>
+<field name="phone_id" type="String" isPk="false" enumAsAliasField="false" tree-foreign-key="false" null-able="true"/>
+<field name="HPLMN" type="Short" isPk="false" enumAsAliasField="false" tree-foreign-key="false" null-able="true"/>
+<field name="NationalRoaming" type="Short" isPk="false" enumAsAliasField="false" tree-foreign-key="false" null-able="true"/>
+<field name="internationalRoaming" type="Short" isPk="false" enumAsAliasField="false" tree-foreign-key="false" null-able="true"/>
+<field name="roamingAuthority" type="Short" isPk="false" enumAsAliasField="false" tree-foreign-key="false" null-able="true"/>
+<field name="IRSMSAuthority" type="Short" isPk="false" enumAsAliasField="false" tree-foreign-key="false" null-able="true"/>
+<field name="InterIntraAuthority" type="Short" isPk="false" enumAsAliasField="false" tree-foreign-key="false" null-able="true"/>
+<field name="InterIntraflag" type="Short" isPk="false" enumAsAliasField="false" tree-foreign-key="false" null-able="true"/>
+<field name="IRPromptflag" type="Short" isPk="false" enumAsAliasField="false" tree-foreign-key="false" null-able="true"/>
+<field name="FraudState" type="Short" isPk="false" enumAsAliasField="false" tree-foreign-key="false" null-able="true"/>
+<field name="FraudTimes" type="Short" isPk="false" enumAsAliasField="false" tree-foreign-key="false" null-able="true"/>
+</fields>
+</entity>

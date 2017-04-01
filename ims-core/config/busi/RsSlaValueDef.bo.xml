@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="RsSlaValueDef" schema="bd" table="RS_SLA_VALUE_DEF">
+  <fields>
+    <field name="slaValueId" type="Integer" column="SLA_VALUE_ID" isPk="true(not generated)" primitive="No" null-able="true" columnDef="AutoIncrement"/>
+    <field name="slaRefValueId" type="Integer" column="SLA_REF_VALUE_ID" primitive="No" null-able="false" columnDef="Int"/>
+    <field name="measureId" type="Integer" column="MEASURE_ID" primitive="No" remark="Measure ID: A unique identifier
+ For example:
+ RMB Unit hao--10401
+ RMB Unit li--10402
+ RMB Unit fen--10403
+ RMB Unit yuan--10404
+
+ Cent--10201
+ Dollar--10202
+
+ satang -- 11101
+ Baht -- 11102
+
+ ms -- 101
+ second -- 102
+ byte -- 103
+ KB -- 104
+ MB -- 105
+ By items -- 109" null-able="false" columnDef="Int"/>
+    <field name="valueType" type="Integer" column="VALUE_TYPE" isPk="false" primitive="No" remark="ึตภเะอ
+ 0:Max-Requested-Bandwidth-DL
+ 1:Max-Requested-Bandwidth-UL
+ 2:APN-Aggregate-Max-Bitrate-DL
+ 3:APN-Aggregate-Max-Bitrate-UL
+ 4:Guaranteed-Bitrate-DL
+ 5:Guaranteed-Bitrate-UL
+
+ " null-able="false" columnDef="Int"/>
+    <field name="value" type="Long" column="VALUE" primitive="No" remark="SLAึต" null-able="false" columnDef="Int"/>
+  </fields>
+</entity>

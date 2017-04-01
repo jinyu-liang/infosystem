@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="ImsEventReward" remark="" schema="cd" table="IMS_EVENT_REWARD" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="ID" columnDef="AutoIncrement" isPk="true" name="id" primitive="No" remark="" type="Long"/>
+        <field column="CUST_ID" columnDef="Int" name="custId" null-able="false" primitive="No" remark="" type="Long"/>
+        <field column="ACCT_ID" columnDef="Int" name="acctId" null-able="false" primitive="No" remark="" type="Long"/>
+        <field column="RESOURCE_ID" columnDef="Int" name="resourceId" null-able="false" primitive="No" remark="" type="Long"/>
+        <field column="SPEC_ID" columnDef="Int" name="specId" null-able="false" primitive="No" remark="" type="Long"/>
+        <field column="BILLING_TYPE" columnDef="Int" name="billingType" null-able="false" primitive="No" remark="" type="Integer"/>
+        <field column="CREATE_DATE" columnDef="Date" name="createDate" null-able="false" primitive="No" remark="" type="Date"/>
+        <field column="SO_NBR" columnDef="Int" name="soNbr" null-able="false" primitive="No" remark="" type="Long"/>
+        <field column="STS" columnDef="Int" name="sts" null-able="false" primitive="No" remark="" type="Integer"/>
+        <field column="DEAL_DATE" columnDef="Date" name="dealDate" primitive="No" remark="" type="Date"/>
+        <field column="DEAL_COUNT" columnDef="Int" name="dealCount" primitive="No" remark="" type="Integer"/>
+        <field column="ERROR_CODE" columnDef="Int" name="errorCode" primitive="No" remark="" type="Integer"/>
+        <field column="ERROR_MSG" columnDef="Varchar" columnSize="256" name="errorMsg" primitive="No" remark="" type="String"/>
+    </fields>
+</entity>

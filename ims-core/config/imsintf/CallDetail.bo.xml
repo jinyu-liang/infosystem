@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="CallDetail" transient="false">
+  <fields>
+    <field name="event_type" type="Integer" isPk="false" tree-foreign-key="false" null-able="false"/>
+    <field name="real_total_event_type" type="Integer" isPk="false" primitive="Auto" tree-foreign-key="false" null-able="false"/>
+    <field name="total_event_type" type="Integer" isPk="false" tree-foreign-key="false" null-able="false"/>
+    <field name="real_duration" type="Integer" isPk="false" tree-foreign-key="false" null-able="false"/>
+    <field name="total_charge_domestic" type="Long" isPk="false" primitive="No" tree-foreign-key="false" null-able="false"/>
+    <field name="total_charge_domestic_vat" type="Long" isPk="false" primitive="No" tree-foreign-key="false" null-able="false"/>
+    <field name="total_charge_international" type="Long" isPk="false" primitive="No" tree-foreign-key="false" null-able="false"/>
+  </fields>
+</entity>

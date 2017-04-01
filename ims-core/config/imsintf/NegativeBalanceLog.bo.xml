@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="NegativeBalanceLog">
+  <fields>
+    <field name="acct_id" type="Long" isPk="false" primitive="No" null-able="true"/>
+    <field name="phone_id" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="negative_balance" type="Long" isPk="false" primitive="No" null-able="true"/>
+    <field name="valid_date" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="expire_date" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="negative_flag" type="Short" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="operation_date" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="so_mode" type="Short" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="source_system" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="transaction_id" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="status" type="Short" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="_fail_reason" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="negative_balance_flag" type="Short" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="old_negative_balance" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="new_negative_balance" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

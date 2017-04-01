@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SEventReward" remark="" sdl="true" sdl-module="MImsTsDef" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+    <fields>
+        <field name="id" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="custId" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="acctId" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="resourceId" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="specId" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="billingType" primitive="Yes" remark="" sdl="true" type="Integer"/>
+        <field name="createDate" primitive="Yes" remark="" sdl="true" type="Date"/>
+        <field name="soNbr" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="sts" primitive="Yes" remark="" sdl="true" type="Integer"/>
+    </fields>
+</entity>

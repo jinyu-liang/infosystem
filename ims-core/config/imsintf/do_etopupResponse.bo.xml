@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="do_etopupResponse" transient="true">
+  <root ref="imsintf.BaseResponse"/>
+  <fields>
+    <field name="balance" type="String" isPk="false" primitive="Auto" null-able="true" enumAsAliasField="false"/>
+    <field name="activestop" type="String" isPk="false" primitive="Auto" null-able="true" enumAsAliasField="false"/>
+    <field name="value" type="Long" isPk="false" primitive="No" null-able="true" enumAsAliasField="false"/>
+    <field name="valueadd" type="Long" isPk="false" primitive="No" null-able="true" enumAsAliasField="false"/>
+    <field name="validity" type="String" isPk="false" primitive="Auto" null-able="true" enumAsAliasField="false"/>
+    <field name="validityadd" type="Long" isPk="false" primitive="No" null-able="true" enumAsAliasField="false"/>
+  </fields>
+</entity>

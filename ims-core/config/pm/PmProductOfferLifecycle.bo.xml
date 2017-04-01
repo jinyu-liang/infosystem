@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="PmProductOfferLifecycle" schema="PD" table="PM_PRODUCT_OFFER_LIFECYCLE">
+  <fields>
+    <field name="productOfferingId" type="Integer" column="PRODUCT_OFFERING_ID" isPk="true(not generated)" primitive="No" remark="A unique identifier for the product offering.
+
+" null-able="false" columnDef="NUMBER" columnSize="9"/>
+    <field name="cycleUnit" type="Integer" column="CYCLE_UNIT" isPk="false" primitive="No" remark="Specific cycle ,for example one cycle is 3 days ,so that the value of this column  is 3" null-able="false" columnDef="NUMBER" columnSize="4"/>
+    <field name="cycleType" type="Integer" column="CYCLE_TYPE" isPk="false" primitive="No" remark="Type of cycle
+
+1:using calendar day as cycle type
+2:using calendar week as cycle type
+3:using calendar month as cycle type
+4:using calendar year as cycle type
+5:using dynamic month as cycle typeฃฌsuch as ORACLE provides the function of  add_months()
+6:using the offset of  hours as cycle type
+7:using the offset of (calendar) month as cycle type
+
+at present,store accumulative total by day ,the min of accumulative cycle is day
+" null-able="false" columnDef="NUMBER" columnSize="4"/>
+    <field name="subEffectMode" type="Integer" column="SUB_EFFECT_MODE" isPk="false" remark="Effective way after subscribing
+
+0  Immediately
+1             Delay
+99  User Defined" null-able="false" columnDef="NUMBER" columnSize="2"/>
+    <field name="subDelayUnit" type="Integer" column="SUB_DELAY_UNIT" isPk="false" remark="ถฉนบบ๓ษ๚ะงึฦฺ
+
+SUB_DELAY_UNIT ำ๋ SUB_EFFECT_MODEฦฅลไสนำรฃฌตฑSUB_EFFECT_MODEฮช0ป๒99สฑ,SUB_DELAY_UNITฬ๎0." null-able="true" columnDef="NUMBER" columnSize="4"/>
+    <field name="subDelayCycle" type="Integer" column="SUB_DELAY_CYCLE" isPk="false" remark="1  by the Day
+2  by the Month
+3  by the Bill
+4  by the Hour" null-able="true" columnDef="NUMBER" columnSize="4"/>
+    <field name="unsubEffectMode" type="Integer" column="UNSUB_EFFECT_MODE" isPk="false" remark="valid identifier of canceling order:
+
+0  Immediately
+1            Delay
+99  User Defined
+" null-able="false" columnDef="NUMBER" columnSize="2"/>
+    <field name="unsubDelayUnit" type="Integer" column="UNSUB_DELAY_UNIT" isPk="false" remark="ศกฯ๛ถฉนบบ๓สงะงึฦฺ
+
+UNSUB_DELAY_UNIT ำ๋ UNSUB_EFFECT_MODEฦฅลไสนำรฃฌตฑUNSUB_EFFECT_MODEฮช0ป๒99สฑ,UNSUB_DELAY_UNITฬ๎0." null-able="false" columnDef="NUMBER" columnSize="4"/>
+    <field name="unsubDelayCycle" type="Integer" column="UNSUB_DELAY_CYCLE" isPk="false" remark="1  by the Day
+2  by the Month
+3  by the Bill
+4  by the Hour" null-able="false" columnDef="NUMBER" columnSize="4"/>
+    <field name="validType" type="Integer" column="VALID_TYPE" isPk="false" remark="sustainable billing cycle after subscribing product offering" null-able="false" columnDef="NUMBER" columnSize="4"/>
+    <field name="validUnit" type="Integer" column="VALID_UNIT" isPk="false" null-able="false" columnDef="NUMBER" columnSize="2"/>
+    <field name="modifyDate" type="Date" column="MODIFY_DATE" isPk="false" remark="modification date" null-able="true" columnDef="DATE" columnSize="7"/>
+    <field name="cycleSyncFlag" type="Integer" column="CYCLE_SYNC_FLAG" isPk="false" null-able="true" columnDef="NUMBER" columnSize="1"/>
+    <field name="fixedExpireDate" type="Date" column="FIXED_EXPIRE_DATE" isPk="false" null-able="true" columnDef="DATE" columnSize="7"/>
+    <field name="halfCycleFlag" type="Integer" column="HALF_CYCLE_FLAG" isPk="false" null-able="false" columnDef="NUMBER" columnSize="1"/>
+  </fields>
+</entity>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SmsInfo" remark="" schema="cd" table="SMS_INFO" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="ID" columnDef="AutoIncrement" isPk="true" name="id" primitive="No" remark="United sequence number" type="Long"/>
+        <field column="MSISDN" columnDef="Varchar" columnSize="12" name="msisdn" null-able="false" primitive="No" remark="Mobile phone number" type="String"/>
+        <field column="FLAG" columnDef="Varchar" columnSize="10" name="flag" null-able="false" primitive="No" remark="SMS flag, such as charging SMS " type="String"/>
+        <field column="MSG" columnDef="Varchar" columnSize="512" name="msg" primitive="No" remark="Message content" type="String"/>
+        <field column="STS" columnDef="Char" columnSize="1" name="sts" primitive="No" remark="const AISTD string DATA_NEW_STATE = &quot;A&quot;;// to be sent&#10;&#10;const AISTD string DATA_MID_STATE = &quot;M&quot;;// sending&#10;&#10;const AISTD string DATA_EXIT_STATE = &quot;X&quot;;// program exit and not sent&#10;&#10;const AISTD string DATA_NO_RESP_STATE = &quot;E&quot;;// sending finished but hasn't received the response&#10;&#10;const AISTD string DATA_SUCC_STATE = &quot;F&quot;;// sending finished" type="String"/>
+        <field column="GET_DATE" columnDef="Date" name="getDate" primitive="No" remark="SMS creation timeCreation date" type="Date"/>
+        <field column="PARA1" columnDef="Varchar" columnSize="20" name="para1" primitive="No" remark="Reserved" type="String"/>
+        <field column="PARA2" columnDef="Varchar" columnSize="20" name="para2" primitive="No" remark="Reserved" type="String"/>
+        <field column="PARA3" columnDef="Varchar" columnSize="20" name="para3" primitive="No" remark="Reserved" type="String"/>
+        <field column="SEND_DATE" columnDef="Date" name="sendDate" primitive="No" remark="Sending date" type="Date"/>
+        <field column="RECV" columnDef="Varchar" columnSize="20" name="recv" primitive="No" remark="Reserved" type="String"/>
+        <field column="MSG_ID" columnDef="Varchar" columnSize="32" name="msgId" primitive="No" remark="Used to query corresponding REPORT" type="String"/>
+        <field column="PRI" columnDef="Int" name="pri" primitive="No" remark="The greater numerical value, the higher priority" type="Integer"/>
+        <field column="ACC_ID" columnDef="Int" name="accId" primitive="No" remark="Used to distinguish every time interval" type="Integer"/>
+        <field column="DONE_CODE" columnDef="Int" name="doneCode" primitive="No" remark="Upper system serial number, used to query the result" type="Long"/>
+        <field column="NOTIFY_LANG" columnDef="Int" name="notifyLang" null-able="false" primitive="No" remark="????????&#10;&#10;?????SYS_LANGUAGE???" type="Integer"/>
+        <field column="SEQUENCE_ID" columnDef="Int" name="sequenceId" null-able="false" primitive="No" remark="" type="Long"/>
+    </fields>
+</entity>

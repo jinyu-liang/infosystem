@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SWlanInfo" remark="" sdl="true" sdl-module="MXdr" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+<fields>
+<field name="hostspotId" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="acAddress" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="asAddress" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="homeCarrier" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="roamCarrier" primitive="Yes" remark="" sdl="true" type="Long"/>
+</fields>
+</entity>

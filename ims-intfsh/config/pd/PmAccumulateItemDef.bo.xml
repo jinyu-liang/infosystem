@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="PmAccumulateItemDef" remark="" table="PM_ACCUMULATE_ITEM_DEF" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="ACCUMULATE_ITEM" columnDef="AutoIncrement" isPk="true(not generated)" name="accumulateItem" null-able="false" primitive="Auto" type="Integer"/>
+        <field column="NAME" columnDef="Varchar" columnSize="512" isPk="false" name="name" null-able="true" primitive="Auto" type="String"/>
+        <field column="ACCUMULATE_CLASS" columnDef="Int" isPk="false" name="accumulateClass" null-able="true" primitive="Auto" type="Integer"/>
+        <field column="ACCUMULATE_TYPE" columnDef="Int" isPk="false" name="accumulateType" null-able="true" primitive="Auto" type="Integer"/>
+        <field column="ACCUMULATE_USE" columnDef="Int" isPk="false" name="accumulateUse" null-able="true" primitive="Auto" type="Integer"/>
+        <field column="DEPEND_FREERES_ITEM" columnDef="Int" isPk="false" name="dependFreeresItem" null-able="true" primitive="Auto" type="Integer"/>
+        <field column="DEPEND_PROD_FLAG" columnDef="Int" isPk="false" name="dependProdFlag" null-able="true" primitive="Auto" type="Integer"/>
+        <field column="MULTIPLEX_FLAG" columnDef="Int" isPk="false" name="multiplexFlag" null-able="true" primitive="Auto" type="Integer"/>
+        <field column="MEASURE_ID" columnDef="Int" isPk="false" name="measureId" null-able="true" primitive="Auto" type="Integer"/>
+        <field column="SEG_ID" columnDef="Int" isPk="false" name="segId" null-able="true" primitive="Auto" type="Integer"/>
+        <field column="DESCRIPTION" columnDef="Varchar" columnSize="1024" isPk="false" name="description" null-able="true" primitive="Auto" type="String"/>
+    </fields>
+</entity>

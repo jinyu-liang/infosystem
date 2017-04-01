@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SCreditStatus" remark="" sdl="true" sdl-module="MImsSyncDef" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+    <fields>
+        <field name="workOrderType" primitive="Yes" remark="" sdl="true" type="Integer"/>
+        <field name="phoneId" primitive="Yes" remark="" sdl="true" type="String"/>
+        <field name="flag" primitive="Yes" remark="" sdl="true" type="Integer"/>
+        <field name="oldStatus" primitive="Yes" remark="" sdl="true" type="Integer"/>
+        <field name="oldSubType" primitive="Yes" remark="" sdl="true" type="Integer"/>
+        <field name="newStatus" primitive="Yes" remark="" sdl="true" type="Integer"/>
+        <field name="newSubType" primitive="Yes" remark="" sdl="true" type="Integer"/>
+        <field name="creditLimit" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="tempCreditLimit" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="overUsage" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="triggerDate" primitive="Yes" remark="" sdl="true" type="Date"/>
+    </fields>
+</entity>

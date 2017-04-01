@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SChangeProdInfo" remark="" sdl="true" sdl-module="MImsSyncDef" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+    <fields>
+        <field name="productId" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="offerId" primitive="Yes" remark="" sdl="true" type="Integer"/>
+        <field name="operType" primitive="Yes" remark="" sdl="true" type="Integer"/>
+        <field name="objectId" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="objectType" primitive="Yes" remark="" sdl="true" type="Integer"/>
+        <field name="validDate" primitive="Yes" remark="" sdl="true" type="Date"/>
+        <field name="expireDate" primitive="Yes" remark="" sdl="true" type="Date"/>
+        <complex-field collection="list" name="paramList" primitive="false" ref="imssdl.SParamInfo" remark="" sdl="true" type="entity"/>
+    </fields>
+</entity>

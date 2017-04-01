@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="SLifeCycleChg">
+  <fields>
+    <field name="resourcr_id" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="extendDays" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="expireDate" type="Date" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="validDate" type="Date" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="sts" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="activeValidDate" type="Date" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="activeExpireDate" type="Date" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="suspendExpireDate" type="Date" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="disableExprieDate" type="Date" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

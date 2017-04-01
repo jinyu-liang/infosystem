@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="IUserStatus" remark="" schema="JD" table="I_USER_STATUS" xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="USER_ID" columnDef="BigInt" name="userId" null-able="false" primitive="No" remark="" type="Long"/>
+        <field column="STS" columnDef="Int" name="sts" null-able="false" primitive="No" remark="" type="Integer"/>
+        <field column="OS_STS" columnDef="Int" name="osSts" null-able="false" primitive="No" remark="" type="Integer"/>
+        <field column="OS_STS_DTL" columnDef="Varchar" columnSize="64" name="osStsDtl" null-able="false" primitive="No" remark="?????:&#10;???,??????,?????,???,????,????,???????????????&#10;&#10;&#10;" type="String"/>
+        <field column="VALID_DATE" columnDef="Date" name="validDate" null-able="false" primitive="No" remark="" type="Date"/>
+        <field column="EXPIRE_DATE" columnDef="Date" name="expireDate" null-able="false" primitive="No" remark="" type="Date"/>
+        <field column="OPER_TYPE" columnDef="Int" name="operType" null-able="false" primitive="No" remark="1:??&#10;2:??&#10;3:??&#10;" type="Integer"/>
+        <field column="SO_NBR" columnDef="BigInt" name="soNbr" null-able="false" primitive="No" remark="" type="Long"/>
+        <field column="COMMIT_DATE" columnDef="Date" name="commitDate" null-able="false" primitive="No" remark="" type="Date"/>
+    </fields>
+</entity>

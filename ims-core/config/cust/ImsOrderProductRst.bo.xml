@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="ImsOrderProductRst" remark="" schema="CD" table="IMS_ORDER_PRODUCT_RST" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="ID" columnDef="AutoIncrement" isPk="true" name="id" primitive="No" remark="" type="Long"/>
+        <field column="OBJECT_ID" columnDef="BigInt" name="objectId" null-able="false" primitive="No" remark="" type="Long"/>
+        <field column="OBJECT_TYPE" columnDef="Int" name="objectType" null-able="false" primitive="No" remark="" type="Integer"/>
+        <field column="OFFERING_ID" columnDef="Int" name="offeringId" null-able="false" primitive="No" remark="" type="Integer"/>
+        <field column="VALID_DATE" columnDef="TimeStamp" name="validDate" primitive="No" remark="" type="Date"/>
+        <field column="EXPIRE_DATE" columnDef="TimeStamp" name="expireDate" primitive="No" remark="" type="Date"/>
+        <field column="SO_NBR" columnDef="BigInt" name="soNbr" null-able="false" primitive="No" remark="" type="Long"/>
+        <field column="CREATE_DATE" columnDef="TimeStamp" name="createDate" null-able="false" primitive="No" remark="业务数据表的create_date" type="Date"/>
+        <field column="DEAL_DATE" columnDef="TimeStamp" name="dealDate" null-able="false" primitive="No" remark="处理时间" type="Date"/>
+        <field column="DEAL_STS" columnDef="Int" name="dealSts" null-able="false" primitive="No" remark="1：成功 2：失败 3：已再处理" type="Integer"/>
+        <field column="DEAL_DESC" columnDef="Varchar" columnSize="255" name="dealDesc" primitive="No" remark="失败时，存储失败信息" type="String"/>
+        <field column="DEAL_AGAIN_DATE" columnDef="TimeStamp" name="dealAgainDate" primitive="No" remark="对于失败记录的再处理时间" type="Date"/>
+    </fields>
+</entity>

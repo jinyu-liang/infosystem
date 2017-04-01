@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="ExtendParam" transient="true">
+  <fields>
+    <field name="param_name" type="String" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="param_value" type="String" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="valid_date" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="expire_date" type="String" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

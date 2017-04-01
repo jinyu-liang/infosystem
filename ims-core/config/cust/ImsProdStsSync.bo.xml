@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="ImsProdStsSync" schema="cd" table="IMS_PROD_STS_SYNC">
+  <fields>
+    <field name="id" type="Long" column="ID" isPk="true" primitive="No" remark="?bos??sequence?????" null-able="true" columnDef="AutoIncrement"/>
+    <field name="acctId" type="Long" column="ACCT_ID" primitive="No" null-able="false" columnDef="Int"/>
+    <field name="phoneId" type="String" column="PHONE_ID" primitive="No" null-able="true" columnDef="Varchar" columnSize="30"/>
+    <field name="productId" type="Long" column="PRODUCT_ID" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="deductFlag" type="Integer" column="DEDUCT_FLAG" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="statusBefore" type="Integer" column="STATUS_BEFORE" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="statusAfter" type="Integer" column="STATUS_AFTER" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="oldCycleDate" type="Date" column="OLD_CYCLE_DATE" primitive="No" null-able="true" columnDef="Date"/>
+    <field name="newCycleDate" type="Date" column="NEW_CYCLE_DATE" primitive="No" null-able="true" columnDef="Date"/>
+    <field name="previousBalance" type="Long" column="PREVIOUS_BALANCE" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="currentBalance" type="Long" column="CURRENT_BALANCE" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="lastTryFlag" type="Integer" column="LAST_TRY_FLAG" primitive="No" remark="The flag of last try, if not try, last_try_flag=1,otherwise flag=0 (default)" null-able="true" columnDef="Int"/>
+    <field name="prorateDays" type="Integer" column="PRORATE_DAYS" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="productSequenceId" type="Long" column="PRODUCT_SEQUENCE_ID" primitive="No" null-able="false" columnDef="Int"/>
+    <field name="chargeAmount" type="Integer" column="CHARGE_AMOUNT" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="splitChargeAmount" type="Integer" column="SPLIT_CHARGE_AMOUNT" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="deductTime" type="Date" column="DEDUCT_TIME" primitive="No" null-able="true" columnDef="Date"/>
+    <field name="failReason" type="String" column="FAIL_REASON" primitive="No" null-able="true" columnDef="Varchar" columnSize="255"/>
+    <field name="soNbr" type="Long" column="SO_NBR" primitive="No" remark="done_code" null-able="false" columnDef="Int"/>
+    <field name="createDate" type="Date" column="CREATE_DATE" primitive="No" remark="create date" null-able="false" columnDef="Date"/>
+    <field name="sts" type="Integer" column="STS" primitive="No" remark="1:???? 2: ???" null-able="false" columnDef="Int"/>
+    <field name="changeMainFlag" type="Integer" column="CHANGE_MAIN_FLAG" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="newProductId" type="Integer" column="NEW_PRODUCT_ID" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="newProductSeqId" type="Integer" column="NEW_PRODUCT_SEQ_ID" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="newProductValidDate" type="Date" column="NEW_PRODUCT_VALID_DATE" primitive="No" null-able="true" columnDef="Date"/>
+    <field name="newProductExpireDate" type="Date" column="NEW_PRODUCT_EXPIRE_DATE" primitive="No" null-able="true" columnDef="Date"/>
+    <field name="changePriceFlag" type="Integer" column="CHANGE_PRICE_FLAG" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="priceDesc" type="String" column="PRICE_DESC" primitive="No" null-able="true" columnDef="Varchar" columnSize="255"/>
+    <field name="errorMsg" type="String" column="ERROR_MSG" primitive="No" null-able="true" columnDef="Varchar" columnSize="256"/>
+    <field name="errorCode" type="Integer" column="ERROR_CODE" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="dealCount" type="Integer" column="DEAL_COUNT" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="dealDate" type="Date" column="DEAL_DATE" primitive="No" null-able="true" columnDef="Date"/>
+    <field name="firstCycleFlag" type="Integer" column="FIRST_CYCLE_FLAG" isPk="false" primitive="Auto" null-able="true" columnDef="NUMBER" columnSize="4"/>
+  </fields>
+</entity>

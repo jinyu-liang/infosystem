@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="ProductFNList" transient="false">
+<fields>
+<complex-field name="ProductFN" type="entity" ref="imsintf.ProductFN" collection="array" primitive="false"/>
+</fields>
+</entity>

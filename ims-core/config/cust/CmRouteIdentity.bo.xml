@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="CmRouteIdentity" remark="" schema="cd" table="CM_ROUTE_IDENTITY" xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="IDENTITY_ID" columnDef="Varchar" columnSize="64" name="identityId" primitive="No" remark="" type="String"/>
+        <field column="RESOURCE_ID" columnDef="BigInt" isPk="true(not generated)" name="resourceId" null-able="false" primitive="No" remark="" type="Long"/>
+        <field column="VALID_DATE" columnDef="TimeStamp" isPk="true(not generated)" name="validDate" null-able="false" primitive="No" remark="" type="Date"/>
+        <field column="EXPIRE_DATE" columnDef="TimeStamp" name="expireDate" primitive="No" remark="" type="Date"/>
+        <field column="ID_TYPE" columnDef="Int" name="idType" primitive="No" remark="" type="Integer"/>
+        <field column="COUNTY_CODE" columnDef="Int" name="countyCode" primitive="No" remark="" type="Integer"/>
+        <field column="REGION_CODE" columnDef="Int" name="regionCode" primitive="No" remark="" type="Integer"/>
+        <field column="CUST_ID" columnDef="BigInt" name="custId" primitive="No" remark="" type="Long"/>
+        <field column="PREPAY_TAG" columnDef="Char" columnSize="1" name="prepayTag" primitive="No" remark="" type="String"/>
+        <field name="partitionId" type="Integer" column="PARTITION_ID" isPk="false" primitive="Auto" null-able="false" columnDef="Int"/>
+    </fields>
+</entity>

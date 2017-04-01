@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SLbsInfo" remark="" sdl="true" sdl-module="MXdr" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+<fields>
+<field name="requestType" primitive="Yes" remark="" sdl="true" type="Short"/>
+<field name="callNumber" primitive="Yes" remark="" sdl="true" type="Short"/>
+<field name="security" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="qosType" primitive="Yes" remark="" sdl="true" type="Short"/>
+<field name="correction" primitive="Yes" remark="" sdl="true" type="Short"/>
+<field name="lspIdInput" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="lspIdLocal" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="resultX" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="resultY" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="coordinationType" primitive="Yes" remark="" sdl="true" type="String"/>
+</fields>
+</entity>

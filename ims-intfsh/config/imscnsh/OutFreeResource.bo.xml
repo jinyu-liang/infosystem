@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="OutFreeResource">
+  <fields>
+    <field name="item_code" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="item_name" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="amount" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="used_value" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="remain_value" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="measure_id" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="measure_name" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="product_id" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="product_name" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="valid_date" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="expire_date" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="display_name" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <complex-field name="freeResourceDetailList" type="entity" ref="imscnsh.OutFreeResource" collection="list" primitive="false"/>
+  </fields>
+</entity>

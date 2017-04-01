@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="ImsResMonitor" schema="JD" table="IMS_RES_MONITOR">
+  <fields>
+    <field name="resourceId" type="Long" column="RESOURCE_ID" isPk="true(not generated)" remark="资源编号" null-able="false" columnDef="NUMBER" columnSize="15"/>
+    <field name="serviceId" type="Integer" column="SERVICE_ID" isPk="false" remark="服务标识,监控的业务大类， 目前存在语音，短信，GPRS等几种业务" null-able="true" columnDef="NUMBER" columnSize="9"/>
+    <field name="monitorCondId" type="Integer" column="MONITOR_COND_ID" isPk="false" remark="欠控业务,监控业务条件表达式ID， 目前高危系统默认为0" null-able="true" columnDef="NUMBER" columnSize="9"/>
+    <field name="monitorType" type="Integer" column="MONITOR_TYPE" isPk="false" remark="0: 离线业务, 1:欠控业务; 2:在线业务 ， 目前高危系统默认为1" null-able="true" columnDef="NUMBER" columnSize="2"/>
+    <field name="operType" type="Integer" column="OPER_TYPE" isPk="false" remark="处理类型:1:迁入2：迁出
+" null-able="true" columnDef="NUMBER" columnSize="2"/>
+    <field name="validDate" type="Date" column="VALID_DATE" isPk="true(not generated)" remark="生效时间" null-able="false" columnDef="DATE" columnSize="7"/>
+    <field name="expireDate" type="Date" column="EXPIRE_DATE" isPk="false" null-able="true" columnDef="DATE" columnSize="7"/>
+    <field name="soNbr" type="Long" column="SO_NBR" isPk="false" null-able="true" columnDef="NUMBER" columnSize="15"/>
+    <field name="createDate" type="Date" column="CREATE_DATE" isPk="false" null-able="true" columnDef="DATE" columnSize="7"/>
+    <field name="sts" type="Integer" column="STS" isPk="false" remark="处理状态" null-able="true" columnDef="NUMBER" columnSize="2"/>
+    <field name="dealDate" type="Date" column="DEAL_DATE" isPk="false" remark="处理时间" null-able="true" columnDef="DATE" columnSize="7"/>
+    <field name="remark" type="String" column="REMARK" isPk="false" null-able="true" columnDef="VARCHAR2" columnSize="256"/>
+    <field name="sourceId" type="Integer" column="SOURCE_ID" isPk="false" primitive="Auto" remark="数据来源" null-able="true" columnDef="NUMBER" columnSize="2"/>
+  </fields>
+</entity>

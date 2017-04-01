@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="SGroupList">
+  <fields>
+    <complex-field name="group_items" type="entity" ref="imsintf.SGroup" collection="array" primitive="false"/>
+  </fields>
+</entity>

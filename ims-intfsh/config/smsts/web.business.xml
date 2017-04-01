@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/biz.xsd">
+    <service bind-entity="false" name="ISmsTsApp" sdl="true" sdl-module="MSmsTsApp">
+        <method name="do_sendWlanCmccSms" scope="service-only">
+            <return-type type="Integer"/>
+        </method>
+        <method name="do_sendWlanFlowSms" scope="service-only">
+            <return-type type="Integer"/>
+        </method>
+        <method name="do_sendGprsFlowSms" scope="service-only">
+            <return-type type="Integer"/>
+        </method>
+        <method name="do_sendMobileDataFlowSms" scope="service-only">
+            <return-type type="Integer"/>
+        </method>
+        <method name="do_sendUserPackageSms" scope="service-only">
+            <return-type type="Integer"/>
+        </method>
+        <method name="do_sendEwalkFlowSms" scope="service-only">
+            <return-type type="Integer"/>
+        </method>
+        <method name="do_sendResValidDateSms" scope="service-only">
+            <return-type type="Integer"/>
+        </method>
+        <method name="do_sendCycleMobileDateFlowSms" scope="service-only">
+            <return-type type="Integer"/>
+        </method>
+        <method name="do_sendValidBillCycStoPhoSms" scope="service-only">
+            <return-type type="Integer"/>
+        </method>
+        <method name="do_syncValidBillCycStoPho" scope="service-only">
+            <return-type type="Integer"/>
+        </method>
+        <method name="do_userValidity" scope="service-only">
+            <return-type type="Integer"/>
+        </method>
+        <method name="do_sendGprsLowFlowSms" scope="service-only">
+            <return-type type="Integer"/>
+        </method>
+    <method name="do_sendFreeresHalfUseFlow" scope="service-only">
+       <return-type type="Integer"/>
+    </method>
+    <method name="do_sendWlanTimeFlow" scope="both">
+      <return-type type="Integer"/>
+    </method>
+  </service>
+</module>

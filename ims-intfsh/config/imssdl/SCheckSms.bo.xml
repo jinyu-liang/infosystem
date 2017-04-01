@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SCheckSms" remark="" sdl="true" sdl-module="MIntfshSyncDef" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd">
+    <fields>
+        <field name="blockId" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="modCode" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="sendDate" primitive="Yes" remark="" sdl="true" type="Date"/>
+        <field name="doneDate" primitive="Yes" remark="" sdl="true" type="Date"/>
+        <field name="sendMod" primitive="Yes" remark="" sdl="true" type="Short"/>
+        <field name="dataSource" primitive="Yes" remark="" sdl="true" type="String"/>
+        <field name="sendNum" primitive="Yes" remark="" sdl="true" type="Long"/>
+    </fields>
+</entity>

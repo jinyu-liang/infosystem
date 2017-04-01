@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="RsSlaRefAccumulate" remark="" schema="bd" table="RS_SLA_REF_ACCUMULATE" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="ACCUMULATE_ITEM" columnDef="Int" name="accumulateItem" null-able="false" primitive="No" remark="accumulated charging item&#10; " type="Integer"/>
+        <field column="SLA_REF_ID" columnDef="AutoIncrement" isPk="true" name="slaRefId" primitive="No" remark="" type="Integer"/>
+        <field column="CYCLE_TYPE" columnDef="Int" name="cycleType" null-able="false" primitive="No" remark="Cycle types: 1:By calendar day  2:By calendar week  3:By calendar month&#10; 4:By calendar year 5:By non-calendar month, similar to the function of&#10; add_months() in Oracle  6:By offset by hour  7:By offset by calendar month&#10; At present accumulated amount is stored by calendar day, minimum unit of a&#10; cycle" type="Integer"/>
+        <field column="CYCLE_UNIT" columnDef="Int" name="cycleUnit" null-able="false" primitive="No" remark="Cycle unit, reference unit for accumulation&#10; " type="Integer"/>
+    </fields>
+</entity>

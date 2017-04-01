@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="CaGroupCredit" remark="" schema="AD" table="CA_GROUP_CREDIT" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="GROUP_ID" columnDef="AutoIncrement" isPk="true" name="groupId" primitive="No" remark="group ID" type="Integer"/>
+        <field column="CREDIT_CLASS" columnDef="Int" name="creditClass" primitive="No" remark="used for mapping foreign data " type="Integer"/>
+        <field column="CREDIT_VALUE" columnDef="BigInt" name="creditValue" null-able="false" primitive="No" remark="amount of credit limit" type="Long"/>
+    </fields>
+</entity>

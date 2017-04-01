@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="CaFreeresMonth" schema="AD" table="CA_FREERES_MONTH">
+  <fields>
+    <field name="resourceId" type="Long" column="RESOURCE_ID" isPk="true(not generated)" remark="????" null-able="false" columnDef="NUMBER" columnSize="15"/>
+    <field name="acctId" type="Long" column="ACCT_ID" isPk="false" remark="????" null-able="false" columnDef="NUMBER" columnSize="15"/>
+    <field name="beginDate" type="Date" column="BEGIN_DATE" isPk="true(not generated)" remark="?????" null-able="false" columnDef="DATE" columnSize="7"/>
+    <field name="endDate" type="Date" column="END_DATE" isPk="false" remark="?????" null-able="false" columnDef="DATE" columnSize="7"/>
+    <field name="billMonth" type="Integer" column="BILL_MONTH" isPk="false" remark="????" null-able="false" columnDef="NUMBER" columnSize="6"/>
+    <field name="itemCode" type="Long" column="ITEM_CODE" isPk="true(not generated)" remark="????" null-able="false" columnDef="NUMBER" columnSize="15"/>
+    <field name="itemName" type="String" column="ITEM_NAME" isPk="false" remark="????" null-able="false" columnDef="VARCHAR2" columnSize="256"/>
+    <field name="productId" type="Long" column="PRODUCT_ID" isPk="true(not generated)" remark="???????" null-able="false" columnDef="NUMBER" columnSize="15"/>
+    <field name="productName" type="String" column="PRODUCT_NAME" isPk="false" remark="????" null-able="true" columnDef="VARCHAR2" columnSize="256"/>
+    <field name="measureId" type="Integer" column="MEASURE_ID" isPk="false" remark="?????" null-able="false" columnDef="NUMBER" columnSize="9"/>
+    <field name="unit" type="Long" column="UNIT" isPk="false" remark="??" null-able="false" columnDef="NUMBER" columnSize="12"/>
+    <field name="realUnit" type="Long" column="REAL_UNIT" isPk="false" remark="?????" null-able="false" columnDef="NUMBER" columnSize="12"/>
+    <field name="vaildDate" type="Date" column="VAILD_DATE" isPk="false" remark="????" null-able="false" columnDef="DATE" columnSize="7"/>
+    <field name="expireDate" type="Date" column="EXPIRE_DATE" isPk="false" remark="????" null-able="false" columnDef="DATE" columnSize="7"/>
+    <field name="remarks" type="String" column="REMARKS" isPk="false" remark="??" null-able="true" columnDef="VARCHAR2" columnSize="256"/>
+  </fields>
+</entity>

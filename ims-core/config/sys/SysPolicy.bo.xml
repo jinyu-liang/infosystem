@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SysPolicy" remark="" schema="sd" table="SYS_POLICY" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="POLICY_ID" columnDef="AutoIncrement" isPk="true" name="policyId" primitive="No" remark="Policy ID, 0 for always true.&#10;" type="Integer"/>
+        <field column="NAME" columnDef="Varchar" columnSize="256" name="name" null-able="false" primitive="No" remark="Policy name" type="String"/>
+        <field column="USE_TRIGGER" columnDef="Int" name="useTrigger" null-able="false" primitive="No" remark="Condition triggering&#10;Conditions for different functions vary, for instance, conditions for rating elements and for promotion application vary greatly. Condition mapping to some certain expression shall be defined for prompt expression matching. Known conditions at present are as follows:&#10;0: Rating element&#10;1:Promotion application&#10;3: Billing discount&#10;4: Subject exchange&#10;5: Recurring charge&#10;7: SP monthly rental fee charge: solution of&#10;" type="Integer"/>
+        <field column="POLICY_EXPR" columnDef="Varchar" columnSize="1024" name="policyExpr" null-able="false" primitive="No" remark="Policy expression, a rule expression such as effective condition expression ---@1006=50001 and  @1010 in (0,1,4) and ((cond.llike(@1005, 50219) and @1091 = 603) or (cond.llike(@1005, 50213) and @1091 = 603))  and calculating expression  free_res_per()&gt;0 or get_fee(80400150,2)&gt;0&#10;" type="String"/>
+        <field column="DESCRIPTION" columnDef="Varchar" columnSize="1024" name="description" primitive="No" remark="Expression statement" type="String"/>
+    </fields>
+</entity>

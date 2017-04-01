@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SmsSendValue" remark="" schema="JD" table="SMS_SEND_VALUE" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="TABLE_NAME" columnDef="Varchar" columnSize="50" name="tableName" primitive="No" remark="如cm_resource_01" type="String"/>
+        <field column="BUSI_NUM" columnDef="Int" name="busiNum" primitive="No" remark="需要提醒的业务编号，如：定期发送wlan流量提醒定为1" type="Integer"/>
+        <field column="BLOCK_ID" columnDef="Int" name="blockId" primitive="No" remark="审核表中的block_id，重启之后的block_id和原来的任务一致" type="Long"/>
+        <field column="CURRENT_VALUE" columnDef="Int" name="currentValue" primitive="No" remark="如1000,表示之前的编号都已经处理，下次处理从1001开始" type="Long"/>
+        <field column="CURRENT_COUNT" columnDef="Int" name="currentCount" primitive="No" remark="已经处理的用户中需要发短信的用户数" type="Integer"/>
+        <field column="SO_DATE" columnDef="Date" name="soDate" primitive="No" remark="Modify Date" type="Date"/>
+        <field name="smsCode" type="Long" column="SMS_CODE" isPk="false" primitive="No" null-able="false" columnDef="NUMBER" columnSize="12"/>
+    </fields>
+</entity>

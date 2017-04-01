@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SCoProd" remark="" sdl="true" sdl-module="MIntfshSyncDef" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd">
+    <fields>
+        <field name="productId" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="prodTypeId" primitive="Yes" remark="" sdl="true" type="Integer"/>
+        <field name="productOfferingId" primitive="Yes" remark="" sdl="true" type="Integer"/>
+        <field name="pricePlanId" primitive="Yes" remark="" sdl="true" type="Integer"/>
+        <field name="billingType" primitive="Yes" remark="" sdl="true" type="Integer"/>
+        <field name="lifecycleStatusId" primitive="Yes" remark="" sdl="true" type="Short"/>
+        <field name="busiFlag" primitive="Yes" remark="" sdl="true" type="Integer"/>
+        <field name="isMain" primitive="Yes" remark="" sdl="true" type="Short"/>
+        <field name="objectId" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="objectType" primitive="Yes" remark="" sdl="true" type="Short"/>
+        <field name="expireDate" primitive="Yes" remark="" sdl="true" type="Date"/>
+        <field name="validDate" primitive="Yes" remark="" sdl="true" type="Date"/>
+        <field name="prodValidDate" primitive="Yes" remark="" sdl="true" type="Date"/>
+        <field name="prodExpireDate" primitive="Yes" remark="" sdl="true" type="Date"/>
+    </fields>
+</entity>

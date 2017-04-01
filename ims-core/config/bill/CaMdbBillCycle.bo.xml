@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="CaMdbBillCycle" schema="AD">
+  <fields>
+    <field name="acctId" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="billPlanId" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="cycleUnit" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="cycleType" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="billDateShift" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="prodId" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="servId" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="itemCode" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="validDate" type="Date" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="expireDate" type="Date" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="cycleSpecId" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="firstBillDate" type="Date" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

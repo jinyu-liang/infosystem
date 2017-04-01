@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="BillExtOut" transient="true">
+  <fields>
+    <field name="acct_id" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="acct_name" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="bill_fee" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="unpay_fee" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="ppy_fee" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="late_fee" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="real_time_fee" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <complex-field name="historyBillList" type="entity" ref="imscnsh.BillExt" collection="list" primitive="false"/>
+    <complex-field name="realTimeBillList" type="entity" ref="imscnsh.BillExt" collection="list" primitive="false"/>
+    <complex-field name="hisFormatBillList" type="entity" ref="imscnsh.FormatBill" collection="list" primitive="false"/>
+    <complex-field name="realFormatBillList" type="entity" ref="imscnsh.FormatBill" collection="list" primitive="false"/>
+  </fields>
+</entity>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="CmOrganization" remark="" schema="CD" table="CM_ORGANIZATION" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="PARTY_ID" columnDef="BigInt" isPk="true(not generated)" name="partyId" null-able="false" primitive="No" remark="Party ID" type="Long"/>
+        <field column="INDUSTRY_ID" columnDef="Int" name="industryId" primitive="No" remark="Adscription Industry,find it in the industry definition" type="Integer"/>
+        <field column="TYPE" columnDef="Int" name="type" null-able="false" primitive="No" remark="Organizition Type&#10;&#10;0ฃบCompany&#10;1ฃบDeptment&#10;2ฃบFamilty&#10;" type="Integer"/>
+        <field column="ORG_SIZE" columnDef="Int" name="orgSize" primitive="No" remark="Organizion Size&#10;&#10;&#10;1ฃบ0~50&#10;2ฃบ50~200&#10;3ฃบ200~" type="Integer"/>
+        <field column="ORG_BACKGROUND" columnDef="Varchar" columnSize="256" name="orgBackground" primitive="No" remark="Organization Background&#10;for example: Business Management Describtion  " type="String"/>
+        <field column="EXECUTIVE_INFO" columnDef="Varchar" columnSize="64" name="executiveInfo" primitive="No" remark="Organizition Principal Information " type="String"/>
+        <field column="SUPER_MANAGER" columnDef="Varchar" columnSize="64" name="superManager" primitive="No" remark="Supervisor" type="String"/>
+        <field column="IS_LEGAL_ENTITY" columnDef="Int" name="isLegalEntity" primitive="No" remark="Is it a legal organization's sign&#10;&#10;0: No&#10;1: Yes " type="Integer"/>
+        <field column="BEGIN_DATE" columnDef="TimeStamp" name="beginDate" primitive="No" remark="The date when the organizition created" type="Date"/>
+        <field column="END_DATE" columnDef="TimeStamp" name="endDate" primitive="No" remark="The date when the organizition ended" type="Date"/>
+        <field column="CREATE_DATE" columnDef="TimeStamp" name="createDate" null-able="false" primitive="No" remark="record create date" type="Date"/>
+        <field column="VALID_DATE" columnDef="TimeStamp" isPk="true(not generated)" name="validDate" null-able="false" primitive="No" remark="Effective Date" type="Date"/>
+        <field column="EXPIRE_DATE" columnDef="TimeStamp" name="expireDate" null-able="false" primitive="No" remark="Expired Date" type="Date"/>
+        <field column="DESCRIPTION" columnDef="Varchar" columnSize="1024" name="description" primitive="No" remark="Describtion" type="String"/>
+        <field column="SO_NBR" columnDef="BigInt" isPk="true(not generated)" name="soNbr" null-able="false" primitive="No" remark="The serial number" type="Long"/>
+        <field column="SO_DATE" columnDef="TimeStamp" name="soDate" primitive="No" remark="" type="Date"/>
+        <field column="FIRST_ADDRESS" columnDef="Int" name="firstAddress" primitive="No" remark="" type="Integer"/>
+        <field column="SECOND_ADDRESS" columnDef="Int" name="secondAddress" primitive="No" remark="" type="Integer"/>
+    	<field name="regNo" type="String" column="REG_NO" isPk="false" null-able="true" columnDef="VARCHAR2" columnSize="128"/>
+   	    <field name="regDate" type="Date" column="REG_DATE" isPk="false" null-able="true" columnDef="DATE" columnSize="7"/>
+    </fields>
+</entity>

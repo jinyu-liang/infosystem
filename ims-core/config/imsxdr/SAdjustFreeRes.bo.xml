@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SAdjustFreeRes" remark="" sdl="true" sdl-module="MXdr" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+<fields>
+<field name="phoneId" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="modifyType" primitive="Yes" remark="" sdl="true" type="Short"/>
+<field name="productId" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="freeResourceId" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="amount" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="valididyAmount" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="transparentData1" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="transparentData2" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="transparentData3" primitive="Yes" remark="" sdl="true" type="String"/>
+<complex-field collection="map&lt;String,?&gt;" name="extraMap" primitive="false" remark="" sdl="true" type="String"/>
+</fields>
+</entity>

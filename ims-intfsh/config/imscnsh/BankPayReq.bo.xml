@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="BankPayReq">
+  <fields>
+    <field name="bankCode" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="seqNo" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="tranDate" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="authId" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="mobileNo" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="userId" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="feeAmount" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="currType" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="password" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="payedType" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="ext1" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="ext2" type="String" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

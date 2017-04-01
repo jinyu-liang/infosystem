@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="SMgnSingleBalanceMbrReq" transient="true">
+  <fields>
+    <field name="outer_new_acct_id" type="String" isPk="false" primitive="Auto" tree-foreign-key="false" null-able="true"/>
+    <field name="new_acct_id" type="Long" isPk="false" primitive="Auto" tree-foreign-key="false" null-able="true"/>
+    <field name="oper_type" type="Short" isPk="false" primitive="Auto" tree-foreign-key="false" null-able="true"/>
+    <field name="master_phone_id" type="String" isPk="false" primitive="Auto" tree-foreign-key="false" null-able="true"/>
+    <field name="phone_id" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="last_term_flag" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="days" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="accumulation_reset_flag" type="Short" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

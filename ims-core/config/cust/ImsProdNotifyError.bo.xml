@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="ImsProdNotifyError" remark="" schema="cd" table="IMS_PROD_NOTIFY_ERROR" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="notification_id" columnDef="Int" name="notificationId" null-able="false" primitive="No" remark="告警id" type="Integer"/>
+        <field column="offer_id" columnDef="Int" name="offerId" null-able="false" primitive="No" remark="销售品id" type="Integer"/>
+        <field column="object_id" columnDef="BigInt" name="objectId" null-able="false" primitive="No" remark="产品使用对象id" type="Long"/>
+        <field column="object_type" columnDef="Int" name="objectType" null-able="false" primitive="No" remark="使用对象类型" type="Integer"/>
+        <field column="phone_id" columnDef="Varchar" columnSize="30" name="phoneId" null-able="false" primitive="No" remark="通知号码" type="String"/>
+        <field column="valid_date" columnDef="TimeStamp" name="validDate" null-able="false" primitive="No" remark="产品生效时间" type="Date"/>
+        <field column="expire_date" columnDef="TimeStamp" name="expireDate" null-able="false" primitive="No" remark="产品失效时间" type="Date"/>
+        <field column="create_date" columnDef="TimeStamp" name="createDate" null-able="false" primitive="No" remark="记录创建时间" type="Date"/>
+    </fields>
+</entity>

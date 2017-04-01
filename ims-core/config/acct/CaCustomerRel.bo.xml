@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="CaCustomerRel" remark="" schema="AD" table="CA_CUSTOMER_REL" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="CUST_ID" columnDef="BigInt" isPk="true(not generated)" name="custId" null-able="false" primitive="No" remark="Customer ID is a sequence number which is defined as the only instantiated ID to customer. Customer ID is a kind of party role which is consistent with PARTY_ROLE_ID." type="Long"/>
+        <field column="ACCT_ID" columnDef="BigInt" isPk="true(not generated)" name="acctId" null-able="false" primitive="No" remark="A unique identifier of customer&#10;" type="Long"/>
+        <field column="RELATIONSHIP_TYPE" columnDef="Int" isPk="true(not generated)" name="relationshipType" null-able="false" primitive="No" remark="Relation type&#10;0-attributive relation " type="Integer"/>
+        <field column="SO_NBR" columnDef="BigInt" isPk="true(not generated)" name="soNbr" null-able="false" primitive="No" remark="" type="Long"/>
+        <field column="VALID_DATE" columnDef="TimeStamp" isPk="true(not generated)" name="validDate" null-able="false" primitive="No" remark="" type="Date"/>
+        <field column="EXPIRE_DATE" columnDef="TimeStamp" name="expireDate" primitive="No" remark="" type="Date"/>
+        <field column="SO_DATE" columnDef="TimeStamp" name="soDate" primitive="No" remark="" type="Date"/>
+        <field column="CREATE_DATE" columnDef="TimeStamp" name="createDate" primitive="No" remark="" type="Date"/>
+        <field name="partitionId" type="Integer" column="PARTITION_ID" isPk="false" primitive="Auto" null-able="false" columnDef="Int"/>
+    </fields>
+</entity>

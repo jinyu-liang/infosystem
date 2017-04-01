@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="do_queryUserStsInfoResponse" transient="true">
+  <root ref="imsintf.BaseResponse"/>
+  <fields>
+    <field name="brand_id" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="active_period" type="Date" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="suspend_period" type="Date" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="disable_period" type="Date" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="maximun_balance" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="avtive_valid_date" type="Date" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="sts" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="os_sts" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="frauld_flag" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="user_request_flag" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="unbilling_flag" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="rerating_flag" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="full_sts" type="String" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="IUserSwitch" remark="" schema="JD" table="I_USER_SWITCH" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="USER_ID" columnDef="Int" name="userId" primitive="No" remark="用户编号" type="Long"/>
+        <field column="SERVICE_CODE" columnDef="Int" name="serviceCode" primitive="No" remark="0：总服务开关&#10;11:WAP业务开关&#10;12:SMS业务开关&#10;13: MMS业务开关&#10;14: 手机动画业务开关&#10;15: MMK业务开关&#10;16: WIDGET业务开关&#10;" type="Integer"/>
+        <field column="STATUS" columnDef="Int" name="status" primitive="No" remark="1：开&#10;2：关&#10;" type="Integer"/>
+        <field column="VALID_DATE" columnDef="Date" name="validDate" primitive="No" remark="" type="Date"/>
+        <field column="EXPIRE_DATE" columnDef="Date" name="expireDate" primitive="No" remark="" type="Date"/>
+        <field column="OPER_TYPE" columnDef="Int" name="operType" primitive="No" remark="1：新增&#10;2：修改&#10;3：删除&#10;" type="Integer"/>
+        <field column="SO_NBR" columnDef="Int" name="soNbr" primitive="No" remark="" type="Long"/>
+        <field column="COMMIT_DATE" columnDef="Date" name="commitDate" primitive="No" remark="" type="Date"/>
+        <field column="PRODUCT_ID" columnDef="Int" isPk="false" name="productId" null-able="true" primitive="Auto" type="Long"/>
+    </fields>
+</entity>

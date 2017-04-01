@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="CmResAuth" schema="CD" table="CM_RES_AUTH">
+  <fields>
+    <field name="resourceId" type="Long" column="RESOURCE_ID" isPk="true(not generated)" primitive="No" null-able="false" columnDef="BigInt"/>
+    <field name="hplmn" type="Integer" column="HPLMN" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="nationalRoaming" type="Integer" column="NATIONAL_ROAMING" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="internationalRoaming" type="Integer" column="INTERNATIONAL_ROAMING" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="roamingAuthority" type="Integer" column="ROAMING_AUTHORITY" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="irsmsAuthority" type="Integer" column="IRSMS_AUTHORITY" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="interIntraAuthority" type="Integer" column="INTER_INTRA_AUTHORITY" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="interIntraFlag" type="Integer" column="INTER_INTRA_FLAG" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="irpromptFlag" type="Integer" column="IRPROMPT_FLAG" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="fraudState" type="Integer" column="FRAUD_STATE" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="fraudTimes" type="Integer" column="FRAUD_TIMES" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="soNbr" type="Long" column="SO_NBR" isPk="true(not generated)" primitive="No" remark="The serial order which cause the state changing" null-able="false" columnDef="BigInt"/>
+    <field name="createDate" type="Date" column="CREATE_DATE" primitive="No" null-able="true" columnDef="TimeStamp"/>
+    <field name="soDate" type="Date" column="SO_DATE" primitive="No" remark="Modify Date" null-able="true" columnDef="TimeStamp"/>
+    <field name="expireDate" type="Date" column="EXPIRE_DATE" primitive="No" remark="Expired Date" null-able="true" columnDef="TimeStamp"/>
+    <field name="validDate" type="Date" column="VALID_DATE" isPk="true(not generated)" primitive="No" remark="Effective Date" null-able="false" columnDef="TimeStamp"/>
+  </fields>
+</entity>

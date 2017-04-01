@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="Check3HParamReturn">
+  <fields>
+    <complex-field name="resLifeCycle" type="entity" ref="ref://com.ailk.openbilling.persistence.cust.entity.CmResLifecycle" collection="none" primitive="false"/>
+    <complex-field name="account" type="entity" ref="ref://com.ailk.openbilling.persistence.acct.entity.CaAccount" collection="none" primitive="false"/>
+    <complex-field name="customer" type="entity" ref="ref://com.ailk.openbilling.persistence.cust.entity.CmCustomer" collection="none" primitive="false"/>
+    <field name="phoneId" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="userId" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="acctId" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

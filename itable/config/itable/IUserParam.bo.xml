@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="IUserParam" schema="jd" table="I_USER_PARAM">
+  <fields>
+    <field name="userId" type="Long" column="USER_ID" isPk="false" primitive="No" null-able="false" columnDef="Int"/>
+    <field name="regionCode" type="Integer" column="REGION_CODE" isPk="false" primitive="No" null-able="false" columnDef="Int"/>
+    <field name="paramId" type="Integer" column="PARAM_ID" isPk="false" primitive="No" null-able="false" columnDef="Int"/>
+    <field name="paramValue" type="String" column="PARAM_VALUE" isPk="false" primitive="Auto" null-able="false" columnDef="Varchar" columnSize="32"/>
+    <field name="remark" type="String" column="REMARK" isPk="false" primitive="Auto" null-able="true" columnDef="Varchar" columnSize="255"/>
+    <field name="validDate" type="Date" column="VALID_DATE" isPk="false" primitive="Auto" null-able="false" columnDef="Date"/>
+    <field name="expireDate" type="Date" column="EXPIRE_DATE" isPk="false" primitive="Auto" null-able="false" columnDef="Date"/>
+    <field name="soNbr" type="Long" column="SO_NBR" isPk="false" primitive="No" null-able="false" columnDef="Int"/>
+    <field name="operType" type="Integer" column="OPER_TYPE" isPk="false" primitive="No" null-able="false" columnDef="Int"/>
+    <field name="commitDate" type="Date" column="COMMIT_DATE" isPk="false" primitive="Auto" null-able="false" columnDef="Date"/>
+  </fields>
+</entity>

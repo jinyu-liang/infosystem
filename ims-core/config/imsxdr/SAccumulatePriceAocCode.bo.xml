@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SAccumulatePriceAocCode" remark="" sdl="true" sdl-module="MXdr" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+<fields>
+<complex-field collection="none" name="aoc" primitive="false" ref="imsxdr.SAocCode" remark="" sdl="true" type="entity"/>
+<field name="alarmType" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="priceId" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="doneCode" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="validDate" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="expireDate" primitive="Yes" remark="" sdl="true" type="Long"/>
+<complex-field collection="list" name="salarmAddup" primitive="false" ref="imsxdr.SAlarmAddup" remark="" sdl="true" type="entity"/>
+</fields>
+</entity>

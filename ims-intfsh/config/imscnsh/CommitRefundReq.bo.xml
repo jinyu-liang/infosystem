@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="CommitRefundReq">
+  <fields>
+    <field name="bank_id" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="plat_id" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="user_id" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="tran_type" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="org_order_num" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="org_tran_date" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="org_tran_amt" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="tran_amt" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="charge" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="return_type" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="ch_name" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="payer_tel" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="card_type" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="id_card" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="pan_type" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="pan" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="cvn2" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="valid_date" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="channel_id" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="channel_priv" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="expand" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <complex-field name="eCPayChannelInfo" type="entity" ref="imscnsh.ECPayChannelInfo" collection="none" primitive="false"/>
+  </fields>
+</entity>

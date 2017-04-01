@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="ImsSonbrMapping" remark="" schema="cd" table="IMS_SONBR_MAPPING" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="DONE_CODE" columnDef="BigInt" name="doneCode" null-able="false" primitive="No" remark="信息管理流水号" type="Long"/>
+        <field column="DONE_DATE" columnDef="TimeStamp" name="doneDate" null-able="false" primitive="No" remark="信息管理流水号产生时间" type="Date"/>
+        <field column="OUT_SO_NBR" columnDef="Varchar" columnSize="128" name="outSoNbr" null-able="false" primitive="No" remark="外围流水号" type="String"/>
+        <field column="OUT_SO_DATE" columnDef="TimeStamp" name="outSoDate" null-able="false" primitive="No" remark="外围流水号产生时间" type="Date"/>
+        <field column="BOS_SO_DATE" columnDef="TimeStamp" name="bosSoDate" null-able="false" primitive="No" remark="BOS内部产品流水号，比如帐管" type="Date"/>
+        <field column="BOS_SO_NBR" columnDef="BigInt" name="bosSoNbr" null-able="false" primitive="No" remark="BOS内部产品流水号产生时间" type="Long"/>
+        <field column="BUSI_CODE" columnDef="Int" name="busiCode" null-able="false" primitive="No" remark="业务编码" type="Integer"/>
+        <field column="BUSI_SPEC_ID" columnDef="Int" name="busiSpecId" null-able="false" primitive="No" remark="" type="Integer"/>
+        <field column="BUSI_TYPE" columnDef="Int" name="busiType" null-able="false" primitive="No" remark="1 oneTimeFee&#10;2 reward&#10;3 鉴权&#10;4 payment" type="Integer"/>
+    </fields>
+</entity>

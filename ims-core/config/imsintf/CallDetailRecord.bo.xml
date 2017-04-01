@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="CallDetailRecord" transient="false">
+  <fields>
+    <field name="date_of_event" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="time_of_event" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="peak_offpeak" type="Short" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="called_number" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="charging_number" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="operator" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="origination" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="destination" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="added_Service" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="unit" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="duration" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="country" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="grouping_name" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="prepaid_usage" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="postpaid_usage" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="pay_mode" type="Short" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="roam_type" type="Short" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="total_charge" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="pre_discount" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="measure_id" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

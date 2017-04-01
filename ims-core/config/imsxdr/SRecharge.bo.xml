@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SRecharge" remark="" sdl="true" sdl-module="MXdr" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+<fields>
+<field name="acctId" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="resourceId" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="phoneId" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="paidValue" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="measureId" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="rechargeType" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="rechargeFlag" primitive="Yes" remark="" sdl="true" type="Short"/>
+<field name="rechargeMethod" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="serviceId" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="bankAcctId" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="bankId" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="bankAcctName" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="extendDays" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="voucherCardNo" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="cardType" primitive="Yes" remark="" sdl="true" type="Short"/>
+<field name="cardBatchNo" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="cardSerialNo" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="cardValue" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="cardPin" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="cardMerchantId" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="cardValidity" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="transparentData1" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="transparentData2" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="transparentData3" primitive="Yes" remark="" sdl="true" type="String"/>
+<complex-field collection="map&lt;String,?&gt;" name="extraMap" primitive="false" remark="" sdl="true" type="String"/>
+</fields>
+</entity>

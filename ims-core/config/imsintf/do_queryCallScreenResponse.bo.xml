@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="do_queryCallScreenResponse" transient="true">
+  <root ref="imsintf.BaseResponse"/>
+  <fields>
+    <field name="CLIR_flag" type="Short" isPk="false" primitive="No" null-able="true"/>
+    <field name="call_screen_no_type" type="Short" isPk="false" primitive="No" null-able="true"/>
+    <field name="product_id" type="Long" isPk="false" primitive="Auto" remark="call screen product id" null-able="true"/>
+    <field name="routing_method" type="Short" isPk="false" primitive="No" null-able="true"/>
+    <field name="iCSSendSMSFlag" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <complex-field name="callscreen_list" type="entity" ref="imsintf.SCallScreenNoList" collection="none" primitive="false"/>
+  </fields>
+</entity>

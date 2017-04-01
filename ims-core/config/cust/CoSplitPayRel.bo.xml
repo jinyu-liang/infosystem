@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="CoSplitPayRel" remark="" schema="CD" table="CO_SPLIT_PAY_REL" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="PRODUCT_ID" columnDef="BigInt" isPk="true(not generated)" name="productId" null-able="false" primitive="No" remark="????ID" type="Long"/>
+        <field column="OBJECT_ID" columnDef="BigInt" isPk="true(not generated)" name="objectId" null-able="false" primitive="No" remark="???????????A?B????B?" type="Long"/>
+        <field column="OBJECT_TYPE" columnDef="Int" isPk="true(not generated)" name="objectType" null-able="false" primitive="No" remark="?????&#10;&#10;0:Dev&#10;&#10;1:Account&#10;&#10;2:GCA&#10;" type="Integer"/>
+        <field column="REGUID_OBJECT_ID" columnDef="BigInt" name="reguidObjectId" null-able="false" primitive="No" remark="??????&#10;????A?B????A?&#10;" type="Long"/>
+        <field column="REGUID_OBJECT_TYPE" columnDef="Int" name="reguidObjectType" null-able="false" primitive="No" remark="????&#10;&#10;0:Dev&#10;&#10;1:Account&#10;&#10;2:GCA&#10;" type="Integer"/>
+        <field column="VALID_DATE" columnDef="TimeStamp" isPk="true(not generated)" name="validDate" null-able="false" primitive="No" remark="valid date&#10;" type="Date"/>
+        <field column="EXPIRE_DATE" columnDef="TimeStamp" name="expireDate" primitive="No" remark="expire date&#10;" type="Date"/>
+        <field column="SO_NBR" columnDef="BigInt" isPk="true(not generated)" name="soNbr" null-able="false" primitive="No" remark="The serial number&#10;" type="Long"/>
+        <field column="CREATE_DATE" columnDef="TimeStamp" name="createDate" null-able="false" primitive="No" remark="create date of current record&#10;" type="Date"/>
+        <field column="SO_DATE" columnDef="TimeStamp" name="soDate" primitive="No" remark="modify date of current record&#10;" type="Date"/>
+    </fields>
+</entity>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="IUserDepositTransfer" schema="zg" table="I_USER_DEPOSIT_TRANSFER">
+  <fields>
+    <field name="servId" type="Long" column="SERV_ID" isPk="false" primitive="No" null-able="false" columnDef="Int"/>
+    <field name="regionCode" type="Integer" column="REGION_CODE" isPk="false" primitive="No" null-able="false" columnDef="Int"/>
+    <field name="promoId" type="Integer" column="PROMO_ID" isPk="false" primitive="No" null-able="false" columnDef="Int"/>
+    <field name="condId" type="Integer" column="COND_ID" isPk="false" primitive="No" null-able="false" columnDef="Int"/>
+    <field name="condGroup" type="Integer" column="COND_GROUP" isPk="false" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="busiType" type="Integer" column="BUSI_TYPE" isPk="false" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="principalFee" type="Long" column="PRINCIPAL_FEE" isPk="false" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="prinConsumed" type="Long" column="PRIN_CONSUMED" isPk="false" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="prinBeginDate" type="Date" column="PRIN_BEGIN_DATE" isPk="false" primitive="No" null-able="true" columnDef="Date"/>
+    <field name="prinEndDate" type="Date" column="PRIN_END_DATE" isPk="false" primitive="No" null-able="true" columnDef="Date"/>
+    <field name="donateFee" type="Long" column="DONATE_FEE" isPk="false" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="donaConsumed" type="Long" column="DONA_CONSUMED" isPk="false" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="donaBeginDate" type="Date" column="DONA_BEGIN_DATE" isPk="false" primitive="Auto" null-able="true" columnDef="Date"/>
+    <field name="donaEndDate" type="Date" column="DONA_END_DATE" isPk="false" primitive="Auto" null-able="true" columnDef="Date"/>
+    <field name="validDate" type="Date" column="VALID_DATE" isPk="false" primitive="Auto" null-able="false" columnDef="Date"/>
+    <field name="expireDate" type="Date" column="EXPIRE_DATE" isPk="false" primitive="Auto" null-able="true" columnDef="Date"/>
+    <field name="sts" type="Integer" column="STS" isPk="false" primitive="No" null-able="false" columnDef="Int"/>
+    <field name="stsDate" type="Date" column="STS_DATE" isPk="false" primitive="Auto" null-able="false" columnDef="Date"/>
+    <field name="bindImei" type="Integer" column="BIND_IMEI" isPk="false" primitive="No" null-able="false" columnDef="Int"/>
+    <field name="devUsedSts" type="Integer" column="DEV_USED_STS" isPk="false" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="imeiStsDate" type="Date" column="IMEI_STS_DATE" isPk="false" primitive="Auto" null-able="true" columnDef="Date"/>
+    <field name="imeiId" type="String" column="IMEI_ID" isPk="false" primitive="No" null-able="true" columnDef="Varchar" columnSize="36"/>
+    <field name="depositCredit" type="Long" column="DEPOSIT_CREDIT" isPk="false" primitive="Auto" null-able="true" columnDef="Int"/>
+    <field name="sid" type="Integer" column="SID" isPk="false" primitive="No" null-able="false" columnDef="Int"/>
+    <field name="soNbr" type="Long" column="SO_NBR" isPk="false" primitive="No" null-able="false" columnDef="Int"/>
+  </fields>
+</entity>

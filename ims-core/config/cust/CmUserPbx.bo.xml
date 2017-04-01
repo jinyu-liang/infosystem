@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="CmUserPbx" remark="" schema="CD" table="CM_USER_PBX" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="RESOURCE_ID" columnDef="BigInt" name="resourceId" primitive="No" remark="" type="Long"/>
+        <field column="REGION_CODE" columnDef="Int" name="regionCode" primitive="No" remark="" type="Integer"/>
+        <field column="MSC_ID" columnDef="BigInt" name="mscId" primitive="No" remark="" type="Long"/>
+        <field column="AREA_CODE" columnDef="Int" name="areaCode" primitive="No" remark="" type="Integer"/>
+        <field column="IN_TRUNK" columnDef="Varchar" columnSize="16" name="inTrunk" primitive="No" remark="" type="String"/>
+        <field column="OUT_TRUNK" columnDef="Varchar" columnSize="16" name="outTrunk" primitive="No" remark="" type="String"/>
+        <field column="ACCESS_NUMBER" columnDef="Varchar" columnSize="32" name="accessNumber" primitive="No" remark="" type="String"/>
+        <field column="MATCHING_ACCESS_NUMBER" columnDef="Int" name="matchingAccessNumber" primitive="No" remark="" type="Integer"/>
+        <field column="CREATE_DATE" columnDef="TimeStamp" name="createDate" primitive="No" remark="" type="Date"/>
+        <field column="SO_DATE" columnDef="TimeStamp" name="soDate" primitive="No" remark="" type="Date"/>
+        <field column="SO_NBR" columnDef="BigInt" name="soNbr" primitive="No" remark="" type="Long"/>
+        <field column="VALID_DATE" columnDef="TimeStamp" name="validDate" primitive="No" remark="" type="Date"/>
+        <field column="EXPIRE_DATE" columnDef="TimeStamp" name="expireDate" primitive="No" remark="" type="Date"/>
+    </fields>
+</entity>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="ImsNtf" remark="" schema="JD" table="IMS_NTF" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="QUEUE_ID" columnDef="Int" isPk="false" name="queueId" null-able="true" primitive="No" type="Long"/>
+        <field column="ACCT_ID" columnDef="Int" isPk="false" name="acctId" null-able="true" primitive="No" type="Long"/>
+        <field column="REGION_CODE" columnDef="Int" isPk="false" name="regionCode" null-able="true" primitive="No" type="Integer"/>
+        <field column="RESOURCE_ID" columnDef="Int" isPk="false" name="resourceId" null-able="true" primitive="No" type="Long"/>
+        <field column="PHONE_ID" columnDef="Varchar" columnSize="64" isPk="false" name="phoneId" null-able="true" primitive="No" type="String"/>
+        <field column="NOTIFICATION_ID" columnDef="Int" isPk="false" name="notificationId" null-able="true" primitive="No" type="Integer"/>
+        <field column="ACTION_ID" columnDef="Int" isPk="false" name="actionId" null-able="true" primitive="No" type="Integer"/>
+        <field column="NOTIFY_TIME" columnDef="Date" isPk="false" name="notifyTime" null-able="true" primitive="No" type="Date"/>
+        <field column="NOTIF_CONTENT" columnDef="Varchar" columnSize="1024" isPk="false" name="notifContent" null-able="true" primitive="No" type="String"/>
+		<field column="CREATE_DATE" columnDef="Date" isPk="false" name="createDate" null-able="true" primitive="No" type="Date"/>
+        <field column="STATE_ID" columnDef="Int" isPk="false" name="stateId" null-able="true" primitive="No" type="Integer"/>
+        <field column="SPLIT_FLAG" columnDef="Int" isPk="false" name="splitFlag" null-able="true" primitive="No" type="Integer"/>
+        <field column="REMARK" columnDef="Varchar" columnSize="2048" isPk="false" name="remark" null-able="true" primitive="No" type="String"/>
+    </fields>
+</entity>

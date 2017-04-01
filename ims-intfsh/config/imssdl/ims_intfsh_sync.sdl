@@ -1,0 +1,39 @@
+#include "ims_intfsh_sync_def.sdl"
+
+#include "ims_sync_def.sdl"
+
+module MIntfshSyncApp
+{
+	interface IIntfshSyncApp
+	{	
+		//实时短信接口
+		int32 do_insertImmeSmsBySdl(in MImsSyncDef::SOperInfo sOperInfo,in MIntfshSyncDef::SImmeSmsList listImmeSms);
+		
+		//批量短信接口
+		int32 do_insertBatchSmsBySdl(in MImsSyncDef::SOperInfo sOperInfo,in MIntfshSyncDef::SBatchSmsInfo sBatchSmsInfo);
+		
+		//根据用户查订购的产品
+		int32 do_queryUserProdList(in MImsSyncDef::SOperInfo sOperInfo,in MIntfshSyncDef::SQueryInfo sQueryInfo,out MIntfshSyncDef::SProductInfoList listProductInfo);
+		
+		//根据被代付的用户id或账户id，查询代付信息
+		int32 do_querySplitByObjectIdBySdl(in MImsSyncDef::SOperInfo sOperInfo,in MIntfshSyncDef::SQuerySplitRel sQueryInfo,out MIntfshSyncDef::SSplitInfoList listSplitInfo);
+		
+		//扫描用户有效期
+		int32 read_userValidity();
+		
+		//15G GPRS封顶停服务 
+		int32 do_chgGprsService(in MImsSyncDef::SOperInfo sOperInfo,in MIntfshSyncDef::SImsServiceNotify sImsServiceNotify);
+		
+		//国际GPRS漫游停服务
+		int32 do_irGprsAlarm(in MImsSyncDef::SOperInfo sOperInfo,in MIntfshSyncDef::SImsIrGprsAlarm sImsIrGprsAlarm);
+		
+		int32 do_updatePriceParam(in MImsSyncDef::SOperInfo sOperInfo,in MIntfshSyncDef::SUpSellingPriceParam sUpSellingPriceParam);
+		
+		int32 do_localHighChargeInfo(in MImsSyncDef::SOperInfo sOperInfo,in MIntfshSyncDef::SLocalHighChargeInfoReqList listChargeInfoList);
+		
+		int32 do_updateProdAndPriceParam(in MImsSyncDef::SOperInfo sOperInfo,in MIntfshSyncDef::SUpSellingPriceParam sUpSellingPriceParam);
+		
+		int32 do_updateDiscountPriceParam(in MImsSyncDef::SOperInfo sOperInfo,in MIntfshSyncDef::SUpSellingPriceParam sUpSellingPriceParam);
+		
+	}
+}

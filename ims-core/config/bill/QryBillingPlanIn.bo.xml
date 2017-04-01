@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="QryBillingPlanIn" transient="true">
+  <fields>
+    <field name="billingPlanId" type="Long" isPk="false" primitive="Auto" tree-foreign-key="false" null-able="true"/>
+    <field name="acctId" type="Long" isPk="false" primitive="Auto" tree-foreign-key="false" null-able="true"/>
+    <field name="outDate" type="Date" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="num" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="isExportShortBillCycle" type="Short" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="isSupress" type="Short" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="isPrepaid" type="Short" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

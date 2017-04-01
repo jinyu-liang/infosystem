@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="SFristActiveReq" transient="true">
+  <fields>
+    <field name="user_id" type="Long" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="phone_id" type="String" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="activation_time" type="String" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="device_type" type="String" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="sms_lang" type="Short" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="ivr_lang" type="Short" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="ussd_lang" type="Short" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="location" type="String" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <complex-field name="balance" type="entity" ref="imsintf.SBalance" collection="none" primitive="false"/>
+  </fields>
+</entity>

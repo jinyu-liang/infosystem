@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="RsSysIntlOperInfo" remark="" schema="BD" table="RS_SYS_INTL_OPER_INFO" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="ID" columnDef="AutoIncrement" isPk="true(not generated)" name="id" null-able="false" primitive="Auto" type="Integer"/>
+        <field column="OPERATOR_CODE" columnDef="Varchar" columnSize="32" isPk="false" name="operatorCode" null-able="true" primitive="Auto" type="String"/>
+        <field column="IMSI_HEAD" columnDef="Varchar" columnSize="15" isPk="false" name="imsiHead" null-able="true" primitive="Auto" type="String"/>
+        <field column="ENGLISH_NAME" columnDef="Varchar" columnSize="256" isPk="false" name="englishName" null-able="true" primitive="Auto" type="String"/>
+        <field column="COUNTRY_ID" columnDef="Int" isPk="false" name="countryId" null-able="true" primitive="Auto" type="Integer"/>
+        <field column="PROV_CODE" columnDef="Int" isPk="false" name="provCode" null-able="true" primitive="Auto" type="Integer"/>
+        <field column="TAP_VERSION" columnDef="Int" isPk="false" name="tapVersion" null-able="true" primitive="Auto" type="Integer"/>
+        <field column="TAP_RELEASE" columnDef="Int" isPk="false" name="tapRelease" null-able="true" primitive="Auto" type="Integer"/>
+        <field column="TAP_DECIMAL_PLACES" columnDef="Int" isPk="false" name="tapDecimalPlaces" null-able="true" primitive="Auto" type="Integer"/>
+        <field column="TAX_TREATMENT" columnDef="Int" isPk="false" name="taxTreatment" null-able="true" primitive="Auto" type="Integer"/>
+        <field column="TAX_RATE" columnDef="Int" isPk="false" name="taxRate" null-able="true" primitive="Auto" type="Long"/>
+        <field column="MEASURE_TYPE_ID" columnDef="Int" isPk="false" name="measureTypeId" null-able="true" primitive="Auto" type="Integer"/>
+        <field column="REPORT_ERROR_TYPE" columnDef="Int" isPk="false" name="reportErrorType" null-able="true" primitive="Auto" type="Integer"/>
+        <field column="TIME_ZONE_ID" columnDef="Int" isPk="false" name="timeZoneId" null-able="true" primitive="Auto" type="Integer"/>
+        <field column="NETWORK_STATEMENT" columnDef="Varchar" columnSize="512" isPk="false" name="networkStatement" null-able="true" primitive="Auto" type="String"/>
+        <field column="VALID_DATE" columnDef="Date" isPk="false" name="validDate" null-able="true" primitive="Auto" type="Date"/>
+        <field column="EXPIRE_DATE" columnDef="Date" isPk="false" name="expireDate" null-able="true" primitive="Auto" type="Date"/>
+        <field column="MODIFY_DATE" columnDef="Date" isPk="false" name="modifyDate" null-able="true" primitive="Auto" type="Date"/>
+        <field column="DESCRIPTION" columnDef="Varchar" columnSize="1024" isPk="false" name="description" null-able="true" primitive="Auto" type="String"/>
+    </fields>
+</entity>

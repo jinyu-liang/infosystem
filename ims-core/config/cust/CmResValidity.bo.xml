@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="CmResValidity" schema="CD" table="CM_RES_VALIDITY">
+  <fields>
+    <field name="resourceId" type="Long" column="RESOURCE_ID" isPk="true(not generated)" primitive="No" remark="Equipment Numbering" null-able="false" columnDef="BigInt"/>
+    <field name="accountId" type="Long" column="ACCOUNT_ID" primitive="No" remark="Account Numbering" null-able="false" columnDef="BigInt"/>
+    <field name="validDate" type="Date" column="VALID_DATE" isPk="true(not generated)" primitive="No" remark="Effective Date" null-able="false" columnDef="TimeStamp"/>
+    <field name="expireDate" type="Date" column="EXPIRE_DATE" primitive="No" remark="Expired Date" null-able="true" columnDef="TimeStamp"/>
+    <field name="soNbr" type="Long" column="SO_NBR" isPk="true(not generated)" primitive="No" remark="The serial order which cause the state changing" null-able="false" columnDef="BigInt"/>
+    <field name="createDate" type="Date" column="CREATE_DATE" primitive="No" null-able="true" columnDef="TimeStamp"/>
+    <field name="soDate" type="Date" column="SO_DATE" primitive="No" remark="Modification time of current record" null-able="true" columnDef="TimeStamp"/>
+    <field name="recSts" type="Integer" column="REC_STS" primitive="No" null-able="false" columnDef="Int"/>
+    <field name="beforeChangeDays" type="Long" column="BEFORE_CHANGE_DAYS" primitive="No" null-able="true" columnDef="BigInt"/>
+    <field name="afterChangeDays" type="Long" column="AFTER_CHANGE_DAYS" primitive="No" null-able="true" columnDef="BigInt"/>
+    <field name="effectFlag" type="Integer" column="EFFECT_FLAG" primitive="No" null-able="false" columnDef="Int"/>
+    <field name="userValidDate" type="Date" column="USER_VALID_DATE" primitive="No" null-able="true" columnDef="TimeStamp"/>
+    <field name="userExpireDate" type="Date" column="USER_EXPIRE_DATE" primitive="No" null-able="true" columnDef="TimeStamp"/>
+  </fields>
+</entity>

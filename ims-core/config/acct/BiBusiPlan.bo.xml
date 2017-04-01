@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="BiBusiPlan" schema="ad" table="BI_BUSI_PLAN">
+  <fields>
+    <field name="busiPlanId" type="Integer" column="BUSI_PLAN_ID" isPk="true(not generated)" primitive="No" remark="identifier of busi plan" null-able="true" columnDef="AutoIncrement"/>
+    <field name="busiPlanName" type="String" column="BUSI_PLAN_NAME" primitive="No" remark="business plan name" null-able="false" columnDef="Varchar" columnSize="256"/>
+    <field name="busiSpecId" type="Integer" column="BUSI_SPEC_ID" primitive="No" remark="business code" null-able="false" columnDef="Int"/>
+    <field name="pricingPlanId" type="Integer" column="PRICING_PLAN_ID" primitive="No" remark="
+
+identifier of pricing plan" null-able="true" columnDef="Int"/>
+    <field name="priority" type="Integer" column="PRIORITY" primitive="No" remark="Priority
+Larger value, higher priority." null-able="false" columnDef="Int"/>
+    <field name="description" type="String" column="DESCRIPTION" primitive="No" remark="description" null-able="true" columnDef="Varchar" columnSize="1024"/>
+    <field name="validDate" type="Date" column="VALID_DATE" primitive="No" remark="????" null-able="false" columnDef="Date"/>
+    <field name="expireDate" type="Date" column="EXPIRE_DATE" primitive="No" remark="Expired Date" null-able="false" columnDef="Date"/>
+    <field name="measureTypeId" type="Integer" column="MEASURE_TYPE_ID" primitive="No" null-able="true" columnDef="Int"/>
+  </fields>
+</entity>

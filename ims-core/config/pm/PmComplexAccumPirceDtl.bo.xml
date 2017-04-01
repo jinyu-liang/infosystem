@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="PmComplexAccumPirceDtl" remark="" schema="pd" table="PM_COMPLEX_ACCUM_PIRCE_DTL" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="PRICE_DTL_ID" columnDef="AutoIncrement" isPk="true(not generated)" name="priceDtlId" primitive="No" remark="" type="Integer"/>
+        <field column="PRICE_ID" columnDef="Int" name="priceId" null-able="false" primitive="No" remark="Identifier of accumulated reward pricing ,which associate with PM_COMPONENT_PRODOFFER_PRICE.PRICE_ID&#10;" type="Integer"/>
+        <field column="THRESHOLD" columnDef="Int" name="threshold" null-able="false" primitive="No" remark="Threshold of accumulating references charge-item" type="Long"/>
+        <field column="ALARM_ID" columnDef="Int" name="alarmId" primitive="No" remark="Alarm Identifier&#10;Associate with alarm rules of alarm template?alarm channel&#10;&#10;" type="Integer"/>
+        <field column="ALARM_THRESHOLD" columnDef="Int" name="alarmThreshold" null-able="false" primitive="No" remark="Alarm threshold of accumulating references,&#10;when the accumulated referenced item has arrive at threshold, it will trigger PM_ACCUMULATE_PRICE.alarm&#10;" type="Long"/>
+        <field column="DISC_NUMERATOR" columnDef="Int" name="discNumerator" null-able="false" primitive="No" remark="Discount numerator" type="Integer"/>
+        <field column="DISC_DENOMINATOR" columnDef="Int" name="discDenominator" null-able="false" primitive="No" remark="Discount denominator,which can not be 0&#10;" type="Integer"/>
+        <field column="CAP_LIMIT_FLAG" columnDef="Int" name="capLimitFlag" primitive="No" remark="0:????cap Limit,1:???Cap Limit, ??1?,??????????????????&#10;" type="Integer"/>
+    </fields>
+</entity>

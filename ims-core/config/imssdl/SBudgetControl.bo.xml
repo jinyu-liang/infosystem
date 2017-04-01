@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SBudgetControl" remark="" sdl="true" sdl-module="MImsSyncDef" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+    <fields>
+        <field name="busiServiceId" primitive="Yes" remark="" sdl="true" type="Integer"/>
+        <field name="budgetMode" primitive="Yes" remark="" sdl="true" type="String"/>
+        <field name="budgetType" primitive="Yes" remark="" sdl="true" type="Short"/>
+        <field name="budget" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="remainBudget" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="tempBudget" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="action" primitive="Yes" remark="" sdl="true" type="Short"/>
+        <complex-field collection="list" name="thresholdItem" primitive="false" ref="imssdl.SThreshold" remark="" sdl="true" type="entity"/>
+    </fields>
+</entity>

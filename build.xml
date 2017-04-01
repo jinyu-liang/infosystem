@@ -1,0 +1,215 @@
+<?xml version="1.0"?>
+<project default="deploy" basedir=".">
+	<taskdef resource="net/sf/antcontrib/antcontrib.properties"
+		classpath="${user.home}/.m2/repository/ant-contrib/ant-contrib/1.0b2/ant-contrib-1.0b2.jar" />
+
+	<target name="mvn_build">
+		<echo>begin to ${action}</echo>
+		<echo>please choose projects,such as : 1 2 3</echo>
+		<echo>      [1] ims-sdl</echo>
+		<echo>      [2] ims-sync</echo>
+		<echo>      [3] interface</echo>
+		<echo>      [4] infosystem-web</echo>
+		<echo>      [5] infosystem-main for update version</echo>
+		<echo>      [6] ims-core</echo>
+		<input message="choose:" addproperty="projects"/>
+
+		<foreach target="build_projects" list="${projects}" delimiter=" " param="project">
+		</foreach>
+
+	</target>
+
+	<target name="build_projects">
+		<if>
+			<equals arg1="${project}" arg2="1"/>
+			<then>
+				<antcall target="mvn">
+					<param name="dir" value="ims-sdl"/>
+					<param name="profile" value="${ims-sdl_p}"/>
+					<param name="action" value="${action}"/>
+					<param name="dealFile" value="${ims-sdl_dealFile}"/>
+				</antcall>
+			</then>
+			<elseif>
+				<equals arg1="${project}" arg2="2"/>
+				<then>
+					<antcall target="mvn">
+						<param name="dir" value="ims-sync"/>
+						<param name="profile" value="${ims-sync_p}"/>
+						<param name="action" value="${action}"/>
+						<param name="dealFile" value="${ims-sync_dealFile}"/>
+					</antcall>
+				</then>
+			</elseif>
+			<elseif>
+				<equals arg1="${project}" arg2="3"/>
+				<then>
+					<!--删除framework目录-->
+					<delete verbose="true" includeemptydirs="true" deleteonexit="true">
+						<fileset dir="interface/framework">
+							<include name="**/*" />
+						</fileset>
+					</delete>
+					<!--删除openbilling目录-->
+					<delete verbose="true" includeemptydirs="true" deleteonexit="true">
+						<fileset dir="interface/src/main/java/com/ailk/openbilling">
+							<include name="**/*" />
+						</fileset>
+					</delete>
+					<antcall target="mvn">
+						<param name="dir" value="interface"/>
+						<param name="profile" value="${interface_p}"/>
+						<param name="action" value="${action}"/>
+						<param name="dealFile" value="${interface_dealFile}"/>
+					</antcall>
+				</then>
+			</elseif>
+			<elseif>
+				<equals arg1="${project}" arg2="4"/>
+				<then>
+					<antcall target="mvn">
+						<param name="dir" value="infosystem-web"/>
+						<param name="profile" value="${infosystem-web_p}"/>
+						<param name="action" value="${action}"/>
+						<param name="dealFile" value="${infosystem-web_dealFile}"/>
+					</antcall>
+				</then>
+			</elseif>
+			<elseif>
+				<equals arg1="${project}" arg2="5"/>
+				<then>
+					<antcall target="mvn">
+						<param name="dir" value="."/>
+						<param name="profile" value="${infosystem_p}"/>
+						<param name="action" value="${action}"/>
+						<param name="dealFile" value="${infosystem_dealFile}"/>
+					</antcall>
+				</then>
+			</elseif>
+			<elseif>
+				<equals arg1="${project}" arg2="6"/>
+				<then>
+					<!--删除framework目录-->
+					<delete verbose="true" includeemptydirs="true" deleteonexit="true">
+						<fileset dir="ims-core/framework">
+							<include name="**/*" />
+						</fileset>
+					</delete>
+					<!--删除openbilling目录-->
+					<delete verbose="true" includeemptydirs="true" deleteonexit="true">
+						<fileset dir="ims-core/src/main/java/com/ailk/openbilling">
+							<include name="**/*" />
+						</fileset>
+					</delete>
+					<antcall target="mvn">
+						<param name="dir" value="ims-core"/>
+						<param name="profile" value="${ims-core_p}"/>
+						<param name="action" value="${action}"/>
+						<param name="dealFile" value="${ims-core_dealFile}"/>
+					</antcall>
+				</then>
+			</elseif>
+			<else>
+				<echo>####### error choose : ${project}</echo>
+			</else>
+		</if>
+	</target>
+
+	<target name="mvn">
+		<echo>****** begin to [${action}] project[${dir}] with profile[${profile}]</echo>
+		<echo>****** dealFile : [${dealFile}]</echo>
+
+		<propertyregex property="osname"
+		          input="${os.name}"
+		          regexp="(Windows.*)"
+				  replace="Windows"
+		          casesensitive="false"/>
+
+		<if>
+			<equals arg1="${osname}" arg2="Windows" />
+			<then>
+
+				<echo>****** log_path : ${basedir}/build_${dir}.log</echo>
+
+				<exec executable="cmd.exe" dir="${dir}" resultproperty="mvn_result">
+					<arg
+						line="/c 'mvn clean ${action} -P${profile} -DdealFile=${dealFile}'"/>
+				</exec>
+			</then>
+			<else>
+				<echo>****** log_path : ${basedir}/build_${dir}.log</echo>
+
+				<exec executable="/bin/sh" osfamily="unix" dir="${dir}" resultproperty="mvn_result">
+					<arg
+						line="-c 'mvn clean ${action} -P${profile} -DdealFile=${dealFile}'"/>
+				</exec>
+			</else>
+		</if>
+
+		<echo>****** mvn result : ${mvn_result}</echo>
+		<if>
+			<equals arg1="${mvn_result}" arg2="0" />
+			<then>
+				<echo>****** finish to [${action}] project[${dir}] with profile[${profile}]</echo>
+			</then>
+			<else>
+				<fail message="****** FAIL to [${action}] project[${dir}] with profile [${profile}]"/>
+			</else>
+		</if>
+
+	</target>
+
+
+	<target name="patch">
+		<input message="input patch list : " addproperty="aaa"/>
+
+
+		<antcall target="mvn_build">
+			<param name="action" value="compile"/>
+		</antcall>
+	</target>
+	<target name="package">
+		<antcall target="mvn_build">
+			<param name="action" value="package"/>
+		</antcall>
+	</target>
+	<target name="deploy">
+		<antcall target="mvn_build">
+			<param name="action" value="deploy"/>
+		</antcall>
+	</target>
+	<target name="install">
+		<antcall target="mvn_build">
+			<param name="action" value="install"/>
+		</antcall>
+	</target>
+	<target name="compile">
+		<antcall target="mvn_build">
+			<param name="action" value="compile"/>
+		</antcall>
+	</target>
+
+	<target name="ftp">
+		<taskdef name="ftp" classname="org.apache.tools.ant.taskdefs.optional.net.FTP">
+			<classpath>
+				<pathelement location="${user.home}/.m2/repository/commons-net/commons-net/3.0/commons-net-3.0.jar" />
+				<pathelement location="${user.home}/.m2/repository/ant/ant-commons-net/1.6.5/ant-commons-net-1.6.5.jar" />
+			</classpath>
+		</taskdef>
+		<echo>****** begin to ftp : host=${host},user=${user},dir=${dir}</echo>
+		<ftp
+			server="${host}"
+			userid="${user}"
+			password="${pass}"
+			remotedir="${dir}"
+			port="21"
+			action="get"
+			verbose="yes" passive="yes" binary="yes">
+			<fileset dir="${download_save_dir}">
+				<include name="redomanager/unload_notifier.sdl"/>
+			</fileset>
+		</ftp>
+	</target>
+</project>
+
+

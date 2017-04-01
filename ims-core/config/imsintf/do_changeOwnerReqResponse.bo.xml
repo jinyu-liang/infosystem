@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="do_changeOwnerReqResponse" transient="true">
+  <root ref="imsintf.BaseResponse"/>
+  <fields>
+    <complex-field name="prod_result_list" type="entity" ref="imsintf.SProductOrderResultList" collection="none" primitive="false"/>
+    <complex-field name="oldBalance_list" type="entity" ref="imsintf.SBalanceList" collection="none" primitive="false"/>
+  </fields>
+</entity>

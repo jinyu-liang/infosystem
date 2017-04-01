@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="do_queryAllPhoneDetailBillInfoResponse">
+  <root ref="imsintf.BaseResponse"/>
+  <fields>
+    <field name="total_bill_fee" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="ext" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <complex-field name="billDetailList" type="entity" ref="imscnsh.BillDetailTree" collection="list" primitive="false"/>
+  </fields>
+</entity>

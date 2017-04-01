@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="ImsManualModifyRst" schema="JD" table="IMS_MANUAL_MODIFY_RST">
+  <fields>
+    <field name="seqId" type="Long" column="SEQ_ID" isPk="true(not generated)" primitive="No" remark="通过SEQ生成" null-able="true" columnDef="AutoIncrement"/>
+    <field name="custId" type="Long" column="CUST_ID" primitive="No" null-able="false" columnDef="Int"/>
+    <field name="acctId" type="Long" column="ACCT_ID" primitive="No" null-able="false" columnDef="Int"/>
+    <field name="userId" type="Long" column="USER_ID" primitive="No" null-able="false" columnDef="Int"/>
+    <field name="prodId" type="Long" column="PROD_ID" primitive="No" null-able="false" columnDef="Int"/>
+    <field name="upField" type="String" column="UP_FIELD" primitive="No" remark="64位串，每一位代表对应的接口表（注：次序从左到右，如abcd，a表示第一位，b表示第二位，以此类推。如果a=0，表示a对应的表没有记录发生修改，如果a=1，表示表记录变更）
+" null-able="true" columnDef="Varchar" columnSize="64"/>
+    <field name="soDate" type="Date" column="SO_DATE" primitive="No" remark="对应ims_manual_modify的so_date" null-able="true" columnDef="Date"/>
+    <field name="dealSts" type="Integer" column="DEAL_STS" primitive="No" remark="处理结果状态： 1、成功 2、失败" null-able="false" columnDef="Int"/>
+    <field name="dealDate" type="Date" column="DEAL_DATE" primitive="No" null-able="false" columnDef="Date"/>
+    <field name="errorCode" type="Long" column="ERROR_CODE" primitive="No" remark="如果处理失败，需填" null-able="false" columnDef="Int"/>
+    <field name="errorMsg" type="String" column="ERROR_MSG" primitive="No" remark="如果处理失败，需填" null-able="false" columnDef="Varchar" columnSize="256"/>
+  </fields>
+</entity>

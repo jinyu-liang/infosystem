@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="SMailGroupManageReq">
+  <fields>
+    <complex-field name="mailGroup" type="entity" ref="imsintf.MailGroup" collection="none" primitive="false"/>
+    <complex-field name="mailGroupMemberList" type="entity" ref="imsintf.MailGroupMemberList" collection="none" primitive="false"/>
+    <complex-field name="mailGroupPost" type="entity" ref="imsintf.MailGroupPost" collection="none" primitive="false"/>
+  </fields>
+</entity>

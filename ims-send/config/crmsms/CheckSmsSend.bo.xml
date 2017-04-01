@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="CheckSmsSend" table="CHECK_SMS_SEND">
+  <fields>
+    <field name="blockId" type="Long" column="BLOCK_ID" isPk="true(not generated)" null-able="false" columnDef="NUMBER" columnSize="12"/>
+    <field name="modCode" type="Long" column="MOD_CODE" isPk="false" null-able="false" columnDef="NUMBER" columnSize="12"/>
+    <field name="sendDate" type="Date" column="SEND_DATE" isPk="false" null-able="false" columnDef="DATE" columnSize="7"/>
+    <field name="doneDate" type="Date" column="DONE_DATE" isPk="false" null-able="true" columnDef="DATE" columnSize="7"/>
+    <field name="sendMod" type="Integer" column="SEND_MOD" isPk="false" remark="发送方式（1-表2-文件）" null-able="false" columnDef="NUMBER" columnSize="2"/>
+    <field name="dataSource" type="String" column="DATA_SOURCE" isPk="false" remark="数据来源（发送方式是文件时，填写文件的全路径）" null-able="true" columnDef="VARCHAR2" columnSize="256"/>
+    <field name="checkStatus" type="Integer" column="CHECK_STATUS" isPk="false" remark="审核状态（0-未审核）" null-able="true" columnDef="NUMBER" columnSize="2"/>
+    <field name="checkOper" type="Long" column="CHECK_OPER" isPk="false" null-able="true" columnDef="NUMBER" columnSize="12"/>
+    <field name="checkDate" type="Date" column="CHECK_DATE" isPk="false" null-able="true" columnDef="DATE" columnSize="7"/>
+    <field name="note" type="String" column="NOTE" isPk="false" null-able="true" columnDef="VARCHAR2" columnSize="256"/>
+    <field name="doneStatus" type="Long" column="DONE_STATUS" isPk="false" null-able="true" columnDef="NUMBER" columnSize="22"/>
+    <field name="lastSendTime" type="Date" column="LAST_SEND_TIME" isPk="false" null-able="true" columnDef="DATE" columnSize="7"/>
+    <field name="sendNum" type="Long" column="SEND_NUM" isPk="false" null-able="false" columnDef="NUMBER" columnSize="12"/>
+    <field name="ext1" type="String" column="EXT1" isPk="false" null-able="true" columnDef="VARCHAR2" columnSize="128"/>
+    <field name="ext2" type="String" column="EXT2" isPk="false" null-able="true" columnDef="VARCHAR2" columnSize="256"/>
+  </fields>
+</entity>

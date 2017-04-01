@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SBillingAccumulate" remark="" sdl="true" sdl-module="MXdr" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+<fields>
+<field name="primaryKey" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="acctId" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="ownerId" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="pricePlanId" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="specId" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="channelId" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="itemCode" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="beginDate" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="endDate" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="value" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="ownerType" primitive="Yes" remark="" sdl="true" type="Short"/>
+</fields>
+</entity>

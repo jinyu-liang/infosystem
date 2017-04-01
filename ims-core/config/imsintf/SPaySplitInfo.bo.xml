@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="SPaySplitInfo" transient="true">
+  <fields>
+    <field name="outer_pay_acct_id" type="String" isPk="false" primitive="Auto" tree-foreign-key="false" null-able="true"/>
+    <field name="pay_acct_id" type="Long" isPk="false" primitive="No" tree-foreign-key="false" null-able="true"/>
+    <field name="outer_pay_cust_id" type="String" isPk="false" primitive="Auto" tree-foreign-key="false" null-able="true"/>
+    <field name="pay_cust_id" type="Long" isPk="false" primitive="No" tree-foreign-key="false" null-able="true"/>
+    <field name="priority" type="Short" isPk="false" primitive="No" tree-foreign-key="false" null-able="true"/>
+    <field name="valid_date" type="String" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="expire_date" type="String" isPk="false" primitive="Auto" tree-foreign-key="false" null-able="true"/>
+    <field name="part_type" type="Short" isPk="false" primitive="No" tree-foreign-key="false" null-able="true"/>
+    <field name="part_value" type="Double" isPk="false" primitive="No" tree-foreign-key="false" null-able="true"/>
+    <field name="measure_id" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="split_method" type="Short" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

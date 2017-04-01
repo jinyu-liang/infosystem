@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="CmParty" remark="" schema="CD" table="CM_PARTY" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="PARTY_ID" columnDef="BigInt" isPk="true(not generated)" name="partyId" null-able="false" primitive="No" remark="Party's Unique Identitier" type="Long"/>
+        <field column="PARTY_TYPE" columnDef="Int" name="partyType" null-able="false" primitive="No" remark="Party Type&#10;&#10;Enumeration Definition：&#10;0：Individual&#10;1：Organization" type="Integer"/>
+        <field column="STS" columnDef="Int" name="sts" null-able="false" primitive="No" remark="Party's State&#10;&#10;0: Invalid&#10;1: Effective " type="Integer"/>
+        <field column="CREATE_DATE" columnDef="TimeStamp" name="createDate" null-able="false" primitive="No" remark="record create date" type="Date"/>
+        <field column="VALID_DATE" columnDef="TimeStamp" isPk="true(not generated)" name="validDate" null-able="false" primitive="No" remark="Effective Date" type="Date"/>
+        <field column="EXPIRE_DATE" columnDef="TimeStamp" name="expireDate" null-able="false" primitive="No" remark="Expired Date" type="Date"/>
+        <field column="SO_NBR" columnDef="BigInt" isPk="true(not generated)" name="soNbr" null-able="false" primitive="No" remark="The serial number" type="Long"/>
+        <field column="SO_DATE" columnDef="TimeStamp" name="soDate" primitive="No" remark="" type="Date"/>
+    </fields>
+</entity>

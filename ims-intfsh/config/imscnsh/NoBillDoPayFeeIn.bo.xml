@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="NoBillDoPayFeeIn">
+  <fields>
+    <field name="acct_id" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="phone_id" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="begin_date" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="bill_month" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="late_fee" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="derate_late_fee" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <complex-field name="pos_rec_info" type="entity" ref="imscnsh.PosRecInfo" collection="none" primitive="false"/>
+    <field name="spec_id" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

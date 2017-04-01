@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="CaAccountGroup" remark="" schema="AD" table="CA_ACCOUNT_GROUP" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="ACCT_ID" columnDef="BigInt" isPk="true(not generated)" name="acctId" primitive="No" remark="A unique identifier of account.&#10;" type="Long"/>
+        <field column="ACCOUNT_TYPE" columnDef="Int" name="accountType" null-able="false" primitive="No" remark="Account types&#10;&#10;Concrete CA:&#10;101-Individual&#10;102-Family&#10;103-Group&#10;&#10;Virtual account(GCA):&#10;201--VPN&#10;202--Corporation&#10;203--Community (vpn)&#10;204--virtual Family (vpn)&#10;205--CUG group (vpn)&#10;206--VPBX group (vpn)&#10;207 Special Number group&#10;&#10;208-冲浪e家亲活动(vpn群，上海使用)&#10;209-66家庭包活动(vpn群，上海使用)&#10;&#10;CA_ACCOUNT冗余字段" type="Integer"/>
+        <field column="GROUP_NAME" columnDef="Varchar" columnSize="255" name="groupName" null-able="false" primitive="No" remark="" type="String"/>
+        <field column="MAXUSERS" columnDef="BigInt" name="maxusers" null-able="false" primitive="No" remark="Max user amount" type="Long"/>
+        <field column="MAXCLOSENUM" columnDef="BigInt" name="maxclosenum" null-able="false" primitive="No" remark="Max amount of closed user group" type="Long"/>
+        <field column="MAXOUTNUM" columnDef="BigInt" name="maxoutnum" null-able="false" primitive="No" remark="Max amount of off net number" type="Long"/>
+        <field column="MEMBER_NUMBER" columnDef="BigInt" name="memberNumber" null-able="false" primitive="No" remark="Current member number" type="Long"/>
+        <field column="FREERES_SHARE_FLAG" columnDef="Int" name="freeresShareFlag" primitive="No" remark="" type="Integer"/>
+        <field column="CLIP_FLAG" columnDef="BigInt" name="clipFlag" null-able="false" primitive="No" remark="" type="Long"/>
+        <field column="OUTGOING_CS_FLAG" columnDef="BigInt" name="outgoingCsFlag" null-able="false" primitive="No" remark="" type="Long"/>
+        <field column="OCS_ROUTING_FLAG" columnDef="BigInt" name="ocsRoutingFlag" null-able="false" primitive="No" remark="" type="Long"/>
+        <field column="ESPACE_FLAG" columnDef="BigInt" name="espaceFlag" null-able="false" primitive="No" remark="" type="Long"/>
+        <field column="CONTACT_PHONE" columnDef="Varchar" columnSize="64" name="contactPhone" null-able="false" primitive="No" remark="" type="String"/>
+        <field column="INGROUP_OUTGOINGCALL" columnDef="Int" name="ingroupOutgoingcall" null-able="false" primitive="No" remark="0：reject &#10;1：continue" type="Integer"/>
+        <field column="INGROUP_INCOMINGCALL" columnDef="Int" name="ingroupIncomingcall" null-able="false" primitive="No" remark="0：reject &#10;1：continue" type="Integer"/>
+        <field column="CROSSGROUP_OUTGOINGCALL" columnDef="Int" name="crossgroupOutgoingcall" null-able="false" primitive="No" remark="0：reject &#10;1：continue" type="Integer"/>
+        <field column="CROSSGROUP_INCOMINGCALL" columnDef="Int" name="crossgroupIncomingcall" null-able="false" primitive="No" remark="0：reject &#10;1：continue" type="Integer"/>
+        <field column="SPEC_OUTGOINGCALL" columnDef="Int" name="specOutgoingcall" null-able="false" primitive="No" remark="0：reject &#10;1：continue" type="Integer"/>
+        <field column="SPEC_INCOMINGCALL" columnDef="Int" name="specIncomingcall" null-able="false" primitive="No" remark="0：reject &#10;1：continue" type="Integer"/>
+        <field column="OUTGROUP_OUTGOINGCALL" columnDef="Int" name="outgroupOutgoingcall" null-able="false" primitive="No" remark="0：reject &#10;1：continue" type="Integer"/>
+        <field column="OUTGROUP_INCOMINGCALL" columnDef="Int" name="outgroupIncomingcall" null-able="false" primitive="No" remark="0：reject &#10;1：continue" type="Integer"/>
+        <field column="REMARKS" columnDef="Varchar" columnSize="256" name="remarks" null-able="false" primitive="No" remark="remarks" type="String"/>
+        <field column="SO_NBR" columnDef="BigInt" isPk="true(not generated)" name="soNbr" primitive="No" remark="Subscription order associated to account" type="Long"/>
+        <field column="CREATE_DATE" columnDef="TimeStamp" name="createDate" primitive="No" remark="Creation date of current record" type="Date"/>
+        <field column="SO_DATE" columnDef="TimeStamp" name="soDate" null-able="false" primitive="No" remark="Modification date of current record" type="Date"/>
+        <field column="VALID_DATE" columnDef="TimeStamp" isPk="true(not generated)" name="validDate" primitive="No" remark="YYYY-MM-DD HH:MM:SS" type="Date"/>
+        <field column="EXPIRE_DATE" columnDef="TimeStamp" name="expireDate" primitive="No" remark="YYYY-MM-DD HH:MM:SS" type="Date"/>
+    </fields>
+</entity>

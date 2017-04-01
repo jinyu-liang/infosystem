@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="UpdateSplanFreers">
+	<fields>
+        <field column="PLAN_ID" columnDef="Int" isPk="true(not generated)" name="planId" null-able="false" primitive="Auto" type="Integer"/>
+        <field column="FREEBIE_ID" columnDef="Int" isPk="true(not generated)" name="freebieId" null-able="false" primitive="Auto" type="Integer"/>
+        <field column="PRIORITY" columnDef="Int" isPk="false" name="priority" null-able="false" primitive="Auto" type="Integer"/>
+    </fields>
+</entity>

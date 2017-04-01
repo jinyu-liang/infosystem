@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="IUserInv" schema="JD" table="I_USER_INV">
+  <fields>
+    <field name="userId" type="Long" column="USER_ID" isPk="false" remark="用户编号
+" null-able="false" columnDef="NUMBER" columnSize="15"/>
+    <field name="summaryDeliver" type="String" column="SUMMARY_DELIVER" isPk="false" remark="寄送方式
+" null-able="false" columnDef="VARCHAR2" columnSize="32"/>
+    <field name="deliverAddr" type="String" column="DELIVER_ADDR" isPk="false" remark="寄送地址
+" null-able="false" columnDef="VARCHAR2" columnSize="512"/>
+    <field name="validDate" type="Date" column="VALID_DATE" isPk="false" remark="生效日期
+" null-able="false" columnDef="DATE" columnSize="7"/>
+    <field name="expireDate" type="Date" column="EXPIRE_DATE" isPk="false" remark="失效日期
+" null-able="false" columnDef="DATE" columnSize="7"/>
+    <field name="operType" type="Integer" column="OPER_TYPE" isPk="false" remark="操作类型
+" null-able="false" columnDef="NUMBER" columnSize="4"/>
+    <field name="soNbr" type="Long" column="SO_NBR" isPk="false" remark="工单号
+" null-able="false" columnDef="NUMBER" columnSize="15"/>
+    <field name="commitDate" type="Date" column="COMMIT_DATE" isPk="false" remark="提交时间
+" null-able="false" columnDef="DATE" columnSize="7"/>
+  </fields>
+</entity>

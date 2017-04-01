@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="BatchCustomerInfo">
+  <fields>
+    <field name="old_family_name" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="old_first_name" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="old_country_code" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="old_region_code" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="old_cust_type" type="Short" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="old_cust_class" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="old_cust_segment" type="Short" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="old_taxexempt" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="old_address1" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="old_address2" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="old_address3" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="old_address4" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="old_address5" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="new_cust_type" type="Short" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="new_cust_class" type="Short" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="new_cust_segment" type="Short" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="new_taxexempt" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="new_address1" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="new_address2" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="new_address3" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="new_address4" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="new_address5" type="String" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

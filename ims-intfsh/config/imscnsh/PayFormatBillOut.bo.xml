@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="PayFormatBillOut">
+  <fields>
+    <field name="bill_fee" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <complex-field name="formatBillList" type="entity" ref="imscnsh.FormatBill" collection="list" primitive="false"/>
+  </fields>
+</entity>

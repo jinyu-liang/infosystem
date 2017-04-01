@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="SysEntityMultiLang" schema="SD" table="SYS_ENTITY_MULTI_LANG">
+  <fields>
+    <field name="entityId" type="Integer" column="ENTITY_ID" isPk="true(not generated)" primitive="Auto" null-able="false" columnDef="NUMBER" columnSize="9"/>
+    <field name="entityType" type="Integer" column="ENTITY_TYPE" isPk="true(not generated)" primitive="Auto" null-able="false" columnDef="NUMBER" columnSize="4"/>
+    <field name="entityValue" type="String" column="ENTITY_VALUE" isPk="true(not generated)" primitive="Auto" null-able="false" columnDef="VARCHAR2" columnSize="512"/>
+    <field name="languageId" type="Integer" column="LANGUAGE_ID" isPk="true(not generated)" primitive="Auto" null-able="false" columnDef="NUMBER" columnSize="9"/>
+    <field name="dispName" type="String" column="DISP_NAME" isPk="false" primitive="Auto" null-able="false" columnDef="VARCHAR2" columnSize="1024"/>
+    <field name="shortName" type="String" column="SHORT_NAME" isPk="false" primitive="Auto" null-able="true" columnDef="VARCHAR2" columnSize="1024"/>
+  </fields>
+</entity>

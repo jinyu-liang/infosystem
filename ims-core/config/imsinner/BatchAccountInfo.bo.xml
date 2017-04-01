@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="BatchAccountInfo">
+  <fields>
+    <field name="acct_name" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="country_code" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="old_region_code" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="old_operator_id" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="old_measure_id" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="old_bill_language" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="old_invoice_type" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="old_bill_style_id" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="old_charge_type" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="new_region_code" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="new_operator_id" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="new_measuer_id" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="new_bill_language" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="new_invoice_type" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="new_bill_style_id" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="new_charge_type" type="String" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="CaTerminateBillIn" schema="AD">
+  <fields>
+    <field name="acctId" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="outDate" type="Date" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="soNbr" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="resourceId" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="opId" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="channelId" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

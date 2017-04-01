@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="SBillCycle" transient="true">
+  <fields>
+    <field name="cycle_type" type="Integer" isPk="false" tree-foreign-key="false" null-able="true" enumAsAliasField="false"/>
+    <field name="cycle_unit" type="Integer" isPk="false" tree-foreign-key="false" null-able="true" enumAsAliasField="false"/>
+    <field name="first_bill_day" type="Integer" isPk="false" tree-foreign-key="false" null-able="true" enumAsAliasField="false"/>
+  </fields>
+</entity>

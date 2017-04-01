@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="CmMktAct" schema="cd" table="CM_MKT_ACT">
+  <fields>
+    <field name="offerId" type="Long" column="OFFER_ID" isPk="true(not generated)" primitive="No" remark="活动编号" null-able="false" columnDef="Int"/>
+    <field name="resourceId" type="Long" column="RESOURCE_ID" isPk="true(not generated)" primitive="No" remark="用户编号" null-able="false" columnDef="Int"/>
+    <field name="offerName" type="String" column="OFFER_NAME" primitive="No" remark="活动名称" null-able="true" columnDef="Varchar" columnSize="200"/>
+    <field name="offerTag" type="Integer" column="OFFER_TAG" primitive="No" remark="活动标签" null-able="true" columnDef="Int"/>
+    <field name="offerType" type="Integer" column="OFFER_TYPE" primitive="No" remark="捆绑类型" null-able="true" columnDef="Int"/>
+    <field name="validDate" type="Date" column="VALID_DATE" isPk="true(not generated)" primitive="No" remark="生效时间" null-able="false" columnDef="Date"/>
+    <field name="expireDate" type="Date" column="EXPIRE_DATE" primitive="No" remark="失效时间" null-able="true" columnDef="Date"/>
+    <field name="soNbr" type="Long" column="SO_NBR" isPk="true(not generated)" primitive="No" remark="工单号" null-able="false" columnDef="Int"/>
+    <field name="createDate" type="Date" column="CREATE_DATE" primitive="No" remark="创建时间" null-able="true" columnDef="Date"/>
+    <field name="soDate" type="Date" column="SO_DATE" primitive="No" remark="时间流水" null-able="true" columnDef="Date"/>
+  </fields>
+</entity>

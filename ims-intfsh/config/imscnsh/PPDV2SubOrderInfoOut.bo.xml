@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="PPDV2SubOrderInfoOut">
+  <fields>
+    <field name="sub_order_id" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="bill_id" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="real_fee" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="bill_month" type="String" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

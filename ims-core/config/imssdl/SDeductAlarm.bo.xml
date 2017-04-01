@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SDeductAlarm" remark="" sdl="true" sdl-module="MImsSyncDef" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+    <fields>
+        <field name="servId" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="acctId" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="userNumber" primitive="Yes" remark="" sdl="true" type="String"/>
+        <field name="spCode" primitive="Yes" remark="" sdl="true" type="String"/>
+        <field name="operatorCode" primitive="Yes" remark="" sdl="true" type="String"/>
+        <field name="billFlag" primitive="Yes" remark="" sdl="true" type="Integer"/>
+        <field name="thirdMsisdn" primitive="Yes" remark="" sdl="true" type="String"/>
+        <field name="billProp" primitive="Yes" remark="" sdl="true" type="Integer"/>
+        <field name="startTime" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="alarmType" primitive="Yes" remark="" sdl="true" type="Integer"/>
+        <field name="alarmPara" primitive="Yes" remark="" sdl="true" type="String"/>
+        <field name="alarmSource" primitive="Yes" remark="" sdl="true" type="Integer"/>
+        <field name="regionCode" primitive="Yes" remark="" sdl="true" type="Integer"/>
+        <field name="totalFee" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="updateTime" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="seqNo" primitive="Yes" remark="" sdl="true" type="String"/>
+        <field name="serviceCode" primitive="Yes" remark="" sdl="true" type="String"/>
+        <field name="reservice1" primitive="Yes" remark="" sdl="true" type="String"/>
+        
+    </fields>
+</entity>

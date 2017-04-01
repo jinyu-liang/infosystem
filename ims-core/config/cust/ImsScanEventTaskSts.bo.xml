@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="ImsScanEventTaskSts" remark="" schema="CD" table="IMS_SCAN_EVENT_TASK_STS" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="ID" columnDef="AutoIncrement" isPk="true" name="id" primitive="No" remark="" type="Long"/>
+        <field column="ACTION_DATE" columnDef="TimeStamp" name="actionDate" null-able="false" primitive="No" remark="" type="Date"/>
+        <field column="FINISH_DATE" columnDef="TimeStamp" name="finishDate" null-able="false" primitive="No" remark="" type="Date"/>
+        <field column="EVENT_ID" columnDef="BigInt" name="eventId" null-able="false" primitive="No" remark="" type="Long"/>
+        <field column="EVENT_TYPE" columnDef="Int" name="eventType" null-able="false" primitive="No" remark="" type="Integer"/>
+        <field column="AMOUNT" columnDef="Int" name="amount" null-able="false" primitive="No" remark="" type="Integer"/>
+        <field column="SO_NBR" columnDef="BigInt" name="soNbr" null-able="false" primitive="No" remark="" type="Long"/>
+    </fields>
+</entity>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="PmPayforItemLimit" remark="" table="PM_PAYFOR_ITEM_LIMIT" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="PRICE_RULE_ID" columnDef="Int" isPk="true(not generated)" name="priceRuleId" null-able="true" primitive="Auto" type="Integer"/>
+        <field column="ITEM_ID" columnDef="Int" isPk="true(not generated)" name="itemId" null-able="true" primitive="Auto" type="Integer"/>
+        <field column="PRIORITY" columnDef="Int" isPk="false" name="priority" null-able="true" primitive="Auto" type="Integer"/>
+        <field column="MAX_LIM" columnDef="Int" isPk="false" name="maxLim" null-able="true" primitive="Auto" type="Long"/>
+        <field column="NUMERATOR" columnDef="Int" isPk="false" name="numerator" null-able="true" primitive="Auto" type="Integer"/>
+        <field column="DENOMINATOR" columnDef="Int" isPk="false" name="denominator" null-able="true" primitive="Auto" type="Integer"/>
+    </fields>
+</entity>

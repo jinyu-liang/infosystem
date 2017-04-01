@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="PmAllowanceFreeresSegment" remark="" schema="pd" table="PM_ALLOWANCE_FREERES_SEGMENT" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="PRICE_ID" columnDef="Int" isPk="true(not generated)" name="priceId" null-able="false" primitive="No" remark="pricing identifier" type="Integer"/>
+        <field column="START_VALUE" columnDef="Int" isPk="true(not generated)" name="startValue" null-able="false" primitive="No" remark="Cycles of starting rating&#10;开始周期，必须从1开始。约束：前闭后开。&#10;" type="Integer"/>
+        <field column="END_VALUE" columnDef="Int" name="endValue" null-able="false" primitive="No" remark="结束周期，必须以-1结束。约束：前闭后开。&#10;" type="Integer"/>
+        <field column="AMOUNT" columnDef="BigInt" name="amount" null-able="false" primitive="No" remark="" type="Long"/>
+    </fields>
+</entity>

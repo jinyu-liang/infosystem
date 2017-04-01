@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="PmPayforSpec" remark="" table="PM_PAYFOR_SPEC" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="REGULATION_SPEC_ID" columnDef="AutoIncrement" isPk="true(not generated)" name="regulationSpecId" null-able="false" primitive="Auto" type="Integer"/>
+        <field column="NAME" columnDef="Varchar" columnSize="256" isPk="false" name="name" null-able="true" primitive="Auto" type="String"/>
+        <field column="PRECISION_ROUND" columnDef="Int" isPk="false" name="precisionRound" null-able="true" primitive="Auto" type="Integer"/>
+    </fields>
+</entity>

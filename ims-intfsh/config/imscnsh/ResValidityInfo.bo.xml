@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="ResValidityInfo">
+  <fields>
+    <field name="change_time" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="validity_before" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="validity_after" type="String" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

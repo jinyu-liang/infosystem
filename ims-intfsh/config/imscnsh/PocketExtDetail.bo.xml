@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="PocketExtDetail" transient="true">
+  <fields>
+    <field name="acct_id" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="asset_id" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="pocket_item" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="amount" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="unpay_fee" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="real_fee" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="sts" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="billing_type" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="valid_date" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="expire_date" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="resource_id" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="is_common_pocket" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="is_reward" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="freeze_value" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="freeze_time" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="measure_id" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="deduct_amount" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="allow_adjust" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="allow_refund" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="priority" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

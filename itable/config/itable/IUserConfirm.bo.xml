@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="IUserConfirm" schema="JD" table="I_USER_CONFIRM">
+  <fields>
+    <field name="userId" type="Long" column="USER_ID" primitive="No" null-able="false" columnDef="BigInt"/>
+    <field name="busiType" type="Integer" column="BUSI_TYPE" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="identity" type="String" column="IDENTITY" primitive="No" null-able="true" columnDef="Varchar" columnSize="64"/>
+    <field name="servType" type="Integer" column="SERV_TYPE" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="spCode" type="String" column="SP_CODE" primitive="No" null-able="true" columnDef="Varchar" columnSize="32"/>
+    <field name="operatorCode" type="String" column="OPERATOR_CODE" primitive="No" null-able="true" columnDef="Varchar" columnSize="32"/>
+    <field name="serviceCode" type="String" column="SERVICE_CODE" primitive="No" null-able="true" columnDef="Varchar" columnSize="32"/>
+    <field name="billFlag" type="Integer" column="BILL_FLAG" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="thirdMsisdn" type="String" column="THIRD_MSISDN" primitive="No" null-able="true" columnDef="Varchar" columnSize="15"/>
+    <field name="billProp" type="Integer" column="BILL_PROP" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="regionCode" type="Integer" column="REGION_CODE" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="confirmResult" type="Integer" column="CONFIRM_RESULT" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="confirmTime" type="Date" column="CONFIRM_TIME" primitive="No" null-able="true" columnDef="TimeStamp"/>
+    <field name="alarmTime" type="Date" column="ALARM_TIME" primitive="No" null-able="true" columnDef="TimeStamp"/>
+    <field name="alarmDoneCode" type="Long" column="ALARM_DONE_CODE" primitive="No" null-able="true" columnDef="BigInt"/>
+    <field name="sequenceNo" type="String" column="SEQUENCE_NO" primitive="No" null-able="true" columnDef="Varchar" columnSize="32"/>
+    <field name="srcType" type="String" column="SRC_TYPE" primitive="No" null-able="true" columnDef="Varchar" columnSize="64"/>
+    <field name="extendFlag" type="Integer" column="EXTEND_FLAG" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="remark" type="String" column="REMARK" primitive="No" null-able="false" columnDef="Varchar" columnSize="256"/>
+    <field name="soDate" type="Date" column="SO_DATE" primitive="No" null-able="false" columnDef="Date"/>
+    <field name="validDate" type="Date" column="VALID_DATE" primitive="No" null-able="false" columnDef="TimeStamp"/>
+    <field name="expireDate" type="Date" column="EXPIRE_DATE" primitive="No" null-able="false" columnDef="TimeStamp"/>
+    <field name="operType" type="Integer" column="OPER_TYPE" primitive="No" null-able="false" columnDef="Int"/>
+    <field name="soNbr" type="Long" column="SO_NBR" primitive="No" null-able="false" columnDef="BigInt"/>
+    <field name="commitDate" type="Date" column="COMMIT_DATE" primitive="No" null-able="false" columnDef="TimeStamp"/>
+  </fields>
+</entity>

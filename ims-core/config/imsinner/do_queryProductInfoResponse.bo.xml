@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="do_queryProductInfoResponse" transient="true">
+  <root ref="imsintf.BaseResponse"/>
+  <fields>
+    <complex-field name="coProd" type="entity" ref="cust.CoProd" collection="none" primitive="false"/>
+    <complex-field name="coProdCharValueList" type="entity" ref="cust.CoProdCharValue" collection="list" primitive="false"/>
+    <complex-field name="coProdBillingCycleList" type="entity" ref="cust.CoProdBillingCycle" collection="list" primitive="false"/>
+    <complex-field name="coProdPriceParamList" type="entity" ref="cust.CoProdPriceParam" collection="list" primitive="false"/>
+    <complex-field name="sProdSpecCharList" type="entity" ref="imsinner.SProdSpecChar" collection="list" primitive="false"/>
+  </fields>
+</entity>

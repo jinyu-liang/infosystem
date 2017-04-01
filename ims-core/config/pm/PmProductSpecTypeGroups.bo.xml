@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="PmProductSpecTypeGroups" remark="" schema="PD" table="PM_PRODUCT_SPEC_TYPE_GROUPS" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="PROD_SPEC_ID" columnDef="Int" isPk="true(not generated)" name="prodSpecId" null-able="false" primitive="No" remark="An identification number assigned to uniquely identify the specification.&#10;" type="Integer"/>
+        <field column="SPEC_TYPE_ID" columnDef="Int" isPk="true(not generated)" name="specTypeId" null-able="false" primitive="No" remark="Identifier of product specification type" type="Integer"/>
+    </fields>
+</entity>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="CaResGrpRevs" remark="" schema="ad" table="CA_RES_GRP_REVS" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="RESOURCE_ID" columnDef="Int" isPk="true(not generated)" name="resourceId" null-able="false" primitive="No" remark="Resource ID" type="Long"/>
+        <field column="ACCT_ID" columnDef="Int" isPk="true(not generated)" name="acctId" null-able="false" primitive="No" remark="Account must be a virtual account when relationship is virtual group.&#10;" type="Long"/>
+        <field column="RELATIONSHIP_TYPE" columnDef="Int" isPk="true(not generated)" name="relationshipType" null-able="false" primitive="No" remark="0 group hierarchy member - record the subscriber under concrete account&#10;1 Automtic group member - record the hierarchy relation built automatically between a concrete account and its adscript subscriber when the account has group product or join the hierarchy.&#10;2 Group member - record the subscriber under virtual account, such as VPN&#10;3 Specific number - record the specific number under virtual account" type="Integer"/>
+        <field column="VALID_DATE" columnDef="Date" isPk="true(not generated)" name="validDate" null-able="false" primitive="No" remark="????" type="Date"/>
+        <field column="EXPIRE_DATE" columnDef="Date" name="expireDate" primitive="No" remark="Expired date" type="Date"/>
+        <field column="CREATE_DATE" columnDef="Date" name="createDate" null-able="false" primitive="No" remark="Creation date of current record" type="Date"/>
+        <field column="SO_NBR" columnDef="Int" isPk="true(not generated)" name="soNbr" null-able="false" primitive="No" remark="Subscription order associated to account" type="Long"/>
+        <field column="SO_DATE" columnDef="Date" name="soDate" primitive="No" remark="Modification date of current record" type="Date"/>
+    </fields>
+</entity>

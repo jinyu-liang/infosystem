@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?><entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SCommon" remark="" sdl="true" sdl-module="MXdr" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+<fields>
+<field name="companyCode" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="fileCreateDate" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="createTime" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="sequenceNo" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="sessionId" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="refundSessionId" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="originalFile" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="stopCause" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="chaegeupSeq" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="sendPriority" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="channelId" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="stopTime" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="messageSize" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="sendState" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="finalState" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="additionalInfo" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="serviceId" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="drType" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="deviceType" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="roamingOperatorId" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="roamingOperatorCode" primitive="Yes" remark="" sdl="true" type="String"/>
+<complex-field collection="list" name="roamingOperatorGroup" primitive="false" ref="imsxdr.SOperatorGroup" remark="" sdl="true" type="entity"/>
+<field name="roamingOperatorNet" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="roamingCountryId" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<complex-field collection="list" name="roamingCountryGroup" primitive="false" ref="imsxdr.SCountryGroup" remark="" sdl="true" type="entity"/>
+<field name="mnsType" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="imei" primitive="Yes" remark="" sdl="true" type="String"/>
+<complex-field collection="list" name="oriCharge" primitive="false" ref="imsxdr.SOriCharge" remark="" sdl="true" type="entity"/>
+<complex-field collection="list" name="bakOriCharge" primitive="false" ref="imsxdr.SOriCharge" remark="" sdl="true" type="entity"/>
+<field name="oriUserNumber" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="userNumber" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="connectCalledNumber" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="consumeUserNumber" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="actionType" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="imsi" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="oriImsi" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="bakReguideUserNumber" primitive="Yes" remark="" sdl="true" type="String"/>
+<complex-field collection="none" name="freeresQuery" primitive="false" ref="imsxdr.SFreeResQuery" remark="" sdl="true" type="entity"/>
+<field name="cdrReceiveTime" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="numberClass" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="numberSubclass" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="otherInfo1" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="otherInfo2" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="otherInfo3" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="otherInfo4" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="otherInfo5" primitive="Yes" remark="" sdl="true" type="String"/>
+<complex-field collection="map&lt;String,?&gt;" name="reserveFields" primitive="false" remark="" sdl="true" type="String"/>
+<field name="vplmn1" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="vplmn2" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="vplmn3" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="visitCountyCode" primitive="Yes" remark="" sdl="true" type="Short"/>
+<field name="iddType" primitive="Yes" remark="" sdl="true" type="Short"/>
+<field name="camelFlag" primitive="Yes" remark="" sdl="true" type="Short"/>
+<field name="flhFlag" primitive="Yes" remark="" sdl="true" type="Short"/>
+<field name="continueFlag" primitive="Yes" remark="" sdl="true" type="Short"/>
+<field name="userOperatorId" primitive="Yes" remark="" sdl="true" type="Short"/>
+<field name="oppOperatorId" primitive="Yes" remark="" sdl="true" type="Short"/>
+<field name="numberIdentityAttr" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="oppHplmn1" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="oppHplmn2" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="oppHplmn3" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="oppVplmn1" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="oppVplmn2" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="oppVplmn3" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="originHost" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="originRealm" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="destinationRealm" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="authApplicationId" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="destinationHost" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="userName" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="originStateId" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="productName" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="hostIpAddress" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="vendorId1" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<complex-field collection="none" name="gsmSpecInfo" primitive="false" ref="imsxdr.SGsmSpecInfo" remark="" sdl="true" type="entity"/>
+<complex-field collection="none" name="gprsSpecInfo" primitive="false" ref="imsxdr.SGprsSpecInfo" remark="" sdl="true" type="entity"/>
+<complex-field collection="none" name="smsSpecInfo" primitive="false" ref="imsxdr.SSmsSpecInfo" remark="" sdl="true" type="entity"/>
+<complex-field collection="none" name="mmsSpecInfo" primitive="false" ref="imsxdr.SMmsSpecInfo" remark="" sdl="true" type="entity"/>
+<complex-field collection="none" name="ismpSpecInfo" primitive="false" ref="imsxdr.SIsmpSpecInfo" remark="" sdl="true" type="entity"/>
+<complex-field collection="none" name="gsSpecInfo" primitive="false" ref="imsxdr.SGsSpecInfo" remark="" sdl="true" type="entity"/>
+<field name="uSeparateFlag" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="handset" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="switchFlag" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="switchTime" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="commercialStatus" primitive="Yes" remark="" sdl="true" type="Short"/>
+<field name="flowId" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="deductAcctFlag" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<complex-field collection="none" name="initThreshold" primitive="false" ref="imsxdr.SInitThreshold" remark="" sdl="true" type="entity"/>
+<field name="sequenceId" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="confirmTag" primitive="Yes" remark="" sdl="true" type="Short"/>
+<field name="drTypeDesc" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="controlTagForModule" primitive="Yes" remark="" sdl="true" type="Long"/>
+</fields>
+</entity>

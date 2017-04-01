@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="BillItemDef">
+  <fields>
+    <field name="item_id" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="name" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="item_type_id" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="item_type_name" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="sub_item_type_id" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="sub_item_type_name" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="priority" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="description" type="String" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

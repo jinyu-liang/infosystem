@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="ImsDelayProdSyncRst" remark="" schema="CD" table="IMS_DELAY_PROD_SYNC_RST" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="ID" columnDef="BigInt" name="id" null-able="false" primitive="No" remark="id&#10;" type="Long"/>
+        <field column="OFFER_ID" columnDef="BigInt" name="offerId" null-able="false" primitive="No" remark="销售品id" type="Long"/>
+        <field column="PRODUCT_ID" columnDef="BigInt" name="productId" null-able="false" primitive="No" remark="实例化产品id" type="Long"/>
+        <field column="VALID_DATE" columnDef="TimeStamp" name="validDate" null-able="false" primitive="No" remark="产品生效时间" type="Date"/>
+        <field column="CREATE_DATE" columnDef="TimeStamp" name="createDate" null-able="false" primitive="No" remark="记录生成时间" type="Date"/>
+        <field column="SO_NBR" columnDef="BigInt" name="soNbr" null-able="false" primitive="No" remark="流水号" type="Long"/>
+        <field column="DEAL_DATE" columnDef="TimeStamp" name="dealDate" null-able="false" primitive="No" remark="处理时间" type="Date"/>
+        <field column="DEAL_STS" columnDef="Int" name="dealSts" null-able="false" primitive="No" remark="处理结果状态&#10;1-成功&#10;2-失败&#10;" type="Integer"/>
+        <field column="DEAL_DESC" columnDef="Varchar" columnSize="255" name="dealDesc" primitive="No" remark="失败原因描述" type="String"/>
+        <field column="DEAL_AGAIN_DATE" columnDef="TimeStamp" name="dealAgainDate" primitive="No" remark="再处理时间" type="Date"/>
+    </fields>
+</entity>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="PaymentHistory" transient="true">
+  <fields>
+    <field name="so_nbr" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="channel" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="payment_method" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="phone_id" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="acct_id" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="so_date" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="total_fee" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="cust_id" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="status" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="op_id" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="remark" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="billing_type" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="measure_id" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="spec_id" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="overflow_fee" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="late_fee" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="late_fee2" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="pay_status" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="woff_status" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="begin_date" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="end_date" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="bill_month" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="spce_name" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="pay_flag" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

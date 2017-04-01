@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="ImsSmsSendAuth" schema="JD" table="IMS_SMS_SEND_AUTH">
+  <fields>
+    <field name="smsCode" type="Long" column="SMS_CODE" isPk="false" remark="模板编号" null-able="true" columnDef="NUMBER" columnSize="16"/>
+    <field name="authPerson" type="String" column="AUTH_PERSON" isPk="false" remark="认证人" null-able="true" columnDef="VARCHAR2" columnSize="20"/>
+    <field name="createDate" type="Date" column="CREATE_DATE" isPk="false" remark="创建时间" null-able="true" columnDef="DATE" columnSize="7"/>
+    <field name="validDate" type="Date" column="VALID_DATE" isPk="false" remark="生效时间" null-able="true" columnDef="DATE" columnSize="7"/>
+    <field name="expireDate" type="Date" column="EXPIRE_DATE" isPk="false" remark="失效时间" null-able="true" columnDef="DATE" columnSize="7"/>
+    <field name="department" type="String" column="DEPARTMENT" isPk="false" remark="所属部门" null-able="true" columnDef="VARCHAR2" columnSize="256"/>
+  </fields>
+</entity>

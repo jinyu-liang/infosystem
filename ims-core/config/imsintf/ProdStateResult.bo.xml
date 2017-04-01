@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="ProdStateResult" transient="false">
+<fields>
+<field name="phone_id" type="String" isPk="false" enumAsAliasField="false" tree-foreign-key="false" null-able="false"/>
+<field name="prodcut_id" type="Long" isPk="false" enumAsAliasField="false" tree-foreign-key="false" null-able="true"/>
+<field name="offering_id" type="Integer" isPk="false" enumAsAliasField="false" tree-foreign-key="false" null-able="false"/>
+<field name="offering_type" type="Short" isPk="false" enumAsAliasField="false" tree-foreign-key="false" null-able="true"/>
+<field name="valid_date" type="String" isPk="false" enumAsAliasField="false" tree-foreign-key="false" null-able="true"/>
+<field name="expire_date" type="String" isPk="false" enumAsAliasField="false" tree-foreign-key="false" null-able="true"/>
+<field name="prod_state" type="Short" isPk="false" enumAsAliasField="false" tree-foreign-key="false" null-able="true"/>
+</fields>
+</entity>

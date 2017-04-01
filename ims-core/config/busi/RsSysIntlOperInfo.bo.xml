@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="RsSysIntlOperInfo" schema="bd" table="RS_SYS_INTL_OPER_INFO">
+  <fields>
+    <field name="id" type="Integer" column="ID" isPk="true(not generated)" primitive="No" remark="Record sequence number" null-able="true" columnDef="AutoIncrement"/>
+    <field name="operatorCode" type="String" column="OPERATOR_CODE" primitive="No" remark="Operator code" null-able="true" columnDef="Varchar" columnSize="32"/>
+    <field name="imsiHead" type="String" column="IMSI_HEAD" primitive="No" remark="IMSI code:
+First characteristic 5-digit of IMSI
+
+" null-able="true" columnDef="Varchar" columnSize="15"/>
+    <field name="englishName" type="String" column="ENGLISH_NAME" primitive="No" remark="English name of operator" null-able="false" columnDef="Varchar" columnSize="256"/>
+    <field name="countryId" type="Integer" column="COUNTRY_ID" primitive="No" remark="Country ID:
+from table sys_country.country_id" null-able="true" columnDef="Int"/>
+    <field name="provCode" type="Integer" column="PROV_CODE" primitive="No" remark="Province code" null-able="false" columnDef="Int"/>
+    <field name="tapVersion" type="Integer" column="TAP_VERSION" primitive="No" remark="TAP VERSION" null-able="true" columnDef="Int"/>
+    <field name="tapRelease" type="Integer" column="TAP_RELEASE" primitive="No" remark="TAP Release Version " null-able="false" columnDef="Int"/>
+    <field name="tapDecimalPlaces" type="Integer" column="TAP_DECIMAL_PLACES" primitive="No" remark="Decimal places of charges in tap file" null-able="false" columnDef="Int"/>
+    <field name="taxTreatment" type="Integer" column="TAX_TREATMENT" primitive="No" remark="Agreement tax rate of operator
+This column is used to check whether the tax information in TAP file header is right, not refer to the follow-up tax definition and calculation.
+6-digit decimal" null-able="true" columnDef="Int"/>
+    <field name="taxRate" type="Long" column="TAX_RATE" primitive="No" remark="The main tax rate " null-able="false" columnDef="BigInt"/>
+    <field name="measureTypeId" type="Integer" column="MEASURE_TYPE_ID" primitive="No" remark="Refer to table SYS_MEASURE_TYPE 
+If subscriber not offer the value, it is default as USD" null-able="true" columnDef="Int"/>
+    <field name="reportErrorType" type="Integer" column="REPORT_ERROR_TYPE" primitive="No" remark="Report type of error file
+0: file check error or CDR check error, only report log and statistical information; 
+1: file check error or CDR check error, require reporting log and statistical information, meanwhile generate RAP file to send back to the opposite operator. 
+" null-able="true" columnDef="Int"/>
+    <field name="timeZoneId" type="Integer" column="TIME_ZONE_ID" primitive="No" remark="Time zone ID from SYS_TIME_ZONE_DEF" null-able="false" columnDef="Int"/>
+    <field name="networkStatement" type="String" column="NETWORK_STATEMENT" primitive="No" remark="Operator name for bill statement
+mapping to CRM, with no need to show in GUI." null-able="false" columnDef="Varchar" columnSize="512"/>
+    <field name="validDate" type="Date" column="VALID_DATE" primitive="No" remark="Effective date" null-able="true" columnDef="TimeStamp"/>
+    <field name="expireDate" type="Date" column="EXPIRE_DATE" primitive="No" remark="Expired date" null-able="true" columnDef="TimeStamp"/>
+    <field name="modifyDate" type="Date" column="MODIFY_DATE" primitive="No" remark="Modified date" null-able="false" columnDef="TimeStamp"/>
+    <field name="description" type="String" column="DESCRIPTION" primitive="No" remark="Description" null-able="true" columnDef="Varchar" columnSize="1024"/>
+  </fields>
+</entity>

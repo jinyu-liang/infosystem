@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="PmFirstActiveGprsUrl" schema="PD" table="PM_FIRST_ACTIVE_GPRS_URL">
+  <fields>
+    <field name="priceRuleId" type="Integer" column="PRICE_RULE_ID" isPk="true(not generated)" primitive="No" remark="rating rule id" null-able="true" columnDef="AutoIncrement"/>
+    <field name="successUrl" type="String" column="SUCCESS_URL" primitive="No" remark="success url" null-able="true" columnDef="Varchar" columnSize="256"/>
+    <field name="failureUrl" type="String" column="FAILURE_URL" primitive="No" remark="failure url" null-able="true" columnDef="Varchar" columnSize="256"/>
+  </fields>
+</entity>

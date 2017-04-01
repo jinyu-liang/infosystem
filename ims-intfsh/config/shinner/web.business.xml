@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/biz.xsd">
+  <service name="intfshinner" bind-entity="false" scope="both" session-bean-type="stateless">
+    <method name="do_insertImmeSms" scope="service-only">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="listImmeSms" type="entity" ref="shinner.ImmeSms" primitive="false" collection="list" output="false" input="true"/>
+      <return-type type="entity" ref="shinner.do_insertImmeSmsResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_insertBatchSms" scope="service-only">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="batchSmsInfo" type="entity" ref="shinner.BatchSmsInfo" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="shinner.do_insertBatchSmsResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_lifeCycleChgSh" scope="service-only">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="LifeCycleChgList" type="entity" ref="imscnsh.LifeCycleChg" primitive="false" collection="list" output="false" input="true"/>
+      <return-type type="entity" ref="imscnsh.do_lifeCycleChgShResponse" collection="none" primitive="false"/>
+    </method>
+  </service>
+  <service name="intfshqurey" bind-entity="false" scope="both" session-bean-type="stateless">
+    <method name="do_qryUserListByAcctId" scope="service-only">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="shinner.QryUserListByAcctIdReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="shinner.do_qryUserListByAcctIdResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_qrySingleUserByAcctId" scope="service-only">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="acct_id" type="Long" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="shinner.do_qrySingleUserByAcctIdResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryVpnGroupByUserIdSh" scope="service-only">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="sQueryVPNGroupShReq" type="entity" ref="imscnsh.SQueryVPNGroupShReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="ref://com.ailk.openbilling.persistence.imsinner.entity.Do_queryVPNGroupResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryNextBillType" scope="service-only">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="acct_id" type="Long" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="shinner.do_queryNextBillTypeResponse" collection="none" primitive="false"/>
+    </method>
+  </service>
+</module>

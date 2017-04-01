@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="IUserValidchange" remark="" schema="jd" table="I_USER_VALIDCHANGE" xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="USER_ID" columnDef="Int" isPk="true(not generated)" name="userId" null-able="false" primitive="No" remark="" type="Long"/>
+        <field column="VALID_DATE" columnDef="Date" isPk="true(not generated)" name="validDate" null-able="false" primitive="No" remark="" type="Date"/>
+        <field column="EXPIRE_DATE" columnDef="Date" name="expireDate" null-able="false" primitive="No" remark="" type="Date"/>
+        <field column="UPDATE_TIME" columnDef="Date" name="updateTime" primitive="No" remark="" type="Date"/>
+        <field column="UPDATE_STAFF_ID" columnDef="Char" columnSize="8" name="updateStaffId" primitive="No" remark="" type="String"/>
+        <field column="UPDATE_DEPART_ID" columnDef="Char" columnSize="5" name="updateDepartId" primitive="No" remark="" type="String"/>
+        <field column="REMARK" columnDef="Varchar" columnSize="100" name="remark" primitive="No" remark="" type="String"/>
+        <field column="RSRV_NUM1" columnDef="Int" name="rsrvNum1" primitive="No" remark="" type="Integer"/>
+        <field column="RSRV_NUM2" columnDef="Int" name="rsrvNum2" primitive="No" remark="" type="Integer"/>
+        <field column="RSRV_NUM3" columnDef="Int" name="rsrvNum3" primitive="No" remark="" type="Integer"/>
+        <field column="RSRV_NUM4" columnDef="Int" name="rsrvNum4" primitive="No" remark="" type="Long"/>
+        <field column="RSRV_NUM5" columnDef="Int" name="rsrvNum5" primitive="No" remark="" type="Long"/>
+        <field column="RSRV_STR1" columnDef="Varchar" columnSize="100" name="rsrvStr1" primitive="No" remark="" type="String"/>
+        <field column="RSRV_STR2" columnDef="Varchar" columnSize="100" name="rsrvStr2" primitive="No" remark="" type="String"/>
+        <field column="RSRV_STR3" columnDef="Varchar" columnSize="100" name="rsrvStr3" primitive="No" remark="" type="String"/>
+        <field column="RSRV_STR4" columnDef="Varchar" columnSize="200" name="rsrvStr4" primitive="No" remark="" type="String"/>
+        <field column="RSRV_STR5" columnDef="Varchar" columnSize="200" name="rsrvStr5" primitive="No" remark="" type="String"/>
+        <field column="RSRV_DATE1" columnDef="Date" name="rsrvDate1" primitive="No" remark="" type="Date"/>
+        <field column="RSRV_DATE2" columnDef="Date" name="rsrvDate2" primitive="No" remark="" type="Date"/>
+        <field column="RSRV_DATE3" columnDef="Date" name="rsrvDate3" primitive="No" remark="" type="Date"/>
+        <field column="RSRV_TAG1" columnDef="Char" columnSize="1" name="rsrvTag1" primitive="No" remark="" type="String"/>
+        <field column="RSRV_TAG2" columnDef="Char" columnSize="1" name="rsrvTag2" primitive="No" remark="" type="String"/>
+        <field column="RSRV_TAG3" columnDef="Char" columnSize="1" name="rsrvTag3" primitive="No" remark="" type="String"/>
+        <field column="OPER_TYPE" columnDef="Int" name="operType" primitive="No" remark="" type="Integer"/>
+        <field column="SO_NBR" columnDef="Int" isPk="true(not generated)" name="soNbr" null-able="false" primitive="No" remark="" type="Long"/>
+        <field column="COMMIT_DATE" columnDef="Date" name="commitDate" primitive="No" remark="" type="Date"/>
+    </fields>
+</entity>

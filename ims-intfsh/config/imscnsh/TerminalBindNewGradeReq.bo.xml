@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="TerminalBindNewGradeReq">
+  <fields>
+    <field name="promise_fee" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="book_item_id_in" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="book_item_id_out" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="fund_type" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="allot_amount" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="allot_scale" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="allot_bcycle_count" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="allot_mode_value" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="allot_busi_code" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="promo_name" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="outer_promo_id" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="ext1" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="ext2" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="ext3" type="String" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

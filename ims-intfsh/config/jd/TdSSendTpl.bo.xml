@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="TdSSendTpl" schema="JD" table="TD_S_SEND_TPL">
+  <fields>
+    <field name="smsCode" type="Long" column="SMS_CODE" isPk="false" remark="批次号 营业100000000000到 109999999999 帐管 200000000000到 209999999999 " null-able="false" columnDef="NUMBER" columnSize="12"/>
+    <field name="chanId" type="String" column="CHAN_ID" isPk="false" remark="渠道编码，取值： 营业：A001 账管：B001 小I：C001 鸿冠：C002 4A：C003 网管：C004 " null-able="false" columnDef="CHAR" columnSize="4"/>
+    <field name="smsKindCode" type="String" column="SMS_KIND_CODE" isPk="false" remark="01-实时接口 02-05分给营业管理自己定义 06-07 帐务管理 " null-able="false" columnDef="CHAR" columnSize="2"/>
+    <field name="smsTypeCode" type="String" column="SMS_TYPE_CODE" isPk="false" remark="取值： 文本短信：20 PUSH短信：10 二进制短信：00 " null-able="false" columnDef="CHAR" columnSize="2"/>
+    <field name="sendTable" type="String" column="SEND_TABLE" isPk="false" null-able="false" columnDef="VARCHAR2" columnSize="40"/>
+    <field name="priorityLevel" type="Integer" column="PRIORITY_LEVEL" isPk="false" remark="短信优先级，取值越大优先级越低1-100" null-able="false" columnDef="NUMBER" columnSize="3"/>
+    <field name="smsContent" type="String" column="SMS_CONTENT" isPk="false" null-able="false" columnDef="VARCHAR2" columnSize="2000"/>
+    <field name="note" type="String" column="NOTE" isPk="false" null-able="true" columnDef="VARCHAR2" columnSize="200"/>
+    <field name="forceStartTime" type="Date" column="FORCE_START_TIME" isPk="false" remark="下发开始时间 格式YYYY-MM-DD HH:MM:SS 不填默认是全天发送 " null-able="true" columnDef="DATE" columnSize="7"/>
+    <field name="forceEndTime" type="Date" column="FORCE_END_TIME" isPk="false" null-able="true" columnDef="DATE" columnSize="7"/>
+    <field name="smsNetTag" type="String" column="SMS_NET_TAG" isPk="false" null-able="false" columnDef="CHAR" columnSize="1"/>
+    <field name="ext1" type="String" column="EXT1" isPk="false" null-able="true" columnDef="VARCHAR2" columnSize="32"/>
+    <field name="ext2" type="String" column="EXT2" isPk="false" remark="下发号码10086或10086+扩展码组成" null-able="true" columnDef="VARCHAR2" columnSize="32"/>
+    <field name="validityPeriod" type="Long" column="VALIDITY_PERIOD" isPk="false" null-able="false" columnDef="NUMBER" columnsize="6" />
+  </fields>
+</entity>

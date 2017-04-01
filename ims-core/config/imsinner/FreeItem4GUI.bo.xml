@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="FreeItem4GUI">
+  <fields>
+    <field name="item_id" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="item_name" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="amount" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="measure_name" type="String" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

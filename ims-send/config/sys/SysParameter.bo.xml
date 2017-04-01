@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="SysParameter" schema="sd" table="SYS_PARAMETER">
+  <fields>
+    <field name="paramCode" type="String" column="PARAM_CODE" isPk="true(not generated)" primitive="No" remark="Parameter code, configured with characters and by users for certain meaning. Some universal parameters are configured by unified configuration." null-able="false" columnDef="Varchar" columnSize="32"/>
+    <field name="paramName" type="String" column="PARAM_NAME" primitive="No" remark="Parameter name" null-able="false" columnDef="Varchar" columnSize="256"/>
+    <field name="paramClass" type="Integer" column="PARAM_CLASS" isPk="true(not generated)" primitive="No" remark="Parameter class
+
+Sub systems to which basic system parameters belong:1 －－ Universal system parameter  2 －－ Rating  3 －－ Product Management  4 －－Accounting  5 －－ Accounting Management   6 －－Information Management" null-able="false" columnDef="Int"/>
+    <field name="subClass" type="Integer" column="SUB_CLASS" isPk="true(not generated)" primitive="No" remark="Sub modules defined in each sub system, configured by each module.
+" null-able="false" columnDef="Int"/>
+    <field name="paramDataType" type="Integer" column="PARAM_DATA_TYPE" primitive="No" remark="Parameter data types:
+0--Default
+1--Char
+2--Number
+3--Boolean
+4--Date
+5--Long
+6--String
+7--Double
+
+Remark: Default 0, analysed and configured by each module." null-able="false" columnDef="Int"/>
+    <field name="paramValue" type="String" column="PARAM_VALUE" primitive="No" remark="Parameter value" null-able="false" columnDef="Varchar" columnSize="1024"/>
+    <field name="paramDesc" type="String" column="PARAM_DESC" primitive="No" remark="Parameter descriptive information, parameter value range or parameter configuration reason is mainly filled in the field" null-able="true" columnDef="Varchar" columnSize="1024"/>
+    <field name="extClass" type="String" column="EXT_CLASS" isPk="true(not generated)" primitive="No" null-able="false" columnDef="Varchar" columnSize="256"/>
+  </fields>
+</entity>

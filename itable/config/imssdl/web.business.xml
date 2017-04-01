@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/biz.xsd">
+	<service bind-entity="false" name="IImsItableSyncApp" sdl="true" sdl-module="MImsItableSyncApp">
+		<method name="do_dbmDispatchStart" scope="service-only">
+            <return-type type="Integer"/>
+        </method>
+		<method name="do_dbmScanStart" scope="service-only">
+            <return-type type="Integer"/>
+        </method>
+		<method name="db_dbmCustTransfer" scope="service-only">
+            <return-type type="Integer"/>
+        </method>
+	<method name="do_dbmAcctDeposit" scope="service-only">
+            <return-type type="Integer"/>
+        </method>
+        <method name="do_dbmUserDepositDispatch" scope="service-only">
+            <return-type type="Integer"/>
+        </method>
+
+    <method name="do_dbmManualModify" scope="service-only">
+            <return-type type="Integer"/>
+        </method>
+
+    </service>
+</module>

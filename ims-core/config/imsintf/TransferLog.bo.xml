@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="TransferLog" transient="false">
+  <fields>
+    <field name="org_phone_id" type="String" isPk="false" tree-foreign-key="false" null-able="false"/>
+    <field name="outer_org_acct_id" type="String" isPk="false" primitive="Auto" tree-foreign-key="false" null-able="true"/>
+    <field name="org_acct_id" type="Long" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="target_phone_id" type="String" isPk="false" tree-foreign-key="false" null-able="false"/>
+    <field name="outer_target_acct_id" type="String" isPk="false" primitive="Auto" tree-foreign-key="false" null-able="true"/>
+    <field name="target_acct_id" type="Long" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="flag" type="Short" isPk="false" tree-foreign-key="false" null-able="false"/>
+    <field name="op_id" type="Integer" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="transfer_date" type="String" isPk="false" tree-foreign-key="false" null-able="false"/>
+    <field name="transfer_rule_id" type="Short" isPk="false" tree-foreign-key="false" null-able="false"/>
+    <field name="transfer_times" type="Long" isPk="false" primitive="No" tree-foreign-key="false" null-able="true"/>
+    <field name="remark" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <complex-field name="OrgOldBalance" type="entity" ref="imsintf.SBalance" collection="none" primitive="false"/>
+    <complex-field name="OrgNewBalance" type="entity" ref="imsintf.SBalance" collection="none" primitive="false"/>
+    <complex-field name="TargetOldBalance" type="entity" ref="imsintf.SBalance" collection="none" primitive="false"/>
+    <complex-field name="TargetNewBalance" type="entity" ref="imsintf.SBalance" collection="none" primitive="false"/>
+    <complex-field name="OrgOldFreeResource" type="entity" ref="imsintf.FreeResource" collection="none" primitive="false"/>
+    <complex-field name="OrgNewFreeResource" type="entity" ref="imsintf.FreeResource" collection="none" primitive="false"/>
+    <complex-field name="TargetOldFreeResource" type="entity" ref="imsintf.FreeResource" collection="none" primitive="false"/>
+    <complex-field name="TargetNewFreeResource" type="entity" ref="imsintf.FreeResource" collection="none" primitive="false"/>
+    <complex-field name="OneTimeFee" type="entity" ref="imsintf.FeeItemList" collection="none" primitive="false"/>
+    <field name="so_mode" type="Short" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="source_system" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="transaction_id" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="operation_date" type="Date" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="_fail_reason" type="String" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

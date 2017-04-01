@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="SServicesReturn" transient="true">
+  <fields>
+    <field name="service_id" type="Integer" isPk="false" primitive="No" tree-foreign-key="false" null-able="false"/>
+    <field name="service_name" type="String" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="time_period" type="Short" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="time_segment" type="Short" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="payment_mode" type="Short" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="service_status" type="Short" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="status_name" type="String" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="threshold" type="Long" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="valid_date" type="String" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="expire_date" type="String" isPk="false" tree-foreign-key="false" null-able="true"/>
+  </fields>
+</entity>

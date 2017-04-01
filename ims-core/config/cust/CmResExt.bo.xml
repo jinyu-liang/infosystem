@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="CmResExt" remark="" schema="cd" table="CM_RES_EXT" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="RESOURCE_ID" columnDef="BigInt" isPk="true(not generated)" name="resourceId" null-able="false" primitive="No" remark="Resource Numbering" type="Long"/>
+        <field column="PARTY_ROLE_ID" columnDef="BigInt" name="partyRoleId" primitive="No" remark="资源使用者&#10;用于记录使用者的相关信息，包括姓名、生日等等." type="Long"/>
+        <field column="PROP_1" columnDef="Varchar" columnSize="256" name="prop1" primitive="No" remark="扩展属性1" type="String"/>
+        <field column="PROP_2" columnDef="Varchar" columnSize="256" name="prop2" primitive="No" remark="扩展属性2" type="String"/>
+        <field column="PROP_3" columnDef="Varchar" columnSize="256" name="prop3" primitive="No" remark="扩展属性3" type="String"/>
+        <field column="PROP_4" columnDef="Varchar" columnSize="256" name="prop4" primitive="No" remark="扩展属性4" type="String"/>
+        <field column="PROP_5" columnDef="Varchar" columnSize="256" name="prop5" primitive="No" remark="扩展属性5" type="String"/>
+        <field column="VALID_DATE" columnDef="TimeStamp" isPk="true(not generated)" name="validDate" null-able="false" primitive="No" remark="The Resource Effective Date" type="Date"/>
+        <field column="EXPIRE_DATE" columnDef="TimeStamp" name="expireDate" null-able="false" primitive="No" remark="The Resource Expired Date" type="Date"/>
+        <field column="REMARKS" columnDef="Varchar" columnSize="256" name="remarks" primitive="No" remark="remarks" type="String"/>
+        <field column="SO_NBR" columnDef="BigInt" isPk="true(not generated)" name="soNbr" null-able="false" primitive="No" remark="The serial number" type="Long"/>
+        <field column="CREATE_DATE" columnDef="TimeStamp" name="createDate" primitive="No" remark="" type="Date"/>
+        <field column="SO_DATE" columnDef="TimeStamp" name="soDate" primitive="No" remark="" type="Date"/>
+        <field column="PROP_6" columnDef="Varchar" columnSize="256" name="prop6" primitive="No" remark="" type="String"/>
+    </fields>
+</entity>

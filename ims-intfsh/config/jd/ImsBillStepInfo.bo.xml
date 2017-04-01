@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="ImsBillStepInfo" schema="JD" table="IMS_BILL_STEP_INFO">
+  <fields>
+    <field name="billDate" type="Integer" column="BILL_DATE" primitive="No" remark="????YYYYMMDD?????????" null-able="true" columnDef="Int"/>
+    <field name="billStepName" type="String" column="BILL_STEP_NAME" primitive="No" remark="crm_vpmn_member_calc ??V????????crm_3_yuan_any_talk 3?????crm_bboss_busi_end BBOSS????" null-able="true" columnDef="Varchar" columnSize="64"/>
+    <field name="billSts" type="Integer" column="BILL_STS" primitive="No" remark="1?????" null-able="true" columnDef="Int"/>
+    <field name="createDate" type="Date" column="CREATE_DATE" primitive="No" remark="????" null-able="true" columnDef="Date"/>
+  </fields>
+</entity>

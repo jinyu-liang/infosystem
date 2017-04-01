@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="PmAllowanceFreeresDetails" schema="pd" table="PM_ALLOWANCE_FREERES_DETAILS">
+  <fields>
+    <field name="priceId" type="Integer" column="PRICE_ID" isPk="true(not generated)" primitive="Auto" remark="pricing identifier" null-able="false" columnDef="NUMBER" columnSize="9"/>
+    <field name="freeresItem" type="Integer" column="FREERES_ITEM" isPk="false" primitive="Auto" remark="free resource ID" null-able="false" columnDef="NUMBER" columnSize="9"/>
+    <field name="titleRoleId" type="Integer" column="TITLE_ROLE_ID" isPk="false" primitive="Auto" remark="role
+write O= have nothing to do with role
+" null-able="true" columnDef="NUMBER" columnSize="4"/>
+    <field name="invalidProdUseFlag" type="Integer" column="INVALID_PROD_USE_FLAG" isPk="false" primitive="Auto" null-able="false" columnDef="NUMBER" columnSize="1"/>
+    <field name="cycleRefMode" type="Integer" column="CYCLE_REF_MODE" isPk="false" primitive="Auto" null-able="true" columnDef="NUMBER" columnSize="1"/>
+    <field name="cycleUnit" type="Integer" column="CYCLE_UNIT" isPk="false" primitive="Auto" null-able="true" columnDef="NUMBER" columnSize="4"/>
+    <field name="cycleType" type="Integer" column="CYCLE_TYPE" isPk="false" primitive="Auto" null-able="true" columnDef="NUMBER" columnSize="4"/>
+    <field name="refMemberNum" type="Integer" column="REF_MEMBER_NUM" isPk="false" primitive="Auto" null-able="false" columnDef="NUMBER" columnSize="1"/>
+  </fields>
+</entity>

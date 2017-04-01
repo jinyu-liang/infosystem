@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="InstanceOperReq">
+  <fields>
+    <field name="bill_id" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="acct_id" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="month" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="busi_type" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="channel_id" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="source" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="state" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="input_date" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="start_date" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="done_date" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="file_name" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="notes" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="op_id" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="org_id" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="ext_1" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="ext_2" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="ext_3" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="ext_4" type="String" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

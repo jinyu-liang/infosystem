@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="IAcctBillCycle" remark="" schema="JD" table="I_ACCT_BILL_CYCLE" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="ACCT_ID" columnDef="BigInt" name="acctId" primitive="No" remark="" type="Long"/>
+        <field column="CYCLE_TYPE" columnDef="Int" name="cycleType" primitive="No" remark="" type="Integer"/>
+        <field column="CYCLE_UNIT" columnDef="Int" name="cycleUnit" primitive="No" remark="" type="Integer"/>
+        <field column="FIRST_BILL_DAY" columnDef="Int" name="firstBillDay" primitive="No" remark="" type="Integer"/>
+        <field column="FIRST_BILL_TYPE" columnDef="Int" name="firstBillType" primitive="No" remark="" type="Integer"/>
+        <field column="EFFECTIVE_TYPE" columnDef="Int" name="effectiveType" primitive="No" remark="" type="Integer"/>
+        <field column="VALID_DATE" columnDef="TimeStamp" name="validDate" primitive="No" remark="" type="Date"/>
+        <field column="EXPIRE_DATE" columnDef="TimeStamp" name="expireDate" primitive="No" remark="" type="Date"/>
+        <field column="OPER_TYPE" columnDef="Int" name="operType" primitive="No" remark="" type="Integer"/>
+        <field column="SO_NBR" columnDef="BigInt" name="soNbr" primitive="No" remark="" type="Long"/>
+        <field column="COMMIT_DATE" columnDef="TimeStamp" name="commitDate" primitive="No" remark="" type="Date"/>
+    </fields>
+</entity>

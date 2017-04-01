@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="ImsScanProdTaskSts" remark="" schema="cd" table="IMS_SCAN_PROD_TASK_STS" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="TASK_NBR" columnDef="BigInt" name="taskNbr" primitive="No" remark="" type="Long"/>
+        <field column="ACTION_DATE" columnDef="TimeStamp" name="actionDate" primitive="No" remark="" type="Date"/>
+        <field column="FINISH_DATE" columnDef="TimeStamp" name="finishDate" primitive="No" remark="" type="Date"/>
+        <field column="AMOUNT" columnDef="BigInt" name="amount" primitive="No" remark="" type="Long"/>
+    </fields>
+</entity>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SCreditInfo" remark="" sdl="true" sdl-module="MXdr" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+<fields>
+<field name="unlimited" primitive="Yes" remark="" sdl="true" type="Short"/>
+<field name="remainCredit" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="measureId" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="resourceId" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="acctId" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="validDate" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="expireDate" primitive="Yes" remark="" sdl="true" type="Long"/>
+<complex-field collection="map&lt;String,?&gt;" name="extraMap" primitive="false" remark="" sdl="true" type="String"/>
+</fields>
+</entity>

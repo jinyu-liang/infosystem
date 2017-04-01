@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="ImsSync" schema="CD" table="IMS_SYNC">
+  <fields>
+    <field name="id" type="Long" column="ID" isPk="true(not generated)" primitive="No" remark="???" null-able="true" columnDef="AutoIncrement"/>
+    <field name="custId" type="Long" column="CUST_ID" primitive="No" remark="??id" null-able="true" columnDef="BigInt"/>
+    <field name="acctId" type="Long" column="ACCT_ID" primitive="No" remark="??id" null-able="true" columnDef="BigInt"/>
+    <field name="userId" type="Long" column="USER_ID" primitive="No" null-able="true" columnDef="BigInt"/>
+    <field name="eventType" type="Integer" column="EVENT_TYPE" primitive="No" remark="????????????" null-able="true" columnDef="Int"/>
+    <field name="busiCode" type="Integer" column="BUSI_CODE" primitive="No" remark="?????busi_code" null-able="true" columnDef="Int"/>
+    <field name="createDate" type="Date" column="CREATE_DATE" primitive="No" remark="????" null-able="true" columnDef="TimeStamp"/>
+    <field name="dealDate" type="Date" column="DEAL_DATE" primitive="No" remark="????" null-able="true" columnDef="TimeStamp"/>
+    <field name="dealCount" type="Integer" column="DEAL_COUNT" primitive="No" remark="????" null-able="true" columnDef="Int"/>
+    <field name="errorCode" type="Integer" column="ERROR_CODE" primitive="No" remark="????" null-able="true" columnDef="Int"/>
+    <field name="errorMsg" type="String" column="ERROR_MSG" primitive="No" remark="????" null-able="true" columnDef="Varchar" columnSize="256"/>
+    <field name="sts" type="Integer" column="STS" primitive="No" remark="1:???? 2:??? 3:?? " null-able="true" columnDef="Int"/>
+    <field name="soNbr" type="Long" column="SO_NBR" primitive="No" remark="???" null-able="true" columnDef="BigInt"/>
+  </fields>
+</entity>

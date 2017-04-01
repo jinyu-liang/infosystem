@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="PmProductBillExtProp" schema="PD" table="PM_PRODUCT_BILL_EXT_PROP">
+  <fields>
+    <field name="productOfferingId" type="Integer" column="PRODUCT_OFFERING_ID" isPk="true(not generated)" primitive="No" remark="A unique identifier for the product offering.
+
+" null-able="false" columnDef="Int" enumAsAliasField="true"/>
+    <field name="propId" type="Integer" column="PROP_ID" isPk="true(not generated)" primitive="No" remark="attribute ID
+enum definition:
+11 -- applicable object attribute of billing group.
+12 -- applicable object attribute of rating group." null-able="false" columnDef="Int" enumAsAliasField="true"/>
+    <field name="propValue" type="Integer" column="PROP_VALUE" primitive="No" remark="attribute value" null-able="false" columnDef="Int" enumAsAliasField="true"/>
+  </fields>
+</entity>

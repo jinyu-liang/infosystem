@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="SGroup" transient="true">
+  <fields>
+    <field name="outer_group_id" type="String" isPk="false" primitive="Auto" tree-foreign-key="false" null-able="true"/>
+    <field name="group_id" type="Long" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="outer_parent_group_id" type="String" isPk="false" primitive="Auto" tree-foreign-key="false" null-able="true"/>
+    <field name="parent_group_id" type="Long" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="main_phone_id" type="String" isPk="false" primitive="Auto" tree-foreign-key="false" null-able="true"/>
+    <field name="max_group_number" type="Integer" isPk="false" primitive="Auto" tree-foreign-key="false" null-able="true"/>
+    <field name="group_type" type="Short" isPk="false" primitive="Auto" tree-foreign-key="false" null-able="true"/>
+    <field name="group_name" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="contact_phone" type="String" isPk="false" primitive="Auto" tree-foreign-key="false" null-able="true"/>
+    <field name="status" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="outer_billable_acct_id" type="String" isPk="false" primitive="Auto" tree-foreign-key="false" null-able="true"/>
+    <field name="billable_acct_id" type="Long" isPk="false" primitive="Auto" tree-foreign-key="false" null-able="true"/>
+    <field name="outer_cust_id" type="String" isPk="false" primitive="Auto" tree-foreign-key="false" null-able="true"/>
+    <field name="cust_id" type="Long" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="valid_date" type="String" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="expire_date" type="String" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="cLIP_flag" type="Integer" isPk="false" primitive="No" null-able="true"/>
+    <field name="outGoing_cs_flag" type="Integer" isPk="false" primitive="No" null-able="true"/>
+    <field name="ocs_routing_flag" type="Integer" isPk="false" primitive="No" null-able="true"/>
+    <field name="espace_flag" type="Integer" isPk="false" primitive="No" null-able="true"/>
+    <complex-field name="specail_number_list" type="entity" ref="imsintf.SpecialNumberList" collection="none" primitive="false"/>
+    <field name="inGroupOutgoingCall" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="inGroupIncomingCall" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="crossGroupOutgoingCall" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="crossGroupIncomingCall" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="outGroupOutgingCall" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="outGroupIncomingCall" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="specOutgoingCall" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="specIncomingCall" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="main_resource_id" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

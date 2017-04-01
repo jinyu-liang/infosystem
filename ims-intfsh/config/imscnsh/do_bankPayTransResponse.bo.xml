@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="do_bankPayTransResponse">
+  <root ref="imsintf.BaseResponse"/>
+  <fields>
+    <field name="bflag" type="Boolean" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="acct_id" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="amount" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="usable_balance" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="real_fee" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="unpay_fee" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="out_so_nbr" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="out_so_date" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="boss_so_nbr" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="boss_so_date" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="pay_type" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

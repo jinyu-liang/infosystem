@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="CoProdShareAlloc4GUI">
+  <fields>
+    <field name="phoneId" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="resourceId" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="billFlag" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="itemId" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="itemName" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="amount" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="expireDate" type="Date" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SResLifeCycleSync" remark="" sdl="true" sdl-module="MImsSyncDef" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+    <fields>
+        <field name="resourceId" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="sts" primitive="Yes" remark="" sdl="true" type="Integer"/>
+        <field name="lifecycleExpireDate" primitive="Yes" remark="" sdl="true" type="Date"/>
+        <field name="lifecycleValidDate" primitive="Yes" remark="" sdl="true" type="Date"/>
+        <field name="resValidExpireDate" primitive="Yes" remark="" sdl="true" type="Date"/>
+        <field name="resValidValidDate" primitive="Yes" remark="" sdl="true" type="Date"/>
+        <field name="resValidIshistory" primitive="Yes" remark="" sdl="true" type="Integer"/>
+    </fields>
+</entity>

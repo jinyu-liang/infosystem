@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="PmCompositeOfferPrice" schema="pd" table="PM_COMPOSITE_OFFER_PRICE">
+  <fields>
+    <field name="pricingPlanId" type="Integer" column="PRICING_PLAN_ID" isPk="true(not generated)" primitive="No" remark="Pricing Planning Identifier" null-able="false" columnDef="Int"/>
+    <field name="priceId" type="Integer" column="PRICE_ID" isPk="true(not generated)" primitive="No" remark="Pricing Identifier" null-able="false" columnDef="Int"/>
+    <field name="billingType" type="Integer" column="BILLING_TYPE" primitive="No" remark="预后付标识
+0 --- 预付
+1 --- 后付
+
+空或者其他值表示不考虑
+用于支持在不同的付费方式下的资费不同" null-able="true" columnDef="Int"/>
+    <field name="validDate" type="Date" column="VALID_DATE" primitive="No" null-able="true" columnDef="TimeStamp"/>
+    <field name="expireDate" type="Date" column="EXPIRE_DATE" primitive="No" null-able="true" columnDef="TimeStamp"/>
+    <field name="offerSts" type="Integer" column="OFFER_STS" isPk="false" primitive="No" null-able="false" columnDef="Int"/>
+  </fields>
+</entity>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="Do_QueryCommonUserInfoResponse">
+  <root ref="imsintf.BaseResponse"/>
+  <fields>
+    <field name="cust_id" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="cust_name" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="cust_segment" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="cust_sts" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="user_sts" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="acct_id" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="acct_name" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="acct_sts" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="paymode" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="promotion" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="phoneId" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="offer_name" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="balance" type="Double" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="limit_credit" type="Double" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

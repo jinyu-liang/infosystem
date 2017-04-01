@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="ImsIrGprsAlarm" remark="" schema="JD" table="IMS_IR_GPRS_ALARM" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="USER_ID" columnDef="Int" name="userId" primitive="No" remark="" type="Long"/>
+        <field column="PHONE_ID" columnDef="Varchar" columnSize="32" name="phoneId" primitive="No" remark="" type="String"/>
+        <field column="BILL_CYCLE_BEGIN" columnDef="Int" name="billCycleBegin" primitive="No" remark="时间：YYYYMMDD" type="Integer"/>
+        <field column="BILL_CYCLE_END" columnDef="Int" name="billCycleEnd" primitive="No" remark="时间：YYYYMMDD" type="Integer"/>
+        <field column="GPRS_FEE" columnDef="Int" name="gprsFee" primitive="No" remark="单位为：厘" type="Long"/>
+        <field column="GPRS_TRAFFIC" columnDef="Int" name="gprsTraffic" primitive="No" remark="单位为：KB" type="Long"/>
+        <field column="CREATE_DATE" columnDef="Date" name="createDate" primitive="No" remark="" type="Date"/>
+    </fields>
+</entity>

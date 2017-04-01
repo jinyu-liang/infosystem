@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="ImsBusiStsControl" schema="CD" table="IMS_BUSI_STS_CONTROL">
+  <fields>
+    <field name="busiCode" type="Integer" column="BUSI_CODE" isPk="true(not generated)" primitive="No" remark="BUSI_CODE" null-able="false" columnDef="Int"/>
+    <field name="sts" type="Integer" column="STS" isPk="true(not generated)" primitive="No" remark="users, accounts, customer status" null-able="false" columnDef="Int"/>
+    <field name="billingType" type="Integer" column="BILLING_TYPE" isPk="true(not generated)" primitive="No" remark="0:prepaid 1:postpaid 2:hybird -1:all" null-able="false" columnDef="Int"/>
+    <field name="objIndex" type="Integer" column="OBJ_INDEX" isPk="true(not generated)" primitive="No" remark="OBJ_INDEX" null-able="false" columnDef="Int"/>
+    <field name="frauldFlag" type="Integer" column="FRAULD_FLAG" isPk="true(not generated)" primitive="No" remark="used for prepaid,hybird 1:yes 0:no" null-able="false" columnDef="Int"/>
+    <field name="userrequestFlag" type="Integer" column="USERREQUEST_FLAG" isPk="true(not generated)" primitive="No" remark="just for prepaid 1:yes 0:no" null-able="false" columnDef="Int"/>
+    <field name="osSts" type="Integer" column="OS_STS" isPk="true(not generated)" primitive="No" remark="10: nomal 11: out-going call barring 12: call barring -1:all" null-able="false" columnDef="Int"/>
+    <field name="objLevel" type="Integer" column="OBj_LEVEL" isPk="true(not generated)" primitive="No" remark="0:USER 1:ACCOUNT 2:CUSTOMER" null-able="false" columnDef="Int"/>
+  </fields>
+</entity>

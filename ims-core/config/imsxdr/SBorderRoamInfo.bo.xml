@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SBorderRoamInfo" remark="" sdl="true" sdl-module="MXdr" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+<fields>
+<field name="roamType" primitive="Yes" remark="" sdl="true" type="Short"/>
+<field name="tollType" primitive="Yes" remark="" sdl="true" type="Short"/>
+<field name="conditionId" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="vplmn2" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="oppHplmn2" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="oppVplmn2" primitive="Yes" remark="" sdl="true" type="String"/>
+<complex-field collection="map&lt;Long,?&gt;" name="rateProdId" primitive="false" ref="imsxdr.SRateProdId" remark="" sdl="true" type="entity"/>
+</fields>
+</entity>

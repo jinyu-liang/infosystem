@@ -1,0 +1,3301 @@
+package com.ailk.ims.component;
+
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import jef.common.wrapper.Holder;
+import jef.database.Condition.Operator;
+import com.ailk.easyframe.sal.exceptions.SALException;
+import com.ailk.easyframe.sdl.MMdbSyncUpApp.IMdbSyncUpAppInt;
+import com.ailk.easyframe.sdl.MMdbSyncUpApp.SCoProd;
+import com.ailk.easyframe.sdl.MMdbSyncUpApp.SImUser;
+import com.ailk.easyframe.sdl.MMdbSyncUpApp.SImUserCycle;
+import com.ailk.easyframe.sdl.MMdbSyncUpApp.SOrderInfo;
+import com.ailk.easyframe.sdl.MMdbSyncUpApp.SProdBillCycle;
+import com.ailk.easyframe.sdl.MMdbSyncUpApp.SProdCharValue;
+import com.ailk.easyframe.sdl.MMdbSyncUpApp.SProdPriceParam;
+import com.ailk.easyframe.sdl.MMdbSyncUpDef.SAccountEx;
+import com.ailk.easyframe.sdl.MMdbSyncUpDef.SCustomer;
+import com.ailk.easyframe.sdl.MMdbSyncUpDef.SProdInfo;
+import com.ailk.easyframe.sdl.MMdbSyncUpDef.SPromBillCycle;
+import com.ailk.easyframe.sdl.MMdbSyncUpDef.SPromCharValue;
+import com.ailk.easyframe.sdl.MMdbSyncUpDef.SPromPriceParam;
+import com.ailk.easyframe.sdl.MMdbSyncUpDef.SQueryInfo;
+import com.ailk.easyframe.sdl.MMdbSyncUpDef.SQueryPara;
+import com.ailk.easyframe.sdl.MMdbSyncUpDef.SReturn;
+import com.ailk.easyframe.sdl.MMdbSyncUpDef.SReturnEx;
+import com.ailk.easyframe.sdl.MMdbSyncUpDef.SUserCycle;
+import com.ailk.easyframe.sdl.MMdbSyncUpDef.SUserEx;
+import com.ailk.easyframe.sdl.MMdbSyncUpDef.SUserProm;
+import com.ailk.easyframe.sdl.imssdl.MImsSyncApp.IImsSyncAppImp;
+import com.ailk.easyframe.sdl.imssdl.MImsSyncApp.IImsSyncAppInt;
+import com.ailk.easyframe.sdl.imssdl.MImsSyncDef.SBalance;
+import com.ailk.easyframe.sdl.imssdl.MImsSyncDef.SCaRewardInfo;
+import com.ailk.easyframe.sdl.imssdl.MImsSyncDef.SFirstAct;
+import com.ailk.easyframe.sdl.imssdl.MImsSyncDef.SFirstActiveRes;
+import com.ailk.easyframe.sdl.imsxdr.MXdr.SAssetBalance;
+import com.ailk.easyframe.sdl.imsxdr.MXdr.SBalanceInfo;
+import com.ailk.easyframe.sdl.imsxdr.MXdr.SBusinessInfo;
+import com.ailk.easyframe.sdl.imsxdr.MXdr.SBusinessInteraction;
+import com.ailk.easyframe.sdl.imsxdr.MXdr.SManagerInfo;
+import com.ailk.easyframe.sdl.imsxdr.MXdr.SRewardInfo;
+import com.ailk.easyframe.sdl.imsxdr.MXdr.SUserInfo;
+import com.ailk.easyframe.sdl.imsxdr.MXdr.SXdr;
+import com.ailk.easyframe.sdl.sdlbuffer.CBSErrorMsg;
+import com.ailk.easyframe.sdl.sdlbuffer.CsdlArrayList;
+import com.ailk.easyframe.sdl.sdlbuffer.OBBufferErrorException;
+import com.ailk.easyframe.web.common.sal.SalClient;
+import com.ailk.ims.common.DBCondition;
+import com.ailk.ims.common.IMSNotification;
+import com.ailk.ims.common.ListMapMdbRdl;
+import com.ailk.ims.common.MdbRdl;
+import com.ailk.ims.component.helper.FirstActiveHelper;
+import com.ailk.ims.component.helper.ProdCycleHelper;
+import com.ailk.ims.component.query.CacheQuery;
+import com.ailk.ims.component.query.ProductQuery;
+import com.ailk.ims.define.AlarmCodeDefine;
+import com.ailk.ims.define.ConstantDefine;
+import com.ailk.ims.define.EnumCodeDefine;
+import com.ailk.ims.define.ErrorCodeDefine;
+import com.ailk.ims.define.MdbKVDefine;
+import com.ailk.ims.exception.IMS3hNotFoundException;
+import com.ailk.ims.ims3h.User3hBean;
+import com.ailk.ims.util.AmountUtil;
+import com.ailk.ims.util.CommonUtil;
+import com.ailk.ims.util.ConvertUtil;
+import com.ailk.ims.util.DBUtil;
+import com.ailk.ims.util.DateUtil;
+import com.ailk.ims.util.IMSUtil;
+import com.ailk.ims.util.MdbUtil;
+import com.ailk.ims.util.PhoneIdHeadUtil;
+import com.ailk.ims.util.PrintUtil;
+import com.ailk.ims.util.ProjectUtil;
+import com.ailk.ims.util.SpringUtil;
+import com.ailk.ims.util.SysUtil;
+import com.ailk.ims.util.ThreadUtil;
+import com.ailk.openbilling.persistence.acct.entity.BiBusiPlan;
+import com.ailk.openbilling.persistence.acct.entity.CaAccount;
+import com.ailk.openbilling.persistence.busi.entity.RsSysCellInfo;
+import com.ailk.openbilling.persistence.cust.entity.CmCustomer;
+import com.ailk.openbilling.persistence.cust.entity.CmResLifecycle;
+import com.ailk.openbilling.persistence.cust.entity.CmResource;
+import com.ailk.openbilling.persistence.cust.entity.CoProd;
+import com.ailk.openbilling.persistence.cust.entity.CoProdBillingCycle;
+import com.ailk.openbilling.persistence.cust.entity.CoProdCharValue;
+import com.ailk.openbilling.persistence.cust.entity.CoProdPriceParam;
+import com.ailk.openbilling.persistence.cust.entity.ImsCustProdSync;
+import com.ailk.openbilling.persistence.imsintf.entity.SBalanceList;
+import com.ailk.openbilling.persistence.imsintf.entity.SBillCycle;
+import com.ailk.openbilling.persistence.imsintf.entity.SFristActiveReq;
+import com.ailk.openbilling.persistence.imsintf.entity.SProductOrder;
+import com.ailk.openbilling.persistence.imsintf.entity.SProductOrderList;
+import com.ailk.openbilling.persistence.imsintf.entity.SProductOrderOper;
+import com.ailk.openbilling.persistence.imsintf.entity.SProductOrderOperList;
+import com.ailk.openbilling.persistence.imsintf.entity.SUser;
+import com.ailk.openbilling.persistence.imsintf.entity.SUserStatus;
+import com.ailk.openbilling.persistence.pm.entity.PmFirstActiveGprsUrl;
+import com.ailk.openbilling.persistence.pm.entity.PmFirstActiveRule;
+import com.ailk.openbilling.persistence.pm.entity.PmProductOfferLifecycle;
+import com.ailk.openbilling.persistence.pm.entity.PmProductOffering;
+import com.ailk.openbilling.persistence.sys.entity.SysCyclePatternDetail;
+import com.ailk.openbilling.persistence.sys.entity.SysCyclePatternTransfer;
+import com.ailk.openbilling.persistence.sys.entity.SysGroupCyclePattern;
+import com.ailk.openbilling.topuppayment.persistence.asset.entity.PocketBalance;
+import com.ailk.openbilling.topuppayment.persistence.asset.entity.PocketOut;
+import com.ailk.openbilling.topuppayment.persistence.asset.entity.PocketSummary;
+import com.ailk.openbilling.topuppayment.persistence.asset.entity.QueryPocketBalanceInfo;
+import com.ailk.openbilling.topuppayment.persistence.asset.entity.SAssetInfo;
+import com.ailk.openbilling.topuppayment.persistence.common.entity.CommonParam;
+import com.ailk.openbilling.topuppayment.persistence.reward.entity.CaRewardInfo;
+import com.ailk.openbilling.topuppayment.persistence.reward.entity.RewardAsset;
+import com.ailk.openbilling.topuppayment.persistence.reward.entity.RewardResult;
+
+/**
+ * @Description: 首次激活相关操作
+ * @Company: Asiainfo-Linkage Technologies(China),Inc. Hangzhou
+ * @Author wukl
+ * @Date 2011-8-1
+ * @Date 2012-3-14 tangjl5 Bug #40955 原历史数据的失效时间直接设置成原数据的生效时间
+ * @Date 2012-3-30 wangjt：删除未使用的 createRewardProdcut方法
+ * @Date 2012-4-4 tangjl5 On_Site Defect #43478 取默认的measureId存入account缓存中，帐管赠送资金时使用
+ * @Date 2012-4-16 tangjl5 Bug #44162 首次激活时，若balance节点中没有传入user_id、acct_id，则从SFirstActiveRes获取user_id，对用户进行充值
+ * @Date 2012-04-17 wukl IMS开头的接口表，统一取DEFAULT_GLOBAL_SEQ
+ * @Date 2012-04-17 wangjt isEmpty()方法修改
+ * @Date 2012-5-3 tangjl5 当前状态的失效时间应该根据首次激活的时间计算
+ * @Date 2012-5-7 tangjl5 返回用户生命周期状态
+ * @Date 2012-05-09 wangdw5 删除:SCoProd.set_serviceId,SCoProd.set_payAcctId
+ * @Date 2012-0510 wangdw5 [44318]告警信息的金额转换-调用addCurrencyParam
+ * @Date 2012-5-22 tangjl5 On_Site Defect #46493 查询用户信息时添加0开头
+ * @Date 2012-05-28 wangdw5:[46173]首次激活根据company发送不同的告警
+ * @Date 2012-6-1 yugb [47111]FirstAct From CRM/SFF No need to sync to SFF
+ * @Date 2012-06-11 wangdw5 : On_Site Defect #47941 AIS版本号码头+0
+ * @Date 2012-06-14 wukl 增加生命周期状态停机位的上发
+ * @Date 2012-07-01 yangjh story:45219 增加账户账本信息返回
+ * @Date 2012-07-02 yangjh story:45219 getActiveUserInfo增加billing_type的返回
+ * @date 2012-07-07 luojb 获取告警id参考channelId #50629
+ * @date 2012-07-10 yugb 账管包升级后查询余额方式的修改 #49862
+ * @Date 2012-07-11 yangjh story:51229 DCC查询MDB改SAL查询
+ * @Date 2012-07-23 yanchuan #52498 : 删除co_prod_inv_obj表的处理逻辑
+ * @Date 2012-08-17 yangjh : 56185 首次激活DCC 上发MDB 改用sal上发 
+ * @Date 2012-08-17 wukl 废弃Map Parser的使用
+ */
+public class FirstActiveComponent extends BaseComponent
+{
+
+    public FirstActiveComponent()
+    {
+    }
+
+    /**
+     * @Description: 校验MDB查询出来的数据是否正确
+     * @param sQueryInfo
+     * @param activeDate
+     */
+    public void checkAndStoreData(SQueryInfo sQueryInfo, int activeDate)
+    {
+        // PrintUtil.print("SQueryInfo", sQueryInfo, PrintUtil.sdlRegex);
+        if (sQueryInfo == null)
+        {
+            IMSUtil.throwBusiException(ErrorCodeDefine.QUERY_DATA_FROM_MDB_ERROR);
+        }
+
+        SUserCycle sUserCycle = (SUserCycle) FirstActiveHelper.catchCurrentData(sQueryInfo.get_userCycle(), activeDate);
+        if (null == sUserCycle)
+        {
+            IMSUtil.throwBusiException(ErrorCodeDefine.QUERY_USERCYCLE_MDB_ERROR);
+        }
+
+        if (!String.valueOf(sUserCycle.get_userCycle()).endsWith(EnumCodeDefine.LIFECYCLE_STS_ACTIVE))
+        {
+            IMSUtil.throwBusiException(ErrorCodeDefine.USER_DO_NOT_ACTIVE);
+        }
+
+        SUserEx sUserEx = (SUserEx) FirstActiveHelper.catchCurrentData(sQueryInfo.get_userInfo(), activeDate);
+        if (null == sUserEx)
+        {
+            IMSUtil.throwBusiException(ErrorCodeDefine.QUERY_USERINFO_ERROR);
+        }
+
+        SAccountEx sAccountEx = (SAccountEx) FirstActiveHelper.catchCurrentData(sQueryInfo.get_acctInfo(), activeDate);
+        if (null == sAccountEx)
+        {
+            IMSUtil.throwBusiException(ErrorCodeDefine.QUERY_ACCOUNTINFO_ERROR);
+        }
+
+        SCustomer sCustomer = (SCustomer) FirstActiveHelper.catchCurrentData(sQueryInfo.get_custInfo(), activeDate);
+        if (null == sCustomer)
+        {
+            IMSUtil.throwBusiException(ErrorCodeDefine.QUERY_CUSTINFO_ERROR);
+        }
+
+        CsdlArrayList<SProdInfo> tempListProdInfo = sQueryInfo.get_prodInfo().get(sUserEx.get_servId());
+        CsdlArrayList<SProdInfo> listProdInfo = new CsdlArrayList<SProdInfo>(SProdInfo.class);
+        FirstActiveHelper.catchCurrentData(tempListProdInfo, activeDate, listProdInfo);
+        if (CommonUtil.isEmpty(listProdInfo))
+        {
+            IMSUtil.throwBusiException(ErrorCodeDefine.QUERY_PRODINFO_ERROR, sUserEx.get_servId());
+        }
+
+        CsdlArrayList<SPromBillCycle> tempListBillCycle = sQueryInfo.get_promBillCycle().get(sUserEx.get_servId());
+        CsdlArrayList<SPromBillCycle> listBillCycle = new CsdlArrayList<SPromBillCycle>(SPromBillCycle.class);
+        FirstActiveHelper.catchCurrentData(tempListBillCycle, activeDate, listBillCycle);
+        // FirstActiveHelper.catchCurrentData(tempListBillCycle,activeDate);
+        if (CommonUtil.isEmpty(listBillCycle))
+        {
+            IMSUtil.throwBusiException(ErrorCodeDefine.QUERY_BILLCYCLE_ERROR, sUserEx.get_servId());
+        }
+        // yanchuan 2012-07-05 SPromPrice已被计费删除
+        // CsdlArrayList<SPromPrice> tempListPromPrice = sQueryInfo.get_promPrice().get(sUserEx.get_servId());
+        // CsdlArrayList<SPromPrice> listPromPrice = new CsdlArrayList<SPromPrice>(SPromPrice.class);
+        // FirstActiveHelper.catchCurrentData(tempListPromPrice, activeDate, listPromPrice);
+        // if (CommonUtil.isEmpty(listPromPrice))
+        // {
+        // IMSUtil.throwBusiException(ErrorCodeDefine.QUERY_PRODUCT_PRICE_ERROR, sUserEx.get_servId());
+        // }
+
+        // 将查询到的数据放context中,供component其它地方使用(包含：PatternId)
+        this.setDataInContext(sUserEx, sCustomer, sUserCycle, sAccountEx, listProdInfo, listBillCycle);
+
+        // 将账户、客户的信息保存到线程变量中，用于reward回调查询接口使用
+        this.setDataInThread(sUserEx, sAccountEx, listProdInfo);
+
+    }
+
+    /**
+     * 将查询到的数据放context中,供component其它地方使用 wukl 2012-2-26
+     * 
+     * @param sUserEx
+     * @param sCustomer
+     * @param sUserCycle
+     * @param sAccountEx
+     * @param listProdInfo
+     * @param listBillCycle
+     * @param listPromPrice
+     */
+    private void setDataInContext(SUserEx sUserEx, SCustomer sCustomer, SUserCycle sUserCycle, SAccountEx sAccountEx,
+            CsdlArrayList<SProdInfo> listProdInfo, CsdlArrayList<SPromBillCycle> listBillCycle)
+    {
+        // 保存SDL结构
+        context.addExtendParam(ConstantDefine.ACTIVE_SDL_SUSEREX, sUserEx);
+        context.addExtendParam(ConstantDefine.ACTIVE_SDL_SCUSTOMER, sCustomer);
+        context.addExtendParam(ConstantDefine.ACTIVE_SDL_SUSERCYCLE, sUserCycle);
+        context.addExtendParam(ConstantDefine.ACTIVE_SDL_SACCOUNTEX, sAccountEx);
+        context.addExtendParam(ConstantDefine.ACTIVE_SDL_SPRODINFO_LIST, listProdInfo);
+        context.addExtendParam(ConstantDefine.ACTIVE_SDL_SPROMBILLCYCLE_LIST, listBillCycle);
+        // yanchuan 2012-07-05 SPromPrice已被计费删除
+        // context.addExtendParam(ConstantDefine.ACTIVE_SDL_SPROMPRICE_LIST, listPromPrice);
+        SProdInfo mainProdInfo = null;
+        // 设置主产品到context中
+        for (SProdInfo prodInfo : listProdInfo)
+        {
+            // 判断主产品是否变更
+            if (prodInfo.get_isMain() == EnumCodeDefine.PRODUCT_MAIN)
+            {
+                mainProdInfo = prodInfo;
+                break;
+            }
+        }
+
+        if (mainProdInfo == null)
+        {
+            IMSUtil.throwBusiException(ErrorCodeDefine.USER_HAVE_NO_MAIN_PROM);
+        }
+
+        context.addExtendParam(ConstantDefine.ACTIVE_SDL_MAIN_PROMOTION, mainProdInfo);
+
+        // 保存java结构
+        CmResource cmResource = FirstActiveHelper.getCmResourceBySUserEx(sUserEx);
+        CmCustomer cmCustomer = FirstActiveHelper.getCmCustomerBySCustomer(sCustomer);
+        CaAccount caAccount = FirstActiveHelper.getCaAccountBySAccountEx(sAccountEx);
+        CoProd coProd = FirstActiveHelper.getCoProdBySProdInfo(mainProdInfo, sUserEx);
+        context.addExtendParam(ConstantDefine.ACTIVE_JAVA_CMRESOURCE, cmResource);
+        context.addExtendParam(ConstantDefine.ACTIVE_JAVA_CMCUSTOMER, cmCustomer);
+        context.addExtendParam(ConstantDefine.ACTIVE_JAVA_CAACCOUNT, caAccount);
+        context.addExtendParam(ConstantDefine.ACTIVE_JAVA_MAIN_PROMOTION, coProd);
+
+        // 保存用户所属的patternId
+        Integer patternId = getPatternId(cmResource, cmCustomer, caAccount, coProd);
+        context.addExtendParam(ConstantDefine.ACTIVE_PATTERN_ID, patternId);
+    }
+
+    /**
+     * 获取用户对应的patternId wukl 2012-2-26
+     * 
+     * @param cmResource
+     * @param cmCustomer
+     * @param caAccount
+     * @param coProd
+     */
+    private Integer getPatternId(CmResource cmResource, CmCustomer cmCustomer, CaAccount caAccount, CoProd coProd)
+    {
+        SysGroupCyclePattern groupCyclePatten = context.getComponent(LifeCycleComponent.class).queryCaGroupCyclePattern(
+                cmResource, cmCustomer, caAccount, coProd.getProductOfferingId().longValue());
+
+        return groupCyclePatten.getPatternId();
+    }
+
+    /**
+     * 将账户、客户的信息保存到线程变量中，用于reward回调查询接口使用 wukl 2012-2-26
+     * 
+     * @param sUserEx
+     * @param sAcct
+     * @param listProdInfo
+     */
+    private void setDataInThread(SUserEx sUserEx, SAccountEx sAcct, CsdlArrayList<SProdInfo> listProdInfo)
+    {
+        Map dataMap = new HashMap();
+        CaAccount account = new CaAccount();
+        account.setAccountType(sAcct.get_accountType());
+        account.setAcctId(sAcct.get_acctId());
+
+        // @Date 2012-4-4 tangjl5 On_Site Defect #43478 取默认的measureId存入account缓存中，帐管赠送资金时使用@Date 2012-4-4 tangjl5 On_Site Defect
+        // #43478 取默认的measureId存入account缓存中，帐管赠送资金时使用
+        account.setMeasureId(AmountUtil.getDefaultDbMeasureId());
+
+        account.setRegionCode(sAcct.get_regionCode());
+        dataMap.put(ConstantDefine.ACTIVE_SDL_SACCOUNTEX, account);
+
+        SUser user = new SUser();
+        SProdInfo prodInfo = FirstActiveHelper.getMainSProdInfoInContext(context);
+        user.setUser_id(sUserEx.get_servId());
+        user.setPayment_mode((short) sUserEx.get_billType());
+        user.setMain_promotion(prodInfo.get_promOfferId());
+        dataMap.put(ConstantDefine.ACTIVE_SDL_SUSEREX, user);
+
+        SProductOrder prodcutOrder = new SProductOrder();
+        prodcutOrder.setProduct_id(prodInfo.get_promNo());
+        prodcutOrder.setOffer_id((long) prodInfo.get_promOfferId());
+        prodcutOrder.setValid_date(DateUtil.formatDate(DateUtil.UTCToDate(prodInfo.get_validDate()),
+                DateUtil.DATE_FORMAT_YYYYMMDDHHMMSS));
+        prodcutOrder.setExpire_date(DateUtil.formatDate(DateUtil.UTCToDate(prodInfo.get_expireDate()),
+                DateUtil.DATE_FORMAT_YYYYMMDDHHMMSS));
+        dataMap.put(ConstantDefine.ACTIVE_SDL_SPRODINFO_LIST, prodcutOrder);
+
+        IMSUtil.setRequestContextParam(ConstantDefine.THREAD_QUERY_IMS3HBEAN, dataMap);
+    }
+
+    /*
+     * private <E extends CsdlStructObject> void setData2Context(CsdlArrayList<E> obj) { if (CommonUtil.isEmpty(obj)) return;
+     * String key = null; if (obj.get(0).getClass().equals(SProdInfo.class)) { key = ConstantDefine.ACTIVE_SDL_SPRODINFO_LIST; }
+     * else if (obj.get(0).getClass().equals(SPromBillCycle.class)) { key = ConstantDefine.ACTIVE_SDL_SPROMBILLCYCLE_LIST; } else
+     * if (obj.get(0).getClass().equals(SPromPrice.class)) { key = ConstantDefine.ACTIVE_SDL_SPROMPRICE_LIST; }
+     * context.addExtendParam(key, obj); }
+     */
+
+    /*
+     * private <E extends CsdlStructObject> void setData2Context(E obj) { if (obj == null) return; String key = null; if
+     * (obj.getClass().equals(SUserEx.class)) { key = ConstantDefine.ACTIVE_SDL_SUSEREX; } else if
+     * (obj.getClass().equals(SCustomer.class)) { key = ConstantDefine.ACTIVE_SDL_SCUSTOMER; } else if
+     * (obj.getClass().equals(SUserCycle.class)) { key = ConstantDefine.ACTIVE_SDL_SUSERCYCLE; } else if
+     * (obj.getClass().equals(SAccountEx.class)) { key = ConstantDefine.ACTIVE_SDL_SACCOUNTEX; } context.addExtendParam(key, obj);
+     * }
+     */
+
+    /*
+     * public <E extends CsdlStructObject> E getData2Context(Class<E> clazz) { String key = null; if (clazz.equals(SUserEx.class))
+     * { key = ConstantDefine.ACTIVE_SDL_SUSEREX; } else if (clazz.equals(SCustomer.class)) { key =
+     * ConstantDefine.ACTIVE_SDL_SCUSTOMER; } else if (clazz.equals(SUserCycle.class)) { key =
+     * ConstantDefine.ACTIVE_SDL_SUSERCYCLE; } else if (clazz.equals(SAccountEx.class)) { key =
+     * ConstantDefine.ACTIVE_SDL_SACCOUNTEX; } if (key == null) IMSUtil.throwBusiException(ErrorCodeDefine.NOT_DATA_IN_CONTEXT,
+     * clazz.toString().substring(clazz.toString().lastIndexOf(".") + 1)); return (E) context.getExtendParam(key); } private <E
+     * extends CsdlStructObject> CsdlArrayList<E> getDataList2Context(Class<E> clazz) { String key = null; if
+     * (clazz.equals(SProdInfo.class)) { key = ConstantDefine.ACTIVE_SDL_SPRODINFO_LIST; } else if
+     * (clazz.equals(SPromBillCycle.class)) { key = ConstantDefine.ACTIVE_SDL_SPROMBILLCYCLE_LIST; } else if
+     * (clazz.equals(SPromPrice.class)) { key = ConstantDefine.ACTIVE_SDL_SPROMPRICE_LIST; } if (key == null)
+     * IMSUtil.throwBusiException(ErrorCodeDefine.NOT_DATA_IN_CONTEXT,
+     * clazz.toString().substring(clazz.toString().lastIndexOf(".") + 1)); return (CsdlArrayList<E>) context.getExtendParam(key);
+     * }
+     */
+
+    /**
+     * @Description: 获取修改用户状态的数据对象
+     * @param sFirstAct
+     * @param sQueryInfo
+     * @return 2011-10-18 修改CRM流程进行充值操作，导致激活上发失败的问题
+     */
+    public CsdlArrayList<SImUserCycle> getListSImUserCycle(SFirstAct sFirstAct, SImUserCycle alarmCycle)
+    {
+        CsdlArrayList<SImUserCycle> userCycleList = new CsdlArrayList<SImUserCycle>(SImUserCycle.class);
+
+        int activeDate = (int) sFirstAct.get_activationTime();
+        SImUserCycle oldSImUserCycle = transUserCycle();
+
+        SImUserCycle newSImUserCycle = new SImUserCycle();
+        newSImUserCycle.copy(oldSImUserCycle);
+        oldSImUserCycle.set_expireDate(activeDate);
+
+        // 2011-11-11 用户生命周期的状态枚举变更，mdb中存的是8位数字，修改idle状态的判断(idle以00结尾的)
+        if (String.valueOf(oldSImUserCycle.get_userCycle()).endsWith(EnumCodeDefine.LIFECYCLE_STS_ACTIVE))
+        {
+            // 2011-01-12 激活时状态修改为idle值+1（用户idle状态在mdb中的值有：10020000/10000000）
+            Integer patternId = FirstActiveHelper.getPatternIdInContext(context);
+            newSImUserCycle.set_userCycle(oldSImUserCycle.get_userCycle() + 1);
+            newSImUserCycle.set_validDate(activeDate);
+            newSImUserCycle.set_syncFlag(context.getSyncFlag());
+            newSImUserCycle.set_expireDate(IMSUtil.getMdbDate(getActiveExpireDate(EnumCodeDefine.LIFECYCLE_ACTIVE,
+                    oldSImUserCycle.get_expireDate(), patternId)));
+
+            Integer userDbSts = CommonUtil.string2Integer("10" + String.valueOf(newSImUserCycle.get_userCycle()).substring(6));
+            CmResLifecycle lifecycle = new CmResLifecycle();
+            lifecycle.setSts(userDbSts);
+            lifecycle.setOsSts(CommonUtil.string2Integer(String.valueOf(newSImUserCycle.get_userCycle()).substring(0, 2)));
+            lifecycle.setExpireDate(DateUtil.UTCToDate(newSImUserCycle.get_expireDate()));
+            lifecycle.setValidDate(DateUtil.UTCToDate(newSImUserCycle.get_validDate()));
+
+            // 计算用户的后续状态及生失效时间
+            SysCyclePatternTransfer transfer = context.getComponent(LifeCycleComponent.class).getLifeCycleStsToByEvent(patternId,
+                    EnumCodeDefine.LIFECYCLE_EVENT_STATE_EXPIRE, lifecycle);
+            if (null == transfer)
+            {
+                // 状态转换非法，抛出异常
+                throw IMSUtil.throwBusiException(ErrorCodeDefine.LIFE_CYCYLE_TRANSFER_ILLEGAL, lifecycle.getResourceId(),
+                        lifecycle.getSts(), lifecycle.getOsSts(), EnumCodeDefine.LIFECYCLE_EVENT_STATE_EXPIRE, patternId);
+            }
+
+            // 当前状态的下一个状态的失效时间与用户的失效时间一致
+            String nowUserSts = String.valueOf(newSImUserCycle.get_userCycle());
+            String nextSts = nowUserSts.toString().substring(0, 6) + String.valueOf(transfer.getStsTo()).substring(2);
+            newSImUserCycle.set_nextCycle(CommonUtil.string2Integer(nextSts));
+            newSImUserCycle.set_nextExpireDate(FirstActiveHelper.getSUserExInContext(context).get_expireDate());
+        }
+        else
+        {
+            IMSUtil.throwBusiException(ErrorCodeDefine.USER_DO_NOT_ACTIVE);
+        }
+        userCycleList.add(oldSImUserCycle);
+        userCycleList.add(newSImUserCycle);
+
+        alarmCycle.copy(newSImUserCycle);
+
+        return userCycleList;
+    }
+
+    /**
+     * @Description: 获取active状态的失效时间
+     * @param cycleStatus
+     * @param sFirstAct
+     * @param sQueryInfo
+     * @param oldExpireDate
+     * @author wukl 2011-11-26
+     * @param patternId
+     * @return
+     */
+    public Date getActiveExpireDate(int cycleStatus, int oldExpireDate, Integer patternId)
+    {
+        SysCyclePatternDetail detail = context.getComponent(LifeCycleComponent.class).querySysCyclePatternDetailByStsID2Cache(
+                CommonUtil.int2Short(cycleStatus), patternId);
+
+        Calendar newExpireDate = context.getComponent(LifeCycleComponent.class).calculateExpireDateByExtendDays(
+                DateUtil.UTCToDate(oldExpireDate), detail.getValidDays());
+
+        return newExpireDate.getTime();
+    }
+
+    /**
+     * @Description: 将查询的SUserCycle对象转成SImUserCycle对象
+     * @param sQeuryInfo
+     * @param activeDate
+     * @return
+     */
+    private SImUserCycle transUserCycle()
+    {
+        // 获取当前生效的数据
+        SUserCycle sUserCycle = FirstActiveHelper.getSUserCycleInContext(context);
+        SImUserCycle sImUserCycle = new SImUserCycle();
+        sImUserCycle.set_servId(sUserCycle.get_servId());
+        sImUserCycle.set_userCycle(sUserCycle.get_userCycle());
+        sImUserCycle.set_validDate(sUserCycle.get_validDate());
+        sImUserCycle.set_expireDate(sUserCycle.get_expireDate());
+        sImUserCycle.set_syncFlag(context.getSyncFlag());
+        // @Date 2012-06-14 wukl 增加生命周期状态停机位的上发
+        sImUserCycle.set_stsDtl(sUserCycle.get_stsDtl());
+        return sImUserCycle;
+    }
+    
+
+    /**
+     * 将SUser转换成SUser
+     * @Date 2012-08-13 yangjh : 首次激活DCC 重新上发MDB操作
+     * @return 
+     */
+    private SUserCycle transMdbSUserCycle(SImUserCycle simUserCycle){
+        SUserCycle userCycle = new SUserCycle();
+        if(simUserCycle == null)
+            return userCycle;
+        userCycle.set_servId(simUserCycle.get_servId());
+        userCycle.set_userCycle(simUserCycle.get_userCycle());
+        userCycle.set_validDate(simUserCycle.get_validDate());
+        userCycle.set_expireDate(simUserCycle.get_expireDate());
+        userCycle.set_stsDtl(simUserCycle.get_stsDtl());
+        userCycle.set_syncFlag(simUserCycle.get_syncFlag());
+        userCycle.set_nextCycle(simUserCycle.get_nextCycle());
+        userCycle.set_nextExpireDate(simUserCycle.get_nextExpireDate());
+        // 设置默认值
+        MdbUtil.setNull2Default(userCycle);
+        return userCycle;
+    }
+
+    /**
+     * 将查询的SUserEx对象转成SImUser对象 wukl 2011-12-20
+     * 
+     * @return
+     */
+    private SImUser transUser()
+    {
+        SUserEx sUserEx = FirstActiveHelper.getSUserExInContext(context);
+        SImUser user = new SImUser();
+        user.set_servId(sUserEx.get_servId());
+        user.set_userSegment(sUserEx.get_userSegment());
+        user.set_billType(sUserEx.get_billType());
+        user.set_brand(sUserEx.get_brand());
+        user.set_countyCode(sUserEx.get_countyCode());
+        user.set_createDate(sUserEx.get_createDate());
+        user.set_firstUseTime(sUserEx.get_firstUseTime());
+        user.set_langListening(sUserEx.get_langListening());
+        user.set_langReading(sUserEx.get_langReading());
+        user.set_langWriting(sUserEx.get_langWriting());
+        user.set_continueFlag(sUserEx.get_continueFlag());
+        user.set_flhFlag(sUserEx.get_flhFlag());
+        user.set_regionCode(sUserEx.get_regionCode());
+        user.set_validDate(sUserEx.get_validDate());
+        user.set_expireDate(sUserEx.get_expireDate());
+        user.set_syncFlag(context.getSyncFlag());
+        return user;
+    }
+    
+    /**
+     * 将SImUser转换成SUser
+     * @Date 2012-08-13 yangjh : 首次激活DCC 重新上发MDB操作
+     * @return 
+     */
+    private com.ailk.easyframe.sdl.MMdbSyncUpDef.SUser transMdbSUser(SImUser simUser){
+        com.ailk.easyframe.sdl.MMdbSyncUpDef.SUser sUser = new com.ailk.easyframe.sdl.MMdbSyncUpDef.SUser();
+        if(simUser == null)
+            return sUser;
+        sUser.set_billType(simUser.get_billType());
+        sUser.set_brand(simUser.get_brand());
+        sUser.set_continueFlag(simUser.get_continueFlag());
+        sUser.set_flhFlag(simUser.get_flhFlag());
+        sUser.set_countyCode(simUser.get_countyCode());
+        sUser.set_createDate(simUser.get_createDate());
+        sUser.set_firstUseTime(simUser.get_firstUseTime());
+        sUser.set_langListening(simUser.get_langListening());
+        sUser.set_langReading(simUser.get_langReading());
+        sUser.set_langWriting(simUser.get_langWriting());
+        sUser.set_regionCode(simUser.get_regionCode());
+        sUser.set_validDate(simUser.get_validDate());
+        sUser.set_expireDate(simUser.get_expireDate());
+        sUser.set_servId(simUser.get_servId());
+        sUser.set_syncFlag(simUser.get_syncFlag());
+        sUser.set_userSegment(simUser.get_userSegment());
+        MdbUtil.setNull2Default(sUser);
+        return sUser;
+    }
+
+    /**
+     * @param sQueryInfo
+     * @Description: 获取修改用户信息的数据对象
+     * @param sFirstAct
+     * @param oldSImUser
+     * @return
+     */
+    public CsdlArrayList<SImUser> getListSimUser(SFirstAct sFirstAct)
+    {
+        // 获取当前生效的数据
+        SImUser oldSImUser = this.transUser();
+        CsdlArrayList<SImUser> userList = new CsdlArrayList<SImUser>(SImUser.class);
+        SImUser newSImUser = new SImUser();
+        newSImUser.copy(oldSImUser);
+        oldSImUser.set_expireDate((int) sFirstAct.get_activationTime());
+
+        if (CommonUtil.isValid(sFirstAct.get_ivrLang()))
+        {
+            newSImUser.set_langListening(sFirstAct.get_ivrLang());
+        }
+        if (CommonUtil.isValid(sFirstAct.get_smsLang()))
+        {
+            newSImUser.set_langReading(sFirstAct.get_smsLang());
+        }
+        if (CommonUtil.isValid(sFirstAct.get_ussdLang()))
+        {
+            newSImUser.set_langWriting(sFirstAct.get_ussdLang());
+        }
+        // 设置为用户激活时间
+        newSImUser.set_firstUseTime((int) sFirstAct.get_activationTime());
+        newSImUser.set_validDate((int) sFirstAct.get_activationTime());
+        MdbUtil.setNull2Default(oldSImUser);
+        MdbUtil.setNull2Default(newSImUser);
+        userList.add(oldSImUser);
+        userList.add(newSImUser);
+
+        return userList;
+    }
+
+    /**
+     * @Description: 查询主产品、reward配置
+     */
+    public Integer getPricePlandId4DCC(String location, Long activeTime)
+    {
+        CmResource userInfo = FirstActiveHelper.getCmResourceInContext(context);
+        CmCustomer custInfo = FirstActiveHelper.getCmCustomerInContext(context);
+        CaAccount acctInfo = FirstActiveHelper.getCaAccountInContext(context);
+        CoProd mainProdInfo = FirstActiveHelper.getMainCoProdInContext(context);
+
+        Integer pricePlanId = null;
+        BiBusiPlan plan = context.getComponent(RuleComponent.class).getPricePlandId(userInfo, custInfo, acctInfo, mainProdInfo,
+                location, DateUtil.UTCToDate(activeTime), null);
+        if (plan != null)
+            pricePlanId = plan.getPricingPlanId();
+        return pricePlanId;
+    }
+
+    /**
+     * @Description: 获取上发MDB的SCoProd对象
+     */
+    public SCoProd getSCoProd(SFirstAct sFirstAct, SProdInfo prodInfo, SUserEx sUserEx)
+    {
+        SCoProd sCoProd = new SCoProd();
+        sCoProd.set_productId(prodInfo.get_promNo());
+        sCoProd.set_prodTypeId((short) prodInfo.get_promClass());// 0 原子产品 1 打包产品
+        sCoProd.set_billMode(sUserEx.get_billType());// billType 从SImUser中获取
+        sCoProd.set_productOfferingId((int) prodInfo.get_promOfferId());
+        sCoProd.set_busiFlag((short) prodInfo.get_promType());
+        sCoProd.set_objectId(sUserEx.get_servId());
+        sCoProd.set_pricePlanId(prodInfo.get_pricePlanId());
+        sCoProd.set_objectType((short) EnumCodeDefine.PROD_OBJECTTYPE_DEV);
+        sCoProd.set_promCycle(EnumCodeDefine.PROD_LIFECYCLE_ACTIVE);// 1-Active
+        sCoProd.set_validDate(prodInfo.get_validDate());
+        sCoProd.set_expireDate(prodInfo.get_expireDate());
+        sCoProd.set_lifecycleStatusId((short) 1);
+        sCoProd.set_isMain(prodInfo.get_isMain());
+        sCoProd.set_syncFlag(context.getSyncFlag());
+
+        return sCoProd;
+    }
+    
+    /**
+     * @Description: 获取上发MDB的SUserProm对象
+     */
+    public SUserProm getSUserProm(SCoProd sprod)
+    {
+       SUserProm sUserProm = new SUserProm();
+       if(sprod == null)
+           return sUserProm;
+       sUserProm.set_promNo(sprod.get_productId());
+       sUserProm.set_promClass(sprod.get_promCycle());
+       sUserProm.set_billMode(sprod.get_billMode());
+       sUserProm.set_servId(sprod.get_objectId());
+       sUserProm.set_promCycle(sprod.get_promCycle());
+       sUserProm.set_promOfferId(sprod.get_productOfferingId());
+       sUserProm.set_expireDate(sprod.get_expireDate());
+       sUserProm.set_validDate(sprod.get_validDate());
+       sUserProm.set_syncFlag(sprod.get_syncFlag());
+       sUserProm.set_promType(sprod.get_busiFlag());
+       sUserProm.set_promExpireDate(sprod.get_expireDate());
+       sUserProm.set_promValidDate(sprod.get_validDate());
+       sUserProm.set_isMain(sprod.get_isMain());
+       sUserProm.set_pricePlanId(sprod.get_pricePlanId());
+       MdbUtil.setNull2Default(sUserProm);
+       return sUserProm;
+    }
+
+    /**
+     * @Description: 获取上发MDB的 SProdBillCycle对象
+     * @param sFirstAct
+     * @param prodInfo
+     * @param sUser
+     * @param sQeuryInfo
+     * @return
+     */
+    public CsdlArrayList<SProdBillCycle> getBillCycle(SFirstAct sFirstAct, SProdInfo prodInfo, SUserEx sUserEx)
+    {
+        CsdlArrayList<SPromBillCycle> listSPromBillCycle = FirstActiveHelper.getSPromBillCycleListInContext(context);
+        if (CommonUtil.isEmpty(listSPromBillCycle))
+        {
+            return null;
+        }
+
+        CsdlArrayList<SPromBillCycle> tempBillCycleList = new CsdlArrayList<SPromBillCycle>(SPromBillCycle.class);
+        for (SPromBillCycle billCycle : listSPromBillCycle)
+        {
+            if (billCycle.get_promNo() == prodInfo.get_promNo())
+            {
+                tempBillCycleList.add((SPromBillCycle) FirstActiveHelper.catchCurrentData(billCycle,
+                        (int) sFirstAct.get_activationTime()));
+            }
+        }
+        // ljc
+        PmProductOfferLifecycle offerLifeCycle = context.getComponent(CacheQuery.class).queryProdOfferLifeCycle(
+                prodInfo.get_promOfferId());
+        CsdlArrayList<SProdBillCycle> listBillCycle = new CsdlArrayList<SProdBillCycle>(SProdBillCycle.class);
+        for (SPromBillCycle sPromBillCycle : tempBillCycleList)
+        {
+            SProdBillCycle billCycle = new SProdBillCycle();
+            // 如果mdb中没有返回生效的SPromBillCycle，则重新构造SProdBillCycle
+            if (null == sPromBillCycle)
+            {
+                billCycle.set_productId(prodInfo.get_promNo());
+                billCycle.set_objectId(sUserEx.get_servId());
+                billCycle.set_objectType((short) EnumCodeDefine.PROD_OBJECTTYPE_DEV);
+                // billCycle.set_deductMode(sUserEx.get_billType());// billType 从SImUser中获取
+                // TODO 2012-05-31 解决打包异常
+                billCycle.set_expireDate(prodInfo.get_expireDate());
+                billCycle.set_validDate(prodInfo.get_validDate());
+                // sync_cycle_flag标志
+                if (offerLifeCycle != null && offerLifeCycle.getCycleSyncFlag() != null)
+                {
+                    billCycle.set_cycleFlag(offerLifeCycle.getCycleSyncFlag());
+                }
+                else
+                {
+                    billCycle.set_cycleFlag(0);
+                }
+            }
+            else
+            {
+                billCycle.set_productId(sPromBillCycle.get_promNo());
+                billCycle.set_objectId(sPromBillCycle.get_objectId());
+                billCycle.set_objectType((short) sPromBillCycle.get_objectType());
+                // billCycle.set_deductMode(sPromBillCycle.get_deductMode());
+                // TODO 2012-05-31 解决打包异常
+                billCycle.set_expireDate(sPromBillCycle.get_expireDate());
+                billCycle.set_firstBillDate(sPromBillCycle.get_firstBillDate());
+                billCycle.set_validDate(sPromBillCycle.get_validDate());
+                billCycle.set_cycleType((short) sPromBillCycle.get_cycleType());
+                billCycle.set_cycleUnit((short) sPromBillCycle.get_cycleUnit());
+                // sync_cycle_flag标志
+                if (offerLifeCycle != null && offerLifeCycle.getCycleSyncFlag() != null)
+                {
+                    billCycle.set_cycleFlag(offerLifeCycle.getCycleSyncFlag());
+                }
+                else
+                {
+                    billCycle.set_cycleFlag(0);
+                }
+            }
+            billCycle.set_syncFlag(context.getSyncFlag());
+            listBillCycle.add(billCycle);
+        }
+
+        return listBillCycle;
+    }
+
+    /**
+     * @Description: SProdBillCycle转换成SProdBillCycle
+     * @return
+     */
+    private SPromBillCycle getSPromBillCycle(SProdBillCycle prodBillCycle){
+        SPromBillCycle mdbBillCycle = new SPromBillCycle();
+        if(prodBillCycle == null)
+            return mdbBillCycle;
+        mdbBillCycle.set_promNo(prodBillCycle.get_productId());
+        mdbBillCycle.set_objectId(prodBillCycle.get_objectId());
+        mdbBillCycle.set_objectType(prodBillCycle.get_objectType());
+        mdbBillCycle.set_cycleFlag(prodBillCycle.get_cycleFlag());
+        mdbBillCycle.set_cycleUnit(prodBillCycle.get_cycleUnit());
+        mdbBillCycle.set_cycleType(prodBillCycle.get_cycleType());
+        mdbBillCycle.set_expireDate(prodBillCycle.get_expireDate());
+        mdbBillCycle.set_validDate(prodBillCycle.get_validDate());
+        mdbBillCycle.set_firstBillDate(prodBillCycle.get_firstBillDate());
+        mdbBillCycle.set_syncFlag(prodBillCycle.get_syncFlag());
+        MdbUtil.setNull2Default(mdbBillCycle);
+        return mdbBillCycle;
+    }
+    
+    /**
+     * @Description: 根据查询结果构造 SProdCharValue 对象
+     * @param sFirstAct
+     * @param prodInfo
+     * @param queryInfo
+     * @param sUser
+     * @param sQeuryInfo
+     * @return
+     */
+    public CsdlArrayList<SProdCharValue> getSProdCharValue(SFirstAct sFirstAct, SProdInfo prodInfo, SUserEx sUserEx,
+            SQueryInfo queryInfo)
+    {
+        CsdlArrayList<SPromCharValue> listSPromCharValue = queryInfo.get_promCharValue().get(prodInfo.get_promNo());
+        if (CommonUtil.isEmpty(listSPromCharValue))
+        {
+            return null;
+        }
+
+        CsdlArrayList<SProdCharValue> charValueList = new CsdlArrayList<SProdCharValue>(SProdCharValue.class);
+        SProdCharValue charValue = null;
+        for (SPromCharValue sValue : listSPromCharValue)
+        {
+            SPromCharValue tempValue = (SPromCharValue) FirstActiveHelper.catchCurrentData(sValue,
+                    (int) sFirstAct.get_activationTime());
+            if (tempValue == null)
+                continue;
+
+            charValue = new SProdCharValue();
+            charValue.set_expireDate(sValue.get_expireDate());
+//            charValue.set_syncFlag(sValue.get_syncFlag());
+            charValue.set_productId(sValue.get_promNo());
+            charValue.set_specCharId(sValue.get_specCharId());
+            charValue.set_validDate(sValue.get_validDate());
+            charValue.set_value(sValue.get_value());
+            charValue.set_groupId(0);
+            charValue.set_objectId(sUserEx.get_servId());
+            charValue.set_objectType((short) EnumCodeDefine.PROD_OBJECTTYPE_DEV);
+            charValue.set_syncFlag(context.getSyncFlag());
+            charValueList.add(charValue);
+        }
+        return charValueList;
+    }
+
+    /**
+     * @Description: SProdCharValue转换成SPromCharValue
+     * @return
+     */
+    private SPromCharValue getSPromCharValue(SProdCharValue prodCharValue){
+        SPromCharValue mdbCharValue = new SPromCharValue();
+        if(prodCharValue == null)
+            return mdbCharValue;
+        mdbCharValue.set_promNo(prodCharValue.get_productId());
+        mdbCharValue.set_expireDate(prodCharValue.get_expireDate());
+        mdbCharValue.set_specCharId(prodCharValue.get_specCharId());
+        mdbCharValue.set_syncFlag(prodCharValue.get_syncFlag());
+        mdbCharValue.set_groupId(prodCharValue.get_groupId());
+        mdbCharValue.set_validDate(prodCharValue.get_validDate());
+        mdbCharValue.set_value(prodCharValue.get_value());
+        mdbCharValue.set_objectId(prodCharValue.get_objectId());
+        mdbCharValue.set_objectType(prodCharValue.get_objectType());
+        MdbUtil.setNull2Default(mdbCharValue);
+        return mdbCharValue;
+    }
+    
+    /**
+     * @param queryInfo
+     * @param sUserEx
+     * @param prodInfo
+     * @param sFirstAct
+     * @Description: 根据查询结果 构造 SProdPriceParam 对象
+     * @param sFirstAct
+     * @param prodInfo
+     * @param sUser
+     * @param sQeuryInfo
+     * @param sCoProd
+     * @return
+     */
+    public CsdlArrayList<SProdPriceParam> getSProdPriceParam(SFirstAct sFirstAct, SProdInfo prodInfo, SUserEx sUserEx,
+            SQueryInfo queryInfo)
+    {
+        CsdlArrayList<SPromPriceParam> listSPromPriceParam = queryInfo.get_promPriceParam().get(prodInfo.get_promNo());
+        if (CommonUtil.isEmpty(listSPromPriceParam))
+        {
+            return null;
+        }
+
+        CsdlArrayList<SProdPriceParam> priceParamList = new CsdlArrayList<SProdPriceParam>(SProdPriceParam.class);
+        SProdPriceParam priceParam = null;
+        for (SPromPriceParam param : listSPromPriceParam)
+        {
+            SPromPriceParam tempParam = (SPromPriceParam) FirstActiveHelper.catchCurrentData(param,
+                    (int) sFirstAct.get_activationTime());
+            if (tempParam == null)
+                continue;
+
+            priceParam = new SProdPriceParam();
+            priceParam.set_expireDate(param.get_expireDate());
+//            priceParam.set_syncFlag(param.get_syncFlag());
+            priceParam.set_syncFlag(context.getSyncFlag());
+            priceParam.set_paramId((int) param.get_paramKeyId());
+            priceParam.set_paramValue(param.get_paramValue());
+            // yanchuan 2012-07-05 SPromPrice已被计费删除 ,SProdPriceParamList中删除price_plan_id
+            // priceParam.set_pricePlanId(param.get_pricePlanId());
+            // priceParam.set_pricePlanId(prodInfo.get_pricePlanId());
+            priceParam.set_productId(param.get_promNo());
+            priceParam.set_validDate(param.get_validDate());
+            priceParamList.add(priceParam);
+        }
+        return priceParamList;
+    }
+
+    /**
+     * @Description: SProdPriceParam转换成SPromPriceParam
+     * @return
+     */
+    private SPromPriceParam getSPromPriceParam(SProdPriceParam prodPriceParam,Long object_id, int object_type){
+        SPromPriceParam mdbPriceParam = new SPromPriceParam();
+        if(prodPriceParam == null)
+            return mdbPriceParam;
+        mdbPriceParam.set_promNo(prodPriceParam.get_productId());
+        mdbPriceParam.set_expireDate(prodPriceParam.get_expireDate());
+        mdbPriceParam.set_validDate(prodPriceParam.get_validDate());
+        mdbPriceParam.set_paramKeyId(prodPriceParam.get_paramId());
+        mdbPriceParam.set_paramValue(prodPriceParam.get_paramValue());
+        mdbPriceParam.set_objectId(object_id);
+        mdbPriceParam.set_objectType(object_type);
+        mdbPriceParam.set_syncFlag(prodPriceParam.get_syncFlag());
+        MdbUtil.setNull2Default(mdbPriceParam);
+        return mdbPriceParam;
+    }
+    
+    private void changeMainProd(com.ailk.easyframe.sdl.imssdl.MImsSyncDef.SProdInfo delProd,
+            com.ailk.easyframe.sdl.imssdl.MImsSyncDef.SProdInfo inserProd, SFirstActiveRes firstActiveRes)
+    {
+        // 构造新增主产品结构
+        SProductOrderList insertOrderList = new SProductOrderList();
+        SProductOrder insertOrder = new SProductOrder();
+        // 新增需要的参数
+        insertOrder.setUser_id(firstActiveRes.get_userId());
+        insertOrder.setPhone_id(firstActiveRes.get_phoneId());
+        insertOrder.setOffer_id((long) inserProd.get_productOfferingId());
+        insertOrder.setValid_date(DateUtil.UTCToString(inserProd.get_validDate()));
+        insertOrder.setValid_type((short) EnumCodeDefine.PROD_VALID_SPECIFIC_DATE);
+        insertOrder.setProduct_id(inserProd.get_productId());
+        SProductOrder[] insertOrderArr = new SProductOrder[1];
+        insertOrderArr[0] = insertOrder;
+        insertOrderList.setItem(insertOrderArr);
+        SProductOrderOper insertOper = new SProductOrderOper();
+        insertOper.setOper_type(EnumCodeDefine.CHANGE_PROD_ADD);
+        insertOper.setProd_list(insertOrderList);
+
+        // 构造删除主产品结构
+        context.addExtendParam(ConstantDefine.ACTIVE_DATE, DateUtil.UTCToDate(delProd.get_expireDate()));
+        SProductOrderList delOrderList = new SProductOrderList();
+        SProductOrder delOrder = new SProductOrder();
+        // 删除需要的参数
+        delOrder.setProduct_id(delProd.get_productId());
+
+        SProductOrder[] delOrderArr = new SProductOrder[1];
+        delOrderArr[0] = delOrder;
+        delOrderList.setItem(delOrderArr);
+        SProductOrderOper delOper = new SProductOrderOper();
+        delOper.setOper_type(EnumCodeDefine.CHANGE_PROD_DELETE);
+        delOper.setProd_list(delOrderList);
+
+        SProductOrderOper[] operArr = new SProductOrderOper[2];
+        operArr[0] = delOper;
+        operArr[1] = insertOper;
+        SProductOrderOperList operList = new SProductOrderOperList();
+        operList.setSProductOrderOperList_Item(operArr);
+        context.getComponent(ProductComponent.class).operateProduct(operList);
+    }
+
+    /**
+     * @Description: 修改产品
+     * @param prod
+     * @param firstActiveRes
+     * @Date 2012-3-14 tangjl5 Bug #40955 原历史数据的失效时间直接设置成原数据的生效时间
+     */
+    public void modProd(com.ailk.easyframe.sdl.imssdl.MImsSyncDef.SProdInfo prod, SFirstActiveRes firstActiveRes)
+    {
+        Date expireDate = DateUtil.UTCToDate(prod.get_expireDate());// 每一个产品的失效时间有可能不一样
+        Date oldDataExpireDate = DateUtil.UTCToDate(prod.get_validDate());
+        Date newDataValidDate = DateUtil.UTCToDate(firstActiveRes.get_activationTime());
+        Long soNbr = firstActiveRes.get_soNbr();
+        Long prodId = prod.get_productId();
+
+        CoProd coProd = new CoProd();
+        coProd.setExpireDate(expireDate);
+        coProd.setSoNbr(soNbr);
+        updateByCondition(coProd, oldDataExpireDate, newDataValidDate, new DBCondition(CoProd.Field.productId, prodId),
+                new DBCondition(CoProd.Field.objectId, firstActiveRes.get_userId()));
+        // Date 2012-07-23 yanchuan #52498 : 删除co_prod_inv_obj表的处理逻辑
+        // CoProdInvObj invObj = new CoProdInvObj();
+        // invObj.setExpireDate(expireDate);
+        // invObj.setSoNbr(soNbr);
+        // updateByCondition(invObj, oldDataExpireDate, newDataValidDate, new DBCondition(CoProdInvObj.Field.productId, prodId),
+        // new DBCondition(CoProdInvObj.Field.objectId, firstActiveRes.get_userId()));
+
+        CoProdCharValue charValue = new CoProdCharValue();
+        charValue.setExpireDate(expireDate);
+        charValue.setSoNbr(soNbr);
+        updateByCondition(charValue, oldDataExpireDate, newDataValidDate,
+                new DBCondition(CoProdCharValue.Field.productId, prodId), new DBCondition(CoProdCharValue.Field.objectId,
+                        firstActiveRes.get_userId()));
+
+        CoProdBillingCycle cycle = new CoProdBillingCycle();
+        ProductCycleComponent pcCmp = context.getComponent(ProductCycleComponent.class);
+        CoProdBillingCycle billCycle = pcCmp.queryProdBillingCycle(prodId, firstActiveRes.get_userId());
+        if (billCycle == null)
+        {
+            IMSUtil.throwBusiException("product [" + prodId + "] billing cycle is not exist");
+        }
+        Date firstBillDate = ProdCycleHelper.createFirstBillDate(new Date(newDataValidDate.getTime()), null,
+                billCycle.getCycleType(), billCycle.getCycleUnit());
+        // 2012-05-28 zhangzj3 修复bug[46438] 三户新装后马上首次激活，CO_PROD_BILLING_CYCLE主键冲突
+        if (newDataValidDate.getTime() != billCycle.getValidDate().getTime())
+        {
+            cycle.setFirstBillDate(firstBillDate);// 2012-01-05 平移产品时首次账单日推算获得
+            cycle.setExpireDate(expireDate);
+            cycle.setSoNbr(soNbr);
+            updateByCondition(cycle, oldDataExpireDate, newDataValidDate, new DBCondition(CoProdBillingCycle.Field.productId,
+                    prodId), new DBCondition(CoProdBillingCycle.Field.objectId, firstActiveRes.get_userId()));
+        }
+        CoProdPriceParam param = new CoProdPriceParam();
+        param.setExpireDate(expireDate);
+        param.setSoNbr(soNbr);
+        updateByCondition(param, oldDataExpireDate, newDataValidDate, new DBCondition(CoProdPriceParam.Field.productId, prodId),
+                new DBCondition(CoProdPriceParam.Field.objectId, firstActiveRes.get_userId()));
+
+    }
+
+    /**
+     * @Description: 推算出主产品的失效时间
+     * @param offeringId
+     * @param prodCycle
+     * @param validDate
+     * @return
+     */
+    public Date getProdExpireDate(Integer offeringId, PmProductOfferLifecycle prodCycle, int validDate)
+    {
+        SBillCycle billCycle = new SBillCycle();
+        billCycle.setCycle_type(prodCycle.getCycleType());
+        billCycle.setCycle_unit(prodCycle.getCycleUnit());
+        billCycle.setFirst_bill_day(validDate);
+
+        CoProdBillingCycle dmProdCycle = context.getComponent(ProductCycleComponent.class).parseProdBillingCycle(
+                offeringId.longValue(), billCycle, DateUtil.UTCToString(validDate), null,
+                (short) EnumCodeDefine.PROD_VALID_SPECIFIC_DATE, null, null);
+        return dmProdCycle.getExpireDate();
+    }
+
+    /**
+     * @param orgLocation
+     * @Description: CRM流程构造FirstActiveTask对象的值
+     */
+    public SFirstActiveRes getFirstActiveTask(SFristActiveReq activeReq, PmFirstActiveRule rule, List<CoProd> prodList,
+            CaAccount acct, String orgLocation)
+    {
+        SFirstActiveRes activeResult = new SFirstActiveRes();
+        activeResult.set_phoneId(activeReq.getPhone_id());
+        activeResult.set_userId(activeReq.getUser_id());
+        activeResult.set_orgLocation(orgLocation);
+        if (activeReq.getSms_lang() != null)
+        {
+            activeResult.set_smsLanguage(activeReq.getSms_lang());
+        }
+        if (activeReq.getIvr_lang() != null)
+        {
+            activeResult.set_ivrLanguage(activeReq.getIvr_lang());
+        }
+        if (!CommonUtil.isEmpty(activeReq.getLocation()))
+        {
+            activeResult.set_location(activeReq.getLocation());
+        }
+        if (activeReq.getUssd_lang() != null)
+        {
+            activeResult.set_ussdLanguage(activeReq.getUssd_lang());
+        }
+        activeResult.set_activationTime(IMSUtil.getMdbDate(DateUtil.getFormattedDate(activeReq.getActivation_time())));
+
+        activeResult.set_acctId(acct.getAcctId());
+        activeResult.set_soNbr(context.getDoneCode());
+
+        com.ailk.openbilling.persistence.imsintf.entity.SBalance javaBalance = activeReq.getBalance();
+        if (null != javaBalance)
+        {
+            com.ailk.easyframe.sdl.imssdl.MImsSyncDef.SBalance sdlBalance = ConvertUtil.javaBalance2Sdl(javaBalance);
+            activeResult.set_balance(sdlBalance);
+        }
+        else
+        {
+            activeResult.set_balance(null);
+        }
+
+        // 上海不需要
+        if (ProjectUtil.is_TH_AIS())
+        {
+            // 2012-02-10 wukl 若配置的主产品跟用户原主产品一致，则原主产品继续使用，不做变更，只是更新产品的生失效时间
+            CoProd mainPromotion = context.getComponent(ProductQuery.class).getPrimaryProduct(prodList);
+            if (rule != null && CommonUtil.isValid(rule.getDestOfferingId()))
+            {
+                if (mainPromotion.getProductOfferingId().intValue() != rule.getDestOfferingId().intValue())
+                {
+                    activeResult.set_delProdList(getDelProdList(activeReq, rule, mainPromotion));
+                    activeResult.set_addProdList(getAddProdList(activeReq, rule, mainPromotion));
+                }
+                else
+                {
+                    logger.info("****** find rule but not change product, because of change product is equals to original product,offering id = "
+                            + rule.getDestOfferingId());
+                }
+            }
+
+            activeResult.set_modProdList(getModProdList(activeReq, rule, mainPromotion,prodList));
+        }
+        return activeResult;
+    }
+
+    private CsdlArrayList<com.ailk.easyframe.sdl.imssdl.MImsSyncDef.SProdInfo> getDelProdList(SFristActiveReq activeReq,
+            PmFirstActiveRule rule, CoProd mainPromotion)
+    {
+        CsdlArrayList<com.ailk.easyframe.sdl.imssdl.MImsSyncDef.SProdInfo> delList = new CsdlArrayList<com.ailk.easyframe.sdl.imssdl.MImsSyncDef.SProdInfo>(
+                com.ailk.easyframe.sdl.imssdl.MImsSyncDef.SProdInfo.class);
+        com.ailk.easyframe.sdl.imssdl.MImsSyncDef.SProdInfo prodInfo = new com.ailk.easyframe.sdl.imssdl.MImsSyncDef.SProdInfo();
+        prodInfo.set_productId(mainPromotion.getProductId());
+        prodInfo.set_objectId(activeReq.getUser_id());
+        prodInfo.set_expireDate(IMSUtil.getMdbDate(DateUtil.getFormattedDate(activeReq.getActivation_time())));
+        prodInfo.set_productOfferingId(mainPromotion.getProductOfferingId());
+        prodInfo.set_billingType(mainPromotion.getBillingType());
+        prodInfo.set_validDate(IMSUtil.getMdbDate(mainPromotion.getValidDate()));
+        prodInfo.set_pricePlanId(mainPromotion.getPricingPlanId());
+        delList.add(prodInfo);
+        return delList;
+    }
+
+    private CsdlArrayList<com.ailk.easyframe.sdl.imssdl.MImsSyncDef.SProdInfo> getModProdList(SFristActiveReq activeReq,
+            PmFirstActiveRule rule, CoProd mainPromotion,List<CoProd> prodList)
+    {
+        ProductComponent prodCmp = context.getComponent(ProductComponent.class);
+        int activeDate = IMSUtil.getMdbDate(DateUtil.getFormattedDate(activeReq.getActivation_time()));
+
+        if (CommonUtil.isEmpty(prodList))
+        {
+            return null;
+        }
+        // 2012-08-13 yanchuan 查询主产品下面的打包产品
+        List<Integer> offering_list = prodCmp.queryPackageSonOfferIdsByParentOfferId(mainPromotion.getProductOfferingId());
+
+        if (CommonUtil.isEmpty(prodList))
+        {
+            return null;
+        }
+        // 是否有打包产品
+        boolean isExistPackageProd = false;
+        if (CommonUtil.isNotEmpty(offering_list))
+        {
+            isExistPackageProd = true;
+        }
+        // 主产品是否变更标识；若未变更，则修改的列表中包含主产品的信息
+        boolean mainProdNotChangeFlag = false;
+        if (rule == null || !CommonUtil.isValid(rule.getDestOfferingId())
+                || mainPromotion.getProductOfferingId().intValue() == rule.getDestOfferingId())
+        {
+            mainProdNotChangeFlag = true;
+        }
+
+        CsdlArrayList<com.ailk.easyframe.sdl.imssdl.MImsSyncDef.SProdInfo> modList = new CsdlArrayList<com.ailk.easyframe.sdl.imssdl.MImsSyncDef.SProdInfo>(
+                com.ailk.easyframe.sdl.imssdl.MImsSyncDef.SProdInfo.class);
+        com.ailk.easyframe.sdl.imssdl.MImsSyncDef.SProdInfo modProd = null;
+        for (CoProd prod : prodList)
+        {
+            if (isExistPackageProd && offering_list.contains(prod.getProductOfferingId()))
+                continue;
+            if (prod.getIsMain().intValue() != EnumCodeDefine.PRODUCT_MAIN || mainProdNotChangeFlag)
+            {
+                modProd = new com.ailk.easyframe.sdl.imssdl.MImsSyncDef.SProdInfo();
+                modProd.set_productId(prod.getProductId());
+                int validDate = IMSUtil.getMdbDate(prod.getValidDate());
+                int expireDate = IMSUtil.getMdbDate(prod.getExpireDate());
+                // 此处记录的是产品的原生效时间，并非激活后的生效时间，modify by Bug #40955
+                modProd.set_validDate(IMSUtil.getMdbDate(prod.getValidDate()));
+                if (prod.getIsMain().intValue() != EnumCodeDefine.PRODUCT_MAIN)
+                {
+
+                    modProd.set_expireDate(expireDate + (activeDate - validDate));// 计算平移后的失效时间
+                    // @Date 2012-3-14 tangjl5 Bug #40955 原历史数据的失效时间直接设置成原数据的生效时间
+                    // modProd.set_expireDate(IMSUtil.getMdbDate(prod.getValidDate()));
+                }
+                else
+                {
+                    modProd.set_expireDate(IMSUtil.getMdbDate(prod.getExpireDate()));// 主产品的失效时间不变更
+                }
+                modProd.set_billingType(prod.getBillingType());
+                modProd.set_objectId(activeReq.getUser_id());
+                modProd.set_productOfferingId(prod.getProductOfferingId());
+                modProd.set_pricePlanId(prod.getPricingPlanId());
+                modList.add(modProd);
+            }
+        }
+
+        return modList;
+    }
+
+    private CsdlArrayList<com.ailk.easyframe.sdl.imssdl.MImsSyncDef.SProdInfo> getAddProdList(SFristActiveReq activeReq,
+            PmFirstActiveRule rule, CoProd mainPromotion)
+    {
+        ProductComponent prodCmp = context.getComponent(ProductComponent.class);
+        Date validDate = DateUtil.getFormattedDate(activeReq.getActivation_time());// 获取生效时间，即激活时间
+        prodCmp.queryProdOfferLifeCycle(rule.getDestOfferingId());
+        // 2011-11-26 主产品的失效时间同用户的失效时间
+        // Date expireDate = getProdExpireDate(rule.getDestOfferingId(),prodCycle,IMSUtil.getMdbDate(validDate));//推算出失效时间
+        CmResource user = context.getComponent(UserComponent.class).queryUserByUserID(activeReq.getUser_id());
+        Integer pricePlanId = prodCmp.queryPricePlanId(rule.getDestOfferingId(), null, activeReq.getUser_id());// 查询用户级产品价格计划
+        if (pricePlanId == null)
+        {
+            throw IMSUtil.throwBusiException(ErrorCodeDefine.NEWREG_PRICINGPLAN_PROD_NOTEXIST, rule.getDestOfferingId());
+        }
+
+        CsdlArrayList<com.ailk.easyframe.sdl.imssdl.MImsSyncDef.SProdInfo> addList = new CsdlArrayList<com.ailk.easyframe.sdl.imssdl.MImsSyncDef.SProdInfo>(
+                com.ailk.easyframe.sdl.imssdl.MImsSyncDef.SProdInfo.class);
+        com.ailk.easyframe.sdl.imssdl.MImsSyncDef.SProdInfo prodInfo = new com.ailk.easyframe.sdl.imssdl.MImsSyncDef.SProdInfo();
+        prodInfo.set_productId(DBUtil.getSequence(CoProd.class));
+        prodInfo.set_productOfferingId(rule.getDestOfferingId());
+        prodInfo.set_pricePlanId(pricePlanId);
+        prodInfo.set_objectId(activeReq.getUser_id());
+        prodInfo.set_billingType(EnumCodeDefine.PROD_BILLTYPE_PREPAID);
+        prodInfo.set_expireDate(IMSUtil.getMdbDate(user.getExpireDate()));
+        prodInfo.set_validDate(IMSUtil.getMdbDate(validDate));
+        addList.add(prodInfo);
+
+        return addList;
+    }
+
+    /**
+     * @Description: 将Xdr.SFirstAct对象中的数据拷贝到对应的Sdl.SFirstAct对象中
+     * @param xdrValue
+     * @return
+     */
+    public SFirstAct convertSFirstActXdr2Sdl(com.ailk.easyframe.sdl.imsxdr.MXdr.SFirstAct xdrValue)
+    {
+        if (xdrValue == null)
+        {
+            IMSUtil.throwBusiException(ErrorCodeDefine.COMMON_PARAM_ISNULL, "SFirstAct");
+        }
+        SFirstAct sdlFirstAct = new SFirstAct();
+        ConvertUtil.copyXdr2Sdl(xdrValue, sdlFirstAct);
+        com.ailk.easyframe.sdl.imsxdr.MXdr.SBalance xdrBalance = xdrValue.get_balance();
+        SBalance sdlBalance = new SBalance();
+        ConvertUtil.copyXdr2Sdl(xdrBalance, sdlBalance);
+        sdlFirstAct.set_balance(sdlBalance);
+
+        if (CommonUtil.isValid(sdlFirstAct.get_activationTime())
+                && DateUtil.getFormattedDate(String.valueOf(sdlFirstAct.get_activationTime())).before(context.getRequestDate()))
+        {
+            // 接口传入的int64时间格式为20110830595900,转成真正意义上的int64
+            sdlFirstAct.set_activationTime(ConvertUtil.sdlLong2SdlTime(sdlFirstAct.get_activationTime()));
+        }
+        else
+        {
+            sdlFirstAct.set_activationTime(IMSUtil.getMdbDate(context.getRequestDate()));
+        }
+
+        return sdlFirstAct;
+    }
+
+    /**
+     * @Description: 获取xdr结构的 RewardInfoList
+     * @param javaRewardList
+     * @return
+     */
+    public CsdlArrayList<SRewardInfo> getXdrRewardList(List<CaRewardInfo> javaRewardList)
+    {
+        CsdlArrayList<SRewardInfo> xdrRewardList = new CsdlArrayList<SRewardInfo>(SRewardInfo.class);
+        if (javaRewardList != null && javaRewardList.size() > 0)
+        {
+            for (CaRewardInfo javaRewardInfo : javaRewardList)
+            {
+                SRewardInfo xdrRewardInfo = javaReward2XdrReward(javaRewardInfo);
+                xdrRewardList.add(xdrRewardInfo);
+            }
+        }
+        return xdrRewardList;
+    }
+
+    /**
+     * @Description: 获取sdl结构的 RewardInfoList
+     * @param javaRewardList
+     * @return
+     */
+    public CsdlArrayList<SCaRewardInfo> getSdlRewardList(List<CaRewardInfo> javaRewardList)
+    {
+        CsdlArrayList<SCaRewardInfo> sdlRewardList = new CsdlArrayList<SCaRewardInfo>(SCaRewardInfo.class);
+        if (javaRewardList != null && javaRewardList.size() > 0)
+        {
+            for (CaRewardInfo javaRewardInfo : javaRewardList)
+            {
+                SCaRewardInfo sdlRewardInfo = javaReward2SdlReward(javaRewardInfo);
+                sdlRewardList.add(sdlRewardInfo);
+            }
+        }
+        return sdlRewardList;
+    }
+
+    /**
+     * @Description: 获取java结构的 RewardInfoList
+     * @param sdlRewardList
+     * @return
+     */
+    public List<CaRewardInfo> getJavaRewardList(CsdlArrayList<SCaRewardInfo> sdlRewardList)
+    {
+        List<CaRewardInfo> javaRewardList = new ArrayList<CaRewardInfo>();
+        if (sdlRewardList != null && sdlRewardList.size() > 0)
+        {
+            for (SCaRewardInfo sdlReward : sdlRewardList)
+            {
+                CaRewardInfo javaReward = sdlReward2JavaReward(sdlReward);
+                javaRewardList.add(javaReward);
+            }
+        }
+        return javaRewardList;
+    }
+
+    public com.ailk.openbilling.topuppayment.persistence.reward.entity.CaRewardInfo sdlReward2JavaReward(
+            com.ailk.easyframe.sdl.imssdl.MImsSyncDef.SCaRewardInfo sdlReward)
+    {
+        com.ailk.openbilling.topuppayment.persistence.reward.entity.CaRewardInfo javaReward = new com.ailk.openbilling.topuppayment.persistence.reward.entity.CaRewardInfo();
+        javaReward.setAllotId(sdlReward.get_allotId());
+        javaReward.setRewardId(sdlReward.get_rewardId());
+        javaReward.setRewardAmount(sdlReward.get_rewardAmount());
+        if (sdlReward.is_used("ACCT_ID"))
+            javaReward.setAcctId(sdlReward.get_acctId());
+        if (sdlReward.is_used("BILLING_TYPE"))
+            javaReward.setBillingType(sdlReward.get_billingType());
+        if (sdlReward.is_used("PRODUCT_OFFERING_ID"))
+            javaReward.setProductOfferingId(sdlReward.get_productOfferingId());
+        if (sdlReward.is_used("RESOURCE_ID"))
+            javaReward.setResourceId(sdlReward.get_resourceId());
+        if (sdlReward.is_used("VALID_DATE"))
+            javaReward.setValidDate(sdlReward.get_validDate());
+        if (sdlReward.is_used("EXPIRE_DATE"))
+            javaReward.setExpireDate(sdlReward.get_expireDate());
+
+        CsdlArrayList<com.ailk.easyframe.sdl.imssdl.MImsSyncDef.SAssetInfo> sdlAssets = sdlReward.get_assetInfoList();
+        List<com.ailk.openbilling.topuppayment.persistence.asset.entity.SAssetInfo> javaAssets = new ArrayList<com.ailk.openbilling.topuppayment.persistence.asset.entity.SAssetInfo>();
+        if (!CommonUtil.isEmpty(sdlAssets))
+        {
+            for (com.ailk.easyframe.sdl.imssdl.MImsSyncDef.SAssetInfo sdlAsset : sdlAssets)
+            {
+                com.ailk.openbilling.topuppayment.persistence.asset.entity.SAssetInfo javaAsset = new com.ailk.openbilling.topuppayment.persistence.asset.entity.SAssetInfo();
+                javaAsset.setAcctId(sdlAsset.get_acctId());
+                javaAsset.setAmount(sdlAsset.get_amount());
+                javaAsset.setAssetId(sdlAsset.get_assetId());
+                javaAsset.setAssetItemId(sdlAsset.get_assetItemId());
+                javaAsset.setAssetType(sdlAsset.get_assetType());
+                javaAsset.setBillingType(sdlAsset.get_billingType());
+                javaAsset.setMeasureId(sdlAsset.get_measureId());
+                javaAsset.setResourceId(sdlAsset.get_resourceId());
+                javaAsset.setStatus(sdlAsset.get_status());
+                javaAsset.setOrgAmount(sdlAsset.get_orgAmount());
+                javaAsset.setOrgExpireDate(sdlAsset.get_orgExpireDate());
+                javaAsset.setOrgValidDate(sdlAsset.get_orgValidDate());
+                javaAsset.setExpireDate(sdlAsset.get_expireDate());
+                javaAsset.setValidDate(sdlAsset.get_validDate());
+
+                javaAssets.add(javaAsset);
+            }
+            javaReward.setAssetInfoList(javaAssets);
+        }
+        return javaReward;
+    }
+
+    /**
+     * @Description: RewardInfo由java对象转成xdr对象
+     * @param javaRewardInfo
+     * @return
+     */
+    public com.ailk.easyframe.sdl.imsxdr.MXdr.SRewardInfo javaReward2XdrReward(
+            com.ailk.openbilling.topuppayment.persistence.reward.entity.CaRewardInfo javaRewardInfo)
+    {
+        com.ailk.easyframe.sdl.imsxdr.MXdr.SRewardInfo xdrRewardInfo = new com.ailk.easyframe.sdl.imsxdr.MXdr.SRewardInfo();
+        xdrRewardInfo.set_allotId(javaRewardInfo.getAllotId());
+        xdrRewardInfo.set_rewardId(javaRewardInfo.getRewardId());
+        xdrRewardInfo.set_rewardAmount(javaRewardInfo.getRewardAmount());
+        // xdrRewardInfo.set_creditItemId(value);
+        if (javaRewardInfo.getAcctId() != null)
+            xdrRewardInfo.set_acctId(javaRewardInfo.getAcctId().longValue());
+        if (javaRewardInfo.getBillingType() != null)
+            xdrRewardInfo.set_billingType(javaRewardInfo.getBillingType().shortValue());
+        if (javaRewardInfo.getProductOfferingId() != null)
+            xdrRewardInfo.set_productOfferingId(javaRewardInfo.getProductOfferingId().intValue());
+        if (javaRewardInfo.getResourceId() != null)
+            xdrRewardInfo.set_resourceId(javaRewardInfo.getResourceId().longValue());
+        if (javaRewardInfo.getValidDate() != null)
+            xdrRewardInfo.set_validDate(IMSUtil.getMdbDate(javaRewardInfo.getValidDate()));
+        if (javaRewardInfo.getExpireDate() != null)
+            xdrRewardInfo.set_expireDate(IMSUtil.getMdbDate(javaRewardInfo.getExpireDate()));
+
+        List<com.ailk.openbilling.topuppayment.persistence.asset.entity.SAssetInfo> javaAssets = javaRewardInfo
+                .getAssetInfoList();
+        CsdlArrayList<com.ailk.easyframe.sdl.imsxdr.MXdr.SAssetInfo> xdrAssets = new CsdlArrayList<com.ailk.easyframe.sdl.imsxdr.MXdr.SAssetInfo>(
+                com.ailk.easyframe.sdl.imsxdr.MXdr.SAssetInfo.class);
+        if (!CommonUtil.isEmpty(javaAssets))
+        {
+            for (com.ailk.openbilling.topuppayment.persistence.asset.entity.SAssetInfo javaAsset : javaAssets)
+            {
+                com.ailk.easyframe.sdl.imsxdr.MXdr.SAssetInfo xdrAsset = new com.ailk.easyframe.sdl.imsxdr.MXdr.SAssetInfo();
+                xdrAsset.set_acctId(javaAsset.getAcctId());
+                xdrAsset.set_amount(javaAsset.getAmount());
+                xdrAsset.set_assetId(javaAsset.getAssetId());
+                xdrAsset.set_assetItemId(javaAsset.getAssetItemId());
+                xdrAsset.set_assetType(javaAsset.getAssetType());
+                xdrAsset.set_billingType((short) javaAsset.getBillingType());
+                xdrAsset.set_measureId(javaAsset.getMeasureId());
+                xdrAsset.set_resourceId(javaAsset.getResourceId());
+                xdrAsset.set_status((short) javaAsset.getStatus());
+                xdrAsset.set_orgAmount(javaAsset.getOrgAmount());
+                xdrAsset.set_orgExpireDate(IMSUtil.getMdbDate(javaAsset.getOrgExpireDate()));
+                xdrAsset.set_orgValidDate(IMSUtil.getMdbDate(javaAsset.getOrgValidDate()));
+                xdrAsset.set_expireDate(IMSUtil.getMdbDate(javaAsset.getExpireDate()));
+                xdrAsset.set_validDate(IMSUtil.getMdbDate(javaAsset.getValidDate()));
+
+                xdrAssets.add(xdrAsset);
+            }
+            xdrRewardInfo.set_assetInfoList(xdrAssets);
+        }
+        return xdrRewardInfo;
+    }
+
+    /**
+     * @Description: RewardInfo由java对象转成sdl对象
+     * @param javaRewardInfo
+     * @return
+     */
+    public com.ailk.easyframe.sdl.imssdl.MImsSyncDef.SCaRewardInfo javaReward2SdlReward(
+            com.ailk.openbilling.topuppayment.persistence.reward.entity.CaRewardInfo javaRewardInfo)
+    {
+        com.ailk.easyframe.sdl.imssdl.MImsSyncDef.SCaRewardInfo sdlRewardInfo = new com.ailk.easyframe.sdl.imssdl.MImsSyncDef.SCaRewardInfo();
+        sdlRewardInfo.set_allotId(javaRewardInfo.getAllotId());
+        sdlRewardInfo.set_rewardId(javaRewardInfo.getRewardId());
+        sdlRewardInfo.set_rewardAmount(javaRewardInfo.getRewardAmount());
+        // xdrRewardInfo.set_creditItemId(value);
+        if (javaRewardInfo.getAcctId() != null)
+            sdlRewardInfo.set_acctId(javaRewardInfo.getAcctId().longValue());
+        if (javaRewardInfo.getBillingType() != null)
+            sdlRewardInfo.set_billingType(javaRewardInfo.getBillingType().shortValue());
+        if (javaRewardInfo.getProductOfferingId() != null)
+            sdlRewardInfo.set_productOfferingId(javaRewardInfo.getProductOfferingId().intValue());
+        if (javaRewardInfo.getResourceId() != null)
+            sdlRewardInfo.set_resourceId(javaRewardInfo.getResourceId().longValue());
+        if (javaRewardInfo.getValidDate() != null)
+            sdlRewardInfo.set_validDate(javaRewardInfo.getValidDate());
+        if (javaRewardInfo.getExpireDate() != null)
+            sdlRewardInfo.set_expireDate(javaRewardInfo.getExpireDate());
+
+        List<com.ailk.openbilling.topuppayment.persistence.asset.entity.SAssetInfo> javaAssets = javaRewardInfo
+                .getAssetInfoList();
+        CsdlArrayList<com.ailk.easyframe.sdl.imssdl.MImsSyncDef.SAssetInfo> sdlAssets = new CsdlArrayList<com.ailk.easyframe.sdl.imssdl.MImsSyncDef.SAssetInfo>(
+                com.ailk.easyframe.sdl.imssdl.MImsSyncDef.SAssetInfo.class);
+        if (!CommonUtil.isEmpty(javaAssets))
+        {
+            for (com.ailk.openbilling.topuppayment.persistence.asset.entity.SAssetInfo javaAsset : javaAssets)
+            {
+                com.ailk.easyframe.sdl.imssdl.MImsSyncDef.SAssetInfo sdlAsset = new com.ailk.easyframe.sdl.imssdl.MImsSyncDef.SAssetInfo();
+                sdlAsset.set_acctId(javaAsset.getAcctId());
+                sdlAsset.set_amount(javaAsset.getAmount());
+                sdlAsset.set_assetId(javaAsset.getAssetId());
+                sdlAsset.set_assetItemId(javaAsset.getAssetItemId());
+                sdlAsset.set_assetType(javaAsset.getAssetType());
+                sdlAsset.set_billingType(javaAsset.getBillingType());
+                sdlAsset.set_measureId(javaAsset.getMeasureId());
+                sdlAsset.set_resourceId(javaAsset.getResourceId());
+                sdlAsset.set_status(javaAsset.getStatus());
+                sdlAsset.set_orgAmount(javaAsset.getOrgAmount());
+                sdlAsset.set_orgExpireDate(javaAsset.getOrgExpireDate());
+                sdlAsset.set_orgValidDate(javaAsset.getOrgValidDate());
+                sdlAsset.set_expireDate(javaAsset.getExpireDate());
+                sdlAsset.set_validDate(javaAsset.getValidDate());
+
+                sdlAssets.add(sdlAsset);
+            }
+            sdlRewardInfo.set_assetInfoList(sdlAssets);
+        }
+        return sdlRewardInfo;
+    }
+
+    /**
+     * 数据上发MDB时，变更主产品 wukl 2011-12-20
+     * 
+     * @param sProductOrderList
+     * @param sFirstAct
+     * @param prodInfo
+     * @param queryInfo
+     * @param rule
+     * @param delProdList
+     * @param addProdList
+     * @param cancelProdOrder 保存新增的主产品信息，当reward失败时，需要将其置成失效，因为全量上发不会删除新增的记录
+     */
+    public void changeMainProduct(CsdlArrayList<com.ailk.easyframe.sdl.MMdbSyncUpApp.SProductOrder> sProductOrderList,
+            SFirstAct sFirstAct, SProdInfo prodInfo, SQueryInfo queryInfo, PmFirstActiveRule rule,
+            CsdlArrayList<com.ailk.easyframe.sdl.imssdl.MImsSyncDef.SProdInfo> delProdList,
+            CsdlArrayList<com.ailk.easyframe.sdl.imssdl.MImsSyncDef.SProdInfo> addProdList,
+            com.ailk.easyframe.sdl.MMdbSyncUpApp.SProductOrder cancelProdOrder)
+    {
+        int activeDate = (int) sFirstAct.get_activationTime();// 获取激活时间
+        SUserEx sUserEx = FirstActiveHelper.getSUserExInContext(context);
+
+        // 将MDB获取的产品信息转成上发MDB的数据结构
+        SCoProd originalCoProd = this.getSCoProd(sFirstAct, prodInfo, sUserEx);
+        CsdlArrayList<SProdBillCycle> originalBillCycleList = this.getBillCycle(sFirstAct, prodInfo, sUserEx);
+        // yanchuan 2012-07-05 SPromPrice已被计费删除
+        // CsdlArrayList<SProdPrice> originalSProdPrice = this.getSProdPrice(sFirstAct, prodInfo);
+        CsdlArrayList<SProdCharValue> originalCharValueList = getSProdCharValue(sFirstAct, prodInfo, sUserEx, queryInfo);
+
+        // 构造删除SProductOrder
+        com.ailk.easyframe.sdl.MMdbSyncUpApp.SProductOrder deleteData = buildDeleteMainProductOrder(originalCoProd,
+                originalBillCycleList, originalCharValueList, activeDate, delProdList);
+
+        // 构造新增SProductOrder
+        com.ailk.easyframe.sdl.MMdbSyncUpApp.SProductOrder insertData = buildInsertMainProductOrder(originalCoProd,
+                originalBillCycleList, sUserEx, rule, activeDate, addProdList);
+        cancelProdOrder.copy(insertData);// 保存新增产品的上发结构，用于reward失败时上发
+
+        // 将原始的CoProd ProdBillCycle 置为失效的
+        originalCoProd.set_expireDate(activeDate);
+        if(CommonUtil.isNotEmpty(originalBillCycleList)){
+            for (SProdBillCycle billCycle : originalBillCycleList)
+            {
+                billCycle.set_expireDate(activeDate);
+            }
+        }
+        
+        if(CommonUtil.isNotEmpty(originalCharValueList)){
+            for (SProdCharValue charValue : originalCharValueList)
+            {
+                charValue.set_expireDate(activeDate);
+            }
+        }
+        
+
+        // 构造原始SProductOrder
+        // ljc 修改
+        com.ailk.easyframe.sdl.MMdbSyncUpApp.SProductOrder originalData = new com.ailk.easyframe.sdl.MMdbSyncUpApp.SProductOrder();
+        CsdlArrayList<SOrderInfo> orderInfoList = new CsdlArrayList<SOrderInfo>(SOrderInfo.class);
+        SOrderInfo orderInfo = new SOrderInfo();
+        originalData.set_orderFlag(originalCoProd.get_busiFlag());
+        orderInfo.set_prod(originalCoProd);
+        // yanchuan 2012-07-05 SPromPrice已被计费删除
+        // orderInfo.set_listProdPrice(originalSProdPrice);
+        orderInfo.set_listBillCycle(originalBillCycleList);
+        orderInfo.set_listCharValue(originalCharValueList);
+        orderInfoList.add(orderInfo);
+        originalData.set_listOrderInfo(orderInfoList);
+
+        MdbUtil.setNull2Default(originalData);
+        MdbUtil.setNull2Default(deleteData);
+        MdbUtil.setNull2Default(insertData);
+        sProductOrderList.add(originalData);
+        sProductOrderList.add(deleteData);
+        sProductOrderList.add(insertData);
+    }
+
+    // yanchuan 2012-07-05 SPromPrice已被计费删除
+    // private CsdlArrayList<SProdPrice> getSProdPrice(SFirstAct sFirstAct, SProdInfo prodInfo)
+    // {
+    // CsdlArrayList<SPromPrice> listSPromPrice = FirstActiveHelper.getSPromPriceListInContext(context);
+    // if (CommonUtil.isEmpty(listSPromPrice))
+    // {
+    // return null;
+    // }
+    //
+    // CsdlArrayList<SProdPrice> listSProdPrice = new CsdlArrayList<SProdPrice>(SProdPrice.class);
+    //
+    // for (SPromPrice sPromPrice : listSPromPrice)
+    // {
+    // if (sPromPrice.get_promNo() == prodInfo.get_promNo())
+    // {
+    // SPromPrice price = (SPromPrice) FirstActiveHelper.catchCurrentData(sPromPrice,
+    // (int) sFirstAct.get_activationTime());
+    // if (price == null)
+    // {
+    // continue;
+    // }
+    // SProdPrice sProdPrice = new SProdPrice();
+    // sProdPrice.set_pricePlanId(sPromPrice.get_pricePlanId());
+    // sProdPrice.set_productId(sPromPrice.get_promNo());
+    // sProdPrice.set_validDate(sPromPrice.get_validDate());
+    // sProdPrice.set_expireDate(sPromPrice.get_expireDate());
+    // sProdPrice.set_syncFlag(sPromPrice.get_syncFlag());
+    //
+    // listSProdPrice.add(sProdPrice);
+    // }
+    // }
+    // return listSProdPrice;
+    // }
+
+    /**
+     * 构造删除主产品的上发结构 wukl 2011-12-20
+     * 
+     * @param originalCoProd
+     * @param originalBillCycleList
+     * @param originalSProdPrice
+     * @param originalListCharValue
+     * @param activeDate
+     * @param delProdList
+     * @return
+     */
+    private com.ailk.easyframe.sdl.MMdbSyncUpApp.SProductOrder buildDeleteMainProductOrder(SCoProd originalCoProd,
+            CsdlArrayList<SProdBillCycle> originalBillCycleList, CsdlArrayList<SProdCharValue> originalListCharValue,
+            int activeDate, CsdlArrayList<com.ailk.easyframe.sdl.imssdl.MImsSyncDef.SProdInfo> delProdList)
+    {
+        // 获取删除后的CoProd
+        SCoProd deleteCoProd = new SCoProd();
+        deleteCoProd.copy(originalCoProd);
+        deleteCoProd.set_validDate(activeDate);
+        deleteCoProd.set_expireDate(activeDate);
+
+        // 获取删除后的SProdCharValue
+        CsdlArrayList<SProdCharValue> deleteCharValueList = new CsdlArrayList<SProdCharValue>(SProdCharValue.class);
+        SProdCharValue deleteCharValue = null;
+        if(CommonUtil.isNotEmpty(originalListCharValue)){
+            for (SProdCharValue charValue : originalListCharValue)
+            {
+                deleteCharValue = new SProdCharValue();
+                deleteCharValue.copy(charValue);
+                deleteCharValue.set_validDate(activeDate);
+                deleteCharValue.set_expireDate(activeDate);
+                deleteCharValueList.add(deleteCharValue);
+            }
+        }
+       
+
+        // 获取删除后的SProdBillCycle
+        // ljc
+        PmProductOfferLifecycle offerLifeCycle = context.getComponent(CacheQuery.class).queryProdOfferLifeCycle(
+                originalCoProd.get_productOfferingId());
+        CsdlArrayList<SProdBillCycle> deleteBillCycleList = new CsdlArrayList<SProdBillCycle>(SProdBillCycle.class);
+        SProdBillCycle deleteBillCycle = null;
+        if(CommonUtil.isNotEmpty(originalBillCycleList)){
+            for (SProdBillCycle billCycle : originalBillCycleList)
+            {
+                deleteBillCycle = new SProdBillCycle();
+                deleteBillCycle.copy(billCycle);
+                deleteBillCycle.set_validDate(activeDate);
+                deleteBillCycle.set_expireDate(activeDate);
+                // sync_cycle_flag标志
+                if (offerLifeCycle != null && offerLifeCycle.getCycleSyncFlag() != null)
+                {
+                    deleteBillCycle.set_cycleFlag(offerLifeCycle.getCycleSyncFlag());
+                }
+                else
+                {
+                    deleteBillCycle.set_cycleFlag(0);
+                }
+
+                deleteBillCycleList.add(deleteBillCycle);
+            }
+        }
+        
+
+        com.ailk.easyframe.sdl.MMdbSyncUpApp.SProductOrder deleteData = new com.ailk.easyframe.sdl.MMdbSyncUpApp.SProductOrder();
+        CsdlArrayList<SOrderInfo> orderInfoList = new CsdlArrayList<SOrderInfo>(SOrderInfo.class);
+        SOrderInfo orderInfo = new SOrderInfo();
+        deleteData.set_orderFlag(deleteCoProd.get_busiFlag());
+        orderInfo.set_prod(deleteCoProd);
+
+        // orderInfo.set_listProdPrice(deleteSProdPriceList);
+        orderInfo.set_listBillCycle(deleteBillCycleList);
+        orderInfo.set_listCharValue(deleteCharValueList);
+        orderInfoList.add(orderInfo);
+        deleteData.set_listOrderInfo(orderInfoList);
+        // 将主产品的删除信息存入到删除的产品列表中
+        com.ailk.easyframe.sdl.imssdl.MImsSyncDef.SProdInfo delProdInfo = new com.ailk.easyframe.sdl.imssdl.MImsSyncDef.SProdInfo();
+        delProdInfo.set_productId(deleteCoProd.get_productId());
+        delProdInfo.set_validDate(deleteCoProd.get_validDate());
+        delProdInfo.set_billingType(deleteCoProd.get_billMode());
+        delProdInfo.set_productOfferingId(deleteCoProd.get_productOfferingId());
+        delProdInfo.set_expireDate(deleteCoProd.get_expireDate());
+        delProdList.add(delProdInfo);
+
+        return deleteData;
+    }
+
+    /**
+     * 构造新增主产品的上发结构 wukl 2011-12-20
+     * 
+     * @param originalCoProd
+     * @param originalBillCycleList
+     * @param originalSProdPrice
+     * @param sUserEx
+     * @param rule
+     * @param activeDate
+     * @param addProdList
+     * @return
+     */
+    private com.ailk.easyframe.sdl.MMdbSyncUpApp.SProductOrder buildInsertMainProductOrder(SCoProd originalCoProd,
+            CsdlArrayList<SProdBillCycle> originalBillCycleList, SUserEx sUserEx, PmFirstActiveRule rule, int activeDate,
+            CsdlArrayList<com.ailk.easyframe.sdl.imssdl.MImsSyncDef.SProdInfo> addProdList)
+    {
+        Integer pricingPlanId = this.getPricePlanId2Cache(rule.getDestOfferingId());// 获取主产品的定价计划
+
+        PmProductOfferLifecycle prodCycle = context.getComponent(CacheQuery.class).queryProdOfferLifeCycle(
+                rule.getDestOfferingId());// 获取产品账期信息
+
+        // 推算出产品的失效时间
+        // 2011-11-26 主产品的失效时间同用户的失效时间
+        // Date expireDate = this.getProdExpireDate(rule.getDestOfferingId(),prodCycle,activeDate);
+        int expireDate = sUserEx.get_expireDate();
+
+        // 获取新增的CoProd
+        SCoProd insertCoProd = new SCoProd();
+        insertCoProd.copy(originalCoProd);
+
+        insertCoProd.set_productId(DBUtil.getSequence(CoProd.class));
+        insertCoProd.set_productOfferingId(rule.getDestOfferingId());
+        insertCoProd.set_billMode(sUserEx.get_billType());
+        // 2011-12-01 增加新增产品的busi_flag的设值
+        // 2012-01-12 替换的主产品不允许是pre_match产品
+        short busiFlag = (short) context.getComponent(CacheQuery.class).queryBusiflag(rule.getDestOfferingId().intValue());
+
+        insertCoProd.set_busiFlag(busiFlag);
+        insertCoProd.set_prodTypeId((short) EnumCodeDefine.PROD_TYPE_COMPONENT);
+        // ljc修改 一个产品可能对于多个服务
+        List<Integer> serviceList = context.getComponent(CacheQuery.class).queryServiceSpecIdListByOfferId(
+                rule.getDestOfferingId().intValue());
+        insertCoProd.set_validDate(activeDate);
+        insertCoProd.set_expireDate(expireDate);
+        // yanchuan 2012-07-05 SPromPrice已被计费删除
+        insertCoProd.set_pricePlanId(pricingPlanId);
+        
+        // 获取新增的SProdBillCycle
+        Date firstBillDate = context.getComponent(CacheQuery.class).getFirstBillDate(rule.getDestOfferingId().intValue(),
+                DateUtil.UTCToDate(activeDate));
+
+        // ljc
+        CsdlArrayList<SProdBillCycle> insertBillCycleList = new CsdlArrayList<SProdBillCycle>(SProdBillCycle.class);
+        SProdBillCycle insertBillCycle = null;
+        if(CommonUtil.isNotEmpty(originalBillCycleList)){
+            for (SProdBillCycle billCycle : originalBillCycleList)
+            {
+                insertBillCycle = new SProdBillCycle();
+                insertBillCycle.copy(billCycle);
+
+                insertBillCycle.set_productId(insertCoProd.get_productId());
+                insertBillCycle.set_cycleType(prodCycle.getCycleType().shortValue());
+                insertBillCycle.set_cycleUnit(prodCycle.getCycleUnit().shortValue());
+                insertBillCycle.set_firstBillDate(IMSUtil.getMdbDate(firstBillDate));// 设置出账期为激活时间
+                insertBillCycle.set_validDate(activeDate);
+                insertBillCycle.set_expireDate(expireDate);
+                // sync_cycle_flag标志
+                if (prodCycle != null && prodCycle.getCycleSyncFlag() != null)
+                {
+                    insertBillCycle.set_cycleFlag(prodCycle.getCycleSyncFlag());
+                }
+                else
+                {
+                    insertBillCycle.set_cycleFlag(0);
+                }
+                insertBillCycle.set_syncFlag(context.getSyncFlag());
+                insertBillCycleList.add(insertBillCycle);
+            }
+        }
+        
+        // 获取新增的SProdCharValue
+        String charVaule = context.getComponent(CacheQuery.class).getMainPromoCharValue(rule.getDestOfferingId());
+
+        CsdlArrayList<SProdCharValue> insertCharValueList = new CsdlArrayList<SProdCharValue>(SProdCharValue.class);
+        SProdCharValue insertCharValue = new SProdCharValue();
+        insertCharValue.set_groupId(0);
+        insertCharValue.set_productId(insertCoProd.get_productId());
+        insertCharValue.set_specCharId(11628);
+        insertCharValue.set_value(charVaule);
+        insertCharValue.set_validDate(insertCoProd.get_validDate());
+        insertCharValue.set_expireDate(insertCoProd.get_expireDate());
+        insertCharValue.set_objectId(insertCoProd.get_objectId());
+        insertCharValue.set_objectType(insertCoProd.get_objectType());
+        insertCharValue.set_syncFlag(context.getSyncFlag());
+        insertCharValue.set_validDate(activeDate);
+        insertCharValue.set_expireDate(activeDate);
+        insertCharValueList.add(insertCharValue);
+
+        com.ailk.easyframe.sdl.MMdbSyncUpApp.SProductOrder insertData = new com.ailk.easyframe.sdl.MMdbSyncUpApp.SProductOrder();
+        CsdlArrayList<SOrderInfo> orderInfoList = new CsdlArrayList<SOrderInfo>(SOrderInfo.class);
+        SOrderInfo orderInfo = new SOrderInfo();
+        insertData.set_orderFlag(insertCoProd.get_busiFlag());
+        orderInfo.set_prod(insertCoProd);
+        // yanchuan 2012-07-05 SPromPrice已被计费删除
+        // orderInfo.set_listProdPrice(insertSProdPriceList);
+        orderInfo.set_listBillCycle(insertBillCycleList);
+        orderInfo.set_listCharValue(insertCharValueList);
+        orderInfoList.add(orderInfo);
+        insertData.set_listOrderInfo(orderInfoList);
+
+        // 将主产品的新增信息存入到新增的产品列表中
+        com.ailk.easyframe.sdl.imssdl.MImsSyncDef.SProdInfo addProdInfo = new com.ailk.easyframe.sdl.imssdl.MImsSyncDef.SProdInfo();
+        addProdInfo.set_productId(insertCoProd.get_productId());
+        addProdInfo.set_validDate(insertCoProd.get_validDate());
+        addProdInfo.set_expireDate(insertCoProd.get_expireDate());
+        addProdInfo.set_productOfferingId(insertCoProd.get_productOfferingId());
+        addProdInfo.set_pricePlanId(pricingPlanId);
+        addProdInfo.set_billingType(EnumCodeDefine.PROD_BILLTYPE_PREPAID);
+        addProdList.add(addProdInfo);
+        return insertData;
+    }
+
+    private Integer getPricePlanId2Cache(Integer destOfferingId)
+    {
+        CmResource userInfo = FirstActiveHelper.getCmResourceInContext(context);
+        CmCustomer custInfo = FirstActiveHelper.getCmCustomerInContext(context);
+        CaAccount acctInfo = FirstActiveHelper.getCaAccountInContext(context);
+
+        Integer pricePlanId = context.getComponent(CacheQuery.class).queryPricePlanId(destOfferingId, custInfo, acctInfo,
+                userInfo);
+        if (pricePlanId == null)
+        {
+            IMSUtil.throwBusiException(ErrorCodeDefine.NEWREG_PRICINGPLAN_PROD_NOTEXIST, destOfferingId);
+        }
+        return pricePlanId;
+    }
+
+    /**
+     * @Description: 数据上发MDB时，平移产品
+     * @param sProductOrderList
+     * @param sFirstAct
+     * @param sQeuryInfo
+     * @param prodInfo
+     * @param queryInfo
+     * @param rule
+     * @param modProdList
+     */
+    public void moveProductTime(CsdlArrayList<com.ailk.easyframe.sdl.MMdbSyncUpApp.SProductOrder> sProductOrderList,
+            SFirstAct sFirstAct, SProdInfo prodInfo, SQueryInfo queryInfo, PmFirstActiveRule rule,
+            CsdlArrayList<com.ailk.easyframe.sdl.imssdl.MImsSyncDef.SProdInfo> modProdList)
+    {
+        int activeDate = (int) sFirstAct.get_activationTime();// 获取激活时间
+        SUserEx sUserEx = FirstActiveHelper.getSUserExInContext(context);
+
+        // 2011-12-06 标记平移的主产品
+        boolean mainPromFlag = false;
+        if (prodInfo.get_isMain() == EnumCodeDefine.PRODUCT_MAIN)
+        {
+            mainPromFlag = true;
+        }
+
+        // 将MDB获取的产品信息转成上发MDB的数据结构
+        SCoProd originalCoProd = getSCoProd(sFirstAct, prodInfo, sUserEx);
+        // yanchuan 2012-07-05 SPromPrice已被计费删除
+        // CsdlArrayList<SProdPrice> originalSProdPrice = getSProdPrice(sFirstAct, prodInfo);
+        CsdlArrayList<SProdBillCycle> originalBillCycleList = getBillCycle(sFirstAct, prodInfo, sUserEx);
+        CsdlArrayList<SProdCharValue> originalListCharValue = getSProdCharValue(sFirstAct, prodInfo, sUserEx, queryInfo);
+        CsdlArrayList<SProdPriceParam> originalListPriceParam = getSProdPriceParam(sFirstAct, prodInfo, sUserEx, queryInfo);
+
+        // 获取原产品的生效时间，重置原记录的失效时间 Bug #40955
+        int originalValidDate = originalCoProd.get_validDate();
+
+        // 进行上发MDB的数据构造，一条失效记录、一条生效记录
+        com.ailk.easyframe.sdl.MMdbSyncUpApp.SProductOrder originalData = new com.ailk.easyframe.sdl.MMdbSyncUpApp.SProductOrder();
+        com.ailk.easyframe.sdl.MMdbSyncUpApp.SProductOrder modifyData = new com.ailk.easyframe.sdl.MMdbSyncUpApp.SProductOrder();
+        // 平移SCoProd
+        SCoProd modifyCoProd = new SCoProd();
+        modifyCoProd.copy(originalCoProd);
+
+        originalCoProd.set_expireDate(originalValidDate);
+        FirstActiveHelper.moveTimeSection(modifyCoProd, activeDate, mainPromFlag);
+
+        PmProductOfferLifecycle lifeCycle = context.getComponent(CacheQuery.class).queryProdOfferLifeCycle(
+                modifyCoProd.get_productOfferingId());
+        Date firstBillDate = ProdCycleHelper.createFirstBillDate(new Date(activeDate), null, lifeCycle.getCycleType(),
+                lifeCycle.getCycleUnit());
+
+        // 平移SProdBillCycle
+        CsdlArrayList<SProdBillCycle> modifyBillCycleList = new CsdlArrayList<SProdBillCycle>(SProdBillCycle.class);
+        SProdBillCycle modifyBillCycle = null;
+        for (SProdBillCycle billCycle : originalBillCycleList)
+        {
+            modifyBillCycle = new SProdBillCycle();
+            modifyBillCycle.copy(billCycle);
+
+            billCycle.set_expireDate(originalValidDate);
+            modifyBillCycle.set_firstBillDate(IMSUtil.getMdbDate(firstBillDate));// 2011-11-28 wukl 平移产品的首个账单日置为首次激活时间2012-1-5
+                                                                                 // 改为推算获取
+
+            FirstActiveHelper.moveTimeSection(modifyBillCycle, activeDate, mainPromFlag);
+            modifyBillCycleList.add(modifyBillCycle);
+        }
+
+        // yanchuan 2012-07-05 SPromPrice已被计费删除
+        // 平移SProdPrice
+        // CsdlArrayList<SProdPrice> modifySProdPriceList = new CsdlArrayList<SProdPrice>(SProdPrice.class);
+        // SProdPrice modifySProdPrice = null;
+        // for (SProdPrice price : originalSProdPrice)
+        // {
+        // modifySProdPrice = new SProdPrice();
+        // modifySProdPrice.copy(price);
+        //
+        // price.set_expireDate(originalValidDate);
+        // FirstActiveHelper.moveTimeSection(modifySProdPrice, activeDate, mainPromFlag);
+        // modifySProdPriceList.add(modifySProdPrice);
+        // }
+        // ljc 修改
+        CsdlArrayList<SOrderInfo> originalOrderInfoList = new CsdlArrayList<SOrderInfo>(SOrderInfo.class);
+        SOrderInfo originalOrderInfo = new SOrderInfo();
+        originalData.set_orderFlag(originalCoProd.get_busiFlag());// busi_flag
+        originalOrderInfo.set_prod(originalCoProd);
+        // yanchuan 2012-07-05 SPromPrice已被计费删除
+        // originalOrderInfo.set_listProdPrice(originalSProdPrice);
+        originalOrderInfo.set_listBillCycle(originalBillCycleList);
+        originalOrderInfoList.add(originalOrderInfo);
+        originalData.set_listOrderInfo(originalOrderInfoList);
+        // ljc 修改
+        CsdlArrayList<SOrderInfo> modifyDataOrderInfoList = new CsdlArrayList<SOrderInfo>(SOrderInfo.class);
+        SOrderInfo modifyDataOrderInfo = new SOrderInfo();
+        modifyData.set_orderFlag(modifyCoProd.get_busiFlag());
+        modifyDataOrderInfo.set_prod(modifyCoProd);
+        // yanchuan 2012-07-05 SPromPrice已被计费删除
+        // modifyDataOrderInfo.set_listProdPrice(modifySProdPriceList);
+        modifyDataOrderInfo.set_listBillCycle(modifyBillCycleList);
+        modifyDataOrderInfoList.add(modifyDataOrderInfo);
+        modifyData.set_listOrderInfo(modifyDataOrderInfoList);
+
+        // 平移SProdCharValue
+        if (!CommonUtil.isEmpty(originalListCharValue))
+        {
+            CsdlArrayList<SProdCharValue> modifyListCharValue = new CsdlArrayList<SProdCharValue>(SProdCharValue.class);
+            for (SProdCharValue charValue : originalListCharValue)
+            {
+                SProdCharValue modifyCharValue = new SProdCharValue();
+                modifyCharValue.copy(charValue);
+                charValue.set_expireDate(originalValidDate);
+                modifyCharValue.set_syncFlag(context.getSyncFlag());
+                FirstActiveHelper.moveTimeSection(modifyCharValue, activeDate, mainPromFlag);
+                modifyListCharValue.add(modifyCharValue);
+            }
+
+            originalOrderInfo.set_listCharValue(originalListCharValue);
+            modifyDataOrderInfo.set_listCharValue(modifyListCharValue);
+        }
+
+        // 平移SProdPriceParam
+        if (!CommonUtil.isEmpty(originalListPriceParam))
+        {
+            CsdlArrayList<SProdPriceParam> modifyListPriceParam = new CsdlArrayList<SProdPriceParam>(SProdPriceParam.class);
+            for (SProdPriceParam priceParam : originalListPriceParam)
+            {
+                SProdPriceParam modifyPriceParam = new SProdPriceParam();
+                modifyPriceParam.copy(priceParam);
+                priceParam.set_expireDate(originalValidDate);
+                modifyPriceParam.set_syncFlag(context.getSyncFlag());
+                FirstActiveHelper.moveTimeSection(modifyPriceParam, activeDate, mainPromFlag);
+                modifyListPriceParam.add(modifyPriceParam);
+            }
+
+            originalOrderInfo.set_listPriceParam(originalListPriceParam);
+            modifyDataOrderInfo.set_listPriceParam(modifyListPriceParam);
+        }
+
+        MdbUtil.setNull2Default(originalData);
+        MdbUtil.setNull2Default(modifyData);
+        sProductOrderList.add(originalData);
+        sProductOrderList.add(modifyData);
+
+        // 构造修改数据返回
+        com.ailk.easyframe.sdl.imssdl.MImsSyncDef.SProdInfo sProdInfo = new com.ailk.easyframe.sdl.imssdl.MImsSyncDef.SProdInfo();
+        sProdInfo.set_productId(modifyCoProd.get_productId());
+        // 此处记录的是产品的原生效时间，并非激活后的生效时间，modify by Bug #40955
+        // sProdInfo.set_validDate(modifyCoProd.get_validDate());
+        sProdInfo.set_validDate(originalValidDate);
+        sProdInfo.set_expireDate(modifyCoProd.get_expireDate());
+        sProdInfo.set_billingType(modifyCoProd.get_billMode());
+        // sProdInfo.set_pricePlanId(pricePlanId.intValue());
+        sProdInfo.set_productOfferingId(modifyCoProd.get_productOfferingId());
+        modProdList.add(sProdInfo);
+
+    }
+
+    /**
+     * @Description: 获取产品的变更数据
+     * @param sFirstAct
+     * @param sQeuryInfo
+     * @param rule
+     * @param firstActiveRes addProdInfo需要设值的字段：productId,productOfferingId,pricePlanId billingType,validDate,expireDate
+     *            modProdInfo需要设值的字段：productId,validDate,expireDate delProdInfo需要设值的字段：productId,validDate,expireDate
+     * @param cancelProdOrder 保存新增的主产品信息，当reward失败时，需要将其置成失效，因为全量上发不会删除新增的记录
+     * @param chgMainPordId4CRM
+     * @return
+     */
+    public CsdlArrayList<com.ailk.easyframe.sdl.MMdbSyncUpApp.SProductOrder> getListSProdInfo(
+            com.ailk.easyframe.sdl.imssdl.MImsSyncDef.SFirstAct sFirstAct, SQueryInfo queryInfo, PmFirstActiveRule rule,
+            SFirstActiveRes firstActiveRes, com.ailk.easyframe.sdl.MMdbSyncUpApp.SProductOrder cancelProdOrder)
+    {
+        CsdlArrayList<com.ailk.easyframe.sdl.MMdbSyncUpApp.SProductOrder> sProductOrderList = new CsdlArrayList<com.ailk.easyframe.sdl.MMdbSyncUpApp.SProductOrder>(
+                com.ailk.easyframe.sdl.MMdbSyncUpApp.SProductOrder.class);
+
+        CsdlArrayList<SProdInfo> listSProdInfo = FirstActiveHelper.getSProdInfoListInContext(context);
+
+        CsdlArrayList<com.ailk.easyframe.sdl.imssdl.MImsSyncDef.SProdInfo> delProdList = new CsdlArrayList<com.ailk.easyframe.sdl.imssdl.MImsSyncDef.SProdInfo>(
+                com.ailk.easyframe.sdl.imssdl.MImsSyncDef.SProdInfo.class);
+        CsdlArrayList<com.ailk.easyframe.sdl.imssdl.MImsSyncDef.SProdInfo> addProdList = new CsdlArrayList<com.ailk.easyframe.sdl.imssdl.MImsSyncDef.SProdInfo>(
+                com.ailk.easyframe.sdl.imssdl.MImsSyncDef.SProdInfo.class);
+        CsdlArrayList<com.ailk.easyframe.sdl.imssdl.MImsSyncDef.SProdInfo> modProdList = new CsdlArrayList<com.ailk.easyframe.sdl.imssdl.MImsSyncDef.SProdInfo>(
+                com.ailk.easyframe.sdl.imssdl.MImsSyncDef.SProdInfo.class);
+
+        for (SProdInfo prodInfo : listSProdInfo)
+        {
+            // 2012-02-10 wukl 若配置的主产品跟用户原主产品一致，则原主产品继续使用，不做变更，只是更新产品的生失效时间
+            if (prodInfo.get_isMain() == EnumCodeDefine.PRODUCT_MAIN && null != rule && null != rule.getDestOfferingId()
+                    && prodInfo.get_promOfferId() == rule.getDestOfferingId())
+            {
+                logger.info("****** find rule but not change product, because of change product is equals to original product,offering id = "
+                        + rule.getDestOfferingId());
+            }
+
+            // 判断主产品是否变更
+            if (prodInfo.get_isMain() == EnumCodeDefine.PRODUCT_MAIN && null != rule && null != rule.getDestOfferingId()
+                    && prodInfo.get_promOfferId() != rule.getDestOfferingId().intValue())
+            {
+                changeMainProduct(sProductOrderList, sFirstAct, prodInfo, queryInfo, rule, delProdList, addProdList,
+                        cancelProdOrder);
+            }
+            else
+            {
+                // 平移产品的生失效时间
+                moveProductTime(sProductOrderList, sFirstAct, prodInfo, queryInfo, rule, modProdList);
+            }
+        }
+
+        firstActiveRes.set_addProdList(addProdList);
+        firstActiveRes.set_delProdList(delProdList);
+        firstActiveRes.set_modProdList(modProdList);
+        return sProductOrderList;
+    }
+
+    /**
+     * @Description: CRM流程 修改用户基本信息
+     * @param firstActiveRes
+     */
+    public void modifySubscriberBasicInfo(SFirstActiveRes firstActiveRes)
+    {
+        logger.info("****** firstactive operate db, modify user basicInfo");
+        UserComponent userCmp = context.getComponent(UserComponent.class);
+        com.ailk.openbilling.persistence.imsintf.entity.SUser user = new com.ailk.openbilling.persistence.imsintf.entity.SUser();
+        user.setPhone_id(firstActiveRes.get_phoneId());
+        user.setUser_id(firstActiveRes.get_userId());
+
+        Short ivrLang = firstActiveRes.get_ivrLanguage();
+        if (CommonUtil.isValid(ivrLang))
+        {
+            user.setIvr_language(ivrLang);
+        }
+        Short smsLang = firstActiveRes.get_smsLanguage();
+        if (CommonUtil.isValid(smsLang))
+        {
+            user.setSms_language(smsLang);
+        }
+
+        Short ussdLang = firstActiveRes.get_ussdLanguage();
+        if (CommonUtil.isValid(ussdLang))
+        {
+            user.setUssd_language(ussdLang);
+        }
+
+        user.setActive_date(DateUtil.UTCToString(firstActiveRes.get_activationTime()));
+        userCmp.modifyCmResourceInfo(user);
+    }
+
+    /**
+     * @Description: DCC流程 异步数据入库调用reward接口传入handlytype=2；CRM流程调用传入hanglytype=0
+     * @param tCaRewardInfoList
+     * @param firstActiveRes
+     * @param mainPromotion
+     * @param pricePlanId
+     * @param rewardResult
+     */
+    public void reward(CsdlArrayList<SCaRewardInfo> tCaRewardInfoList, SFirstActiveRes firstActiveRes, CoProd mainPromotion,
+            Integer pricePlanId, Short notifyFlag, RewardResult outRewardResult)
+    {
+        List<CaRewardInfo> caRewardInfoList = new ArrayList<CaRewardInfo>();
+        caRewardInfoList = getJavaRewardList(tCaRewardInfoList);
+        List<RewardAsset> listRewardAsset = new ArrayList<RewardAsset>();
+
+        RewardAsset rewardAsset = null;
+        for (CaRewardInfo rewardInfo : caRewardInfoList)
+        {
+            if (rewardInfo == null)
+                continue;
+
+            List<SAssetInfo> listAsset = rewardInfo.getAssetInfoList();
+            if (CommonUtil.isEmpty(listAsset))
+                continue;
+
+            for (SAssetInfo sAssetInfo : listAsset)
+            {
+                if (sAssetInfo == null)
+                    continue;
+                rewardAsset = new RewardAsset();
+                rewardAsset.setAllotId(rewardInfo.getAllotId());
+                rewardAsset.setAssetId(sAssetInfo.getAssetId());
+                rewardAsset.setAssetItemId(sAssetInfo.getAssetItemId());
+                rewardAsset.setRewardId(rewardInfo.getRewardId());
+
+                listRewardAsset.add(rewardAsset);
+            }
+        }
+
+        Long acctId = firstActiveRes.get_acctId();
+        Integer billingType = EnumCodeDefine.PROD_BILLTYPE_PREPAID;
+        Long resourceId = firstActiveRes.get_userId();
+        String location = firstActiveRes.get_location();
+
+        // 若DCC流程则设置为只处理数据库
+        Short handleType = EnumCodeDefine.REWARD_HANDLETYPE_MDB_DB;
+        if (context.getOper().getBusi_code() == EnumCodeDefine.FIRST_ACTIVE_4_TS_BUSI_BEAN)
+        {
+            handleType = EnumCodeDefine.REWARD_HANDLETYPE_DB;
+        }
+
+        // 参数中增加变更前主产品的销售品ID 2011-11-15 wukl
+        Integer orgOfferId = mainPromotion.getProductOfferingId();
+
+        RewardResult rewardResult = context.getComponent(RewardComponent.class).doFirstActiveReward(acctId, billingType,
+                resourceId, handleType, location, listRewardAsset, orgOfferId, pricePlanId,
+                DateUtil.UTCToDate(firstActiveRes.get_activationTime()), notifyFlag);
+
+        outRewardResult.copy(rewardResult);
+    }
+
+    // ####################################上面是DCC流程的首次激活，下面是CRM流程的首次激活######################
+    public SFirstAct getSFirstAct(SFristActiveReq activeReq)
+    {
+        SFirstAct firstAct = new SFirstAct();
+        firstAct.set_activationTime(IMSUtil.getMdbDate(DateUtil.getFormattedDate(activeReq.getActivation_time())));
+        com.ailk.openbilling.persistence.imsintf.entity.SBalance javaBalance = activeReq.getBalance();
+        if (javaBalance != null)
+        {
+            com.ailk.easyframe.sdl.imssdl.MImsSyncDef.SBalance sdlBalance = new SBalance();
+            ConvertUtil.copyJava2Sdl(sdlBalance, javaBalance);
+            firstAct.set_balance(sdlBalance);
+        }
+        else
+        {
+            firstAct.set_balance(null);
+        }
+
+        if (CommonUtil.isValid(activeReq.getDevice_type()))
+        {
+            firstAct.set_deviceType(Short.parseShort(activeReq.getDevice_type()));
+        }
+        if (activeReq.getSms_lang() != null)
+        {
+            firstAct.set_smsLang(activeReq.getSms_lang());
+        }
+        if (activeReq.getIvr_lang() != null)
+        {
+            firstAct.set_ivrLang(activeReq.getIvr_lang());
+        }
+        if (!CommonUtil.isEmpty(activeReq.getLocation()))
+        {
+            firstAct.set_location(activeReq.getLocation());
+        }
+        if (activeReq.getUssd_lang() != null)
+        {
+            firstAct.set_ussdLang(activeReq.getUssd_lang());
+        }
+        firstAct.set_userId(activeReq.getUser_id());
+        firstAct.set_phoneId(activeReq.getPhone_id());
+
+        return firstAct;
+    }
+
+    /**
+     * @Description: 对SBalance调用现金充值业务接口
+     * @param firstActiveRes
+     */
+    public void deposit(SFirstActiveRes firstActiveRes)
+    {
+        if (isFirstActiveByDCC())
+        {
+            return;
+        }
+
+        if (firstActiveRes.get_balance() == null)
+            return;
+
+        com.ailk.openbilling.persistence.imsintf.entity.SBalance balance = ConvertUtil.sdlBalance2Java(firstActiveRes
+                .get_balance());
+        SBalanceList balanceList = null;
+        balanceList = new SBalanceList();
+        com.ailk.openbilling.persistence.imsintf.entity.SBalance[] item = new com.ailk.openbilling.persistence.imsintf.entity.SBalance[1];
+
+        // @Date 2012-4-16 tangjl5 Bug #44162 首次激活时，若balance节点中没有传入user_id、acct_id，则从SFirstActiveRes获取user_id，对用户进行充值
+        if (!CommonUtil.isValid(balance.getAcct_id()) && !CommonUtil.isValid(balance.getUser_id()))
+        {
+            if (CommonUtil.isValid(firstActiveRes.get_userId()))
+            {
+                balance.setUser_id(firstActiveRes.get_userId());
+            }
+            else
+            {
+                balance.setUser_id(context.get3hTree().loadUser3hBean(firstActiveRes.get_phoneId()).getUserId());
+            }
+        }
+        item[0] = balance;
+        balanceList.setSBalanceList_Item(item);
+
+        logger.info("****** firstactive operate db, access inteface[doDeposit]");
+        context.getComponent(AccountComponent.class).topup(balanceList);
+    }
+
+    /**
+     * @Description: 判断首次激活是否是DCC流程
+     * @return
+     */
+    public boolean isFirstActiveByDCC()
+    {
+        int busiCode = context.getOper().getBusi_code().intValue();
+        if (busiCode == EnumCodeDefine.FIRST_ACTIVE_4_XDR_BUSI_BEAN || busiCode == EnumCodeDefine.FIRST_ACTIVE_4_TS_BUSI_BEAN)
+        {
+            return true;
+        }
+        return false;
+    }
+
+    /**
+     * 判断是否是首次激活业务 wukl 2011-12-31
+     * 
+     * @return
+     */
+    public boolean isFirstActvie()
+    {
+        int busiCode = context.getOper().getBusi_code().intValue();
+        if (busiCode == EnumCodeDefine.FIRST_ACTIVE_BY_CRM || isFirstActiveByDCC())
+        {
+            return true;
+        }
+        if (ProjectUtil.is_CN_SH() && busiCode == EnumCodeDefine.FIRST_ACTIVE_BY_CRM_4_SH)
+        {
+            return true;
+        }
+        return false;
+    }
+
+    public void doFirstActive2MDB(SFirstAct sdlFirstAct, SXdr sxdr, SQueryInfo sQueryInfo, CBSErrorMsg errorMsg, StringBuffer sb)
+    {
+        long start = System.currentTimeMillis();
+        // logger.debug(LogUtil.buildLogInfo("+++++++ begin to package data with firstactive", context));
+        // 实例化保存到队列中的FirstActiveRes对象
+        SFirstActiveRes firstActiveRes = initSFirstActiveRes(sdlFirstAct);
+
+        logger.info("****** firstactive by dcc, match regionCode by location, original location = " + sdlFirstAct.get_location());
+        String location = patchRegionCode(sdlFirstAct.get_location(), sdlFirstAct.get_activationTime());
+        firstActiveRes.set_location(location);
+        sdlFirstAct.set_location(location);
+        logger.info("****** firstactive by dcc, match regionCode by location, location = " + location);
+        sb.append("** 根据location匹配region：" + (System.currentTimeMillis() - start) + "ms \r\n");
+        start = System.currentTimeMillis();
+
+        // 修改用户状态，并返回上发MDB的对象
+        logger.info("****** firstactive sycn mdb, modify user lifeCycle");
+        SImUserCycle alarmCycle = new SImUserCycle();// 告警返回用户当前状态、生失效时间
+        CsdlArrayList<SImUserCycle> userCycleList = getListSImUserCycle(sdlFirstAct, alarmCycle);
+        sb.append("** 修改用户状态：" + (System.currentTimeMillis() - start) + "ms \r\n");
+        start = System.currentTimeMillis();
+
+        // 修改用户的激活时间、基本信息，返回上发MDB的对象
+        logger.info("****** firstactive sycn mdb, modify user basicInfo");
+        CsdlArrayList<SImUser> userList = getListSimUser(sdlFirstAct);
+        sb.append("** 修改用户基本信息：" + (System.currentTimeMillis() - start) + "ms \r\n");
+        start = System.currentTimeMillis();
+
+        // 获取主产品规则配置
+        Integer pricePlanId = getPricePlandId4DCC(location, sdlFirstAct.get_activationTime());
+        PmFirstActiveRule rule = null;
+        if (pricePlanId != null)
+        {
+            rule = getRuleAndUrl(pricePlanId, DateUtil.UTCToDate(sdlFirstAct.get_activationTime()));
+            // rule = context.getComponent(RuleComponent.class).getChgPromRule2Cache(pricePlanId,
+            // DateUtil.UTCToDate(sdlFirstAct.get_activationTime()));
+            firstActiveRes.set_pricePlanId(pricePlanId);// 2011-11-25 增加priceplanId的传入
+        }
+        logger.info("****** firstactive sycn mdb, match change main prom rule = " + rule);
+        sb.append("** 获取主产品规则：" + (System.currentTimeMillis() - start) + "ms \r\n");
+        start = System.currentTimeMillis();
+
+        // 修改产品信息，返回上发MDB的对象
+        logger.info("****** firstactive sycn mdb, modify product");
+        com.ailk.easyframe.sdl.MMdbSyncUpApp.SProductOrder cancelProdOrder = new com.ailk.easyframe.sdl.MMdbSyncUpApp.SProductOrder();
+        CsdlArrayList<com.ailk.easyframe.sdl.MMdbSyncUpApp.SProductOrder> sProductOrderList = getListSProdInfo(sdlFirstAct,
+                sQueryInfo, rule, firstActiveRes, cancelProdOrder);
+        sb.append("** 修改产品信息：" + (System.currentTimeMillis() - start) + "ms \r\n");
+        start = System.currentTimeMillis();
+        // logger.debug(LogUtil.buildLogInfo("+++++++ finsh to package data with firstactive", start, context));
+
+        // logger.debug(LogUtil.buildLogInfo("+++++++ begin to imsync_newUserOrderList", context));
+        // 激活的数据更新到MDB中
+        updateData2MDB(userList, userCycleList, sProductOrderList, errorMsg);
+        // logger.debug(LogUtil.buildLogInfo("+++++++ finsh to imsync_newUserOrderList", start, context));
+        sb.append("** 更新激活数据到MDB：" + (System.currentTimeMillis() - start) + "ms \r\n");
+        start = System.currentTimeMillis();
+
+        // 在reward前，发送welcome信息
+        notifyWelcome(rule, firstActiveRes, alarmCycle, errorMsg);
+        sb.append("** 发送welcome短信通知：" + (System.currentTimeMillis() - start) + "ms \r\n");
+        start = System.currentTimeMillis();
+
+        // 调用Reward，并实例化reward产品
+        List<CaRewardInfo> caRewardInfoList = null;
+        // logger.debug(LogUtil.buildLogInfo("+++++++ begin to reward", context));
+        try
+        {
+            caRewardInfoList = updateReward2MDB(sdlFirstAct, rule, firstActiveRes, pricePlanId, sProductOrderList, sxdr, errorMsg);
+
+        }
+        catch (Exception e)
+        {
+            logger.info("****** firstactive by DCC,  access interface[reward] fail, cancel MDB data");
+            cacelData2MDB(sdlFirstAct, sQueryInfo, cancelProdOrder, errorMsg);
+            throw IMSUtil.throwBusiException(e);
+        }
+        // logger.debug(LogUtil.buildLogInfo("+++++++ finsh to reward", start, context));
+        sb.append("** 进行reward赠送：" + (System.currentTimeMillis() - start) + "ms \r\n");
+        start = System.currentTimeMillis();
+
+        // 调用异步操作DB的接口
+        // logger.debug(LogUtil.buildLogInfo("+++++++ begin to asynOperDB", context));
+        asynOperDB(firstActiveRes, caRewardInfoList, errorMsg);
+        // logger.debug(LogUtil.buildLogInfo("+++++++ finsh to asynOperDB", start, context));
+        sb.append("** 异步操作DB：" + (System.currentTimeMillis() - start) + "ms \r\n");
+        start = System.currentTimeMillis();
+
+        // 将首次的激活信息设置到返回的对象中
+        setBackMessage(sxdr, sdlFirstAct, caRewardInfoList);
+        sb.append("** 设置返回信息：" + (System.currentTimeMillis() - start) + "ms \r\n");
+        start = System.currentTimeMillis();
+
+        logger.info("****** firstactive sycn mdb, access interface[preorder_prod_upload]");
+        // logger.debug(LogUtil.buildLogInfo("+++++++ begin to preOrder", context));
+        context.getComponent(AuthComponent.class).firstActivePreOrderProd4DCC(sProductOrderList,
+                FirstActiveHelper.getSUserExInContext(context), sdlFirstAct, errorMsg);
+        // logger.debug(LogUtil.buildLogInfo("+++++++ finsh to preOrder", start, context));
+        sb.append("** 通知产品扣费：" + (System.currentTimeMillis() - start) + "ms \r\n");
+        start = System.currentTimeMillis();
+        sb.append("** 退出doBusiness方法 \r\n");
+        sb.append("********************************************************************\r\n");
+
+        logger.info(sb.toString());
+        logger.info("****** firstactive sycn mdb, success, soNbr is " + context.getDoneCode() + ",activeTime = "
+                + DateUtil.UTCToString(sdlFirstAct.get_activationTime()));
+    }
+
+    /**
+     * 设置返回信息到SXdr中 wukl 2012-2-26
+     * 
+     * @param sxdr
+     * @param sdlFirstAct
+     * @param caRewardInfoList
+     * @param gprsUrls
+     */
+    private void setBackMessage(SXdr sxdr, SFirstAct sdlFirstAct, List<CaRewardInfo> caRewardInfoList)
+    {
+        SBusinessInfo xdrBusinessInfo = sxdr.get_managerInfo().get_businessInfo();
+        SManagerInfo xdrManagerInfo = sxdr.get_managerInfo();
+        // 设置激活成功信息
+        SBusinessInteraction result = new SBusinessInteraction();
+        result.set_errorCode(0);
+        result.set_errorDesc("FirstActive is success");
+        if (context.getOper().getSo_mode() == EnumCodeDefine.DATA_ACTIVE)
+        {
+            PmFirstActiveGprsUrl gprsUrls = FirstActiveHelper.getGprsUrlsInContext(context);
+            if (gprsUrls != null)
+                result.set_redirectUrl(gprsUrls.getSuccessUrl());
+        }
+        xdrBusinessInfo.set_sbusinessinteraction(result);
+
+        // 若有赠送，则返回赠送的信息
+        if (CommonUtil.isNotEmpty(caRewardInfoList))
+        {
+            CsdlArrayList<SRewardInfo> xdrRewardList = getXdrRewardList(caRewardInfoList);
+            xdrBusinessInfo.set_listRewardInfo(xdrRewardList);
+        }
+        // 放到后面返回账本信息一起返回businessinfo
+        // xdrManagerInfo.set_businessInfo(xdrBusinessInfo);
+        // 2012-07-01 yangjh story:45219 增加账户账本信息返回
+        SAssetBalance xdrAssetBalance = new SAssetBalance();
+        SBalanceInfo xdrBalanceInfo = new SBalanceInfo();
+        CsdlArrayList<com.ailk.easyframe.sdl.imsxdr.MXdr.SBalanceInfo> sBalanceInfoList = new CsdlArrayList<com.ailk.easyframe.sdl.imsxdr.MXdr.SBalanceInfo>(
+                SBalanceInfo.class);
+        CsdlArrayList<com.ailk.easyframe.sdl.imsxdr.MXdr.SAssetInfo> xdrSAssetInfo = javaBalance2XdrBalance();
+        if (CommonUtil.isNotEmpty(xdrSAssetInfo))
+        {
+            xdrBalanceInfo.set_assetInfoList(xdrSAssetInfo);
+            sBalanceInfoList.add(xdrBalanceInfo);
+            xdrAssetBalance.set_balanceInfoList(sBalanceInfoList);
+            xdrBusinessInfo.set_assetBalance(xdrAssetBalance);
+        }
+        xdrManagerInfo.set_businessInfo(xdrBusinessInfo);
+        // 设置active，suspend，disable状态的时间段
+        // logger.debug(LogUtil.buildLogInfo("+++++++ begin to getactive time", context));
+        SUserInfo xdrUserInfo = getActiveUserInfo(sdlFirstAct);
+        // logger.debug(LogUtil.buildLogInfo("+++++++ finsh to getactive time", start, context));
+        xdrManagerInfo.set_userInfo(xdrUserInfo);
+        sxdr.set_managerInfo(xdrManagerInfo);
+    }
+
+    /**
+     * @Description: 获取xdr结构的 SAssetInfo
+     * @param
+     * @return
+     */
+    private CsdlArrayList<com.ailk.easyframe.sdl.imsxdr.MXdr.SAssetInfo> javaBalance2XdrBalance()
+    {
+        CsdlArrayList<com.ailk.easyframe.sdl.imsxdr.MXdr.SAssetInfo> sAssetList = new CsdlArrayList<com.ailk.easyframe.sdl.imsxdr.MXdr.SAssetInfo>(
+                SAssetInfo.class);
+        com.ailk.easyframe.sdl.imsxdr.MXdr.SAssetInfo xdrAsset = null;
+        Holder<PocketBalance> javaPocketBalanceList = getPocketBalanceInfo();
+        long start = System.currentTimeMillis();
+        StringBuffer sb = new StringBuffer();
+        if (javaPocketBalanceList != null && javaPocketBalanceList.get() != null)
+        {
+            List<PocketOut> pocketOutList = javaPocketBalanceList.get().getPocketOuts();
+            if (CommonUtil.isNotEmpty(pocketOutList))
+            {
+                for (PocketOut pocket : pocketOutList)
+                {
+                    if (pocket == null)
+                    {
+                        continue;
+                    }
+                    xdrAsset = new com.ailk.easyframe.sdl.imsxdr.MXdr.SAssetInfo();
+                    xdrAsset.set_acctId(pocket.getAcctId() == null ? null : pocket.getAcctId());
+                    xdrAsset.set_amount(pocket.getAmount());
+                    xdrAsset.set_assetId(pocket.getAssetId());
+                    xdrAsset.set_used(pocket.getUsed());
+                    xdrAsset.set_remainAmount(pocket.getTrueBalance());
+                    xdrAsset.set_assetItemId(pocket.getPocketItem() == null ? 0 : pocket.getPocketItem());
+                    xdrAsset.set_assetType(0);
+                    if (pocket.getBalanceType() != null)
+                    {
+                        xdrAsset.set_billingType(CommonUtil.int2Short(pocket.getBillingType()));
+                    }
+                    if (pocket.getExpireDate() != null)
+                    {
+                        xdrAsset.set_expireDate(IMSUtil.getMdbDate(pocket.getExpireDate()));
+                    }
+                    if (pocket.getValidDate() != null)
+                    {
+                        xdrAsset.set_validDate(IMSUtil.getMdbDate(pocket.getValidDate()));
+                    }
+                    if (pocket.getMeasureId() != null)
+                    {
+                        xdrAsset.set_measureId(pocket.getMeasureId());
+                    }
+                    if (pocket.getIsCommonPocket() != null)
+                    {
+                        if (pocket.getIsCommonPocket().shortValue() == 1)
+                        {
+                            xdrAsset.set_isCommonPocket((short) 1);
+                        }
+                        else
+                        {
+                            xdrAsset.set_isCommonPocket((short) 2);
+                        }
+                    }
+                    if (pocket.getMainBalanceFlag() != null)
+                    {
+                        xdrAsset.set_mainBalanceFlag(pocket.getMainBalanceFlag().shortValue());
+                    }
+                    xdrAsset.set_resourceId(pocket.getResourceId());
+                    if (pocket.getSts() != null)
+                    {
+                        xdrAsset.set_status(CommonUtil.int2Short(pocket.getSts()));
+                    }
+                    sAssetList.add(xdrAsset);
+                }
+            }
+        }
+        sb.append("** 封装账户余额返回参数耗时：" + (System.currentTimeMillis() - start) + "ms \r\n");
+        return sAssetList;
+    }
+
+    /**
+     * 获取帐管返回的pocketBlance结构 yangjh 2012-07-02
+     * 
+     * @param
+     * @return
+     */
+    private Holder<PocketBalance> getPocketBalanceInfo()
+    {
+        Long userId = FirstActiveHelper.getCmResourceInContext(context).getResourceId();
+        Long acctId = FirstActiveHelper.getCaAccountInContext(context).getAcctId();
+        long start = System.currentTimeMillis();
+        StringBuffer sb = new StringBuffer();
+
+        CommonParam head = ConvertUtil.javaOper2CommonParam(context);
+        QueryPocketBalanceInfo qryBalance = new QueryPocketBalanceInfo();
+        Holder<PocketBalance> pocketOuts = new Holder<PocketBalance>();
+        qryBalance.setAcctId(acctId);
+        qryBalance.setResourceId(userId);
+        qryBalance.setStatusFlag(EnumCodeDefine.BALANCE_QUERY_VALID);
+        if (context.getOper().getCharge_flag() != null)
+        {
+            qryBalance.setCalFeeFlag(context.getOper().getCharge_flag());
+        }
+        qryBalance.setOwnerType(0);
+        SpringUtil.getAssetService().queryPocketBalance(qryBalance, head, pocketOuts);
+        sb.append("** 调用查询账户余额接口耗时：" + (System.currentTimeMillis() - start) + "ms \r\n");
+        if (pocketOuts != null && pocketOuts.get() != null)
+        {
+            return pocketOuts;
+        }
+        return null;
+    }
+
+    /**
+     * 初始化SFirstActiveRes，其余值后续设置 wukl 2012-2-26
+     * 
+     * @param sdlFirstAct
+     * @return
+     */
+    private SFirstActiveRes initSFirstActiveRes(SFirstAct sdlFirstAct)
+    {
+        SFirstActiveRes firstActiveRes = new SFirstActiveRes();
+        // @Date 2012-06-11 wangdw5 : On_Site Defect #47941 AIS版本号码头+0
+        // if (!sdlFirstAct.get_phoneId().trim().startsWith("0") && ProjectUtil.is_TH_AIS())
+        // {
+        // firstActiveRes.set_phoneId("0" + sdlFirstAct.get_phoneId().trim());
+        // }
+        // else
+        // {
+        // firstActiveRes.set_phoneId(sdlFirstAct.get_phoneId().trim());
+        // }
+        // @Date 2012-06-14 wangdw5 : User Story #42479 AIS号码头处理
+        String phoneId = PhoneIdHeadUtil.phoneIdParse(sdlFirstAct.get_phoneId().trim());
+        firstActiveRes.set_phoneId(phoneId);
+        firstActiveRes.set_soNbr(context.getDoneCode());
+        firstActiveRes.set_orgLocation(sdlFirstAct.get_location());
+        firstActiveRes.set_smsLanguage(sdlFirstAct.get_smsLang());
+        firstActiveRes.set_ivrLanguage(sdlFirstAct.get_ivrLang());
+        firstActiveRes.set_ussdLanguage(sdlFirstAct.get_ussdLang());
+        firstActiveRes.set_acctId(FirstActiveHelper.getSAccountExInContext(context).get_acctId());
+        firstActiveRes.set_userId(FirstActiveHelper.getSUserExInContext(context).get_servId());
+        firstActiveRes.set_activationTime(sdlFirstAct.get_activationTime());
+        return firstActiveRes;
+    }
+
+    /**
+     * 获取匹配后的regionCode wukl 2012-2-26
+     * 
+     * @param location
+     * @param activationTime
+     * @return
+     */
+    private String patchRegionCode(String location, long activationTime)
+    {
+        String tempLocation = this.getRegionCode(null, location, DateUtil.UTCToDate(activationTime));
+        return CommonUtil.isValid(tempLocation) ? tempLocation : CommonUtil.int2String(FirstActiveHelper.getSUserExInContext(
+                context).get_regionCode());
+    }
+
+    /**
+     * 发送welcome信息 wukl 2011-12-19
+     * 
+     * @param rule
+     * @param mainProm
+     * @param firstActiveRes
+     * @param alarmCycle
+     * @param errorMsg
+     */
+    private void notifyWelcome(PmFirstActiveRule rule, SFirstActiveRes firstActiveRes, SImUserCycle alarmCycle,
+            CBSErrorMsg errorMsg)
+    {
+        // DCC流程的短信通知功能放在操作MDB触发 2011-11-24 wukl
+        SProdInfo mainProm = FirstActiveHelper.getMainSProdInfoInContext(context);
+        logger.info("****** firstactive by DCC, send a message for welcome");
+        Integer offeringId = (rule == null) ? mainProm.get_promOfferId() : rule.getDestOfferingId();
+        logger.debug("++++++  begin to queryPocketBalance");
+        List<IMSNotification> notifications = createNotifications(firstActiveRes, offeringId, alarmCycle, errorMsg);
+        logger.debug("++++++  end to queryPocketBalance");
+        logger.debug("++++++  begin to notification");
+        IMSUtil.doNotification(notifications, context);
+        logger.debug("++++++  end to notification");
+    }
+
+    /**
+     * 进行MDB的reward赠送 wukl 2011-12-19
+     */
+    private List<CaRewardInfo> updateReward2MDB(SFirstAct sdlFirstAct, PmFirstActiveRule rule, SFirstActiveRes firstActiveRes,
+            Integer pricePlanId, CsdlArrayList<com.ailk.easyframe.sdl.MMdbSyncUpApp.SProductOrder> sProductOrderList, SXdr sxdr,
+            CBSErrorMsg errorMsg)
+    {
+        // DCC流程调用reward接口分两步走，这里传入handlyType=1
+        logger.info("****** firstactive by DCC,  access interface[reward], handlyType = 1 and busi_code = "
+                + context.getOper().getBusi_code());
+
+        // 实例化保存到队列中的SCaRewardInfo对象
+
+        SProdInfo mainProm = FirstActiveHelper.getMainSProdInfoInContext(context);
+        RewardResult rewardResp = context.getComponent(RewardComponent.class).doFirstActiveReward(firstActiveRes.get_acctId(),
+                EnumCodeDefine.PROD_BILLTYPE_PREPAID, firstActiveRes.get_userId(), EnumCodeDefine.REWARD_HANDLETYPE_MDB,
+                sdlFirstAct.get_location(), null, mainProm.get_promOfferId(), pricePlanId,
+                DateUtil.UTCToDate(firstActiveRes.get_activationTime()), (short) 1);
+        if (rewardResp == null || CommonUtil.isEmpty(rewardResp.getRewardInfoList()))
+        {
+            return null;
+        }
+
+        return rewardResp.getRewardInfoList();
+    }
+
+    /**
+     * 调用异步操作入库接口 wukl 2011-12-19
+     */
+    private void asynOperDB(SFirstActiveRes firstActiveRes, List<CaRewardInfo> caRewardInfoList, CBSErrorMsg errorMsg)
+    {
+        logger.info("****** firstactive by DCC, access interface[ts_firstAct_upload]");
+        // 设置调用的异步数据入库实现bean对应的busi_code,后续新增主产品时需要用到busi_code
+        context.getOper().setBusi_code(EnumCodeDefine.FIRST_ACTIVE_4_TS_BUSI_BEAN);
+        context.getOper().setNotify_flag((short) 0);
+
+        // 将java.SOperInfo转换成sdl.SOperInfo对象
+        com.ailk.easyframe.sdl.imssdl.MImsSyncDef.SOperInfo operInfo = ConvertUtil.javaOper2SdlOper(context.getOper());
+        try
+        {
+            // 是否本地测试
+            if (SysUtil.isLocalTest())
+            {
+                IImsSyncAppImp.ts_firstAct(operInfo, firstActiveRes, getSdlRewardList(caRewardInfoList), errorMsg);
+            }
+            else
+            {
+                new IImsSyncAppInt().ts_firstAct_upload(operInfo, firstActiveRes, getSdlRewardList(caRewardInfoList), errorMsg);
+
+            }
+            if (errorMsg.get_errorCode() != 0)
+            {
+                IMSUtil.throwBusiException(ErrorCodeDefine.ACCESS_INTERFACE_FAILED, "ts_firstAct_upload");
+            }
+
+        }
+        catch (OBBufferErrorException e)
+        {
+            IMSUtil.throwBusiException(ErrorCodeDefine.ACCESS_INTERFACE_FAILED, "ts_firstAct_upload");
+        }
+    }
+
+    /**
+     * 更新激活业务数据到MDB中 wukl 2011-12-19
+     * @throws IllegalAccessException 
+     * @throws InstantiationException 
+     * @throws SALException 
+     */
+    private void updateData2MDB(CsdlArrayList<SImUser> userList, CsdlArrayList<SImUserCycle> userCycleList,
+            CsdlArrayList<com.ailk.easyframe.sdl.MMdbSyncUpApp.SProductOrder> sProductOrderList, CBSErrorMsg errorMsg)
+    {
+//        IMdbSyncUpAppInt iMdbSyncUpAppInt = new IMdbSyncUpAppInt();
+//        try
+//        {
+            logger.info("****** firstactive sycn mdb, access interface[imsync_newUserOrderList]");
+            List<MdbRdl> result = new ArrayList<MdbRdl>();
+            SalClient client = SpringUtil.getSalClient();
+            Long object_id = null;
+            int object_type = EnumCodeDefine.PROD_OBJECTTYPE_DEV;
+            ListMapMdbRdl userInfoRdl = new ListMapMdbRdl(MdbKVDefine.SYNC_USERINFO, SReturn.class);
+            if(CommonUtil.isNotEmpty(userList)){
+                for (SImUser res : userList)
+                {
+                    userInfoRdl.addRecord(res.get_servId(), this.transMdbSUser(res));
+                    object_id = this.transMdbSUser(res).get_servId();
+                }
+            }
+            
+            ListMapMdbRdl userCycleRdl = new ListMapMdbRdl(MdbKVDefine.SYNC_USERLIFECYCLE, SReturnEx.class);
+            if(CommonUtil.isNotEmpty(userCycleList)){
+                for(SImUserCycle userCycle : userCycleList){
+                    userCycleRdl.addRecord(userCycle.get_servId(), this.transMdbSUserCycle(userCycle));
+                }
+            }
+            
+            ListMapMdbRdl userProdRdl = new ListMapMdbRdl(MdbKVDefine.SYNC_USER_PROD,SReturnEx.class);
+            ListMapMdbRdl prodCharValueRdl = new ListMapMdbRdl(MdbKVDefine.SYNC_PROMCHARVALUE,SReturn.class);
+            ListMapMdbRdl prodBillCycleStsRdl = new ListMapMdbRdl(MdbKVDefine.SYNC_PROD_BILLING_CYCLE,SReturn.class);
+            ListMapMdbRdl prodPriceParamRdl = new ListMapMdbRdl(MdbKVDefine.SYNC_PROD_PRICE_PARAM,SReturn.class);
+            if(CommonUtil.isNotEmpty(sProductOrderList)){
+                for(com.ailk.easyframe.sdl.MMdbSyncUpApp.SProductOrder prodOrder : sProductOrderList){
+                    CsdlArrayList<SOrderInfo> prodInfoList = prodOrder.get_listOrderInfo();
+                    if(CommonUtil.isNotEmpty(prodInfoList)){
+                        for(SOrderInfo prodInfo : prodInfoList){
+                            SCoProd coProd = prodInfo.get_prod();
+                            if(coProd != null){
+                                userProdRdl.addRecord(coProd.get_productId(), this.getSUserProm(coProd));
+                            }
+                            CsdlArrayList<SProdCharValue> charValueList = prodInfo.get_listCharValue();
+                            if(CommonUtil.isNotEmpty(charValueList)){
+                                for(SProdCharValue charValue : charValueList){
+                                    prodCharValueRdl.addRecord(charValue.get_productId(), this.getSPromCharValue(charValue));
+                                }
+                            }
+                            CsdlArrayList<SProdBillCycle> billCycleList = prodInfo.get_listBillCycle();
+                            if(CommonUtil.isNotEmpty(billCycleList)){
+                                for(SProdBillCycle billCycle : billCycleList){
+                                    prodBillCycleStsRdl.addRecord(billCycle.get_productId(),this.getSPromBillCycle(billCycle));
+                                }
+                            }
+                            CsdlArrayList<SProdPriceParam> priceParamList = prodInfo.get_listPriceParam();
+                            if(CommonUtil.isNotEmpty(priceParamList)){
+                                for(SProdPriceParam priceParam : priceParamList){
+                                    prodPriceParamRdl.addRecord(priceParam.get_productId(),this.getSPromPriceParam(priceParam,object_id,object_type));
+                                }
+                            }
+                        }
+                    }
+                }
+                
+            }
+            result.add(userInfoRdl);
+            result.add(userCycleRdl);
+            result.add(userProdRdl);
+            result.add(prodCharValueRdl);
+            result.add(prodPriceParamRdl);
+            result.add(prodBillCycleStsRdl);
+            for (MdbRdl rdl : result)
+            {
+                PrintUtil.print("******* MdbRdl", rdl);
+                //wuyj 解决rdl为null 空指针问题
+                if (rdl == null || rdl.getReqObj() == null)
+                    continue;
+                try
+                {
+                    //@Date 2012-08-18 yangjh : get -> post
+                    Object ret = client.post(rdl.getKv(), rdl.getReqObj(), rdl.getRespClass().newInstance());
+                    PrintUtil.print("******* sync MdbRdl result : ", ret);
+                }
+                catch (SALException e) {
+                    e.printStackTrace();
+                }catch(Exception e){
+                    logger.error(e,e);
+                }
+               
+            }
+//            iMdbSyncUpAppInt.imsync_newUserOrderList(new CsdlArrayList<SImCustomer>(SImCustomer.class), userList,
+//                    new CsdlArrayList<SImUserAcctRel>(SImUserAcctRel.class), new CsdlArrayList<SImAccount>(SImAccount.class),null,
+//                    new CsdlArrayList<SImIdentityPwd>(SImIdentityPwd.class), new CsdlArrayList<SImIdentityBound>(
+//                            SImIdentityBound.class), userCycleList, new CsdlArrayList<SImAcctCycle>(SImAcctCycle.class),
+//                    new CsdlArrayList<SImAcctContact>(SImAcctContact.class), new CsdlArrayList<SImAcctBillCycle>(
+//                            SImAcctBillCycle.class), null, MdbUtil.rebuildProductOrderList(sProductOrderList),
+//                    new CsdlStructObjectHolder<SResult>(new SResult()), errorMsg);
+//
+//            if (errorMsg.get_errorCode() != 0)
+//            {
+//                IMSUtil.throwBusiException(ErrorCodeDefine.ACCESS_INTERFACE_FAILED, "imsync_newUserOrderList");
+//            }
+//        }
+//        catch (OBBufferErrorException e)
+//        {
+//            IMSUtil.throwBusiException(ErrorCodeDefine.SYNC_DATA_TO_MDB_FAILED);
+//        }
+
+    }
+
+    /**
+     * 从MDB查询用户、客户、用户级产品信息 wukl 2011-12-17
+     */
+    public SQueryInfo queryDataFromMDB(SFirstAct sdlFirstAct, CBSErrorMsg errorMsg)
+    {
+        // 调用MDB的查询接口查询用户信息、客户信息和所有产品信息
+        IMdbSyncUpAppInt iMdbSyncUpAppInt = new IMdbSyncUpAppInt();
+        SQueryPara sQueryPara = new SQueryPara();
+        // @Date 2012-5-22 tangjl5 On_Site Defect #46493 查询用户信息时添加0开头
+        // @Date 2012-06-14 wangdw5 : User Story #42479 AIS号码头处理
+        String phoneId = PhoneIdHeadUtil.phoneIdParse(sdlFirstAct.get_phoneId().trim());
+        sQueryPara.set_userNumber(phoneId);
+        // 2012-07-11 yangjh story:51229 DCC查询MDB改SAL查询
+        SQueryInfo qeuryInfo = new SQueryInfo();
+        SQueryInfo queryResult = new SQueryInfo();
+        SalClient client = SpringUtil.getSalClient();
+        // CsdlStructObjectHolder<SQueryInfo> sQeuryInfoHolder = new CsdlStructObjectHolder<SQueryInfo>(qeuryInfo);
+        try
+        {
+            queryResult = client.get(MdbKVDefine.QUERY_USER_INFO, sQueryPara, qeuryInfo);
+            // story:51229 DCC查询MDB改SAL查询 增加返回错误的错误判断
+            if (queryResult.get_retValue() != 0)
+            {
+                IMSUtil.throwBusiException(ErrorCodeDefine.ACCESS_INTERFACE_FAILED, "salQueryInfo");
+            }
+            // 空判断移到前面
+            if (CommonUtil.isEmpty(queryResult.get_userInfo()))
+            {
+                IMSUtil.throwBusiException(ErrorCodeDefine.QUERY_DATA_FROM_MDB_ERROR);
+            }
+        }
+        catch (OBBufferErrorException e)
+        {
+            IMSUtil.throwBusiException(ErrorCodeDefine.QUERY_DATA_FROM_MDB_ERROR);
+        }
+        catch (SALException e)
+        {
+            e.printStackTrace();
+        }
+
+        logger.info("****** firstactive sycn mdb, access interface[imsync_queryInfo] to query data, phone ="
+                + sdlFirstAct.get_phoneId());
+
+        return queryResult;
+    }
+
+    public void doFirstActive2DB(SFirstActiveRes firstActiveRes, CsdlArrayList<SCaRewardInfo> rewardInfoList, Short notifyFlag,
+            Integer offeringId, CoProd mainPromotion, Integer pricePlanId, RewardResult rewardResult)
+    {
+        // 将请求的时间、流水号设置为记录的流水号、时间
+        context.setDoneCode(firstActiveRes.get_soNbr());
+        context.addExtendParam(ConstantDefine.ACTIVE_DATE, DateUtil.UTCToDate(firstActiveRes.get_activationTime()));
+
+        this.invokeLifeCycleBusiBean(firstActiveRes.get_userId(), DateUtil.UTCToString(firstActiveRes.get_activationTime()),
+                firstActiveRes.get_addProdList());
+
+        this.modifySubscriberBasicInfo(firstActiveRes);
+
+        // @date 2012-03-22 wukl 充值时状态校验，回调do_queryUser接口，导致充值失败
+        User3hBean userBean = context.get3hTree().loadUser3hBean(firstActiveRes.get_userId());
+        context.get3hTree().remove3hBean(userBean);
+
+        // 上海不需要
+        if (ProjectUtil.is_TH_AIS())
+        {
+            CsdlArrayList<com.ailk.easyframe.sdl.imssdl.MImsSyncDef.SProdInfo> delList = firstActiveRes.get_delProdList();
+            CsdlArrayList<com.ailk.easyframe.sdl.imssdl.MImsSyncDef.SProdInfo> addList = firstActiveRes.get_addProdList();
+            if (CommonUtil.isNotEmpty(delList) && CommonUtil.isNotEmpty(addList))
+            {
+                this.changeMainProd(delList.get(0), addList.get(0), firstActiveRes);
+            }
+            /*
+             * CsdlArrayList<com.ailk.easyframe.sdl.imssdl.MImsSyncDef.SProdInfo> delList = firstActiveRes.get_delProdList(); if
+             * (!CommonUtil.isEmpty(delList)) { logger.info("****** firstactive operate db, delete main promotion"); for
+             * (com.ailk.easyframe.sdl.imssdl.MImsSyncDef.SProdInfo prod : delList) { this.delMainProd(prod); } }
+             * CsdlArrayList<com.ailk.easyframe.sdl.imssdl.MImsSyncDef.SProdInfo> addList = firstActiveRes.get_addProdList(); if
+             * (!CommonUtil.isEmpty(addList)) {
+             * logger.info("****** firstactive operate db, add main promotion and free resource"); for
+             * (com.ailk.easyframe.sdl.imssdl.MImsSyncDef.SProdInfo prod : addList) { this.addProd(prod, firstActiveRes); } }
+             */
+
+            CsdlArrayList<com.ailk.easyframe.sdl.imssdl.MImsSyncDef.SProdInfo> modList = firstActiveRes.get_modProdList();
+            if (!CommonUtil.isEmpty(modList))
+            {
+                logger.info("****** firstactive operate db, update promotion");
+                for (com.ailk.easyframe.sdl.imssdl.MImsSyncDef.SProdInfo prod : modList)
+                {
+                    this.modProd(prod, firstActiveRes);
+                }
+            }
+        }
+
+        // 将SoNbr保存在线程局部变量中，reward接口调用产品订购方法时则依据此值判断是否写数据到同步产品给CRM的接口表中
+        ThreadUtil.setThreadLocal(firstActiveRes.get_soNbr());
+
+        // notify 通知功能不采用框架的处理，因为首次激活的welcome信息要放到reward短信通知前
+        if (notifyFlag == null || notifyFlag.shortValue() == EnumCodeDefine.SEND_NOTIFICATION)
+        {
+            logger.info("****** firstactive operate db, send a message for welcome");
+            List<IMSNotification> notifications = createNotifications(firstActiveRes, offeringId, null, new CBSErrorMsg());
+            IMSUtil.doNotification(notifications, context);
+        }
+
+        // 上海不需要
+        if (ProjectUtil.is_TH_AIS())
+        {
+            // 调用现金充值接口do_deposit
+            this.deposit(firstActiveRes);
+
+            // 调用reward接口
+            logger.info("****** firstactive operate db, access interface[reward]");
+            this.reward(rewardInfoList, firstActiveRes, mainPromotion, pricePlanId, notifyFlag, rewardResult);
+        }
+    }
+
+    /**
+     * @param csdlArrayList
+     * @Description: 调用生命周期业务处理方法
+     * @param userID
+     */
+    public void invokeLifeCycleBusiBean(Long userId, String activeDate,
+            CsdlArrayList<com.ailk.easyframe.sdl.imssdl.MImsSyncDef.SProdInfo> addProdList)
+    {
+        logger.info("****** firstactive operate db, modify user lifeCycle");
+        LifeCycleComponent lifeCycleCmp = context.getComponent(LifeCycleComponent.class);
+        Map<String, Object> dataMap = lifeCycleCmp.getAllInfoByPhoneIdOrUserId(null, userId);
+
+        lifeCycleCmp.updateLifeCycleAndValidityByFirstActive((CmResource) dataMap.get(ConstantDefine.TYPE_USER),
+                (CmCustomer) dataMap.get(ConstantDefine.TYPE_CUST), (CaAccount) dataMap.get(ConstantDefine.TYPE_ACCT),
+                this.packageSUserStatus(userId, activeDate, addProdList));
+    }
+
+    private SUserStatus packageSUserStatus(Long userId, String validate,
+            CsdlArrayList<com.ailk.easyframe.sdl.imssdl.MImsSyncDef.SProdInfo> addProdList)
+    {
+        SUserStatus userStatus = new SUserStatus();
+        userStatus.setUser_id(userId);
+        userStatus.setNew_state((short) EnumCodeDefine.LIFECYCLE_ACTIVE);// 置为激活状态
+        userStatus.setValid_date(validate);
+        // 2011-01-14 若用户发生主产品变更（变更后的产品不允许是pre_match），则将unbilling_flag 置为0
+        if (CommonUtil.isNotEmpty(addProdList))
+            userStatus.setUnbilling_flag((short) EnumCodeDefine.LIFECYCLE_UNBILLING_FLAG_NO);
+        return userStatus;
+    }
+
+    /*
+     * 将接口数据存入到接口表中，用于同步给CRM
+     */
+    public void insertCmCustProdSync(SFirstActiveRes firstActiveRes, RewardResult rewardResult)
+    {
+        logger.info("****** firstactive operate db, insert[CD.IMS_CUST_PROD_SYNC] for sync crm");
+        if (context.getOper().getSo_mode() == EnumCodeDefine.REWARD_HANDLETYPE_MDB)
+        {
+            return;
+        }
+        ImsCustProdSync custProdSync = new ImsCustProdSync();
+        // @Date 2012-04-17 wukl IMS开头的接口表，统一取DEFAULT_GLOBAL_SEQ
+        custProdSync.setId(DBUtil.getSequence());
+        custProdSync.setSoNbr(this.getContext().getDoneCode());
+        custProdSync.setSts(EnumCodeDefine.SYNC_CRM_RECORD_STS_INITIAL);
+        custProdSync.setCreateDate(this.getContext().getRequestDate());
+        custProdSync.setActiveCac(firstActiveRes.get_orgLocation());
+
+        custProdSync.setAcctId(firstActiveRes.get_acctId());
+        custProdSync.setActChannel(context.getOper().getSo_mode().intValue());
+        custProdSync.setActivationTime(DateUtil.UTCToDate(firstActiveRes.get_activationTime()));
+        custProdSync.setUserId(firstActiveRes.get_userId());
+        UserComponent userCmp = context.getComponent(UserComponent.class);
+        Long acctId=null;
+        try
+        {
+            acctId=context.get3hTree().loadUser3hBean(firstActiveRes.get_userId()).getAcctId();
+        }
+        catch(IMS3hNotFoundException e)
+        {
+        }
+        CmResource cmResource = userCmp.queryUserByUserID(firstActiveRes.get_userId());
+        CmCustomer customer = context.get3hTree().loadAcct3hBean(acctId).getCustomer();
+        custProdSync.setCustId(customer.getCustId());
+        custProdSync.setPhoneId(firstActiveRes.get_phoneId());
+        custProdSync.setIvrLanguage(cmResource.getListeningLanguage());
+        custProdSync.setSmsLanguage(cmResource.getReadingLanguage());
+        custProdSync.setUssdLanguage(cmResource.getWritingLanguage());
+        custProdSync.setExpireDate(cmResource.getExpireDate());
+        // 用于查询赠送的信息
+        custProdSync.setBosSoDate(DateUtil.UTCToDate(firstActiveRes.get_activationTime()));
+        custProdSync.setBosSoNbr(rewardResult.getSoNbr());
+
+        insert(custProdSync);
+    }
+
+    public List<IMSNotification> createNotifications(SFirstActiveRes firstActiveRes, Integer offeringId, SImUserCycle alarmCycle,
+            CBSErrorMsg errorMsg)
+    {
+        List<IMSNotification> notifyList = new ArrayList<IMSNotification>();
+
+        IMSNotification imsNotify = new IMSNotification();
+        imsNotify.setUserId(firstActiveRes.get_userId());
+        imsNotify.setAlarmId(getNotificationIdByBusiPlan(firstActiveRes));
+        imsNotify.addParam(AlarmCodeDefine.PARAM_PHONE_ID, firstActiveRes.get_phoneId());
+        imsNotify.addParam(AlarmCodeDefine.PARAM_OFFERING_ID, CommonUtil.int2String(offeringId));
+        PmProductOffering offer = context.getComponent(CacheQuery.class).queryPmProductOfferingByOfferId(offeringId);
+        // 2012-05-10 wangyh3 PmProductOffering去掉了brandId字段,改从pd.pm_offering_brand_rel表中取
+        Integer brandId = context.getComponent(ProductQuery.class).queryBrandByOffering(offer.getProductOfferingId());
+        imsNotify.addParam(AlarmCodeDefine.PARAM_BRAND_ID, CommonUtil.int2String(brandId));
+        // imsNotify.addParam(AlarmCodeDefine.PARAM_VALID_DATE,
+        // DateUtil.getFormatDate(user.getValidDate(), DateUtil.DATE_FORMAT_EN_B_YYYYMMDDHHMMSS));
+
+        Long acctId = null;
+        if (isFirstActiveByDCC())
+        {
+            // 当前生命状态
+            imsNotify.addParam(AlarmCodeDefine.PARAM_LIFECYCLE_STATUS, ("10" + String.valueOf(alarmCycle.get_userCycle())
+                    .substring(6)));
+            // 当前生命状态的失效时间
+            imsNotify.addParam(AlarmCodeDefine.PARAM_LIFECYCLE_STATUS_EXPIREDATE,
+                    ConvertUtil.sdlTime2SdlLong(alarmCycle.get_expireDate()) + "");
+            // 当前生命状态的生效时间
+            imsNotify.addParam(AlarmCodeDefine.PARAM_VALID_DATE, ConvertUtil.sdlTime2SdlLong(alarmCycle.get_validDate()) + "");
+
+            SUserEx sUserEx = FirstActiveHelper.getSUserExInContext(context);
+            SCustomer sCustomer = FirstActiveHelper.getSCustomerInContext(context);
+            SAccountEx account = FirstActiveHelper.getSAccountExInContext(context);
+
+            imsNotify.addParam(AlarmCodeDefine.PARAM_ACCOUNT_TYPE, CommonUtil.int2String(account.get_accountType()));
+            acctId = sUserEx.get_acctId();
+            imsNotify.setCustId(sCustomer.get_custId());
+            imsNotify.setAcctId(sUserEx.get_acctId());
+            // sAbmBalanceQueryUp.set_acctId(sUserEx.get_acctId());
+        }
+        else
+        {
+            CmResLifecycle userCycle=null;
+            if(ProjectUtil.is_CN_SH())
+            {
+                try
+                {
+                    userCycle = context.get3hTree().loadUser3hBean(firstActiveRes.get_userId()).getUserLifeCycle();
+                }
+                catch(IMS3hNotFoundException e)
+                {
+                    IMSUtil.throwBusiException(ErrorCodeDefine.LIFE_CYCLE_IS_NULL, firstActiveRes.get_userId());
+                }
+            }
+            else
+            {
+                try
+                {
+                    userCycle = context.get3hTree().loadUser3hBean(firstActiveRes.get_userId()).getUserLifeCycle();
+                    if(userCycle.getRecSts()!=EnumCodeDefine.IS_VALID_DATA)
+                    {
+                     // 2012-06-11 wuyujie : 查询不到生命周期不应该抛异常
+                        userCycle=null;
+                    }
+                    else if (userCycle.getExpireDate().before(context.getRequestDate()))
+                    {
+                        userCycle.setOsSts(CommonUtil.string2Integer(String.valueOf(userCycle.getNextSts()).substring(0, 2)));
+
+                        // @Date 2012-5-24 tangjl5 #45585: 生命周期状态nextsts在数据库里面的存储要改为8位
+                        userCycle.setSts(CommonUtil.string2Integer("10" + String.valueOf(userCycle.getNextSts()).substring(6, 8)));
+                    }
+                 }
+                catch(IMS3hNotFoundException e)
+                {
+                }
+            }
+            
+            // 当前生命状态
+            imsNotify.addParam(AlarmCodeDefine.PARAM_LIFECYCLE_STATUS, CommonUtil.int2String(userCycle.getSts()));
+            // 当前生命状态的失效时间
+            imsNotify.addParam(AlarmCodeDefine.PARAM_LIFECYCLE_STATUS_EXPIREDATE,
+                    ConvertUtil.javaDate2SdlLong(userCycle.getExpireDate()) + "");
+            // 当前生命状态的生效时间
+            imsNotify.addParam(AlarmCodeDefine.PARAM_VALID_DATE, ConvertUtil.javaDate2SdlLong(userCycle.getValidDate()) + "");
+            // CmResource user = context.getComponent(UserComponent.class).queryUserByUserID(firstActiveRes.get_userId());
+            CaAccount caacct = context.getComponent(AccountComponent.class).queryBelongAccountByUserId(
+                    firstActiveRes.get_userId());
+            if (caacct == null)
+            {
+                throw IMSUtil.throwBusiException(ErrorCodeDefine.COMMON_ACCT_FOR_USER_NOTEXIST, firstActiveRes.get_userId());
+            }
+
+            imsNotify.addParam(AlarmCodeDefine.PARAM_ACCOUNT_TYPE, CommonUtil.int2String(caacct.getAccountType()));
+            acctId = caacct.getAcctId();
+            imsNotify.setAcctId(acctId);
+            // sAbmBalanceQueryUp.set_acctId(acctId);
+        }
+
+        // 添加账本余额和余额有效期
+        CommonParam sOpInfo = ConvertUtil.javaOper2CommonParam(context);
+        QueryPocketBalanceInfo pocketInfo = new QueryPocketBalanceInfo();
+        pocketInfo.setAcctId(acctId);
+        pocketInfo.setResourceId(firstActiveRes.get_userId());
+        // 2012-01-10 wuyujie : 帐管接口调整
+        pocketInfo.setCalFeeFlag(EnumCodeDefine.BALANCE_QUERY_TYPE);
+
+        Holder<PocketBalance> out = new Holder<PocketBalance>();
+        logger.info("****** firstactive, access inteface[queryPocketBalance]");
+        SpringUtil.getAssetService().queryPocketBalance(pocketInfo, sOpInfo, out);
+        if (out != null)
+        {
+            PocketBalance pocketBalance = out.get();
+
+            if (pocketBalance != null && CommonUtil.isNotEmpty(pocketBalance.getSummaryBalances()))
+            {
+                List<PocketSummary> pocketOutList = pocketBalance.getSummaryBalances();
+                for (PocketSummary pocketSummary : pocketOutList)
+                {
+                    if (pocketSummary == null || pocketSummary.getPocket() == null)
+                        continue;
+
+                    if (pocketSummary.getPocket().getNegativeFlag() == 0)
+                    {
+                        if (CommonUtil.isValid(pocketSummary.getPocket().getAmount()))
+                        {
+                            // @Date 2012-0510 wangdw5 [44318]告警信息的金额转换-调用addCurrencyParam
+                            // imsNotify.addParam(AlarmCodeDefine.PARAM_BALANCE, CommonUtil.long2String(pocket.getTotalBalance()),
+                            // pocket.getMeasureId());
+                            imsNotify.addParam(AlarmCodeDefine.PARAM_BALANCE, String.valueOf(pocketSummary.getPocket()
+                                    .getAmount()), pocketSummary.getPocket().getMeasureId());
+                        }
+                        else
+                        {// 查不到账本信息则返回"0"
+                         // imsNotify.addParam(AlarmCodeDefine.PARAM_BALANCE, "0", AmountUtil.getDefaultDbMeasureId());
+                            imsNotify.addParam(AlarmCodeDefine.PARAM_BALANCE, "0", pocketSummary.getPocket().getMeasureId());
+                        }
+                        break;
+                    }
+                }
+            }
+            else
+            {
+                // imsNotify.addParam(AlarmCodeDefine.PARAM_BALANCE, "0", AmountUtil.getDefaultDbMeasureId());
+                imsNotify.addParam(AlarmCodeDefine.PARAM_BALANCE, "0");
+            }
+        }
+
+        imsNotify.addPhone(firstActiveRes.get_phoneId());
+        notifyList.add(imsNotify);
+
+        return notifyList;
+    }
+
+    /**
+     * 首次激活获取告警ID
+     * 
+     * @Date 2012-05-28 wangdw5 [46173]首次激活根据company发送不同的告警
+     */
+    private Integer getNotificationIdByBusiPlan(SFirstActiveRes firstActiveRes)
+    {
+        BiBusiPlan plan = context.getComponent(RuleComponent.class).getPricePlandIdByUserId(firstActiveRes.get_userId(),
+                firstActiveRes.get_location(), null, DateUtil.UTCToDate(firstActiveRes.get_activationTime()));
+        Integer notificationId = null;
+        if (plan != null && plan.getNotificationId() != CommonUtil.string2Integer(ConstantDefine.INT_UNIFIED_CONFIGURATION))
+        {
+            notificationId = plan.getNotificationId();
+        }
+        else
+            notificationId = IMSUtil.getNotificationIdByBusiSpecId(context.getBusiSpecId(true), context.getOper().getSo_mode());
+        return notificationId;
+    }
+
+    /**
+     * @Description: DCC流程获取active，suspend，disable状态的时间段
+     * @param sFirstAct
+     * @param sQeuryInfo
+     * @return
+     */
+    private SUserInfo getActiveUserInfo(SFirstAct sFirstAct)
+    {
+        // 获取active、suspand、disable时间段
+        SUserCycle sUserCycle = FirstActiveHelper.getSUserCycleInContext(context);
+        Date curValidDate = DateUtil.UTCToDate(sFirstAct.get_activationTime());
+        // 返回给计费的时间不做最大值限制，区别于上发mdb的时间 wukl 2012-03-06
+        // @Date 2012-5-3 tangjl5 当前状态的失效时间应该根据首次激活的时间计算
+        Date curExpireDate = getActiveExpireDate(EnumCodeDefine.LIFECYCLE_ACTIVE,
+                CommonUtil.long2Int(sFirstAct.get_activationTime()), FirstActiveHelper.getPatternIdInContext(context));
+        Map<String, Date> datePeriod = context.getComponent(LifeCycleComponent.class).calculateActiveSuspendDisabelStopTime(
+                EnumCodeDefine.LIFECYCLE_ACTIVE, curValidDate, curExpireDate, FirstActiveHelper.getPatternIdInContext(context),
+                true);
+
+        SUserInfo xdrUserInfo = new SUserInfo();
+        // @Date 2012-5-7 tangjl5 返回用户生命周期状态
+        xdrUserInfo.set_userLifeCycle(EnumCodeDefine.LIFECYCLE_ACTIVE);
+        xdrUserInfo.set_activePeriod(ConvertUtil.javaDate2SdlLong(datePeriod.get(ConstantDefine.TOP_UP_ACTIVE_EXPIREDATE)));
+        xdrUserInfo.set_suspendPeriod(ConvertUtil.javaDate2SdlLong(datePeriod.get(ConstantDefine.TOP_UP_SUSPEND_EXPIREDATE)));
+        xdrUserInfo.set_disablePeriod(ConvertUtil.javaDate2SdlLong(datePeriod.get(ConstantDefine.TOP_UP_DISABLE_EXPIREDATE)));
+        // 2012-07-02 yangjh story:45219 增加billing_type的返回
+        xdrUserInfo.set_billingType(((SUserEx) context.getExtendParam(ConstantDefine.ACTIVE_SDL_SUSEREX)).get_billType());
+        return xdrUserInfo;
+    }
+
+    /**
+     * @Description: 从MDB查询出来的数据中获取主产品信息
+     * @param sFirstAct
+     * @param sQueryInfo
+     * @return
+     */
+    /*
+     * private SProdInfo getMainPromFromMDB() { CsdlArrayList<SProdInfo> listSProdInfo =
+     * this.getDataList2Context(SProdInfo.class); SProdInfo result = null; for (SProdInfo prodInfo : listSProdInfo) { // 判断主产品是否变更
+     * if (prodInfo.get_isMain() == EnumCodeDefine.PRODUCT_MAIN) { result = prodInfo; break; } } return result; }
+     */
+
+    /**
+     * 根据基站编号 或小区编号，获取对应的RegionCode
+     * 
+     * @param cellCode 小区编号： CRM流程传入的location
+     * @param lacId 基站编号：DCC流程传入的location
+     * @return
+     */
+    public String getRegionCode(String cellCode, String lacId, Date activeDate)
+    {
+        String regionCode = (String) context.getExtendParam(ConstantDefine.ACTIVE_LOCATION);
+        if (CommonUtil.isEmpty(regionCode))
+        {
+            if (null == activeDate)
+                activeDate = context.getRequestDate();
+
+            List<RsSysCellInfo> list = null;
+            if (!CommonUtil.isEmpty(cellCode))
+            {
+                list = DBUtil.query(RsSysCellInfo.class, new DBCondition(RsSysCellInfo.Field.cellCode, cellCode),
+                        new DBCondition(RsSysCellInfo.Field.validDate, activeDate, Operator.LESS_EQUALS), new DBCondition(
+                                RsSysCellInfo.Field.expireDate, activeDate, Operator.GREAT_EQUALS));
+            }
+
+            if (!CommonUtil.isEmpty(lacId))
+            {
+                list = DBUtil.query(RsSysCellInfo.class, new DBCondition(RsSysCellInfo.Field.lacId, lacId), new DBCondition(
+                        RsSysCellInfo.Field.validDate, activeDate, Operator.LESS_EQUALS), new DBCondition(
+                        RsSysCellInfo.Field.expireDate, activeDate, Operator.GREAT_EQUALS));
+            }
+
+            if (CommonUtil.isEmpty(list))
+                return null;
+
+            context.addExtendParam(ConstantDefine.ACTIVE_LOCATION, list.get(0).getRegionCode().toString());
+            return list.get(0).getRegionCode().toString();
+        }
+
+        return regionCode;
+    }
+
+    /**
+     * reward 失败时，撤销资料MDB的数据 wukl 2011-12-20
+     */
+    public void cacelData2MDB(SFirstAct firstAct, SQueryInfo queryInfo,
+            com.ailk.easyframe.sdl.MMdbSyncUpApp.SProductOrder cancelProdOrder, CBSErrorMsg errorMsg)
+    {
+        CsdlArrayList<SImUserCycle> userCycleList = new CsdlArrayList<SImUserCycle>(SImUserCycle.class);
+        SImUserCycle sImUserCycle = transUserCycle();
+        FirstActiveHelper.setSyncFlagToZero(sImUserCycle);
+        userCycleList.add(sImUserCycle);
+
+        CsdlArrayList<SImUser> userList = new CsdlArrayList<SImUser>(SImUser.class);
+        SImUser sImUser = transUser();
+        FirstActiveHelper.setSyncFlagToZero(sImUser);
+        userList.add(sImUser);
+
+        CsdlArrayList<com.ailk.easyframe.sdl.MMdbSyncUpApp.SProductOrder> sProductOrderList = new CsdlArrayList<com.ailk.easyframe.sdl.MMdbSyncUpApp.SProductOrder>(
+                com.ailk.easyframe.sdl.MMdbSyncUpApp.SProductOrder.class);
+        SUserEx sUserEx = FirstActiveHelper.getSUserExInContext(context);
+        CsdlArrayList<SProdInfo> listSProdInfo = FirstActiveHelper.getSProdInfoListInContext(context);
+        for (SProdInfo prodInfo : listSProdInfo)
+        {
+            SCoProd coProd = getSCoProd(firstAct, prodInfo, sUserEx);
+            FirstActiveHelper.setSyncFlagToZero(coProd);
+            // yanchuan 2012-07-05 SPromPrice已被计费删除
+            // CsdlArrayList<SProdPrice> price = getSProdPrice(firstAct, prodInfo);
+            // FirstActiveHelper.setSyncFlagToZero(price);
+            CsdlArrayList<SProdBillCycle> billCycleList = getBillCycle(firstAct, prodInfo, sUserEx);
+            FirstActiveHelper.setSyncFlagToZero(billCycleList);
+            CsdlArrayList<SProdCharValue> listCharValue = getSProdCharValue(firstAct, prodInfo, sUserEx, queryInfo);
+            FirstActiveHelper.setSyncFlagToZero(listCharValue);
+            CsdlArrayList<SProdPriceParam> listPriceParam = getSProdPriceParam(firstAct, prodInfo, sUserEx, queryInfo);
+            FirstActiveHelper.setSyncFlagToZero(listPriceParam);
+
+            com.ailk.easyframe.sdl.MMdbSyncUpApp.SProductOrder productOrder = new com.ailk.easyframe.sdl.MMdbSyncUpApp.SProductOrder();
+            // ljc 修改
+            productOrder.set_orderFlag(coProd.get_busiFlag());
+            SOrderInfo orderInfo = new SOrderInfo();
+            orderInfo.set_prod(coProd);
+            // yanchuan 2012-07-05 SPromPrice已被计费删除
+            // orderInfo.set_listProdPrice(price);
+            orderInfo.set_listBillCycle(billCycleList);
+            if (!CommonUtil.isEmpty(listCharValue))
+                orderInfo.set_listCharValue(listCharValue);
+
+            if (!CommonUtil.isEmpty(listPriceParam))
+                orderInfo.set_listPriceParam(listPriceParam);
+            CsdlArrayList<SOrderInfo> orderInfoList = new CsdlArrayList<SOrderInfo>(SOrderInfo.class);
+            orderInfoList.add(orderInfo);
+            productOrder.set_listOrderInfo(orderInfoList);
+            sProductOrderList.add(productOrder);
+        }
+
+        // 若变更主产品，新增的主产品信息在MDB中无法删除，要将其置为失效
+        // LJC 修改
+        if (cancelProdOrder != null && CommonUtil.isNotEmpty(cancelProdOrder.get_listOrderInfo()))
+        {
+            CsdlArrayList<SOrderInfo> orderInfoList = cancelProdOrder.get_listOrderInfo();
+            for (SOrderInfo info : orderInfoList)
+            {
+                SCoProd prod = info.get_prod();
+                FirstActiveHelper.setSyncFlagToZero(prod);
+                prod.set_expireDate(prod.get_validDate());
+                CsdlArrayList<SProdBillCycle> billCycle = info.get_listBillCycle();
+                if (CommonUtil.isNotEmpty(billCycle))
+                {
+                    for (SProdBillCycle cycle : billCycle)
+                    {
+                        FirstActiveHelper.setSyncFlagToZero(cycle);
+                        cycle.set_expireDate(cycle.get_validDate());
+                    }
+                }
+                // yanchuan 2012-07-05 SPromPrice已被计费删除
+                // CsdlArrayList<SProdPrice> prodPrice = info.get_listProdPrice();
+                // if (CommonUtil.isNotEmpty(prodPrice))
+                // {
+                // for (SProdPrice price : prodPrice)
+                // {
+                // FirstActiveHelper.setSyncFlagToZero(price);
+                // price.set_expireDate(price.get_validDate());
+                // }
+                // }
+            }
+
+            sProductOrderList.add(cancelProdOrder);
+        }
+        // ljc 修改
+        updateData2MDB(userList, userCycleList, MdbUtil.rebuildProductOrderList(sProductOrderList), errorMsg);
+    }
+
+    /**
+     * 获取主产品变更规则、及成功失败跳转的URL（只有数据激活so_mode=17才取url）; wukl 2012-3-8
+     * 
+     * @param pricePlanId
+     * @param utcToDate
+     * @param rule
+     * @param gprsUrls
+     */
+    private PmFirstActiveRule getRuleAndUrl(Integer pricePlanId, Date activeDate)
+    {
+        RuleComponent ruleCmp = context.getComponent(RuleComponent.class);
+
+        if (context.getOper().getSo_mode() == EnumCodeDefine.DATA_ACTIVE)
+        {
+            // 数据首次激活，url必须配置，故加此校验
+            if (!CommonUtil.isValid(pricePlanId))
+                IMSUtil.throwBusiException(ErrorCodeDefine.PRICE_PLAN_ID_NOT_DEFINE);
+
+            Integer gprsPriceRuleId = ruleCmp.getPriceRuleId2Cache(pricePlanId, EnumCodeDefine.DATA_FIRSTACTIVE_GPRS_URL,
+                    activeDate);
+
+            if (!CommonUtil.isValid(gprsPriceRuleId))
+                IMSUtil.throwBusiException(ErrorCodeDefine.PRICE_RULE_ID_NOT_DEFINE);
+
+            logger.info("******  data first active, priceRuleId = " + gprsPriceRuleId);
+
+            PmFirstActiveGprsUrl gprsUrls = ruleCmp.getPmFirstActiveGprsUrl(gprsPriceRuleId, true);
+
+            if (gprsUrls == null)
+            {
+                IMSUtil.throwBusiException(ErrorCodeDefine.ACTIVE_GPRS_URL_NOT_DEFINE, gprsPriceRuleId);
+            }
+
+            // 将查询出来的数据首次激活跳转url放置到缓存中，用于过滤器中获取失败的URL
+            context.addExtendParam(ConstantDefine.ACTIVE_GPRS_URL, gprsUrls);
+        }
+
+        Integer changePromPriceRuleId = ruleCmp.getPriceRuleId2Cache(pricePlanId, EnumCodeDefine.CHANGE_MAIN_PRODUCT, activeDate);
+        logger.info("******  voice first active, priceRuleId = " + changePromPriceRuleId);
+        return ruleCmp.getChgPromRule2Cache(changePromPriceRuleId, activeDate);
+    }
+}

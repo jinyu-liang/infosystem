@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SBalance" remark="" sdl="true" sdl-module="MXdr" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+<fields>
+<field name="bookId" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="bookItem" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="amount" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="days" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="acctId" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="userId" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="phoneId" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="validDate" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="expireDate" primitive="Yes" remark="" sdl="true" type="Long"/>
+<complex-field collection="map&lt;String,?&gt;" name="extraMap" primitive="false" remark="" sdl="true" type="String"/>
+</fields>
+</entity>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="do_queryResponse" transient="true">
+  <root ref="imsintf.BaseResponse"/>
+  <fields>
+    <complex-field name="user" type="entity" ref="imsintf.SUser" collection="none" primitive="false"/>
+    <complex-field name="userAuth" type="entity" ref="imsintf.SUserAuth" collection="none" primitive="false"/>
+    <complex-field name="account" type="entity" ref="imsintf.SAccount" collection="none" primitive="false"/>
+    <complex-field name="customer" type="entity" ref="imsintf.SCustomer" collection="none" primitive="false"/>
+    <complex-field name="balance" type="entity" ref="imsintf.SBalanceList" collection="none" primitive="false"/>
+    <complex-field name="budget" type="entity" ref="imsintf.BudgetList" collection="none" primitive="false"/>
+    <complex-field name="credit" type="entity" ref="imsintf.CreditLimitList" collection="none" primitive="false"/>
+    <complex-field name="freeResourceGroupList" type="entity" ref="imsintf.FreeResourceGroupList" collection="none" primitive="false"/>
+    <complex-field name="accumulation" type="entity" ref="imsintf.AccumulateList" collection="none" primitive="false"/>
+    <complex-field name="billInfo" type="entity" ref="imsintf.BillinfoList" collection="none" primitive="false"/>
+    <complex-field name="hybridRule" type="entity" ref="imsintf.SBusiServiceList" collection="none" primitive="false"/>
+    <complex-field name="oneTimeCharge" type="entity" ref="imsintf.OneTimeFeeList" collection="none" primitive="false"/>
+    <complex-field name="point" type="entity" ref="imsintf.Spoints" collection="none" primitive="false"/>
+    <complex-field name="prodOrderList" type="entity" ref="imsintf.SProductOrderList" collection="none" primitive="false"/>
+    <complex-field name="busiServiceList" type="entity" ref="imsintf.SBusiServiceList" collection="none" primitive="false"/>
+    <complex-field name="realtimeCharge" type="entity" ref="imsintf.RealTimeCallChargeList" collection="none" primitive="false"/>
+    <complex-field name="hybridBusiServiceList" type="entity" ref="imsintf.HybridBusiServiceList" collection="none" primitive="false"/>
+    <complex-field name="sNegativeBalanceList" type="entity" ref="imsintf.SNegativeBalanceList" collection="none" primitive="false"/>
+    <complex-field name="capMaxControlList" type="entity" ref="imsintf.CapMaxControlList" collection="none" primitive="false"/>
+    <complex-field name="queryFreeTimes" type="entity" ref="imsintf.SQueryFreeTimes" collection="none" primitive="false"/>
+    <complex-field name="billUsage" type="entity" ref="imsintf.BillUsage" collection="none" primitive="false"/>
+    <complex-field name="actualUsageList" type="entity" ref="imsintf.ActualUsageList" collection="none" primitive="false"/>
+    <complex-field name="sContactList" type="List&lt;entity&gt;" ref="imsintf.SContact" collection="none" primitive="false"/>
+  </fields>
+</entity>

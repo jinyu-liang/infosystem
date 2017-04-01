@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="do_queryWorkLogResponse" transient="true">
+  <root ref="imsintf.BaseResponse"/>
+  <fields>
+    <complex-field name="recharge_log_list" type="entity" ref="imsintf.RechargeLogList" collection="none" primitive="false"/>
+    <complex-field name="adjust_log_list" type="entity" ref="imsintf.AdjustLogList" collection="none" primitive="false"/>
+    <complex-field name="transfer_log_list" type="entity" ref="imsintf.TransferLogList" collection="none" primitive="false"/>
+    <complex-field name="payment_log_list" type="entity" ref="imsintf.PaymentLogList" collection="none" primitive="false"/>
+    <complex-field name="negativebal_log_list" type="entity" ref="imsintf.NegativeBalLogList" collection="none" primitive="false"/>
+    <complex-field name="max_freesource_log_list" type="entity" ref="imsintf.MaxFreeResourceLogList" collection="none" primitive="false"/>
+  </fields>
+</entity>

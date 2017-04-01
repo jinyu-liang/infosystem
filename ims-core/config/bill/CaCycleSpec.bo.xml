@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="CaCycleSpec">
+  <fields>
+    <field name="expriedate" type="Date" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="validate" type="Date" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="firstBillDate" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="cycleType" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="cycleUnit" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

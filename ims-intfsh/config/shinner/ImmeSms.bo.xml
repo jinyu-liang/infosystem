@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="ImmeSms">
+  <fields>
+    <field name="block_id" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="sms_notice_id" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="done_code" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="sms_code" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="in_mode_code" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="sms_net_tag" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="recv_object" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="recv_id" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="notice_content" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="chan_id" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="recv_object_type" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="sms_type_code" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="sms_kind_code" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="force_object" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="force_start_time" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="force_end_time" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="sms_priority" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="refer_time" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="remark" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="month" type="Short" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="day" type="Short" isPk="false" primitive="Auto" null-able="true"/>
+    <complex-field name="smsMessageList" type="entity" ref="shinner.SmsMessage_item" collection="none" primitive="false"/>
+  </fields>
+</entity>

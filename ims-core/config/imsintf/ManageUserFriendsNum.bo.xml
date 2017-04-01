@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="ManageUserFriendsNum" transient="true">
+<fields>
+<field name="user_id" type="Long" isPk="false" enumAsAliasField="false" tree-foreign-key="false" null-able="true"/>
+<field name="phone_id" type="String" isPk="false" enumAsAliasField="false" tree-foreign-key="false" null-able="true"/>
+<complex-field name="sFNOperList" type="entity" ref="imsintf.FNOperList" collection="none" primitive="false"/>
+</fields>
+</entity>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SUpdatePriceParam" remark="" sdl="true" sdl-module="MImsSyncDef" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+    <fields>
+        <field name="prodId" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="paramId" primitive="Yes" remark="" sdl="true" type="Integer"/>
+        <field name="paramValue" primitive="Yes" remark="" sdl="true" type="String"/>
+        <field name="validDate" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="expireDate" primitive="Yes" remark="" sdl="true" type="Long"/>
+    </fields>
+</entity>

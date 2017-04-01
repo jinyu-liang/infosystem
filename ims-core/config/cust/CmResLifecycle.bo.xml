@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="CmResLifecycle" remark="" schema="CD" table="CM_RES_LIFECYCLE" xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="RESOURCE_ID" columnDef="BigInt" isPk="true(not generated)" name="resourceId" null-able="false" primitive="No" remark="Equipment Numbering" type="Long"/>
+        <field column="STS" columnDef="Int" name="sts" primitive="No" remark="State value of lifecycle of the equipment:&#10;&#10;100 recycle&#10;1000 Idle/Initial?&#10;1001 Active&#10;1002 Suspend-request&#10;1003 Suspend Debt&#10;1004 SuspendCreditLimit?&#10;1005 Suspend No Balance/Validity?&#10;1006 Disable&#10;1007 Terminate&#10;1008 Pool" type="Integer"/>
+        <field column="OS_STS" columnDef="Int" name="osSts" null-able="false" primitive="No" remark="10ฃบีณฃ&#10;11ฃบตฅอฃ&#10;12ฃบหซอฃ" type="Integer"/>
+        <field column="FRAULD_FLAG" columnDef="Int" name="frauldFlag" null-able="false" primitive="No" remark="ฦีฉฑ๊ึพ&#10;0: ฮฦีฉ&#10;1: ฦีฉ" type="Integer"/>
+        <field column="USERREQUEST_FLAG" columnDef="Int" name="userrequestFlag" null-able="false" primitive="No" remark="ำรปงว๋ว๓ฑ๊ึพฃฌ ถิิคธถทัำะะง&#10;0: ีณฃ&#10;1: ำรปงว๋ว๓อฃป๚&#10;2: ศกฯ๛ำรปงว๋ว๓อฃป๚" type="Integer"/>
+        <field column="UNBILLING_FLAG" columnDef="Int" name="unbillingFlag" null-able="false" primitive="No" remark="0-ีณฃ&#10;1-un-identify&#10;2-prospect" type="Integer"/>
+        <field column="RERATING_FLAG" columnDef="Int" name="reratingFlag" null-able="false" primitive="No" remark="ึุล๚ฑ๊สถ&#10;0: ฒปึุล๚&#10;1: ึุล๚" type="Integer"/>
+        <field column="VALID_DATE" columnDef="Date" isPk="true(not generated)" name="validDate" null-able="false" primitive="No" remark="Effective Date" type="Date"/>
+        <field column="EXPIRE_DATE" columnDef="Date" name="expireDate" primitive="No" remark="Expired Date" type="Date"/>
+        <field column="SO_NBR" columnDef="BigInt" isPk="true(not generated)" name="soNbr" null-able="false" primitive="No" remark="The serial order which cause the state changing" type="Long"/>
+        <field column="REC_STS" columnDef="Int" name="recSts" null-able="false" primitive="No" remark="record status:&#10;&#10;0: valid data&#10;1: history data" type="Integer"/>
+        <field column="CREATE_DATE" columnDef="Date" name="createDate" null-able="false" primitive="No" remark="create date" type="Date"/>
+        <field column="SO_DATE" columnDef="Date" name="soDate" primitive="No" remark="Modify date of current record" type="Date"/>
+        <field column="NEXT_STS" columnDef="Int" name="nextSts" primitive="No" remark="" type="Integer"/>
+        <field column="NEXT_STS_EXPIREDATE" columnDef="Date" name="nextStsExpiredate" primitive="No" remark="" type="Date"/>
+        <field column="OS_STS_DTL" columnDef="Int" name="osStsDtl" null-able="false" primitive="No" remark="&#10;???????,??????????????;&#10;??????????????;&#10;??????????????:&#10;0x001  ???;&#10;0x002  ??????;&#10;0x004  ?????;&#10;0x008  ???;&#10;0x010  ????;&#10;0x020  ????;&#10;0x040  ??????;&#10;0x080  ????;&#10;0x100  ???;&#10;&#10;?????,???CRM?????????????????&#10;" type="Integer"/>
+        <field name="nnextSts" type="Integer" column="NNEXT_STS" primitive="No" null-able="true" columnDef="Int"/>
+    	<field name="nnextStsExpiredate" type="Date" column="NNEXT_STS_EXPIREDATE" primitive="No" null-able="true" columnDef="Date"/>
+  </fields>
+</entity>

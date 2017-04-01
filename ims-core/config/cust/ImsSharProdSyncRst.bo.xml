@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="ImsSharProdSyncRst" schema="CD" table="IMS_SHAR_PROD_SYNC_RST">
+  <fields>
+    <field name="id" type="Long" column="ID" isPk="true" remark="ID" null-able="false" columnDef="NUMBER" columnSize="15"/>
+    <field name="custId" type="Long" column="CUST_ID" isPk="false" remark="CUST_ID" null-able="true" columnDef="NUMBER" columnSize="15"/>
+    <field name="acctId" type="Long" column="ACCT_ID" isPk="false" remark="ACCT_ID
+" null-able="true" columnDef="NUMBER" columnSize="15"/>
+    <field name="userId" type="Long" column="USER_ID" isPk="false" remark="RESOURCE_ID" null-able="true" columnDef="NUMBER" columnSize="15"/>
+    <field name="phoneId" type="String" column="PHONE_ID" isPk="false" remark="PHONE_ID" null-able="true" columnDef="VARCHAR2" columnSize="30"/>
+    <field name="offerId" type="Long" column="OFFER_ID" isPk="false" remark="OFFER_ID" null-able="false" columnDef="NUMBER" columnSize="15"/>
+    <field name="productId" type="Long" column="PRODUCT_ID" isPk="false" remark="PRODUCT_ID" null-able="false" columnDef="NUMBER" columnSize="15"/>
+    <field name="expireDate" type="Date" column="EXPIRE_DATE" isPk="false" remark="EXPIRE_DATE" null-able="true" columnDef="DATE" columnSize="7"/>
+    <field name="productLevel" type="Integer" column="PRODUCT_LEVEL" isPk="false" remark="PRODUCT_LEVEL" null-able="true" columnDef="NUMBER" columnSize="2"/>
+    <field name="reason" type="String" column="REASON" isPk="false" remark="REASON" null-able="true" columnDef="VARCHAR2" columnSize="512"/>
+    <field name="createDate" type="Date" column="CREATE_DATE" isPk="false" remark="CREATE_DATE" null-able="true" columnDef="DATE" columnSize="7"/>
+    <field name="soNbr" type="Long" column="SO_NBR" isPk="false" remark="SO_NBR" null-able="false" columnDef="NUMBER" columnSize="15"/>
+    <field name="sts" type="Integer" column="STS" isPk="false" remark="STS" null-able="false" columnDef="NUMBER" columnSize="2"/>
+    <field name="effectiveTime" type="Date" column="EFFECTIVE_TIME" isPk="false" remark="EFFECTIVE_TIME" null-able="false" columnDef="DATE" columnSize="7"/>
+    <field name="errorCode" type="Integer" column="ERROR_CODE" isPk="false" remark="???????" null-able="true" columnDef="NUMBER" columnSize="8"/>
+    <field name="errorMsg" type="String" column="ERROR_MSG" isPk="false" remark="????" null-able="true" columnDef="VARCHAR2" columnSize="512"/>
+    <field name="dealDate" type="Date" column="DEAL_DATE" isPk="false" remark="DEAL_DATE" null-able="true" columnDef="DATE" columnSize="7"/>
+    <field name="dealCount" type="Integer" column="DEAL_COUNT" isPk="false" remark="DEAL_COUNT" null-able="true" columnDef="NUMBER" columnSize="8"/>
+  </fields>
+</entity>

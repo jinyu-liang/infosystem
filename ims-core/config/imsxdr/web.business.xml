@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/biz.xsd">
+<service bind-entity="false" name="IImsXdr" sdl="true" sdl-module="MImsXdr">
+<method name="do_xdrFirstAct" scope="service-only">
+<return-type type="Integer"/>
+<parameter collection="none" input="true" name="sXdr" output="true" primitive="false" ref="imsxdr.SXdr" type="entity"/>
+</method>
+</service>
+</module>

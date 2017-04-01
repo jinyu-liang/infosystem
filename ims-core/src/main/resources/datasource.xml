@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+        <!--jta事物bean，原来没有需要加入，下面配置datasource时需要使用-->
+	
+	<bean id="jotm" class="org.springframework.transaction.jta.JotmFactoryBean" />
+	<bean class="com.ailk.easyframe.db.support.MultipleDbContext"/>
+	<bean  class="com.ailk.easyframe.support.AilkDataSource" destroy-method="shutdown" id="dataSource">
+    	<property name="name" value="ais_db" />
+    	<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"/>
+        <property name="url" value="jdbc:oracle:thin:@10.10.10.121:1521:oel1210"/>
+        <property name="username" value="ad"/>
+        <property name="password" value="ad"/>
+	</bean>
+		 
+</beans>

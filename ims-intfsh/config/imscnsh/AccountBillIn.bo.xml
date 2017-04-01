@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="AccountBillIn" transient="true">
+  <fields>
+    <field name="acct_id" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="phone_id" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="begin_month" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="end_month" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="is_sp_bill_dtl" type="Boolean" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="is_account_message" type="Boolean" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="is_account_pocket" type="Boolean" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="is_account_detail" type="Boolean" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="is_coin_dtl" type="Boolean" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="is_bill_simple" type="Boolean" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="is_plan_suggest" type="Boolean" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="is_message_list" type="Boolean" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="is_communication" type="Boolean" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

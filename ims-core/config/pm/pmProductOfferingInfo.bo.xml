@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="pmProductOfferingInfo">
+  <fields>
+    <field name="product_offering_id" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="offer_type_id" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="name" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="is_main" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="lifecycle_status_id" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="prod_spec_id" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="priority" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="is_global" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="valid_date" type="Date" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="expire_date" type="Date" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="description" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="opertor_id" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="billing_priority" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="offer_class" type="String" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

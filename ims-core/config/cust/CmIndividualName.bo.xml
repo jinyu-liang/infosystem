@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="CmIndividualName" remark="" schema="CD" table="CM_INDIVIDUAL_NAME" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="PARTY_ID" columnDef="BigInt" isPk="true(not generated)" name="partyId" null-able="false" primitive="No" remark="The Unique Identiter of Party" type="Long"/>
+        <field column="LANGUAGE_ID" columnDef="Int" name="languageId" primitive="No" remark="Language code,this is the language type of the name" type="Integer"/>
+        <field column="FORMATTED_NAME" columnDef="Varchar" columnSize="64" name="formattedName" primitive="No" remark="Format Name" type="String"/>
+        <field column="LEGAL_NAME" columnDef="Varchar" columnSize="64" name="legalName" primitive="No" remark="Legal Name" type="String"/>
+        <field column="LRISTOCRATIC_TITLE_ID" columnDef="Int" name="lristocraticTitleId" primitive="No" remark="Noble's Title&#10;&#10;0:No Title&#10;1: Duke&#10;2: Marquis&#10;3: Count&#10;4: Viscount&#10;5: Baron&#10;" type="Integer"/>
+        <field column="FORM_OF_ADDRESS" columnDef="Varchar" columnSize="64" name="formOfAddress" primitive="No" remark="Appellation&#10;&#10;&#10;1：Mrs&#10;2：Mr&#10;" type="String"/>
+        <field column="GENERATION" columnDef="Varchar" columnSize="16" name="generation" primitive="No" remark="The severalth generation (family)" type="String"/>
+        <field column="GIVEN_NAMES" columnDef="Varchar" columnSize="16" name="givenNames" primitive="No" remark="Religion  Name" type="String"/>
+        <field column="PREFERRED_GIVEN_NAME" columnDef="Varchar" columnSize="16" name="preferredGivenName" primitive="No" remark="First-selected Religion Name " type="String"/>
+        <field column="MIDDLE_NAMES" columnDef="Varchar" columnSize="64" name="middleNames" primitive="No" remark="Middle Name " type="String"/>
+        <field column="FAMILY_NAME_PREFIX" columnDef="Varchar" columnSize="64" name="familyNamePrefix" primitive="No" remark="Family's Name Prefix " type="String"/>
+        <field column="FAMILY_NAMES" columnDef="Varchar" columnSize="64" name="familyNames" primitive="No" remark="Family Name" type="String"/>
+        <field column="FAMILY_GENERATION" columnDef="Varchar" columnSize="64" name="familyGeneration" primitive="No" remark="The severalth generation in family" type="String"/>
+        <field column="VALID_DATE" columnDef="TimeStamp" isPk="true(not generated)" name="validDate" null-able="false" primitive="No" remark="Valid Date" type="Date"/>
+        <field column="EXPIRE_DATE" columnDef="TimeStamp" name="expireDate" null-able="false" primitive="No" remark="Expired Date" type="Date"/>
+        <field column="SO_NBR" columnDef="BigInt" isPk="true(not generated)" name="soNbr" null-able="false" primitive="No" remark="The serial number" type="Long"/>
+        <field column="CREATE_DATE" columnDef="TimeStamp" name="createDate" primitive="No" remark="" type="Date"/>
+        <field column="SO_DATE" columnDef="TimeStamp" name="soDate" primitive="No" remark="" type="Date"/>
+    </fields>
+</entity>

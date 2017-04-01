@@ -1,0 +1,55 @@
+#include "ims_sync_def.sdl"
+
+module MImsSyncApp
+{
+	interface IImsSyncApp
+	{
+		int32 do_upSelling(in MImsSyncDef::SOperInfo sOperInfo,in MImsSyncDef::SUpSellReq sUpSellReq);
+//		int32 do_barService(in MImsSyncDef::SOperInfo sOperInfo, in MImsSyncDef::SBarServiceReq sBarServiceReq);
+		int32 do_lifeCycleChg(in MImsSyncDef::SOperInfo sOperInfo, in MImsSyncDef::SLifeCycleChg4AbmList listLifeCycleChg4Abm);
+		int32 ts_firstAct(in MImsSyncDef::SOperInfo sOperInfo,in MImsSyncDef::SFirstActiveRes sFirstActiveRes,in MImsSyncDef::SCaRewardInfoList listCaRewardInfo);
+		
+		int32 sync_productStatus(in MImsSyncDef::SOperInfo sOperInfo, in MImsSyncDef::SProductStatusList listProductStatus);
+		int32 sync_creditStatus(in MImsSyncDef::SOperInfo sOperInfo, in MImsSyncDef::SCreditStatus sCreditStatus);
+		int32 read_lifeCycleStsCheck();
+		int32 deal_lifeCycleStsCheck(in MImsSyncDef::SOperInfo sOperInfo, in MImsSyncDef::SResLifeCycleSync sResLifeCycleSync);
+		
+		int32 add_expireProd();
+		
+		int32 add_validProd();
+		
+		int32 add_prodCycleNotify();
+		
+		int32 do_resSevCycleChg(in MImsSyncDef::SOperInfo sOperInfo,in MImsSyncDef::SResSevCycleList listResSevCycle);
+		
+		int32 sync_oneTimePromUsedUp(in MImsSyncDef::SOperInfo sOperInfo,in MImsSyncDef::SOneTimeProm sOneTimeProm);
+	
+		int32 do_sendNotification(in MImsSyncDef::SOperInfo sOperInfo,in MImsSyncDef::SNotifySendStandardIntfList listNotifySendStandardIntf);
+
+		int32 do_syncLowBalanceEtopup(in MImsSyncDef::SOperInfo sOperInfo,in MImsSyncDef::SLowBalanceList listLowBalance);
+		
+		int32 do_userValidityChg(in MImsSyncDef::SOperInfo sOperInfo,in MImsSyncDef::SUserValidityChg sUserValidityChg);
+		
+		int32 do_orderRewardProduct(in MImsSyncDef::SOperInfo sOperInfo,in MImsSyncDef::SRewardOrderProduct sRewardOrderProduct);
+		
+		int32 do_lifeCycleChgByPayment(in MImsSyncDef::SOperInfo sOperInfo,in MImsSyncDef::SLifeCycleChgByPayment sLifeCycleChgByPayment);
+		
+		int32 do_updateProdPriceParam(in MImsSyncDef::SOperInfo sOperInfo,in MImsSyncDef::SUpdatePriceParamList listUpdatePriceParam);
+		int32 do_barService(in MImsSyncDef::SOperInfo sOperInfo, in MImsSyncDef::SBarServiceList listBarService);
+		
+		int32 create_prodNotifyInfo(in MImsSyncDef::SOperInfo sOperInfo,in MImsSyncDef::SProdNotifyList listProdNotify);
+		  
+		int32 do_queryOperatorInfo(in MImsSyncDef::SOperInfo sOperInfo, in MImsSyncDef::SQueryOperReq sQueryOperReq, out MImsSyncDef::SOperInfoRespList listOperInfoResp );
+		int32 do_queryOrganizeInfo(in MImsSyncDef::SOperInfo sOperInfo, in MImsSyncDef::SQueryOrgReq sQueryOrgReq, out MImsSyncDef::SOrgInfoRespList listOrgInfoResp );
+		
+		int32 do_insertImsResourceMonitor(in MImsSyncDef::SOperInfo sOperInfo, in MImsSyncDef::SResourceMonitorList listResourceMonitor);
+		int32 do_insertImsUserOrderConfirm(in MImsSyncDef::SOperInfo sOperInfo, in MImsSyncDef::SDeductAlarmList listDeductAlarm);
+		int32 do_modifyProduct(in MImsSyncDef::SOperInfo sOperInfo,in MImsSyncDef::SChangeProdInfoList listProdInfo);
+		int32 do_rewardOtFreeres(in MImsSyncDef::SOperInfo sOperInfo, in MImsSyncDef::SRewardOtFreeres sRewardOtFreeres);
+		int32 do_firstActive(in MImsSyncDef::SOperInfo sOperInfo,in MImsSyncDef::SFirstAct sFirstAct);
+		int32 do_queryAcctInfo(in MImsSyncDef::SOperInfo sOperInfo, in MImsSyncDef::SQueryAcctInfoSdlReq sQueryAcctInfoSdlReq, out MImsSyncDef::SAccountInfo sAccountInfo );
+		
+		int32 do_insertImmeSmsBySdl(in MImsSyncDef::SOperInfo sOperInfo,in MImsSyncDef::SImmeSmsList listImmeSms);
+		int32 do_insertBatchSmsBySdl(in MImsSyncDef::SOperInfo sOperInfo,in MImsSyncDef::SBatchSmsInfo sBatchSmsInfo);
+	}
+}

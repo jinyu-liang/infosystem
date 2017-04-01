@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="ICustomer" schema="JD" table="I_CUSTOMER">
+  <fields>
+    <field name="custId" type="Long" column="CUST_ID" isPk="false" primitive="Auto" null-able="true" columnDef="Int"/>
+    <field name="groupId" type="Long" column="GROUP_ID" isPk="false" primitive="Auto" null-able="true" columnDef="Int"/>
+    <field name="custType" type="Integer" column="CUST_TYPE" isPk="false" primitive="Auto" null-able="true" columnDef="Int"/>
+    <field name="subCustType" type="Integer" column="SUB_CUST_TYPE" isPk="false" primitive="Auto" null-able="true" columnDef="Int"/>
+    <field name="custSegment" type="Integer" column="CUST_SEGMENT" isPk="false" primitive="Auto" null-able="true" columnDef="Int"/>
+    <field name="custName" type="String" column="CUST_NAME" isPk="false" primitive="Auto" null-able="true" columnDef="Varchar" columnSize="256"/>
+    <field name="birthday" type="Date" column="BIRTHDAY" isPk="false" primitive="Auto" null-able="true" columnDef="Date"/>
+    <field name="gender" type="Integer" column="GENDER" isPk="false" primitive="Auto" null-able="true" columnDef="Int"/>
+    <field name="language" type="Integer" column="LANGUAGE" isPk="false" primitive="Auto" null-able="true" columnDef="Int"/>
+    <field name="provCode" type="Integer" column="PROV_CODE" isPk="false" primitive="Auto" null-able="true" columnDef="Int"/>
+    <field name="regionCode" type="Integer" column="REGION_CODE" isPk="false" primitive="Auto" null-able="true" columnDef="Int"/>
+    <field name="countyId" type="Integer" column="COUNTY_ID" isPk="false" primitive="Auto" null-able="true" columnDef="Int"/>
+    <field name="firstAddress" type="Long" column="FIRST_ADDRESS" isPk="false" primitive="Auto" null-able="true" columnDef="Int"/>
+    <field name="secondAddress" type="Long" column="SECOND_ADDRESS" isPk="false" primitive="Auto" null-able="true" columnDef="Int"/>
+    <field name="regType" type="Integer" column="REG_TYPE" isPk="false" primitive="Auto" null-able="true" columnDef="Int"/>
+    <field name="regNbr" type="String" column="REG_NBR" isPk="false" primitive="Auto" null-able="true" columnDef="Varchar" columnSize="256"/>
+    <field name="issueDate" type="Date" column="ISSUE_DATE" isPk="false" primitive="Auto" null-able="true" columnDef="Date"/>
+    <field name="realNameDate" type="Date" column="REAL_NAME_DATE" isPk="false" primitive="Auto" null-able="true" columnDef="Date"/>
+    <field name="realNameSts" type="Integer" column="REAL_NAME_STS" isPk="false" primitive="Auto" null-able="true" columnDef="Int"/>
+    <field name="validDate" type="Date" column="VALID_DATE" isPk="false" primitive="Auto" null-able="true" columnDef="Date"/>
+    <field name="expireDate" type="Date" column="EXPIRE_DATE" isPk="false" primitive="Auto" null-able="true" columnDef="Date"/>
+    <field name="operType" type="Integer" column="OPER_TYPE" isPk="false" primitive="Auto" null-able="true" columnDef="Int"/>
+    <field name="soNbr" type="Long" column="SO_NBR" isPk="false" primitive="Auto" null-able="true" columnDef="Int"/>
+    <field name="commitDate" type="Date" column="COMMIT_DATE" isPk="false" primitive="Auto" null-able="true" columnDef="Date"/>
+    <field name="custAddress" type="String" column="CUST_ADDRESS" isPk="false" primitive="Auto" null-able="true" columnDef="Varchar" columnSize="512"/>
+    <field name="custManageIda" type="String" column="CUST_MANAGE_IDA" isPk="false" primitive="Auto" null-able="true" columnDef="Varchar" columnSize="8"/>
+    <field name="custManageIdb" type="String" column="CUST_MANAGE_IDB" isPk="false" primitive="Auto" null-able="true" columnDef="Varchar" columnSize="8"/>
+    <field name="groupContactPhone" type="String" column="GROUP_CONTACT_PHONE" isPk="false" primitive="Auto" null-able="true" columnDef="Varchar" columnSize="64"/>
+  </fields>
+</entity>

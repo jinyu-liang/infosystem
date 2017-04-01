@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="MailGroup">
+  <fields>
+    <field name="oper_type" type="Short" isPk="false" primitive="No" null-able="true"/>
+    <field name="outer_mail_group_id" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="mail_group_id" type="Long" isPk="false" primitive="No" null-able="true"/>
+    <field name="name" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="description" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="bill_format_id" type="Short" isPk="false" primitive="No" null-able="true"/>
+    <field name="file_type" type="Short" isPk="false" primitive="No" null-able="true"/>
+    <field name="summaryBillHandlingCode" type="Long" isPk="false" primitive="No" null-able="true"/>
+    <field name="summaryBillLanguage" type="Integer" isPk="false" primitive="No" null-able="true"/>
+    <field name="summaryCurrency" type="Integer" isPk="false" primitive="No" null-able="true"/>
+    <field name="summaryStyleId" type="Integer" isPk="false" primitive="No" null-able="true"/>
+    <field name="valid_date" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="expire_date" type="String" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

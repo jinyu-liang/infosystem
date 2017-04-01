@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SysNotifyExemptionGroup" remark="" schema="sd" table="SYS_NOTIFY_EXEMPTION_GROUP" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="EXEMPTION_TYPE" columnDef="Int" isPk="true(not generated)" name="exemptionType" null-able="false" primitive="No" remark="exemption type&#10;1: no dunning and no baring service" type="Integer"/>
+        <field column="GROUP_ID" columnDef="Int" isPk="true(not generated)" name="groupId" null-able="false" primitive="No" remark="group ID" type="Integer"/>
+    </fields>
+</entity>

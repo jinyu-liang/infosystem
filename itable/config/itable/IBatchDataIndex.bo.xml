@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="IBatchDataIndex" schema="JD" table="I_BATCH_DATA_INDEX">
+  <fields>
+    <field name="custId" type="Long" column="CUST_ID" primitive="No" null-able="false" columnDef="BigInt"/>
+    <field name="acctId" type="Long" column="ACCT_ID" primitive="No" null-able="false" columnDef="BigInt"/>
+    <field name="userId" type="Long" column="USER_ID" primitive="No" null-able="false" columnDef="BigInt"/>
+    <field name="upField" type="String" column="UP_FIELD" primitive="No" remark="64位串，每一位代表对应的接口表（注：次序从左到右，如abcd，a表示第一位，b表示第二位，以此类推。如果a=0，表示a对应的表没有记录发生修改，如果a=1，表示有业务触发表记录变更）
+" null-able="true" columnDef="Varchar" columnSize="64"/>
+    <field name="regionCode" type="Integer" column="REGION_CODE" primitive="No" null-able="false" columnDef="Int"/>
+    <field name="countyCode" type="Integer" column="COUNTY_CODE" primitive="No" null-able="false" columnDef="Int"/>
+    <field name="commitDate" type="Date" column="COMMIT_DATE" primitive="No" null-able="true" columnDef="Date"/>
+    <field name="doneCode" type="Long" column="DONE_CODE" primitive="No" null-able="false" columnDef="BigInt"/>
+    <field name="soNbr" type="Long" column="SO_NBR" primitive="No" remark="接口流水号" null-able="true" columnDef="BigInt"/>
+    <field name="remark" type="String" column="REMARK" primitive="No" remark="备注（CRM使用）" null-able="false" columnDef="Varchar" columnSize="255"/>
+    <field name="busiCode" type="Long" column="BUSI_CODE" primitive="No" null-able="false" columnDef="BigInt"/>
+  </fields>
+</entity>

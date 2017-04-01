@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="PmComplexAccumulatePrice" remark="" schema="pd" table="PM_COMPLEX_ACCUMULATE_PRICE" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="PRICE_ID" columnDef="AutoIncrement" isPk="true" name="priceId" primitive="No" remark="" type="Integer"/>
+        <field column="ACCUMULATE_ITEM" columnDef="Int" name="accumulateItem" null-able="false" primitive="No" remark="" type="Integer"/>
+        <field column="RES_ADJUST_FLAG" columnDef="Int" name="resAdjustFlag" primitive="No" remark="" type="Integer"/>
+        <field column="OPTIMAL_FLAG" columnDef="Int" name="optimalFlag" primitive="No" remark="" type="Integer"/>
+    </fields>
+</entity>

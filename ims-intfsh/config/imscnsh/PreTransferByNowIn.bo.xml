@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="PreTransferByNowIn">
+  <fields>
+    <field name="source_resource_id" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="target_resource_id" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="source_phone_id" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="target_phone_id" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="out_so_nbr" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="out_so_date" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="is_sms" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

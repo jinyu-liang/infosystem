@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="SmsSendIntfChkHis" schema="JD" table="SMS_SEND_INTF_CHK_HIS">
+  <fields>
+    <field name="doneCode" type="Long" column="DONE_CODE" isPk="true(not generated)" primitive="Yes" null-able="false" columnDef="NUMBER" columnSize="12"/>
+    <field name="billId" type="String" column="BILL_ID" isPk="false" null-able="false" columnDef="VARCHAR2" columnSize="15"/>
+    <field name="message" type="String" column="MESSAGE" isPk="false" null-able="false" columnDef="VARCHAR2" columnSize="2048"/>
+    <field name="priorityLevel" type="Integer" column="PRIORITY_LEVEL" isPk="false" null-able="true" columnDef="NUMBER" columnSize="3"/>
+    <field name="sendDate" type="Date" column="SEND_DATE" isPk="false" null-able="true" columnDef="DATE" columnSize="7"/>
+    <field name="doneDate" type="Date" column="DONE_DATE" isPk="false" null-able="true" columnDef="DATE" columnSize="7"/>
+    <field name="dealDate" type="Date" column="DEAL_DATE" isPk="false" null-able="true" columnDef="DATE" columnSize="7"/>
+    <field name="srcAddr" type="String" column="SRC_ADDR" isPk="false" null-able="true" columnDef="VARCHAR2" columnSize="21"/>
+    <field name="requestReport" type="Integer" column="REQUEST_REPORT" isPk="false" remark="是否需要回执 (0-不需要1-需要)" null-able="true" columnDef="NUMBER" columnSize="1"/>
+    <field name="flag" type="String" column="FLAG" isPk="false" null-able="true" columnDef="VARCHAR2" columnSize="1"/>
+    <field name="smsCode" type="Long" column="SMS_CODE" isPk="false" null-able="true" columnDef="NUMBER" columnSize="12"/>
+    <field name="blockId" type="Long" column="BLOCK_ID" isPk="false" null-able="false" columnDef="NUMBER" columnSize="12"/>
+    <field name="ext1" type="String" column="EXT1" isPk="false" null-able="true" columnDef="VARCHAR2" columnSize="128"/>
+    <field name="ext2" type="String" column="EXT2" isPk="false" null-able="true" columnDef="VARCHAR2" columnSize="256"/>
+    <field name="soDate" type="Date" column="SO_DATE" isPk="false" null-able="true" columnDef="DATE" columnSize="7"/>
+  </fields>
+</entity>

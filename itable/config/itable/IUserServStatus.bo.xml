@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" columnNameMapToFieldName="false" dbType="oracle" name="IUserServStatus" remark="" schema="JD" table="I_USER_SERV_STATUS" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="SERVICE_INST_ID" columnDef="Int" isPk="false" name="serviceInstId" null-able="true" primitive="Auto" type="Long"/>
+        <field column="USER_ID" columnDef="Int" isPk="false" name="userId" null-able="true" primitive="Auto" type="Long"/>
+        <field column="SERVICE_ID" columnDef="Int" isPk="false" name="serviceId" null-able="true" primitive="Auto" type="Integer"/>
+        <field column="OS_STS" columnDef="Int" isPk="false" name="osSts" null-able="true" primitive="Auto" type="Integer"/>
+        <field column="OS_STS_DTL" columnDef="Int" isPk="false" name="osStsDtl" null-able="true" primitive="Auto" type="Long"/>
+        <field column="VALID_DATE" columnDef="Date" isPk="false" name="validDate" null-able="true" primitive="Auto" type="Date"/>
+        <field column="EXPIRE_DATE" columnDef="Date" isPk="false" name="expireDate" null-able="true" primitive="Auto" type="Date"/>
+        <field column="OPER_TYPE" columnDef="Int" isPk="false" name="operType" null-able="true" primitive="Auto" type="Integer"/>
+        <field column="SO_NBR" columnDef="Int" isPk="false" name="soNbr" null-able="true" primitive="Auto" type="Long"/>
+        <field column="COMMIT_DATE" columnDef="Date" isPk="false" name="commitDate" null-able="true" primitive="Auto" type="Date"/>
+        <field column="REMARK" columnDef="Varchar" columnSize="255" isPk="false" name="remark" null-able="true" primitive="Auto" type="String"/>
+    </fields>
+</entity>

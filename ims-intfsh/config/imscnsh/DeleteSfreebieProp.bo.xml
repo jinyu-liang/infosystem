@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="DeleteSfreebieProp">
+	<fields>
+        <field column="FREEBIE_ID" columnDef="AutoIncrement" isPk="true(not generated)" name="freebieId" null-able="false" primitive="Auto" type="Integer"/>
+    </fields>
+</entity>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="IUserAcctRel" remark="" schema="JD" table="I_USER_ACCT_REL" xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="USER_ID" columnDef="BigInt" name="userId" null-able="false" primitive="No" remark="" type="Long"/>
+        <field column="ACCT_ID" columnDef="BigInt" name="acctId" null-able="false" primitive="No" remark="" type="Long"/>
+        <field column="OLD_ACCT_ID" columnDef="BigInt" name="oldAcctId" primitive="No" remark="" type="Long"/>
+        <field column="RELATIONSHIP_TYPE" columnDef="Int" name="relationshipType" null-able="false" primitive="No" remark="0:??,??" type="Integer"/>
+        <field column="TITLE_ROLE_ID" columnDef="Int" name="titleRoleId" primitive="No" remark="??????&#10;??????:&#10;1000:????(??)&#10;1001:???&#10;1002:???&#10;1003:??&#10;??????:&#10;3000:????(??)&#10;3001:???&#10;3002:??&#10;3003:??&#10;3004:??&#10;3005:??&#10;3006: ????&#10;??????&#10;8000:????(single Balance??????)&#10;8001:????(??:?????)&#10;VPN/community??????&#10;41:MAINPHONE&#10;42:NORMAL&#10;" type="Integer"/>
+        <field column="VALID_DATE" columnDef="Date" name="validDate" null-able="false" primitive="No" remark="" type="Date"/>
+        <field column="EXPIRE_DATE" columnDef="Date" name="expireDate" null-able="false" primitive="No" remark="" type="Date"/>
+        <field column="OPER_TYPE" columnDef="Int" name="operType" null-able="false" primitive="No" remark="1:??&#10;2:??&#10;3:??&#10;" type="Integer"/>
+        <field column="SO_NBR" columnDef="BigInt" name="soNbr" null-able="false" primitive="No" remark="" type="Long"/>
+        <field column="COMMIT_DATE" columnDef="Date" name="commitDate" null-able="false" primitive="No" remark="" type="Date"/>
+    </fields>
+</entity>

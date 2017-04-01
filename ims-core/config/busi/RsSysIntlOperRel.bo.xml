@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="RsSysIntlOperRel" schema="BD" table="RS_SYS_INTL_OPER_REL">
+  <fields>
+    <field name="relId" type="Integer" column="REL_ID" isPk="true(not generated)" primitive="No" remark="Record sequence number" null-able="true" columnDef="AutoIncrement"/>
+    <field name="operatorCode" type="String" column="OPERATOR_CODE" primitive="No" remark="Operator code" null-able="true" columnDef="Varchar" columnSize="32"/>
+    <field name="userOperatorId" type="Integer" column="USER_OPERATOR_ID" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="operRoamType" type="Integer" column="OPER_ROAM_TYPE" primitive="No" remark="0：无漫游 1：漫出 2：漫入 3：双向 9：终止 " null-able="true" columnDef="Int"/>
+    <field name="validDate" type="Date" column="VALID_DATE" primitive="No" remark="Effective date" null-able="true" columnDef="TimeStamp"/>
+    <field name="expireDate" type="Date" column="EXPIRE_DATE" primitive="No" remark="Expired date" null-able="true" columnDef="TimeStamp"/>
+    <field name="description" type="String" column="DESCRIPTION" primitive="No" remark="Description" null-able="false" columnDef="Varchar" columnSize="1024"/>
+  </fields>
+</entity>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SManagerInfo" remark="" sdl="true" sdl-module="MXdr" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+<fields>
+<complex-field collection="none" name="firstActivation" primitive="false" ref="imsxdr.SFirstAct" remark="" sdl="true" type="entity"/>
+<complex-field collection="none" name="operInfo" primitive="false" ref="imsxdr.SOperInfo" remark="" sdl="true" type="entity"/>
+<complex-field collection="none" name="rechargeInfo" primitive="false" ref="imsxdr.SRecharge" remark="" sdl="true" type="entity"/>
+<complex-field collection="none" name="queryBalance" primitive="false" ref="imsxdr.SQryBalance" remark="" sdl="true" type="entity"/>
+<complex-field collection="none" name="businessInfo" primitive="false" ref="imsxdr.SBusinessInfo" remark="" sdl="true" type="entity"/>
+<complex-field collection="none" name="userInfo" primitive="false" ref="imsxdr.SUserInfo" remark="" sdl="true" type="entity"/>
+<complex-field collection="none" name="queryRechargeLog" primitive="false" ref="imsxdr.SQueryRechargeLog" remark="" sdl="true" type="entity"/>
+<complex-field collection="none" name="adjustFreeres" primitive="false" ref="imsxdr.SAdjustFreeRes" remark="" sdl="true" type="entity"/>
+<complex-field collection="none" name="adjustAsset" primitive="false" ref="imsxdr.SAdjustAsset" remark="" sdl="true" type="entity"/>
+</fields>
+</entity>

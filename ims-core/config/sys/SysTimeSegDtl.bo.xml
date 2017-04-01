@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="SysTimeSegDtl" schema="SD" table="SYS_TIME_SEG_DTL">
+  <fields>
+    <field name="segId" type="Integer" column="SEG_ID" isPk="true(not generated)" primitive="No" remark="time segment identifier 
+" null-able="true" columnDef="Int"/>
+    <field name="startVal" type="Long" column="START_VAL" isPk="true(not generated)" primitive="No" remark="is defined according to time mode, if the time mode is 1
+
+start_val:1000000
+end_val :7235959
+
+which stands for 12 pm on each Monday to 23:59:59 on each Sunday." null-able="true" columnDef="BigInt"/>
+    <field name="endVal" type="Long" column="END_VAL" primitive="No" remark="segment end
+is defined as time mode, if the time mode is 1, 
+start_val:1000000
+end_val :7235959
+which represents 0 PM of each Monday to 23:59:59 of each Sunday
+
+" null-able="true" columnDef="BigInt"/>
+  </fields>
+</entity>

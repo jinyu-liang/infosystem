@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="SysGroupBillingPlan" schema="SD" table="SYS_GROUP_BILLING_PLAN">
+  <fields>
+    <field name="id" type="Integer" column="ID" isPk="true" primitive="No" null-able="true" columnDef="AutoIncrement"/>
+    <field name="startDay" type="Integer" column="START_DAY" primitive="No" remark="one day of calendar month
+" null-able="false" columnDef="Int"/>
+    <field name="endDay" type="Integer" column="END_DAY" primitive="No" remark="one day of calendar month" null-able="false" columnDef="Int"/>
+    <field name="brandId" type="Integer" column="BRAND_ID" primitive="No" remark="Brand ID" null-able="false" columnDef="Int"/>
+    <field name="mainPromotion" type="Integer" column="MAIN_PROMOTION" primitive="No" remark="ฒฮฟผึ๗ฒ๚ฦทฃฌฤฌศฯ-1" null-able="false" columnDef="Int"/>
+    <field name="policyId" type="Integer" column="POLICY_ID" primitive="No" remark="Policy ID, 0 for always true.
+" null-able="false" columnDef="Int"/>
+    <field name="cycleSpecId" type="Long" column="CYCLE_SPEC_ID" primitive="No" remark="billing cycle specification ID" null-able="true" columnDef="BigInt"/>
+    <field name="billFormatId" type="Integer" column="BILL_FORMAT_ID" primitive="No" remark="bill format code" null-able="false" columnDef="Int"/>
+    <field name="regionCode" type="Integer" column="REGION_CODE" primitive="No" null-able="false" columnDef="Int"/>
+    <field name="customerClass" type="Integer" column="CUSTOMER_CLASS" primitive="No" null-able="false" columnDef="Int"/>
+    <field name="customerType" type="Integer" column="CUSTOMER_TYPE" primitive="No" null-able="false" columnDef="Int"/>
+    <field name="customerSegment" type="Integer" column="CUSTOMER_SEGMENT" primitive="No" null-able="false" columnDef="Int"/>
+    <field name="accountType" type="Integer" column="ACCOUNT_TYPE" primitive="No" null-able="false" columnDef="Int"/>
+    <field name="billingType" type="Integer" column="BILLING_TYPE" primitive="No" null-able="false" columnDef="Int"/>
+    <field name="resType" type="Integer" column="RES_TYPE" primitive="No" null-able="false" columnDef="Int"/>
+  </fields>
+</entity>

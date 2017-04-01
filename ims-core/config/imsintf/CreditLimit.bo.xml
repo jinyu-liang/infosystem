@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="CreditLimit" transient="false">
+  <fields>
+    <field name="creditItemId" type="Integer" isPk="false" primitive="No" tree-foreign-key="false" null-able="false"/>
+    <field name="credit" type="Double" isPk="false" primitive="No" tree-foreign-key="false" null-able="false"/>
+    <field name="remain_credit" type="Double" isPk="false" primitive="No" tree-foreign-key="false" null-able="true"/>
+    <field name="temp_credit" type="Double" isPk="false" primitive="No" tree-foreign-key="false" null-able="true"/>
+    <field name="advance_payment" type="Double" isPk="false" primitive="No" tree-foreign-key="false" null-able="true"/>
+    <field name="usage" type="Double" isPk="false" primitive="No" tree-foreign-key="false" null-able="true"/>
+    <field name="unpaid_payment" type="Double" isPk="false" primitive="No" null-able="true"/>
+    <field name="credit_type" type="Short" isPk="false" primitive="No" null-able="true"/>
+    <field name="expire_date" type="String" isPk="false" primitive="No" null-able="true"/>
+    <field name="measure_id" type="Integer" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="temp_flag" type="Short" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="unlimited_flag" type="Short" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="last_bill_date" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="next_bill_date" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="recurringFee" type="Double" isPk="false" primitive="No" null-able="true"/>
+    <field name="onetimeFee" type="Double" isPk="false" primitive="No" null-able="true"/>
+    <field name="unbilled_amount" type="Double" isPk="false" primitive="No" null-able="true"/>
+    <field name="exempt_credit_flag" type="Short" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="exempt_valid_date" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="exempt_expire_date" type="String" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SGroupAcctPayment" remark="" sdl="true" sdl-module="MXdr" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+<fields>
+<field name="payforServId" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="payforAcctId" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="specAcctType" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="segId" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="priority" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="policyId" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<complex-field collection="map&lt;Integer,?&gt;" name="subPayforRule" primitive="false" ref="imsxdr.SSubPayforRule" remark="" sdl="true" type="entity"/>
+</fields>
+</entity>

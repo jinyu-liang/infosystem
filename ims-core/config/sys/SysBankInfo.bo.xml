@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="SysBankInfo" schema="SD" table="SYS_BANK_INFO">
+  <fields>
+    <field name="bankId" type="Integer" column="BANK_ID" isPk="true" primitive="No" null-able="true" columnDef="AutoIncrement"/>
+    <field name="bankType" type="Integer" column="BANK_TYPE" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="bankNo" type="String" column="BANK_NO" primitive="No" null-able="true" columnDef="Varchar" columnSize="12"/>
+    <field name="bankName" type="String" column="BANK_NAME" primitive="No" null-able="true" columnDef="Varchar" columnSize="256"/>
+    <field name="bankAddr" type="String" column="BANK_ADDR" primitive="No" null-able="true" columnDef="Varchar" columnSize="256"/>
+    <field name="linkMan" type="String" column="LINK_MAN" primitive="No" null-able="true" columnDef="Varchar" columnSize="256"/>
+    <field name="linkPhone" type="String" column="LINK_PHONE" primitive="No" null-able="true" columnDef="Varchar" columnSize="64"/>
+    <field name="postCode" type="Integer" column="POST_CODE" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="email" type="String" column="EMAIL" primitive="No" null-able="true" columnDef="Varchar" columnSize="32"/>
+    <field name="parentBankId" type="Integer" column="PARENT_BANK_ID" primitive="No" null-able="false" columnDef="Int"/>
+    <field name="sts" type="Integer" column="STS" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="bankDesc" type="String" column="BANK_DESC" primitive="No" null-able="true" columnDef="Varchar" columnSize="1024"/>
+    <field name="bankDescExt" type="String" column="BANK_DESC_EXT" primitive="No" null-able="true" columnDef="Varchar" columnSize="1024"/>
+    <field name="isNeedPasswd" type="Integer" column="IS_NEED_PASSWD" primitive="No" remark="???(?????)?????????????
+0 - ???
+1 - ??" null-able="false" columnDef="Int"/>
+    <field name="topBankId" type="Integer" column="TOP_BANK_ID" primitive="No" null-able="false" columnDef="Int"/>
+  </fields>
+</entity>

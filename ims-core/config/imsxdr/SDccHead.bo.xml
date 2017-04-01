@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SDccHead" remark="" sdl="true" sdl-module="MXdr" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+<fields>
+<field name="version" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="commandFlag" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="commandCode" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="applicationId" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="hopId" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="endId" primitive="Yes" remark="" sdl="true" type="Integer"/>
+</fields>
+</entity>

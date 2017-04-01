@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SProductStatus" remark="" sdl="true" sdl-module="MImsSyncDef" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+    <fields>
+        <field name="acctId" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="productSequenceId" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="deductFlag" primitive="Yes" remark="" sdl="true" type="Short"/>
+        <field name="previousBalance" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="currentBalance" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="retryTime" primitive="Yes" remark="" sdl="true" type="Short"/>
+        <field name="currentRetryCycle" primitive="Yes" remark="" sdl="true" type="Short"/>
+        <field name="currentRetryTime" primitive="Yes" remark="" sdl="true" type="Short"/>
+        <field name="prorateDays" primitive="Yes" remark="" sdl="true" type="Short"/>
+        <field name="oldCycleDate" primitive="Yes" remark="" sdl="true" type="Date"/>
+        <field name="chargeAmount" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="splitChargeAmount" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="deductTime" primitive="Yes" remark="" sdl="true" type="Date"/>
+        <field name="failReason" primitive="Yes" remark="" sdl="true" type="String"/>
+        <field name="ruleId" primitive="Yes" remark="" sdl="true" type="Short"/>
+        <field name="cycleIndex" primitive="Yes" remark="" sdl="true" type="Integer"/>
+    </fields>
+</entity>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="IProcessDown" remark="" schema="ZK" table="I_PROCESS_DOWN" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="DONE_CODE" columnDef="Int" isPk="false" name="doneCode" null-able="true" primitive="Auto" type="Long"/>
+        <field column="INSERT_DATE" columnDef="Date" isPk="false" name="insertDate" null-able="true" primitive="Auto" type="Date"/>
+        <field column="NOTES" columnDef="Varchar" columnSize="512" isPk="false" name="notes" null-able="true" primitive="Auto" type="String"/>
+        <field column="REGION_CODE" columnDef="Int" isPk="false" name="regionCode" null-able="true" primitive="Auto" type="Integer"/>
+        <field column="SERVICE_TYPE" columnDef="Int" isPk="false" name="serviceType" null-able="true" primitive="Auto" type="Integer"/>
+        <field column="THRESHOLD" columnDef="Int" isPk="false" name="threshold" null-able="true" primitive="Auto" type="Long"/>
+        <field column="UPDATE_DATE" columnDef="Date" isPk="false" name="updateDate" null-able="true" primitive="Auto" type="Date"/>
+        <field column="UPDATE_STATUS" columnDef="Int" isPk="false" name="updateStatus" null-able="true" primitive="Auto" type="Integer"/>
+        <field column="USER_ID" columnDef="Int" isPk="false" name="userId" null-able="true" primitive="Auto" type="Long"/>
+    </fields>
+</entity>

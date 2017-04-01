@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="do_fuzzyAcctsForGUIResponse">
+  <root ref="imsintf.BaseResponse"/>
+  <fields>
+    <complex-field name="sAccountList" type="entity" ref="imsintf.SAccountList" collection="none" primitive="false"/>
+  </fields>
+</entity>

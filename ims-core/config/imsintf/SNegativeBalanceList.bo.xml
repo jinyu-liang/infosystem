@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="SNegativeBalanceList">
+  <fields>
+    <complex-field name="SNegativeBalance_Item" type="entity" ref="imsintf.SNegativeBalance" collection="array" primitive="false"/>
+  </fields>
+</entity>

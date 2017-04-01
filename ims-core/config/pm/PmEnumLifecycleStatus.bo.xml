@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="PmEnumLifecycleStatus" remark="" schema="PD" table="PM_ENUM_LIFECYCLE_STATUS" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="LIFECYCLE_STATUS_ID" columnDef="AutoIncrement" isPk="true" name="lifecycleStatusId" primitive="No" remark="Life cycle status ID&#10;&#10;value：&#10;0：inactivated&#10;1：activated&#10;2：plan" type="Integer"/>
+        <field column="NAME" columnDef="Varchar" columnSize="256" name="name" null-able="false" primitive="No" remark="categorization of product specification types and its name&#10;" type="String"/>
+        <field column="APPLY_AT" columnDef="Int" name="applyAt" primitive="No" remark="category, fixed value, which is filtered in coding&#10;&#10;0：all related life cycle types are all applicable&#10;1：only apply for product specification&#10;2：only apply for sales product&#10;3：only apply for product" type="Integer"/>
+        <field column="DESCRIPTION" columnDef="Varchar" columnSize="1024" name="description" primitive="No" remark="description" type="String"/>
+    </fields>
+</entity>

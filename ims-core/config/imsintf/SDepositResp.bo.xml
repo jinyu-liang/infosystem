@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="SDepositResp">
+  <fields>
+    <field name="book_item" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="oper_amount" type="Double" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="remain_amount" type="Double" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="valid_date" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="expire_date" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="measure_id" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

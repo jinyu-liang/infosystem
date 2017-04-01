@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="BillExtIn" transient="true">
+  <fields>
+    <field name="phone_id" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="cust_id" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="acct_id" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="resource_id" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="bill_no" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="begin_month" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="end_month" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="pay_sts" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="bill_sts" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="ret_type" type="Short" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="real_type" type="Short" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="late_fee_type" type="Short" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="is_format" type="Boolean" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

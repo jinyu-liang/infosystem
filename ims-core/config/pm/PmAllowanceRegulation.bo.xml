@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="PmAllowanceRegulation" schema="pd" table="PM_ALLOWANCE_REGULATION">
+  <fields>
+    <field name="allowanceRuleId" type="Integer" column="ALLOWANCE_RULE_ID" isPk="true" remark="allowance regulation identifier" null-able="false" columnDef="NUMBER" columnSize="9"/>
+    <field name="cycleUnit" type="Integer" column="CYCLE_UNIT" isPk="false" remark="cycle unit" null-able="false" columnDef="NUMBER" columnSize="4"/>
+    <field name="cycleType" type="Integer" column="CYCLE_TYPE" isPk="false" remark="cycle type
+
+1:calendar day cycle type
+2:calendar week cycle type
+3:calendar month cycle type
+4:calendar year cycle type
+5:dynamic month cycle type, similar function to add_months provided by ORACLE
+6:shift calendar hour cycle type
+7: shift calendar month cycle type
+calculate by days now, for calculation cycle, the minimun unit is day." null-able="false" columnDef="NUMBER" columnSize="4"/>
+    <field name="allowanceType" type="Integer" column="ALLOWANCE_TYPE" isPk="false" null-able="true" columnDef="NUMBER" columnSize="9"/>
+  </fields>
+</entity>

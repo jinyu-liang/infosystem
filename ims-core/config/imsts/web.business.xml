@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/biz.xsd">
+    <service bind-entity="false" name="IImsTsApp" sdl="true" sdl-module="MImsTsApp">
+        <method name="read_firstActive" scope="service-only">
+            <return-type type="Integer"/>
+        </method>
+        <method name="deal_firstActive" scope="service-only">
+            <return-type type="Integer"/>
+            <parameter collection="list" input="true" name="sCustProdSyncList" output="false" primitive="false" ref="imsts.STsRecord" type="entity"/>
+        </method>
+        <method name="read_creditStatus" scope="service-only">
+            <return-type type="Integer"/>
+        </method>
+        <method name="deal_creditStatus" scope="service-only">
+            <return-type type="Integer"/>
+            <parameter collection="list" input="true" name="sCreditStatusSyncList" output="false" primitive="false" ref="imsts.STsRecord" type="entity"/>
+        </method>
+        <method name="read_productStatus" scope="service-only">
+            <return-type type="Integer"/>
+        </method>
+        <method name="deal_productStatus" scope="service-only">
+            <return-type type="Integer"/>
+            <parameter collection="list" input="true" name="sProdStsSyncList" output="false" primitive="false" ref="imsts.STsRecord" type="entity"/>
+        </method>
+        <method name="read_userStsSync" scope="service-only">
+            <return-type type="Integer"/>
+        </method>
+        <method name="deal_userStsSync" scope="service-only">
+            <return-type type="Integer"/>
+            <parameter collection="list" input="true" name="sTsRecordList" output="false" primitive="false" ref="imsts.STsRecord" type="entity"/>
+        </method>
+        <method name="read_barService" scope="service-only">
+            <return-type type="Integer"/>
+        </method>
+        <method name="deal_barService" scope="service-only">
+            <return-type type="Integer"/>
+            <parameter collection="list" input="true" name="sTsRecordList" output="false" primitive="false" ref="imsts.STsRecord" type="entity"/>
+        </method>
+        <method name="read_rewardInfo" scope="service-only">
+            <return-type type="Integer"/>
+        </method>
+        <method name="deal_rewardInfo" scope="service-only">
+            <return-type type="Integer"/>
+            <parameter collection="list" input="true" name="sTsRecordList" output="false" primitive="false" ref="imsts.STsRecord" type="entity"/>
+        </method>
+        <method name="read_otPromUsedUp" scope="service-only">
+            <return-type type="Integer"/>
+        </method>
+        <method name="deal_otPromUsedUp" scope="service-only">
+            <return-type type="Integer"/>
+            <parameter collection="list" input="true" name="sOtpromUsedupSyncList" output="false" primitive="false" ref="imsts.STsRecord" type="entity"/>
+        </method>
+        <method name="read_lowBalance" scope="service-only">
+            <return-type type="Integer"/>
+        </method>
+        <method name="deal_lowBalance" scope="service-only">
+            <return-type type="Integer"/>
+            <parameter collection="list" input="true" name="sTsRecordList" output="false" primitive="false" ref="imsts.STsRecord" type="entity"/>
+        </method>
+        <method name="read_mdbError" scope="service-only">
+            <return-type type="Integer"/>
+        </method>
+        <method name="deal_mdbError" scope="service-only">
+            <return-type type="Integer"/>
+            <parameter collection="list" input="true" name="sTsRecordList" output="false" primitive="false" ref="imsts.STsRecord" type="entity"/>
+        </method>
+        <method name="read_expireProd" scope="service-only">
+            <return-type type="Integer"/>
+        </method>
+        <method name="deal_expireProd" scope="service-only">
+            <return-type type="Integer"/>
+            <parameter collection="list" input="true" name="sExpireProdNotifyList" output="false" primitive="false" ref="imsts.STsRecord" type="entity"/>
+        </method>
+        <method name="read_event" scope="service-only">
+            <return-type type="Integer"/>
+        </method>
+        <method name="deal_event" scope="service-only">
+            <return-type type="Integer"/>
+            <parameter collection="list" input="true" name="sTsRecordList" output="false" primitive="false" ref="imsts.STsRecord" type="entity"/>
+        </method>
+        <method name="read_eventReward" scope="service-only">
+            <return-type type="Integer"/>
+        </method>
+        <method name="deal_eventReward" scope="service-only">
+            <return-type type="Integer"/>
+            <parameter collection="list" input="true" name="sTsRecordList" output="false" primitive="false" ref="imsts.STsRecord" type="entity"/>
+        </method>
+        <method name="read_delayValidProd" scope="service-only">
+            <return-type type="Integer"/>
+        </method>
+        <method name="deal_delayValidProd" scope="service-only">
+            <return-type type="Integer"/>
+            <parameter collection="list" input="true" name="sDelayValidProdSyncList" output="false" primitive="false" ref="imsts.STsRecord" type="entity"/>
+        </method>
+        <method name="read_prodOnceNotify" scope="service-only">
+            <return-type type="Integer"/>
+        </method>
+        <method name="deal_prodOnceNotify" scope="service-only">
+            <return-type type="Integer"/>
+            <parameter collection="list" input="true" name="sProdOnceNotifyList" output="false" primitive="false" ref="imsts.STsRecord" type="entity"/>
+        </method>
+        <method name="read_prodCycleNotify" scope="service-only">
+            <return-type type="Integer"/>
+        </method>
+        <method name="deal_prodCycleNotify" scope="service-only">
+            <return-type type="Integer"/>
+            <parameter collection="list" input="true" name="sProdCycleNotifyList" output="false" primitive="false" ref="imsts.STsRecord" type="entity"/>
+        </method>
+        <method name="read_lifeCycleOncePreNotify" scope="service-only">
+            <return-type type="Integer"/>
+        </method>
+        <method name="deal_lifeCycleOncePreNotify" scope="service-only">
+            <return-type type="Integer"/>
+            <parameter collection="list" input="true" name="sTsRecordList" output="false" primitive="false" ref="imsts.STsRecord" type="entity"/>
+        </method>
+        <method name="read_imsUserOrderConfirm" scope="service-only">
+            <return-type type="Integer"/>
+        </method>
+        <method name="deal_imsUserOrderConfirm" scope="service-only">
+            <return-type type="Integer"/>
+            <parameter collection="list" name="sUserConfirmList" output="false" primitive="false" ref="imsts.SUserConfirm" type="entity"/>
+        </method>
+        <method name="read_imsOrderProduct" scope="service-only">
+            <return-type type="Integer"/>
+        </method>
+        <method name="deal_imsOrderProduct" scope="service-only">
+            <return-type type="Integer"/>
+            <parameter collection="list" name="listImsOrderProduct" output="false" primitive="false" ref="imsts.SImsOrderProduct" type="entity"/>
+        </method>
+    <method name="read_sharingProd" scope="service-only">
+            <return-type type="Integer"/>
+        </method>
+        <method name="deal_sharingProd" scope="service-only">
+            <return-type type="Integer"/>
+            <parameter collection="list" input="true" name="sTsRecordList" output="false" primitive="false" ref="imsts.STsRecord" type="entity"/>
+        </method>
+    <method name="read_imsSyncTs" scope="service-only">
+            <return-type type="Integer"/>
+        </method>
+        <method name="deal_imsSyncTs" scope="service-only">
+            <return-type type="Integer"/>
+            <parameter collection="list" input="true" name="sTsRecordList" output="false" primitive="false" ref="imsts.STsRecord" type="entity"/>
+        </method>
+    <method name="read_deductFailureTs" scope="service-only">
+            <return-type type="Integer"/>
+        </method>
+        <method name="deal_deductFailureTs" scope="service-only">
+            <return-type type="Integer"/>
+            <parameter collection="list" input="true" name="sTsRecordList" output="false" primitive="false" ref="imsts.STsRecord" type="entity"/>
+        </method>
+    <method name="read_resetSysNegtiveValue" scope="service-only">
+            <return-type type="Integer"/>
+        </method>
+        <method name="deal_resetSysNegtiveValue" scope="service-only">
+            <return-type type="Integer"/>
+            <parameter collection="list" input="true" name="sTsRecordList" output="false" primitive="false" ref="imsts.STsRecord" type="entity"/>
+        </method>
+    <method name="read_syncIcs" scope="service-only">
+            <return-type type="Integer"/>
+        </method>
+        <method name="deal_syncIcs" scope="service-only">
+            <return-type type="Integer"/>
+            <parameter collection="list" input="true" name="sTsRecordList" output="false" primitive="false" ref="imsts.STsRecord" type="entity"/>
+        </method>
+         <method name="read_terminateBillAcctTs" scope="service-only">
+            <return-type type="Integer"/>
+        </method>
+        <method name="deal_terminateBillAcctTs" scope="service-only">
+            <return-type type="Integer"/>
+            <parameter collection="list" name="sTsRecordList" output="false" primitive="false" ref="imsts.STsRecord" type="entity"/>
+        </method>
+    </service>
+</module>

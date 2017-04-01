@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="SysGroupDef" schema="SD" table="SYS_GROUP_DEF">
+  <fields>
+    <field name="groupId" type="Integer" column="GROUP_ID" isPk="true" primitive="No" remark="group ID" null-able="true" columnDef="AutoIncrement"/>
+    <field name="groupName" type="String" column="GROUP_NAME" primitive="No" remark="Group name" null-able="false" columnDef="Varchar" columnSize="256"/>
+    <field name="regionCode" type="Integer" column="REGION_CODE" primitive="No" null-able="false" columnDef="Int"/>
+    <field name="customerClass" type="Integer" column="CUSTOMER_CLASS" primitive="No" remark="Customer Class
+0:Person
+1:Family
+2:Group
+
+-1: ignore" null-able="true" columnDef="Int"/>
+    <field name="customerType" type="Integer" column="CUSTOMER_TYPE" primitive="No" remark="customer type
+-1---ignore" null-able="false" columnDef="Int"/>
+    <field name="customerSegment" type="Integer" column="CUSTOMER_SEGMENT" primitive="No" remark="customer classes
+-1---ignore" null-able="false" columnDef="Int"/>
+    <field name="accountType" type="Integer" column="ACCOUNT_TYPE" primitive="No" remark="account type
+-1---ignore" null-able="false" columnDef="Int"/>
+    <field name="singleBalance" type="Integer" column="SINGLE_BALANCE" primitive="No" remark="0：相应配置不参考此字段； 
+1：参考此字段，相应用户属性必须配置为-1，如SYS_GROUP_DEF的BILLING_TYPE，RES_TYPE，BI_BUSI_AVAIBLE表的BRAND_ID，MAIN_PROMOTION等" null-able="true" columnDef="Int"/>
+    <field name="billingType" type="Integer" column="BILLING_TYPE" primitive="No" remark="billing type 
+-1-ignore" null-able="false" columnDef="Int"/>
+    <field name="resType" type="Integer" column="RES_TYPE" primitive="No" remark="equipment type
+-1-ignore" null-able="false" columnDef="Int"/>
+    <field name="resSegment" type="Integer" column="RES_SEGMENT" primitive="No" remark="Resource segment
+1.Classic
+2.Gold
+3.Platinum
+4.Platinum Plus
+5.Serenade CEO
+6.Serenade Prestige
+7.Standard" null-able="false" columnDef="Int"/>
+    <field name="priority" type="Integer" column="PRIORITY" primitive="No" remark="Priority
+Larger value, higher priority." null-able="false" columnDef="Int"/>
+    <field name="validDate" type="Date" column="VALID_DATE" primitive="No" remark="valid date" null-able="true" columnDef="TimeStamp"/>
+    <field name="expireDate" type="Date" column="EXPIRE_DATE" primitive="No" remark="invalid date" null-able="false" columnDef="TimeStamp"/>
+  </fields>
+</entity>

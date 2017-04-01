@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="ImsOtpromUsedupSync" remark="" schema="cd" table="IMS_OTPROM_USEDUP_SYNC" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="ID" columnDef="AutoIncrement" isPk="true" name="id" primitive="No" remark="?bos??sequence??" type="Long"/>
+        <field column="ACCT_ID" columnDef="Int" name="acctId" primitive="No" remark="??ID" type="Long"/>
+        <field column="CUST_ID" columnDef="Int" name="custId" primitive="No" remark="??ID" type="Long"/>
+        <field column="RESOURCE_ID" columnDef="Int" name="resourceId" primitive="No" remark="??ID" type="Long"/>
+        <field column="PHONE_ID" columnDef="Varchar" columnSize="30" name="phoneId" primitive="No" remark="????" type="String"/>
+        <field column="PRODUCT_ID" columnDef="Int" name="productId" primitive="No" remark="??????ID" type="Long"/>
+        <field column="PRODUCT_OFFCE_ID" columnDef="Int" name="productOffceId" primitive="No" remark="??????ID" type="Long"/>
+        <field column="USED_UP_TIME" columnDef="Date" name="usedUpTime" primitive="No" remark="" type="Date"/>
+        <field column="EXTEND_FIELD1" columnDef="Int" name="extendField1" primitive="No" remark="????1" type="Long"/>
+        <field column="EXTEND_FIELD2" columnDef="Int" name="extendField2" primitive="No" remark="????2" type="Long"/>
+        <field column="SO_NBR" columnDef="Int" name="soNbr" null-able="false" primitive="No" remark="done_code" type="Long"/>
+        <field column="CREATE_DATE" columnDef="Date" name="createDate" null-able="false" primitive="No" remark="create date" type="Date"/>
+        <field column="STS" columnDef="Int" name="sts" null-able="false" primitive="No" remark="1:????&#10;2: ???" type="Integer"/>
+        <field column="LEVEL_TYPE" columnDef="Int" name="levelType" primitive="No" remark="????????:0-??;1-??;2-??;3-??" type="Integer"/>
+        <field column="ERROR_MSG" columnDef="Varchar" columnSize="256" name="errorMsg" primitive="No" remark="" type="String"/>
+        <field column="ERROR_CODE" columnDef="Int" name="errorCode" primitive="No" remark="" type="Integer"/>
+        <field column="DEAL_COUNT" columnDef="Int" name="dealCount" primitive="No" remark="" type="Integer"/>
+        <field column="DEAL_DATE" columnDef="Date" name="dealDate" primitive="No" remark="" type="Date"/>
+    </fields>
+</entity>

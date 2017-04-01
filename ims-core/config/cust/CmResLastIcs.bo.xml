@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="CmResLastIcs" remark="" schema="CD" table="CM_RES_LAST_ICS" xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="RESOURCE_ID" columnDef="BigInt" name="resourceId" null-able="false" primitive="No" remark="RESOURCE_ID" type="Long"/>
+        <field column="PHONE_ID" columnDef="Varchar" columnSize="64" name="phoneId" null-able="false" primitive="No" remark="PHONE_ID" type="String"/>
+        <field column="CALL_SCREEN_NO_TYPE" columnDef="Int" name="callScreenNoType" primitive="No" remark="1: blacklist&#10;2: whitelist&#10;3:blacklist &amp; whitelist(default)&#10;" type="Integer"/>
+        <field column="EFFECT_TIME" columnDef="Varchar" columnSize="64" name="effectTime" primitive="No" remark="EFFECT_TIME" type="String"/>
+        <field column="EXPIRE_TIME" columnDef="Varchar" columnSize="64" name="expireTime" primitive="No" remark="EXPIRE_TIME" type="String"/>
+        <field column="WEEK_START" columnDef="Int" name="weekStart" primitive="No" remark="WEEK_START" type="Integer"/>
+        <field column="WEEK_STOP" columnDef="Int" name="weekStop" primitive="No" remark="WEEK_STOP" type="Integer"/>
+        <field column="EXPIRE_DATE" columnDef="TimeStamp" name="expireDate" primitive="No" remark="EXPIRE_DATE" type="Date"/>
+        <field column="ROUTE_NUMBER" columnDef="Varchar" columnSize="64" name="routeNumber" primitive="No" remark="ROUTE_NUMBER" type="String"/>
+        <field column="IR_ROUTE_FLAG" columnDef="Int" name="irRouteFlag" primitive="No" remark="IR_ROUTE_FLAG" type="Integer"/>
+        <field column="ROUTING_METHOD" columnDef="Int" name="routingMethod" primitive="No" remark="ROUTING_METHOD" type="Integer"/>
+        <field column="LIST_TYPE" columnDef="Int" name="listType" primitive="No" remark="0: Black List&#10;1: White List&#10;" type="Integer"/>
+        <field column="CREATE_DATE" columnDef="TimeStamp" name="createDate" primitive="No" remark="CREATE_DATE" type="Date"/>
+        <field column="VALID_DATE" columnDef="TimeStamp" name="validDate" primitive="No" remark="VALID_DATE" type="Date"/>
+        <field column="SO_NBR" columnDef="BigInt" name="soNbr" primitive="No" remark="SO_NBR" type="Long"/>
+        <field column="SO_DATE" columnDef="TimeStamp" name="soDate" primitive="No" remark="SO_DATE" type="Date"/>
+    </fields>
+</entity>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="SQryProdOfferInfoReq">
+  <fields>
+    <field name="brandId" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="offerTypeId" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="regionCode" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="prodSpecId" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="sts" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="start" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="limit" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="codeName" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="isMain" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="orderType" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="billType" type="Short" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="acct_id" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="PmProductPricingPlan" schema="pd" table="PM_PRODUCT_PRICING_PLAN">
+  <fields>
+    <field name="productOfferingId" type="Integer" column="PRODUCT_OFFERING_ID" isPk="true(not generated)" primitive="No" remark="a unique identifier for product offering " null-able="false" columnDef="Int"/>
+    <field name="policyId" type="Integer" column="POLICY_ID" isPk="true(not generated)" primitive="No" remark="pricing policy ID expresses the scenario of effective price." null-able="false" columnDef="Int"/>
+    <field name="pricingPlanId" type="Integer" column="PRICING_PLAN_ID" primitive="No" remark="pricing plan identifier " null-able="true" columnDef="Int"/>
+    <field name="priority" type="Integer" column="PRIORITY" primitive="No" null-able="false" columnDef="Int"/>
+    <field name="mainPromotion" type="Integer" column="MAIN_PROMOTION" isPk="true(not generated)" primitive="No" remark="???-1????????" null-able="false" columnDef="Int"/>
+    <field name="dispFlag" type="Integer" column="DISP_FLAG" primitive="No" remark="0:ignore;1:??????????;??1???,??????????????" null-able="false" columnDef="Int"/>
+  </fields>
+</entity>

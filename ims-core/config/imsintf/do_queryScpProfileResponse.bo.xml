@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="do_queryScpProfileResponse" transient="true">
+  <root ref="imsintf.BaseResponse"/>
+  <fields>
+    <field name="phone_id" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="fph_flag" type="Short" isPk="false" primitive="No" null-able="true"/>
+    <field name="ussd_callback_flag" type="Short" isPk="false" primitive="No" null-able="true"/>
+    <field name="icfFlag" type="Short" isPk="false" primitive="No" null-able="true"/>
+    <field name="icfNumber" type="String" isPk="false" primitive="No" null-able="true"/>
+    <field name="icfNumberStatus" type="String" isPk="false" primitive="No" null-able="true"/>
+    <complex-field name="sUserAuth" type="entity" ref="imsintf.SUserAuth" collection="none" primitive="false"/>
+    <field name="flh_flag" type="Short" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="posContinue_flag" type="Short" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="brand_id" type="Short" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

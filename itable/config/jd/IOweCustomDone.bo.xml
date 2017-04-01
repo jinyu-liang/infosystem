@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="IOweCustomDone" remark="" schema="JD" table="I_OWE_CUSTOM_DONE" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="USER_ID" columnDef="Int" isPk="false" name="userId" null-able="true" primitive="No" type="Long"/>
+        <field column="ACCT_ID" columnDef="Int" isPk="false" name="acctId" null-able="true" primitive="No" type="Long"/>
+        <field column="OWE_ORDER" columnDef="Int" isPk="false" name="oweOrder" null-able="true" primitive="No" type="Integer"/>
+        <field column="BEGIN_DATE" columnDef="Int" isPk="false" name="beginDate" null-able="true" primitive="No" type="Integer"/>
+        <field column="END_DATE" columnDef="Int" isPk="false" name="endDate" null-able="true" primitive="No" type="Integer"/>
+        <field column="IS_STATUS" columnDef="Int" isPk="false" name="isStatus" null-able="true" primitive="No" type="Integer"/>
+        <field column="VALID_DATE" columnDef="Date" isPk="false" name="validDate" null-able="true" primitive="No" type="Date"/>
+        <field column="EXPIRE_DATE" columnDef="Date" isPk="false" name="expireDate" null-able="true" primitive="No" type="Date"/>
+        <field column="SO_NBR" columnDef="Int" isPk="false" name="soNbr" null-able="true" primitive="No" type="Long"/>
+        <field column="COMMIT_DATE" columnDef="Date" isPk="false" name="commitDate" null-able="true" primitive="No" type="Date"/>
+        <field column="OPER_TYPE" columnDef="Int" isPk="false" name="operType" null-able="true" primitive="No" type="Integer"/>
+    </fields>
+</entity>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="CaInterfaceBusiSpecRel" remark="" schema="AD" table="CA_INTERFACE_BUSI_SPEC_REL" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="INTERFACE_NAME" columnDef="Varchar" columnSize="256" isPk="true(not generated)" name="interfaceName" null-able="false" primitive="No" remark="" type="String"/>
+        <field column="METHOD_NAME" columnDef="Varchar" columnSize="256" isPk="true(not generated)" name="methodName" null-able="false" primitive="No" remark="" type="String"/>
+        <field column="SPECI_ID" columnDef="Int" isPk="true(not generated)" name="speciId" null-able="false" primitive="No" remark="" type="Integer"/>
+    </fields>
+</entity>

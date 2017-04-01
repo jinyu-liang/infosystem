@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="SQueryPriceParamResponse">
+  <root ref="imsintf.BaseResponse"/>
+  <fields>
+    <complex-field name="extendParam_list" type="entity" ref="pm.PmPriceParamDef" collection="list" primitive="false"/>
+  </fields>
+</entity>

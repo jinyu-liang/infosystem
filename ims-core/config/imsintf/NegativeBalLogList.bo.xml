@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="NegativeBalLogList">
+  <fields>
+    <complex-field name="NegativeBalLog_item" type="entity" ref="imsintf.NegativeBalanceLog" collection="array" primitive="false"/>
+  </fields>
+</entity>

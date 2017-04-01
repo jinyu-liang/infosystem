@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="IProdPriceParam" schema="JD" table="I_PROD_PRICE_PARAM">
+  <fields>
+    <field name="productId" type="Long" column="PRODUCT_ID" primitive="No" null-able="true" columnDef="BigInt"/>
+    <field name="paramId" type="Integer" column="PARAM_ID" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="paramValue" type="String" column="PARAM_VALUE" primitive="No" null-able="true" columnDef="Varchar" columnSize="64"/>
+    <field name="validDate" type="Date" column="VALID_DATE" primitive="No" null-able="true" columnDef="TimeStamp"/>
+    <field name="expireDate" type="Date" column="EXPIRE_DATE" primitive="No" null-able="true" columnDef="TimeStamp"/>
+    <field name="operType" type="Integer" column="OPER_TYPE" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="soNbr" type="Long" column="SO_NBR" primitive="No" null-able="true" columnDef="BigInt"/>
+    <field name="commitDate" type="Date" column="COMMIT_DATE" primitive="No" null-able="true" columnDef="TimeStamp"/>
+    <field name="userId" type="Long" column="USER_ID" primitive="No" null-able="true" columnDef="BigInt"/>
+    <field name="acctId" type="Long" column="ACCT_ID" primitive="No" null-able="true" columnDef="BigInt"/>
+  </fields>
+</entity>

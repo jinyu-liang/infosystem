@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="SProductOrder" transient="true">
+  <fields>
+    <field name="product_id" type="Long" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="offer_id" type="Long" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="so_id" type="String" isPk="false" primitive="Auto" tree-foreign-key="false" null-able="true"/>
+    <field name="product_type" type="Integer" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="parent_serv_product" type="Long" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="outer_cust_id" type="String" isPk="false" primitive="Auto" tree-foreign-key="false" null-able="true"/>
+    <field name="cust_id" type="Long" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="outer_acct_id" type="String" isPk="false" primitive="Auto" tree-foreign-key="false" null-able="true"/>
+    <field name="acct_id" type="Long" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="user_id" type="Long" isPk="false" primitive="Auto" tree-foreign-key="false" null-able="true"/>
+    <field name="phone_id" type="String" isPk="false" primitive="Auto" tree-foreign-key="false" null-able="true"/>
+    <field name="outer_billable_acct_id" type="String" isPk="false" primitive="Auto" tree-foreign-key="false" null-able="true"/>
+    <field name="billable_acct_id" type="Long" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="billing_type" type="Short" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="prod_state" type="Short" isPk="false" primitive="No" tree-foreign-key="false" null-able="true"/>
+    <field name="create_date" type="String" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="valid_type" type="Short" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="valid_date" type="String" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="expire_date" type="String" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="nextcycle_start_date" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <complex-field name="bill_cycle" type="entity" ref="imsintf.SBillCycle" collection="none" primitive="false"/>
+    <complex-field name="reguid_price_param" type="entity" ref="imsintf.ExtendParamList" collection="none" primitive="false"/>
+    <complex-field name="param_list" type="entity" ref="imsintf.SProductParamList" collection="none" primitive="false"/>
+    <field name="price_description" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="prepaid_recurring_fee" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="last_bill_date" type="String" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="ReturnRecord">
+  <fields>
+    <field name="amount" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="return_type" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="return_date" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="ext1" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="return_fee_left" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="RsSysMnpDef" schema="BD" table="RS_SYS_MNP_DEF">
+  <fields>
+    <field name="id" type="Integer" column="ID" isPk="true" primitive="No" remark="Record serial number" null-able="true" columnDef="AutoIncrement"/>
+    <field name="mnpPrefix" type="Integer" column="MNP_PREFIX" primitive="No" remark="MNP prefix, originated from network element, such as 86XXY. XX operator id, Y means province code. " null-able="true" columnDef="Int"/>
+    <field name="operatorId" type="Integer" column="OPERATOR_ID" primitive="No" remark="运营商标识
+
+取值sys_operator_def" null-able="false" columnDef="Int"/>
+    <field name="provCode" type="Integer" column="PROV_CODE" primitive="No" remark="Province code, from sys_region_info" null-able="true" columnDef="Int"/>
+    <field name="classId" type="Integer" column="CLASS_ID" primitive="No" remark="Common number type
+refer to RS_SYS_NUMBER_CLASS" null-able="false" columnDef="Int"/>
+    <field name="validDate" type="Date" column="VALID_DATE" primitive="No" remark="It refers to the date for the record taking effect" null-able="true" columnDef="TimeStamp"/>
+    <field name="expireDate" type="Date" column="EXPIRE_DATE" primitive="No" remark="Expired Date" null-able="true" columnDef="TimeStamp"/>
+    <field name="modifyDate" type="Date" column="MODIFY_DATE" primitive="No" remark="Modification Date" null-able="false" columnDef="TimeStamp"/>
+    <field name="description" type="String" column="DESCRIPTION" primitive="No" remark="Description" null-able="false" columnDef="Varchar" columnSize="512"/>
+  </fields>
+</entity>

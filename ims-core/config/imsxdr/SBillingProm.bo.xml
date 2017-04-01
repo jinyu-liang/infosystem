@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SBillingProm" remark="" sdl="true" sdl-module="MXdr" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+<fields>
+<field name="prodId" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="priceId" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="adjustItem" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="cycleBeginDate" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="cycleEndDate" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="baseItem" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="baseFee" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="refProductId" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="refItemCode" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="productFee" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="discountFee" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="promFlag" primitive="Yes" remark="" sdl="true" type="Short"/>
+<field name="includeTaxFlag" primitive="Yes" remark="" sdl="true" type="Short"/>
+<field name="payType" primitive="Yes" remark="" sdl="true" type="Short"/>
+<field name="measureId" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="deductSts" primitive="Yes" remark="" sdl="true" type="Short"/>
+</fields>
+</entity>

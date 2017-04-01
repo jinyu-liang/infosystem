@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="BiBusiHybridRule" schema="AD" table="BI_BUSI_HYBRID_RULE">
+  <fields>
+    <field name="busiSpecId" type="Integer" column="BUSI_SPEC_ID" isPk="true(not generated)" primitive="No" null-able="true" columnDef="AutoIncrement"/>
+    <field name="billingType" type="Integer" column="BILLING_TYPE" isPk="false" primitive="No" remark="BILLING_TYPE  0:prepaid?1:PostPaid" null-able="false" columnDef="Int"/>
+  </fields>
+</entity>

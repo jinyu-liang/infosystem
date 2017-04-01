@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="do_queryInvoiceInfoResponse">
+  <root ref="imsintf.BaseResponse"/>
+  <fields>
+    <complex-field name="feeInvoiceInfoContList" type="entity" ref="imscnsh.FeeInvoiceInfoCont" collection="list" primitive="false"/>
+    <field name="cust_name" type="String" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

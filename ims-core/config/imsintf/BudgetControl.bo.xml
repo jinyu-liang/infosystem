@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="BudgetControl" transient="true">
+  <fields>
+    <field name="busi_service_id" type="Long" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="payment_mode" type="Short" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="budget_type" type="Short" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="budget" type="Double" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="remain_budget" type="Double" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="temp_budget" type="Double" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="action" type="Short" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="measure_id" type="Integer" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <complex-field name="thresholdList" type="entity" ref="imsintf.ThresholdList" collection="none" primitive="false"/>
+  </fields>
+</entity>

@@ -1,0 +1,559 @@
+module MImsSyncDef
+{
+	struct SOperInfo
+    {
+        string        so_nbr;           //工单号
+        int32         busi_code;        //受理类型(not null)
+        int16         so_mode;          //受理模式(not null)
+        int16		  step_id;			//请求步骤
+        date	      so_date;          //受理时间(not null)
+        int16		  charge_flag;			//收费标志
+        int16         isnormal;         //正常工单(not null)
+        int64         cust_id;          //客户编号
+        int64         acct_id;          //帐户编号
+        int64         user_id;          //用户编号
+        string        phone_id;         //手机号码
+        int32         op_id;            //操作员工号(not null)
+        int16		  prov_code;				//省代码
+        int16         region_code;      //地市代码
+        int16         county_code;      //县市代码(not null)
+        int32         org_id;           //局向组织(not null)
+        string         rso_nbr;          //修改或撤销工单的原工单号
+        int16         is_monitor;       //是否监控用户，新增。0 否；1 是
+        string        remark;           //备注
+        string 	      source_system;    //源系统
+        int16		  notify_flag;      //是否发送通知
+    }
+    //供帐管调用的结构
+    struct SProductStatus
+    {
+		int64		acct_id;	            //支付帐户
+		int64		product_sequence_id;	//产品实例编号
+		int16		deduct_flag;	        //扣费结果
+		int64		previous_balance;	    //扣费前余额
+		int64		current_balance;	    //扣费后余额
+		int16		retry_time;	            //最大重扣次数
+		int16       current_retry_cycle;    //当前失败的周期数 
+		int16		current_retry_time;	    //当前重扣次数
+		int16		prorate_days;	        //折算后有效天数
+		date		old_cycle_date;	    	//首次扣费失败日期
+		//int16		is_change_bill_cycle;	//是否变更帐期
+		int64		charge_amount;	        //产品应收费用
+		int64		split_charge_amount;	//实际扣费值
+		date		deduct_time;	    	//扣费时间
+		string		fail_reason;	        //失败原因
+		//int16		action;	                //处理方式
+		int16		rule_id;                 //处理规则
+		int32       cycle_index;        //扣费成功次数
+    }
+	list vector<SProductStatus> SProductStatusList;
+    
+	struct SBalance
+	{
+		int64 book_id;		//科目ID
+		int64 book_item;	//科目类型
+		int64 amount;		//费用额度
+		int32 days;			//有效时间
+		int64 acct_id;		//账户编号
+		int64 user_id;		//用户编号
+		string phone_id;	//手机号
+		int64 valid_date;
+		int64 expire_date;
+	}
+	list vector<SBalance> SBalanceList;
+	
+	struct SFirstAct
+	{
+		int64 user_id;
+		string phone_id;		//必填
+		int64 activation_time;	//必填
+		int16 device_type;
+		int16 sms_lang;
+		int16 ivr_lang;
+		int16 ussd_lang;
+		int16 notify_flag;
+		string location;		//必填
+		//int16 active_channel;	//必填 === SOperInfo中的so_mode
+		SBalance balance;
+	}
+	list vector<SFirstAct> SFirstActList;
+	
+	struct SThreshold
+	{
+		int64 threshold;
+		int16 notify_type;
+		string notify_addr;
+		string notify_phone_id;
+	}
+	list vector<SThreshold> SThresholdList;
+	
+//	struct SThresholdItem
+//	{
+//		SThresholdList threshold_item;
+//	}
+//	list vector<SThresholdItem> SThresholdItemList;
+	
+	struct SBudgetControl
+	{
+		int32 busi_service_id;
+		string budget_mode;
+		int16 budget_type;
+		int64 budget;
+		int64 remain_budget;
+		int64 temp_budget;
+		int16 action;
+		SThresholdList threshold_item;
+	}
+	list vector<SBudgetControl> SBudgetControlList;
+	
+	struct SBarServiceInfo
+	{
+		int64 user_id;
+		string phone_id;
+		SBudgetControlList budgetcontrol_item;
+	}
+	list vector<SBarServiceInfo>  SBarServiceInfoList;
+
+	struct SBarServiceReq
+	{
+		int16 action;
+		int16 reason_code;
+		SBarServiceInfo barserviceinfo;
+	}
+	list vector<SBarServiceReq> SBarServiceReqList;
+	
+		struct SBarService
+	{
+		int16 action;
+		int64 user_id;
+		int64 acct_id;
+		string phone_id;
+		int32 busi_service_id;
+		int16 reason_code;
+	}
+	list vector<SBarService> SBarServiceList;
+	
+	struct SUserInfo
+	{
+		int64 user_id;
+		string phone_id;
+	}
+	list vector<SUserInfo> SUserInfoList;
+	
+	struct SLifeCycleChg4Abm
+	{
+		int64 acct_id;
+		int32 trigger_event_type;
+		int64 old_amount;
+		int64 new_amount;
+		int32 bill_type;
+		int32 cap_max_flag;
+		int32 unbilling_flag;
+        int32 suspend_req_flag;
+        int32 fraud_flag;
+        int16 notify_flag;//生命周期状态变更操作通知（上海版本使用）1：欠费停2：呼出限制停3：新入网额度停4：欠费预销户停5：有效期停6：保留期停7：同证件停10：欠费复机（复机类别：欠费停、呼出限制停、欠费预销、保留停、有效期停）11：新入网额度复机
+        int64 op_id;
+        int32 org_id;
+ 		SUserInfoList user_info_list;
+	}
+	list vector<SLifeCycleChg4Abm> SLifeCycleChg4AbmList;
+	
+	struct SCreditStatus
+	{
+		int32  	work_order_type;
+		string 	phone_id;
+		int32	flag;
+		int32	old_status;
+		int32	old_sub_type;
+		int32	new_status;
+		int32	new_sub_type;
+		int64	credit_limit;
+		int64	temp_credit_limit;
+		int64	over_usage;
+		date	trigger_date;
+	}
+	list vector<SCreditStatus> SCreditStatusList;
+	
+	struct SProdInfo
+	{
+		int64 product_id;
+		int32 product_offering_id;
+		int32 price_plan_id;
+		int32 billing_type;
+		int16 lifecycle_status_id;
+		int64 pay_acct_id;
+		int64 object_id;
+		int16 object_type;
+		int32 expire_date;
+		int32 valid_date;
+		int32 sync_flag;
+	}
+	list vector<SProdInfo> SProdInfoList;
+	
+	struct SAssetInfo
+	{
+		int64	acct_id;
+		int64	resource_id;
+		int32	asset_type;
+		int64	asset_id;
+		int32	asset_item_id;
+		date	valid_date;
+		date    expire_date;
+		int64    amount;
+		int32    status;
+		int32    measure_id;
+		int32    is_common_pocket;
+		int32    billing_type;
+		int64    org_amount;
+		date    org_valid_date;
+		date    org_expire_date;
+	}
+	list vector<SAssetInfo> SAssetInfoList;
+	
+	struct SCaRewardInfo
+	{
+		int32	reward_id;
+		int32	allot_id;
+		int64	acct_id;
+		int64	resource_id;
+		int64	reward_amount;
+		int32	billing_type;
+		int32    product_offering_id;
+		int64    credit_item_id;
+		date    valid_date;
+		date    expire_date;
+		SAssetInfoList    asset_info_list;
+	}
+	list vector<SCaRewardInfo> SCaRewardInfoList;
+	
+	struct SFirstActiveRes
+	{
+		int64	user_id;
+		string	phone_id;
+		int64	acct_id;
+		int32	reward_id;
+		int64	activation_time;
+		string  org_location;//接口传入的loaction
+		//int16   active_channel;
+		string  location;//经过匹配后的loaction
+		int32   price_plan_id;
+		int16	sms_language;
+		int16	ivr_language;
+		int16	ussd_language;
+		int64   so_nbr;
+		SBalance balance;
+		SProdInfoList    del_prod_list;
+		SProdInfoList    mod_prod_list;
+		SProdInfoList    add_prod_list;
+	}
+	list vector<SFirstActiveRes> SFirstActiveResList;
+	
+	 struct SResLifeCycleSync
+    {
+    	int64 resource_id;
+    	int32 sts;
+    	date lifecycle_expire_date;
+    	date lifecycle_valid_date;
+    	date res_valid_expire_date;
+    	date res_valid_valid_date;
+    	int32 res_valid_ishistory;
+    }
+    list vector<SResLifeCycleSync> SResLifeCycleSyncList;
+    struct SUpSellReq
+    {
+    	int16 up_sell_confirm;    			//是否需要客户 确认才升级(0不需要，1需要)
+    	int16 up_flag;            			//升级后是否恢复(0下周期恢复，1下周器不恢复)
+    	date  up_time;            			//请求时间
+    	int64 prod_id;            			//要升级的产品id（必须传）
+    	int32 org_offer_id;       			//要升级的产品对应的销售品id
+    	int32 tar_offer_id;       			//升级的目标销售品id（必须传）
+    	int64 useage;             			//用户累计使用量 即触发升级标志
+    	int64 free_resource_amount;  		//当前产品可以使用量
+    }
+    list vector<SUpSellReq> SUpSellReqList;
+    
+    struct SResSevCycle
+    {
+    	int64 resource_id;
+    	int32 service_spec_id;
+    	int64 first_used_date;
+    }
+    list vector<SResSevCycle> SResSevCycleList;
+    
+    struct SOneTimeProm
+    {
+    	int64   cust_id;  //客户ID
+    	int64   acct_id;  //账户ID
+    	int64   user_id;  //用户ID
+    	string  phone_id; //手机号码
+    	int16   leavel_type; //免费资源级别类型：0-用户；1-账户；2-集团；3-客户
+    	int64   product_sequence_id; //产品ID
+    	int64   used_up_time; //免费资源用完的时间
+    }
+    
+    struct SNotifySendIntf
+    {
+        int64   cust_id;//客户编号
+        int64   acct_id;//账户编号
+        int64   resource_id;//用户编号
+        int64   queue_id;//告警内部生成队列号
+        int32   notification_id;//告警类型编号
+        int32   action_id;//告警动作编号
+        int32   notify_lang;//使用语言
+        string  notify_content; //告警文本内容
+        string  channel_id;//渠道号码 channel_type为0时候短信（手机号码）,channel_type为1时候电子邮件（EMAIL）
+        int16   channel_type;//0 短信  1 EMAIL
+        int64   send_time;
+        string  sender; //发送方
+        string  email_subject;  //email主题
+        int64   sequence_id; //提醒的唯一标志
+    }
+    list vector<SNotifySendIntf> SNotifySendIntfList;
+    
+    struct SNotifySendStandardIntf
+    {
+        SNotifySendIntfList listsnotifysendintf;
+        int32   count;//告警重发次数
+    }
+    list vector<SNotifySendStandardIntf> SNotifySendStandardIntfList;
+
+    struct SLowBalance
+    {
+    	int64	cust_id;
+    	int64	acct_id;
+    	string	phone_id;
+    	int32	auto_type;
+    	int32	pay_channel;
+    	int64	low_balance_amount;
+    	int64	current_balance_amount;
+    }
+    list vector<SLowBalance> SLowBalanceList;
+    
+    struct SUserValidityChg
+    {
+    	int64   resource_id;
+    	int64   acct_id;
+    	int32   extend_days;
+    	int32   reduce_days;
+    	int32   trigger_event_type;
+    	int64   cap_max_flag;
+    	int64   nbalance;
+    	int64   pbalance;
+    	SBalanceList listbalance;
+    }
+    
+    struct SRewardOrderProduct
+    {
+    	int32   offering_id;
+		int16   object_type;
+		int64   object_id;
+		int64   valid_date;
+		int64   expire_date;
+		int16	count;
+    }
+    
+    struct SLifeCycleChgByPayment
+    {
+    	int64   resoure_id;
+    	string	phone_id;
+    	int64 current_balance_amount;
+    }
+    
+    struct SUpdatePriceParam
+    {
+    	int64 prod_id;
+    	int32 param_id;
+    	string param_value;
+    	int64 valid_date;
+    	int64 expire_date;
+    }
+    list vector<SUpdatePriceParam> SUpdatePriceParamList;
+    
+    struct SProdNotify
+    {
+    	int64	product_id;
+    	int32	offer_id;
+    	int32	busi_flag;
+    	int64	object_id;
+    	int32	object_type;
+    	int32	oper_type;
+    	datetime	valid_date;
+    	datetime	expire_date; 
+    	datetime	ir_valid_date;
+    	datetime	ir_expire_date;   
+    	string	ir_country_name;
+    	int32	is_main;
+    	int32	old_main_offer_id;
+    	int32	billing_type;
+    	int32	price_plan_id;
+    }
+    list vector<SProdNotify> SProdNotifyList;
+    
+    struct SQueryOperReq                //查询操作员信息
+    {
+    	int64 operator_id;    			//操作员编号
+    	int64 organize_id;            	//营业厅编号
+    }
+    
+    struct SOperInfoResp                //查询操作员返回
+    {
+        int64  operator_id;    			 //操作员编号
+        string staff_name;               //操作员名字
+        string code;                     //操作员登录帐号
+        int64  organize_id;              //所属营业厅编号
+        string organize_name;            //所属营业厅名称
+        int64  county_id;                //所属县区编号
+        string district_id;              //所属地市编号
+    }
+    list vector<SOperInfoResp> SOperInfoRespList;
+    
+    struct SQueryOrgReq                 //查询营业厅信息
+    {
+    	int64 organize_id;            	//营业厅编号
+    }
+    
+    struct SOrgInfoResp                  //查询营业厅返回
+    {
+        int64  organize_id;    			 //营业厅编号
+        string organize_name;            //营业厅信息
+        int64  county_id;                //所属县区编号
+        string district_id;              //所属地市编号
+    }
+    list vector<SOrgInfoResp> SOrgInfoRespList;
+    
+    struct SResourceMonitor  
+	{
+		int64 serv_id;     //用户ID
+		int32 service_id;  // 监控的业务大类， 目前存在语音，短信，GPRS等几种业务
+		int32 moni_cond_id; // 监控业务条件表达式ID， 目前高危系统默认为0
+		int32 moni_type;	 // 0: 离线业务, 1:欠控业务; 2:在线业务	， 目前高危系统默认为1
+		int32 oper_type;	 //处理类型1:迁入2：迁出
+		int64 valid_date;	//生效日期
+		int64 expire_date;	//失效日期
+		string notes; // 该字段标识需要迁入的原因，可以插入到 CM_RESOURCE_MONITOR表中REMARKS字段
+	}
+	list vector<SResourceMonitor> SResourceMonitorList;
+    
+    
+    struct SDeductAlarm
+	{
+		int64	serv_id;			//服务编号
+		int64	acct_id;			//帐户服务编号
+		string	user_number;	//用户号码
+		string	sp_code;		//SP代码
+		string	operator_code;	//业务代码
+		int32	bill_flag;			//计费类型
+		string	third_msisdn;	//第三方号码
+		int32	bill_prop;			//会员属性
+		int64	start_time;		//通话时间
+		int32	alarm_type;		//消息类型
+		string	alarm_para;	//消息参数，预留扩展使用
+		int32	alarm_source;		//消息来源
+		int32	region_code;		//地市代码
+		int64	total_fee;			//费用
+		int64	update_time;		//处理时间
+		string	seq_no;		//话单序列号
+		string	service_code; // 业务代码
+		string	reserver1;
+	}
+	list vector<SDeductAlarm> SDeductAlarmList;
+    
+    struct SParamInfo
+    {
+		int32 param_id;//特征值id
+		string value;//特征值取值
+		date valid_date;//生效时间
+		date expire_date;//失效时间
+    }
+    list vector<SParamInfo> SParamInfoList;
+    
+    struct SChangeProdInfo
+    {
+    	int64 product_id;//订购的时候不传，修改删除的时候必传
+    	int32 offer_id;//销售品编号，订购的时候必传
+    	int32 oper_type;//0-add,1-delete,2-modify
+    	int64 object_id;
+    	int32 object_type;//object_type为0，object_id为用户编号；object_type为1，object_id为账户编号
+    	date valid_date;//产品生效时间 ,
+    	date expire_date;//产品失效时间,
+    	SParamInfoList param_list;//特征值列表
+    }
+    list vector<SChangeProdInfo> SChangeProdInfoList;
+    
+    struct SRewardOtFreeres{
+	    int64   pay_acct_id;    ///< 支付帐户编号
+	    int64   object_id  ;    ///< 使用对象编号
+	    int64   value      ;    ///< 赠送量
+	    int64   product_id ;    ///< 产品编号
+	    int64   valid_date ;    ///< 生效期
+	    int64   expire_date;    ///< 失效期
+	    int32   item_code  ;    ///< 免费资源科目
+	    int32   measure_id; ///< 度量单位
+	    int16   object_type;    ///< 使用对象类型0用户 1帐户 2集团
+	}
+	
+	struct SAccountInfo{
+	    int64   acct_id;    ///< 支付帐户编号
+	}
+	
+	struct SQueryAcctInfoSdlReq{
+	    int64   resource_id;    ///< 用户编号
+	    string  phone_id;       //手机号码
+	}	
+	struct SCheckSms 
+	{
+		int64	block_id;			//批次号
+		int64	mod_code;       	//短信模板编码
+		date	send_date;			//预计发送时间
+		date	done_date;			//插入时间
+		int16	send_mod;			//发送方式,1:表,2:文件
+		string	data_source;			//数据来源（发送方式是文件时，填写文件的全路径）
+		int64	send_num;			//发送号码数量
+	}
+	
+	struct SCheckSmsDetail 
+	{
+		int64	block_id;			//批次号
+		int64	sms_code;			//短信模板编码
+		string	bill_id;				//手机号
+		string	message;				//短信内容
+		int32	priority_level;		//优先级
+		date	send_date;			//发送时间
+		string	src_addr;			//服务号码
+		int16	request_report;		//是否需要回执,0:不需要,1:需要
+		int64   done_code;			//营帐流水号
+	}
+	list vector<SCheckSmsDetail> SCheckSmsDetailList;
+		
+	struct SBatchSmsInfo
+	{
+		SCheckSms checksms;
+		SCheckSmsDetailList listchecksmsdetail;
+	}
+	
+	struct SImmeSms
+	{
+		int64	block_id;			//批次号
+		int64   sms_notice_id;      //短信通知流水号, 值YYMMDD+10位sequence
+		int64	done_code;			//营账流水号
+		int64	sms_code;			//模板编码
+		string	in_mode_code;		//接入方式编码,0:其他接入,1:人工接入,2:自助接入
+		string	sms_net_tag;			//短信回执标记,1:需要回执,0:不需要回执
+		string	chan_id;				//渠道编码,A001:营业,B001:账管,C001:小I,C002:鸿冠,C003:4A,C004:网管
+		string	recv_object_type;	//接收号码类型,00:手机号码,01:组ID,02:集团ID
+		string	recv_object;			//接收号码
+		int64	recv_id;				//用户编号
+		string	notice_content;		//短信内容
+		string	sms_type_code;		//短信类型编码,20:文本短信,10:PUSH短信,00:二进制短信
+		string	sms_kind_code;		//短信通道编码，不同通道的短信相互不影响，避免对下发资源的争抢,01:保留,02:保留,03-07:分给营业管理自己定义,08:一级BOSS,09-10:帐务管理
+		string	force_object;		//发送号码：10086或者10086+扩展码
+		date	force_start_time;	//指定起始时间
+		date	force_end_time;		//指定终止时间
+		int32	sms_priority;		//短信优先级，取值越大优先级越低：默认1000
+		date	refer_time;			//提交时间
+		string	remark;				//备注
+		int16	month;				//月份
+		int16	day;				//日期
+	}
+	list vector<SImmeSms> SImmeSmsList;
+}

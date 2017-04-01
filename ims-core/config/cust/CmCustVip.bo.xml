@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" columnNameMapToFieldName="false" dbType="oracle" name="CmCustVip" remark="" schema="CD" table="CM_CUST_VIP" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="RESOURCE_ID" columnDef="Int" isPk="true(not generated)" name="resourceId" null-able="true" primitive="No" type="Long"/>
+        <field column="CUST_ID" columnDef="Int" isPk="false" name="custId" null-able="true" primitive="No" type="Long"/>
+        <field column="USECUST_ID" columnDef="Int" isPk="true(not generated)" name="usecustId" null-able="true" primitive="No" type="Long"/>
+        <field column="VIP_STATE" columnDef="Int" isPk="false" name="vipState" null-able="true" primitive="No" type="Integer"/>
+        <field column="VIP_CLASS" columnDef="Int" isPk="false" name="vipClass" null-able="true" primitive="No" type="Integer"/>
+        <field column="VIP_TYPE" columnDef="Int" isPk="false" name="vipType" null-able="true" primitive="No" type="Integer"/>
+        <field column="CUST_MANAGER_ID" columnDef="Char" columnSize="8" isPk="false" name="custManagerId" null-able="true" primitive="No" type="String"/>
+        <field column="CREATE_DATE" columnDef="Date" isPk="false" name="createDate" null-able="true" primitive="No" type="Date"/>
+        <field column="VALID_DATE" columnDef="Date" isPk="true(not generated)" name="validDate" null-able="true" primitive="No" type="Date"/>
+        <field column="EXPIRE_DATE" columnDef="Date" isPk="false" name="expireDate" null-able="true" primitive="No" type="Date"/>
+        <field column="SO_NBR" columnDef="Int" isPk="true(not generated)" name="soNbr" null-able="true" primitive="No" type="Long"/>
+        <field column="SO_DATE" columnDef="Date" isPk="false" name="soDate" null-able="true" primitive="No" type="Date"/>
+        <field column="REMARK" columnDef="Varchar" columnSize="255" isPk="false" name="remark" null-able="true" primitive="No" type="String"/>
+    </fields>
+</entity>

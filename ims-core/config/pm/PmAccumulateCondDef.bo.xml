@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="PmAccumulateCondDef" remark="" schema="pd" table="PM_ACCUMULATE_COND_DEF" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="ACCUMULATE_COND_ID" columnDef="AutoIncrement" isPk="true(not generated)" name="accumulateCondId" primitive="No" remark="Identifier of the rule  ,that the rules was referenced by  accumulating." type="Integer"/>
+        <field column="NAME" columnDef="Varchar" columnSize="256" name="name" primitive="No" remark="Name of the accumulate condition" type="String"/>
+        <field column="CAP_LIMIT_FLAG" columnDef="Int" name="capLimitFlag" primitive="No" remark="" type="Integer"/>
+    </fields>
+</entity>

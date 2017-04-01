@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="IProduct" remark="" schema="JD" table="I_PRODUCT" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="PRODUCT_ID" columnDef="BigInt" name="productId" primitive="No" remark="" type="Long"/>
+        <field column="USER_ID" columnDef="BigInt" name="userId" primitive="No" remark="" type="Long"/>
+        <field column="ACCT_ID" columnDef="BigInt" name="acctId" primitive="No" remark="" type="Long"/>
+        <field column="OFFER_ID" columnDef="BigInt" name="offerId" primitive="No" remark="" type="Long"/>
+        <field column="PRODUCT_TYPE" columnDef="Int" name="productType" primitive="No" remark="" type="Integer"/>
+        <field column="PRODUCT_STATUS" columnDef="Int" name="productStatus" primitive="No" remark="" type="Integer"/>
+        <field column="PARENT_PRODUCT_ID" columnDef="BigInt" name="parentProductId" primitive="No" remark="" type="Long"/>
+        <field column="VALID_DATE" columnDef="TimeStamp" name="validDate" primitive="No" remark="" type="Date"/>
+        <field column="EXPIRE_DATE" columnDef="TimeStamp" name="expireDate" primitive="No" remark="" type="Date"/>
+        <field column="OPER_TYPE" columnDef="Int" name="operType" primitive="No" remark="" type="Integer"/>
+        <field column="SO_NBR" columnDef="BigInt" name="soNbr" primitive="No" remark="" type="Long"/>
+        <field column="COMMIT_DATE" columnDef="TimeStamp" name="commitDate" primitive="No" remark="" type="Date"/>
+    </fields>
+</entity>

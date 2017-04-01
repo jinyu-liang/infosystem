@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="SPayChannel" transient="true">
+  <fields>
+    <field name="payment_type" type="Short" isPk="false" primitive="No" tree-foreign-key="false" null-able="true" enumAsAliasField="false"/>
+	<field name="bank_id" type="String" isPk="false" primitive="Auto" tree-foreign-key="false" null-able="true" enumAsAliasField="false"/>
+    <field name="bank_acct_nbr" type="String" isPk="false" primitive="Auto" tree-foreign-key="false" null-able="true" enumAsAliasField="false"/>
+    <field name="card_no" type="String" isPk="false" primitive="Auto" null-able="true" enumAsAliasField="false"/>
+    <field name="card_issuing_bank" type="String" isPk="false" primitive="Auto" null-able="true" enumAsAliasField="false"/>
+    <field name="outer_cust_id" type="String" isPk="false" primitive="Auto" tree-foreign-key="false" null-able="true"/>
+    <field name="cust_id" type="Long" isPk="false" primitive="No" null-able="true" enumAsAliasField="false"/>
+    <field name="outer_acct_id" type="String" isPk="false" primitive="Auto" tree-foreign-key="false" null-able="true"/>
+    <field name="acct_id" type="Long" isPk="false" primitive="No" null-able="true" enumAsAliasField="false"/>
+  </fields>
+</entity>

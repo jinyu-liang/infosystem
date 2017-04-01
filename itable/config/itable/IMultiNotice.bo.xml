@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="IMultiNotice" schema="JD" table="I_MULTI_NOTICE">
+  <fields>
+    <field name="userId" type="Long" column="USER_ID" isPk="false" primitive="No" null-able="false" columnDef="BigInt"/>
+    <field name="sendMethod" type="String" column="SEND_METHOD" isPk="false" primitive="No" null-able="true" columnDef="Varchar" columnSize="32"/>
+    <field name="contentType" type="String" column="CONTENT_TYPE" primitive="No" null-able="true" columnDef="Varchar" columnSize="32"/>
+    <field name="validDate" type="Date" column="VALID_DATE" primitive="No" null-able="true" columnDef="TimeStamp"/>
+    <field name="expireDate" type="Date" column="EXPIRE_DATE" primitive="No" null-able="true" columnDef="TimeStamp"/>
+    <field name="operType" type="Integer" column="OPER_TYPE" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="soNbr" type="Long" column="SO_NBR" isPk="false" primitive="No" null-able="true" columnDef="BigInt"/>
+    <field name="commitDate" type="Date" column="COMMIT_DATE" isPk="false" primitive="No" null-able="true" columnDef="TimeStamp"/>
+  </fields>
+</entity>

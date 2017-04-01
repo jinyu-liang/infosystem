@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/biz.xsd">
+  <service name="pmsMgnt" bind-entity="false" scope="both" session-bean-type="stateless">
+    <method name="do_queryWisdomFeeList" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="pdWisdomReq" type="entity" ref="imspgmt.PdWisdomFeeReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imspgmt.do_queryWisdomFeeListResponse" collection="none" primitive="false"/>
+    </method>
+    
+    <method name="do_queryPayForPriceRuleId" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imspgmt.QueryPayForPriceRuleIdReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imspgmt.QueryPayForPriceRuleIdOut" collection="none" primitive="false"/>
+    </method>
+  </service>
+</module>

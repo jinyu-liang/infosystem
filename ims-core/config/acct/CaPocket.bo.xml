@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="CaPocket" schema="ad" table="CA_POCKET">
+  <fields>
+    <field name="assetId" type="Long" column="ASSET_ID" isPk="false" primitive="No" null-able="false" columnDef="Int"/>
+    <field name="pocketItem" type="Integer" column="POCKET_ITEM" isPk="false" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="validDate" type="Date" column="VALID_DATE" isPk="false" primitive="Auto" null-able="false" columnDef="Date"/>
+    <field name="sts" type="Integer" column="STS" isPk="false" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="acctId" type="Long" column="ACCT_ID" isPk="false" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="expireDate" type="Date" column="EXPIRE_DATE" isPk="false" primitive="Auto" null-able="true" columnDef="Date"/>
+    <field name="amount" type="Long" column="AMOUNT" isPk="false" primitive="No" null-able="false" columnDef="Int"/>
+    <field name="measureId" type="Integer" column="MEASURE_ID" isPk="false" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="billingType" type="Integer" column="BILLING_TYPE" isPk="false" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="soNbr" type="Long" column="SO_NBR" isPk="false" primitive="No" null-able="false" columnDef="Int"/>
+    <field name="createDate" type="Date" column="CREATE_DATE" isPk="false" primitive="No" null-able="false" columnDef="Date"/>
+    <field name="soDate" type="Date" column="SO_DATE" isPk="false" primitive="No" null-able="true" columnDef="Date"/>
+    <field name="resourceId" type="Long" column="RESOURCE_ID" isPk="false" primitive="No" null-able="false" columnDef="Int"/>
+    <field name="negativeFlag" type="Integer" column="NEGATIVE_FLAG" isPk="false" primitive="No" null-able="true" columnDef="Int"/>
+  </fields>
+</entity>

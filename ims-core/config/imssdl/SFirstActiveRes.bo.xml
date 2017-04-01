@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SFirstActiveRes" remark="" sdl="true" sdl-module="MImsSyncDef" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+    <fields>
+        <field name="userId" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="phoneId" primitive="Yes" remark="" sdl="true" type="String"/>
+        <field name="acctId" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="rewardId" primitive="Yes" remark="" sdl="true" type="Integer"/>
+        <field name="activationTime" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="orgLocation" primitive="Yes" remark="" sdl="true" type="String"/>
+        <field name="location" primitive="Yes" remark="" sdl="true" type="String"/>
+        <field name="pricePlanId" primitive="Yes" remark="" sdl="true" type="Integer"/>
+        <field name="smsLanguage" primitive="Yes" remark="" sdl="true" type="Short"/>
+        <field name="ivrLanguage" primitive="Yes" remark="" sdl="true" type="Short"/>
+        <field name="ussdLanguage" primitive="Yes" remark="" sdl="true" type="Short"/>
+        <field name="soNbr" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <complex-field collection="none" name="balance" primitive="false" ref="imssdl.SBalance" remark="" sdl="true" type="entity"/>
+        <complex-field collection="list" name="delProdList" primitive="false" ref="imssdl.SProdInfo" remark="" sdl="true" type="entity"/>
+        <complex-field collection="list" name="modProdList" primitive="false" ref="imssdl.SProdInfo" remark="" sdl="true" type="entity"/>
+        <complex-field collection="list" name="addProdList" primitive="false" ref="imssdl.SProdInfo" remark="" sdl="true" type="entity"/>
+    </fields>
+</entity>

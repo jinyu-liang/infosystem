@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="CaBillingCycleSpec" remark="" schema="AD" table="CA_BILLING_CYCLE_SPEC" xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="CYCLE_SPEC_ID" columnDef="AutoIncrement" isPk="true" name="cycleSpecId" primitive="No" remark="It is recommended to keep the field for there can be multiple customized specifications." type="Long"/>
+        <field column="PERIOD_ID" columnDef="Int" name="periodId" primitive="No" remark="Billing cycle list identifier " type="Integer"/>
+        <field column="NAME" columnDef="Varchar" columnSize="256" name="name" primitive="No" remark="A short descriptive name.&#10;" type="String"/>
+        <field column="DESCRIPTION" columnDef="Varchar" columnSize="512" name="description" primitive="No" remark="A narrative that explains in detail the semantics of this component.&#10;" type="String"/>
+        <field column="BILLING_DATE_SHIFT" columnDef="Int" name="billingDateShift" primitive="No" remark="An offset of a billing date. The offset is expressed as number of days with regard to the start of the Billing Period.&#10;" type="Integer"/>
+        <field column="CREDIT_DATE_OFFSET" columnDef="Int" name="creditDateOffset" primitive="No" remark="An offset of a balance deduction date which can be seen as write-off date after bill running.The offset is expressed as number of days with regard to the start of the BillingPeriod.&#10;" type="Integer"/>
+        <field column="MAILING_DATE_OFFSET" columnDef="Int" name="mailingDateOffset" primitive="No" remark="An offset of a customer bill mailing date. The offset is expressed as number of days with regard to the start of the BillingPeriod.&#10;" type="Integer"/>
+        <field column="PAYMENT_DUE_DATE_OFFSET" columnDef="Int" name="paymentDueDateOffset" primitive="No" remark="An offset of a payment due date. The offset is expressed as number of days with regard to the start of the BillingPeriod.&#10;" type="Integer"/>
+    </fields>
+</entity>

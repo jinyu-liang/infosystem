@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="SBarService" sdl="true" sdl-module="MImsSyncDef">
+  <fields>
+    <field name="action" type="Short" sdl="true" primitive="Yes" null-able="true"/>
+    <field name="userId" type="Long" sdl="true" primitive="Yes" null-able="true"/>
+    <field name="phoneId" type="String" sdl="true" primitive="Yes" null-able="true"/>
+    <field name="busiServiceId" type="Integer" sdl="true" primitive="Yes" null-able="true"/>
+    <field name="reasonCode" type="Short" sdl="true" primitive="Yes" null-able="true"/>
+    <field name="acctId" type="Long" sdl="true"  primitive="Yes" null-able="true"/>
+  </fields>
+</entity>

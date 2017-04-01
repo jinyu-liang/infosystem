@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="TransferAmount4CRMIn">
+  <fields>
+    <field name="acct_id" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="org_item_id" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="target_item_id" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="amount" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="out_so_nbr" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="out_so_date" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="spec_id" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="tran_flag" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="allowAdjust" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="target_acct_id" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="BankBindInfo">
+  <fields>
+    <field name="op_type" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="busi_type" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="phone_id" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="bank_code" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="card_no" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="bind_type" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="card_type" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="auth_id" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="card_expire_date" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="password" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="charge_fix_money" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

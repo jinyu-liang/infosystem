@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="ImsNoAuthTiImme" table="IMS_NO_AUTH_TI_IMME">
+  <fields>
+    <field name="smsNoticeId" type="Long" column="SMS_NOTICE_ID" isPk="false" null-able="false" columnDef="NUMBER" columnSize="20"/>
+    <field name="partitionId" type="Integer" column="PARTITION_ID" isPk="false" null-able="false" columnDef="NUMBER" columnSize="4"/>
+    <field name="eparchyCode" type="String" column="EPARCHY_CODE" isPk="false" null-able="false" columnDef="VARCHAR2" columnSize="4"/>
+    <field name="brandCode" type="String" column="BRAND_CODE" isPk="false" null-able="true" columnDef="VARCHAR2" columnSize="4"/>
+    <field name="inModeCode" type="String" column="IN_MODE_CODE" isPk="false" null-able="false" columnDef="VARCHAR2" columnSize="1"/>
+    <field name="smsNetTag" type="String" column="SMS_NET_TAG" isPk="false" null-able="false" columnDef="VARCHAR2" columnSize="1"/>
+    <field name="chanId" type="String" column="CHAN_ID" isPk="false" null-able="false" columnDef="VARCHAR2" columnSize="4"/>
+    <field name="sendObjectCode" type="Integer" column="SEND_OBJECT_CODE" isPk="false" null-able="true" columnDef="NUMBER" columnSize="4"/>
+    <field name="sendTimeCode" type="Integer" column="SEND_TIME_CODE" isPk="false" null-able="true" columnDef="NUMBER" columnSize="4"/>
+    <field name="sendCountCode" type="Integer" column="SEND_COUNT_CODE" isPk="false" null-able="true" columnDef="NUMBER" columnSize="4"/>
+    <field name="recvObjectType" type="String" column="RECV_OBJECT_TYPE" isPk="false" null-able="false" columnDef="VARCHAR2" columnSize="2"/>
+    <field name="recvObject" type="String" column="RECV_OBJECT" isPk="false" null-able="false" columnDef="VARCHAR2" columnSize="32"/>
+    <field name="recvId" type="Long" column="RECV_ID" isPk="false" null-able="false" columnDef="NUMBER" columnSize="16"/>
+    <field name="smsTypeCode" type="String" column="SMS_TYPE_CODE" isPk="false" null-able="false" columnDef="VARCHAR2" columnSize="2"/>
+    <field name="smsKindCode" type="String" column="SMS_KIND_CODE" isPk="false" null-able="false" columnDef="VARCHAR2" columnSize="2"/>
+    <field name="noticeContentType" type="String" column="NOTICE_CONTENT_TYPE" isPk="false" null-able="false" columnDef="VARCHAR2" columnSize="1"/>
+    <field name="noticeContent" type="String" column="NOTICE_CONTENT" isPk="false" null-able="true" columnDef="VARCHAR2" columnSize="2000"/>
+    <field name="referedCount" type="Integer" column="REFERED_COUNT" isPk="false" null-able="false" columnDef="NUMBER" columnSize="8"/>
+    <field name="forceReferCount" type="Integer" column="FORCE_REFER_COUNT" isPk="false" null-able="true" columnDef="NUMBER" columnSize="8"/>
+    <field name="forceObject" type="String" column="FORCE_OBJECT" isPk="false" null-able="true" columnDef="VARCHAR2" columnSize="32"/>
+    <field name="forceStartTime" type="Date" column="FORCE_START_TIME" isPk="false" null-able="true" columnDef="DATE" columnSize="7"/>
+    <field name="forceEndTime" type="Date" column="FORCE_END_TIME" isPk="false" null-able="true" columnDef="DATE" columnSize="7"/>
+    <field name="smsPriority" type="Integer" column="SMS_PRIORITY" isPk="false" null-able="false" columnDef="NUMBER" columnSize="4"/>
+    <field name="referTime" type="Date" column="REFER_TIME" isPk="false" null-able="false" columnDef="DATE" columnSize="7"/>
+    <field name="referStaffId" type="String" column="REFER_STAFF_ID" isPk="false" null-able="true" columnDef="VARCHAR2" columnSize="8"/>
+    <field name="referDepartId" type="String" column="REFER_DEPART_ID" isPk="false" null-able="true" columnDef="VARCHAR2" columnSize="5"/>
+    <field name="dealTime" type="Date" column="DEAL_TIME" isPk="false" null-able="false" columnDef="DATE" columnSize="7"/>
+    <field name="dealStaffid" type="String" column="DEAL_STAFFID" isPk="false" null-able="true" columnDef="VARCHAR2" columnSize="8"/>
+    <field name="dealDepartid" type="String" column="DEAL_DEPARTID" isPk="false" null-able="true" columnDef="VARCHAR2" columnSize="5"/>
+    <field name="dealState" type="String" column="DEAL_STATE" isPk="false" null-able="false" columnDef="VARCHAR2" columnSize="2"/>
+    <field name="doneCode" type="Long" column="DONE_CODE" isPk="false" null-able="true" columnDef="NUMBER" columnSize="12"/>
+    <field name="blockId" type="Long" column="BLOCK_ID" isPk="false" null-able="true" columnDef="NUMBER" columnSize="12"/>
+    <field name="smsCode" type="Long" column="SMS_CODE" isPk="false" null-able="true" columnDef="NUMBER" columnSize="12"/>
+    <field name="remark" type="String" column="REMARK" isPk="false" null-able="true" columnDef="VARCHAR2" columnSize="200"/>
+    <field name="revc1" type="String" column="REVC1" isPk="false" null-able="true" columnDef="VARCHAR2" columnSize="20"/>
+    <field name="revc2" type="String" column="REVC2" isPk="false" null-able="true" columnDef="VARCHAR2" columnSize="20"/>
+    <field name="revc3" type="String" column="REVC3" isPk="false" null-able="true" columnDef="VARCHAR2" columnSize="200"/>
+    <field name="revc4" type="String" column="REVC4" isPk="false" null-able="true" columnDef="VARCHAR2" columnSize="200"/>
+    <field name="month" type="Integer" column="MONTH" isPk="false" null-able="true" columnDef="NUMBER" columnSize="2"/>
+    <field name="day" type="Integer" column="DAY" isPk="false" null-able="true" columnDef="NUMBER" columnSize="2"/>
+  </fields>
+</entity>

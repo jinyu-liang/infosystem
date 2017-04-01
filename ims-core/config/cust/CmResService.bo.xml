@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="CmResService" schema="CD" table="CM_RES_SERVICE">
+  <fields>
+    <field name="serviceInstId" type="Long" column="SERVICE_INST_ID" isPk="true(not generated)" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="resourceId" type="Long" column="RESOURCE_ID" isPk="false" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="serviceId" type="Integer" column="SERVICE_ID" isPk="false" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="mainTag" type="Integer" column="MAIN_TAG" isPk="false" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="createDate" type="Date" column="CREATE_DATE" isPk="false" primitive="No" null-able="true" columnDef="Date"/>
+    <field name="validDate" type="Date" column="VALID_DATE" isPk="true(not generated)" primitive="No" null-able="true" columnDef="Date"/>
+    <field name="expireDate" type="Date" column="EXPIRE_DATE" isPk="false" primitive="No" null-able="true" columnDef="Date"/>
+    <field name="soNbr" type="Long" column="SO_NBR" isPk="true(not generated)" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="soDate" type="Date" column="SO_DATE" isPk="false" primitive="No" null-able="true" columnDef="Date"/>
+    <field name="remark" type="String" column="REMARK" isPk="false" primitive="No" null-able="true" columnDef="Varchar" columnSize="255"/>
+  </fields>
+</entity>

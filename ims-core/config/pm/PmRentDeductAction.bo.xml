@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="PmRentDeductAction" remark="" schema="PD" table="PM_RENT_DEDUCT_ACTION" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="FAILURE_ACTION_ID" columnDef="AutoIncrement" isPk="true" name="failureActionId" primitive="No" remark="Processing rules after recurring fee deduction failure" type="Integer"/>
+        <field column="ACT_TYPE" columnDef="Int" name="actType" primitive="No" remark="Action type after recurring fee deduction failure:&#10;0: No processing&#10;1: Deduction failure suspend for promotion product offering&#10;2: deduction failure of main promotion leads to special stauts&#10;3: Main product offering switch (Change main product offering N days later)" type="Integer"/>
+        <field column="ALARM_ID" columnDef="Int" name="alarmId" null-able="false" primitive="No" remark="Notification rule corresponding to action&#10;" type="Integer"/>
+        <field column="TARGET_MAIN_OFFER" columnDef="Int" name="targetMainOffer" null-able="false" primitive="No" remark="Replace the original product offering with new main product ID N days after deduction failure&#10;The filed is configured only for main product&#10;" type="Integer"/>
+        <field column="CHANGE_TYPE" columnDef="Int" name="changeType" null-able="false" primitive="No" remark="0：main product unable to change&#10;1：main product change temporary, able to change&#10;" type="Integer"/>
+        <field column="DESCRIPTION" columnDef="Varchar" columnSize="1024" name="description" null-able="false" primitive="No" remark="description" type="String"/>
+    </fields>
+</entity>

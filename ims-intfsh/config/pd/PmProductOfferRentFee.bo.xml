@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="PmProductOfferRentFee" schema="PD" table="PM_PRODUCT_OFFER_RENT_FEE">
+  <fields>
+    <field name="productOfferingId" type="Long" column="PRODUCT_OFFERING_ID" isPk="true(not generated)" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="itemId" type="Integer" column="ITEM_ID" isPk="true(not generated)" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="feeType" type="Integer" column="FEE_TYPE" isPk="true(not generated)" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="rentFee" type="Long" column="RENT_FEE" isPk="false" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="validDate" type="Date" column="VALID_DATE" isPk="true(not generated)" primitive="Auto" null-able="true" columnDef="Date"/>
+    <field name="expireDate" type="Date" column="EXPIRE_DATE" isPk="false" primitive="Auto" null-able="true" columnDef="Date"/>
+  </fields>
+</entity>

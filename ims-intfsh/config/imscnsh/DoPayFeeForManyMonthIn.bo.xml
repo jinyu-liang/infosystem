@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="DoPayFeeForManyMonthIn">
+  <fields>
+    <field name="phone_id" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="amount" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="spec_id" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <complex-field name="posRecInfo" type="entity" ref="imscnsh.PosRecInfo" collection="none" primitive="false"/>
+    <complex-field name="acctTotalBillList" type="entity" ref="imscnsh.AcctTotalBill" collection="list" primitive="false"/>
+    <field name="bank_id" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="acct_id" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="Threshold" transient="true">
+  <fields>
+    <field name="threshold" type="Double" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="notify_type" type="Short" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="notify_addr" type="String" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="notify_phone_id" type="String" isPk="false" tree-foreign-key="false" null-able="true"/>
+  </fields>
+</entity>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="CcbUnBindReq">
+  <fields>
+    <field name="ReqNo" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="AuthId" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="Ext1" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="Ext2" type="String" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

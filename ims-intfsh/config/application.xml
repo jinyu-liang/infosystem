@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  context-prefix="intfsh_"
+	xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/application.xsd">
+	
+	<!-- 配置所有Java类的基础包名，所有实体、Action、Service、DAO都在这个基础上生成 -->
+	<java base-package="com.ailk.openbilling"  generate-param-annotation-for-all="true">
+
+	</java>
+	
+	<page main-page="&lt;jsp:include page=&quot;/resource/framework/aiLogPlugin.jsp&quot; /&gt;" />
+
+</application>

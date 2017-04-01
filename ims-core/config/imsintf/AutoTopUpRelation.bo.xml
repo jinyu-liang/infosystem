@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="AutoTopUpRelation" transient="true">
+  <fields>
+    <field name="auto_id" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="outer_acct_id" type="String" isPk="false" primitive="Auto" tree-foreign-key="false" null-able="true"/>
+    <field name="acct_id" type="Long" isPk="false" primitive="No" null-able="true"/>
+    <field name="user_id" type="Long" isPk="false" primitive="No" null-able="true"/>
+    <field name="phone_id" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="_low_balance_threshold" type="Long" isPk="false" primitive="No" null-able="true"/>
+    <field name="valid_date" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="expire_date" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="pay_channel" type="Short" isPk="false" primitive="No" null-able="true"/>
+    <field name="bank_acct_id" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="bank_acct_name" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="credit_card_no" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="bank_code" type="Integer" isPk="false" primitive="No" null-able="true"/>
+    <field name="additional_info" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="card_serial_no" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="card_batch_no" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="card_type" type="Short" isPk="false" primitive="No" null-able="true"/>
+    <field name="auto_type" type="Short" isPk="false" primitive="No" null-able="true"/>
+    <field name="topup_date" type="Short" isPk="false" primitive="No" null-able="true"/>
+    <field name="notification_flag" type="Short" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="topup_amount" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

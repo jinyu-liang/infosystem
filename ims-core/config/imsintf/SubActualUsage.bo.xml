@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="SubActualUsage">
+  <fields>
+    <field name="sub_group_name" type="String" isPk="false" primitive="No" null-able="true"/>
+    <field name="after_discount_charge" type="Long" isPk="false" primitive="No" null-able="true"/>
+    <field name="unit" type="Short" isPk="false" primitive="No" null-able="true"/>
+    <field name="usage" type="Long" isPk="false" primitive="No" null-able="true"/>
+    <field name="peak_time" type="String" isPk="false" primitive="No" null-able="true"/>
+    <field name="before_discount_charge" type="Long" isPk="false" primitive="No" null-able="true"/>
+  </fields>
+</entity>

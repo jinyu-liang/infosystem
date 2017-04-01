@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="FreeResourceGroup">
+  <fields>
+    <field name="resource_group_id" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="name" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="amount" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="remaining" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="unit" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="mode" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="valid_date" type="Date" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="expired_date" type="Date" isPk="false" primitive="Auto" null-able="true"/>
+    <complex-field name="FreeResourceList_Item" type="entity" ref="imsintf.FreeResourceList" collection="none" primitive="false"/>
+  </fields>
+</entity>

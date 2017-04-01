@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="SProdSpecChar">
+  <fields>
+    <field name="spec_char_id" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="spec_char_name" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="is_default" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="value_type" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="char_value" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <complex-field name="char_value_list" type="String" collection="list" primitive="false"/>
+  </fields>
+</entity>

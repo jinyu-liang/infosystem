@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/biz.xsd">
+  <service bind-entity="false" name="IImsSyncApp" sdl="true" sdl-module="MImsSyncApp">
+    <method name="do_upSelling" scope="service-only">
+            <return-type type="Integer"/>
+            <parameter collection="none" input="true" name="sOperInfo" output="false" primitive="false" ref="imssdl.SOperInfo" type="entity"/>
+            <parameter collection="none" input="true" name="sUpSellReq" output="false" primitive="false" ref="imssdl.SUpSellReq" type="entity"/>
+        </method>
+    <method name="do_lifeCycleChg" scope="service-only">
+            <return-type type="Integer"/>
+            <parameter collection="none" input="true" name="sOperInfo" output="false" primitive="false" ref="imssdl.SOperInfo" type="entity"/>
+            <parameter collection="list" input="true" name="listLifeCycleChg4Abm" output="false" primitive="false" ref="imssdl.SLifeCycleChg4Abm" type="entity"/>
+        </method>
+    <method name="ts_firstAct" scope="service-only">
+            <return-type type="Integer"/>
+            <parameter collection="none" input="true" name="sOperInfo" output="false" primitive="false" ref="imssdl.SOperInfo" type="entity"/>
+            <parameter collection="none" input="true" name="sFirstActiveRes" output="false" primitive="false" ref="imssdl.SFirstActiveRes" type="entity"/>
+            <parameter collection="list" input="true" name="listCaRewardInfo" output="false" primitive="false" ref="imssdl.SCaRewardInfo" type="entity"/>
+        </method>
+    <method name="sync_productStatus" scope="service-only">
+            <return-type type="Integer"/>
+            <parameter collection="none" input="true" name="sOperInfo" output="false" primitive="false" ref="imssdl.SOperInfo" type="entity"/>
+            <parameter collection="list" input="true" name="listProductStatus" output="false" primitive="false" ref="imssdl.SProductStatus" type="entity"/>
+        </method>
+    <method name="sync_creditStatus" scope="service-only">
+            <return-type type="Integer"/>
+            <parameter collection="none" input="true" name="sOperInfo" output="false" primitive="false" ref="imssdl.SOperInfo" type="entity"/>
+            <parameter collection="none" input="true" name="sCreditStatus" output="false" primitive="false" ref="imssdl.SCreditStatus" type="entity"/>
+        </method>
+    <method name="read_lifeCycleStsCheck" scope="service-only">
+            <return-type type="Integer"/>
+        </method>
+    <method name="deal_lifeCycleStsCheck" scope="service-only">
+            <return-type type="Integer"/>
+            <parameter collection="none" input="true" name="sOperInfo" output="false" primitive="false" ref="imssdl.SOperInfo" type="entity"/>
+            <parameter collection="none" input="true" name="sResLifeCycleSync" output="false" primitive="false" ref="imssdl.SResLifeCycleSync" type="entity"/>
+        </method>
+    <method name="add_expireProd" scope="service-only">
+            <return-type type="Integer"/>
+        </method>
+    <method name="add_validProd" scope="service-only">
+            <return-type type="Integer"/>
+        </method>
+    <method name="add_prodCycleNotify" scope="service-only">
+            <return-type type="Integer"/>
+        </method>
+    <method name="do_resSevCycleChg" scope="service-only">
+            <return-type type="Integer"/>
+            <parameter collection="none" input="true" name="sOperInfo" output="false" primitive="false" ref="imssdl.SOperInfo" type="entity"/>
+            <parameter collection="list" input="true" name="listResSevCycle" output="false" primitive="false" ref="imssdl.SResSevCycle" type="entity"/>
+        </method>
+    <method name="sync_oneTimePromUsedUp" scope="service-only">
+            <return-type type="Integer"/>
+            <parameter collection="none" input="true" name="sOperInfo" output="false" primitive="false" ref="imssdl.SOperInfo" type="entity"/>
+            <parameter collection="none" input="true" name="sOneTimeProm" output="false" primitive="false" ref="imssdl.SOneTimeProm" type="entity"/>
+        </method>
+    <method name="do_sendNotification" scope="service-only">
+            <return-type type="Integer"/>
+            <parameter collection="none" input="true" name="sOperInfo" output="false" primitive="false" ref="imssdl.SOperInfo" type="entity"/>
+            <parameter collection="list" input="true" name="listNotifySendStandardIntf" output="false" primitive="false" ref="imssdl.SNotifySendStandardIntf" type="entity"/>
+        </method>
+    <method name="do_syncLowBalanceEtopup" scope="service-only">
+            <return-type type="Integer"/>
+            <parameter collection="none" input="true" name="sOperInfo" output="false" primitive="false" ref="imssdl.SOperInfo" type="entity"/>
+            <parameter collection="list" input="true" name="listLowBalance" output="false" primitive="false" ref="imssdl.SLowBalance" type="entity"/>
+        </method>
+    <method name="do_userValidityChg" scope="service-only">
+            <return-type type="Integer"/>
+            <parameter collection="none" input="true" name="sOperInfo" output="false" primitive="false" ref="imssdl.SOperInfo" type="entity"/>
+            <parameter collection="none" input="true" name="sUserValidityChg" output="false" primitive="false" ref="imssdl.SUserValidityChg" type="entity"/>
+        </method>
+    <method name="do_orderRewardProduct" scope="service-only">
+            <return-type type="Integer"/>
+            <parameter collection="none" input="true" name="sOperInfo" output="false" primitive="false" ref="imssdl.SOperInfo" type="entity"/>
+            <parameter collection="none" input="true" name="sRewardOrderProduct" output="false" primitive="false" ref="imssdl.SRewardOrderProduct" type="entity"/>
+        </method>
+    <method name="do_lifeCycleChgByPayment" scope="service-only">
+            <return-type type="Integer"/>
+            <parameter collection="none" input="true" name="sOperInfo" output="false" primitive="false" ref="imssdl.SOperInfo" type="entity"/>
+            <parameter collection="none" input="true" name="sLifeCycleChgByPayment" output="false" primitive="false" ref="imssdl.SLifeCycleChgByPayment" type="entity"/>
+        </method>
+    <method name="do_updateProdPriceParam" scope="service-only">
+            <return-type type="Integer"/>
+            <parameter collection="none" input="true" name="sOperInfo" output="false" primitive="false" ref="imssdl.SOperInfo" type="entity"/>
+            <parameter collection="list" input="true" name="listUpdatePriceParam" output="false" primitive="false" ref="imssdl.SUpdatePriceParam" type="entity"/>
+        </method>
+    <method name="do_barService" scope="service-only">
+            <return-type type="Integer"/>
+            <parameter collection="none" input="true" name="sOperInfo" output="false" primitive="false" ref="imssdl.SOperInfo" type="entity"/>
+            <parameter collection="list" input="true" name="listBarService" output="false" primitive="false" ref="imssdl.SBarService" type="entity"/>
+        </method>
+    <method name="create_prodNotifyInfo" scope="service-only">
+            <return-type type="Integer"/>
+            <parameter collection="none" input="true" name="sOperInfo" output="false" primitive="false" ref="imssdl.SOperInfo" type="entity"/>
+            <parameter collection="list" input="true" name="listProdNotify" output="false" primitive="false" ref="imssdl.SProdNotify" type="entity"/>
+        </method>
+    <method name="do_queryOperatorInfo" scope="service-only">
+            <return-type type="Integer"/>
+            <parameter collection="none" input="true" name="sOperInfo" output="false" primitive="false" ref="imssdl.SOperInfo" type="entity"/>
+            <parameter collection="none" input="true" name="sQueryOperReq" output="false" primitive="false" ref="imssdl.SQueryOperReq" type="entity"/>
+            <parameter collection="list" input="false" name="listOperInfoResp" output="true" primitive="false" ref="imssdl.SOperInfoResp" type="entity"/>
+        </method>
+    <method name="do_queryOrganizeInfo" scope="service-only">
+            <return-type type="Integer"/>
+            <parameter collection="none" input="true" name="sOperInfo" output="false" primitive="false" ref="imssdl.SOperInfo" type="entity"/>
+            <parameter collection="none" input="true" name="sQueryOrgReq" output="false" primitive="false" ref="imssdl.SQueryOrgReq" type="entity"/>
+            <parameter collection="list" input="false" name="listOrgInfoResp" output="true" primitive="false" ref="imssdl.SOrgInfoResp" type="entity"/>
+        </method>
+    <method name="do_insertImsResourceMonitor" scope="service-only">
+            <return-type type="Integer"/>
+            <parameter collection="none" input="true" name="sOperInfo" output="false" primitive="false" ref="imssdl.SOperInfo" type="entity"/>
+            <parameter collection="list" input="true" name="listResourceMonitor" output="false" primitive="false" ref="imssdl.SResourceMonitor" type="entity"/>
+        </method>
+    <method name="do_insertImsUserOrderConfirm" scope="service-only">
+            <return-type type="Integer"/>
+            <parameter collection="none" input="true" name="sOperInfo" output="false" primitive="false" ref="imssdl.SOperInfo" type="entity"/>
+            <parameter collection="list" input="true" name="listDeductAlarm" output="false" primitive="false" ref="imssdl.SDeductAlarm" type="entity"/>
+        </method>
+    <method name="do_modifyProduct" scope="service-only">
+            <return-type type="Integer"/>
+            <parameter collection="none" input="true" name="sOperInfo" output="false" primitive="false" ref="imssdl.SOperInfo" type="entity"/>
+            <parameter collection="list" input="true" name="listProdInfo" output="false" primitive="false" ref="imssdl.SChangeProdInfo" type="entity"/>
+        </method>
+    <method name="do_rewardOtFreeres" scope="service-only">
+            <return-type type="Integer"/>
+            <parameter collection="none" input="true" name="sOperInfo" output="false" primitive="false" ref="imssdl.SOperInfo" type="entity"/>
+            <parameter collection="none" input="true" name="sRewardOtFreeres" output="false" primitive="false" ref="imssdl.SRewardOtFreeres" type="entity"/>
+        </method>
+    <method name="read_userValidity" scope="service-only">
+            <return-type type="Integer"/>
+        </method>
+    <method name="do_firstActive" scope="service-only">
+            <return-type type="Integer"/>
+            <parameter collection="none" input="true" name="sOperInfo" output="false" primitive="false" ref="imssdl.SOperInfo" type="entity"/>
+            <parameter collection="none" input="true" name="sFirstAct" output="false" primitive="false" ref="imssdl.SFirstAct" type="entity"/>
+        </method>
+  <method name="do_queryAcctInfo" scope="service-only">
+            <return-type type="Integer"/>
+            <parameter collection="none" input="true" name="sOperInfo" output="false" primitive="false" ref="imssdl.SOperInfo" type="entity"/>
+            <parameter collection="none" input="true" name="sQueryAcctInfoSdlReq" output="false" primitive="false" ref="imssdl.SQueryAcctInfoSdlReq" type="entity"/>
+            <parameter collection="none" input="false" name="sAccountInfo" output="true" primitive="false" ref="imssdl.SAccountInfo" type="entity"/>
+        </method>
+    <method name="do_deductFailureTs" scope="service-only">
+            <return-type type="Integer"/>
+        </method>
+        <method name="do_insertImmeSmsBySdl" scope="service-only">
+            <return-type type="Integer"/>
+            <parameter collection="none" input="true" name="sOperInfo" output="false" primitive="false" ref="imssdl.SOperInfo" type="entity"/>
+            <parameter collection="list" input="true" name="listImmeSms" output="false" primitive="false" ref="imssdl.SImmeSms" type="entity"/>
+        </method>
+        <method name="do_insertBatchSmsBySdl" scope="service-only">
+            <return-type type="Integer"/>
+            <parameter collection="none" input="true" name="sOperInfo" output="false" primitive="false" ref="imssdl.SOperInfo" type="entity"/>
+            <parameter collection="none" input="true" name="sBatchSmsInfo" output="false" primitive="false" ref="imssdl.SBatchSmsInfo" type="entity"/>
+        </method>
+    </service>
+</module>

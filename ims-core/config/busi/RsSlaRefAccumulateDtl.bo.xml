@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="RsSlaRefAccumulateDtl" remark="" schema="bd" table="RS_SLA_REF_ACCUMULATE_DTL" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="DTL_ID" columnDef="AutoIncrement" isPk="true" name="dtlId" primitive="No" remark="section identifier " type="Integer"/>
+        <field column="SLA_REF_ID" columnDef="Int" name="slaRefId" primitive="No" remark="นุมชภผฦมฟSLA" type="Integer"/>
+        <field column="SLA_REF_VALUE_ID" columnDef="Int" name="slaRefValueId" primitive="No" remark="from PM_SLA_REF_VALUE&#10; " type="Integer"/>
+        <field column="SEGMENT_BEGIN" columnDef="BigInt" name="segmentBegin" null-able="false" primitive="No" remark="beginning value of segment (included)&#10; " type="Long"/>
+        <field column="SEGMENT_END" columnDef="BigInt" name="segmentEnd" null-able="false" primitive="No" remark="completion segment value (included)&#10; " type="Long"/>
+    </fields>
+</entity>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" columnNameMapToFieldName="false" dbType="oracle" name="IAccount" remark="" schema="JD" table="I_ACCOUNT" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="CUST_ID" columnDef="Int" isPk="false" name="custId" null-able="true" primitive="Auto" type="Long"/>
+        <field column="ACCT_ID" columnDef="Int" isPk="false" name="acctId" null-able="true" primitive="Auto" type="Long"/>
+        <field column="ACCT_TYPE" columnDef="Int" isPk="false" name="acctType" null-able="true" primitive="Auto" type="Integer"/>
+        <field column="ACCT_CLASS" columnDef="Int" isPk="false" name="acctClass" null-able="true" primitive="Auto" type="Integer"/>
+        <field column="ACCT_SEGMENT" columnDef="Int" isPk="false" name="acctSegment" null-able="true" primitive="Auto" type="Integer"/>
+        <field column="ACCT_NAME" columnDef="Varchar" columnSize="256" isPk="false" name="acctName" null-able="true" primitive="Auto" type="String"/>
+        <field column="STATUS" columnDef="Int" isPk="false" name="status" null-able="true" primitive="Auto" type="Integer"/>
+        <field column="MEASURE_ID" columnDef="Int" isPk="false" name="measureId" null-able="true" primitive="Auto" type="Integer"/>
+        <field column="DUE_DAY" columnDef="Int" isPk="false" name="dueDay" null-able="true" primitive="Auto" type="Integer"/>
+        <field column="BILL_DISPATCHING" columnDef="Varchar" columnSize="32" isPk="false" name="billDispatching" null-able="true" primitive="Auto" type="String"/>
+        <field column="BILL_LANGUAGE_ID" columnDef="Int" isPk="false" name="billLanguageId" null-able="true" primitive="Auto" type="Integer"/>
+        <field column="PROV_CODE" columnDef="Int" isPk="false" name="provCode" null-able="true" primitive="Auto" type="Integer"/>
+        <field column="COUNTY_CODE" columnDef="Int" isPk="false" name="countyCode" null-able="true" primitive="Auto" type="Integer"/>
+        <field column="REGION_CODE" columnDef="Int" isPk="false" name="regionCode" null-able="true" primitive="Auto" type="Integer"/>
+        <field column="CREDIT_SIGN_CONTROL" columnDef="Int" isPk="false" name="creditSignControl" null-able="true" primitive="Auto" type="Integer"/>
+        <field column="VALID_DATE" columnDef="Date" isPk="false" name="validDate" null-able="true" primitive="Auto" type="Date"/>
+        <field column="EXPIRE_DATE" columnDef="Date" isPk="false" name="expireDate" null-able="true" primitive="Auto" type="Date"/>
+        <field column="OPER_TYPE" columnDef="Int" isPk="false" name="operType" null-able="true" primitive="Auto" type="Integer"/>
+        <field column="SO_NBR" columnDef="Int" isPk="false" name="soNbr" null-able="true" primitive="Auto" type="Long"/>
+        <field column="COMMIT_DATE" columnDef="Date" isPk="false" name="commitDate" null-able="true" primitive="Auto" type="Date"/>
+        <field column="PAYMENT_TYPE" columnDef="Int" isPk="false" name="paymentType" null-able="true" primitive="Auto" type="Integer"/>
+    </fields>
+</entity>

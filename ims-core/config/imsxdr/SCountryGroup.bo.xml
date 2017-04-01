@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SCountryGroup" remark="" sdl="true" sdl-module="MXdr" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+<fields>
+<field name="countryGroupId" primitive="Yes" remark="" sdl="true" type="Integer"/>
+</fields>
+</entity>

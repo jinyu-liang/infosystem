@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="QueryWlanOut">
+  <fields>
+    <complex-field name="wlan_local" type="entity" ref="imscnsh.QueryAmountOut" collection="none" primitive="false"/>
+    <complex-field name="wlan_school" type="entity" ref="imscnsh.QueryAmountOut" collection="none" primitive="false"/>
+    <complex-field name="wlan_family" type="entity" ref="imscnsh.QueryAmountOut" collection="none" primitive="false"/>
+    <complex-field name="wlan_phone" type="entity" ref="imscnsh.QueryAmountOut" collection="none" primitive="false"/>
+    <complex-field name="wlan_auto_certify" type="entity" ref="imscnsh.QueryAmountOut" collection="none" primitive="false"/>
+    <complex-field name="wlan_billing_flow" type="entity" ref="imscnsh.QueryAmountOut" collection="none" primitive="false"/>
+  </fields>
+</entity>

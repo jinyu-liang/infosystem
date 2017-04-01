@@ -1,0 +1,362 @@
+package com.ailk.ims.component;
+
+
+import java.util.HashMap;
+import java.util.Map;
+
+import com.ailk.ims.common.CacheCondition;
+import com.ailk.ims.common.DBCondition;
+import com.ailk.ims.define.EnumCodeDefine;
+import com.ailk.ims.define.ErrorCodeDefine;
+import com.ailk.ims.define.SpecCodeDefine;
+import com.ailk.ims.init.DBConfigInitBean;
+import com.ailk.ims.util.IMSUtil;
+import com.ailk.openbilling.persistence.acct.entity.CaAccount;
+import com.ailk.openbilling.persistence.sys.entity.SysMeasure;
+import com.ailk.openbilling.persistence.sys.entity.SysMeasureType;
+import com.ailk.openbilling.persistence.sys.entity.SysMeasureUnitExchange;
+import com.ailk.openbilling.persistence.sys.entity.SysModuleMeasureRule;
+
+/**
+ * @Description: 金额、单位相关操作类
+ * @Company: Asiainfo-Linkage Technologies(China),Inc.  Hangzhou
+ * @Author tangjl5
+ * @Date 2012-8-9
+ * @Date 2012-09-11 zengxr if no measure_id input, use ims module measure_id
+ */
+public class AmountComponent extends BaseComponent
+{
+    public AmountComponent()
+    {
+    }
+    
+    /**
+     * @Description: 根据measure_id查询measure_type_id
+     * @param measureId
+     * @return	 
+     * @author: tangjl5
+     * @Date: 2012-7-13
+     */
+    public Integer queryMeasureTypeId(Integer measureId)
+    {
+        SysMeasure sysMeasure = (SysMeasure) querySingle(SysMeasure.class, new DBCondition(SysMeasure.Field.measureId, measureId));
+        if (sysMeasure == null){
+            // lacking configuration data of table[{0}] where the column [{1}] = [{2}]
+            IMSUtil.throwBusiException(ErrorCodeDefine.LACK_CONFIG_DATE, "sys_measure", "measure_id", measureId);
+        }
+        
+        return sysMeasure.getMeasureTypeId();
+    }
+    
+    /**
+     * @Description: 根据measureTypeId,moduleId获取measureId
+     * @param measureTypeId
+     * @param moduleId
+     * @return	 
+     * @author: tangjl5
+     * @Date: 2012-7-13
+     */
+    public Integer queryMeasureIdByTypeAndModule(Integer measureTypeId, Integer moduleId)
+    {
+        SysModuleMeasureRule moduleMeasure = (SysModuleMeasureRule) querySingle(SysModuleMeasureRule.class, new DBCondition(SysModuleMeasureRule.Field.measureTypeId, measureTypeId), 
+                new DBCondition(SysModuleMeasureRule.Field.moduleId, moduleId));
+        if (moduleMeasure == null){
+            IMSUtil.throwBusiException(ErrorCodeDefine.LACK_CONFIG_DATE2, "SYS_MODULE_MEASURE_RULE", "measure_type_id", measureTypeId,
+                    "module_id", moduleId);
+        }
+        
+        return moduleMeasure.getMeasureId();
+    }
+    
+    /**
+     * @Description: 根据measure_tyepe_id获取帐管的measure_id
+     * @param measureTypeId
+     * @return	 
+     * @author: tangjl5
+     * @Date: 2012-7-13
+     */
+    public Integer queryBillingMeasureIdByType(Integer measureTypeId)
+    {
+        return queryMeasureIdByTypeAndModule(measureTypeId, EnumCodeDefine.MODULE_BILLING);
+    }
+    
+    /**
+     * @Description: 根据measure_tyepe_id获取计费的measure_id
+     * @param measureTypeId
+     * @return	 
+     * @author: tangjl5
+     * @Date: 2012-7-16
+     */
+    public Integer queryRatingMeasureIdByType(Integer measureTypeId)
+    {
+        return queryMeasureIdByTypeAndModule(measureTypeId, EnumCodeDefine.MODULE_RATING);
+    }
+    
+    /**
+     * @Description: 获取本国货币的measure_type
+     * @return	 
+     * @author: tangjl5
+     * @Date: 2012-7-13
+     */
+    public Integer queryLocalMeasureTypeId()
+    {
+        SysMeasureType measureType = (SysMeasureType) querySingle(SysMeasureType.class, new DBCondition(SysMeasureType.Field.localCurrency, 1), 
+                new DBCondition(SysMeasureType.Field.measureClass, 0));
+        if (measureType == null){
+            IMSUtil.throwBusiException(ErrorCodeDefine.LACK_CONFIG_DATE2, "SYS_MODULE_MEASURE_RULE", "measure_class", 0,
+                    "local_currency", 1);
+        }
+        
+        return measureType.getMeasureTypeId();
+    }
+    
+    /**
+     * @Description: 把原始金额转成需要的目标金额
+     * @param amount
+     * @param origMeasureId 原始单位
+     * @param targetMeasureId 目标单位
+     * @return   
+     * @author: tangjl5
+     * @Date: 2012-7-12
+     */
+    public Double parseAmount(Double amount,Integer origMeasureId, Integer targetMeasureId)
+    {
+        // 货币转换
+        SysMeasureUnitExchange exchange = DBConfigInitBean.getSingleCached(SysMeasureUnitExchange.class, new CacheCondition(
+                SysMeasureUnitExchange.Field.measureId, origMeasureId), new CacheCondition(
+                SysMeasureUnitExchange.Field.destMeasureId, targetMeasureId));
+        if (exchange == null)
+        {
+            throw IMSUtil.throwBusiException("measure_id = " + origMeasureId + " and dest_measure_id="
+                    + targetMeasureId + " does not exist SYS_MEASURE_UNIT_EXCHANGE table!");
+        }
+        return amount * exchange.getExchangeNumerator() / exchange.getExchangeDenominator();
+    }
+    
+    /**
+     * @Description: 若传入单位则将转换为账务的金额，没有传入单位则根据module_id和CaAccount.measure_id对应的measure_type_id到表SYS_MODULE_MEASURE_RULE获取measure_id
+     * @param measureId
+     * @param amount
+     * @param acctId
+     * @return	 
+     * @author: tangjl5
+     * @Date: 2012-7-16
+     */
+    public Double parseBillingAmount(Integer measureId, Double amount, Long acctId)
+    {
+        CaAccount acct = context.get3hTree().loadAcct3hBean(acctId).getAccount();
+        Integer targetMeasureId = acct.getMeasureId();
+        Integer orgMeasureId = null;
+        // 若传入单位则将转换为账务的金额
+        if (measureId != null)
+        {
+            orgMeasureId = measureId;
+            Integer acctMeasureType = queryMeasureTypeId(acct.getMeasureId());
+            Integer targetMeasureType = queryMeasureTypeId(measureId);
+            if (acctMeasureType != targetMeasureType.intValue())
+            {
+                // the measure_type_id[{0}] of parameter measure_id[{1}] not the same as measure_type_id[{2}] of account[{3}]
+                IMSUtil.throwBusiException(ErrorCodeDefine.param_measure_not_equal_acct_measure, targetMeasureType, measureId, acctMeasureType, acctId);
+            }
+        }
+        // 没有传入单位则使用CaAccount.measure_id
+        else
+        {
+//            orgMeasureId = acct.getMeasureId();
+        	//2012-09-11 zengxr if no measure_id input, use ims module measure_id
+        	orgMeasureId = queryMeasureIdByTypeAndModule(queryMeasureTypeId(acct.getMeasureId()), EnumCodeDefine.MODULE_IMS);
+            return amount;
+        }
+        
+        return parseAmount(amount, orgMeasureId, targetMeasureId);
+    }
+    
+    /**
+     * @Description: 若传入单位则将转换为计费的金额，没有传入单位则根据module_id和CaAccount.measure_id对应的measure_type_id到表SYS_MODULE_MEASURE_RULE获取measure_id
+     * @param measureId
+     * @param amount
+     * @param acctId
+     * @return   
+     * @author: tangjl5
+     * @Date: 2012-7-16
+     */
+    public Double parseRatingAmount(Integer measureId, Double amount, Long acctId)
+    {
+        CaAccount acct = context.get3hTree().loadAcct3hBean(acctId).getAccount();
+        Integer targetMeasureId = null;
+        Integer orgMeasureId = null;
+        // 若传入单位则将转换为账务的金额
+        if (measureId != null)
+        {
+            orgMeasureId = measureId;
+            Integer acctMeasureType = queryMeasureTypeId(acct.getMeasureId());
+            Integer targetMeasureType = queryMeasureTypeId(measureId);
+            if (acctMeasureType != acctMeasureType.intValue())
+            {
+                // the measure_type_id[{0}] of parameter measure_id[{1}] not the same as measure_type_id[{2}] of account[{3}]
+                IMSUtil.throwBusiException(ErrorCodeDefine.param_measure_not_equal_acct_measure, targetMeasureType, measureId, acctMeasureType, acctId);
+            }
+            
+            targetMeasureId = queryMeasureIdByTypeAndModule(targetMeasureType, EnumCodeDefine.MODULE_RATING);
+        }
+        // 没有传入单位则根据module_id和CaAccount.measure_id对应的measure_type_id到表SYS_MODULE_MEASURE_RULE获取measure_id
+        else
+        {
+        	//2012-09-11 zengxr if no measure_id input, use ims module measure_id
+        	orgMeasureId = queryMeasureIdByTypeAndModule(queryMeasureTypeId(acct.getMeasureId()), EnumCodeDefine.MODULE_IMS);
+            targetMeasureId = queryMeasureIdByTypeAndModule(queryMeasureTypeId(acct.getMeasureId()), EnumCodeDefine.MODULE_RATING);
+        }
+        
+        return parseAmount(amount, orgMeasureId, targetMeasureId);
+    }
+    
+    public Integer getRatingMeasureId(Integer measureId, Long acctId)
+    {
+        return getMeasureId(measureId, acctId, EnumCodeDefine.MODULE_RATING);
+    }
+    
+    /**
+     * @Description: 根据输入的measure_id来获取ims侧的measure_id
+     * @param measureId
+     * @return	 
+     * @author: user
+     * @Date: 2012-7-19
+     */
+    public Integer getImsMeasureId(Integer measureId)
+    {
+        Integer imsMeasureType = queryMeasureTypeId(measureId);
+        return queryMeasureIdByTypeAndModule(imsMeasureType, EnumCodeDefine.MODULE_IMS);
+    }
+    
+    /**
+     * @Description: 获取展示使用的ims的measure_id
+     * @param measureId
+     * @param amount
+     * @param acctId
+     * @return	 
+     * @author: user
+     * @Date: 2012-7-19
+     */
+    public Double parseImsAmount(Integer orgMeasureId, Double amount)
+    {
+        Integer imsMeasureId = getImsMeasureId(orgMeasureId);
+        if (orgMeasureId != null && orgMeasureId == imsMeasureId.intValue())
+        {
+            return amount;
+        }
+        return parseAmount(amount, orgMeasureId, imsMeasureId);
+    }
+    
+    /**
+     * @Description: TODO(这里用一句话描述这个方法的作用)
+     * @param measureId
+     * @param acctId
+     * @param moduleId
+     * @return	 
+     * @author: tangjl5
+     * @Date: 2012-7-16
+     */
+    public Integer getMeasureId(Integer measureId, Long acctId, Integer moduleId)
+    {
+        CaAccount acct = context.get3hTree().loadAcct3hBean(acctId).getAccount();
+        Integer targetMeasureId = null;
+        // 若传入单位则将转换为账务的金额
+        if (measureId != null)
+        {
+            Integer acctMeasureType = queryMeasureTypeId(acct.getMeasureId());
+            Integer targetMeasureType = queryMeasureTypeId(measureId);
+            if (acctMeasureType != acctMeasureType.intValue())
+            {
+                // the measure_type_id[{0}] of parameter measure_id[{1}] not the same as measure_type_id[{2}] of account[{3}]
+                IMSUtil.throwBusiException(ErrorCodeDefine.param_measure_not_equal_acct_measure, targetMeasureType, measureId, acctMeasureType, acctId);
+            }
+            
+            targetMeasureId = queryMeasureIdByTypeAndModule(targetMeasureType, moduleId);
+        }
+        // 没有传入单位则根据module_id和CaAccount.measure_id对应的measure_type_id到表SYS_MODULE_MEASURE_RULE获取measure_id
+        else
+        {
+            targetMeasureId = queryMeasureIdByTypeAndModule(queryMeasureTypeId(acct.getMeasureId()), moduleId);
+        }
+        
+        return targetMeasureId;
+    }
+    
+    public Integer getBillingMeasureId(Integer measureId, Long acctId)
+    {
+        return getMeasureId(measureId, acctId, EnumCodeDefine.MODULE_BILLING);
+    }
+    
+    /**
+     * @Description: 设置免费资源时，获取计费侧的免费资源单位对应的amount
+     * @param itemId
+     * @param amount
+     * @param acctId
+     * @return	 
+     * @author: tangjl5
+     * @Date: 2012-7-17
+     */
+    public Double parseRatingMaxFreeResAmount(Integer itemId, Double amount, Long acctId)
+    {
+        Integer freeResMeasureId = context.getComponent(MaxFreeResComponent.class).queryFreeResMeasureId(itemId);
+        
+        Integer freeResMeasureType = queryMeasureTypeId(freeResMeasureId);
+        Integer acctMeasureType = queryMeasureTypeId(context.get3hTree().loadAcct3hBean(acctId).getAccount().getMeasureId());
+        if (freeResMeasureType != acctMeasureType.intValue())
+        {
+            // the measure_type_id[{0}] of parameter measure_id[{1}] not the same as measure_type_id[{2}] of account[{3}]
+            IMSUtil.throwBusiException(ErrorCodeDefine.param_measure_not_equal_acct_measure, freeResMeasureType, freeResMeasureId, acctMeasureType, acctId);
+        }
+        
+        return parseRatingAmount(freeResMeasureId, amount, acctId);
+    }
+    
+    /**
+     * @Description: 处理需要处理的二次议价金额
+     * @param paramId
+     * @param paramValue
+     * @param acctId
+     * @return	 
+     * @author: tangjl5
+     * @Date: 2012-7-17
+     */
+    @SuppressWarnings("unused")
+    public Map<Integer, Double> dealPriceParamAmount(Integer paramId, Double paramValue, Long acctId)
+    {
+        Integer measureId = null;
+        Double amount = null;
+        Map<Integer, Double> returnMap = null;
+        // 这两个使用账务侧的单位
+        if (paramId == SpecCodeDefine.CALC_PARA_RC_BASE_FEE || paramId == SpecCodeDefine.CALC_PARA_RC_BASE_FEE_MEASURE)
+        {
+            amount = parseBillingAmount(null, paramValue, acctId);
+        }
+        
+        // 这个使用计费侧的单位
+        else if (paramId == SpecCodeDefine.FREE_RESOURCE_REWARD)
+        {
+            amount = parseRatingAmount(null, paramValue, acctId);
+        }
+        
+        if (measureId!= null && amount != null)
+        {
+            returnMap = new HashMap<Integer, Double>();
+            returnMap.put(measureId, amount);
+        }
+        
+        return returnMap;
+    }
+    
+    /**
+     * @Description: 根据module_id获取默认的measure_id
+     * @param moduleId
+     * @return   
+     * @author: yanchuan
+     * @Date: 2012-8-20
+     */
+    public Integer queryDefaultMeasureIdByType(Integer moduleId)
+    {
+        Integer defaultTypeId = queryLocalMeasureTypeId();
+        return queryMeasureIdByTypeAndModule(defaultTypeId, moduleId);
+    }
+}

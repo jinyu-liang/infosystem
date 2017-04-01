@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="IActivity" schema="JD" table="I_ACTIVITY">
+  <fields>
+    <field name="userId" type="Long" column="USER_ID" primitive="No" null-able="true" columnDef="BigInt"/>
+    <field name="productId" type="Long" column="PRODUCT_ID" primitive="No" null-able="true" columnDef="BigInt"/>
+    <field name="acctId" type="Long" column="ACCT_ID" primitive="No" null-able="true" columnDef="BigInt"/>
+    <field name="oldUserId" type="Long" column="OLD_USER_ID" primitive="No" null-able="true" columnDef="BigInt"/>
+    <field name="oldAcctId" type="Long" column="OLD_ACCT_ID" primitive="No" null-able="true" columnDef="BigInt"/>
+    <field name="activityId" type="Integer" column="ACTIVITY_ID" primitive="No" null-able="false" columnDef="Int"/>
+    <field name="busiType" type="Integer" column="BUSI_TYPE" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="chgType" type="Integer" column="CHG_TYPE" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="pauseType" type="Integer" column="PAUSE_TYPE" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="preFee" type="Long" column="PRE_FEE" primitive="No" null-able="true" columnDef="BigInt"/>
+    <field name="schemeFee" type="Long" column="SCHEME_FEE" primitive="No" null-able="true" columnDef="BigInt"/>
+    <field name="allotMonth" type="Integer" column="ALLOT_MONTH" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="status" type="Integer" column="STATUS" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="multiFlag" type="Integer" column="MULTI_FLAG" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="validDate" type="Date" column="VALID_DATE" primitive="No" null-able="false" columnDef="TimeStamp"/>
+    <field name="expireDate" type="Date" column="EXPIRE_DATE" primitive="No" null-able="false" columnDef="TimeStamp"/>
+    <field name="operType" type="Integer" column="OPER_TYPE" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="soNbr" type="Long" column="SO_NBR" primitive="No" null-able="false" columnDef="BigInt"/>
+    <field name="commitDate" type="Date" column="COMMIT_DATE" primitive="No" null-able="false" columnDef="TimeStamp"/>
+  </fields>
+</entity>

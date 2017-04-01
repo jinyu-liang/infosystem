@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?><entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SIsmpSpecInfo" remark="" sdl="true" sdl-module="MXdr" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+<fields>
+<field name="test" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="sourceType" primitive="Yes" remark="" sdl="true" type="Short"/>
+<field name="miscId" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="discount" primitive="Yes" remark="" sdl="true" type="Short"/>
+<field name="serviceAttr" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<complex-field collection="none" name="ismpLbsInfo" primitive="false" ref="imsxdr.SLbsInfo" remark="" sdl="true" type="entity"/>
+<field name="chCode" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="devCode" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="dnloadDuration" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="validTimes" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="onlineDuration" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="tranId" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="chargeupNum" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="ipAddress" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="oppIpAddress" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="cpCode" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="delvServerCode" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="contentSize" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="termType" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="videoCodeType" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="audioCodeType" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="authenticateNo" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="serviceBillingId" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="pkgBusinessCode" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="gateway" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="cfwGateway" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="oppGateway" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="carryType" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="serverProv" primitive="Yes" remark="" sdl="true" type="String"/>
+</fields>
+</entity>

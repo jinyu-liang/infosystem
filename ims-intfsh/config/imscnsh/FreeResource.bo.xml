@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="FreeResource" transient="true">
+  <fields>
+    <field name="acct_id" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="object_id" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="object_type" type="Short" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="item_code" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="amount" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="used_value" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="product_id" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="offer_id" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="valid_date" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="expire_date" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="freeze_fee" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="freeze_time" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="resource_type" type="Short" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="resource_name" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="freeRes_flag" type="Short" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="measure_id" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="reduce_fee" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="shared_free_res" type="Short" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="remain_value" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="measure_name" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="category_id" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="category_name" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="product_name" type="String" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="STarffQcs" remark="" sdl="true" sdl-module="MXdr" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+<fields>
+<field name="tariff" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="tariffSeqId" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="qosReqReliability" primitive="Yes" remark="" sdl="true" type="Short"/>
+<field name="qosReqDelay" primitive="Yes" remark="" sdl="true" type="Short"/>
+<field name="qosReqPrecedence" primitive="Yes" remark="" sdl="true" type="Short"/>
+<field name="qosReqPeak" primitive="Yes" remark="" sdl="true" type="Short"/>
+<field name="qosReqMean" primitive="Yes" remark="" sdl="true" type="Short"/>
+<field name="qosNegReliability" primitive="Yes" remark="" sdl="true" type="Short"/>
+<field name="qosNegDelay" primitive="Yes" remark="" sdl="true" type="Short"/>
+<field name="qosNegPrecedence" primitive="Yes" remark="" sdl="true" type="Short"/>
+<field name="qosNegPeak" primitive="Yes" remark="" sdl="true" type="Short"/>
+<field name="qosNegMean" primitive="Yes" remark="" sdl="true" type="Short"/>
+<field name="dataFlowUp" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="dataFlowDown" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="beginTime" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="tariffDuration" primitive="Yes" remark="" sdl="true" type="Long"/>
+</fields>
+</entity>

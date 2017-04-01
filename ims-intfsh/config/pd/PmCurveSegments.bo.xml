@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="PmCurveSegments" remark="" schema="PD" table="PM_CURVE_SEGMENTS" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="CURVE_ID" columnDef="Int" isPk="true(not generated)" name="curveId" null-able="false" primitive="No" remark="Tariff curve ID" type="Integer"/>
+        <field column="SEGMENT_ID" columnDef="Int" isPk="true(not generated)" name="segmentId" null-able="false" primitive="No" remark="Regularly configured 1. Configure 2,3,... if multiple segments exist." type="Integer"/>
+        <field column="START_VAL" columnDef="BigInt" isPk="true(not generated)" name="startVal" null-able="false" primitive="No" remark="Definition of the surrent segment start in source item.  Value of ฃจend_val-start_val+1ฃฉmust be times of cycle_unit. If end_val is configured -1, it refers to infinity." type="Long"/>
+        <field column="END_VAL" columnDef="BigInt" name="endVal" null-able="false" primitive="No" remark="Definition of the surrent segment end in source item.  Value of ฃจend_val-start_val+1ฃฉmust be times of cycle_unit. If end_val is configured -1, it refers to infinity." type="Long"/>
+        <field column="BASE_VAL" columnDef="BigInt" name="baseVal" null-able="false" primitive="No" remark="Fee that needs to be charged before calculating starts. Default:0     Recurring fee in discounted charge can be represented by it with 0 as tariff numerator.&#10;" type="Long"/>
+        <field column="RATE_VAL" columnDef="BigInt" name="rateVal" null-able="false" primitive="No" remark="Configure tariff that is charged by day" type="Long"/>
+        <field column="TAIL_UNIT" columnDef="BigInt" name="tailUnit" null-able="false" primitive="No" remark="0Manissa unit of tariff in source item, default: 0" type="Long"/>
+        <field column="TAIL_ROUND" columnDef="Float" name="tailRound" primitive="No" remark="Manissa range of tariff in source item:  0&lt;=tail_round&lt;=tail_unit" type="Float"/>
+        <field column="TAIL_RATE" columnDef="BigInt" name="tailRate" null-able="false" primitive="No" remark="Default: 0" type="Long"/>
+        <field column="FORMULA_ID" columnDef="Int" name="formulaId" primitive="No" remark="Calculating expression ID from sys_policy" type="Integer"/>
+        <field column="SHARE_NUM" columnDef="BigInt" name="shareNum" primitive="No" remark="Number of users who subscribe the package" type="Long"/>
+        <field column="DESCRIPTION" columnDef="Varchar" columnSize="1024" name="description" primitive="No" remark="Descripition" type="String"/>
+    </fields>
+</entity>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="OpInfo">
+  <fields>
+    <field name="role_name" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="priv_name" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="role_id" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="ent_name" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="ent_id" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="obj_id" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="priv_id" type="String" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

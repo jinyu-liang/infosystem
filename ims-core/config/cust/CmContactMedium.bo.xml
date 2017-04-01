@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="CmContactMedium" schema="CD" table="CM_CONTACT_MEDIUM">
+  <fields>
+    <field name="contactMediumId" type="Long" column="CONTACT_MEDIUM_ID" isPk="true(not generated)" primitive="No" remark="id of contact type for role" null-able="false" columnDef="BigInt"/>
+    <field name="objectId" type="Long" column="OBJECT_ID" primitive="No" remark="party role id
+
+define the unique number for the role of participator,it is the sequence number" null-able="false" columnDef="BigInt"/>
+    <field name="contactType" type="Integer" column="CONTACT_TYPE" primitive="No" remark="contact type:
+comment on column CD.CM_CONTACT_MEDIUM.CONTACT_TYPE is
+1：集团联系人（EA表）
+2：催缴及账户打印信息联系人
+3：个人客户联系人" null-able="false" columnDef="Int"/>
+    <field name="mobile" type="String" column="MOBILE" primitive="No" remark="mobile" null-able="true" columnDef="Varchar" columnSize="32"/>
+    <field name="telephone" type="String" column="TELEPHONE" primitive="No" remark="telephone" null-able="true" columnDef="Varchar" columnSize="32"/>
+    <field name="fax" type="String" column="FAX" primitive="No" remark="tax" null-able="true" columnDef="Varchar" columnSize="255"/>
+    <field name="emailAddress" type="String" column="EMAIL_ADDRESS" primitive="No" remark="email address" null-able="true" columnDef="Varchar" columnSize="255"/>
+    <field name="address" type="String" column="ADDRESS" primitive="No" remark="bill copied address" null-able="true" columnDef="Varchar" columnSize="512"/>
+    <field name="postCode" type="String" column="POST_CODE" primitive="No" remark="post of copied address" null-able="true" columnDef="Varchar" columnSize="16"/>
+    <field name="validDate" type="Date" column="VALID_DATE" isPk="true(not generated)" primitive="No" remark="Effective Date" null-able="false" columnDef="Date"/>
+    <field name="expireDate" type="Date" column="EXPIRE_DATE" primitive="No" remark="expired date" null-able="true" columnDef="Date"/>
+    <field name="soNbr" type="Long" column="SO_NBR" isPk="true(not generated)" primitive="No" remark="The serial number" null-able="false" columnDef="BigInt"/>
+    <field name="extAddress1" type="String" column="EXT_ADDRESS1" primitive="No" null-able="true" columnDef="Varchar" columnSize="512"/>
+    <field name="extAddress2" type="String" column="EXT_ADDRESS2" primitive="No" null-able="true" columnDef="Varchar" columnSize="512"/>
+    <field name="extAddress3" type="String" column="EXT_ADDRESS3" primitive="No" null-able="true" columnDef="Varchar" columnSize="512"/>
+    <field name="extAddress4" type="String" column="EXT_ADDRESS4" primitive="No" null-able="true" columnDef="Varchar" columnSize="512"/>
+    <field name="createDate" type="Date" column="CREATE_DATE" primitive="No" null-able="true" columnDef="Date"/>
+    <field name="soDate" type="Date" column="SO_DATE" primitive="No" null-able="true" columnDef="Date"/>
+    <field name="countryId" type="Integer" column="COUNTRY_ID" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="regionCode" type="Integer" column="REGION_CODE" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="officePhone" type="String" column="OFFICE_PHONE" primitive="No" null-able="true" columnDef="Varchar" columnSize="32"/>
+    <field name="contactName" type="String" column="CONTACT_NAME" primitive="No" null-able="true" columnDef="Varchar" columnSize="256"/>
+    <field name="provinceCode" type="Integer" column="PROVINCE_CODE" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="postsect" type="String" column="POSTSECT" primitive="No" remark="???:????????????,????????????,?????????????????????" null-able="true" columnDef="Varchar" columnSize="4"/>
+    <field name="objectType" type="Integer" column="OBJECT_TYPE" primitive="No" remark="0:dev/subscriber;1-account;2-group;3-customer" null-able="true" columnDef="Int"/>
+    <field name="countyCode" type="Integer" column="COUNTY_CODE" primitive="No" remark="county code" null-able="true" columnDef="Int"/>
+  </fields>
+</entity>

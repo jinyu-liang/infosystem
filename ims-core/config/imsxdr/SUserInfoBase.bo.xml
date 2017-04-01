@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?><entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SUserInfoBase" remark="" sdl="true" sdl-module="MXdr" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+<fields>
+<field name="custType" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="custId" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="accId" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="userId" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="defaultAccId" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="billableAccId" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="userType" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="listenLanguage" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="readLanguage" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="brand" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="custBirthdayFlag" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="custGender" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="custJobcode" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="userLifeCycle" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="custAging" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="accAging" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="userAging" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="firstActivateFlag" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="createDate" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="hplmn1" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="hplmn2" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="hplmn3" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="customerSegment" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="userCycleExpireDate" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<complex-field collection="none" name="exemptType" primitive="false" ref="imsxdr.SExemptType" remark="" sdl="true" type="entity"/>
+<field name="nextUserCycle" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="nextUserCycleExpireDate" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="custClass" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="billBeginDate" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="billEndDate" primitive="Yes" remark="" sdl="true" type="Long"/>
+<complex-field collection="none" name="acctBillCycle" primitive="false" ref="imsxdr.SAcctBillCycle" remark="" sdl="true" type="entity"/>
+<field name="reguideUsageAcctId" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="reguideUsageUserId" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="userNumber" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="imsi" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="bakReguideUserNumber" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="userOperatorId" primitive="Yes" remark="" sdl="true" type="Short"/>
+<field name="specAcctType" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="reguideUsageSpecAcctType" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="userSpecType" primitive="Yes" remark="" sdl="true" type="Integer"/>
+</fields>
+</entity>

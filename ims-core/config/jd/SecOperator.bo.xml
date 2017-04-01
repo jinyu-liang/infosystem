@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SecOperator" remark="" schema="JD" table="SEC_OPERATOR" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="OPERATOR_ID" columnDef="AutoIncrement" isPk="true(not generated)" name="operatorId" primitive="No" remark="唯一标识。来源于系统序列号，取自统一权限系统的sys_oper_u表的oper_id" type="Long"/>
+        <field column="CODE" columnDef="Varchar" columnSize="40" name="code" primitive="No" remark="" type="String"/>
+        <field column="CUST_OP_ID" columnDef="Varchar" columnSize="50" name="custOpId" null-able="false" primitive="No" remark="关联客服员工ID" type="String"/>
+        <field column="PASSWORD" columnDef="Varchar" columnSize="48" name="password" primitive="No" remark="" type="String"/>
+        <field column="RECENT_PASSWORD" columnDef="Varchar" columnSize="300" name="recentPassword" null-able="false" primitive="No" remark="" type="String"/>
+        <field column="RECENT_PASS_TIMES" columnDef="Int" name="recentPassTimes" null-able="false" primitive="No" remark="" type="Integer"/>
+        <field column="ALLOW_CHANGE_PASSWORD" columnDef="Char" columnSize="1" name="allowChangePassword" null-able="false" primitive="No" remark="" type="String"/>
+        <field column="ACCT_EFFECT_DATE" columnDef="Date" name="acctEffectDate" null-able="false" primitive="No" remark="" type="Date"/>
+        <field column="ACCT_EXPIRE_DATE" columnDef="Date" name="acctExpireDate" null-able="false" primitive="No" remark="" type="Date"/>
+        <field column="LAST_LOGIN_LOG_ID" columnDef="Int" name="lastLoginLogId" null-able="false" primitive="No" remark="" type="Long"/>
+        <field column="TRY_TIMES" columnDef="Int" name="tryTimes" null-able="false" primitive="No" remark="" type="Integer"/>
+        <field column="LOCK_FLAG" columnDef="Char" columnSize="1" name="lockFlag" null-able="false" primitive="No" remark="Y-锁定&#10;N-未锁定" type="String"/>
+        <field column="LOGIN_CHANNEL" columnDef="Int" name="loginChannel" null-able="false" primitive="No" remark="" type="Integer"/>
+        <field column="PASSWORD_VALID_DATE" columnDef="Date" name="passwordValidDate" null-able="false" primitive="No" remark="" type="Date"/>
+        <field column="CHG_PASSWD_ALARM_DAYS" columnDef="Int" name="chgPasswdAlarmDays" null-able="false" primitive="No" remark="" type="Long"/>
+        <field column="IPMAC_FLAG" columnDef="Varchar" columnSize="2" name="ipmacFlag" null-able="false" primitive="No" remark="Y-验证&#10;N-不验证" type="String"/>
+        <field column="IS_VPN_LOGIN_FLAG" columnDef="Int" name="isVpnLoginFlag" null-able="false" primitive="No" remark="" type="Long"/>
+        <field column="CHG_PASSWD_FLAG" columnDef="Int" name="chgPasswdFlag" null-able="false" primitive="No" remark="1- 修改&#10;其它-不修改" type="Integer"/>
+        <field column="IS_LOGIN" columnDef="Char" columnSize="1" name="isLogin" null-able="false" primitive="No" remark="" type="String"/>
+        <field column="NOTES" columnDef="Varchar" columnSize="400" name="notes" null-able="false" primitive="No" remark="" type="String"/>
+        <field column="CANCEL_DAYS" columnDef="Int" name="cancelDays" null-able="false" primitive="No" remark="以天为单位。&#10;如果到了密码修改时，登陆用户还未修改密码，则过了“停止时限”后，该工号被强制回收，除非用户又修改了密码，才可以再继续使用。" type="Integer"/>
+        <field column="STATE" columnDef="Int" name="state" null-able="false" primitive="No" remark="" type="Integer"/>
+        <field column="DONE_CODE" columnDef="Int" name="doneCode" null-able="false" primitive="No" remark="当前业务受理编号" type="Long"/>
+        <field column="CREATE_DATE" columnDef="Date" name="createDate" primitive="No" remark="" type="Date"/>
+        <field column="DONE_DATE" columnDef="Date" name="doneDate" primitive="No" remark="当前业务受理日期" type="Date"/>
+        <field column="VALID_DATE" columnDef="Date" name="validDate" null-able="false" primitive="No" remark="客户生日期" type="Date"/>
+        <field column="EXPIRE_DATE" columnDef="Date" name="expireDate" null-able="false" primitive="No" remark="客户失效日期" type="Date"/>
+        <field column="OP_ID" columnDef="Int" name="opId" null-able="false" primitive="No" remark="" type="Long"/>
+        <field column="ORG_ID" columnDef="Int" name="orgId" null-able="false" primitive="No" remark="" type="Long"/>
+        <field column="IS_ADMIN" columnDef="Char" columnSize="1" name="isAdmin" null-able="false" primitive="No" remark="" type="String"/>
+        <field column="SECURITY_ID" columnDef="Int" name="securityId" null-able="false" primitive="No" remark="" type="Integer"/>
+        <field column="STAFF_ID" columnDef="Int" name="staffId" null-able="false" primitive="No" remark="" type="Long"/>
+    </fields>
+</entity>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans  
+	xmlns="http://www.springframework.org/schema/beans"  
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+	
+	<bean id="mbAssembler" class="org.springframework.jmx.export.assembler.InterfaceBasedMBeanInfoAssembler">  
+		<property name="managedInterfaces">  
+			<list>  
+				<value>jef.database.ConnectionPoolMBean</value>
+			</list>
+		</property>  
+	</bean>  
+
+	<bean id="mBeanExporter" class="org.springframework.jmx.export.MBeanExporter">   
+		<property name="beans">  
+			<map>
+				<entry key="com.ailk.easyframe:type=ConnectionPoolStatistics,name=ConnectionPoolStatistics" value-ref="connectionPoolStatistics"/>
+			</map>
+		</property>
+ 		<property name="assembler" ref="mbAssembler"></property>
+	</bean>
+	
+	<bean id="registry" class="org.springframework.remoting.rmi.RmiRegistryFactoryBean">
+	  <property name="port" value="1099"/>
+	</bean>
+
+	<bean id="serverConnector" class="org.springframework.jmx.support.ConnectorServerFactoryBean">
+		<property name="objectName" value="connector:name=rmi"/>
+		<property name="serviceUrl" value="service:jmx:rmi://localhost/jndi/rmi://localhost:1099/easyframe"/>
+	</bean>
+	
+	<bean id="clientConnector" class="org.springframework.jmx.support.MBeanServerConnectionFactoryBean">
+  		<property name="serviceUrl" value="service:jmx:rmi://localhost/jndi/rmi://localhost:1099/easyframe"/>
+	</bean>
+	
+	<bean id="performancelogger" class="jef.common.log.PerformanceLogger">
+		<property name="mbsc" ref="clientConnector"></property>
+		<property name="mbNameList">
+			<list>
+				<value>com.ailk.easyframe:type=ConnectionPoolStatistics,name=ConnectionPoolStatistics</value>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="performanceLogTask" class="jef.common.log.PerformanceLogTask">
+		<constructor-arg index="0">
+			<ref bean="performancelogger"/>
+		</constructor-arg>
+	</bean>
+	
+	<bean class="com.ailk.easyframe.cache.EhcacheStatisticsLoader">
+		<constructor-arg index="0">
+			<ref bean="ehCacheManager"/>
+		</constructor-arg>
+		<constructor-arg index="1">
+			<ref bean="mBeanExporter"/>
+		</constructor-arg>
+	</bean>
+	
+	<bean id="connectionPoolStatistics" class="jef.database.ConnectionPoolStatistics">
+		<property name="dbClientFactory" ref="entityManagerFactory"></property>
+	</bean>
+	
+	
+</beans>
+

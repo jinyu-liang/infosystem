@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="CmUserRelation" remark="" schema="CD" table="CM_USER_RELATION" xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="RESOURCE_ID" columnDef="BigInt" name="resourceId" null-able="false" primitive="No" remark="RESOURCE_ID" type="Long"/>
+        <field column="REGION_CODE" columnDef="Int" name="regionCode" null-able="false" primitive="No" remark="" type="Integer"/>
+        <field column="BUSI_TYPE" columnDef="Int" name="busiType" primitive="No" remark="1:ADC&#10;2:MAS&#10;3:????" type="Integer"/>
+        <field column="RRESOURCE_ID" columnDef="BigInt" name="rResourceId" null-able="false" primitive="No" remark="RESOURCE_ID" type="Long"/>
+        <field column="RREGION_CODE" columnDef="Int" name="rRegionCode" null-able="false" primitive="No" remark="" type="Integer"/>
+        <field column="VALID_DATE" columnDef="Date" name="validDate" null-able="false" primitive="No" remark="" type="Date"/>
+        <field column="EXPIRE_DATE" columnDef="Date" name="expireDate" primitive="No" remark="" type="Date"/>
+        <field column="CREATE_DATE" columnDef="Date" name="createDate" primitive="No" remark="" type="Date"/>
+        <field column="SO_DATE" columnDef="Date" name="soDate" primitive="No" remark="" type="Date"/>
+        <field column="REMARK" columnDef="Varchar" columnSize="256" name="remark" null-able="false" primitive="No" remark="" type="String"/>
+        <field column="PROPERTY" columnDef="Varchar" columnSize="32" name="property" null-able="false" primitive="No" remark="" type="String"/>
+        <field column="PRODUCT_ID" columnDef="BigInt" name="productId" null-able="false" primitive="No" remark="RESOURCE_ID" type="Long"/>
+        <field column="SO_NBR" columnDef="Varchar" columnSize="40" name="soNbr" primitive="No" remark="" type="String"/>
+    </fields>
+</entity>

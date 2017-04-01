@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SFirstAct" remark="" sdl="true" sdl-module="MXdr" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+<fields>
+<field name="userId" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="phoneId" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="activationTime" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="deviceType" primitive="Yes" remark="" sdl="true" type="Short"/>
+<field name="smsLang" primitive="Yes" remark="" sdl="true" type="Short"/>
+<field name="ivrLang" primitive="Yes" remark="" sdl="true" type="Short"/>
+<field name="ussdLang" primitive="Yes" remark="" sdl="true" type="Short"/>
+<field name="notifyFlag" primitive="Yes" remark="" sdl="true" type="Short"/>
+<field name="location" primitive="Yes" remark="" sdl="true" type="String"/>
+<complex-field collection="none" name="balance" primitive="false" ref="imsxdr.SBalance" remark="" sdl="true" type="entity"/>
+</fields>
+</entity>

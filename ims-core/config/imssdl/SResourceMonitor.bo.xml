@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SResourceMonitor" remark="" sdl="true" sdl-module="MImsSyncDef" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+    <fields>
+        <field name="servId" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="serviceId" primitive="Yes" remark="" sdl="true" type="Integer"/>
+        <field name="moniCondId" primitive="Yes" remark="" sdl="true" type="Integer"/>
+        <field name="moniType" primitive="Yes" remark="" sdl="true" type="Integer"/>
+        <field name="operType" primitive="Yes" remark="" sdl="true" type="Integer"/>
+        <field name="validDate" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="expireDate" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="notes" primitive="Yes" remark="" sdl="true" type="String"/>
+    </fields>
+</entity>

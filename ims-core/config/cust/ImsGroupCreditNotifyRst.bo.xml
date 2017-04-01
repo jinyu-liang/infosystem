@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="ImsGroupCreditNotifyRst" schema="CD" table="IMS_GROUP_CREDIT_NOTIFY_RST">
+  <fields>
+    <field name="hisId" type="Long" column="HIS_ID" isPk="true(not generated)" primitive="No" null-able="true" columnDef="AutoIncrement"/>
+    <field name="id" type="Integer" column="ID" primitive="No" null-able="false" columnDef="Int"/>
+    <field name="brandId" type="Integer" column="BRAND_ID" primitive="No" null-able="false" columnDef="Int"/>
+    <field name="mainPromotion" type="Integer" column="MAIN_PROMOTION" primitive="No" null-able="false" columnDef="Int"/>
+    <field name="regionCode" type="Integer" column="REGION_CODE" primitive="No" null-able="false" columnDef="Int"/>
+    <field name="customerType" type="Integer" column="CUSTOMER_TYPE" primitive="No" null-able="false" columnDef="Int"/>
+    <field name="customerClass" type="Integer" column="CUSTOMER_CLASS" primitive="No" null-able="false" columnDef="Int"/>
+    <field name="customerSegment" type="Integer" column="CUSTOMER_SEGMENT" primitive="No" null-able="false" columnDef="Int"/>
+    <field name="accountType" type="Integer" column="ACCOUNT_TYPE" primitive="No" null-able="false" columnDef="Int"/>
+    <field name="balanceType" type="Integer" column="BALANCE_TYPE" primitive="No" null-able="false" columnDef="Int"/>
+    <field name="resType" type="Integer" column="RES_TYPE" primitive="No" null-able="false" columnDef="Int"/>
+    <field name="resSegment" type="Integer" column="RES_SEGMENT" primitive="No" null-able="false" columnDef="Int"/>
+    <field name="billingType" type="Integer" column="BILLING_TYPE" primitive="No" null-able="false" columnDef="Int"/>
+    <field name="priority" type="Integer" column="PRIORITY" primitive="No" null-able="false" columnDef="Int"/>
+    <field name="policyId" type="Integer" column="POLICY_ID" primitive="No" null-able="false" columnDef="Int"/>
+    <field name="creditClass" type="Integer" column="CREDIT_CLASS" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="creditValue" type="Long" column="CREDIT_VALUE" primitive="No" null-able="false" columnDef="Int"/>
+    <field name="negativeValue" type="Long" column="NEGATIVE_VALUE" primitive="No" null-able="false" columnDef="Int"/>
+    <field name="maxBalance" type="Long" column="MAX_BALANCE" primitive="No" null-able="false" columnDef="Int"/>
+    <field name="maxValidity" type="Long" column="MAX_VALIDITY" primitive="No" null-able="false" columnDef="Int"/>
+    <field name="maxNegativeValue" type="Integer" column="MAX_NEGATIVE_VALUE" primitive="No" null-able="false" columnDef="Int"/>
+    <field name="suspendDays" type="Integer" column="SUSPEND_DAYS" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="measureId" type="Integer" column="MEASURE_ID" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="notifRemainedDays" type="Integer" column="NOTIF_REMAINED_DAYS" primitive="No" null-able="false" columnDef="Int"/>
+    <field name="notificationId" type="Integer" column="NOTIFICATION_ID" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="operateFlag" type="Integer" column="OPERATE_FLAG" primitive="No" null-able="false" columnDef="Int"/>
+    <field name="createDate" type="Date" column="CREATE_DATE" primitive="No" null-able="false" columnDef="Date"/>
+    <field name="dealDate" type="Date" column="DEAL_DATE" primitive="No" null-able="true" columnDef="Date"/>
+    <field name="dealCount" type="Integer" column="DEAL_COUNT" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="errorCode" type="Integer" column="ERROR_CODE" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="errorMsg" type="String" column="ERROR_MSG" primitive="No" null-able="true" columnDef="Varchar" columnSize="256"/>
+    <field name="sts" type="Integer" column="STS" primitive="No" null-able="true" columnDef="Int"/>
+  </fields>
+</entity>

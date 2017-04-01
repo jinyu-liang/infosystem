@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="RefundAmountReq">
+  <fields>
+    <field name="acct_id" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="refund_amount" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="pocket_item" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="spec_id" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="ext" type="String" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

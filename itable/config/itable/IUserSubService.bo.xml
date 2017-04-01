@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="IUserSubService" schema="JD" table="I_USER_SUB_SERVICE">
+  <fields>
+    <field name="userId" type="Long" column="USER_ID" isPk="false" primitive="No" null-able="false" columnDef="BigInt"/>
+    <field name="acctId" type="Long" column="ACCT_ID" primitive="No" null-able="false" columnDef="BigInt"/>
+    <field name="ServiceId" type="Integer" column="SERVICE_ID" primitive="No" null-able="false" columnDef="Int"/>
+    <field name="balance" type="Integer" column="BALANCE" primitive="No" null-able="false" columnDef="Int"/>
+    <field name="type" type="Short" column="TYPE" primitive="No" null-able="false" columnDef="Int"/>
+    <field name="regionCode" type="Integer" column="REGION_CODE" primitive="No" null-able="false" columnDef="Int"/>
+    <field name="busiCode" type="Integer" column="BUSI_CODE" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="creditLevel" type="Integer" column="CREDIT_LEVEL" isPk="false" primitive="No" null-able="false" columnDef="Int"/>
+    <field name="monitorPlan" type="Integer" column="MONITOR_PLAN" primitive="No" null-able="false" columnDef="Int"/>
+    <field name="validDate" type="Date" column="VALID_DATE" primitive="No" null-able="true" columnDef="TimeStamp"/>
+    <field name="expireDate" type="Date" column="EXPIRE_DATE" primitive="No" null-able="true" columnDef="TimeStamp"/>
+    <field name="operType" type="Integer" column="OPER_TYPE" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="soNbr" type="Long" column="SO_NBR" isPk="false" primitive="No" null-able="true" columnDef="BigInt"/>
+    <field name="commitDate" type="Date" column="COMMIT_DATE" isPk="false" primitive="No" null-able="true" columnDef="TimeStamp"/>
+  </fields>
+</entity>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="IUserDepositNotify" remark="" schema="jd" table="I_USER_DEPOSIT_NOTIFY" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="SERV_ID" columnDef="Int" isPk="false" name="servId" null-able="false" primitive="No" type="Long"/>
+        <field column="PROMO_ID" columnDef="Int" isPk="false" name="promoId" null-able="false" primitive="No" type="Integer"/>
+        <field column="COND_ID" columnDef="Int" isPk="false" name="condId" null-able="false" primitive="No" type="Integer"/>
+        <field column="BUSI_TYPE" columnDef="Int" isPk="false" name="busiType" null-able="false" primitive="No" type="Integer"/>
+        <field column="SO_NBR" columnDef="Int" isPk="false" name="soNbr" null-able="false" primitive="No" type="Long"/>
+        <field column="CHANGE_FLAG" columnDef="Int" isPk="false" name="changeFlag" null-able="false" primitive="No" type="Integer"/>
+        <field column="SRC_TYPE" columnDef="Int" isPk="false" name="srcType" null-able="false" primitive="No" type="Integer"/>
+        <field column="REGION_CODE" columnDef="Int" isPk="false" name="regionCode" null-able="false" primitive="No" type="Integer"/>
+        <field column="CREATE_DATE" columnDef="Date" isPk="false" name="createDate" null-able="false" primitive="No" type="Date"/>
+        <field column="VALID_DATE" columnDef="Date" isPk="false" name="validDate" null-able="false" primitive="No" type="Date"/>
+    </fields>
+</entity>

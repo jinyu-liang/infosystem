@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SStdRatingUnit" remark="" sdl="true" sdl-module="MXdr" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+<fields>
+<field name="itemId" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="cycleUnit" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="resMeasureId" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="stdBeginRes" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="stdRes" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="stdUnit" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="standardProductId" primitive="Yes" remark="" sdl="true" type="Long"/>
+</fields>
+</entity>

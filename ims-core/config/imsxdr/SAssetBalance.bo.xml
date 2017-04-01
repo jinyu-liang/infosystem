@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SAssetBalance" remark="" sdl="true" sdl-module="MXdr" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+<fields>
+<complex-field collection="list" name="balanceInfoList" primitive="false" ref="imsxdr.SBalanceInfo" remark="" sdl="true" type="entity"/>
+<complex-field collection="list" name="creditInfoList" primitive="false" ref="imsxdr.SCreditInfo" remark="" sdl="true" type="entity"/>
+</fields>
+</entity>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="CaAcctPaycycle" schema="AD" table="CA_ACCT_PAYCYCLE">
+  <fields>
+    <field name="acctId" type="Long" column="ACCT_ID" isPk="true(not generated)" primitive="Auto" null-able="true" columnDef="Int"/>
+    <field name="payCycle" type="Integer" column="PAY_CYCLE" isPk="false" primitive="Auto" null-able="true" columnDef="Int"/>
+    <field name="regionCode" type="Integer" column="REGION_CODE" isPk="false" primitive="Auto" null-able="true" columnDef="Int"/>
+    <field name="createDate" type="Date" column="CREATE_DATE" isPk="false" primitive="Auto" null-able="true" columnDef="Date"/>
+    <field name="soDate" type="Date" column="SO_DATE" isPk="false" primitive="Auto" null-able="true" columnDef="Date"/>
+    <field name="soNbr" type="Long" column="SO_NBR" isPk="true(not generated)" primitive="Auto" null-able="true" columnDef="Int"/>
+    <field name="validDate" type="Date" column="VALID_DATE" isPk="true(not generated)" primitive="Auto" null-able="true" columnDef="Date"/>
+    <field name="expireDate" type="Date" column="EXPIRE_DATE" isPk="false" primitive="Auto" null-able="true" columnDef="Date"/>
+    <field name="remark" type="String" column="REMARK" isPk="false" primitive="Auto" null-able="true" columnDef="Varchar" columnSize="255"/>
+  </fields>
+</entity>

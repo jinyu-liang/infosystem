@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SAssetInfo" remark="" sdl="true" sdl-module="MImsSyncDef" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+    <fields>
+        <field name="acctId" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="resourceId" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="assetType" primitive="Yes" remark="" sdl="true" type="Integer"/>
+        <field name="assetId" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="assetItemId" primitive="Yes" remark="" sdl="true" type="Integer"/>
+        <field name="validDate" primitive="Yes" remark="" sdl="true" type="Date"/>
+        <field name="expireDate" primitive="Yes" remark="" sdl="true" type="Date"/>
+        <field name="amount" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="status" primitive="Yes" remark="" sdl="true" type="Integer"/>
+        <field name="measureId" primitive="Yes" remark="" sdl="true" type="Integer"/>
+        <field name="isCommonPocket" primitive="Yes" remark="" sdl="true" type="Integer"/>
+        <field name="billingType" primitive="Yes" remark="" sdl="true" type="Integer"/>
+        <field name="orgAmount" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="orgValidDate" primitive="Yes" remark="" sdl="true" type="Date"/>
+        <field name="orgExpireDate" primitive="Yes" remark="" sdl="true" type="Date"/>
+    </fields>
+</entity>

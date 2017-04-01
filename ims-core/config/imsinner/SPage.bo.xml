@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="SPage">
+	<fields>
+		<field name="num" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+		<field name="size" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+		<field name="count" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+		<complex-field name="orderFieldList" type="entity" ref="imsinner.SOrderField" collection="list" primitive="false"/>
+	</fields>
+</entity>
+
+
+
+	

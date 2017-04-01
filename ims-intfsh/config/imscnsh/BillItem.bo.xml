@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="BillItem">
+  <fields>
+    <field name="item_name" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="item_id" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="item_fee" type="Double" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="phone_id" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <complex-field name="secondItemList" type="List&lt;entity&gt;" ref="imscnsh.BillItem" collection="none" primitive="false"/>
+    <field name="unit" type="Double" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="unit_id" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="unit_name" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="ext1" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="ext2" type="String" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

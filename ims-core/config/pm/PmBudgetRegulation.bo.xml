@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="PmBudgetRegulation" remark="" schema="PD" table="PM_BUDGET_REGULATION" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="PRICE_RULE_ID" columnDef="AutoIncrement" isPk="true" name="priceRuleId" primitive="No" remark="Budget identifier" type="Integer"/>
+        <field column="MEASURE_ID" columnDef="Int" name="measureId" primitive="No" remark="Budget limit measurement unit" type="Integer"/>
+        <field column="PRECISION_ROUND" columnDef="Int" name="precisionRound" primitive="No" remark="1: Rounding up&#10;2; Rounding down&#10;3: Rounding to the nearest" type="Integer"/>
+        <field column="BUDGET_TYPE" columnDef="Int" name="budgetType" null-able="false" primitive="No" remark="0:计费预算&#10;1：账务全业务预算 &#10;2：账务分业务预算" type="Integer"/>
+    </fields>
+</entity>

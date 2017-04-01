@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" columnNameMapToFieldName="false" dbType="oracle" name="CmUserShareRel" remark="" schema="CD" table="CM_USER_SHARE_REL" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="SHARE_ID" columnDef="Int" isPk="true(not generated)" name="shareId" null-able="true" primitive="No" type="Long"/>
+        <field column="RESOURCE_ID" columnDef="Int" isPk="true(not generated)" name="resourceId" null-able="true" primitive="No" type="Long"/>
+        <field column="VICE_RESOURCE_ID" columnDef="Int" isPk="true(not generated)" name="viceResourceId" null-able="true" primitive="No" type="Long"/>
+        <field column="ROLE_TYPE" columnDef="Int" isPk="false" name="roleType" null-able="true" primitive="No" type="Integer"/>
+        <field column="REGION_CODE" columnDef="Int" isPk="false" name="regionCode" null-able="true" primitive="No" type="Integer"/>
+        <field column="CREATE_DATE" columnDef="Date" isPk="false" name="createDate" null-able="true" primitive="No" type="Date"/>
+        <field column="SO_DATE" columnDef="Date" isPk="false" name="soDate" null-able="true" primitive="No" type="Date"/>
+        <field column="SO_NBR" columnDef="Int" isPk="true(not generated)" name="soNbr" null-able="true" primitive="No" type="Long"/>
+        <field column="VALID_DATE" columnDef="Date" isPk="true(not generated)" name="validDate" null-able="true" primitive="No" type="Date"/>
+        <field column="EXPIRE_DATE" columnDef="Date" isPk="false" name="expireDate" null-able="true" primitive="No" type="Date"/>
+        <field column="REMARK" columnDef="Varchar" columnSize="255" isPk="false" name="remark" null-able="true" primitive="No" type="String"/>
+    </fields>
+</entity>

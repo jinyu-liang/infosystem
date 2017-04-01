@@ -1,0 +1,93 @@
+#include "ims_ts_def.sdl"
+
+module MImsTsApp
+{
+
+	interface IImsTsApp
+	{
+		// read:读接口表中的数据到云平台;
+		// deal: 云平台调用该方法处理数据;
+		
+		//5.1	Sync up customer info and product order to CRM
+		int32 read_firstActive();
+		int32 deal_firstActive(in MImsTsDef::STsRecordList sCustProdSyncList);
+		
+		//5.2 Sync information to CS&R
+		int32 read_creditStatus();
+		int32 deal_creditStatus(in MImsTsDef::STsRecordList sCreditStatusSyncList);
+		
+		//5.3	Sync product status to CRM
+		int32 read_productStatus();
+		int32 deal_productStatus(in MImsTsDef::STsRecordList sProdStsSyncList);
+		
+		//5.4	BOS change customer status and sync up to CRM
+		int32 read_userStsSync();
+		int32 deal_userStsSync(in MImsTsDef::STsRecordList sTsRecordList);
+		
+		//5.5
+		int32 read_barService();
+		int32 deal_barService(in MImsTsDef::STsRecordList sTsRecordList);	
+		
+		//5.6	Sync up product order to CRM
+		int32 read_rewardInfo();
+		int32 deal_rewardInfo(in MImsTsDef::STsRecordList sTsRecordList);
+		
+		// 5.7
+		int32 read_otPromUsedUp();
+		int32 deal_otPromUsedUp(in MImsTsDef::STsRecordList sOtpromUsedupSyncList);
+		
+		//5.8
+		int32 read_sharingProd();
+		int32 deal_sharingProd(in MImsTsDef::STsRecordList sTsRecordList);
+		
+		//5.9
+		int32 read_lowBalance();
+		int32 deal_lowBalance(in MImsTsDef::STsRecordList sTsRecordList);
+		
+		
+		int32 read_mdbError();
+		int32 deal_mdbError(in MImsTsDef::STsRecordList sTsRecordList);
+		
+		
+		
+		// 同步即将过期产品
+		int32 read_expireProd();
+		int32 deal_expireProd(in MImsTsDef::STsRecordList sExpireProdNotifyList);
+		
+		
+		int32 read_delayValidProd();
+		int32 deal_delayValidProd(in MImsTsDef::STsRecordList sDelayValidProdSyncList);
+		
+		
+		int32 read_prodOnceNotify();
+		int32 deal_prodOnceNotify(in MImsTsDef::STsRecordList sProdOnceNotifyList);
+		
+		int32 read_prodCycleNotify();
+		int32 deal_prodCycleNotify(in MImsTsDef::STsRecordList sProdCycleNotifyList);
+		
+		//2012-05-31 zhangzj3 IMS_RealTask_定时任务流程方案优化2
+		int32 read_event();
+		int32 deal_event(in MImsTsDef::STsRecordList sTsRecordList);
+		
+		int32 read_eventReward();
+		int32 deal_eventReward(in MImsTsDef::STsRecordList sTsRecordList);
+		
+		int32 read_imsSyncTs();
+		int32 deal_imsSyncTs(in MImsTsDef::STsRecordList sTsRecordList);
+		
+		int32 read_lifeCycleOncePreNotify();
+		int32 deal_lifeCycleOncePreNotify(in MImsTsDef::STsRecordList sTsRecordList);
+		
+		int32 read_resetSysNegtiveValue();
+		int32 deal_resetSysNegtiveValue(in MImsTsDef::STsRecordList sTsRecordList);
+		
+		int32 read_deductFailureTs();
+		int32 deal_deductFailureTs(in MImsTsDef::STsRecordList sTsRecordList);
+		
+		int32 read_syncIcs();
+		int32 deal_syncIcs(in MImsTsDef::STsRecordList sTsRecordList);
+		
+		int32 read_terminateBillAcctTs();
+		int32 deal_terminateBillAcctTs(in MImsTsDef::STsRecordList sTsRecordList);
+	}
+}

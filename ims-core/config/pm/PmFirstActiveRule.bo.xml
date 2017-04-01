@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity name="PmFirstActiveRule" remark="" schema="PD" table="PM_FIRST_ACTIVE_RULE" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="PRICE_RULE_ID" columnDef="AutoIncrement" isPk="true(not generated)" name="priceRuleId" primitive="No" remark="rating rule ID" type="Integer"/>
+        <field column="SEG_ID" columnDef="Int" name="segId" primitive="No" remark="time segment definition status&#10;" type="Integer"/>
+        <field column="DEST_OFFERING_ID" columnDef="Int" name="destOfferingId" primitive="No" remark="The target product offering ID to be transferred, mandatory field." type="Integer"/>
+        <field column="PRIORITY" columnDef="Int" name="priority" primitive="No" remark="Priority of activation reward rules&#10;Rule with the highest priority shall be applied when multiple rules are applicable" type="Integer"/>
+        <field column="DESCRIPTION" columnDef="Varchar" columnSize="1024" name="description" null-able="false" primitive="No" remark="" type="String"/>
+    </fields>
+</entity>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="CmCustManagerRel" remark="" schema="CD" table="CM_CUST_MANAGER_REL" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="CUST_ID" columnDef="BigInt" isPk="true(not generated)" name="custId" null-able="false" primitive="No" remark="????" type="Long"/>
+        <field column="GROUP_ID" columnDef="BigInt" isPk="true(not generated)" name="groupId" null-able="false" primitive="No" remark="????" type="Long"/>
+        <field column="CUST_MANAGER_ID" columnDef="BigInt" isPk="true(not generated)" name="custManagerId" null-able="false" primitive="No" remark="??????" type="Long"/>
+        <field column="SO_NBR" columnDef="BigInt" name="soNbr" null-able="false" primitive="No" remark="" type="Long"/>
+        <field column="SO_DATE" columnDef="TimeStamp" name="soDate" primitive="No" remark="" type="Date"/>
+        <field column="CREATE_DATE" columnDef="TimeStamp" name="createDate" null-able="false" primitive="No" remark="" type="Date"/>
+        <field column="VALID_DATE" columnDef="TimeStamp" isPk="true(not generated)" name="validDate" null-able="false" primitive="No" remark="" type="Date"/>
+        <field column="EXPIRE_DATE" columnDef="TimeStamp" name="expireDate" primitive="No" remark="" type="Date"/>
+    </fields>
+</entity>

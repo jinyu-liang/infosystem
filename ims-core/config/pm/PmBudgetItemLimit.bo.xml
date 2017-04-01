@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="PmBudgetItemLimit" remark="" schema="PD" table="PM_BUDGET_ITEM_LIMIT" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="PRICE_RULE_ID" columnDef="Int" isPk="true(not generated)" name="priceRuleId" null-able="false" primitive="No" remark="Budget identifier" type="Integer"/>
+        <field column="ITEM_ID" columnDef="Int" isPk="true(not generated)" name="itemId" null-able="false" primitive="No" remark="Virtual charging items included in the budget items" type="Integer"/>
+    </fields>
+</entity>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="PmProdBusiLimit" remark="" schema="pd" table="PM_PROD_BUSI_LIMIT" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="PRODUCT_OFFERING_ID" columnDef="AutoIncrement" isPk="true(not generated)" name="productOfferingId" primitive="No" remark="A unique identifier for the product offering.&#10;&#10;" type="Integer"/>
+        <field column="FREERES_TRANS_FLAG" columnDef="Int" name="freeresTransFlag" null-able="false" primitive="No" remark="&#10;?????????????????????(??????),&#10;0:???????(??????0)&#10;1:????,?????(??????1)&#10;10:????,?????(??????2)&#10;11: ???????(??????3)&#10;??:11&#10;" type="Integer"/>
+        <field column="NEGOTIATION_FLAG" columnDef="Int" name="negotiationFlag" null-able="false" primitive="No" remark="" type="Integer"/>
+        <field column="MAX_ORDER_TIMES_LIMIT" columnDef="Int" name="maxOrderTimesLimit" primitive="No" remark="" type="Integer"/>
+    </fields>
+</entity>

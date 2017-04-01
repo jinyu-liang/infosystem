@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+
+<project default="sdl2java" basedir=".">
+	<taskdef resource="net/sf/antcontrib/antcontrib.properties" classpath="${ant-contrib.jar}" />
+	
+	<target name="download_sdls">
+		<taskdef name="ftp" classname="org.apache.tools.ant.taskdefs.optional.net.FTP">
+			<classpath>
+				<pathelement location="${commons-net-3.0.jar}" />
+				<pathelement location="${ant-commons-net-1.6.5.jar}" />
+			</classpath>
+		</taskdef>
+		<echo>****** begin to download sdl files : host=${host},user=${user},dir=${dir}</echo>
+		<ftp 
+			server="${host}" 
+			userid="${user}" 
+			password="${pass}"
+			remotedir="${dir}" 
+			port="21" 
+			action="get" 
+			verbose="yes" passive="yes" binary="yes">
+			<fileset dir="${download_save_dir}">
+				<include name="rating_billing/rating/aibqs_base_def.sdl"/>
+				<include name="rating_billing/rating/aibqs_base_ts.sdl"/>
+				<include name="rating_billing/user_mdb/user_mdb_syncup_def.sdl"/>
+				<include name="rating_billing/user_mdb/user_syncup.sdl"/>
+				<include name="rating_billing/user_mdb/user_syncup_def.sdl"/>
+				<include name="balance/notification_def.sdl"/>
+				<include name="balance/notification.sdl"/>
+				<include name="rating_billing/rating/xdr_def.sdl"/>
+				<include name="rating_billing/billing/recurring_def.sdl"/>
+				<include name="rating_billing/billing/recurring.sdl"/>
+				<include name="balance/abm_interface_def.sdl"/>
+				<include name="balance/abm_interface_billing_def.sdl"/>
+				<include name="balance/abm_interface_common.sdl"/>
+				<include name="balance/abm_interface_common_def.sdl"/>
+				<include name="balance/abm_interface_ims_def.sdl"/>
+				<include name="balance/abm_interface_ims.sdl"/>
+				<include name="balance/promoallot.sdl"/>
+				<include name="balance/promoallot_def.sdl"/>
+				<include name="redomanager/unload_notifier.sdl"/>
+				<include name="mediation/session/mdb_sesmgr.sdl"/>
+				<include name="mediation/session/mdb_sesmgr_def.sdl"/>
+			</fileset>
+		</ftp>
+	</target>
+	
+		
+	<target name="copy_sdls">
+		<copy file="${orig_dir}/rating_billing/rating/aibqs_base_def.sdl" toDir="${target_dir}" overwrite="true" failonerror="true" />
+		<copy file="${orig_dir}/rating_billing/rating/aibqs_base_ts.sdl" toDir="${target_dir}" overwrite="true" failonerror="true" />
+		<copy file="${orig_dir}/rating_billing/user_mdb/user_mdb_syncup_def.sdl" toDir="${target_dir}" overwrite="true" failonerror="true" />
+		<copy file="${orig_dir}/rating_billing/user_mdb/user_syncup.sdl" toDir="${target_dir}" overwrite="true" failonerror="true" />
+		<copy file="${orig_dir}/rating_billing/user_mdb/user_syncup_def.sdl" toDir="${target_dir}" overwrite="true" failonerror="true" />
+		<copy file="${orig_dir}/balance/notification_def.sdl" toDir="${target_dir}" overwrite="true" failonerror="true" />
+		<copy file="${orig_dir}/balance/notification.sdl" toDir="${target_dir}" overwrite="true" failonerror="true" />
+		<copy file="${orig_dir}/rating_billing/rating/xdr_def.sdl" toDir="${target_dir}" overwrite="true" failonerror="true" />
+		<copy file="${orig_dir}/rating_billing/billing/recurring_def.sdl" toDir="${target_dir}" overwrite="true" failonerror="true" />
+		<copy file="${orig_dir}/rating_billing/billing/recurring.sdl" toDir="${target_dir}" overwrite="true" failonerror="true" />
+		<copy file="${orig_dir}/balance/abm_interface_def.sdl" toDir="${target_dir}" overwrite="true" failonerror="true" />
+		<copy file="${orig_dir}/balance/abm_interface_billing_def.sdl" toDir="${target_dir}" overwrite="true" failonerror="true" />
+		<copy file="${orig_dir}/balance/abm_interface_common.sdl" toDir="${target_dir}" overwrite="true" failonerror="true" />
+		<copy file="${orig_dir}/balance/abm_interface_common_def.sdl" toDir="${target_dir}" overwrite="true" failonerror="true" />
+		<copy file="${orig_dir}/balance/abm_interface_ims_def.sdl" toDir="${target_dir}" overwrite="true" failonerror="true" />
+		<copy file="${orig_dir}/balance/abm_interface_ims.sdl" toDir="${target_dir}" overwrite="true" failonerror="true" />
+		<copy file="${orig_dir}/balance/promoallot.sdl" toDir="${target_dir}" overwrite="true" failonerror="true" />
+		<copy file="${orig_dir}/balance/promoallot_def.sdl" toDir="${target_dir}" overwrite="true" failonerror="true" />
+		<copy file="${orig_dir}/mediation/session/mdb_sesmgr.sdl" toDir="${target_dir}" overwrite="true" failonerror="true" />
+		<copy file="${orig_dir}/mediation/session/mdb_sesmgr_def.sdl" toDir="${target_dir}" overwrite="true" failonerror="true" />
+	</target>
+	
+	<target name="sdl2java">
+		<foreach target="build" param="Files">
+			<fileset dir="${sdldir}" casesensitive="yes">
+				<include name="*.sdl" />
+			</fileset>
+		</foreach>
+	</target>
+	<target name="build">
+		<echo> Easyframe building sdl file: ${Files}</echo>
+		<!-- sdl2java生成 -->
+		<exec  executable="sdl2java">
+			<arg line="-gc -d${buildsrc} -I${sdldir} ${Files}" />
+		</exec>
+	</target>
+	<target name="sdl2java_package">
+			<foreach target="build_package" param="Files">
+				<fileset dir="${sdldir}" casesensitive="yes">
+					<include name="*.sdl" />
+				</fileset>
+			</foreach>
+		</target>
+		<target name="build_package">
+			<echo> Easyframe building sdl file: ${Files}</echo>
+			<!-- sdl2java生成 -->
+			<exec  executable="sdl2java">
+				<arg line="-gc -d${buildsrc} -u${package} -I${sdldir} ${Files}" />
+			</exec>
+		</target>
+
+</project>
+

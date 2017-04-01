@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SysMeasure" remark="" schema="sd" table="SYS_MEASURE" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="MEASURE_ID" columnDef="AutoIncrement" isPk="true" name="measureId" primitive="No" remark="Measure ID: A unique identifier&#10;For example:&#10;RMB Unit hao--10401&#10;RMB Unit li--10402&#10;RMB Unit fen--10403&#10;RMB Unit yuan--10404&#10;&#10;Cent--10201&#10;Dollar--10202" type="Integer"/>
+        <field column="MEASURE_TYPE_ID" columnDef="Int" name="measureTypeId" null-able="false" primitive="No" remark="Measure type: Recommended following enumeration&#10;1：duration&#10;2：volume&#10;3：number of times&#10;4：piece&#10;5：count&#10;6：bonus&#10;101：SDR&#10;102：USD&#10;103：EURO&#10;104：CNY&#10;111：THB&#10;112：VND" type="Integer"/>
+        <field column="NAME" columnDef="Varchar" columnSize="256" name="name" null-able="false" primitive="No" remark="Measure name" type="String"/>
+        <field column="MEASURE_LEVEL" columnDef="Int" name="measureLevel" primitive="No" remark="Level of currency unit:&#10;When MEASURE_CLASS=0,  it refers to non-level ( default value is 0).&#10;Commonly set unified level to distinguish:&#10;1 --- hao&#10;2 --- li&#10;3 --- fen&#10;4 --- yuan&#10;" type="Integer"/>
+        <field column="DESCRIPTION" columnDef="Varchar" columnSize="1024" name="description" primitive="No" remark="Measure unit description" type="String"/>
+        <field column="PRECISION_FLAG" columnDef="Int" name="precisionFlag" null-able="false" primitive="No" remark="0：表示无意义，1：后台处理资金时，使用的度量精确。（每一个货币类型中，都有且只有一个IS_MAX_ACCURACY=1的精度标识）" type="Integer"/>
+        <field column="IS_DISPLAY" columnDef="Int" name="isDisplay" null-able="false" primitive="No" remark=" 0：表示不用于前台显示，1：用于前台显示(每一个货币类型中，都有且只有一个IS_DISPLAY=1的显示标识)" type="Integer"/>
+    </fields>
+</entity>

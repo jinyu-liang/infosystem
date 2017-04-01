@@ -1,0 +1,275 @@
+<services>
+	<!--上海接口配置 -->
+	<service bean="com.ailk.openbilling.service.imscnsh.CN_SHMgntServiceImpl" isInner="false" isOneTimeFee="false">
+		<do_queryEcardInfo busi_code="7019" is3h = "false">
+			<busi
+				bean="com.ailk.ims.business.imsInterface.uservalidtity.QueryEcardInfoBean" />
+			<spec_id normal="7019001" cancel="7019101" />
+		</do_queryEcardInfo>
+		<do_queryNumBySession busi_code="7154" is3h="false">
+			<busi bean="com.ailk.ims.business.query.QueryNumBySessionBean" />
+			<spec_id normal="7154001" cancel="7154101" />
+		</do_queryNumBySession>
+		
+		<do_insertSproductOffer busi_code="7155" is3h="false">
+			<busi bean="com.ailk.ims.business.product.InsertSproductOfferBean" />
+			<spec_id normal="7155001" cancel="7155101" />
+		</do_insertSproductOffer>
+		
+		<do_insertSproducts busi_code="7156" is3h="false">
+			<busi bean="com.ailk.ims.business.product.InsertSproductsBean" />
+			<spec_id normal="7156001" cancel="7156101" />
+		</do_insertSproducts>
+		
+		<do_deleteSproducts busi_code="7157" is3h="false">
+			<busi bean="com.ailk.ims.business.product.DeleteSproductsBean" />
+			<spec_id normal="7157001" cancel="7157101" />
+		</do_deleteSproducts>
+		
+		<do_insertSprodFreers busi_code="7158" is3h="false">
+			<busi bean="com.ailk.ims.business.product.InsertSprodFreersBean" />
+			<spec_id normal="7158001" cancel="7158101" />
+		</do_insertSprodFreers>
+		
+		<do_insertSplanFreers busi_code="7159" is3h="false">
+			<busi bean="com.ailk.ims.business.product.InsertSplanFreersBean" />
+			<spec_id normal="7159001" cancel="7159101" />
+		</do_insertSplanFreers>
+		<do_insertSFreebieUsage busi_code="7160" is3h="false">
+			<busi bean="com.ailk.ims.business.product.InsertSFreebieUsageBean" />
+			<spec_id normal="7160001" cancel="7160101" />
+		</do_insertSFreebieUsage>
+		<do_insertSfreebieProp busi_code="7161" is3h="false">
+			<busi bean="com.ailk.ims.business.product.InsertSfreebiePropBean" />
+			<spec_id normal="7161001" cancel="7161101" />
+		</do_insertSfreebieProp>
+		
+		<do_DeleteSprodFreers busi_code="7162" is3h="false">
+			<busi bean="com.ailk.ims.business.product.DeleteSprodFreersBean" />
+			<spec_id normal="7162001" cancel="7162101" />
+		</do_DeleteSprodFreers>
+		<do_deleteSplanFreers busi_code="7164" is3h="false">
+			<busi bean="com.ailk.ims.business.product.DeleteSplanFreersBean" />
+			<spec_id normal="7164001" cancel="7164101" />
+		</do_deleteSplanFreers>
+		<do_deleteSFreebieUsage busi_code="7163" is3h="false">
+			<busi bean="com.ailk.ims.business.product.DeleteSFreebieUsageBean" />
+			<spec_id normal="7163001" cancel="7163101" />
+		</do_deleteSFreebieUsage>
+		<do_deleteSfreebieProp busi_code="7165" is3h="false">
+			<busi bean="com.ailk.ims.business.product.DeleteSfreebiePropBean" />
+			<spec_id normal="7165001" cancel="7165101" />
+		</do_deleteSfreebieProp>
+		<do_updateSproducts busi_code="7166" is3h="false">
+			<busi bean="com.ailk.ims.business.product.UpdateSproductsBean" />
+			<spec_id normal="7166001" cancel="7166101" />
+		</do_updateSproducts>
+		<do_updateSprodFreers busi_code="7167" is3h="false">
+			<busi bean="com.ailk.ims.business.product.UpdateSprodFreersBean" />
+			<spec_id normal="7167001" cancel="7167101" />
+		</do_updateSprodFreers>
+		<do_updateSplanFreers busi_code="7168" is3h="false">
+			<busi bean="com.ailk.ims.business.product.UpdateSplanFreersBean" />
+			<spec_id normal="7168001" cancel="7168101" />
+		</do_updateSplanFreers>
+		<do_updateSFreebieUsage busi_code="7169" is3h="false">
+			<busi bean="com.ailk.ims.business.product.UpdateSFreebieUsageBean" />
+			<spec_id normal="7168001" cancel="7168101" />
+		</do_updateSFreebieUsage>
+		<do_updateSfreebieProp busi_code="7170" is3h="false">
+			<busi bean="com.ailk.ims.business.product.UpdateSFreebiePropBean" />
+			<spec_id normal="7170001" cancel="7170101" />
+		</do_updateSfreebieProp>
+	</service>
+	<service bean="com.ailk.openbilling.service.shinner.IntfshinnerServiceImpl" isInner="true" isOneTimeFee="false" proxyBeanId="ims_inner_ws_proxy">
+		<do_insertImmeSms busi_code="9127" isOneTimeFee="false" is3h="false">
+			<busi bean="com.ailk.ims.business.sms.ImmeSmsBusiBean"/>
+			<spec_id normal="9127001" />
+		</do_insertImmeSms>
+		<do_insertBatchSms busi_code="9128" isOneTimeFee="false" is3h="false">
+			<busi bean="com.ailk.ims.business.sms.BatchSmsBusiBean"/>
+			<spec_id normal="9128001" />
+		</do_insertBatchSms>
+		<do_lifeCycleChgSh busi_code="9140" is3h="false">
+			<busi bean="com.ailk.ims.business.resvalid.ChgLifeCycleBusiBean"/>
+			<spec_id normal="9140001" cancel="9140101" />
+		</do_lifeCycleChgSh>
+	</service>
+	<service bean="com.ailk.openbilling.service.shinner.IntfshqureyServiceImpl" isInner="true" isOneTimeFee="false">
+		<do_qryUserListByAcctId busi_code="9136" is3h="false">
+			<busi bean="com.ailk.ims.business.query.QryUserListByAcctIdBean"/>
+			<spec_id normal="9136001" cancel="9136101" />
+		</do_qryUserListByAcctId>
+		<do_qrySingleUserByAcctId busi_code="9138" is3h="false">
+			<busi bean="com.ailk.ims.business.query.QrySingleUserByAcctIdBean"/>
+			<spec_id normal="9138001" cancel="9138101" />
+		</do_qrySingleUserByAcctId>
+		<do_queryVpnGroupByUserIdSh busi_code="9139" is3h="false">
+			<busi bean="com.ailk.ims.business.query.QryVPNGroupByUserIdShBean"/>
+			<spec_id normal="9139001" cancel="9139101" />
+		</do_queryVpnGroupByUserIdSh>
+		<do_queryNextBillType busi_code="9141" is3h="false">
+			<busi bean="com.ailk.ims.business.query.QryUserNextBillTypeBean"/>
+			<spec_id normal="9141001" cancel="9141101" />
+		</do_queryNextBillType>		
+	</service>
+	<service bean="com.ailk.openbilling.service.imssdl.IIntfshSyncAppServiceImpl"  isSdl="true" isInner="true" isOneTimeFee="false" proxyBeanId="ims_sdl_proxy">
+		<do_insertImmeSmsBySdl busi_code="9129" not_query="true">
+			<busi bean="com.ailk.ims.business.sdlinterface.sms.ImmeSmsSdlBusiBean"/>
+			<spec_id normal="9129001" cancel="9129101" />
+		</do_insertImmeSmsBySdl>
+		<do_insertBatchSmsBySdl busi_code="9130" not_query="true">
+			<busi bean="com.ailk.ims.business.sdlinterface.sms.BatchSmsSdlBusiBean"/>
+			<spec_id normal="9130001" cancel="9130101" />
+		</do_insertBatchSmsBySdl>
+		<do_queryUserProdList busi_code="9131" checkOper="false">
+			<busi bean="com.ailk.ims.business.sdlinterface.query.QueryUserProdList4SdlBusiBean"/>
+			<spec_id normal="9131001" cancel="9131101"/>
+		</do_queryUserProdList>
+		<do_querySplitByObjectIdBySdl busi_code="9132" checkOper="false">
+			<busi bean="com.ailk.ims.business.sdlinterface.query.QuerySplitByObjectId4SdlBusiBean"/>
+			<spec_id normal="9132001" cancel="9132101"/>
+		</do_querySplitByObjectIdBySdl>
+		<do_chgGprsService busi_code="9142" isOneTimeFee="false" not_query="true">
+			<busi bean="com.ailk.ims.business.sdlinterface.ims.ChgGprsServiceBusiBean"/>
+			<spec_id normal="9142001" cancel="9142101"/>
+		</do_chgGprsService>
+		<do_irGprsAlarm busi_code="9143" isOneTimeFee="false" not_query="true">
+			<busi bean="com.ailk.ims.business.sdlinterface.ims.GprsAlarmBusiBean"/>
+			<spec_id normal="9143001" cancel="9143101"/>
+		</do_irGprsAlarm>
+		<do_updatePriceParam busi_code="9144" isOneTimeFee="false" checkOper="false">
+			<busi bean="com.ailk.ims.business.sdlinterface.rating.UpProdPriceParamBusiBean"/>
+			<mdb bean="com.ailk.ims.business.changeprod.mdb.ChangeProductSalMdbBean"/>
+			<spec_id normal="9144001" cancel="9144101" />
+		</do_updatePriceParam>
+		<do_localHighChargeInfo busi_code="9145" isOneTimeFee="false" checkOper="false">
+			<busi bean="com.ailk.ims.business.sdlinterface.rating.HighLocalChargeInfoBusiBean"/>
+			<spec_id normal="9145001" cancel="9145101" />
+		</do_localHighChargeInfo>
+		<do_updateProdAndPriceParam busi_code="9146" isOneTimeFee="false" checkOper="false">
+			<busi bean="com.ailk.ims.business.sdlinterface.rating.UpProdAndParamBusiBean"/>
+			<mdb bean="com.ailk.ims.business.changeprod.mdb.ChangeProductSalMdbBean"/>
+			<spec_id normal="9146001" cancel="9146101" />
+		</do_updateProdAndPriceParam>
+		<do_updateDiscountPriceParam busi_code="9148" isOneTimeFee="false" checkOper="false">
+			<busi bean="com.ailk.ims.business.sdlinterface.rating.DiscountPriceParamBusiBean"/>
+			<mdb bean="com.ailk.ims.business.changeprod.mdb.ChangeProductSalMdbBean"/>
+			<spec_id normal="9148001" cancel="9148101" />
+		</do_updateDiscountPriceParam>
+	</service>
+	<service bean="com.ailk.openbilling.service.imssdl.IImsSyncAppServiceImpl" isSdl="true" isOneTimeFee="false" isInner="true" proxyBeanId="ims_sdl_proxy">
+		<do_firstActive busi_code="9123" isOneTimeFee="false" checkOper="false">
+			<busi bean="com.ailk.ims.business.sdlinterface.firstactive.FirstActiveBusiBean"/>
+			<spec_id normal="9123001" cancel="9123101" />
+		</do_firstActive>
+		<do_insertImsResourceMonitor busi_code="9106" not_query="true">
+			<busi bean="com.ailk.ims.business.sdlinterface.rating.UserMonitorBusiBean"/>
+			<spec_id>
+				<type0 normal="9106001" cancel="9106101" />
+			</spec_id>
+		</do_insertImsResourceMonitor>
+		<do_insertImsUserOrderConfirm busi_code="9108" not_query="true">
+			<busi bean="com.ailk.ims.business.sdlinterface.rating.UserConfirmBusiBean"/>
+			<spec_id>
+				<type0 normal="9108001" cancel="9108101" />
+			</spec_id>
+		</do_insertImsUserOrderConfirm>
+		<do_orderRewardProduct busi_code="9060" isRewardProdOrder="true" not_query="true">
+			<busi bean="com.ailk.ims.business.orderrewardprod.busi.OrderRewardProdBusiBean"/>
+			<mdb bean="com.ailk.ims.business.changeprod.mdb.ChangeProductSalMdbBean"/>
+			<spec_id normal="9060001" cancel="9060101"/>
+		</do_orderRewardProduct>
+		<do_modifyProduct busi_code="9121" isRewardProdOrder="true" not_query="true">
+			<busi bean="com.ailk.ims.business.orderrewardprod.busi.ModifyProductBusiBean"/>
+			<mdb bean="com.ailk.ims.business.changeprod.mdb.ChangeProductSalMdbBean"/>
+			<spec_id normal="9121001" cancel="9121101"/>
+		</do_modifyProduct>
+		<do_queryAcctInfo busi_code="9126" isOneTimeFee="false" checkOper="false">
+			<busi bean="com.ailk.ims.business.sdlinterface.query.QueryAcctByUserId4SdlBean"/>
+			<spec_id normal="9126001" cancel="9126101" />
+		</do_queryAcctInfo>
+	</service>
+	<service bean="com.ailk.openbilling.service.smsts.ISmsTsAppServiceImpl" >
+		<do_sendWlanCmccSms busi_code="7501" scan_table_class="com.ailk.openbilling.persistence.acct.entity.CaFreeres" >
+			<flow bean="com.ailk.ims.smsts.flowinstance.res.WlanCmccFlowRes"/>
+			<spec_id normal="7501001" cancel="7501101"/>
+		</do_sendWlanCmccSms>
+		
+		<do_sendEwalkFlowSms busi_code="7502" scan_table_class="com.ailk.openbilling.persistence.acct.entity.CaFreeres" >
+			<flow bean="com.ailk.ims.smsts.flowinstance.res.EwalkFlowRes"/>
+			<spec_id normal="7502001" cancel="7502101"/>
+		</do_sendEwalkFlowSms>
+		
+		<do_sendUserPackageSms busi_code="7503" scan_table_class="com.ailk.openbilling.persistence.cust.entity.CoProd" >
+			<flow bean="com.ailk.ims.smsts.flowinstance.UserPackageFlow"/>
+			<spec_id normal="7503001" cancel="7503101"/>
+		</do_sendUserPackageSms>
+		
+		<do_sendMobileDataFlowSms busi_code="7504" scan_table_class="com.ailk.openbilling.persistence.acct.entity.CaFreeres" >
+			<flow bean="com.ailk.ims.smsts.flowinstance.res.MobileDataFlowRes"/>
+			<spec_id normal="7504001" cancel="7504101"/>
+		</do_sendMobileDataFlowSms>
+		
+		<do_sendGprsFlowSms busi_code="7505" scan_table_class="com.ailk.openbilling.persistence.cust.entity.CmResource" >
+			<flow bean="com.ailk.ims.smsts.flowinstance.GprsFlow"/>
+			<spec_id normal="7505001" cancel="7505101"/>
+		</do_sendGprsFlowSms>
+		
+		<do_sendWlanFlowSms busi_code="7506" scan_table_class="com.ailk.openbilling.persistence.acct.entity.CaFreeres" >
+			<flow bean="com.ailk.ims.smsts.flowinstance.res.WlanFlowRes"/>
+			<spec_id normal="7506001" cancel="7506101"/>
+		</do_sendWlanFlowSms>
+		
+		<do_sendResValidDateSms busi_code="7507" scan_table_class="com.ailk.openbilling.persistence.cust.entity.CmResValidity" >
+			<flow bean="com.ailk.ims.smsts.flowinstance.ResValidDateFlow"/>
+			<spec_id normal="7507001" cancel="7507101"/>
+		</do_sendResValidDateSms>
+		
+		<do_sendCycleMobileDateFlowSms busi_code="7508" scan_table_class="com.ailk.openbilling.persistence.cust.entity.CoProd" >
+			<flow bean="com.ailk.ims.smsts.flowinstance.CycleNotifyMobileDataFlow"/>
+			<spec_id normal="7508001" cancel="7508101"/>
+		</do_sendCycleMobileDateFlowSms>
+		
+		<do_sendValidBillCycStoPhoSms busi_code="7509" scan_table_class="com.ailk.openbilling.persistence.cust.entity.CmResValidity" >
+			<flow bean="com.ailk.ims.smsts.flowinstance.ValidBillCycleStopPhoneFlow"/>
+			<spec_id normal="7509001" cancel="7509101"/>
+		</do_sendValidBillCycStoPhoSms>
+		
+		<do_syncValidBillCycStoPho busi_code="7510" scan_table_class="com.ailk.openbilling.persistence.jd.entity.ImsStsSyncStore" >
+			<flow bean="com.ailk.ims.smsts.flowinstance.SyncValidBillCycStoPho"/>
+			<spec_id normal="7510001" cancel="7510101"/>
+		</do_syncValidBillCycStoPho>
+		<do_userValidity busi_code="7511" scan_table_class="com.ailk.openbilling.persistence.cust.entity.CmResValidity" >
+			<flow bean="com.ailk.ims.smsts.flowinstance.ResValidStsFlow"/>
+			<spec_id normal="7511001" cancel="7511101"/>
+		</do_userValidity>
+		 <do_sendGprsLowFlowSms busi_code="7512" scan_table_class="com.ailk.openbilling.persistence.acct.entity.CaFreeres" >
+			<flow bean="com.ailk.ims.smsts.flowinstance.res.GprsLowFlowRes"/>
+			<spec_id normal="7512001" cancel="7512101"/>
+		</do_sendGprsLowFlowSms>
+	   <do_sendFreeresHalfUseFlow  busi_code="7513" scan_table_class="com.ailk.openbilling.persistence.acct.entity.CaFreeres" >
+			<flow bean="com.ailk.ims.smsts.flowinstance.res.SmsFreeresHalfUseFlow"/>
+			<spec_id normal="7513001" cancel="7513101"/>
+		</do_sendFreeresHalfUseFlow >
+	   <do_sendWlanTimeFlow  busi_code="7514" scan_table_class="com.ailk.openbilling.persistence.cust.entity.CmResource" >
+			<flow bean="com.ailk.ims.smsts.flowinstance.WlanTimeFlow"/>
+			<spec_id normal="7514001" cancel="7514101"/>
+		</do_sendWlanTimeFlow >
+	</service> 
+	
+	
+	<service bean="com.ailk.openbilling.service.imspgmt.PmsMgntServiceImpl" isInner="false" isOneTimeFee="false">
+		
+		<do_queryWisdomFeeList busi_code="9800" is3h = "false">
+			<busi
+				bean="com.ailk.ims.business.pmsinterface.QueryWisdomFeeBusiBean" />
+			<spec_id normal="9800001" cancel="9800101"/>
+		</do_queryWisdomFeeList>
+		<do_queryPayForPriceRuleId busi_code="9813" is3h = "false">
+			<busi
+				bean="com.ailk.ims.business.pmsinterface.PayForPriceRuleIdBusiBean" />
+			<spec_id normal="9813001" cancel="9813101"/>
+		</do_queryPayForPriceRuleId>
+	</service>
+</services>

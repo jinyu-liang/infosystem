@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="ClassLogicInfo">
+  <fields>
+    <field name="expire_date" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="op_id" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="state" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="name" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="org_id" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="valid_date" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="done_date" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="create_date" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="ext1" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="ext2" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="ext3" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="ext4" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="notes" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="code" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="work_desc" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="player_id" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="done_code" type="String" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

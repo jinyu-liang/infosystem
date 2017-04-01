@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="ImsLowBalanceSync" schema="cd" table="IMS_LOW_BALANCE_SYNC">
+  <fields>
+    <field name="id" type="Long" column="ID" isPk="true" primitive="No" null-able="true" columnDef="AutoIncrement"/>
+    <field name="custId" type="Long" column="CUST_ID" primitive="No" remark="????id" null-able="true" columnDef="Int"/>
+    <field name="acctId" type="Long" column="ACCT_ID" primitive="No" remark="????id" null-able="true" columnDef="Int"/>
+    <field name="phoneId" type="String" column="PHONE_ID" primitive="No" remark="????
+" null-able="false" columnDef="Varchar" columnSize="64"/>
+    <field name="autoType" type="Integer" column="AUTO_TYPE" primitive="No" remark="??????:
+1:Low balance auto topup" null-able="true" columnDef="Int"/>
+    <field name="payChannel" type="Integer" column="PAY_CHANNEL" primitive="No" remark="????:
+1:From credit
+2:From bank account
+" null-able="true" columnDef="Int"/>
+    <field name="lowBalanceAmount" type="Long" column="LOW_BALANCE_AMOUNT" primitive="No" remark="???" null-able="false" columnDef="Int"/>
+    <field name="currentBalanceAmount" type="Long" column="CURRENT_BALANCE_AMOUNT" primitive="No" remark="????" null-able="false" columnDef="Int"/>
+    <field name="sts" type="Integer" column="STS" primitive="No" null-able="false" columnDef="Int"/>
+    <field name="createDate" type="Date" column="CREATE_DATE" primitive="No" null-able="false" columnDef="Date"/>
+    <field name="soNbr" type="Long" column="SO_NBR" primitive="No" null-able="false" columnDef="Int"/>
+    <field name="errorMsg" type="String" column="ERROR_MSG" primitive="No" null-able="true" columnDef="Varchar" columnSize="256"/>
+    <field name="errorCode" type="Integer" column="ERROR_CODE" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="dealCount" type="Integer" column="DEAL_COUNT" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="dealDate" type="Date" column="DEAL_DATE" isPk="false" primitive="No" null-able="true" columnDef="Date"/>
+    <field name="topupAmount" type="Long" column="TOPUP_AMOUNT" isPk="false" primitive="No" null-able="true" columnDef="Int"/>
+  </fields>
+</entity>

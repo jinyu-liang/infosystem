@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="PmSupermarketFreeres" schema="PD" table="PM_SUPERMARKET_FREERES">
+  <fields>
+    <field name="mainPromotion" type="Integer" column="MAIN_PROMOTION" isPk="true(not generated)" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="productOfferingId" type="Integer" column="PRODUCT_OFFERING_ID" isPk="true(not generated)" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="minResCount" type="Long" column="MIN_RES_COUNT" isPk="false" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="maxResCount" type="Long" column="MAX_RES_COUNT" isPk="false" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="stepRes" type="Long" column="STEP_RES" isPk="false" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="measureId" type="Integer" column="MEASURE_ID" isPk="false" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="policyId" type="Integer" column="POLICY_ID" isPk="false" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="regionCode" type="Integer" column="REGION_CODE" isPk="false" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="validDate" type="Date" column="VALID_DATE" isPk="true(not generated)" primitive="Auto" null-able="true" columnDef="Date"/>
+    <field name="expireDate" type="Date" column="EXPIRE_DATE" isPk="false" primitive="Auto" null-able="true" columnDef="Date"/>
+  </fields>
+</entity>

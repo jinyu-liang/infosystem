@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="PmAllotBusiScheme" remark="" schema="PD" table="PM_ALLOT_BUSI_SCHEME" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="PROMO_ID" columnDef="Int" isPk="true(not generated)" name="promoId" null-able="true" primitive="Auto" type="Integer"/>
+        <field column="COND_ID" columnDef="Int" isPk="true(not generated)" name="condId" null-able="true" primitive="Auto" type="Integer"/>
+        <field column="PRINCIPAL_FEE" columnDef="Int" isPk="false" name="principalFee" null-able="true" primitive="Auto" type="Long"/>
+        <field column="PRIN_ALLOT_TYPE" columnDef="Int" isPk="false" name="prinAllotType" null-able="true" primitive="Auto" type="Integer"/>
+        <field column="PRIN_ALLOT_VAL" columnDef="Int" isPk="false" name="prinAllotVal" null-able="true" primitive="Auto" type="Long"/>
+        <field column="PRIN_DEDUCT_TYPE" columnDef="Int" isPk="false" name="prinDeductType" null-able="true" primitive="Auto" type="Integer"/>
+        <field column="DONATE_FEE" columnDef="Int" isPk="false" name="donateFee" null-able="true" primitive="Auto" type="Long"/>
+        <field column="DONA_ALLOT_TYPE" columnDef="Int" isPk="false" name="donaAllotType" null-able="true" primitive="Auto" type="Integer"/>
+        <field column="DONA_ALLOT_VAL" columnDef="Int" isPk="false" name="donaAllotVal" null-able="true" primitive="Auto" type="Long"/>
+        <field column="DONA_DEDUCT_TYPE" columnDef="Int" isPk="false" name="donaDeductType" null-able="true" primitive="Auto" type="Integer"/>
+    </fields>
+</entity>

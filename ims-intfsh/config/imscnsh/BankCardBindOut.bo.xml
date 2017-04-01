@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="BankCardBindOut">
+  <fields>
+    <field name="phone_id" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="card_type" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="bank_code" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="day_fix_money" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="time_fix_money" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="deal_date" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="password" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="auth_id" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="pay_type" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="PmBrand" remark="" schema="PD" table="PM_BRAND" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="BRAND_ID" columnDef="AutoIncrement" isPk="true" name="brandId" primitive="No" remark="Brand ID" type="Integer"/>
+        <field column="NAME" columnDef="Varchar" columnSize="256" name="name" primitive="No" remark="Brand name" type="String"/>
+        <field column="BRAND_TYPE" columnDef="Int" name="brandType" primitive="No" remark="Brand type：&#10;0：business brand" type="Integer"/>
+        <field column="SLOGAN" columnDef="Varchar" columnSize="1024" name="slogan" primitive="No" remark="brand slogan&#10;&#10;" type="String"/>
+        <field column="DESCRIPTION" columnDef="Varchar" columnSize="1024" name="description" primitive="No" remark="Brand information description" type="String"/>
+        <field column="VALID_DATE" columnDef="TimeStamp" name="validDate" primitive="No" remark="Effective date" type="Date"/>
+        <field column="EXPIRE_DATE" columnDef="TimeStamp" name="expireDate" primitive="No" remark="Expired date" type="Date"/>
+    </fields>
+</entity>

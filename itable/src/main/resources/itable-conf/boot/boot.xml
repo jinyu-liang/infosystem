@@ -1,0 +1,504 @@
+<boot>
+	<config name="manual_modify" bean="com.ailk.imssh.common.manual.init.ManualModifyUpfieldInitBean" remark="手工数据维护上发upfield配置">
+		<!-- 客户相关表 -->
+		<index value="1">
+			<class name="com.ailk.openbilling.persistence.cust.entity.CmCustomer">
+				<cond field="custId" value="custId" />
+			</class>
+		</index>
+		<index value="2">
+			<class name="com.ailk.openbilling.persistence.acct.entity.CaAccount">
+				<cond field="acctId" value="acctId" />
+			</class>
+		</index>
+		<index value="3">
+			<class name="com.ailk.openbilling.persistence.cust.entity.CmContactMedium">
+				<cond field="objectId" value="userId" />
+			</class>
+		</index>
+		<index value="4">
+			<class name="com.ailk.openbilling.persistence.acct.entity.CaBillingPlan">
+				<cond field="acctId" value="acctId" />
+			</class>
+		</index> 
+		<index value="5">
+			<class name="com.ailk.openbilling.persistence.acct.entity.CaNotifyExempt">
+				<case field="objectId" value="userId">
+					<cond field="objectType" value="0" />
+				</case>
+				<case field="objectId" value="acctId">
+					<cond field="objectType" value="1" />
+				</case>
+			</class>
+		</index>
+		<index value="6">
+			<class name="com.ailk.openbilling.persistence.acct.entity.CaAccountGroup">
+				<cond field="acctId" value="acctId" />
+			</class>
+		</index>
+		<index value="7">
+			<class name="com.ailk.openbilling.persistence.acct.entity.CaAccountRel">
+				<cond field="groupId" value="userId" />
+			</class>
+		</index>
+		<index value="8">
+			<class name="com.ailk.openbilling.persistence.acct.entity.CaAccountRv">
+				<cond field="acctId" value="acctId" />
+				<cond field="resourceId" value="userId" />
+			</class>
+		</index>
+		<index value="9">
+			<class name="com.ailk.openbilling.persistence.cust.entity.CmResource">
+				<cond field="resourceId" value="userId" />
+			</class>
+		</index>
+		<index value="10">
+			<class name="com.ailk.openbilling.persistence.acct.entity.CaAccountRes">
+				<cond field="resourceId" value="userId" />
+			</class>
+		</index>
+		<index value="11">
+			<class name="com.ailk.openbilling.persistence.cust.entity.CmResIdentity">
+				<cond field="resourceId" value="userId" />
+			</class>
+		</index>
+		<index value="12">
+			<class
+				name="com.ailk.openbilling.persistence.cust.entity.CmIdentityVsImei">
+				<cond field="resourceId" value="userId" />
+			</class>
+		</index>
+		<index value="13">
+			<class name="com.ailk.openbilling.persistence.cust.entity.CmResLifecycle">
+				<cond field="resourceId" value="userId" />
+			</class>
+		</index>
+		<index value="14">
+			<class
+				name="com.ailk.openbilling.persistence.cust.entity.CmResourceMonitor">
+				<cond field="resourceId" value="userId" />
+			</class>
+		</index>
+		<index value="15">
+			<class
+				name="com.ailk.openbilling.persistence.cust.entity.CmUserOrderConfirm">
+				<cond field="resourceId" value="userId" />
+			</class>
+		</index>
+		<index value="16">
+			<class
+				name="com.ailk.openbilling.persistence.cust.entity.CmUserEnterprise">
+				<cond field="resourceId" value="userId" />
+			</class>
+		</index>
+		<index value="17">
+			<class name="com.ailk.openbilling.persistence.cust.entity.CmResServCycle">
+				<cond field="resourceId" value="userId" />
+			</class>
+		</index>
+		<!-- 产品相关表 -->
+		<index value="18">
+			<class name="com.ailk.openbilling.persistence.cust.entity.CoProd">
+				<case field="objectId" value="userId">
+					<cond field="objectType" value="0" /> 
+					<cond field="productId" value="prodId"/>
+				</case>
+				<case field="objectId" value="acctId">
+					<!--<cond field="objectType" value="1" />  -->
+					<cond field="productId" value="prodId"/>
+				</case>
+			</class>
+		</index>
+		<index value="19">
+			<class name="com.ailk.openbilling.persistence.cust.entity.CoProdBillingCycle">
+				<case field="objectId" value="userId">
+					<cond field="objectType" value="0" />
+					<cond field="productId" value="prodId"/>
+				</case>
+				<case field="objectId" value="acctId">
+					<!-- <cond field="objectType" value="1" /> -->
+					<cond field="productId" value="prodId"/>
+				</case>
+			</class>
+		</index>
+		<index value="20">
+			<class name="com.ailk.openbilling.persistence.cust.entity.CoProdCellInfo">
+				<case field="objectId" value="userId">
+					<cond field="objectType" value="0" />
+					<cond field="productId" value="prodId"/>
+				</case>
+				<case field="objectId" value="acctId">
+					<!-- <cond field="objectType" value="1" /> -->
+					<cond field="productId" value="prodId"/>
+				</case>
+			</class>
+		</index>
+		<index value="21">
+				<class name="com.ailk.openbilling.persistence.cust.entity.CoSplitCharValue">
+				<case field="objectId" value="userId">
+					<cond field="objectType" value="0" />
+					<cond field="productId" value="prodId"/>
+				</case>
+				<case field="objectId" value="acctId">
+					<!-- <cond field="objectType" value="1" /> -->
+					<cond field="productId" value="prodId"/>
+				</case>
+			</class>
+		</index>
+		<index value="22">
+			<class name="com.ailk.openbilling.persistence.cust.entity.CoBudgetCharValue">
+				<case field="objectId" value="userId">
+					<cond field="objectType" value="0" />
+					<cond field="productId" value="prodId"/>
+				</case>
+				<case field="objectId" value="acctId">
+					<!-- <cond field="objectType" value="1" /> -->
+					<cond field="productId" value="prodId"/>
+				</case>
+			</class>
+		</index>
+		<index value="23">
+			<class name="com.ailk.openbilling.persistence.cust.entity.CoFnCharValue">
+				<case field="objectId" value="userId">
+					<cond field="objectType" value="0" />
+					<cond field="productId" value="prodId"/>
+				</case>
+				<case field="objectId" value="acctId">
+					<!-- <cond field="objectType" value="1" />  -->
+					<cond field="productId" value="prodId"/>
+				</case>
+			</class>
+		</index>
+		<index value="24">
+			<class name="com.ailk.openbilling.persistence.cust.entity.CoProdCharValue">
+				<case field="objectId" value="userId">
+					<cond field="objectType" value="0" />
+					<cond field="productId" value="prodId"/>
+				</case>
+				<case field="objectId" value="acctId">
+					<!-- <cond field="objectType" value="1" /> -->
+					<cond field="productId" value="prodId"/>
+				</case>
+			</class>
+		</index>
+		<index value="25">
+			<class name="com.ailk.openbilling.persistence.cust.entity.CoProdPriceParam">
+				<case field="objectId" value="userId">
+					<cond field="objectType" value="0" />
+					<cond field="productId" value="prodId"/>
+				</case>
+				<case field="objectId" value="acctId">
+					<!-- <cond field="objectType" value="1" /> -->
+					<cond field="productId" value="prodId"/>
+				</case>
+			</class>
+		</index>
+		<index value="26">
+			<class name="com.ailk.openbilling.persistence.cust.entity.CmUserPortability">
+				<cond field="resourceId" value="userId" />
+			</class>
+		</index>
+		<index value="27">
+			<class name="com.ailk.openbilling.persistence.cust.entity.CmUserMap">
+				<cond field="resourceId" value="userId" />
+			</class>
+		</index>
+		<index value="28">
+			<class name="com.ailk.openbilling.persistence.cust.entity.CmUserPbx">
+				<cond field="resourceId" value="userId" />
+			</class>
+		</index>
+		<index value="29">
+			<class name="com.ailk.openbilling.persistence.cust.entity.CmUserOrder">
+				<cond field="resourceId" value="userId" />
+			</class>
+		</index>
+		<index value="30">
+			<class name="com.ailk.openbilling.persistence.cust.entity.CmUserShareProd">
+				<cond field="resourceId" value="userId" />
+			</class>
+		</index>
+		
+		<index value="31">
+			<class name="com.ailk.openbilling.persistence.cust.entity.CmUserRelation">
+				<cond field="resourceId" value="userId" />
+			</class>
+		</index>
+		
+		<index value="32">
+			<class name="com.ailk.openbilling.persistence.cust.entity.CmUserParam">
+				<cond field="resourceId" value="userId" />
+			</class>
+		</index>
+ 	
+		<index value="33"> 
+			<class name="com.ailk.openbilling.persistence.cust.entity.CmUserValidchange"> 
+				<cond field="userId" value="userId" /> 
+ 			</class> 
+ 		</index>
+ 		<index value="34"><!-- CUserVersion-->
+			<class name="com.ailk.openbilling.persistence.cust.entity.CmUserShareProd">
+				<cond field="resourceId" value="userId" />
+			</class>
+		</index>
+		
+		<index value="56">
+			<class name="com.ailk.openbilling.persistence.cust.entity.CmUserShareProd">
+				<cond field="resourceId" value="userId" />
+			</class>
+		</index>
+		
+		<index value="57"><!--imsi-->
+			<class name="com.ailk.openbilling.persistence.cust.entity.CmUserShareProd">
+				<cond field="resourceId" value="userId" />
+			</class>
+		</index>
+		
+		<index value="58"><!--phone-->
+			<class name="com.ailk.openbilling.persistence.cust.entity.CmUserShareProd">
+				<cond field="resourceId" value="userId" />
+			</class>
+		</index>
+		
+		<index value="59"><!-- 过户资产迁移-->
+			<class name="com.ailk.openbilling.persistence.cust.entity.CmUserShareProd">
+				<cond field="resourceId" value="userId" />
+			</class>
+		</index>
+
+		<index value="60"><!-- zd.sys_rt_industry-->
+			<class name="com.ailk.openbilling.persistence.cust.entity.CmUserShareProd">
+				<cond field="resourceId" value="userId" />
+			</class>
+		</index>
+		<index value="61"><!-- zd.sys_rt_resource-->
+			<class name="com.ailk.openbilling.persistence.cust.entity.CmUserShareProd">
+				<cond field="resourceId" value="userId" />
+			</class>
+		</index>
+		<index value="62"><!-- zd.sys_rt_identity-->
+			<class name="com.ailk.openbilling.persistence.cust.entity.CmUserShareProd">
+				<cond field="resourceId" value="userId" />
+			</class>
+		</index>
+		<index value="63"><!-- zd.sys_rt_account-->
+			<class name="com.ailk.openbilling.persistence.cust.entity.CmUserShareProd">
+				<cond field="acctId" value="acctId" />
+			</class>
+		</index> 
+		<index value="64"><!-- zd.sys_rt_customer-->
+			<class name="com.ailk.openbilling.persistence.cust.entity.CmUserShareProd">
+				<cond field="custId" value="custId" />
+			</class>
+		</index> 
+
+	</config>
+	
+	
+	
+	<config name="itableupfield" bean="com.ailk.imssh.common.init.ITableUpfieldInitBean" remark="接口数据表配置">
+		
+		<index value="1" handler="com.ailk.imssh.cust.handler.CustHandler">
+			<itable>com.ailk.openbilling.persistence.itable.entity.ICustomer</itable>
+		</index>
+		<index value="2" handler="com.ailk.imssh.acct.handler.AcctHandler">
+			<itable>com.ailk.openbilling.persistence.itable.entity.IAccount</itable>
+		</index>
+		<index value="3" handler="com.ailk.imssh.user.handler.UserAcctRelHandler">
+			<itable>com.ailk.openbilling.persistence.itable.entity.IUserAcctRel</itable>
+		</index>
+		<index value="4" handler="com.ailk.imssh.user.handler.UserHandler">
+			<itable>com.ailk.openbilling.persistence.itable.entity.IUser</itable>
+		</index>
+		<index value="5" handler="com.ailk.imssh.contact.handler.ContactHandler">
+			<itable>com.ailk.openbilling.persistence.itable.entity.IContact</itable>
+		</index>
+		<index value="6" handler="com.ailk.imssh.acct.handler.AcctBillCycleHandler">
+			<itable>com.ailk.openbilling.persistence.itable.entity.IAcctBillCycle</itable>
+		</index>
+		<index value="7" handler="com.ailk.imssh.user.handler.UserStsHandler">
+			<itable>com.ailk.openbilling.persistence.itable.entity.IUserStatus</itable>
+		</index>
+		
+		<index value="8" handler="com.ailk.imssh.user.handler.UserBoundHandler">
+			<itable>com.ailk.openbilling.persistence.itable.entity.IIdentityBound</itable>
+		</index>
+		<index value="9" handler="com.ailk.imssh.group.handler.GroupHandler">
+			<itable>com.ailk.openbilling.persistence.itable.entity.IGroup</itable>
+		</index>
+		<index value="10" handler="com.ailk.imssh.group.handler.GroupMemberHandler">
+			<itable>com.ailk.openbilling.persistence.itable.entity.IGroupMember</itable>
+		</index>
+		<index value="11" handler="com.ailk.imssh.prod.handler.ProdHandler">
+			<itable>com.ailk.openbilling.persistence.itable.entity.IProduct</itable>
+			<!--  
+			<itable>com.ailk.openbilling.persistence.itable.entity.IProdCharValue</itable>
+			<itable>com.ailk.openbilling.persistence.itable.entity.IProdPriceParam</itable>
+			-->
+		</index>
+		<index value="12" handler="com.ailk.imssh.user.handler.UserRelationHandler">
+			<itable>com.ailk.openbilling.persistence.itable.entity.IUserRelation</itable>
+		</index>
+		<index value="13" handler="com.ailk.imssh.acctpayrel.handler.AcctPayRelHandler">
+			<itable>com.ailk.openbilling.persistence.itable.entity.IAcctPayRelation</itable>
+		</index>
+		<index value="14" handler="com.ailk.imssh.user.handler.UserMonitorHandler">
+			<itable>com.ailk.openbilling.persistence.itable.entity.IUserMonitor</itable>
+		</index>
+		<index value="15" handler="com.ailk.imssh.user.handler.UserEnterpriseHandler">
+			<itable>com.ailk.openbilling.persistence.itable.entity.IUserEnterprise</itable>
+		</index>
+		<index value="16" handler="com.ailk.imssh.user.handler.UserConfirmHandler">
+			<itable>com.ailk.openbilling.persistence.itable.entity.IUserConfirm</itable>
+		</index>
+		<!-- <index value="17" handler="com.ailk.imssh.user.handler.UserValidityHandler">
+				<itable>com.ailk.openbilling.persistence.itable.entity.IUserValidity</itable>
+			</index>
+			-->
+		<index value="17" handler="com.ailk.imssh.prod.handler.ProdCellInfoHandler">
+			<itable>com.ailk.openbilling.persistence.itable.entity.IProdCellInfo</itable>
+		</index>
+		<index value="18" handler="com.ailk.imssh.user.handler.UserSwitchHandler">
+			<itable>com.ailk.openbilling.persistence.itable.entity.IUserSwitch</itable>
+		</index>
+		<index value="19" handler="com.ailk.imssh.user.handler.UserReopenHandler">
+			<itable>com.ailk.openbilling.persistence.itable.entity.IUserReopen</itable>
+		</index>
+		<index value="20" handler="com.ailk.imssh.pbx.handler.UserPbxHandler">
+			<itable>com.ailk.openbilling.persistence.itable.entity.IUserPbx</itable>
+		</index>
+		<index value="21" handler="com.ailk.imssh.user.handler.UserMapHandler">
+			<itable>com.ailk.openbilling.persistence.itable.entity.IUserMap</itable>
+		</index>
+		<index value="22" handler="com.ailk.imssh.order.handler.UserOrderHandler">
+			<itable>com.ailk.openbilling.persistence.itable.entity.IUserOrder</itable>
+		</index>
+		<index value="23" handler="com.ailk.imssh.user.handler.UserPortabilityHandler">
+			<itable>com.ailk.openbilling.persistence.itable.entity.IUserPortability</itable>
+		</index>
+		<index value="24" handler="com.ailk.imssh.alloc.handler.ProdShareAllocHandler">
+			<itable>com.ailk.openbilling.persistence.itable.entity.IProdShareAlloc</itable>
+		</index>
+		<index value="25" handler="com.ailk.imssh.prod.handler.UserShareProdHandler">
+			<itable>com.ailk.openbilling.persistence.itable.entity.IUserShareProd</itable>
+		</index>
+		<!-- songcc新增数据业务超时 -->
+		<index value="26" handler="com.ailk.imssh.user.handler.UserMarketHandler">
+			<itable>com.ailk.openbilling.persistence.itable.entity.IUserMarket</itable>
+		</index>
+		<index value="27" handler="com.ailk.imssh.charValue.handler.ProdCharValueHandler">
+			<itable>com.ailk.openbilling.persistence.itable.entity.IProdCharValue</itable>
+		</index>
+		<index value="28" handler="com.ailk.imssh.priceParam.handler.ProdPriceParamHandler">
+			<itable>com.ailk.openbilling.persistence.itable.entity.IProdPriceParam</itable>
+		</index>
+		<index value="29" handler="com.ailk.imssh.user.handler.UserSubServiceHandler">
+			<itable>com.ailk.openbilling.persistence.itable.entity.IUserSubService</itable>
+		</index>
+		<!-- 多渠道提醒 -->		
+		<index value="30" handler="com.ailk.imssh.user.handler.MultiNoticeHandler">
+			<itable>com.ailk.openbilling.persistence.itable.entity.IMultiNotice</itable>
+		</index>
+		
+		<index value="31" handler="com.ailk.imssh.user.handler.UserParamHandler">
+			<itable>com.ailk.openbilling.persistence.itable.entity.IUserParam</itable>
+		</index>		
+		
+		<index value="33" handler="com.ailk.imssh.acct.handler.AcctPayChannelHandler">
+			<itable>com.ailk.openbilling.persistence.itable.entity.IAcctPayChannel</itable>
+		</index>
+		<index value="34" handler="com.ailk.imssh.credit.handler.CreditHandler">
+			<itable>com.ailk.openbilling.persistence.itable.entity.ICredit</itable>
+		</index>
+		<index value="35" handler="com.ailk.imssh.fee.handler.FeeHandler">
+			<itable>com.ailk.openbilling.persistence.itable.entity.IFee</itable>
+		</index>
+		<index value="36" handler="com.ailk.imssh.activity.handler.ActivityHandler">
+			<itable>com.ailk.openbilling.persistence.itable.entity.IActivity</itable>
+			<itable>com.ailk.openbilling.persistence.itable.entity.IActivityAllot</itable>
+		</index>
+		<index value="37" handler="com.ailk.imssh.activity.handler.BillActivityHandler">
+			<itable>com.ailk.openbilling.persistence.itable.entity.IBillActivity</itable>
+		</index>
+		<!--
+		<index value="38" handler="com.ailk.imssh.inv.handler.UserInvHandler">
+			<itable>com.ailk.openbilling.persistence.itable.entity.IUserInv</itable>
+		</index>
+		-->
+		<index value="38" handler="com.ailk.imssh.acct.handler.AcctOweDoneHandler">
+			<itable>com.ailk.openbilling.persistence.itable.entity.IOweCustomDone</itable>
+		</index>
+		<index value="39" handler="com.ailk.imssh.acct.handler.AcctCancelDelayStopHander">
+			<itable>com.ailk.openbilling.persistence.itable.entity.ICancelDelayStop</itable>
+		</index>
+		<index value="40" handler="com.ailk.imssh.user.handler.UserServiceHandler">
+			<itable>com.ailk.openbilling.persistence.itable.entity.IUserService</itable>
+		</index>
+		<index value="41" handler="com.ailk.imssh.user.handler.UserServStsHandler">
+			<itable>com.ailk.openbilling.persistence.itable.entity.IUserServStatus</itable>
+		</index>
+		<index value="42" handler="com.ailk.imssh.cust.handler.CustGroupHandler">
+			<itable>com.ailk.openbilling.persistence.itable.entity.ICustGroup</itable>
+		</index>
+		<index value="43" handler="com.ailk.imssh.cust.handler.CustVipHandler">
+			<itable>com.ailk.openbilling.persistence.itable.entity.ICustVip</itable>
+		</index>
+		<index value="44" handler="com.ailk.imssh.group.handler.GroupRelHandler">
+			<itable>com.ailk.openbilling.persistence.itable.entity.IAcctRel</itable>
+		</index>
+		<index value="45" handler="com.ailk.imssh.user.handler.UserImpuHandler">
+			<itable>com.ailk.openbilling.persistence.itable.entity.IUserImpu</itable>
+		</index>
+		<index value="46" handler="com.ailk.imssh.user.handler.UserShareRelHandler">
+			<itable>com.ailk.openbilling.persistence.itable.entity.IUserShareRel</itable>
+		</index>
+		<index value="47" handler="com.ailk.imssh.credit.handler.CreditServHandler">
+			<itable>com.ailk.openbilling.persistence.itable.entity.ICreditServ</itable>
+		</index>
+		<index value="48" handler="com.ailk.imssh.acct.handler.AcctNotifyExemptHandler">
+			<itable>com.ailk.openbilling.persistence.itable.entity.INotifyExempt</itable>
+		</index>
+		<index value="49" handler="com.ailk.imssh.identity.handler.IdentityHandler">
+			<itable>com.ailk.openbilling.persistence.itable.entity.IIdentity</itable>
+		</index>
+		
+		<index value="50" handler="com.ailk.imssh.validchange.handler.UserValidchangeHandler">
+			<itable>com.ailk.openbilling.persistence.itable.entity.IUserValidchange</itable>
+		</index>
+		
+		<index value="51" handler="com.ailk.imssh.user.handler.UserIntHandler">
+			<itable>com.ailk.openbilling.persistence.itable.entity.IUserInt</itable>
+		</index>
+		
+		<index value="52" handler="com.ailk.imssh.user.handler.UserSvcIntHandler">
+			<itable>com.ailk.openbilling.persistence.itable.entity.IUserSvcInt</itable>
+		</index>
+	</config>
+
+	
+	<config name="enummapping" bean="com.ailk.imssh.common.init.EnumMappingInitBean" remark="CRM与BOSS枚举映射">
+		<code name="OS_STS_DTL">
+			<item crm="1"  boss="1"   remark="其他停机"/>              
+			<item crm="2"  boss="2"   remark="未用"/>                  
+			<item crm="3"  boss="3"   remark="未用"/>                  
+			<item crm="4"  boss="4"   remark="未用"/>                  
+			<item crm="5"  boss="5"   remark="未用"/>                  
+			<item crm="6"  boss="6"   remark="未用"/>                  
+			<item crm="7"  boss="7"   remark="未用"/>                  
+			<item crm="8"  boss="8"   remark="未用"/>                  
+			<item crm="9"  boss="9"   remark="骚扰电话停机 "/>          
+			<item crm="10" boss="10"  remark="垃圾信息治理特殊停机"/>   
+			<item crm="11" boss="11"  remark="黑名单停机"/>            
+			<item crm="12" boss="12"  remark="过期停机"/>              
+			<item crm="13" boss="13"  remark="关联停机"/>              
+			<item crm="14" boss="14"  remark="局方停机"/>              
+			<item crm="15" boss="15"  remark="并机停机"/>              
+			<item crm="16" boss="16"  remark="高额停机"/>              
+			<item crm="17" boss="17"  remark="挂失停机"/>              
+			<item crm="18" boss="18"  remark="申请停机(收月租)"/>      
+			<item crm="19" boss="19"  remark="申请停机"/>              
+			<item crm="20" boss="20"  remark="欠费停机"/>              
+		</code>
+	</config>
+
+</boot>

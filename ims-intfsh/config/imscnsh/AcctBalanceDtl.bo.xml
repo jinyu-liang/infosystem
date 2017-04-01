@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="AcctBalanceDtl" remark="帐户余额明细">
+  <fields>
+    <field name="item_id" type="Integer" isPk="false" primitive="Auto" remark="科目编号" null-able="true"/>
+    <field name="item_name" type="String" isPk="false" primitive="Auto" remark="科目名称" null-able="true"/>
+    <field name="susable_flag" type="String" isPk="false" primitive="Auto" remark="是否可抵扣" null-able="true"/>
+    <field name="total_fee" type="String" isPk="false" primitive="Auto" remark="余额" null-able="true"/>
+    <field name="sts" type="String" isPk="false" primitive="Auto" remark="状态" null-able="true"/>
+    <field name="notes" type="String" isPk="false" primitive="Auto" remark="明细" null-able="true"/>
+  </fields>
+</entity>

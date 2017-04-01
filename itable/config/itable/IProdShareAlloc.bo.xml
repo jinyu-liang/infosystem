@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="IProdShareAlloc" schema="jd" table="I_PROD_SHARE_ALLOC" transient="false">
+  <fields>
+    <field name="productId" type="Long" column="PRODUCT_ID" isPk="true(not generated)" primitive="No" null-able="false" columnDef="Int"/>
+    <field name="userId" type="Long" column="USER_ID" isPk="true(not generated)" primitive="No" null-able="false" columnDef="Int"/>
+    <field name="billFlag" type="Integer" column="BILL_FLAG" isPk="false" primitive="No" null-able="false" columnDef="Int"/>
+    <field name="itemId" type="Integer" column="ITEM_ID" isPk="true(not generated)" primitive="No" null-able="false" columnDef="Int"/>
+    <field name="amount" type="Long" column="AMOUNT" isPk="false" primitive="No" null-able="false" columnDef="Int"/>
+    <field name="validDate" type="Date" column="VALID_DATE" isPk="true(not generated)" primitive="Auto" null-able="false" columnDef="Date"/>
+    <field name="expireDate" type="Date" column="EXPIRE_DATE" isPk="false" primitive="Auto" null-able="false" columnDef="Date"/>
+    <field name="objectId" type="Long" column="OBJECT_ID" isPk="false" primitive="No" null-able="false" columnDef="Int"/>
+    <field name="objectType" type="Integer" column="OBJECT_TYPE" isPk="false" primitive="No" null-able="false" columnDef="Int"/>
+    <field name="measureId" type="Integer" column="MEASURE_ID" isPk="false" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="status" type="Integer" column="STATUS" isPk="false" primitive="No" null-able="false" columnDef="Int"/>
+    <field name="operType" type="Integer" column="OPER_TYPE" isPk="false" primitive="No" null-able="false" columnDef="Int"/>
+    <field name="commitDate" type="Date" column="COMMIT_DATE" isPk="false" primitive="Auto" null-able="false" columnDef="Date"/>
+    <field name="soNbr" type="Long" column="SO_NBR" isPk="true(not generated)" primitive="No" null-able="false" columnDef="Int"/>
+  </fields>
+</entity>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="PmAllotBookRule" remark="" schema="PD" table="PM_ALLOT_BOOK_RULE" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="BOOK_RULE_ID" columnDef="AutoIncrement" isPk="true(not generated)" name="bookRuleId" null-able="false" primitive="Auto" type="Integer"/>
+        <field column="DONATE_TYPE" columnDef="Int" isPk="false" name="donateType" null-able="true" primitive="Auto" type="Integer"/>
+        <field column="VALID_CYCLE" columnDef="Int" isPk="false" name="validCycle" null-able="true" primitive="Auto" type="Integer"/>
+        <field column="EXPIRE_CYCLE" columnDef="Int" isPk="false" name="expireCycle" null-able="true" primitive="Auto" type="Integer"/>
+        <field column="REMARK" columnDef="Varchar" columnSize="128" isPk="false" name="remark" null-able="true" primitive="Auto" type="String"/>
+    </fields>
+</entity>

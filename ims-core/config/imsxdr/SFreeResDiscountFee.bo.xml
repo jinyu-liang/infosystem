@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SFreeResDiscountFee" remark="" sdl="true" sdl-module="MXdr" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+<fields>
+<field name="doneCode" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="freeresItemId" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="freeResType" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="validDateTime" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="expireDateTime" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="thisTimeUsed" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="standardProductId" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="changeItemId" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="measureId" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="reduceFee" primitive="Yes" remark="" sdl="true" type="Long"/>
+</fields>
+</entity>

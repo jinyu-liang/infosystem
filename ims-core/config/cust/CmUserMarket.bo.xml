@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="CmUserMarket" schema="CD" table="CM_USER_MARKET">
+     <fields>
+        <field column="RESOURCE_ID" columnDef="BigInt" name="resourceId" primitive="No" remark="" type="Long"/>
+        <field column="PRODUCT_ID" columnDef="BigInt" name="productId" primitive="No" remark="" type="Long"/>
+        <field column="BUSI_TYPE" columnDef="Int" name="busiType" primitive="No" remark="" type="Integer"/>
+        <field column="SP_TYPE" columnDef="Int" name="spType" primitive="No" remark="" type="Integer"/>
+        <field column="SP_CODE" columnDef="BigInt" name="spCode" primitive="No" remark="" type="Long"/>
+        <field column="OPERATOR_CODE" columnDef="Varchar" columnSize="32" name="operatorCode" primitive="No" remark="" type="String"/>
+        <field column="SERVICE_CODE" columnDef="Varchar" columnSize="32" name="serviceCode" primitive="No" remark="" type="String"/>
+        <field column="REGION_CODE" columnDef="Int" name="regionCode" primitive="No" remark="" type="Integer"/>
+        <field column="EXTEND1" columnDef="Varchar" name="extend1" columnSize="32" primitive="No" remark="" type="String"/>
+        <field column="EXTEND2" columnDef="Varchar" name="extend2" columnSize="64" primitive="No" remark="" type="String"/>
+        <field column="REMARK" columnDef="Varchar" name="remark" columnSize="255" primitive="No" remark="" type="String"/>
+        
+        <field column="VALID_DATE" columnDef="TimeStamp" name="validDate" primitive="No" remark="" type="Date"/>
+        <field column="EXPIRE_DATE" columnDef="TimeStamp" name="expireDate" primitive="No" remark="" type="Date"/>
+         <field column="SO_DATE" columnDef="TimeStamp" name="soDate" primitive="No" remark="" type="Date"/>
+        <field column="SO_NBR" columnDef="BigInt" name="soNbr" primitive="No" remark="" type="Long"/>
+        <field column="CREATE_DATE" columnDef="TimeStamp" name="createDate" primitive="No" remark="" type="Date"/>
+    </fields>
+</entity>

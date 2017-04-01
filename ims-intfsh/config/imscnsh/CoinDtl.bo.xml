@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="CoinDtl" transient="true">
+  <fields>
+    <field name="curren_coin" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="last_coin" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="increase_coin" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="reward_coin" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="other_coin" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="exchange_coin" type="String" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

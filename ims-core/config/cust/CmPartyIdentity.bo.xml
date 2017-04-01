@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="CmPartyIdentity" remark="" schema="CD" table="CM_PARTY_IDENTITY" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="IDENTIFICATION_ID" columnDef="BigInt" isPk="true(not generated)" name="identificationId" null-able="false" primitive="No" remark="The Unique Identifier of Identity recognition  " type="Long"/>
+        <field column="PARTY_ID" columnDef="BigInt" name="partyId" null-able="false" primitive="No" remark="Party's Unique Numbering" type="Long"/>
+        <field column="LANGUAGE_ID" columnDef="Int" name="languageId" primitive="No" remark="Language Identifier" type="Integer"/>
+        <field column="PARTY_IDENTIFICATION_TYPE" columnDef="Int" name="partyIdentificationType" primitive="No" remark="Certificate type&#10;&#10;0: ID card&#10;1: Officer's identity card&#10;2: Student's identity card&#10;3: Driving license&#10;" type="Integer"/>
+        <field column="PARTY_IDENTIFICATION_SPEC" columnDef="Varchar" columnSize="64" name="partyIdentificationSpec" primitive="No" remark="Identity Recognition Number" type="String"/>
+        <field column="ISSUE_DATE" columnDef="TimeStamp" name="issueDate" primitive="No" remark="Identifier Issue Date " type="Date"/>
+        <field column="BEGIN_DATE" columnDef="TimeStamp" name="beginDate" primitive="No" remark="Certificate Effective Date" type="Date"/>
+        <field column="END_DATE" columnDef="TimeStamp" name="endDate" primitive="No" remark="Certificate Expired Date" type="Date"/>
+        <field column="VALID_DATE" columnDef="TimeStamp" isPk="true(not generated)" name="validDate" null-able="false" primitive="No" remark="Effective Date" type="Date"/>
+        <field column="EXPIRE_DATE" columnDef="TimeStamp" name="expireDate" null-able="false" primitive="No" remark="Expired Date" type="Date"/>
+        <field column="SO_NBR" columnDef="BigInt" isPk="true(not generated)" name="soNbr" null-able="false" primitive="No" remark="The serial number" type="Long"/>
+        <field column="CREATE_DATE" columnDef="TimeStamp" name="createDate" primitive="No" remark="" type="Date"/>
+        <field column="SO_DATE" columnDef="TimeStamp" name="soDate" primitive="No" remark="" type="Date"/>
+        <field column="PARTY_IDENTIFICATION_NAME" columnDef="Varchar" columnSize="256" name="partyIdentificationName" primitive="No" remark="" type="String"/>
+        <field column="REAL_NAME_DATE" columnDef="TimeStamp" name="realNameDate" primitive="No" remark="" type="Date"/>
+        <field column="REAL_NAME_STS" columnDef="Int" name="realNameSts" primitive="No" remark="" type="Integer"/>
+    </fields>
+</entity>

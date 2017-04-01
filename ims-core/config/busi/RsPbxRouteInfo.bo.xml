@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="RsPbxRouteInfo" remark="" schema="bd" table="RS_PBX_ROUTE_INFO" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="ID" columnDef="AutoIncrement" isPk="true" name="id" primitive="No" remark="" type="Integer"/>
+        <field column="MSC_ID" columnDef="Int" name="mscId" null-able="false" primitive="No" remark="" type="Integer"/>
+        <field column="ROUTER_NAME" columnDef="Varchar" columnSize="256" name="routerName" null-able="false" primitive="No" remark="" type="String"/>
+        <field column="AREA_CODE" columnDef="Varchar" columnSize="4" name="areaCode" null-able="false" primitive="No" remark="" type="String"/>
+        <field column="MATCHING_HPLMN" columnDef="Int" name="matchingHplmn" null-able="false" primitive="No" remark="" type="Integer"/>
+        <field column="IN_TRUNK" columnDef="Varchar" columnSize="16" name="inTrunk" null-able="false" primitive="No" remark="" type="String"/>
+        <field column="OUT_TRUNK" columnDef="Varchar" columnSize="16" name="outTrunk" null-able="false" primitive="No" remark="" type="String"/>
+        <field column="ACCESS_NUMBER" columnDef="Varchar" columnSize="24" name="accessNumber" null-able="false" primitive="No" remark="" type="String"/>
+        <field column="MATCHING_ACCESS_NUMBER" columnDef="Int" name="matchingAccessNumber" null-able="false" primitive="No" remark="" type="Integer"/>
+        <field column="BILL_ID" columnDef="Varchar" columnSize="24" name="billId" null-able="false" primitive="No" remark="" type="String"/>
+        <field column="VALID_DATE" columnDef="TimeStamp" name="validDate" null-able="false" primitive="No" remark="" type="Date"/>
+        <field column="REGION_CODE" columnDef="Int" name="regionCode" primitive="No" remark="" type="Integer"/>
+        <field column="EXPIRE_DATE" columnDef="TimeStamp" name="expireDate" null-able="false" primitive="No" remark="" type="Date"/>
+        <field column="MODIFY_DATE" columnDef="TimeStamp" name="modifyDate" primitive="No" remark="" type="Date"/>
+    </fields>
+</entity>

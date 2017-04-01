@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="PmFreeUsageProperty" remark="" schema="PD" table="PM_FREE_USAGE_PROPERTY" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="ASSET_ITEM_ID" columnDef="AutoIncrement" isPk="true(not generated)" name="assetItemId" primitive="No" remark="Free Resource Item ID" type="Integer"/>
+        <field column="MEASURE_ID" columnDef="Int" name="measureId" primitive="No" remark="Unit of Free Resource" type="Integer"/>
+        <field column="CARRY_FORWARD_RULE_ID" columnDef="Int" name="carryForwardRuleId" null-able="false" primitive="No" remark="Rule ID of one-time free resource CARRY FORWARD" type="Integer"/>
+        <field column="CONSUME_FLAG" columnDef="Int" name="consumeFlag" primitive="No" remark="Bill consumption indicate&#10;Usage of free resource items&#10;0: single item consumption&#10;1: multiple items consumption" type="Integer"/>
+        <field column="BILLING_TYPE" columnDef="Int" name="billingType" primitive="No" remark="免费资源付费方式&#10;0.预付费prepaid only；&#10;1.后付费postpaid only；&#10;-1.不关注即prepaid &amp; postpaid both" type="Integer"/>
+        <field column="BONUS_UNIT_CYCLE" columnDef="Int" name="bonusUnitCycle" null-able="false" primitive="No" remark="免费资源规整单位，一般按费率规整单位去规整。&#10;举例：对于短信、梦网等按次业务的规整，单位一般配置成1。对于基本语音类业务的规整，一般配置成60。对于长途语音类业务的规整，一般配置成6" type="Integer"/>
+    </fields>
+</entity>

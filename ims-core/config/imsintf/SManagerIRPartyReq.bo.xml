@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="SManagerIRPartyReq" transient="true">
+  <fields>
+    <field name="oper_type" type="Short" isPk="false" primitive="No" null-able="true"/>
+    <field name="operator_code" type="String" isPk="false" primitive="No" null-able="true"/>
+    <field name="operator_type" type="Short" isPk="false" primitive="No" null-able="true"/>
+    <field name="operator_id" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="mcc_code" type="String" isPk="false" primitive="No" null-able="true"/>
+    <field name="mnc_code" type="String" isPk="false" primitive="No" null-able="true"/>
+    <field name="english_name" type="String" isPk="false" primitive="No" null-able="true"/>
+    <field name="InvoicingCoID" type="String" isPk="false" primitive="No" null-able="true"/>
+    <field name="country_code" type="Short" isPk="false" primitive="No" null-able="true"/>
+    <field name="country_name" type="String" isPk="false" primitive="No" null-able="true"/>
+    <field name="tap_version" type="Short" isPk="false" primitive="No" null-able="true"/>
+    <field name="tap_release" type="String" isPk="false" primitive="No" null-able="true"/>
+    <field name="time_zone" type="Integer" isPk="false" primitive="No" null-able="true"/>
+    <field name="currency_code" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="network_statement" type="String" isPk="false" primitive="No" null-able="true"/>
+    <complex-field name="serviceRequestOper" type="entity" ref="imsintf.ServiceRequestOper" collection="none" primitive="false"/>
+  </fields>
+</entity>

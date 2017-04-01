@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="PmProductSpecServiceRel" remark="" schema="PD" table="PM_PRODUCT_SPEC_SERVICE_REL" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="PROD_SPEC_ID" columnDef="Int" isPk="true(not generated)" name="prodSpecId" null-able="false" primitive="No" remark="An identification number assigned to uniquely identify the specification.&#10;&#10;" type="Integer"/>
+        <field column="SERVICE_SPEC_ID" columnDef="Int" isPk="true(not generated)" name="serviceSpecId" null-able="false" primitive="No" remark="Service identifier" type="Integer"/>
+        <field column="RELATION_TYPE_ID" columnDef="Int" name="relationTypeId" primitive="No" remark="0: strong correlation&#10;1:  weak coorelation&#10;Above two relationship may be applied in program control and promotion.&#10;&#10;" type="Integer"/>
+    </fields>
+</entity>

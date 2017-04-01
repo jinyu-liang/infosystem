@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="PmOneTimeFreeUsage" remark="" schema="pd" table="PM_ONE_TIME_FREE_USAGE" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="PRICE_ID" columnDef="Int" isPk="true(not generated)" name="priceId" null-able="false" primitive="No" remark="&#10;pricing identifier" type="Integer"/>
+        <field column="ALLOWANCE_RULE_ID" columnDef="Int" isPk="true(not generated)" name="allowanceRuleId" null-able="false" primitive="No" remark="&#10;&#10;reward regulation iD of free resource" type="Integer"/>
+    </fields>
+</entity>

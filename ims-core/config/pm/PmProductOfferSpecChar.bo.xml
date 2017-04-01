@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="PmProductOfferSpecChar" schema="PD" table="PM_PRODUCT_OFFER_SPEC_CHAR">
+  <fields>
+    <field name="productOfferingId" type="Integer" column="PRODUCT_OFFERING_ID" isPk="true(not generated)" primitive="No" remark="A unique identifier for the product offering.
+
+" null-able="false" columnDef="Int" enumAsAliasField="true"/>
+    <field name="specCharId" type="Integer" column="SPEC_CHAR_ID" isPk="true(not generated)" primitive="No" remark="销售品特征标识，一般，这些特征标识从产品规格过来。
+
+10201: 亲情号码，在此设置，表示亲情号码设置的个数限制
+11401: 黑白号码，在此设置，表示黑白名单号码设置的个数限制
+11201: 指定的小区, 在此设置，Home Zone产品允许用户选择的最大 HomeZone 个数限制；---PM_PRODUCT_OFFER_ATTRIBUTE.ZONE_LIMIT 字段迁移到这个属性上。
+
+
+以下两个特殊，从NG版本中迁移过来：
+11，表示帐务群组产品适用对象属性（注意，新增的枚举值11）。其中，
+     VALUE含义如下：
+          0，默认，表示群组产品作用于群的整体。
+          1，表示群组产品作用于群下每个成员。
+          2，表示作用于群主号码的产品。
+
+12，表示计费群组产品适用对象属性（注意，新增的枚举值12）。其中，
+     VALUE含义如下：
+          0，默认，表示群组产品作用于群的整体。就是说，（周期性）免费资源对整个群成员共享消耗；虚用户下累积量累计。
+          1，表示群组产品作用于群下每个成员。就是说，（周期性）免费资源分摊在各成员上消耗；实体用户下累积量累计。
+" null-able="false" columnDef="Int" enumAsAliasField="true"/>
+    <field name="valueType" type="Integer" column="VALUE_TYPE" primitive="No" remark="销售品上特征信息的值类型
+1：单值，只需要从VALUE中获取
+2：范围，最大最小分别填在VALUE_MAX/VALUE中" null-able="false" columnDef="Int" enumAsAliasField="true"/>
+    <field name="value" type="String" column="VALUE" primitive="No" remark="特征属性起始值" null-able="false" columnDef="Varchar" columnSize="256" enumAsAliasField="true"/>
+    <field name="valueMax" type="String" column="VALUE_MAX" primitive="No" remark="特征属性结束值
+" null-able="true" columnDef="Varchar" columnSize="256" enumAsAliasField="true"/>
+    <field name="description" type="String" column="DESCRIPTION" primitive="No" remark="销售品特征描述" null-able="true" columnDef="Varchar" columnSize="1024" enumAsAliasField="true"/>
+  </fields>
+</entity>

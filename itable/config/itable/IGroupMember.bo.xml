@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="IGroupMember" remark="" schema="JD" table="I_GROUP_MEMBER" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="GROUP_ID" columnDef="BigInt" name="groupId" primitive="No" remark="" type="Long"/>
+        <field column="USER_ID" columnDef="BigInt" name="userId" primitive="No" remark="" type="Long"/>
+        <field column="PHONE_ID" columnDef="Varchar" columnSize="64" name="phoneId" primitive="No" remark="" type="String"/>
+        <field column="SHORT_PHONE_ID" columnDef="Varchar" columnSize="64" name="shortPhoneId" primitive="No" remark="" type="String"/>
+        <field column="ROLE_ID" columnDef="Int" name="roleId" primitive="No" remark="" type="Integer"/>
+        <field column="NUMBER_TYPE" columnDef="Int" name="numberType" primitive="No" remark="" type="Integer"/>
+        <field column="STATUS" columnDef="Int" name="status" primitive="No" remark="" type="Integer"/>
+        <field column="VALID_DATE" columnDef="TimeStamp" name="validDate" primitive="No" remark="" type="Date"/>
+        <field column="EXPIRE_DATE" columnDef="TimeStamp" name="expireDate" primitive="No" remark="" type="Date"/>
+        <field column="OPER_TYPE" columnDef="Int" name="operType" primitive="No" remark="" type="Integer"/>
+        <field column="SO_NBR" columnDef="BigInt" name="soNbr" primitive="No" remark="" type="Long"/>
+        <field column="COMMIT_DATE" columnDef="TimeStamp" name="commitDate" primitive="No" remark="" type="Date"/>
+        <field column="ELEMENT_ID" columnDef="Int" isPk="false" name="elementId" null-able="true" primitive="Auto" type="Integer"/>
+    </fields>
+</entity>

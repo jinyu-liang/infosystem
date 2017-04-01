@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" columnNameMapToFieldName="false" dbType="oracle" name="IUserInt" remark="" schema="jd" 
+	no-dao-class="true" table="I_USER_INT" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="USER_ID" columnDef="Int" isPk="false" name="userId" null-able="false" primitive="Auto" type="Long"/>
+        <field column="SERIAL_NUMBER" columnDef="Varchar"  columnSize="40" isPk="false" name="serialNumber" null-able="false" primitive="Auto" type="String"/>
+        <field column="PRODUCT_ID" columnDef="Int" isPk="false" name="productId" null-able="false" primitive="Auto" type="Long"/>
+        <field column="BRAND_CODE" columnDef="Varchar" columnSize="4" isPk="false" name="brandCode" null-able="true" primitive="Auto" type="String"/>
+        <field column="USER_STATE_CODESET" columnDef="Varchar" columnSize="10" isPk="false" name="userStateCodeset" null-able="true" primitive="Auto" type="String"/>
+        <field column="CUST_ID" columnDef="Int" isPk="false" name="custId" null-able="true" primitive="Auto" type="Long"/>
+        <field column="CUST_NAME" columnDef="Varchar" columnSize="100" isPk="false" name="custName" null-able="true" primitive="Auto" type="String"/>
+        <field column="SEX" columnDef="Varchar" columnSize="1" isPk="false" name="sex" null-able="true" primitive="Auto" type="String"/>
+        <field column="VIP_CLASS_ID" columnDef="Varchar" columnSize="1"  isPk="false" name="vipClassId" null-able="true" primitive="Auto" type="String"/>
+        <field column="VIP_TYPE_CODE" columnDef="Varchar" columnSize="1"  isPk="false" name="vipTypeCode" null-able="true" primitive="Auto" type="String"/>
+        <field column="UPDATE_TIME" columnDef="Date" isPk="false" name="updateTime" null-able="true" primitive="Auto" type="Date"/>
+        <field column="REMOVE_TAG" columnDef="Varchar" columnSize="1"  isPk="false" name="removeTag" null-able="true" primitive="Auto" type="String"/>
+        <field column="LAST_STOP_TIME" columnDef="Date" isPk="false" name="lastStopTime" null-able="true" primitive="Auto" type="Date"/>
+        <field column="VALID_DATE" columnDef="Date" isPk="false" name="validDate" null-able="true" primitive="Auto" type="Date"/>
+        <field column="EXPIRE_DATE" columnDef="Date" isPk="false" name="expireDate" null-able="true" primitive="Auto" type="Date"/>
+        <field column="OPER_TYPE" columnDef="Int" isPk="false" name="operType" null-able="true" primitive="Auto" type="Integer"/>
+        <field column="SO_NBR" columnDef="Int" isPk="false" name="soNbr" null-able="true" primitive="Auto" type="Long"/>
+        <field column="COMMIT_DATE" columnDef="Date" isPk="false" name="commitDate" null-able="true" primitive="Auto" type="Date"/>
+    </fields>
+</entity>

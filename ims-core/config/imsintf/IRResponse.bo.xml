@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="IRResponse">
+  <fields>
+    <field name="operator_id" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="operator_code" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="busi_service_code" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="service_sequence_id" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

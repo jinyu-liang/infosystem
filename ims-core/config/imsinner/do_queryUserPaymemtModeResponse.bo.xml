@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="do_queryUserPaymemtModeResponse">
+  <root ref="imsintf.BaseResponse"/>
+  <fields>
+    <field name="phone_id" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="user_id" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="old_payment_mode" type="Short" isPk="false" primitive="Auto" null-able="true"/>
+    <complex-field name="sBusiServiceList" type="entity" ref="imsintf.SBusiServiceList" collection="none" primitive="false"/>
+    <complex-field name="sProductOrderList" type="entity" ref="imsintf.SProductOrderList" collection="none" primitive="false"/>
+  </fields>
+</entity>

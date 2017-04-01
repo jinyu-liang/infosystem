@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="ImsSharProdSync" remark="" schema="cd" table="IMS_SHAR_PROD_SYNC" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="ID" columnDef="AutoIncrement" isPk="true" name="id" primitive="No" remark="ID" type="Long"/>
+        <field column="CUST_ID" columnDef="Int" name="custId" primitive="No" remark="CUST_ID" type="Long"/>
+        <field column="ACCT_ID" columnDef="Int" name="acctId" primitive="No" remark="ACCT_ID&#10;" type="Long"/>
+        <field column="USER_ID" columnDef="Int" name="userId" primitive="No" remark="RESOURCE_ID" type="Long"/>
+        <field column="PHONE_ID" columnDef="Varchar" columnSize="30" name="phoneId" primitive="No" remark="PHONE_ID" type="String"/>
+        <field column="OFFER_ID" columnDef="Int" name="offerId" null-able="false" primitive="No" remark="OFFER_ID" type="Long"/>
+        <field column="PRODUCT_ID" columnDef="Int" name="productId" null-able="false" primitive="No" remark="PRODUCT_ID" type="Long"/>
+        <field column="EXPIRE_DATE" columnDef="Date" name="expireDate" primitive="No" remark="EXPIRE_DATE" type="Date"/>
+        <field column="PRODUCT_LEVEL" columnDef="Int" name="productLevel" primitive="No" remark="PRODUCT_LEVEL" type="Integer"/>
+        <field column="REASON" columnDef="Varchar" columnSize="512" name="reason" primitive="No" remark="REASON" type="String"/>
+        <field column="CREATE_DATE" columnDef="Date" name="createDate" primitive="No" remark="CREATE_DATE" type="Date"/>
+        <field column="SO_NBR" columnDef="Int" name="soNbr" null-able="false" primitive="No" remark="SO_NBR" type="Long"/>
+        <field column="STS" columnDef="Int" name="sts" null-able="false" primitive="No" remark="STS" type="Integer"/>
+        <field column="EFFECTIVE_TIME" columnDef="Date" name="effectiveTime" null-able="false" primitive="No" remark="EFFECTIVE_TIME" type="Date"/>
+        <field column="ERROR_CODE" columnDef="Int" name="errorCode" primitive="No" remark="???????" type="Integer"/>
+        <field column="ERROR_MSG" columnDef="Varchar" columnSize="512" name="errorMsg" primitive="No" remark="????" type="String"/>
+        <field column="DEAL_DATE" columnDef="Date" name="dealDate" primitive="No" remark="DEAL_DATE" type="Date"/>
+        <field column="DEAL_COUNT" columnDef="Int" name="dealCount" primitive="No" remark="DEAL_COUNT" type="Integer"/>
+    </fields>
+</entity>

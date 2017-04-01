@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="CoProdMapping" schema="CD" table="CO_PROD_MAPPING">
+  <fields>
+    <field name="productId" type="Long" column="PRODUCT_ID" isPk="false" primitive="No" remark="CRM????  " null-able="false" columnDef="NUMBER" columnSize="15"/>
+    <field name="relProduct" type="Long" column="REL_PRODUCT" isPk="false" primitive="No" remark="BOSS?????" null-able="false" columnDef="NUMBER" columnSize="9"/>
+    <field name="relationTypeId" type="Integer" column="RELATION_TYPE_ID" isPk="false" primitive="No" remark="???? 0:??????? ?CRM??A,BOSS????????B?C 1:????????? ??????A??????B BOSS????????C" null-able="false" columnDef="NUMBER" columnSize="4"/>
+    <field name="validDate" type="Date" column="VALID_DATE" isPk="false" remark="effective date" null-able="true" columnDef="DATE" columnSize="7"/>
+    <field name="expireDate" type="Date" column="EXPIRE_DATE" isPk="false" remark="expiring date " null-able="true" columnDef="DATE" columnSize="7"/>
+    <field name="soNbr" type="Long" column="SO_NBR" isPk="false" primitive="No" remark="The serial number" null-able="false" columnDef="NUMBER" columnSize="15"/>
+    <field name="createDate" type="Date" column="CREATE_DATE" isPk="false" remark="create date" null-able="false" columnDef="DATE" columnSize="7"/>
+    <field name="soDate" type="Date" column="SO_DATE" isPk="false" primitive="Auto" remark="Modify date of current record" null-able="true" columnDef="DATE" columnSize="7"/>
+    <field name="objectId" type="Long" column="OBJECT_ID" isPk="false" primitive="No" null-able="false" columnDef="BigInt"/>
+    <field name="objectType" type="Integer" column="OBJECT_TYPE" primitive="No" null-able="false" columnDef="Int"/>
+  </fields>
+</entity>

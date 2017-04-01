@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="GetPPDV2OrderInfoOut">
+  <fields>
+    <field name="order_id" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="order_date" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="mer_ac_date" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="pay_plat_id" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="pay_status" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="pay_date" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="pay_type" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="currency" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="amount" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="bank_id" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="bank_abbr" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="user_token" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="expand" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <complex-field name="sub_order_info" type="entity" ref="imscnsh.PPDV2SubOrderInfoOut" collection="list" primitive="false"/>
+  </fields>
+</entity>

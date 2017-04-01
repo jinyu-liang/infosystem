@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="ExtDataDef" transient="true">
+  <fields>
+    <field name="acct_id" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="resource_id" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="item_code" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="measure_id" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="pay_acct_id" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="bill_fee" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="discount_fee" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

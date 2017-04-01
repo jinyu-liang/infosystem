@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="CustQueryReqHolder">
+  <root ref="imsinner.BaseQueryReqHolder"/>
+  <fields>
+    <complex-field name="custReq" type="entity" ref="imsinner.CustQueryReq" collection="none" primitive="false"/>
+  </fields>
+</entity>

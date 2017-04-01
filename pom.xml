@@ -1,0 +1,154 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.ailk.openbilling.ims.cmcc</groupId>
+	<artifactId>infosystem</artifactId>
+	<packaging>pom</packaging>
+	<version>0.0.4-SNAPSHOT</version>
+ <!-- --> 
+	<modules>
+		<module>ims-sdl</module> 
+		<module>ims-core</module>
+		<module>ims-intfsh</module>
+		<module>ims-send</module>
+		<module>itable</module>
+		
+	</modules>
+
+	<properties>
+		<ims_version>1.2.4-SNAPSHOT</ims_version>
+		<ams_version>1.2.2-rm-snapshot</ams_version>
+		<easyframe_version>1.7.7-RELEASE</easyframe_version>
+		<easybuilder_maven_plugin_version>1.7.6-RELEASE</easybuilder_maven_plugin_version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>ailk.easyframe</groupId>
+			<artifactId>common-web</artifactId>
+			<version>${easyframe_version}</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>ailk.easyframe</groupId>
+			<artifactId>cpf-ts-interface</artifactId>
+			<version>${easyframe_version}</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.7</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>ant-contrib</groupId>
+			<artifactId>ant-contrib</artifactId>
+			<version>1.0b2</version>
+		</dependency>
+	</dependencies>
+	<repositories>
+		<repository>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+			<id>central</id>
+			<url>*</url>
+		</repository>
+		<repository>
+			<id>ailk-snapshots</id>
+			<url>http://10.10.10.149:8081/nexus/content/repositories/snapshots</url>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>ailk-releases</id>
+			<url>http://10.10.10.149:8081/nexus/content/repositories/releases</url>
+		</repository>
+	</repositories>
+	<distributionManagement>
+		<repository>
+			<id>ailk-releases</id>
+			<name>Local Releases Repository</name>
+			<url>http://10.10.10.149:8081/nexus/content/repositories/releases</url>
+		</repository>
+		<snapshotRepository>
+			<id>ailk-snapshots</id>
+			<name>Local Snapshots Repository</name>
+			<url>http://10.10.10.149:8081/nexus/content/repositories/snapshots</url>
+		</snapshotRepository>
+	</distributionManagement>
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.eclipse.m2e</groupId>
+					<artifactId>lifecycle-mapping</artifactId>
+					<version>1.0.0</version>
+					<configuration>
+						<lifecycleMappingMetadata>
+							<pluginExecutions>
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>org.codehaus.mojo</groupId>
+										<artifactId>build-helper-maven-plugin</artifactId>
+										<versionRange>[1.0,)</versionRange>
+										<goals>
+											<goal>add-source</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<ignore />
+									</action>
+								</pluginExecution>
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>org.apache.maven.plugins</groupId>
+										<artifactId>maven-antrun-plugin</artifactId>
+										<versionRange>[1.0,)</versionRange>
+										<goals>
+											<goal>run</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<ignore />
+									</action>
+								</pluginExecution>
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>ailk.easyframe</groupId>
+										<artifactId>easybuilder_maven_plugin</artifactId>
+										<versionRange>[1.0,)</versionRange>
+										<goals>
+											<goal>enhance</goal>
+											<goal>generate-sources</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<ignore />
+									</action>
+								</pluginExecution>
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>org.apache.maven.plugins</groupId>
+										<artifactId>maven-dependency-plugin</artifactId>
+										<versionRange>[1.0,)</versionRange>
+										<goals>
+											<goal>copy-dependencies</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<ignore />
+									</action>
+								</pluginExecution>
+							</pluginExecutions>
+						</lifecycleMappingMetadata>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+
+</project>
+

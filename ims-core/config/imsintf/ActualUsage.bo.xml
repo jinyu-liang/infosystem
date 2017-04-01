@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="ActualUsage">
+  <fields>
+    <field name="group_name" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <complex-field name="SubActualUsageList" type="entity" ref="imsintf.SubActualUsage" collection="list" primitive="false"/>
+    <field name="start_date" type="Date" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="end_date" type="Date" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

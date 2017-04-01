@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SysMeasureDecimal" remark="" schema="sd" table="SYS_MEASURE_DECIMAL" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="MEASURE_TYPE_ID" columnDef="Int" isPk="true(not generated)" name="measureTypeId" null-able="false" primitive="No" remark="Measurement types, enum values:&#10;101 SDR&#10;102 USD&#10;103 EURO&#10;104 CNY&#10;111  THB&#10;112 VND" type="Integer"/>
+        <field column="SCALE_TYPE" columnDef="Int" isPk="true(not generated)" name="scaleType" null-able="false" primitive="No" remark="进制类型&#10;1：TAP文件生成时进制定义" type="Integer"/>
+        <field column="DECIMAL_NUMBER" columnDef="Int" name="decimalNumber" null-able="false" primitive="No" remark="进制位" type="Integer"/>
+        <field column="VALID_DATE" columnDef="TimeStamp" isPk="true(not generated)" name="validDate" null-able="false" primitive="No" remark="生效日期" type="Date"/>
+        <field column="EXPIRE_DATE" columnDef="TimeStamp" name="expireDate" null-able="false" primitive="No" remark="失效日期" type="Date"/>
+        <field column="DESCRIPTION" columnDef="Varchar" columnSize="1024" name="description" primitive="No" remark="description" type="String"/>
+    </fields>
+</entity>

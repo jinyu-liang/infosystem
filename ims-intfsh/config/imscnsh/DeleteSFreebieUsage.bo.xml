@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="DeleteSFreebieUsage">
+	 <fields>
+        <field column="TARGET_ITEM" columnDef="Int" isPk="true" name="targetItem" null-able="false" primitive="Auto" type="Integer"/>
+        <field column="FREEBIE_ID" columnDef="Int" isPk="true" name="freebieId" null-able="false" primitive="Auto" type="Integer"/>
+    </fields>
+</entity>

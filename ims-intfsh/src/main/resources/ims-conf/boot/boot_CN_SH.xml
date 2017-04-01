@@ -1,0 +1,4 @@
+<boot>
+	<config name="cache" bean="com.ailk.ims.init.DBConfigInitBean" remark="初始化基础数据缓存">
+	</config>
+</boot>

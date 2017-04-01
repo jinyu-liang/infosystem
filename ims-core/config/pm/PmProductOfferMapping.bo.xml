@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="PmProductOfferMapping" schema="PD" table="PM_PRODUCT_OFFER_MAPPING">
+  <fields>
+    <field name="id" type="Integer" column="ID" isPk="true" null-able="false" columnDef="NUMBER" columnSize="9"/>
+    <field name="productOfferingId" type="Integer" column="PRODUCT_OFFERING_ID" isPk="false" remark="CRM????
+
+" null-able="false" columnDef="NUMBER" columnSize="9"/>
+    <field name="refMainOffering" type="Integer" column="REF_MAIN_OFFERING" isPk="false" remark="?????
+??-1 ?????" null-able="false" columnDef="NUMBER" columnSize="9"/>
+    <field name="relProductOffering" type="Integer" column="REL_PRODUCT_OFFERING" isPk="false" remark="BOSS?????" null-able="false" columnDef="NUMBER" columnSize="9"/>
+    <field name="relationTypeId" type="Integer" column="RELATION_TYPE_ID" isPk="false" remark="????
+0:??????? ?CRM??A,BOSS????????B?C
+1:????????? ??????A??????B BOSS????????C" null-able="false" columnDef="NUMBER" columnSize="4"/>
+    <field name="validDate" type="Date" column="VALID_DATE" isPk="false" remark="effective date" null-able="true" columnDef="DATE" columnSize="7"/>
+    <field name="expireDate" type="Date" column="EXPIRE_DATE" isPk="false" remark="expiring date " null-able="true" columnDef="DATE" columnSize="7"/>
+  </fields>
+</entity>

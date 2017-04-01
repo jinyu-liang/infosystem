@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="IUserRelation" remark="" schema="JD" table="I_USER_RELATION" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="PRODUCT_ID" columnDef="BigInt" name="productId" primitive="No" remark="" type="Long"/>
+        <field column="USER_ID" columnDef="BigInt" name="userId" primitive="No" remark="" type="Long"/>
+        <field column="RELATION_TYPE" columnDef="Int" name="relationType" primitive="No" remark="" type="Integer"/>
+        <field column="OPP_NUMBER" columnDef="Varchar" columnSize="15" name="oppNumber" primitive="No" remark="" type="String"/>
+        <field column="OPP_REGION_CODE" columnDef="Int" name="oppRegionCode" primitive="No" remark="" type="Integer"/>
+        <field column="VALID_DATE" columnDef="TimeStamp" name="validDate" primitive="No" remark="" type="Date"/>
+        <field column="EXPIRE_DATE" columnDef="TimeStamp" name="expireDate" primitive="No" remark="" type="Date"/>
+        <field column="OPER_TYPE" columnDef="Int" name="operType" primitive="No" remark="" type="Integer"/>
+        <field column="SO_NBR" columnDef="BigInt" name="soNbr" primitive="No" remark="" type="Long"/>
+        <field column="COMMIT_DATE" columnDef="TimeStamp" name="commitDate" primitive="No" remark="" type="Date"/>
+        <field name="oppAttr" type="String" column="OPP_ATTR" isPk="false" null-able="true" columnDef="VARCHAR2" columnSize="128"/>
+    </fields>
+</entity>

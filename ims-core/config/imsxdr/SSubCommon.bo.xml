@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?><entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SSubCommon" remark="" sdl="true" sdl-module="MXdr" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+<fields>
+<field name="notifyType" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="processType" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="treatFlag" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="uFlag" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="uCount" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="xdrOutPostfix" primitive="Yes" remark="" sdl="true" type="String"/>
+<complex-field collection="list" name="rsu" primitive="false" ref="imsxdr.SRsu" remark="" sdl="true" type="entity"/>
+<field name="priorityLevel" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="qosClassId" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="paymentType" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="paymentMode" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="productValue" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="queryAccountType" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="lacId" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="oppLacId" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="cellId" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="oppCellId" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="sessionStartTime" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="startTime" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="visitStartTime" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="updateTime" primitive="Yes" remark="" sdl="true" type="Long"/>
+<complex-field collection="none" name="timeSegment" primitive="false" ref="imsxdr.SOffPeak" remark="" sdl="true" type="entity"/>
+<field name="serviceCode" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="chargeFlag" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="ccRequestNumber" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<complex-field collection="list" name="offPeakInfo" primitive="false" ref="imsxdr.SOffPeakCharge" remark="" sdl="true" type="entity"/>
+<field name="timeZone" primitive="Yes" remark="" sdl="true" type="Short"/>
+<field name="serviceKey" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="timeAddup" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="timeAddupSwitch" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="volumeAddup" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="volumeAddupSwitch" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="duration" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="octect" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="upVolume" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="upVolumeSwitch" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="downVolume" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="downVolumeSwitch" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="oppNumber" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="oriOppNumber" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="dialedNumber" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="userNature" primitive="Yes" remark="" sdl="true" type="Short"/>
+<field name="oppNature" primitive="Yes" remark="" sdl="true" type="Short"/>
+<field name="aNature" primitive="Yes" remark="" sdl="true" type="Short"/>
+<field name="serviceType" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="messageType" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="businessCode" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="businessCodeGroup" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="contentCode" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="pointCost" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="billFlag" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="smscId" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="deductionFlag" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="recordType" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="stdErrCode" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="redoFlag" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="camelDestNum" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="camelServiceLevel" primitive="Yes" remark="" sdl="true" type="Short"/>
+<field name="camelServiceKey" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="dftCallHandlingInd" primitive="Yes" remark="" sdl="true" type="Short"/>
+<complex-field collection="none" name="tapCamelInvoFee" primitive="false" ref="imsxdr.STapCamelInvoFee" remark="" sdl="true" type="entity"/>
+<complex-field collection="none" name="tapCamelVatAmt" primitive="false" ref="imsxdr.STapCamelVatAmt" remark="" sdl="true" type="entity"/>
+<field name="cdrCamelFlag" primitive="Yes" remark="" sdl="true" type="Short"/>
+<field name="ratingFlag" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="optimalChargeFlag" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="oriRatingFlag" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="freeChargeType" primitive="Yes" remark="" sdl="true" type="Short"/>
+<field name="authType" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="rateStrategy" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="rateBudgetRes" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="blackListAlert" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="conditionId" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="productId" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="billIndicate" primitive="Yes" remark="" sdl="true" type="Short"/>
+<complex-field collection="none" name="apartOppNumber" primitive="false" ref="imsxdr.SApartOppNumber" remark="" sdl="true" type="entity"/>
+<field name="roamType" primitive="Yes" remark="" sdl="true" type="Short"/>
+<field name="accessType" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="spRelaType" primitive="Yes" remark="" sdl="true" type="Short"/>
+<field name="oppConditionId" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="cdrOnlineFlag" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="backupDate" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="cdrDealFlag" primitive="Yes" remark="" sdl="true" type="Short"/>
+<field name="userProperty" primitive="Yes" remark="" sdl="true" type="Short"/>
+<field name="oppProperty" primitive="Yes" remark="" sdl="true" type="Short"/>
+<field name="spCode" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="groupType" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="netcallFlag" primitive="Yes" remark="" sdl="true" type="Short"/>
+<field name="oppNumberType" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="oppCountryId" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<complex-field collection="list" name="oppCountryGroup" primitive="false" ref="imsxdr.SCountryGroup" remark="" sdl="true" type="entity"/>
+<complex-field collection="none" name="userBaseInfo" primitive="false" ref="imsxdr.SUserInfoBase" remark="" sdl="true" type="entity"/>
+<complex-field collection="map&lt;Long,?&gt;" name="rateProdId" primitive="false" ref="imsxdr.SRateProdId" remark="" sdl="true" type="entity"/>
+<complex-field collection="none" name="oppRateMainProdId" primitive="false" ref="imsxdr.SRateProdId" remark="" sdl="true" type="entity"/>
+<complex-field collection="map&lt;Long,?&gt;" name="rateProdBillCycle" primitive="false" ref="imsxdr.SRateProdBillCycle" remark="" sdl="true" type="entity"/>
+<complex-field collection="map&lt;Long,?&gt;" name="rateProdRatingRes" primitive="false" ref="imsxdr.SRateProdRatingRes" remark="" sdl="true" type="entity"/>
+<field name="sysRatingRes" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<complex-field collection="list" name="rateProdQuotaRes" primitive="false" ref="imsxdr.SRateProdQuotaRes" remark="" sdl="true" type="entity"/>
+<field name="sysQuotaRes" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<complex-field collection="list" name="ratingRes" primitive="false" ref="imsxdr.SRatingRes" remark="" sdl="true" type="entity"/>
+<complex-field collection="map&lt;Long,?&gt;" name="rateProdZone" primitive="false" ref="imsxdr.SRateProdZone" remark="" sdl="true" type="entity"/>
+<field name="rateProdZoneAlertFlag" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<complex-field collection="list" name="taxRule" primitive="false" ref="imsxdr.STaxRule" remark="" sdl="true" type="entity"/>
+<complex-field collection="map&lt;Long,?&gt;" name="accumulateRule" primitive="false" ref="imsxdr.SAccumulateRule" remark="" sdl="true" type="entity"/>
+<complex-field collection="map&lt;Long,?&gt;" name="propertyValMin" primitive="false" ref="imsxdr.SPropertyValMin" remark="" sdl="true" type="List&lt;entity&gt;"/>
+<complex-field collection="map&lt;Integer,?&gt;" name="rejectCallAlarmMap" primitive="false" ref="imsxdr.SRejectCallAlarm" remark="" sdl="true" type="entity"/>
+<complex-field collection="list" name="accumulateAlarmList" primitive="false" ref="imsxdr.SAccumulateAlarm" remark="" sdl="true" type="entity"/>
+<field name="afterMakeCallAlarmRule" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="beforeMakeCallAlarmRule" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<complex-field collection="list" name="groupAcctPayment" primitive="false" ref="imsxdr.SGroupAcctPayment" remark="" sdl="true" type="entity"/>
+<complex-field collection="list" name="groupFreebiePayment" primitive="false" ref="imsxdr.SGroupFreebiePayment" remark="" sdl="true" type="entity"/>
+<complex-field collection="list" name="capMax" primitive="false" ref="imsxdr.SGroupBudget" remark="" sdl="true" type="entity"/>
+<complex-field collection="list" name="groupBudget" primitive="false" ref="imsxdr.SGroupBudget" remark="" sdl="true" type="entity"/>
+<complex-field collection="list" name="groupRelationType" primitive="false" remark="" sdl="true" type="Integer"/>
+<complex-field collection="list" name="groupSpecShare" primitive="false" ref="imsxdr.SGroupSpecShare" remark="" sdl="true" type="entity"/>
+<field name="productExpireDate" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="productRedirectionDate" primitive="Yes" remark="" sdl="true" type="Long"/>
+<complex-field collection="list" name="cellCode" primitive="false" remark="" sdl="true" type="Integer"/>
+<complex-field collection="list" name="oppCellCode" primitive="false" remark="" sdl="true" type="Integer"/>
+<complex-field collection="list" name="rateProdPricePlan" primitive="false" ref="imsxdr.SRateProdPricePlan" remark="" sdl="true" type="entity"/>
+<complex-field collection="none" name="hybridRuleDef" primitive="false" ref="imsxdr.SHybirdRuleDefine" remark="" sdl="true" type="entity"/>
+<complex-field collection="map&lt;Integer,?&gt;" name="serviceInfoMap" primitive="false" ref="imsxdr.SServiceInfo" remark="" sdl="true" type="entity"/>
+<complex-field collection="map&lt;Long,?&gt;" name="userGroup" primitive="false" ref="imsxdr.SUserGroupInfo" remark="" sdl="true" type="entity"/>
+<complex-field collection="map&lt;String,?&gt;" name="maxTimePromSpecMap" primitive="false" ref="imsxdr.SMaxTimeProd" remark="" sdl="true" type="entity"/>
+<field name="processFlag" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<complex-field collection="list" name="minimalValue" primitive="false" ref="imsxdr.SMinimalValue" remark="" sdl="true" type="entity"/>
+<field name="firstUpdateFlag" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<complex-field collection="map&lt;Long,?&gt;" name="freebiePromotedRule" primitive="false" ref="imsxdr.SFreebiePromote" remark="" sdl="true" type="entity"/>
+<complex-field collection="map&lt;String,?&gt;" name="borderRoamInfoMap" primitive="false" ref="imsxdr.SBorderRoamInfo" remark="" sdl="true" type="entity"/>
+<field name="borderRoamType" primitive="Yes" remark="" sdl="true" type="Short"/>
+<complex-field collection="none" name="outRatingFec" primitive="false" ref="imsxdr.SOutRatingFecXdr" remark="" sdl="true" type="entity"/>
+<complex-field collection="none" name="inOutFec" primitive="false" ref="imsxdr.SInOutFecXdr" remark="" sdl="true" type="entity"/>
+<complex-field collection="none" name="outInFec" primitive="false" ref="imsxdr.SOutInFecXdr" remark="" sdl="true" type="entity"/>
+<complex-field collection="none" name="ratingOut" primitive="false" ref="imsxdr.SOutRatingXdr" remark="" sdl="true" type="entity"/>
+<field name="errorCode" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="errorMessage" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="errFile" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="errModifyFlag" primitive="Yes" remark="" sdl="true" type="Short"/>
+<field name="errInputtime" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="errFileDate" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="reserve1" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="reserve2" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="reserve3" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="reserve4" primitive="Yes" remark="" sdl="true" type="String"/>
+<complex-field collection="map&lt;String,?&gt;" name="reserveFields" primitive="false" remark="" sdl="true" type="String"/>
+<field name="billDate" primitive="Yes" remark="" sdl="true" type="Long"/>
+<complex-field collection="list" name="revenueCodeDtl" primitive="false" ref="imsxdr.SRevenueCode" remark="" sdl="true" type="entity"/>
+<complex-field collection="none" name="billingOut" primitive="false" ref="imsxdr.SOutBillingXdr" remark="" sdl="true" type="entity"/>
+<field name="operatorRelaType" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="batchMessageNumber" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="hybridRule" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<complex-field collection="list" name="slaRule" primitive="false" ref="imsxdr.SSlaRule" remark="" sdl="true" type="entity"/>
+<field name="oriDeductTime" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="resCount" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="deductResCount" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="refundResCount" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<complex-field collection="list" name="rgRule" primitive="false" ref="imsxdr.SRgRule" remark="" sdl="true" type="entity"/>
+<complex-field collection="list" name="analyseAlarm" primitive="false" ref="imsxdr.SAnalyseAlarm" remark="" sdl="true" type="entity"/>
+<field name="tableName" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="databaseName" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="lateFlag" primitive="Yes" remark="" sdl="true" type="Short"/>
+<field name="isFilter" primitive="Yes" remark="" sdl="true" type="Short"/>
+<field name="fcitype" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="testCdrFlag" primitive="Yes" remark="" sdl="true" type="Short"/>
+<complex-field collection="list" name="rgRuleList" primitive="false" ref="imsxdr.SSlaRule" remark="" sdl="true" type="entity"/>
+<complex-field collection="map&lt;Long,?&gt;" name="historyErrorMap" primitive="false" remark="" sdl="true" type="Integer"/>
+<field name="offpeakSwitchDate" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="productValidDate" primitive="Yes" remark="" sdl="true" type="Long"/>
+<complex-field collection="none" name="analyseStateInfo" primitive="false" ref="imsxdr.SAnalyseStateInfo" remark="" sdl="true" type="entity"/>
+<complex-field collection="map&lt;Integer,?&gt;" name="nearestInfoChangeMap" primitive="false" ref="imsxdr.SNearestInfoChange" remark="" sdl="true" type="entity"/>
+<field name="outputFlag" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="chargeRollbackFlag" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="oppUserNumber" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="callRefnum" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="partialId" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="firstcdrStartTime" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="timeWindow" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="ocsMonitorCdr" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="serviceKeyVal" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="cdrQueryFlag" primitive="Yes" remark="" sdl="true" type="Short"/>
+<field name="shareGruopIdForFreebie" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="newCdrFlag" primitive="Yes" remark="" sdl="true" type="Short"/>
+<field name="batchNo" primitive="Yes" remark="" sdl="true" type="Long"/>
+</fields>
+</entity>

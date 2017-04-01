@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="CustQueryReq" transient="true">
+  <root ref="imsinner.BaseQueryReq"/>
+  <fields>
+    <complex-field name="custIds" type="Long" collection="list" primitive="false"/>
+    <field name="isCmIndividual" type="Boolean" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="isCmOrganization" type="Boolean" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="isCmPartyIdentity" type="Boolean" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="isCmCustExt" type="Boolean" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="isCmIndividualName" type="Boolean" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="isCmOrganizationName" type="Boolean" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="isCmCustomer" type="Boolean" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="isCmContactMedium" type="Boolean" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="isQueryAccts" type="Boolean" isPk="false" primitive="Auto" null-able="true"/>
+    <complex-field name="acctReq" type="entity" ref="imsinner.AcctQueryReq" collection="none" primitive="false"/>
+  </fields>
+</entity>

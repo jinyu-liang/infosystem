@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SysGroupCredit" remark="" schema="sd" table="SYS_GROUP_CREDIT" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+<fields>
+<field column="ID" columnDef="AutoIncrement" isPk="true(not generated)" name="id" primitive="No" remark="" type="Integer"/>
+<field column="BRAND_ID" columnDef="Int" name="brandId" null-able="false" primitive="No" remark="Brand ID" type="Integer"/>
+<field column="MAIN_PROMOTION" columnDef="Int" name="mainPromotion" null-able="false" primitive="No" remark="?????,??-1" type="Integer"/>
+<field column="POLICY_ID" columnDef="Int" name="policyId" null-able="false" primitive="No" remark="Policy ID, 0 for always true.&#10;" type="Integer"/>
+<field column="CREDIT_CLASS" columnDef="Int" name="creditClass" primitive="No" remark="used for mapping foreign data " type="Integer"/>
+<field column="CREDIT_VALUE" columnDef="Int" name="creditValue" null-able="false" primitive="No" remark="amount of credit limit" type="Long"/>
+<field column="NEGATIVE_VALUE" columnDef="Int" name="negativeValue" null-able="false" primitive="No" remark="Nagative balance,for prepaid" type="Long"/>
+<field column="MEASURE_ID" columnDef="Int" name="measureId" primitive="No" remark="Charge measurement such as:&#10;Dollar--&gt;Cent&#10;RMB--&gt;Li&#10;" type="Integer"/>
+<field column="MAX_BALANCE" columnDef="Int" name="maxBalance" null-able="false" primitive="No" remark="" type="Long"/>
+<field column="MAX_VALIDITY" columnDef="Int" name="maxValidity" null-able="false" primitive="No" remark="" type="Long"/>
+<field column="NOTIF_REMAINED_DAYS" columnDef="Int" name="notifRemainedDays" null-able="false" primitive="No" remark="" type="Integer"/>
+<field column="NOTIFICATION_ID" columnDef="Int" name="notificationId" primitive="No" remark="" type="Integer"/>
+<field column="REGION_CODE" columnDef="Int" name="regionCode" null-able="false" primitive="No" remark="" type="Integer"/>
+<field column="CUSTOMER_TYPE" columnDef="Int" name="customerType" null-able="false" primitive="No" remark="" type="Integer"/>
+<field column="CUSTOMER_CLASS" columnDef="Int" name="customerClass" null-able="false" primitive="No" remark="" type="Integer"/>
+<field column="CUSTOMER_SEGMENT" columnDef="Int" name="customerSegment" null-able="false" primitive="No" remark="" type="Integer"/>
+<field column="ACCOUNT_TYPE" columnDef="Int" name="accountType" null-able="false" primitive="No" remark="" type="Integer"/>
+<field column="RES_TYPE" columnDef="Int" name="resType" null-able="false" primitive="No" remark="" type="Integer"/>
+<field column="RES_SEGMENT" columnDef="Int" name="resSegment" null-able="false" primitive="No" remark="" type="Integer"/>
+<field column="BILLING_TYPE" columnDef="Int" name="billingType" null-able="false" primitive="No" remark="" type="Integer"/>
+<field column="PRIORITY" columnDef="Int" name="priority" null-able="false" primitive="No" remark="" type="Integer"/>
+<field column="SUSPEND_DAYS" columnDef="Int" name="suspendDays" primitive="No" remark="" type="Integer"/>
+<field column="MAX_NEGATIVE_VALUE" columnDef="Int" name="maxNegativeValue" null-able="false" primitive="No" remark="" type="Integer"/>
+<field column="BALANCE_TYPE" columnDef="Int" name="balanceType" null-able="false" primitive="No" remark="" type="Integer"/>
+<field column="SPECIAL_USER_STS" columnDef="Int" name="specialUserSts" primitive="No" remark="Transformed as binary digital, and each bit (right to left) means one specific user status, value of user status:&#10;1: active state&#10;2: suspend state&#10;4: disabled state&#10;8: terminate state " type="Integer"/>
+<field column="FORMULA_ID" columnDef="Int" name="formulaId" primitive="No" remark="" type="Integer"/>
+</fields>
+</entity>

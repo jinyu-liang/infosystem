@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="CaRcData" schema="AD" table="CA_RC_DATA">
+  <fields>
+    <field name="acctId" type="Long" column="ACCT_ID" isPk="false" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="createDate" type="Date" column="CREATE_DATE" isPk="false" primitive="Auto" null-able="true" columnDef="Date"/>
+    <field name="dealDate" type="Date" column="DEAL_DATE" isPk="false" primitive="Auto" null-able="true" columnDef="Date"/>
+    <field name="sts" type="Integer" column="STS" isPk="false" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="sourceType" type="Integer" column="SOURCE_TYPE" isPk="false" primitive="No" null-able="true" columnDef="Int"/>
+    <field name="result" type="String" column="RESULT" isPk="false" primitive="Auto" null-able="true" columnDef="Varchar" columnSize="1024"/>
+  </fields>
+</entity>

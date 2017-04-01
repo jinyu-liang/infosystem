@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="do_queryBusiSuccessResponse" transient="true">
+  <root ref="imsintf.BaseResponse"/>
+  <fields>
+    <field name="sts" type="Short" isPk="false" primitive="No" null-able="true"/>
+    <field name="done_code" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="so_date" type="String" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

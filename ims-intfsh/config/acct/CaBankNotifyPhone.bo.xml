@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="CaBankNotifyPhone" remark="" schema="AD" table="CA_BANK_NOTIFY_PHONE" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="ACCT_ID" columnDef="AutoIncrement" isPk="true(not generated)" name="acctId" primitive="No" remark="账户编号" type="Long"/>
+        <field column="PHONE_ID" columnDef="Varchar" columnSize="64" name="phoneId" primitive="No" remark="代扣通知号码" type="String"/>
+        <field column="EXT1" columnDef="Varchar" columnSize="200" name="ext1" primitive="No" remark="" type="String"/>
+        <field column="EXT2" columnDef="Varchar" columnSize="200" name="ext2" primitive="No" remark="" type="String"/>
+    </fields>
+</entity>

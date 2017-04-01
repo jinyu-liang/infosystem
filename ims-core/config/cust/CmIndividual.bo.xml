@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="CmIndividual" schema="CD" table="CM_INDIVIDUAL">
+	<fields>
+		<field name="partyId" type="Long" column="PARTY_ID" isPk="true(not generated)" primitive="No" remark="Participation Persion&apos;s Unique Numbering" null-able="false" columnDef="BigInt"/>
+		<field name="gender" type="Integer" column="GENDER" primitive="No" remark="Sex" null-able="true" columnDef="Int"/>
+		<field name="maritalStatus" type="Integer" column="MARITAL_STATUS" primitive="No" remark="Marital Status
+			
+			0：spinsterhood
+			1：Married " null-able="true" columnDef="Int"/>
+		<field name="skills" type="String" column="SKILLS" primitive="No" remark="Specialty  Information Describtion" null-able="true" columnDef="Varchar" columnSize="256"/>
+		<field name="birthDate" type="Date" column="BIRTH_DATE" primitive="No" remark="Birthday " null-able="true" columnDef="TimeStamp"/>
+		<field name="incomeLevel" type="Integer" column="INCOME_LEVEL" primitive="No" remark="Income State
+			
+			0：0~1000
+			1：1000~3000
+			2：3000~10000
+			3：10000~
+			" null-able="true" columnDef="Int"/>
+		<field name="industryId" type="Integer" column="INDUSTRY_ID" primitive="No" remark="Adscription Industrry,find it in the Industry Definition Table
+			" null-able="true" columnDef="Int"/>
+		<field name="religionId" type="Integer" column="RELIGION_ID" primitive="No" remark="Religious Belief
+			
+			
+			1: Buddhism
+			2: Islam
+			3: Christ
+			4: Catholicism" null-able="true" columnDef="Int"/>
+		<field name="educationLevel" type="Integer" column="EDUCATION_LEVEL" primitive="No" remark="Education
+			
+			0: Junior middle school and the bellow
+			1: High school
+			2: Undergraduate
+			3: Master
+			4: Doctor and the above " null-able="true" columnDef="Int"/>
+		<field name="occupationId" type="Integer" column="OCCUPATION_ID" primitive="No" remark="Job" null-able="true" columnDef="Int"/>
+		<field name="countryOfBirth" type="Integer" column="COUNTRY_OF_BIRTH" primitive="No" remark="Country,get the code from  SYS_COUNTRY" null-able="true" columnDef="Int"/>
+		<field name="placeOfBirth" type="String" column="PLACE_OF_BIRTH" primitive="No" remark="Birthplace " null-able="true" columnDef="Varchar" columnSize="64"/>
+		<field name="createDate" type="Date" column="CREATE_DATE" primitive="No" remark="record create date" null-able="false" columnDef="TimeStamp"/>
+		<field name="validDate" type="Date" column="VALID_DATE" isPk="true(not generated)" primitive="No" remark="Effective Date" null-able="false" columnDef="TimeStamp"/>
+		<field name="expireDate" type="Date" column="EXPIRE_DATE" primitive="No" remark="Expired Date" null-able="false" columnDef="TimeStamp"/>
+		<field name="soNbr" type="Long" column="SO_NBR" isPk="true(not generated)" primitive="No" remark="The serial number" null-able="false" columnDef="BigInt"/>
+		<field name="soDate" type="Date" column="SO_DATE" primitive="No" null-able="true" columnDef="TimeStamp"/>
+	</fields>
+</entity>

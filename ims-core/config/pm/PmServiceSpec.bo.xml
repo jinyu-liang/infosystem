@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="PmServiceSpec" schema="pd" table="PM_SERVICE_SPEC">
+	<fields>
+		<field name="serviceSpecId" type="Integer" column="SERVICE_SPEC_ID" isPk="true" primitive="No" remark="Service ID" null-able="true" columnDef="AutoIncrement"/>
+		<field name="name" type="String" column="NAME" primitive="No" remark="Service name" null-able="false" columnDef="Varchar" columnSize="256"/>
+		<field name="type" type="Integer" column="TYPE" primitive="No" remark="Service type definition mainly is used for identifying primary service and program control service. Primary service refers to service which is related with rating, such as GSM, GPRS,SMS, etc.
+			Program control service refers to service which is related with program control functionality, such as caller display, voice, etc.
+			0- the service which does not define type
+			1- primary service
+			2- program control service
+			3- business service.
+			4- physical service
+			5- main service of key product(PLAN)
+			Defintion for main service is as follows:
+			GSM
+			CDMA" null-able="false" columnDef="Int"/>
+		<field name="spcFlag" type="Integer" column="SPC_FLAG" primitive="No" remark="程控标识：
+			0: 非程控
+			1: 是程控，不需要发开通
+			2: 是程控，需要发开通
+			" null-able="false" columnDef="Int"/>
+		<field name="validDate" type="Date" column="VALID_DATE" primitive="No" remark="Effective date" null-able="false" columnDef="TimeStamp"/>
+		<field name="expireDate" type="Date" column="EXPIRE_DATE" primitive="No" remark="Expired date" null-able="false" columnDef="TimeStamp"/>
+		<field name="description" type="String" column="DESCRIPTION" primitive="No" remark="Description" null-able="true" columnDef="Varchar" columnSize="1024"/>
+	</fields>
+</entity>

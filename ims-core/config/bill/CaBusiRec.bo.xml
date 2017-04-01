@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="CaBusiRec" remark="" schema="ad" table="CA_BUSI_REC" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+<fields>
+<field column="SO_NBR" columnDef="AutoIncrement" isPk="true(not generated)" name="soNbr" primitive="No" remark="" type="Long"/>
+<field column="START_DATE" columnDef="Date" name="startDate" primitive="No" remark="" type="Date"/>
+<field column="END_DATE" columnDef="Date" name="endDate" primitive="No" remark="" type="Date"/>
+<field column="STS" columnDef="Int" name="sts" primitive="No" remark="" type="Integer"/>
+<field column="PROV_CODE" columnDef="Int" name="provCode" null-able="false" primitive="No" remark="" type="Integer"/>
+<field column="REGION_CODE" columnDef="Int" name="regionCode" null-able="false" primitive="No" remark="" type="Integer"/>
+<field column="COUNTY_CODE" columnDef="Int" name="countyCode" null-able="false" primitive="No" remark="" type="Integer"/>
+<field column="ORG_ID" columnDef="Int" name="orgId" null-able="false" primitive="No" remark="" type="Integer"/>
+<field column="I_REGION_CODE" columnDef="Int" name="iRegionCode" null-able="false" primitive="No" remark="" type="Integer"/>
+<field column="I_COUNTY_CODE" columnDef="Int" name="iCountyCode" null-able="false" primitive="No" remark="" type="Integer"/>
+<field column="I_ORG_ID" columnDef="Int" name="iOrgId" null-able="false" primitive="No" remark="" type="Integer"/>
+<field column="BUSI_SPEC_ID" columnDef="Int" name="busiSpecId" null-able="false" primitive="No" remark="" type="Integer"/>
+<field column="OP_ID" columnDef="Int" name="opId" primitive="No" remark="" type="Long"/>
+<field column="ACCT_ID" columnDef="Int" name="acctId" primitive="No" remark="" type="Long"/>
+<field column="RESOURCE_ID" columnDef="Int" name="resourceId" primitive="No" remark="" type="Long"/>
+<field column="CHANNEL" columnDef="Int" name="channel" primitive="No" remark="" type="Integer"/>
+<field column="ASSET_TYPE" columnDef="Int" name="assetType" primitive="No" remark="" type="Integer"/>
+<field column="ASSET_AMOUNT" columnDef="Int" name="assetAmount" null-able="false" primitive="No" remark="" type="Long"/>
+<field column="MEASURE_ID" columnDef="Int" name="measureId" primitive="No" remark="" type="Integer"/>
+<field column="CALL_LOCATION" columnDef="Varchar" columnSize="128" name="callLocation" primitive="No" remark="" type="String"/>
+<field column="ERROR_CODE" columnDef="Int" name="errorCode" null-able="false" primitive="No" remark="" type="Integer"/>
+<field column="REMARKS" columnDef="Varchar" columnSize="512" name="remarks" primitive="No" remark="" type="String"/>
+<field column="OUT_SO_DATE" columnDef="Date" name="outSoDate" primitive="No" remark="" type="Date"/>
+<field column="OUT_SO_NBR" columnDef="Varchar" columnSize="64" name="outSoNbr" primitive="No" remark="" type="String"/>
+<field column="PHONE_ID" columnDef="Varchar" columnSize="64" name="phoneId" primitive="No" remark="" type="String"/>
+<field column="BUSI_PLAN_ID" columnDef="Int" name="busiPlanId" primitive="No" remark="" type="Integer"/>
+<field column="RECHARGE_METHOD" columnDef="Int" name="rechargeMethod" primitive="No" remark="" type="Integer"/>
+<field column="OWNER_TYPE" columnDef="Int" name="ownerType" primitive="No" remark="" type="Integer"/>
+<field column="SERVICE_ID" columnDef="Int" name="serviceId" primitive="No" remark="" type="Integer"/>
+<field column="SOURCE_SYSTEM" columnDef="Varchar" columnSize="32" name="sourceSystem" primitive="No" remark="" type="String"/>
+</fields>
+</entity>

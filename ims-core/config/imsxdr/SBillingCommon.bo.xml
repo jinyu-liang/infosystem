@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SBillingCommon" remark="" sdl="true" sdl-module="MXdr" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+<fields>
+<field name="channelId" primitive="Yes" remark="" sdl="true" type="Short"/>
+<field name="processFlag" primitive="Yes" remark="" sdl="true" type="Short"/>
+<field name="ownerType" primitive="Yes" remark="" sdl="true" type="Short"/>
+<field name="billBeginDate" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="billEndDate" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="billCycleLength" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="billCycleType" primitive="Yes" remark="" sdl="true" type="Short"/>
+<field name="deductResult" primitive="Yes" remark="" sdl="true" type="Short"/>
+<field name="deductTime" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="preBalance" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="curBalance" primitive="Yes" remark="" sdl="true" type="Long"/>
+</fields>
+</entity>

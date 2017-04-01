@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="ReguideDtlInfo">
+  <fields>
+    <field name="startTime" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="oppNumber" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="totalUsage" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="unit" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="totalActualCharge" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="totalUsageCharge" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="chargeUnit" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="totalOwnerPaid" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="totalPayerPaid" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <complex-field name="reguideAcctInfoList" type="entity" ref="imsintf.ReguideAcctInfoList" collection="none" primitive="false"/>
+  </fields>
+</entity>

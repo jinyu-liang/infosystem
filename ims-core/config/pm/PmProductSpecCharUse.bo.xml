@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="PmProductSpecCharUse" schema="PD" table="PM_PRODUCT_SPEC_CHAR_USE">
+  <fields>
+    <field name="prodSpecId" type="Integer" column="PROD_SPEC_ID" isPk="true(not generated)" primitive="No" remark="An identification number assigned to uniquely identify the specification.
+
+" null-able="false" columnDef="Int" enumAsAliasField="true"/>
+    <field name="specCharId" type="Integer" column="SPEC_CHAR_ID" isPk="true(not generated)" primitive="No" remark="A unique identifier for the product specification characteristic.
+
+" null-able="false" columnDef="Int" enumAsAliasField="true"/>
+    <field name="charValueId" type="Integer" column="CHAR_VALUE_ID" isPk="true(not generated)" primitive="No" remark="characteristic value ID" null-able="false" columnDef="Int" enumAsAliasField="true"/>
+    <field name="name" type="String" column="NAME" primitive="No" remark="name" null-able="true" columnDef="Varchar" columnSize="256" enumAsAliasField="true"/>
+    <field name="description" type="String" column="DESCRIPTION" primitive="No" remark="description" null-able="true" columnDef="Varchar" columnSize="1024" enumAsAliasField="true"/>
+    <field name="isUnique" type="Integer" column="IS_UNIQUE" primitive="No" remark="unique value or not
+
+enum：
+0：no
+1：yes" null-able="false" columnDef="Int" enumAsAliasField="true"/>
+    <field name="isPackage" type="Integer" column="IS_PACKAGE" primitive="No" remark="necessary characteristic binding in specification or not
+
+0：no
+1：yes" null-able="false" columnDef="Int" enumAsAliasField="true"/>
+    <field name="canBeOveridden" type="Integer" column="CAN_BE_OVERIDDEN" primitive="No" remark="values can be covered or not
+
+value：
+0：no
+1：yes" null-able="false" columnDef="Int" enumAsAliasField="true"/>
+    <field name="minCardinality" type="Long" column="MIN_CARDINALITY" primitive="No" remark="minimum cardinality to values
+" null-able="false" columnDef="BigInt" enumAsAliasField="true"/>
+    <field name="maxCardinality" type="Long" column="MAX_CARDINALITY" primitive="No" remark="maximum cardinality to values" null-able="true" columnDef="BigInt" enumAsAliasField="true"/>
+    <field name="isExtensible" type="Integer" column="IS_EXTENSIBLE" primitive="No" remark="values can be extended or not
+
+0：no
+1：yes" null-able="false" columnDef="Int" enumAsAliasField="true"/>
+    <field name="validDate" type="Date" column="VALID_DATE" primitive="No" remark="effective date " null-able="false" columnDef="TimeStamp" enumAsAliasField="true"/>
+    <field name="expireDate" type="Date" column="EXPIRE_DATE" primitive="No" remark="expiring date " null-able="false" columnDef="TimeStamp" enumAsAliasField="true"/>
+  </fields>
+</entity>

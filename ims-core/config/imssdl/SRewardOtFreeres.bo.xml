@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SRewardOtFreeres" remark="" sdl="true" sdl-module="MImsSyncDef" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+    <fields>
+        <field name="payAcctId" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="objectId" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="value" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="productId" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="validDate" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="expireDate" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="itemCode" primitive="Yes" remark="" sdl="true" type="Integer"/>
+        <field name="measureId" primitive="Yes" remark="" sdl="true" type="Integer"/>
+        <field name="objectType" primitive="Yes" remark="" sdl="true" type="Short"/>
+    </fields>
+</entity>

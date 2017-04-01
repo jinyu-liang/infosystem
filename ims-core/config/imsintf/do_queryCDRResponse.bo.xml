@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="do_queryCDRResponse" transient="true">
+  <root ref="imsintf.BaseResponse"/>
+  <fields>
+    <complex-field name="CallDetailRecordList" type="entity" ref="imsintf.CallDetailRecordList" collection="none" primitive="false"/>
+    <complex-field name="SContact" type="entity" ref="imsintf.SContact" collection="none" primitive="false"/>
+    <complex-field name="file_path" type="String" collection="none" primitive="false"/>
+  </fields>
+</entity>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="PmProductOfferNotify" schema="pd" table="PM_PRODUCT_OFFER_NOTIFY">
+  <fields>
+    <field name="productOfferingId" type="Integer" column="PRODUCT_OFFERING_ID" isPk="true(not generated)" primitive="No" remark="A unique identifier for the product offering.
+
+" null-able="false" columnDef="Int"/>
+    <field name="notifyType" type="Integer" column="NOTIFY_TYPE" isPk="true(not generated)" primitive="No" remark="1ฃบฯ๚สฦทษ๚ะงฬแะั
+2ฃบฯ๚สฦทสงะงฬแะั
+3:ฯ๚สฦทึฦฺะิฬแะั
+4ฃบฯ๚สฦทนฬทัฟทัณษนฆฬแะั
+5ฃบฯ๚สฦทนฬทัฟทัสงฐฬแะั
+6:ฯ๚สฦทนฬทัฟทัฬแะั" null-able="false" columnDef="Int"/>
+    <field name="notifyMode" type="Integer" column="NOTIFY_MODE" primitive="No" remark="Notification mode
+
+1-Immediately
+2-Before
+3-After" null-able="false" columnDef="Int"/>
+    <field name="offsetCycleType" type="Integer" column="OFFSET_CYCLE_TYPE" primitive="No" remark="ฬแะัษ๚ะงฦซาฦสฑผไ
+Type of cycle referenced
+
+1:using calendar day as cycle type
+2:using calendar week as cycle type
+3:using calendar month as cycle type
+4:using calendar year as cycle type
+5:using dynamic month as cycle typeฃฌsuch as ORACLE provides the  function of  add_months()
+6:using the offset of  hours as cycle type
+7:using the offset of (calendar) month as cycle type
+" null-able="false" columnDef="Int"/>
+    <field name="offsetCycleUnit" type="Integer" column="OFFSET_CYCLE_UNIT" primitive="No" remark="ฬแะัษ๚ะงฦซาฦสฑผไ
+Cycle unit, filled with specific days and weeks before or after activation or expiration occurs for notification, invalid for immediate notification
+
+
+Value of cycle ,set 3 if the cycle is 3 days " null-able="false" columnDef="Int"/>
+    <field name="cycleCount" type="Long" column="CYCLE_COUNT" primitive="No" remark="Alarm Cycle Numbers
+,-1ฑํสพรปำะึฦฺสฯึฦ" null-able="true" columnDef="Int"/>
+    <field name="cycleUnit" type="Integer" column="CYCLE_UNIT" primitive="No" remark="Cycle  Unit" null-able="true" columnDef="Int"/>
+    <field name="cycleType" type="Integer" column="CYCLE_TYPE" primitive="No" remark="Cycle Type
+1:cycle type :by calendar day
+2: cycle type :by calendar week
+3: cycle type :by calendar month
+4: cycle type :by calendar year
+5:cycle type :by month, similar to add_months ()function provided by ORACLE.
+6. cycle type: according to hour offset.
+7. cycle type: according to month offset.
+Up till now, the accumulator shall be stored based on the amount of days. For the accumulative cycle, the minimum unit should be day.
+" null-able="true" columnDef="Int"/>
+    <field name="notificationId" type="Integer" column="NOTIFICATION_ID" primitive="No" remark="Notification ID,from SYS_NOTIFICATION_RULE.Notification " null-able="false" columnDef="Int"/>
+    <field name="channelId" type="Integer" column="CHANNEL_ID" isPk="true(not generated)" primitive="No" null-able="false" columnDef="Int"/>
+  </fields>
+</entity>

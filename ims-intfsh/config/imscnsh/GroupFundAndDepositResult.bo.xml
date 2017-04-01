@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="GroupFundAndDepositResult">
+  <fields>
+    <field name="done_date" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="so_nbr" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="way" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="way_desc" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="amount" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="remark" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="file_name" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="send_sms_status" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="send_sms_cnt" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="send_sms_contents" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="sts" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <complex-field name="groupBatchDepositList" type="entity" ref="imscnsh.GroupBatchDepositInfo" collection="list" primitive="false"/>
+  </fields>
+</entity>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SMmsSpecInfo" remark="" sdl="true" sdl-module="MXdr" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+<fields>
+<field name="mmType" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="mmscId" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="forwardIsmgId" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="carryType" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="domainName" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="gateway" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="cfwGateway" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="oppGateway" primitive="Yes" remark="" sdl="true" type="String"/>
+<complex-field collection="none" name="mmsSpecInfoEx" primitive="false" ref="imsxdr.SMmsInfoEx" remark="" sdl="true" type="entity"/>
+</fields>
+</entity>

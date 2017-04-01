@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="PmProductSpecCharValue" remark="" schema="pd" table="PM_PRODUCT_SPEC_CHAR_VALUE" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="CHAR_VALUE_ID" columnDef="AutoIncrement" isPk="true" name="charValueId" primitive="No" remark="Characteristic ID" type="Integer"/>
+        <field column="SPEC_CHAR_ID" columnDef="Int" name="specCharId" primitive="No" remark="A unique identifier for the ProductSpecCharacteristic." type="Integer"/>
+        <field column="VALUE_TYPE_ID" columnDef="Int" name="valueTypeId" primitive="No" remark="A kind of value that the characteristic can take on, such as numeric, text, and so forth, from PM_ENUM_VALUE_TYPE_DEF&#10;" type="Integer"/>
+        <field column="IS_DEFAULT" columnDef="Int" name="isDefault" primitive="No" remark="Whether or not it is default characteristic value: 0- N    1-Y&#10;&#10;" type="Integer"/>
+        <field column="VALUE" columnDef="Varchar" columnSize="256" name="value" primitive="No" remark="A discrete value that the characteristic can take on.&#10;" type="String"/>
+        <field column="VALUE_FROM" columnDef="Varchar" columnSize="256" name="valueFrom" primitive="No" remark="The low range value that a characteristic can take on.&#10;" type="String"/>
+        <field column="VALUE_TO" columnDef="Varchar" columnSize="256" name="valueTo" primitive="No" remark="End value of configuration" type="String"/>
+        <field column="RANGE_INTERVAL" columnDef="Varchar" columnSize="256" name="rangeInterval" primitive="No" remark="Step length" type="String"/>
+        <field column="MEASURE_ID" columnDef="Int" name="measureId" primitive="No" remark="Measurement unit, unified definition of  value from/value_to/range_interval" type="Integer"/>
+        <field column="VALID_DATE" columnDef="TimeStamp" name="validDate" primitive="No" remark="Effective Date" type="Date"/>
+        <field column="EXPIRE_DATE" columnDef="TimeStamp" name="expireDate" primitive="No" remark="Expired Date" type="Date"/>
+    </fields>
+</entity>

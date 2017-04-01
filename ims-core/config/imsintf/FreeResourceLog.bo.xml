@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="FreeResourceLog">
+  <fields>
+    <field name="freeResourceId" type="Long" isPk="false" primitive="No" null-able="true"/>
+    <field name="amount" type="Long" isPk="false" primitive="No" null-able="true"/>
+    <field name="remainAmount" type="Long" isPk="false" primitive="No" null-able="true"/>
+  </fields>
+</entity>

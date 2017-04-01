@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="TiOSmsBatch" table="TI_O_SMS_BATCH">
+  <fields>
+    <field name="smsNoticeId" type="Long" column="SMS_NOTICE_ID" isPk="true(not generated)" primitive="Yes" remark="短信通知流水号（不能重复） 每个内部系统分配不同的流水范围(20000000000---29999999999)  create sequence SEQ_NOTICE_ID minvalue 20000000000 maxvalue 29999999999 start with 20000000000 increment by 1 cache 4000 cycle; " null-able="true" columnDef="BigInt"/>
+    <field name="partitionId" type="Integer" column="PARTITION_ID" primitive="No" remark="分区标识，取值为SMS_NOTICE_ID的后3位" null-able="true" columnDef="Int"/>
+    <field name="eparchyCode" type="String" column="EPARCHY_CODE" primitive="No" remark="地州编码，固定填0021" null-able="true" columnDef="Varchar" columnSize="4"/>
+    <field name="brandCode" type="String" column="BRAND_CODE" primitive="No" remark="品牌：可为空" null-able="false" columnDef="Varchar" columnSize="4"/>
+    <field name="inModeCode" type="String" column="IN_MODE_CODE" primitive="No" remark="接入方式编码，取值： 其他接入：0 人工接入：1 自助接入：2 " null-able="true" columnDef="Varchar" columnSize="1"/>
+    <field name="smsNetTag" type="String" column="SMS_NET_TAG" primitive="No" remark="短信回执标记，取值： 需要回执：1 不需要回执：0 " null-able="true" columnDef="Varchar" columnSize="1"/>
+    <field name="chanId" type="String" column="CHAN_ID" primitive="No" remark="渠道编码，取值： 营业：A001 账管：B001 小I：C001 鸿冠：C002 4A：C003 网管：C004 " null-able="true" columnDef="Varchar" columnSize="4"/>
+    <field name="sendObjectCode" type="Integer" column="SEND_OBJECT_CODE" primitive="No" remark="发送方号码编码，可为空" null-able="false" columnDef="Int"/>
+    <field name="sendTimeCode" type="Integer" column="SEND_TIME_CODE" primitive="No" remark="发送时间编码，固定填1" null-able="false" columnDef="Int"/>
+    <field name="sendCountCode" type="Integer" column="SEND_COUNT_CODE" primitive="No" remark="发送次数编码，可为空" null-able="false" columnDef="Int"/>
+    <field name="recvObjectType" type="String" column="RECV_OBJECT_TYPE" primitive="No" remark="接收号码类型： 00－手机号码 01－组ID 02－集团ID " null-able="true" columnDef="Varchar" columnSize="2"/>
+    <field name="recvObject" type="String" column="RECV_OBJECT" primitive="No" remark="取值为USER_ID或者0" null-able="true" columnDef="Varchar" columnSize="32"/>
+    <field name="recvId" type="Long" column="RECV_ID" primitive="No" null-able="true" columnDef="BigInt"/>
+    <field name="smsTypeCode" type="String" column="SMS_TYPE_CODE" primitive="No" remark="短信类型编码，取值： 文本短信：20 PUSH短信：10 二进制短信：00 " null-able="true" columnDef="Varchar" columnSize="2"/>
+    <field name="smsKindCode" type="String" column="SMS_KIND_CODE" primitive="No" remark="短信通道编码，不同通道的短信相互不影响，避免对下发资源的争抢，取值： 01-保留 02-保留 03-07分给营业管理自己定义 08-一级BOSS 09-10 帐务管理 " null-able="true" columnDef="Varchar" columnSize="2"/>
+    <field name="noticeContentType" type="String" column="NOTICE_CONTENT_TYPE" primitive="No" remark="0－指定内容发送" null-able="true" columnDef="Varchar" columnSize="1"/>
+    <field name="noticeContent" type="String" column="NOTICE_CONTENT" primitive="No" null-able="false" columnDef="Varchar" columnSize="2000"/>
+    <field name="referedCount" type="Integer" column="REFERED_COUNT" primitive="No" remark="发送次数：填0" null-able="true" columnDef="Int"/>
+    <field name="forceReferCount" type="Integer" column="FORCE_REFER_COUNT" primitive="No" remark="指定发送次数：填1" null-able="false" columnDef="Int"/>
+    <field name="forceObject" type="String" column="FORCE_OBJECT" primitive="No" remark="发送号码：10086或者10086+扩展码" null-able="false" columnDef="Varchar" columnSize="32"/>
+    <field name="forceStartTime" type="Date" column="FORCE_START_TIME" primitive="No" remark="指定起始时间：可为空或者指定时间" null-able="false" columnDef="Date"/>
+    <field name="forceEndTime" type="Date" column="FORCE_END_TIME" primitive="No" remark="指定终止时间：可为空或者指定时间" null-able="false" columnDef="Date"/>
+    <field name="smsPriority" type="Integer" column="SMS_PRIORITY" primitive="No" remark="短信优先级，取值越大优先级越低" null-able="true" columnDef="Int"/>
+    <field name="referTime" type="Date" column="REFER_TIME" primitive="No" null-able="true" columnDef="Date"/>
+    <field name="referStaffId" type="String" column="REFER_STAFF_ID" primitive="No" remark="提交员工：可为空" null-able="false" columnDef="Varchar" columnSize="8"/>
+    <field name="referDepartId" type="String" column="REFER_DEPART_ID" primitive="No" remark="提交部门：可为空" null-able="false" columnDef="Varchar" columnSize="5"/>
+    <field name="dealTime" type="Date" column="DEAL_TIME" primitive="No" null-able="true" columnDef="Date"/>
+    <field name="dealStaffid" type="String" column="DEAL_STAFFID" primitive="No" remark="完成员工：可为空" null-able="false" columnDef="Varchar" columnSize="8"/>
+    <field name="dealDepartid" type="String" column="DEAL_DEPARTID" primitive="No" remark="完成部门：可为空" null-able="false" columnDef="Varchar" columnSize="5"/>
+    <field name="dealState" type="String" column="DEAL_STATE" isPk="false" primitive="No" remark="15－未处理" null-able="true" columnDef="Varchar" columnSize="2"/>
+    <field name="doneCode" type="Long" column="DONE_CODE" isPk="false" primitive="No" null-able="false" columnDef="BigInt"/>
+    <field name="blockId" type="Long" column="BLOCK_ID" isPk="false" primitive="No" null-able="false" columnDef="BigInt"/>
+    <field name="smsCode" type="Long" column="SMS_CODE" primitive="No" null-able="false" columnDef="BigInt"/>
+    <field name="remark" type="String" column="REMARK" primitive="No" null-able="false" columnDef="Varchar" columnSize="200"/>
+    <field name="revc1" type="String" column="REVC1" primitive="No" null-able="false" columnDef="Varchar" columnSize="20"/>
+    <field name="revc2" type="String" column="REVC2" primitive="No" null-able="false" columnDef="Varchar" columnSize="20"/>
+    <field name="revc3" type="String" column="REVC3" primitive="No" null-able="false" columnDef="Varchar" columnSize="200"/>
+    <field name="revc4" type="String" column="REVC4" primitive="No" null-able="false" columnDef="Varchar" columnSize="200"/>
+    <field name="month" type="Integer" column="MONTH" primitive="No" null-able="false" columnDef="Int"/>
+    <field name="day" type="Integer" column="DAY" primitive="No" null-able="false" columnDef="Int"/>
+  </fields>
+</entity>

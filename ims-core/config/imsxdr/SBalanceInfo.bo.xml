@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SBalanceInfo" remark="" sdl="true" sdl-module="MXdr" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+<fields>
+<field name="measureId" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<complex-field collection="list" name="assetInfoList" primitive="false" ref="imsxdr.SAssetInfo" remark="" sdl="true" type="entity"/>
+<complex-field collection="map&lt;String,?&gt;" name="extraMap" primitive="false" remark="" sdl="true" type="String"/>
+</fields>
+</entity>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:aop="http://www.springframework.org/schema/aop" xmlns:context="http://www.springframework.org/schema/context" xmlns:dwr="http://www.directwebremoting.org/schema/spring-dwr" xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:tx="http://www.springframework.org/schema/tx" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd    http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd  http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd    http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd  http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd  http://www.directwebremoting.org/schema/spring-dwr http://www.directwebremoting.org/schema/spring-dwr-3.0.xsd">
+	
+	<bean id="intfsh_springContext" class="com.ailk.ims.util.SpringShUtil"/>
+	
+	<bean id="smsts_interceptor" class="com.ailk.ims.smsts.interceptor.SmsTsInterceptor" />
+	
+	<bean id="intfsh_sms_service" class="com.ailk.ims.smsts.service.SmsService" />
+	
+	<bean id="intf_outinterface_interceptor" class="com.ailk.ims.interceptor.IntfInterceptor"></bean>
+	
+	<bean class="org.springframework.aop.framework.autoproxy.BeanNameAutoProxyCreator" id="smsts_ServiceAutoProxy">
+		<property name="beanNames">
+			<list>
+				<value>smsts_iSmsTsAppService</value>
+			</list>
+		</property>
+		<property name="interceptorNames">
+			<list>
+				<value>smsts_interceptor</value>
+			</list>
+		</property>
+		<property name="proxyTargetClass" value="false" />
+	</bean>
+	<bean class="org.springframework.aop.framework.autoproxy.BeanNameAutoProxyCreator" id="shinner_intfshinnerServiceAutoProxy">
+		<property name="beanNames">
+			<list>
+				<value>shinner_intfshqureyService</value>
+			</list>
+		</property>
+		<property name="interceptorNames">
+			<list>
+				<value>ims_query4acct_interceptor</value>
+			</list>
+		</property>
+	</bean>
+	
+	<bean class="org.springframework.aop.framework.autoproxy.BeanNameAutoProxyCreator" id="intf_outIntfServiceAutoProxy">
+		<property name="beanNames">
+			<list>
+				<!--拦截上海受理业务的服务-->
+				<value>imscnsh_cN_SHMgntService</value>
+				<value>imspgmt_pmsMgntService</value>  <!--产品管理服务 -->
+			</list>
+		</property>
+		<property name="interceptorNames">
+			<list>
+				<value>intf_outinterface_interceptor</value>
+			</list>
+		</property>
+	</bean>
+	
+	<bean class="org.springframework.aop.framework.autoproxy.BeanNameAutoProxyCreator" id="ims_intfsh_sdlServiceAutoProxy">
+		<property name="beanNames">
+			<list>
+				<value>imssdl_iIntfshSyncAppService</value>
+				<value>shinner_intfshinnerService</value>
+			</list>
+		</property>
+		<property name="interceptorNames">
+			<list>
+				<value>ims_new_interceptor</value>
+			</list>
+		</property>
+	</bean>
+	
+</beans>

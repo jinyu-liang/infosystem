@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="RsSysIntlOperService" schema="BD" table="RS_SYS_INTL_OPER_SERVICE">
+  <fields>
+    <field name="id" type="Integer" column="ID" isPk="true(not generated)" primitive="No" remark="Record sequence number" null-able="true" columnDef="AutoIncrement"/>
+    <field name="serviceSpecId" type="Integer" column="SERVICE_SPEC_ID" primitive="No" remark="Service ID -1 refers to all services" null-able="true" columnDef="Int"/>
+    <field name="callTypeId" type="Integer" column="CALL_TYPE_ID" primitive="No" remark="Call type identification, for identifying different call types  Such as caller, called -1 refers to all call types" null-able="true" columnDef="Int"/>
+    <field name="relId" type="Integer" column="REL_ID" primitive="No" remark="Record sequence number" null-able="true" columnDef="Int"/>
+    <field name="camelSupport" type="Integer" column="CAMEL_SUPPORT" primitive="No" remark="0: not support camel 1: support camel" null-able="false" columnDef="Int"/>
+    <field name="serviceStatus" type="Integer" column="SERVICE_STATUS" primitive="No" remark="0: not commercial 1: commercial 3: suspend" null-able="false" columnDef="Int"/>
+    <field name="validDate" type="Date" column="VALID_DATE" primitive="No" remark="Effective date" null-able="true" columnDef="TimeStamp"/>
+    <field name="expireDate" type="Date" column="EXPIRE_DATE" primitive="No" remark="Expired date" null-able="true" columnDef="TimeStamp"/>
+    <field name="description" type="String" column="DESCRIPTION" primitive="No" remark="Description" null-able="false" columnDef="Varchar" columnSize="1024"/>
+  </fields>
+</entity>

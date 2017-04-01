@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="PmProductOfferRel" remark="" schema="pd" table="PM_PRODUCT_OFFER_REL" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="PRODUCT_OFFERING_ID" columnDef="Int" isPk="true(not generated)" name="productOfferingId" null-able="false" primitive="No" remark="A unique identifier for the product offering.&#10;&#10;" type="Integer"/>
+        <field column="REL_PRODUCT_OFFERING_ID" columnDef="Int" isPk="true(not generated)" name="relProductOfferingId" null-able="false" primitive="No" remark="related product offer " type="Integer"/>
+        <field column="RELATION_TYPE_ID" columnDef="Int" name="relationTypeId" primitive="No" remark="instance relation type ID&#10;&#10;see in enum SYS_RELATION_TYPE_DEF&#10;" type="Integer"/>
+        <field column="VALID_DATE" columnDef="TimeStamp" name="validDate" primitive="No" remark="effective date" type="Date"/>
+        <field column="EXPIRE_DATE" columnDef="TimeStamp" name="expireDate" primitive="No" remark="expiring date " type="Date"/>
+        <field column="UPSELL_FLAG" columnDef="Int" name="upsellFlag" primitive="No" remark="" type="Integer"/>
+    </fields>
+</entity>

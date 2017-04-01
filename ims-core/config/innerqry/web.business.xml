@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/biz.xsd">
+  <service name="Query4AcctRecv" bind-entity="false" scope="both">
+    <method name="do_queryCustList" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="custQueryHolder" type="entity" ref="imsinner.CustQueryReqHolder" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imsinner.do_custQueryResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryAcctList" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="acctQueryHolder" type="entity" ref="imsinner.AcctQueryReqHolder" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imsinner.do_acctQueryResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryUserList" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="userQueryHolder" type="entity" ref="imsinner.UserQueryReqHolder" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imsinner.do_userQueryResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryPrimaryProductInfo" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="reqParam" type="entity" ref="imsinner.SQueryPrimaryProductReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imsinner.do_queryPrimaryProductResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryProductInfo" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imsinner.SQueryProductInfoReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imsinner.do_queryProductInfoResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryAcctValidityForGUI" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="queryAcctValidityReq" type="entity" ref="imsinner.SQueryAcctValidityReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imsinner.do_queryAcctValidityResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryUserAcctCust" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="sQryUserAcctCustReq" type="entity" ref="imsinner.SQryUserAcctCustReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imsinner.do_qryUserAcctCustResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryCustomer" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="SQueryCustomerReq" type="entity" ref="imsinner.SQueryCustomerReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imsinner.do_queryCustomerInfoResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryAccount" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="sQueryAccountReq" type="entity" ref="imsinner.SQueryAccountReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imsinner.do_queryAccountResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryUser" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="sQueryUserReq" type="entity" ref="imsinner.SQueryUserReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imsinner.do_queryUserResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryMainUser" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="squeryMainUser" type="entity" ref="imsinner.SQueryMainUserReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imsinner.do_queryMainUserResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryUserListOld" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="acct_id" type="Long" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imsinner.do_queryUserListResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryAcctInfoByCustId" scope="both">
+      <parameter name="sOperInfo" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imsinner.SQueryAcctInfoReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imsinner.do_QueryAcctInfoResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryOperatorInfo" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="sQueryOperReq" type="entity" ref="imsinner.SQueryOperReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imsinner.do_queryOperInfoResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryOrganizeInfo" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="sQueryOrgReq" type="entity" ref="imsinner.SQueryOrgReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imsinner.do_queryOrgInfoResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryStaffList" scope="both">
+      <parameter name="oper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="req" type="entity" ref="imsinner.SQueryStaffListReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imsinner.do_queryStaffListResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryCustProfileByCustId" scope="both">
+      <parameter name="sOperInfo" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="cust_id" type="Long" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imsinner.do_queryCustProfileResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryAcctInvolveInfo" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="sQeryAccctInfoReq" type="entity" ref="imsinner.SQeryAccctInfoReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imsinner.do_queryAcctInvolveInfoResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryUserStsInfo" scope="both">
+      <parameter name="sOperInfo" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="SQueryUserStsInfoReq" type="entity" ref="imsinner.SQueryUserStsInfoReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imsinner.do_queryUserStsInfoResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_query4Acct" scope="service-only">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="queryTypeList" type="entity" ref="imsintf.QueryTypeList" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="queryParam" type="entity" ref="imsintf.SQueryParam" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imsintf.do_queryResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_query3BeanHisList" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="sQuery3BeanHisReq" type="entity" ref="imsinner.SQuery3BeanHisReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="imsinner.Do_query3BeanHisRespose" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryAcctInRoute" scope="both">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="qryAcctInRouteReq" type="entity" ref="innerqry.QryAcctInRouteReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="innerqry.do_queryAcctInRouteResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryAcctInfoInRoute" scope="service-only">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="qryAcctInRouteReq" type="entity" ref="innerqry.QryAcctInRouteReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="innerqry.do_QryAcctInfoInRouteByUserIdResponse" collection="none" primitive="false"/>
+    </method>
+    <method name="do_queryPhoneWithTime" scope="service-only">
+      <parameter name="sOper" type="entity" ref="imsintf.SOperInfo" primitive="false" collection="none" output="false" input="true"/>
+      <parameter name="sQueryPhoneWithTimeReq" type="entity" ref="innerqry.SQueryPhoneWithTimeReq" primitive="false" collection="none" output="false" input="true"/>
+      <return-type type="entity" ref="innerqry.do_queryPhoneWithTimeResponse" collection="none" primitive="false"/>
+    </method>
+  </service>
+</module>

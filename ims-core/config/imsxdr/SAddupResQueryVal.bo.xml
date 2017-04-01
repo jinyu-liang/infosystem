@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SAddupResQueryVal" remark="" sdl="true" sdl-module="MXdr" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+<fields>
+<field name="acctId" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="ownerId" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="ownerType" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="productId" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="priceId" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="measureId" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="ratingItemId" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="validDateTime" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="expireDateTime" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="ratingValue" primitive="Yes" remark="" sdl="true" type="Long"/>
+</fields>
+</entity>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="PmCapLimitDtl" schema="PD" table="PM_CAP_LIMIT_DTL">
+  <fields>
+    <field name="priceRuleId" type="Integer" column="PRICE_RULE_ID" isPk="true(not generated)" primitive="No" remark="rating rule ID" null-able="true" columnDef="AutoIncrement"/>
+    <field name="capLimitId" type="Integer" column="CAP_LIMIT_ID" primitive="No" remark="Checking rule ID" null-able="true" columnDef="Int"/>
+    <field name="value" type="Long" column="VALUE" primitive="No" remark="Rule expression" null-able="true" columnDef="BigInt"/>
+    <field name="measureId" type="Integer" column="MEASURE_ID" primitive="No" remark="Charge measurement unit" null-able="false" columnDef="Int"/>
+    <field name="notificationId" type="Integer" column="NOTIFICATION_ID" primitive="No" remark="Business notification" null-able="true" columnDef="Int"/>
+    <field name="cycleUnit" type="Integer" column="CYCLE_UNIT" primitive="No" remark="Specific cycle ,for example one cycle is 3 days ,so that the value of this column  is 3
+-1 means no cycle limit" null-able="true" columnDef="Int"/>
+    <field name="cycleType" type="Integer" column="CYCLE_TYPE" primitive="No" remark="Type of cycle
+
+1:using calendar day as cycle type 
+2:using calendar week as cycle type 
+3:using calendar month as cycle type 
+4:using calendar year as cycle type 
+5:using dynamic month as cycle type，such as ORACLE provides the  function of  add_months()
+6:using the offset of  hours as cycle type 
+7:using the offset of (calendar) month as cycle type" null-able="true" columnDef="Int"/>
+  </fields>
+</entity>

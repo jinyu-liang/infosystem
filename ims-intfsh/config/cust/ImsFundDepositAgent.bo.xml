@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="ImsFundDepositAgent" remark="" schema="cd" table="IMS_FUND_DEPOSIT_AGENT" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="ACCT_ID" columnDef="Int" isPk="true(not generated)" name="acctId" null-able="false" primitive="No" remark="????" type="Long"/>
+        <field column="PASSWORD" columnDef="Varchar" columnSize="32" name="password" null-able="false" primitive="No" remark="????" type="String"/>
+        <field column="CREATE_DATE" columnDef="Date" name="createDate" null-able="false" primitive="No" remark="????" type="Date"/>
+        <field column="VALID_DATE" columnDef="Date" isPk="true(not generated)" name="validDate" null-able="false" primitive="No" remark="????" type="Date"/>
+        <field column="EXPIRE_DATE" columnDef="Date" name="expireDate" null-able="false" primitive="No" remark="????" type="Date"/>
+        <field column="SO_NBR" columnDef="Int" name="soNbr" primitive="No" remark="???" type="Long"/>
+        <field column="SO_DATE" columnDef="Date" name="soDate" primitive="No" remark="????" type="Date"/>
+        <field column="NOTE" columnDef="Varchar" columnSize="128" name="note" primitive="No" remark="??" type="String"/>
+    </fields>
+</entity>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="SProductOrderResultList" transient="true">
+<fields>
+<complex-field name="SProductOrderResultList_Item" type="entity" ref="imsintf.SProductOrderResult" collection="array" primitive="false"/>
+</fields>
+</entity>

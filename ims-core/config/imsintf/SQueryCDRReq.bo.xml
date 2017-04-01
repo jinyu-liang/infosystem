@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="SQueryCDRReq" transient="true">
+  <fields>
+    <field name="phone_id" type="String" isPk="false" primitive="Auto" tree-foreign-key="false" null-able="false"/>
+    <field name="acct_id" type="Long" isPk="false" primitive="No" null-able="true"/>
+    <field name="payment_mode" type="Short" isPk="false" primitive="No" null-able="true"/>
+    <field name="start_date" type="String" isPk="false" primitive="Auto" tree-foreign-key="false" null-able="false"/>
+    <field name="end_date" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="domestic_international" type="Short" isPk="false" primitive="No" null-able="true"/>
+    <complex-field name="queryCDRTypeList" type="entity" ref="imsintf.queryCDRTypeList" collection="none" primitive="false"/>
+    <complex-field name="callUsageCondition" type="entity" ref="imsintf.CallUsageCondition" collection="none" primitive="false"/>
+    <field name="sort_by" type="Short" isPk="false" primitive="No" null-able="true"/>
+    <field name="heading_style" type="Short" isPk="false" primitive="No" null-able="true"/>
+    <field name="additional_info" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="invoice_no" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="offLineFlag" type="Short" isPk="false" primitive="No" null-able="true"/>
+  </fields>
+</entity>

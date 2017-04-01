@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="ImsTermCycleRst" schema="CD" table="IMS_TERM_CYCLE_RST">
+  <fields>
+    <field name="id" type="Long" column="ID" isPk="true(not generated)" remark="???id" null-able="false" columnDef="NUMBER" columnSize="15"/>
+    <field name="acctId" type="Long" column="ACCT_ID" isPk="false" remark="??id " null-able="true" columnDef="NUMBER" columnSize="15"/>
+    <field name="actionDate" type="Date" column="ACTION_DATE" isPk="false" remark="????" null-able="true" columnDef="DATE" columnSize="7"/>
+    <field name="billSts" type="Integer" column="BILL_STS" isPk="false" remark="????" null-able="true" columnDef="NUMBER" columnSize="2"/>
+    <field name="createDate" type="Date" column="CREATE_DATE" isPk="false" remark="????" null-able="true" columnDef="DATE" columnSize="7"/>
+    <field name="soNbr" type="Long" column="SO_NBR" isPk="false" remark="???" null-able="true" columnDef="NUMBER" columnSize="15"/>
+    <field name="sts" type="Integer" column="STS" isPk="false" remark="ts????" null-able="true" columnDef="NUMBER" columnSize="2"/>
+    <field name="dealDate" type="Date" column="DEAL_DATE" isPk="false" remark="????" null-able="true" columnDef="DATE" columnSize="7"/>
+    <field name="dealCount" type="Integer" column="DEAL_COUNT" isPk="false" remark="???" null-able="true" columnDef="NUMBER" columnSize="8"/>
+    <field name="errorCode" type="Integer" column="ERROR_CODE" isPk="false" remark="???" null-able="true" columnDef="NUMBER" columnSize="8"/>
+    <field name="errorMsg" type="String" column="ERROR_MSG" isPk="false" remark="????" null-able="true" columnDef="VARCHAR2" columnSize="256"/>
+  </fields>
+</entity>

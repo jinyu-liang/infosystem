@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="SQry3BeanHisRet">
+  <root ref="imsintf.BaseResponse"/>
+  <fields>
+    <field name="objectId" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="objectType" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="acctId" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="validDate" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="expireDate" type="String" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="IGroup" remark="" schema="JD" table="I_GROUP" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="GROUP_ID" columnDef="BigInt" name="groupId" primitive="No" remark="" type="Long"/>
+        <field column="GROUP_TYPE" columnDef="Int" name="groupType" primitive="No" remark="" type="Integer"/>
+        <field column="MAX_MEMBER_NUMBER" columnDef="Int" name="maxMemberNumber" primitive="No" remark="" type="Integer"/>
+        <field column="CONTACT_PHONE" columnDef="Varchar" columnSize="28" name="contactPhone" primitive="No" remark="" type="String"/>
+        <field column="GROUP_NAME" columnDef="Varchar" columnSize="64" name="groupName" primitive="No" remark="" type="String"/>
+        <field column="STATUS" columnDef="Int" name="status" primitive="No" remark="" type="Integer"/>
+        <field column="PROV_CODE" columnDef="Int" name="provCode" primitive="No" remark="" type="Integer"/>
+        <field column="COUNTY_CODE" columnDef="Int" name="countyCode" primitive="No" remark="" type="Integer"/>
+        <field column="REGION_CODE" columnDef="Int" name="regionCode" primitive="No" remark="" type="Integer"/>
+        <field column="VALID_DATE" columnDef="TimeStamp" name="validDate" primitive="No" remark="" type="Date"/>
+        <field column="EXPIRE_DATE" columnDef="TimeStamp" name="expireDate" primitive="No" remark="" type="Date"/>
+        <field column="FREERES_SHARE_FLAG" columnDef="Int" name="freeresShareFlag" primitive="No" remark="" type="Integer"/>
+        <field column="OPER_TYPE" columnDef="Int" name="operType" primitive="No" remark="" type="Integer"/>
+        <field column="SO_NBR" columnDef="BigInt" name="soNbr" primitive="No" remark="" type="Long"/>
+        <field column="COMMIT_DATE" columnDef="TimeStamp" name="commitDate" primitive="No" remark="" type="Date"/>
+        <field column="BUSI_TAG" columnDef="Varchar" columnSize="1" isPk="false" name="busiTag" null-able="true" primitive="No" remark="" type="String"/>
+    </fields>
+</entity>

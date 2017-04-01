@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<artifactId>ims-send</artifactId>
+	<version>${ims_version}</version>
+	<packaging>war</packaging>
+	<name>ims-send</name>
+	<url>http://maven.apache.org</url>
+
+	<parent>
+		<groupId>com.ailk.openbilling.ims.cmcc</groupId>
+		<artifactId>infosystem</artifactId>
+		<version>0.0.4-SNAPSHOT</version>
+	</parent>
+	<dependencies>
+		<dependency>
+			<groupId>org.jef</groupId>
+			<artifactId>jef-jetty</artifactId>
+			<version>7.31</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.jef</groupId>
+			<artifactId>jef-jasper</artifactId>
+			<version>1.0.0</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.jef</groupId>
+			<artifactId>xml-apis</artifactId>
+			<version>2.0.2</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>xerces</groupId>
+			<artifactId>xerces</artifactId>
+			<version>3.0.0</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<version>2.5</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet.jsp</groupId>
+			<artifactId>jsp-api</artifactId>
+			<version>2.1</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.geronimo.specs</groupId>
+			<artifactId>geronimo-stax-api_1.0_spec</artifactId>
+			<version>1.0.1</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.thoughtworks.xstream</groupId>
+			<artifactId>xstream</artifactId>
+			<version>1.3</version>
+		</dependency>
+		<dependency>
+			<groupId>com.oracle</groupId>
+			<artifactId>ojdbc5</artifactId>
+			<version>1.0</version>
+		</dependency>
+		
+	</dependencies>
+	<profiles>
+		<profile>
+			<id>devel</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<properties>
+				<package.environment>devel</package.environment>
+			</properties>
+		</profile>
+		<profile>
+			<id>notest</id>
+			<properties>
+				<package.environment>hudson</package.environment>
+			</properties>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>ailk.easyframe</groupId>
+						<artifactId>easybuilder_maven_plugin</artifactId>
+						<version>${easyframe_version}</version>
+						<executions>
+							<execution>
+								<id>all_generate</id>
+								<phase>generate-sources</phase>
+								<goals>
+									<goal>generate</goal>
+								</goals>
+							</execution>
+							<execution>
+								<id>all_enhance</id>
+								<phase>process-classes</phase>
+								<goals>
+									<goal>enhance</goal>
+								</goals>
+							</execution>
+							<execution>
+								<id>api</id>
+								<phase>process-classes</phase>
+								<goals>
+									<goal>enhance</goal>
+								</goals>
+								<configuration>
+									<path>${basedir}/target/api/classes</path>
+								</configuration>
+							</execution>
+							<execution>
+								<id>impl</id>
+								<phase>process-classes</phase>
+								<goals>
+									<goal>enhance</goal>
+								</goals>
+								<configuration>
+									<path>${basedir}/target/impl/classes</path>
+								</configuration>
+							</execution>
+						</executions>
+					</plugin>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-surefire-plugin</artifactId>
+						<configuration>
+							<forkMode>pertest</forkMode>
+							<argLine>-Xms512m -Xmx512m -XX:PermSize=64M -XX:MaxPermSize=128M
+							</argLine>
+							<skip>true</skip>
+							<testFailureIgnore>true</testFailureIgnore>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+		<profile>
+			<id>hudson</id>
+			<properties>
+				<package.environment>hudson</package.environment>
+			</properties>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>ailk.easyframe</groupId>
+						<artifactId>easybuilder_maven_plugin</artifactId>
+						<version>${easyframe_version}</version>
+						<executions>
+							<execution>
+								<id>all_generate</id>
+								<phase>generate-sources</phase>
+								<goals>
+									<goal>generate</goal>
+								</goals>
+							</execution>
+							<execution>
+								<id>all_enhance</id>
+								<phase>process-classes</phase>
+								<goals>
+									<goal>enhance</goal>
+								</goals>
+							</execution>
+							<execution>
+								<id>api</id>
+								<phase>process-classes</phase>
+								<goals>
+									<goal>enhance</goal>
+								</goals>
+								<configuration>
+									<path>${basedir}/target/api/classes</path>
+								</configuration>
+							</execution>
+							<execution>
+								<id>impl</id>
+								<phase>process-classes</phase>
+								<goals>
+									<goal>enhance</goal>
+								</goals>
+								<configuration>
+									<path>${basedir}/target/impl/classes</path>
+								</configuration>
+							</execution>
+						</executions>
+					</plugin>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-surefire-plugin</artifactId>
+						<configuration>
+							<forkMode>pertest</forkMode>
+							<argLine>-Xms512m -Xmx512m -XX:PermSize=64M -XX:MaxPermSize=128M
+							</argLine>
+							<skip>true</skip>
+							<testFailureIgnore>true</testFailureIgnore>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.mortbay.jetty</groupId>
+				<artifactId>maven-jetty-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>2.1</version>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+						<configuration>
+							<classifier>all</classifier>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>build-helper-maven-plugin</artifactId>
+				<version>1.5</version>
+				<executions>
+					<execution>
+						<id>add-source</id>
+						<phase>generate-sources</phase>
+						<goals>
+							<goal>add-source</goal>
+						</goals>
+						<configuration>
+							<sources>
+								<source>framework</source>
+							</sources>
+						</configuration>
+					</execution>
+					<execution>
+						<id>add-jar</id>
+						<phase>package</phase>
+						<goals>
+							<goal>attach-artifact</goal>
+						</goals>
+						<configuration>
+							<artifacts>
+								<artifact>
+									<file>target/${project.name}-${project.version}-impl.jar</file>
+									<type>jar</type>
+									<classifier>impl</classifier>
+								</artifact>
+								<artifact>
+									<file>target/${project.name}-${project.version}-api.jar</file>
+									<type>jar</type>
+									<classifier>api</classifier>
+								</artifact>
+							</artifacts>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<artifactId>maven-antrun-plugin</artifactId>
+				<version>1.5</version>
+				<dependencies>
+					<dependency>
+						<groupId>com.sun</groupId>
+						<artifactId>tools</artifactId>
+						<version>1.5.0</version>
+						<scope>system</scope>
+						<systemPath>${java.home}/../lib/tools.jar</systemPath>
+					</dependency>
+				</dependencies>
+				<executions>
+					<execution><!-- 先编译出class -->
+						<id>compile_class</id>
+						<phase>compile</phase>
+						<goals>
+							<goal>run</goal>
+						</goals>
+						<configuration>
+							<tasks>
+								<property name="compile_classpath" refid="maven.compile.classpath" />
+								<!-- 编译api -->
+								<mkdir dir="target/api/classes" />
+								<javac debug="true" destdir="target/api/classes" source="1.5"
+									target="1.5">
+									<compilerarg line="-encoding UTF-8" />
+									<src path="framework" />
+									<classpath>
+										<pathelement location="target/classes" />
+										<pathelement path="${compile_classpath}" />
+									</classpath>
+								</javac>
+								<copy failonerror="false" includeEmptyDirs="false"
+									todir="target/api/classes">
+									<fileset dir="framework">
+										<exclude name="**/*.java" />
+									</fileset>
+								</copy>
+								<!-- 编译impl 包 -->
+								<mkdir dir="target/impl/classes" />
+								<javac debug="true" destdir="target/impl/classes" source="1.5"
+									target="1.5">
+									<compilerarg line="-encoding UTF-8" />
+									<src path="src/main/java" />
+									<classpath>
+										<pathelement location="target/classes" />
+										<pathelement path="${compile_classpath}" />
+									</classpath>
+								</javac>
+								<copy failonerror="false" includeEmptyDirs="false"
+									todir="target/impl/classes">
+									<fileset dir="src/main/resources">
+										<include name="**/*.*" />
+										<exclude name="**/ts.xml" />
+										<exclude name="**/jef.properties" />
+										<exclude name="**/log4j.properties" />
+										<exclude name="**/common-sdl.properties" />
+										<exclude name="**/interface_to_domain.properties" />
+										<exclude name="**/sdltester_svr.properties" />
+										<exclude name="**/send_datasource.xml" />
+										<exclude name="**/oracle-*.properties" />
+										<exclude name="**/ehcache-module.xml" />
+										<exclude name="**/beanRefContext.xml" />
+										<exclude name="**/config-client.properties" />
+									</fileset>
+								</copy>
+								<!-- 打包的时候加入config目录 ljc -->
+								<mkdir dir="target/api/classes/META-INF/config" />
+								<copy failonerror="false" includeEmptyDirs="false"
+									todir="target/api/classes/META-INF/config">
+									<fileset dir="config">
+										<include name="**/*.*" />
+										<exclude name="**/.svn" />
+									</fileset>
+								</copy>
+							</tasks>
+						</configuration>
+					</execution>
+					<!-- 增强由插件在process-classes阶段完成，后并打包 -->
+					<execution>
+						<id>package_class</id>
+						<phase>package</phase>
+						<goals>
+							<goal>run</goal>
+						</goals>
+						<configuration>
+							<tasks>
+								<!-- 生成单独api 包 -->
+								<jar destfile="target/${project.name}-${project.version}-api.jar">
+									<fileset dir="target/api/classes">
+										<include name="**/*.*" />
+									</fileset>
+								</jar>
+								<!-- 生成单独impl 包 -->
+								<jar destfile="target/${project.name}-${project.version}-impl.jar">
+									<fileset dir="target/impl/classes">
+										<include name="**/*.*" />
+									</fileset>
+								</jar>
+							</tasks>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-antrun-plugin</artifactId>
+				<version>1.3</version>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<goals>
+							<goal>run</goal>
+						</goals>
+						<configuration>
+							<tasks>
+								<taskdef resource="net/sf/antcontrib/antcontrib.properties"
+									classpath="${user.home}/.m2/repository/ant-contrib/ant-contrib/1.0b2/ant-contrib-1.0b2.jar" />
+								<available file="../deal_file_build.xml" property="existFile" />
+								<if>
+									<equals arg1="${existFile}" arg2="true" />
+									<then>
+										<ant antfile="../deal_file_build.xml" target="deal_resources">
+											<property name="dealFile" value="${dealFile}" /><!--需要额外处理的文件列表 -->
+											<property name="artifactName"
+												value="${project.artifactId}-${project.version}" />
+											<property name="package" value="war" />
+										</ant>
+									</then>
+									<else>
+										<echo>####### skip dealing file ,because
+											../deal_file_build.xml dose not exist!</echo>
+									</else>
+								</if>
+
+								<available file="target/${project.artifactId}-${project.version}.war"
+									property="existArtifact" />
+								<if>
+									<equals arg1="${existArtifact}" arg2="true" />
+									<then>
+									</then>
+									<else>
+										<fail message="****** FAILURE" />
+									</else>
+								</if>
+							</tasks>
+						</configuration>
+					</execution>
+				</executions>
+				<dependencies>
+					<dependency>
+						<groupId>org.apache.ant</groupId>
+						<artifactId>ant</artifactId>
+						<version>1.8.2</version>
+					</dependency>
+					<dependency>
+						<groupId>org.apache.ant</groupId>
+						<artifactId>ant-launcher</artifactId>
+						<version>1.8.2</version>
+					</dependency>
+				</dependencies>
+			</plugin>
+		</plugins>
+	</build>
+	<repositories>
+		<repository>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+			<id>central</id>
+			<url>*</url>
+		</repository>
+	</repositories>
+
+</project>

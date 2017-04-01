@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="CustomerRet">
+  <root ref="imsinner.BaseQueryRet"/>
+  <fields>
+    <field name="cust_id" type="Long" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="cust_type" type="Short" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="cust_title" type="String" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="sub_cust_type" type="Short" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="family_name" type="String" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="first_name" type="String" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="middle_name" type="String" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="country_id" type="Short" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="prov_code" type="Short" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="region_code" type="Short" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="cust_rank" type="Short" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="cust_segment" type="Short" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="birthday" type="String" isPk="false" primitive="Auto" tree-foreign-key="false" null-able="true"/>
+    <field name="gender" type="Short" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="reg_name" type="String" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="reg_type" type="Short" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="reg_nbr" type="String" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="issue_date" type="String" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="language" type="Short" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="create_date" type="String" isPk="false" primitive="Auto" tree-foreign-key="false" null-able="true"/>
+    <field name="valid_date" type="String" isPk="false" primitive="Auto" tree-foreign-key="false" null-able="true"/>
+    <field name="tax_exempt_code" type="String" isPk="false" primitive="Auto" tree-foreign-key="false" null-able="true"/>
+    <field name="vat_name" type="String" isPk="false" primitive="Auto" tree-foreign-key="false" null-able="true"/>
+    <field name="real_name_date" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="real_name_sts" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <complex-field name="list_ext_param" type="entity" ref="imsintf.ExtendParamList" collection="none" primitive="false"/>
+    <complex-field name="sCustomerConact" type="entity" ref="imsintf.SContact" collection="list" primitive="false"/>
+    <field name="customer_name" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="ext1" type="String" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

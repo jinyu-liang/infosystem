@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="ImsEventDef" remark="" schema="CD" table="IMS_EVENT_DEF" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="EVENT_ID" columnDef="AutoIncrement" isPk="true" name="eventId" primitive="No" remark="" type="Long"/>
+        <field column="EVENT_TYPE" columnDef="Int" name="eventType" null-able="false" primitive="No" remark="" type="Integer"/>
+        <field column="EVENT_CLASS" columnDef="Int" name="eventClass" null-able="false" primitive="No" remark="" type="Integer"/>
+        <field column="SPEC_ID" columnDef="BigInt" name="specId" null-able="false" primitive="No" remark="" type="Long"/>
+        <field column="RULE_ID" columnDef="BigInt" name="ruleId" null-able="false" primitive="No" remark="" type="Long"/>
+        <field column="DESCRIPTION" columnDef="Varchar" columnSize="255" name="description" primitive="No" remark="" type="String"/>
+        <field column="CREATE_DATE" columnDef="TimeStamp" name="createDate" null-able="false" primitive="No" remark="" type="Date"/>
+    </fields>
+</entity>

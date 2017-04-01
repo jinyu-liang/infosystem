@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="do_queryUserTargetStsInfoRespons" transient="true">
+  <root ref="imsintf.BaseResponse"/>
+  <fields>
+    <field name="userId" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="phoneId" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="billingType" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="sts" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <complex-field name="newStsInfoList" type="List&lt;entity&gt;" ref="imsinner.SUserStsInfo" collection="none" primitive="false"/>
+    <field name="unbillingFlag" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="userrequestFlag" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="frauldFlag" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="reratingFlag" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="osSts" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="validDate" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="expireDate" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="createDate" type="String" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

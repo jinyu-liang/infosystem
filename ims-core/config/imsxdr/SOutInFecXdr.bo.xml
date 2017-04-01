@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SOutInFecXdr" remark="" sdl="true" sdl-module="MXdr" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+<fields>
+<complex-field collection="list" name="transformFreeresInfo" primitive="false" ref="imsxdr.STransformFreeresInfo" remark="" sdl="true" type="entity"/>
+<complex-field collection="list" name="afterMakecallInfo" primitive="false" ref="imsxdr.SAfterMakeCall" remark="" sdl="true" type="entity"/>
+<complex-field collection="list" name="zoneAlertList" primitive="false" ref="imsxdr.SZoneAlert" remark="" sdl="true" type="entity"/>
+<complex-field collection="list" name="packageAlertList" primitive="false" ref="imsxdr.SPackageAlert" remark="" sdl="true" type="entity"/>
+<complex-field collection="list" name="assetAlertList" primitive="false" ref="imsxdr.SAssetAlert" remark="" sdl="true" type="entity"/>
+<complex-field collection="list" name="aocAssetList" primitive="false" ref="imsxdr.SAocAsset" remark="" sdl="true" type="entity"/>
+<complex-field collection="list" name="urlAssetList" primitive="false" ref="imsxdr.SUrlAsset" remark="" sdl="true" type="entity"/>
+<complex-field collection="list" name="urlAccumulateAlarm" primitive="false" ref="imsxdr.SAccumulatePriceUrlAddr" remark="" sdl="true" type="entity"/>
+<complex-field collection="list" name="aocAccumulateAlarm" primitive="false" ref="imsxdr.SAccumulatePriceAocCode" remark="" sdl="true" type="entity"/>
+<field name="authType" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<complex-field collection="list" name="accumulatePriceAdjustInfo" primitive="false" ref="imsxdr.SAccumulateAdjustMiddleInfo" remark="" sdl="true" type="entity"/>
+<complex-field collection="map&lt;Integer,?&gt;" name="preStdChargingInfo" primitive="false" ref="imsxdr.SPreStdChargingInfo" remark="" sdl="true" type="entity"/>
+</fields>
+</entity>

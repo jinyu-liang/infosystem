@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SSlaAlert" remark="" sdl="true" sdl-module="MXdr" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+<fields>
+<complex-field collection="none" name="alarmCode" primitive="false" ref="imsxdr.SAocCode" remark="" sdl="true" type="entity"/>
+<complex-field collection="none" name="url" primitive="false" ref="imsxdr.SUrlAddr" remark="" sdl="true" type="entity"/>
+</fields>
+</entity>

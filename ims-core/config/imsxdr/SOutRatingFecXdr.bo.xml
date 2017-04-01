@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SOutRatingFecXdr" remark="" sdl="true" sdl-module="MXdr" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+<fields>
+<complex-field collection="list" name="accPriceAlarmCode" primitive="false" ref="imsxdr.SAccumulatePriceAocCode" remark="" sdl="true" type="entity"/>
+<complex-field collection="list" name="accPriceUrlAddr" primitive="false" ref="imsxdr.SAccumulatePriceUrlAddr" remark="" sdl="true" type="entity"/>
+<complex-field collection="list" name="assetAlarmCode" primitive="false" ref="imsxdr.SAocAsset" remark="" sdl="true" type="entity"/>
+<complex-field collection="list" name="assetUrlAddr" primitive="false" ref="imsxdr.SUrlAsset" remark="" sdl="true" type="entity"/>
+<complex-field collection="list" name="sla" primitive="false" ref="imsxdr.SSlaValue" remark="" sdl="true" type="entity"/>
+<complex-field collection="none" name="gsu" primitive="false" ref="imsxdr.SGsuValue" remark="" sdl="true" type="entity"/>
+<complex-field collection="none" name="slaAlarm" primitive="false" ref="imsxdr.SSlaAlert" remark="" sdl="true" type="entity"/>
+<complex-field collection="none" name="lastQuotaAlarm" primitive="false" ref="imsxdr.SLastQuotaAlert" remark="" sdl="true" type="entity"/>
+<field name="vt" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="vqt" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="tqt" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="qht" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="qct" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="inReleaseDeal" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<complex-field collection="list" name="zoneAlarmAoc" primitive="false" ref="imsxdr.SAocZone" remark="" sdl="true" type="entity"/>
+<complex-field collection="list" name="zoneAlarmUrl" primitive="false" ref="imsxdr.SUrlZone" remark="" sdl="true" type="entity"/>
+<complex-field collection="none" name="ocsRejectCause" primitive="false" ref="imsxdr.SOcsRejectCause" remark="" sdl="true" type="entity"/>
+<complex-field collection="none" name="beforeMakecallAoc" primitive="false" ref="imsxdr.SBeforeMakeCallAoc" remark="" sdl="true" type="entity"/>
+<complex-field collection="none" name="beforeMakecallUrl" primitive="false" ref="imsxdr.SBeforeMakeCallUrl" remark="" sdl="true" type="entity"/>
+<complex-field collection="map&lt;String,?&gt;" name="rgName" primitive="false" ref="imsxdr.SRgName" remark="" sdl="true" type="entity"/>
+<complex-field collection="list" name="urlAccumulateAlarm" primitive="false" ref="imsxdr.SAccumulatePriceUrlAddr" remark="" sdl="true" type="entity"/>
+<complex-field collection="list" name="aocAccumulateAlarm" primitive="false" ref="imsxdr.SAccumulatePriceAocCode" remark="" sdl="true" type="entity"/>
+</fields>
+</entity>

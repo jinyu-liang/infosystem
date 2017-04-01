@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="PmComponentProdofferPrice" schema="pd" table="PM_COMPONENT_PRODOFFER_PRICE">
+  <fields>
+    <field name="priceId" type="Integer" column="PRICE_ID" isPk="true" remark="Pricing identifier, multiple pricing identifiers can be included in one pricing plan" null-able="false" columnDef="NUMBER" columnSize="9"/>
+    <field name="name" type="String" column="NAME" isPk="false" remark="A short description of pricing name." null-able="false" columnDef="VARCHAR2" columnSize="256"/>
+    <field name="priceType" type="Integer" column="PRICE_TYPE" isPk="false" remark="0: Standard tariff
+1: accumulate price
+2: accumulate allowance
+3: recurring  free resource
+4:  one time free resource
+5: discount on another discounted eligible charge
+6: tax refund
+7: recurring charge
+8: billing discount
+9: Handling Fee
+10: 业务赠送
+11: 业务累计" null-able="false" columnDef="NUMBER" columnSize="2"/>
+    <field name="description" type="String" column="DESCRIPTION" isPk="false" remark="Detailed description of pricing" null-able="true" columnDef="VARCHAR2" columnSize="1024"/>
+    <field name="taxIncluded" type="Integer" column="TAX_INCLUDED" isPk="false" null-able="false" columnDef="NUMBER" columnSize="1"/>
+  </fields>
+</entity>

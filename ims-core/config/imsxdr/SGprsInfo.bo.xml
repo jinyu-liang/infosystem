@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SGprsInfo" remark="" sdl="true" sdl-module="MXdr" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+<fields>
+<field name="redirectAddress" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="dealDatetime" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="apnniId" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="rgType" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="rggGroupId" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="rggFinishedFlag" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="bearerId" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="upRating" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="dlRating" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="ruleName" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="ruleBaseName" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="reportReason" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="redirectFlag" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="bearerCode" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="gprsProcessId" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="noRedirect" primitive="Yes" remark="" sdl="true" type="Short"/>
+</fields>
+</entity>

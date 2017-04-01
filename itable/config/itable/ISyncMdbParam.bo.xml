@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="ISyncMdbParam" schema="JD" table="I_SYNC_MDB_PARAM">
+  <fields>
+    <field name="seqId" type="Long" column="SEQ_ID" isPk="true(not generated)" primitive="No" remark="小索引表中的主键" null-able="true" columnDef="AutoIncrement"/>
+    <field name="soNbr" type="Long" column="SO_NBR" primitive="No" remark="接口流水号" null-able="true" columnDef="Int"/>
+    <field name="paramObj" type="byte[]" column="PARAM_OBJ" primitive="No" remark="上发mdb参数大对象: SSyncAllInfo" null-able="true" columnDef="Blob"/>
+    <field name="syncDate" type="Date" column="SYNC_DATE" primitive="No" null-able="true" columnDef="Date"/>
+    <field name="dataType" type="Integer" column="DATA_TYPE" primitive="No" remark="mdb数据类型:1普通增量上发，2过户上发老的MDB失效的参数，3IVR" null-able="false" columnDef="Int"/>
+  </fields>
+</entity>

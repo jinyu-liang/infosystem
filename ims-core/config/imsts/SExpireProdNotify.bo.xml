@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SExpireProdNotify" remark="" sdl="true" sdl-module="MImsTsDef" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+    <fields>
+        <field name="id" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="prodId" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="offerId" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="receivePhone" primitive="Yes" remark="" sdl="true" type="String"/>
+        <field name="validDate" primitive="Yes" remark="" sdl="true" type="Date"/>
+        <field name="expireDate" primitive="Yes" remark="" sdl="true" type="Date"/>
+        <field name="notificationId" primitive="Yes" remark="" sdl="true" type="Integer"/>
+        <field name="freeResFlag" primitive="Yes" remark="" sdl="true" type="Integer"/>
+        <field name="createDate" primitive="Yes" remark="" sdl="true" type="Date"/>
+        <field name="sts" primitive="Yes" remark="" sdl="true" type="Integer"/>
+        <field name="custId" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="acctId" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="userId" primitive="Yes" remark="" sdl="true" type="Long"/>
+    </fields>
+</entity>

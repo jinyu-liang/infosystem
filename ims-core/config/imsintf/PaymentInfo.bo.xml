@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="PaymentInfo">
+  <fields>
+    <field name="outer_cust_id" type="String" isPk="false" primitive="Auto" tree-foreign-key="false" null-able="true"/>
+    <field name="cust_id" type="Long" isPk="false" primitive="No" null-able="true"/>
+    <field name="outer_acct_id" type="String" isPk="false" primitive="Auto" tree-foreign-key="false" null-able="true"/>
+    <field name="acct_id" type="Long" isPk="false" primitive="No" null-able="true"/>
+    <field name="phone_id" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="pay_type" type="Short" isPk="false" primitive="No" null-able="true"/>
+    <field name="currency" type="Short" isPk="false" primitive="No" null-able="true"/>
+    <field name="reference_num" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="measure_id" type="Integer" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <complex-field name="paymentList" type="entity" ref="imsintf.PaymentItemList" collection="none" primitive="false"/>
+  </fields>
+</entity>

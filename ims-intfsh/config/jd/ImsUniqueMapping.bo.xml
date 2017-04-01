@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="ImsUniqueMapping" schema="JD" table="IMS_UNIQUE_MAPPING">
+  <fields>
+    <field name="outSoMode" type="String" column="OUT_SO_MODE" isPk="true(not generated)" primitive="Auto" null-able="false" columnDef="VARCHAR2" columnSize="3"/>
+    <field name="outSoNbr" type="String" column="OUT_SO_NBR" isPk="true(not generated)" primitive="Auto" null-able="false" columnDef="VARCHAR2" columnSize="128"/>
+    <field name="outSoDate" type="Date" column="OUT_SO_DATE" isPk="false" primitive="Auto" null-able="true" columnDef="DATE" columnSize="7"/>
+    <field name="bosSoNbr" type="Long" column="BOS_SO_NBR" isPk="false" null-able="true" columnDef="NUMBER" columnSize="15"/>
+    <field name="bosSoDate" type="Date" column="BOS_SO_DATE" isPk="false" null-able="true" columnDef="DATE" columnSize="7"/>
+    <field name="accountId" type="Long" column="ACCOUNT_ID" isPk="false" null-able="true" columnDef="NUMBER" columnSize="15"/>
+  </fields>
+</entity>

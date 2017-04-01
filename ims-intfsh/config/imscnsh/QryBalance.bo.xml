@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="QryBalance" transient="true">
+  <fields>
+    <field name="phone_id" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="acct_id" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="resource_id" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="table_flag" type="Short" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="asset_item_id" type="Integer " isPk="false" primitive="Auto" null-able="true"/>
+    <field name="item_type" type="Short" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="product_id" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="calcul_fee_flag" type="Short" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="start_time" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="end_time" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="is_merge" type="Boolean" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

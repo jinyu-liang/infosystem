@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="Accumulate" transient="false">
+  <fields>  
+    <field name="product_id" type="Long" isPk="false" tree-foreign-key="false" null-able="true" enumAsAliasField="false"/>
+    <field name="offer_id" type="Long" isPk="false" tree-foreign-key="false" null-able="true" enumAsAliasField="false"/>
+    <field name="accumulate_item" type="Integer" isPk="false" tree-foreign-key="false" null-able="false"/>
+    <field name="accumulate_name" type="String" isPk="false" tree-foreign-key="false" null-able="false"/>
+    <field name="accumulate_amount" type="Double" isPk="false" tree-foreign-key="false" null-able="false"/>
+    <field name="accumulate_pay_mode" type="Short" isPk="false" primitive="No" null-able="true"/>
+  </fields>
+</entity>

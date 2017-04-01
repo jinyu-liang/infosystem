@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="ImsServiceNotify" schema="JD" table="IMS_SERVICE_NOTIFY">
+  <fields>
+    <field name="userId" type="Long" column="USER_ID" isPk="false" remark="用户ID" null-able="true" columnDef="NUMBER" columnSize="15"/>
+    <field name="actionType" type="Long" column="ACTION_TYPE" isPk="false" remark="操作类型" null-able="true" columnDef="NUMBER" columnSize="15"/>
+    <field name="commitDate" type="Date" column="COMMIT_DATE" isPk="false" remark="提交时间" null-able="true" columnDef="DATE" columnSize="7"/>
+  </fields>
+</entity>

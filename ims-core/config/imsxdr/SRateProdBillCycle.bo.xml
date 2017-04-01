@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SRateProdBillCycle" remark="" sdl="true" sdl-module="MXdr" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+<fields>
+<field name="offerProdId" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="doneCode" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="firstCycleDateTime" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="cycleUnit" primitive="Yes" remark="" sdl="true" type="Short"/>
+<field name="cycleType" primitive="Yes" remark="" sdl="true" type="Short"/>
+<field name="validDateTime" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="expireDateTime" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="cycleCount" primitive="Yes" remark="" sdl="true" type="Integer"/>
+</fields>
+</entity>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SResSevCycle" remark="" sdl="true" sdl-module="MImsSyncDef" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+    <fields>
+        <field name="resourceId" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="serviceSpecId" primitive="Yes" remark="" sdl="true" type="Integer"/>
+        <field name="firstUsedDate" primitive="Yes" remark="" sdl="true" type="Long"/>
+    </fields>
+</entity>

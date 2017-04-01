@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="PmProrateDeductRuleDtl" schema="PD" table="PM_PRORATE_DEDUCT_RULE_DTL">
+  <fields>
+    <field name="prorateDeductRuleId" type="Integer" column="PRORATE_DEDUCT_RULE_ID" isPk="true(not generated)" primitive="No" remark="Half month deduction rule ID
+
+" null-able="false" columnDef="Int"/>
+    <field name="ruleClass" type="Integer" column="RULE_CLASS" isPk="true(not generated)" primitive="No" remark="0: common
+1: free resource
+2: accumulated reward&apos;s free resource
+3: recurring fee
+" null-able="false" columnDef="Int"/>
+    <field name="effectType" type="Integer" column="EFFECT_TYPE" isPk="true(not generated)" primitive="No" remark="0: used it when product is effective
+1: used it when product is expired
+" null-able="false" columnDef="Int"/>
+    <field name="prorateType" type="Integer" column="PRORATE_TYPE" primitive="No" remark="0: non-discount
+1: half cycle discount
+2: calculate as per days
+ or second
+" null-able="false" columnDef="Int"/>
+  </fields>
+</entity>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="DepositForSvrlPersonsReq">
+  <fields>
+    <field name="total_amount" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="spec_id" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <complex-field name="deposit_no_list" type="List&lt;entity&gt;" ref="imscnsh.DepositPersonIn" collection="none" primitive="false"/>
+    <field name="ext" type="String" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

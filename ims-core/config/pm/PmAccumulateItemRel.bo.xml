@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="PmAccumulateItemRel" remark="" schema="pd" table="PM_ACCUMULATE_ITEM_REL" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="ACCUMULATE_ITEM" columnDef="Int" isPk="true(not generated)" name="accumulateItem" null-able="false" primitive="No" remark="Accumulation item" type="Integer"/>
+        <field column="ITEM_ID" columnDef="Int" isPk="true(not generated)" name="itemId" null-able="false" primitive="No" remark="Accumulation item connected identifier of virtual-charge-item&#10;" type="Integer"/>
+        <field column="POLICY_ID" columnDef="Int" name="policyId" primitive="No" remark="" type="Integer"/>
+        <field column="PRIORITY" columnDef="Int" name="priority" primitive="No" remark="" type="Integer"/>
+        <field column="CAL_TYPE" columnDef="Int" name="calType" null-able="false" primitive="No" remark="0-ฑฃม๔&#10;1-ฯเผำกฐ+=กฑ&#10;2-ฯเผ๕กฐ-=กฑ&#10;1,2 มฝึึว้ฟ๖,สสำรำฺีสฮ๑ฟฦฤฟึะ,ะ้ฟฦฤฟบอีสฮ๑ฟฦฤฟึฎผไตฤนุฯต" type="Integer"/>
+        <field column="EXT_BILL_ITEM" columnDef="Int" name="extBillItem" primitive="No" remark="" type="Integer"/>
+    </fields>
+</entity>

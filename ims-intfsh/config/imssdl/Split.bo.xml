@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="Split">
+  <fields>
+    <field name="product_id" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="pay_acct_id" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="priority" type="Short" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="valid_date" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="expire_date" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="part_value" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="part_type" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="split_numerator" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="split_denominator" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="acct_id" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="user_id" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="split_type" type="Short" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="price_rule_id" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="SLifeCycleByAcctChgReq">
+  <fields>
+    <field name="resource_id" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="acct_id" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="extendDays" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="triggerEventType" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="reduceDays" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="capMaxFlag" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="nbalance" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="pbalance" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <complex-field name="SBalanceList" type="entity" ref="imsintf.SBalanceList" collection="none" primitive="false"/>
+    <field name="forceFlag" type="Short" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="balanceType" type="Short" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

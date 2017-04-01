@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="ImsSendRsp" remark="" schema="CD" table="IMS_SEND_RSP" xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="SO_NBR" columnDef="Varchar" columnSize="255" name="soNbr" primitive="No" remark="" type="String"/>
+        <field column="PROCESS_CONTENT" columnDef="Varchar" columnSize="255" name="processContent" primitive="No" remark="" type="String"/>
+        <field column="ORG_ID" columnDef="BigInt" name="orgId" primitive="No" remark="" type="Long"/>
+        <field column="DESTINATION" columnDef="BigInt" name="destination" primitive="No" remark="" type="Long"/>
+        <field column="OP_ID" columnDef="BigInt" name="opId" primitive="No" remark="" type="Long"/>
+        <field column="SO_DATE" columnDef="TimeStamp" name="soDate" primitive="No" remark="" type="Date"/>
+        <field column="DONE_TIME" columnDef="TimeStamp" name="doneTime" primitive="No" remark="" type="Date"/>
+        <field column="RSO_NBR" columnDef="Varchar" columnSize="255" name="rsoNbr" primitive="No" remark="" type="String"/>
+        <field column="EXTENDPARAM1" columnDef="Varchar" columnSize="255" name="extendparam1" primitive="No" remark="" type="String"/>
+        <field column="PROV_CODE" columnDef="Int" name="provCode" primitive="No" remark="" type="Integer"/>
+        <field column="DONE_CODE" columnDef="BigInt" name="doneCode" primitive="No" remark="" type="Long"/>
+        <field column="EXTENDPARAM2" columnDef="Varchar" columnSize="255" name="extendparam2" primitive="No" remark="" type="String"/>
+        <field column="BUSI_CODE" columnDef="Int" name="busiCode" primitive="No" remark="" type="Integer"/>
+        <field column="REMARK" columnDef="Varchar" columnSize="255" name="remark" primitive="No" remark="" type="String"/>
+        <field column="COUNTY_CODE" columnDef="Int" name="countyCode" primitive="No" remark="" type="Integer"/>
+        <field column="RESULT_CODE" columnDef="BigInt" name="resultCode" primitive="No" remark="" type="Long"/>
+        <field column="RESULT_MSG" columnDef="Varchar" columnSize="255" name="resultMsg" primitive="No" remark="" type="String"/>
+        <field column="ISNORMAL" columnDef="Int" name="isnormal" primitive="No" remark="" type="Integer"/>
+        <field column="TARGET" columnDef="BigInt" name="target" primitive="No" remark="" type="Long"/>
+        <field column="REGION_CODE" columnDef="Int" name="regionCode" primitive="No" remark="" type="Integer"/>
+        <field column="PHONE_NO" columnDef="Varchar" columnSize="255" name="phoneNo" primitive="No" remark="" type="String"/>
+        <field column="SO_MODE" columnDef="Int" name="soMode" primitive="No" remark="" type="Integer"/>
+    </fields>
+</entity>

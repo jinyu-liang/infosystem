@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?><beans xmlns="http://www.springframework.org/schema/beans" xmlns:aop="http://www.springframework.org/schema/aop" xmlns:context="http://www.springframework.org/schema/context" xmlns:jee="http://www.springframework.org/schema/jee" xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:tx="http://www.springframework.org/schema/tx" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd    http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd  http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd    http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd  http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd  http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-3.0.xsd">
+	
+<bean class="jef.common.Entry" id="_REMOTE_MODE"/>
+<bean class="com.ailk.easyframe.ws.JaxWsProxyBeanFactory" id="resourceService">
+<property name="url">
+<value>/resourceService</value>
+</property>
+<property name="serviceInterface">
+<value>com.ailk.easyframe.web.service.resource.ResourceService</value>
+</property>
+</bean>
+<bean class="com.ailk.easyframe.ws.JaxWsProxyBeanFactory" id="imsxdr_iImsXdrService">
+<property name="url">
+<value>/imsxdr_iImsXdrService</value>
+</property>
+<property name="serviceInterface">
+<value>com.ailk.openbilling.service.imsxdr.IImsXdrService</value>
+</property>
+</bean>
+<bean class="com.ailk.easyframe.ws.JaxWsProxyBeanFactory" id="imsinner_innerService">
+<property name="url">
+<value>/imsinner_innerService</value>
+</property>
+<property name="serviceInterface">
+<value>com.ailk.openbilling.service.imsinner.InnerService</value>
+</property>
+</bean>
+<bean class="com.ailk.easyframe.ws.JaxWsProxyBeanFactory" id="imsinner_innerQueryService">
+<property name="url">
+<value>/imsinner_innerQueryService</value>
+</property>
+<property name="serviceInterface">
+<value>com.ailk.openbilling.service.imsinner.InnerQueryService</value>
+</property>
+</bean>
+<bean class="com.ailk.easyframe.ws.JaxWsProxyBeanFactory" id="imsts_iImsTsAppService">
+<property name="url">
+<value>/imsts_iImsTsAppService</value>
+</property>
+<property name="serviceInterface">
+<value>com.ailk.openbilling.service.imsts.IImsTsAppService</value>
+</property>
+</bean>
+<bean class="com.ailk.easyframe.ws.JaxWsProxyBeanFactory" id="innerqry_query4AcctRecvService">
+<property name="url">
+<value>/innerqry_query4AcctRecvService</value>
+</property>
+<property name="serviceInterface">
+<value>com.ailk.openbilling.service.innerqry.Query4AcctRecvService</value>
+</property>
+</bean>
+<bean class="com.ailk.easyframe.ws.JaxWsProxyBeanFactory" id="imssdl_iImsSyncAppService">
+<property name="url">
+<value>/imssdl_iImsSyncAppService</value>
+</property>
+<property name="serviceInterface">
+<value>com.ailk.openbilling.service.imssdl.IImsSyncAppService</value>
+</property>
+</bean>
+</beans>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SGsmSpecInfo" remark="" sdl="true" sdl-module="MXdr" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+<fields>
+<field name="aNumber" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="msrn" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="scpId" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="mscId" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="vlrId" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="locationId" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="inTrunkid" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="outTrunkid" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="voipCdrFlag" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="oppMscId" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="oppVlrId" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="oppLocationId" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="translatedNumber" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="videoType" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="mocId" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="mtcId" primitive="Yes" remark="" sdl="true" type="String"/>
+<complex-field collection="none" name="gsmPbxInfo" primitive="false" ref="imsxdr.SPbxInfo" remark="" sdl="true" type="entity"/>
+<complex-field collection="none" name="gsmVcInfo" primitive="false" ref="imsxdr.SVcInfo" remark="" sdl="true" type="entity"/>
+<field name="oppNoaccessNumber" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="roamNetType" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="bRoamEconomicallyRatingFlag" primitive="Yes" remark="" sdl="true" type="Short"/>
+<field name="lfeeAdd" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="upRecnum" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="dnRecnum" primitive="Yes" remark="" sdl="true" type="Integer"/>
+</fields>
+</entity>

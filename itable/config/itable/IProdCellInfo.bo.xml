@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="IProdCellInfo" schema="JD" table="I_PROD_CELL_INFO">
+  <fields>
+    <field name="productId" type="Long" column="PRODUCT_ID" isPk="false" primitive="No" null-able="true" columnDef="NUMBER" columnSize="15"/>
+    <field name="lacId" type="Integer" column="LAC_ID" isPk="false" primitive="No" null-able="true" columnDef="NUMBER" columnSize="9"/>
+    <field name="sacId" type="Integer" column="SAC_ID" isPk="false" primitive="No" null-able="true" columnDef="NUMBER" columnSize="9"/>
+    <field name="validDate" type="Date" column="VALID_DATE" isPk="false" null-able="true" columnDef="DATE" columnSize="7"/>
+    <field name="expireDate" type="Date" column="EXPIRE_DATE" isPk="false" null-able="true" columnDef="DATE" columnSize="7"/>
+    <field name="operType" type="Integer" column="OPER_TYPE" isPk="false" primitive="No" null-able="true" columnDef="NUMBER" columnSize="4"/>
+    <field name="soNbr" type="Long" column="SO_NBR" isPk="false" primitive="No" null-able="true" columnDef="NUMBER" columnSize="15"/>
+    <field name="commitDate" type="Date" column="COMMIT_DATE" isPk="false" null-able="true" columnDef="DATE" columnSize="7"/>
+  </fields>
+</entity>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="SOperInfo" transient="true">
+  <fields>
+    <field name="so_nbr" type="String" isPk="false" primitive="Auto" tree-foreign-key="false" null-able="true"/>
+    <field name="busi_code" type="Integer" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="so_mode" type="Short" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="so_date" type="String" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="charge_flag" type="Short" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="isnormal" type="Short" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="outer_cust_id" type="String" isPk="false" primitive="Auto" tree-foreign-key="false" null-able="true"/>
+    <field name="cust_id" type="Long" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="outer_acct_id" type="String" isPk="false" primitive="Auto" tree-foreign-key="false" null-able="true"/>
+    <field name="acct_id" type="Long" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="user_id" type="Long" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="phone_id" type="String" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="op_id" type="Long" isPk="false" primitive="Auto" tree-foreign-key="false" null-able="true"/>
+    <field name="prov_code" type="Short" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="region_code" type="Short" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="county_code" type="Short" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="org_id" type="Integer" isPk="false" primitive="Auto" tree-foreign-key="false" null-able="true"/>
+    <field name="rso_nbr" type="String" isPk="false" primitive="Auto" tree-foreign-key="false" null-able="true"/>
+    <field name="is_monitor" type="Short" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="remark" type="String" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="step_id" type="Short" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="source_system" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="notify_flag" type="Short" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

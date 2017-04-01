@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="QueryReturnFeeOut">
+  <fields>
+    <field name="order_id" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="soNbr" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="acct_id" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="serv_id" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="promo_id" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="allot_rule_id" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="primary_fee" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="alloted_fee" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="start_allot_date" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="alloted_bcycle_count" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="remain_bcycle_count" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="sts" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="allot_sts" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="allot_fee" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="allot_date" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="op_date" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="so_date" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="remark" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="book_item_id_in" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="book_item_id_out" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="should_return_fee" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="item_type" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

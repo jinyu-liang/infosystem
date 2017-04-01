@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="AcctChargeDtlOut">
+  <fields>
+    <field name="so_nbr" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="acct_id" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="item_code" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="deal_fee" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="so_date" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="op_id" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="org_id" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="spec_id" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

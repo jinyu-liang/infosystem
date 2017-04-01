@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="SysCyclePatternDef" schema="SD" table="SYS_CYCLE_PATTERN_DEF">
+  <fields>
+    <field name="patternId" type="Integer" column="PATTERN_ID" isPk="true" primitive="No" remark="Pattern ID" null-able="true" columnDef="AutoIncrement"/>
+    <field name="patternType" type="Integer" column="PATTERN_TYPE" primitive="No" remark="Pattern type:
+0- Device level 
+1 Service level" null-able="false" columnDef="Int"/>
+    <field name="patternName" type="String" column="PATTERN_NAME" primitive="No" remark="Pattern name" null-able="false" columnDef="Varchar" columnSize="256"/>
+    <field name="priority" type="Integer" column="PRIORITY" primitive="No" remark="Priority
+Larger value, higher priority." null-able="true" columnDef="Int"/>
+    <field name="normalInitSts" type="Integer" column="NORMAL_INIT_STS" primitive="No" remark="Real-time connect interface, initial state of corresponding mode" null-able="false" columnDef="Int"/>
+    <field name="batchInitSts" type="Integer" column="BATCH_INIT_STS" primitive="No" remark="Batch connect interface, initial state of corresponding mode" null-able="false" columnDef="Int"/>
+    <field name="description" type="String" column="DESCRIPTION" primitive="No" remark="Description" null-able="false" columnDef="Varchar" columnSize="512"/>
+  </fields>
+</entity>

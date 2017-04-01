@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SUserConfirm" remark="" sdl="true" sdl-module="MImsTsDef" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+    <fields>
+        <field name="id" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="resourceId" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="busiType" primitive="Yes" remark="" sdl="true" type="Integer"/>
+        <field name="identity" primitive="Yes" remark="" sdl="true" type="String"/>
+        <field name="servType" primitive="Yes" remark="" sdl="true" type="Integer"/>
+        <field name="spCode" primitive="Yes" remark="" sdl="true" type="String"/>
+        <field name="operatorCode" primitive="Yes" remark="" sdl="true" type="String"/>
+        <field name="billFlag" primitive="Yes" remark="" sdl="true" type="Integer"/>
+        <field name="thirdMsisdn" primitive="Yes" remark="" sdl="true" type="String"/>
+        <field name="billProp" primitive="Yes" remark="" sdl="true" type="Integer"/>
+        <field name="regionCode" primitive="Yes" remark="" sdl="true" type="Integer"/>
+        <field name="confirmResult" primitive="Yes" remark="" sdl="true" type="Integer"/>
+        <field name="confirmTime" primitive="Yes" remark="" sdl="true" type="Date"/>
+        <field name="alarmTime" primitive="Yes" remark="" sdl="true" type="Date"/>
+        <field name="alarmDoneCode" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="sequenceNo" primitive="Yes" remark="" sdl="true" type="String"/>
+        <field name="srcType" primitive="Yes" remark="" sdl="true" type="String"/>
+        <field name="extendFlag" primitive="Yes" remark="" sdl="true" type="Integer"/>
+        <field name="validDate" primitive="Yes" remark="" sdl="true" type="Date"/>
+        <field name="expireDate" primitive="Yes" remark="" sdl="true" type="Date"/>
+        <field name="soDate" primitive="Yes" remark="" sdl="true" type="Date"/>
+        <field name="soNbr" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="sts" primitive="Yes" remark="" sdl="true" type="Integer"/>
+        <field name="serviceCode" primitive="Yes" remark="" sdl="true" type="String"/>
+        <field name="remark" primitive="Yes" remark="" sdl="true" type="String"/>
+        <field name="createDate" primitive="Yes" remark="" sdl="true" type="Date"/>
+        <field name="dealSts" primitive="Yes" remark="" sdl="true" type="Integer"/>
+        <field name="dealDate" primitive="Yes" remark="" sdl="true" type="Date"/>
+        <field name="dealCount" primitive="Yes" remark="" sdl="true" type="Integer"/>
+        <field name="errorCode" primitive="Yes" remark="" sdl="true" type="Integer"/>
+        <field name="errorMsg" primitive="Yes" remark="" sdl="true" type="String"/>
+    </fields>
+</entity>

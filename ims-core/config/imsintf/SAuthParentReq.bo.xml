@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="SAuthParentReq" transient="true">
+  <fields>
+    <field name="outer_cust_id" type="String" isPk="false" primitive="Auto" tree-foreign-key="false" null-able="true"/>
+    <field name="cust_id" type="Long" isPk="false" primitive="No" tree-foreign-key="false" null-able="true" enumAsAliasField="false"/>
+    <field name="outer_acct_id" type="String" isPk="false" primitive="Auto" tree-foreign-key="false" null-able="true"/>
+    <field name="acct_id" type="Long" isPk="false" primitive="No" tree-foreign-key="false" null-able="true" enumAsAliasField="false"/>
+    <field name="user_id" type="Long" isPk="false" primitive="No" tree-foreign-key="false" null-able="true" enumAsAliasField="false"/>
+    <field name="phone_id" type="String" isPk="false" primitive="Auto" tree-foreign-key="false" null-able="true" enumAsAliasField="false"/>
+    <field name="outer_son_cust_id" type="String" isPk="false" primitive="Auto" tree-foreign-key="false" null-able="true"/>
+    <field name="son_cust_id" type="Long" isPk="false" primitive="No" tree-foreign-key="false" null-able="true" enumAsAliasField="false"/>
+    <field name="outer_son_acct_id" type="String" isPk="false" primitive="Auto" tree-foreign-key="false" null-able="true"/>
+    <field name="son_acct_id" type="Long" isPk="false" primitive="No" tree-foreign-key="false" null-able="true" enumAsAliasField="false"/>
+    <field name="son_user_id" type="Long" isPk="false" primitive="No" tree-foreign-key="false" null-able="true" enumAsAliasField="false"/>
+    <field name="son_phone_id" type="String" isPk="false" primitive="Auto" tree-foreign-key="false" null-able="true" enumAsAliasField="false"/>
+  </fields>
+</entity>

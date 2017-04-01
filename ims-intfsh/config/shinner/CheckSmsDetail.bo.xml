@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="CheckSmsDetail">
+  <fields>
+    <field name="block_id" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="done_code" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="sms_code" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="bill_id" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="priority_level" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="send_date" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="src_addr" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="request_report" type="Short" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="message" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <complex-field name="smsMessageList" type="entity" ref="shinner.SmsMessage_item" collection="none" primitive="false"/>
+  </fields>
+</entity>

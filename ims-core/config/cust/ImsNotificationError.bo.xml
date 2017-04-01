@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="ImsNotificationError" remark="" schema="cd" table="IMS_NOTIFICATION_ERROR" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="CUST_ID" columnDef="Int" name="custId" primitive="No" remark="" type="Long"/>
+        <field column="ACCT_ID" columnDef="Int" name="acctId" primitive="No" remark="" type="Long"/>
+        <field column="RESOURCE_ID" columnDef="Int" name="resourceId" primitive="No" remark="" type="Long"/>
+        <field column="QUEUE_ID" columnDef="Int" name="queueId" primitive="No" remark="" type="Long"/>
+        <field column="NOTIFICATION_ID" columnDef="Int" name="notificationId" primitive="No" remark="" type="Integer"/>
+        <field column="ACTION_ID" columnDef="Int" name="actionId" primitive="No" remark="" type="Integer"/>
+        <field column="NOTIFY_LANG" columnDef="Int" name="notifyLang" primitive="No" remark="" type="Integer"/>
+        <field column="NOTIFY_CONTENT" columnDef="Varchar" columnSize="1024" name="notifyContent" primitive="No" remark="" type="String"/>
+        <field column="CHANNEL_ID" columnDef="Varchar" columnSize="256" name="channelId" primitive="No" remark="" type="String"/>
+        <field column="CHANNEL_TYPE" columnDef="Int" name="channelType" primitive="No" remark="" type="Integer"/>
+        <field column="SEND_TIME" columnDef="Int" name="sendTime" primitive="No" remark="" type="Long"/>
+        <field column="SO_NBR" columnDef="Int" name="soNbr" primitive="No" remark="" type="Long"/>
+        <field column="CREATE_DATE" columnDef="Date" name="createDate" primitive="No" remark="" type="Date"/>
+        <field column="REMARK" columnDef="Varchar" columnSize="256" name="remark" primitive="No" remark="" type="String"/>
+        <field column="SEQUENCE_ID" columnDef="Int" name="sequenceId" null-able="false" primitive="No" remark="" type="Long"/>
+    </fields>
+</entity>

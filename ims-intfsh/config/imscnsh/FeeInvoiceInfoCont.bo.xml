@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="FeeInvoiceInfoCont">
+  <fields>
+    <field name="begin_date" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="end_date" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="bill_month" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="bill_amount" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="invoice_num" type="String" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

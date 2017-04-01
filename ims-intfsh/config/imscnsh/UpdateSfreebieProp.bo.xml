@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="UpdateSfreebieProp">
+	<fields>
+        <field column="FREEBIE_ID" columnDef="AutoIncrement" isPk="true(not generated)" name="freebieId" null-able="false" primitive="Auto" type="Integer"/>
+        <field column="PRIORITY" columnDef="Int" isPk="false" name="priority" null-able="false" primitive="Auto" type="Integer"/>
+        <field column="UNIT_CYCLE" columnDef="Int" isPk="false" name="unitCycle" null-able="false" primitive="Auto" type="Integer"/>
+        <field column="UNIT_DES" columnDef="Varchar" columnSize="64" isPk="false" name="unitDes" null-able="false" primitive="Auto" type="String"/>
+    </fields>
+</entity>

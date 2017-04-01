@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="SPayReguideInfoList" transient="true">
+  <fields>
+    <complex-field name="reguideInfoList_item" type="entity" ref="imsintf.SPayReguideInfo" collection="array" primitive="false"/>
+  </fields>
+</entity>

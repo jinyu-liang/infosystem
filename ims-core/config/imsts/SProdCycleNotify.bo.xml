@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SProdCycleNotify" remark="" sdl="true" sdl-module="MImsTsDef" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+    <fields>
+        <field name="productId" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="firstNotifyDate" primitive="Yes" remark="" sdl="true" type="Date"/>
+        <field name="notifyCount" primitive="Yes" remark="" sdl="true" type="Integer"/>
+        <field name="nextNotifyDate" primitive="Yes" remark="" sdl="true" type="Date"/>
+        <field name="modifyDate" primitive="Yes" remark="" sdl="true" type="Date"/>
+        <field name="offerId" primitive="Yes" remark="" sdl="true" type="Integer"/>
+        <field name="objectId" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="objectType" primitive="Yes" remark="" sdl="true" type="Integer"/>
+        <field name="sts" primitive="Yes" remark="" sdl="true" type="Integer"/>
+        <field name="validDate" primitive="Yes" remark="" sdl="true" type="Date"/>
+        <field name="expireDate" primitive="Yes" remark="" sdl="true" type="Date"/>
+        <field name="freeResFlag" primitive="Yes" remark="" sdl="true" type="Integer"/>
+    </fields>
+</entity>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="BillingPlanOut" transient="true">
+  <fields>
+    <complex-field name="billingPlan" type="entity" ref="acct.CaBillingPlan" collection="none" primitive="false"/>
+    <complex-field name="billingCycleSpecification" type="entity" ref="acct.CaBillingCycleSpec" collection="none" primitive="false"/>
+    <complex-field name="paymentPlan" type="entity" ref="acct.CaPaymentPlan" collection="none" primitive="false"/>
+    <complex-field name="paymentChannelInList" type="entity" ref="bill.PaymentChannelIn" collection="list" primitive="false"/>
+  </fields>
+</entity>

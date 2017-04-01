@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="SProductOrderResult" transient="true">
+  <fields>
+    <field name="product_id" type="Long" isPk="false" primitive="Auto" tree-foreign-key="false" null-able="true"/>
+    <field name="offer_id" type="Long" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="so_id" type="String" isPk="false" primitive="Auto" tree-foreign-key="false" null-able="true"/>
+    <field name="valid_date" type="String" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <field name="expire_date" type="String" isPk="false" tree-foreign-key="false" null-able="true"/>
+    <complex-field name="product_param_list" type="entity" ref="imsintf.SProductParamList" collection="none" primitive="false"/>
+  </fields>
+</entity>

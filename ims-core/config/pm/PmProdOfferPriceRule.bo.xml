@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="PmProdOfferPriceRule" schema="PD" table="PM_PROD_OFFER_PRICE_RULE">
+  <fields>
+    <field name="priceRuleId" type="Integer" column="PRICE_RULE_ID" isPk="true" primitive="No" remark="rating rule ID" null-able="true" columnDef="AutoIncrement"/>
+    <field name="name" type="String" column="NAME" primitive="No" remark="rule name" null-able="false" columnDef="Varchar" columnSize="256"/>
+    <field name="priceRuleType" type="Integer" column="PRICE_RULE_TYPE" primitive="No" remark="rule type
+0：pay on behalf rule
+1：prepaid rule" null-able="false" columnDef="Int"/>
+    <field name="description" type="String" column="DESCRIPTION" primitive="No" remark="tariff rule description" null-able="true" columnDef="Varchar" columnSize="1024"/>
+  </fields>
+</entity>

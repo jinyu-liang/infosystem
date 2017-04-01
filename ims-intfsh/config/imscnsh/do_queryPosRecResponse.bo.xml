@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="do_queryPosRecResponse">
+  <root ref="imsintf.BaseResponse"/>
+  <fields>
+    <complex-field name="posRecList" type="entity" ref="ref://com.ailk.ims.business.crminterface.bo.IBOCaPosRecValue" collection="list" primitive="false"/>
+  </fields>
+</entity>

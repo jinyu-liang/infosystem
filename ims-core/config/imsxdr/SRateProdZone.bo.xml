@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SRateProdZone" remark="" sdl="true" sdl-module="MXdr" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+<fields>
+<field name="offerProdId" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="doneCode" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="zoneCode" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="zoneType" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<complex-field collection="list" name="trigerAlarmRule" primitive="false" ref="imsxdr.STriggerAlarmRule" remark="" sdl="true" type="entity"/>
+</fields>
+</entity>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="SFreeResource">
+  <fields>
+    <field name="price_id" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="freeres_item" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="freeres_name" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="amount" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="measure_id" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="measure_name" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="prorated_amount" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SPbxInfo" remark="" sdl="true" sdl-module="MXdr" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+<fields>
+<field name="ctxCallerGroup" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="carryService" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="serviceScope" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="termService" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="callerDevType" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="calleeDevType" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="callScope" primitive="Yes" remark="" sdl="true" type="Short"/>
+</fields>
+</entity>

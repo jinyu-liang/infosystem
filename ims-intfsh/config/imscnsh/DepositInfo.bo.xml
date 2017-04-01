@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="DepositInfo">
+  <fields>
+    <field name="so_nbr" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="amount" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="sts" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="deposit_date" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="op_id" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="order_id" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="phone_id" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="channel_id" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="busi_spec_id" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="busi_spec_name" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="card_no" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="pay_phone_id" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="agent_name" type="String" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

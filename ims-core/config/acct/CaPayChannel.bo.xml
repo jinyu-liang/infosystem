@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" name="CaPayChannel" schema="AD" table="CA_PAY_CHANNEL">
+  <fields>
+    <field name="paymentPlanId" type="Long" column="PAYMENT_PLAN_ID" isPk="true(not generated)" primitive="No" remark="payment plan ID
+" null-able="true" columnDef="Int"/>
+    <field name="paymentMethod" type="Integer" column="PAYMENT_METHOD" isPk="true(not generated)" primitive="No" remark="Unique code for each kind of payment:
+2-Cash
+8-Credit Card Debit
+3-Bank Debit
+81-eBPP
+11-银行托收
+
+上海：
+1：现金
+2：信用卡代扣
+3：银行托收
+5：银行卡绑定充值
+6：手机支付自动交话费
+7：银联代缴" null-able="true" columnDef="Int"/>
+    <field name="assetId" type="Long" column="ASSET_ID" isPk="true(not generated)" primitive="No" remark="fill in 0 if pay by cash
+" null-able="true" columnDef="Int"/>
+    <field name="priority" type="Integer" column="PRIORITY" primitive="No" remark="payment priority, from integer 1-99, the smaller no.is, the higher priority it can be.
+" null-able="true" columnDef="Int"/>
+    <field name="validDate" type="Date" column="VALID_DATE" isPk="true(not generated)" primitive="No" remark="specific valid date, format:YYYY-MM-DD HH:MM:SS
+" null-able="true" columnDef="Date"/>
+    <field name="expireDate" type="Date" column="EXPIRE_DATE" primitive="No" remark="specific expired date, format:YYYY-MM-DD HH:MM:SS
+" null-able="true" columnDef="Date"/>
+    <field name="soNbr" type="Long" column="SO_NBR" primitive="No" remark="a certain payment shall be in correspondence with specific work order code. 
+" null-able="true" columnDef="Int"/>
+    <field name="periodType" type="Integer" column="PERIOD_TYPE" primitive="No" remark="cycle type
+0-appointed
+1-year
+2-month 
+3-week
+4-day
+" null-able="false" columnDef="Int"/>
+    <field name="periodUnit" type="Integer" column="PERIOD_UNIT" primitive="No" remark="payment cycle unit
+" null-able="false" columnDef="Int"/>
+    <field name="offsetDay" type="Integer" column="OFFSET_DAY" primitive="No" remark="offset of the start date according to week and month
+" null-able="false" columnDef="Int"/>
+    <field name="amount" type="Long" column="AMOUNT" primitive="No" remark="payment amount" null-able="false" columnDef="Int"/>
+    <field name="createDate" type="Date" column="CREATE_DATE" primitive="No" remark="Creation date of current record" null-able="true" columnDef="Date"/>
+    <field name="soDate" type="Date" column="SO_DATE" primitive="No" remark="Modification date of current record" null-able="false" columnDef="Date"/>
+    <field name="acctId" type="Long" column="ACCT_ID" primitive="No" remark="帐户编号" null-able="false" columnDef="Int"/>
+    <field name="resourceId" type="Long" column="RESOURCE_ID" primitive="No" remark="用户编号" null-able="false" columnDef="Int"/>
+    <field name="bindPhoneId" type="String" column="BIND_PHONE_ID" primitive="No" remark="绑定手机号码" null-able="false" columnDef="Varchar" columnSize="64"/>
+    <field name="dayFixMoney" type="Long" column="DAY_FIX_MONEY" primitive="No" remark="每日交易额度" null-able="false" columnDef="Int"/>
+    <field name="timeFixMoney" type="Long" column="TIME_FIX_MONEY" primitive="No" remark="每次交易额度" null-able="false" columnDef="Int"/>
+    <field name="bindType" type="Integer" column="BIND_TYPE" primitive="No" remark="1：预付费的充值绑定 2：后付费的付账单绑定" null-able="false" columnDef="Int"/>
+    <field name="authId" type="String" column="AUTH_ID" primitive="No" remark="授权号码" null-able="false" columnDef="Varchar" columnSize="100"/>
+    <field name="platForm" type="Integer" column="PLAT_FORM" primitive="No" remark="平台编号" null-able="false" columnDef="Int"/>
+    <field name="ext1" type="String" column="EXT1" primitive="No" null-able="false" columnDef="Varchar" columnSize="200"/>
+    <field name="ext2" type="String" column="EXT2" primitive="No" null-able="false" columnDef="Varchar" columnSize="200"/>
+  </fields>
+</entity>

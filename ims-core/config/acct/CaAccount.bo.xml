@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?><entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="CaAccount" remark="" schema="AD" table="CA_ACCOUNT" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+    <fields>
+        <field column="ACCT_ID" columnDef="Int" isPk="true(not generated)" name="acctId" null-able="true" primitive="No" type="Long"/>
+        <field column="NAME" columnDef="Varchar" columnSize="256" isPk="false" name="name" null-able="true" primitive="No" type="String"/>
+        <field column="ACCOUNT_TYPE" columnDef="Int" isPk="false" name="accountType" null-able="true" primitive="No" type="Integer"/>
+        <field column="ACCOUNT_CLASS" columnDef="Int" isPk="false" name="accountClass" null-able="true" primitive="No" type="Integer"/>
+        <field column="ACCOUNT_SEGMENT" columnDef="Int" isPk="false" name="accountSegment" null-able="true" primitive="No" type="Integer"/>
+        <field column="ACCOUNT_STATUS" columnDef="Int" isPk="false" name="accountStatus" null-able="true" primitive="No" type="Integer"/>
+        <field column="BALANCE_TYPE" columnDef="Int" isPk="false" name="balanceType" null-able="true" primitive="No" type="Integer"/>
+        <field column="STS_DATE" columnDef="Date" isPk="false" name="stsDate" null-able="true" primitive="No" type="Date"/>
+        <field column="CREATE_DATE" columnDef="Date" isPk="false" name="createDate" null-able="true" primitive="No" type="Date"/>
+        <field column="PIN" columnDef="Varchar" columnSize="256" isPk="false" name="pin" null-able="true" primitive="No" type="String"/>
+        <field column="ORG_ID" columnDef="Int" isPk="false" name="orgId" null-able="true" primitive="No" type="Integer"/>
+        <field column="PROVINCE_ID" columnDef="Int" isPk="false" name="provinceId" null-able="true" primitive="No" type="Integer"/>
+        <field column="REGION_CODE" columnDef="Int" isPk="false" name="regionCode" null-able="true" primitive="No" type="Integer"/>
+        <field column="COUNTY_CODE" columnDef="Int" isPk="false" name="countyCode" null-able="true" primitive="No" type="Integer"/>
+        <field column="FORCE_CYCLE" columnDef="Int" isPk="false" name="forceCycle" null-able="true" primitive="No" type="Integer"/>
+        <field column="REVENUE_CODE" columnDef="Int" isPk="false" name="revenueCode" null-able="true" primitive="No" type="Integer"/>
+        <field column="BILL_STS" columnDef="Int" isPk="false" name="billSts" null-able="true" primitive="No" type="Integer"/>
+        <field column="TAX_FLAG" columnDef="Int" isPk="false" name="taxFlag" null-able="true" primitive="No" type="Integer"/>
+        <field column="OPERATOR_ID" columnDef="Int" isPk="false" name="operatorId" null-able="true" primitive="No" type="Integer"/>
+        <field column="MEASURE_ID" columnDef="Int" isPk="false" name="measureId" null-able="true" primitive="No" type="Integer"/>
+        <field column="CREDIT_SIGN_CONTROL" columnDef="Int" isPk="false" name="creditSignControl" null-able="true" primitive="No" type="Integer"/>
+        <field column="REMARKS" columnDef="Varchar" columnSize="256" isPk="false" name="remarks" null-able="true" primitive="No" type="String"/>
+        <field column="VALID_DATE" columnDef="Date" isPk="true(not generated)" name="validDate" null-able="true" primitive="No" type="Date"/>
+        <field column="EXPIRE_DATE" columnDef="Date" isPk="false" name="expireDate" null-able="true" primitive="No" type="Date"/>
+        <field column="SO_DATE" columnDef="Date" isPk="false" name="soDate" null-able="true" primitive="No" type="Date"/>
+        <field column="SO_NBR" columnDef="Int" isPk="true(not generated)" name="soNbr" null-able="true" primitive="No" type="Long"/>
+        <field column="BILL_STS_DATE" columnDef="Date" isPk="false" name="billStsDate" null-able="true" primitive="No" type="Date"/>
+        <field column="CUST_ID" columnDef="Int" isPk="false" name="custId" null-able="true" primitive="No" type="Long"/>
+        <field column="SPECIAL_ACCOUNT" columnDef="Int" isPk="false" name="specialAccount" null-able="true" primitive="No" type="Integer"/>
+        <field column="PAYMENT_TYPE" columnDef="Int" isPk="false" name="paymentType" null-able="true" primitive="No" type="Integer"/>
+    </fields>
+</entity>

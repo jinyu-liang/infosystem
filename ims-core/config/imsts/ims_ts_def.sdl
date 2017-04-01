@@ -1,0 +1,189 @@
+module MImsTsDef
+{
+    struct SProdOrderSync
+    {
+        int64		id;
+        int64		associate_id;
+        int64		cust_id;
+        int64		acct_id;
+        int64		user_id;
+        string		phone_id;
+        int32		reason_code;
+        int64		so_nbr;
+        date     	create_date;
+        int32		sts;
+    }
+    list vector<SProdOrderSync> SProdOrderSyncList;
+    
+    struct SExpireProdNotify
+    {
+        int64		id;
+        int64		prod_id;
+        int64		offer_id;
+        string		receive_phone;
+        date		valid_date;
+        date		expire_date;
+        int32		notification_id;
+        int32		free_res_flag;
+        date		create_date;
+        int32		sts;
+        int64		cust_id;
+        int64		acct_id;
+        int64		user_id;
+        
+    }
+    list vector<SExpireProdNotify> SExpireProdNotifyList;
+    
+    struct SEventRecord
+    {
+    	int64	event_id;
+    	int32	event_class;
+    	date	trigger_date;
+    	date	create_date;
+    }
+    list vector<SEventRecord> SEventRecordList;
+    
+    struct SEventReward
+    {
+        int64	id;
+    	int64	cust_id;
+    	int64	acct_id;
+    	int64	resource_id;
+    	int64	spec_id;
+    	int32	billing_type;
+    	date	create_date;
+    	int64	so_nbr;
+        int32	sts;
+    }
+    list vector<SEventReward> SEventRewardList;
+    
+    
+    struct SDelayValidProdSyncScpaip
+    {
+    	int64 	id;
+    	int64	offerId;
+    	int64	productId;
+    	date	validDate;
+    	date	createDate;
+    	int64	soNbr;
+    	int32	sts;
+    }
+    list vector<SDelayValidProdSyncScpaip> SDelayValidProdSyncScpaipList;
+    
+    struct SProdOnceNotify
+    {
+    	int32	notify_type;
+    	int64	product_id;
+    	int32	offer_id;
+    	int64	object_id;
+    	int32	object_type;
+    	date	valid_date;
+    	date	expire_date;
+    	date	create_date;
+    	int32	sts;
+    	int32	free_res_flag;
+    	date	notify_date;
+    	int32	retry_times;
+    	int32	free_use_days;
+    	int32	free_rest_days;
+    }
+    list vector<SProdOnceNotify> SProdOnceNotifyList;
+    
+    struct SProdCycleNotify
+    {
+    	int64	product_id;
+    	date	first_notify_date;
+    	int32	notify_count;
+    	date	next_notify_date;
+    	date	modify_date;
+    	int32	offer_id;
+    	int64	object_id;
+    	int32	object_type;
+    	int32	sts;
+    	date	valid_date;
+    	date	expire_date;
+    	int32	free_res_flag;
+    }
+    list vector<SProdCycleNotify> SProdCycleNotifyList;
+    
+    struct SLifeCycleOncePreNotify
+    {
+    	int64	resource_id;
+    	date	notify_date;
+    	int32	notify_count;
+    	date	modify_date;
+    	int32	retry_times;
+    	int32	sts;
+    	int32   nsts;
+    	int32   psts;
+    }
+    list vector<SLifeCycleOncePreNotify> SLifeCycleOncePreNotifyList;
+
+	struct SUserConfirm
+    {
+        int64		id;
+        int64		resource_id;
+        int32		busi_type;
+        string		identity;
+        int32		serv_type;
+        string		sp_code;
+        string		operator_code;
+        int32		bill_flag;
+        string		third_msisdn;
+        int32		bill_prop;
+        int32		region_code;
+        int32		confirm_result;
+        date		confirm_time;
+        date		alarm_time;
+        int64		alarm_done_code;
+        string		sequence_no;
+        string		src_type;
+        int32		extend_flag;
+        date		valid_date;
+        date		expire_date;
+        date		so_date;
+        int64		so_nbr;
+        int32		sts;
+        string		service_code;
+        string		remark;
+        date		create_date;
+        int32		deal_sts;
+        date		deal_date;
+        int32		deal_count;
+        int32		error_code;
+        string		error_msg;
+    }
+    list vector<SUserConfirm> SUserConfirmList;
+    
+    struct SImsOrderProduct
+    {
+    	int64   id;
+    	int64   object_id;
+    	int32   object_type;
+    	int32   offering_id;
+    	date    valid_date;
+    	date    expire_date;
+    	date    create_date;
+    	int64   so_nbr;
+    	int32   sts;
+    	int32   deal_sts;                 
+		date    deal_date;                  
+		int32   deal_count;                 
+		int32   error_code;                 
+		string  error_msg;     
+    }
+    list vector<SImsOrderProduct> SImsOrderProductList;
+    
+    struct STsParam
+    {
+    	string name;
+    	string value;
+    }
+    list vector<STsParam> STsParamList;
+    
+    struct STsRecord
+    {
+    	STsParamList param_list;
+    }
+    list vector<STsRecord> STsRecordList;
+}	

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.141/easyframe/schema/entity.xsd" name="ProdOfferInfo">
+  <fields>
+    <field name="productOfferingId" type="Long" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="productOfferingName" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="offerTypeId" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="offerTypeName" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="lifecycleStatusId" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="lifecycleStatusName" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="brandId" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="brandName" type="String" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="priceNum" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="regionCode" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="offerDup" type="Boolean" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="isMain" type="Integer" isPk="false" primitive="Auto" null-able="true"/>
+    <field name="description" type="String" isPk="false" primitive="Auto" null-able="true"/>
+  </fields>
+</entity>

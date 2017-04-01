@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SMmsInfoEx" remark="" sdl="true" sdl-module="MXdr" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+<fields>
+<field name="receiveTime" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="receiveAddress" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="sendAddress" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="setTime" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="contentType" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="mmClass" primitive="Yes" remark="" sdl="true" type="Short"/>
+<field name="infoLevel" primitive="Yes" remark="" sdl="true" type="Short"/>
+<field name="reportType" primitive="Yes" remark="" sdl="true" type="Short"/>
+<field name="addressHide" primitive="Yes" remark="" sdl="true" type="Short"/>
+<field name="safeLevel" primitive="Yes" remark="" sdl="true" type="Short"/>
+<field name="contentSw" primitive="Yes" remark="" sdl="true" type="Short"/>
+<field name="statType" primitive="Yes" remark="" sdl="true" type="Short"/>
+<field name="transmitDn" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="transmitType" primitive="Yes" remark="" sdl="true" type="Short"/>
+<field name="storeTime" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="receiveMmscId" primitive="Yes" remark="" sdl="true" type="String"/>
+<field name="mobileAddress" primitive="Yes" remark="" sdl="true" type="String"/>
+</fields>
+</entity>

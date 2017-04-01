@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SOriCharge" remark="" sdl="true" sdl-module="MXdr" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+<fields>
+<field name="itemSubType" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="fee" primitive="Yes" remark="" sdl="true" type="Long"/>
+<field name="measureId" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="includeTaxFlag" primitive="Yes" remark="" sdl="true" type="Integer"/>
+<field name="hasOriCharge" primitive="Yes" remark="" sdl="true" type="Short"/>
+</fields>
+</entity>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xsi:noNamespaceSchemaLocation="http://10.10.10.158:8088/easyframe/schema/entity.xsd" schema="ad" name="CaBusiRec" table="CA_BUSI_REC">
+  <fields>
+    <field name="soNbr" type="Long" column="SO_NBR" isPk="true(not generated)" null-able="false" columnDef="NUMBER" columnSize="15"/>
+    <field name="startDate" type="Date" column="START_DATE" isPk="false" null-able="true" columnDef="DATE" columnSize="7"/>
+    <field name="endDate" type="Date" column="END_DATE" isPk="false" null-able="true" columnDef="DATE" columnSize="7"/>
+    <field name="sts" type="Integer" column="STS" isPk="false" null-able="true" columnDef="NUMBER" columnSize="2"/>
+    <field name="provCode" type="Integer" column="PROV_CODE" isPk="false" null-able="false" columnDef="NUMBER" columnSize="4"/>
+    <field name="regionCode" type="Integer" column="REGION_CODE" isPk="false" null-able="false" columnDef="NUMBER" columnSize="4"/>
+    <field name="countyCode" type="Integer" column="COUNTY_CODE" isPk="false" null-able="false" columnDef="NUMBER" columnSize="4"/>
+    <field name="orgId" type="Integer" column="ORG_ID" isPk="false" null-able="false" columnDef="NUMBER" columnSize="9"/>
+    <field name="iRegionCode" type="Integer" column="I_REGION_CODE" isPk="false" null-able="false" columnDef="NUMBER" columnSize="4"/>
+    <field name="iCountyCode" type="Integer" column="I_COUNTY_CODE" isPk="false" null-able="false" columnDef="NUMBER" columnSize="4"/>
+    <field name="iOrgId" type="Integer" column="I_ORG_ID" isPk="false" null-able="false" columnDef="NUMBER" columnSize="9"/>
+    <field name="busiSpecId" type="Integer" column="BUSI_SPEC_ID" isPk="false" null-able="false" columnDef="NUMBER" columnSize="9"/>
+    <field name="opId" type="Long" column="OP_ID" isPk="false" null-able="true" columnDef="NUMBER" columnSize="15"/>
+    <field name="acctId" type="Long" column="ACCT_ID" isPk="false" null-able="true" columnDef="NUMBER" columnSize="15"/>
+    <field name="resourceId" type="Long" column="RESOURCE_ID" isPk="false" null-able="true" columnDef="NUMBER" columnSize="15"/>
+    <field name="channel" type="Integer" column="CHANNEL" isPk="false" null-able="true" columnDef="NUMBER" columnSize="4"/>
+    <field name="assetType" type="Integer" column="ASSET_TYPE" isPk="false" null-able="true" columnDef="NUMBER" columnSize="4"/>
+    <field name="assetAmount" type="Long" column="ASSET_AMOUNT" isPk="false" null-able="false" columnDef="NUMBER" columnSize="12"/>
+    <field name="measureId" type="Integer" column="MEASURE_ID" isPk="false" null-able="true" columnDef="NUMBER" columnSize="9"/>
+    <field name="callLocation" type="String" column="CALL_LOCATION" isPk="false" null-able="true" columnDef="VARCHAR2" columnSize="128"/>
+    <field name="errorCode" type="Integer" column="ERROR_CODE" isPk="false" null-able="false" columnDef="NUMBER" columnSize="8"/>
+    <field name="remarks" type="String" column="REMARKS" isPk="false" null-able="true" columnDef="VARCHAR2" columnSize="512"/>
+    <field name="outSoDate" type="Date" column="OUT_SO_DATE" isPk="false" null-able="true" columnDef="DATE" columnSize="7"/>
+    <field name="outSoNbr" type="String" column="OUT_SO_NBR" isPk="false" null-able="true" columnDef="VARCHAR2" columnSize="64"/>
+    <field name="phoneId" type="String" column="PHONE_ID" isPk="false" null-able="true" columnDef="VARCHAR2" columnSize="64"/>
+    <field name="busiPlanId" type="Integer" column="BUSI_PLAN_ID" isPk="false" null-able="true" columnDef="NUMBER" columnSize="9"/>
+    <field name="rechargeMethod" type="Integer" column="RECHARGE_METHOD" isPk="false" null-able="true" columnDef="NUMBER" columnSize="4"/>
+    <field name="relSoNbr" type="Long" column="REL_SO_NBR" isPk="false" null-able="true" columnDef="NUMBER" columnSize="15"/>
+    <field name="relSoDate" type="Date" column="REL_SO_DATE" isPk="false" null-able="true" columnDef="DATE" columnSize="7"/>
+    <field name="relSourceType" type="Integer" column="REL_SOURCE_TYPE" isPk="false" null-able="true" columnDef="NUMBER" columnSize="4"/>
+    <field name="ownerType" type="Integer" column="OWNER_TYPE" isPk="false" null-able="true" columnDef="NUMBER" columnSize="4"/>
+    <field name="serviceId" type="Integer" column="SERVICE_ID" isPk="false" null-able="true" columnDef="NUMBER" columnSize="4"/>
+    <field name="sourceSystem" type="String" column="SOURCE_SYSTEM" isPk="false" remark="????" null-able="true" columnDef="VARCHAR2" columnSize="32"/>
+  </fields>
+</entity>

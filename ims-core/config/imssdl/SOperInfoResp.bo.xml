@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SOperInfoResp" remark="" sdl="true" sdl-module="MImsSyncDef" xsi:noNamespaceSchemaLocation="http://10.10.10.149/easyframe/schema/entity.xsd">
+    <fields>
+        <field name="operatorId" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="staffName" primitive="Yes" remark="" sdl="true" type="String"/>
+        <field name="code" primitive="Yes" remark="" sdl="true" type="String"/>
+        <field name="organizeId" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="organizeName" primitive="Yes" remark="" sdl="true" type="String"/>
+        <field name="countyId" primitive="Yes" remark="" sdl="true" type="Long"/>
+        <field name="districtId" primitive="Yes" remark="" sdl="true" type="String"/>
+    </fields>
+</entity>
